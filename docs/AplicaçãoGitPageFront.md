@@ -1,8 +1,8 @@
 # Documentação: Deploy do Front-end com GitHub Pages
 
-**Autor:** [Seu Nome ou Nome do Time]
+**Autor:** Heitor Macêdo
 **Data:** 18 de setembro de 2025
-**Status:** Concluído
+
 
 ## 1. Objetivo
 
