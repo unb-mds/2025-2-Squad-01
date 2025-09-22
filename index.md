@@ -1,6 +1,6 @@
 # Bem-vindo à Documentação do Projeto
 
-Esta é a página inicial da documentação do projeto.
+CoOps é uma plataforma de visualização e análise de métricas de colaboração para repositórios e organizações no GitHub.
 
 ## Navegação
 
@@ -18,3 +18,12 @@ Esta é a página inicial da documentação do projeto.
 - [Fluxo do Usuário - Métricas GitHub](docs/fluxos/fluxo_usuario_metricas_github.md)
 
 Consulte o menu acima para acessar as principais páginas da documentação.
+
+## Atas de Reuniões
+
+- [26/08/2025 - Reunião Inicial](docs/atas/2025-08-26.md)
+- [28/08/2025 - Definição do Projeto](docs/atas/2025-08-28.md)
+- [01/09/2025 - Retrospectiva e Planejamento](docs/atas/2025-09-01.md)
+- [08/09/2025 - Planejamento da Sprint 2](docs/atas/2025-09-08.md)
+- [09/09/2025 - Definição de Acesso e Planejamento](docs/atas/2025-09-09.md)
+- [15/09/2025 - Pivô Estratégico e Priorização](docs/atas/2025-09-15.md)
