@@ -35,6 +35,10 @@ jobs:
           HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                https://api.github.com/orgs/${{ github.repository_owner }}/repos \
                -o src/data/org_repos.json)
+
+          RESPONSE_BODY=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                          https://api.github.com/orgs/${{ github.repository_owner }}/repos)
+          
           
           echo "Status HTTP da resposta: $HTTP_STATUS"
           
@@ -60,3 +64,9 @@ jobs:
             echo "❌ Erro: Arquivo org_repos.json não foi criado!"
             exit 1
           fi
+
+      - name: Salvar no arquivo org-repos.json
+        run: |
+          echo "RESPOSTA DA API:"
+          echo "$RESPONSE_BODY"
+          echo "$RESPONSE_BODY" > src/data/org_repos.json
