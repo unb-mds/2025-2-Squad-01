@@ -31,9 +31,21 @@ jobs:
 
       - name: Chamada API autenticada
         run: |
-          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          echo "Fazendo chamada para a API do GitHub..."
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                https://api.github.com/orgs/${{ github.repository_owner }}/repos \
-               > src/data/org_repos.json
+               -o src/data/org_repos.json)
+          
+          echo "Status HTTP da resposta: $HTTP_STATUS"
+          
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "✅ API retornou sucesso (200)"
+          else
+            echo "❌ API retornou erro: $HTTP_STATUS"
+            echo "Conteúdo da resposta:"
+            cat src/data/org_repos.json
+            exit 1
+          fi
 
       - name: Verificar arquivo criado
         run: |
