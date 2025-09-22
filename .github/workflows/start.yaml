@@ -2,9 +2,12 @@ name: Coletar métricas da organização
 
 on:
   workflow_dispatch:
+  repository:
+    types: [fork]
 
 permissions:
   contents: write
+  
 
 jobs:
   metrics:
@@ -30,7 +33,31 @@ jobs:
             echo "Diretório src/data já existe."
           fi
           
-        
+      - name: Verificar o local do fork do repositório
+        run: |
+          TYPE=$$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/users/${{ github.repository_owner }} | jq -r .type)
+          
+          if [ "$TYPE" = "Organization" ]; then
+            echo "Fork condiz com os parametros de organização. Seguindo com a execução..."
+          else
+            echo "ERROR: O tipo do dono do repositório é $TYPE, esperado "Organization". Certifique-se que o fork do repositório foi feito para dentro de uma organização e não um repositório pessoal."
+            exit 1
+          fi
+
+      - name: Verificar arquivo criado
+        run: |
+          echo "Verificando se o arquivo foi criado com sucesso..."
+          if [ -f "src/data/org_repos.json" ]; then
+            echo "Arquivo org_repos.json criado com sucesso!"
+            echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
+            echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
+            echo "Primeiras linhas do arquivo:"
+            head -5 src/data/org_repos.json
+          else
+            echo " Warning: Arquivo org_repos.json não foi criado! Criando arquivo vazio para evitar falhas."
+            echo '[]' > src/data/org_repos.json
+          fi
 
       - name: Chamada API autenticada
         run: |
@@ -50,19 +77,6 @@ jobs:
             exit 1
           fi
 
-      - name: Verificar arquivo criado
-        run: |
-          echo "Verificando se o arquivo foi criado com sucesso..."
-          if [ -f "src/data/org_repos.json" ]; then
-            echo "Arquivo org_repos.json criado com sucesso!"
-            echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
-            echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
-            echo "Primeiras linhas do arquivo:"
-            head -5 src/data/org_repos.json
-          else
-            echo " Erro: Arquivo org_repos.json não foi criado!"
-            exit 1
-          fi
 
       - name: Commitando mudanças para o repositório
         run: |
