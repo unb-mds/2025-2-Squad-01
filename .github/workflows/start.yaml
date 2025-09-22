@@ -82,8 +82,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/org_repos.json
-          git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo org_repos.json ao repositório"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo org_repos.json ao repositório"
+            git push
+          else
+            echo "Nenhuma mudança para commitar. Pulando commit e push."
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
