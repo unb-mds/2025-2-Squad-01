@@ -71,7 +71,7 @@ jobs:
           git add src/data/org_repos.json
           git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo org_repos.json ao repositório"
           git push
-
-      - name: Salvando informações a variaveis de ambiente
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      
