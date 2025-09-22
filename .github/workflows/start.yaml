@@ -51,11 +51,11 @@ jobs:
             echo "Arquivo org_repos.json criado com sucesso!"
             echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
             echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
-            echo "Primeiras linhas do arquivo:"
-            head -5 src/data/org_repos.json
           else
-            echo " Warning: Arquivo org_repos.json não foi criado! Criando arquivo vazio para evitar falhas."
+            echo " Observação: Arquivo org_repos.json não foi criado! Criando arquivo vazio para evitar falhas."
             echo '[]' > src/data/org_repos.json
+            echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
+            echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
           fi
 
       - name: Chamada API autenticada
