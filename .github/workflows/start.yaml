@@ -34,7 +34,7 @@ jobs:
           
       - name: Verificar o local do fork do repositório
         run: |
-          TYPE=$$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          TYPE=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/users/${{ github.repository_owner }} | jq -r .type)
           
           if [ "$TYPE" = "Organization" ]; then
