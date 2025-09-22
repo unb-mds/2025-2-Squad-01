@@ -1,0 +1,24 @@
+name: Coletar métricas da organização
+
+on:
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Mostrar variáveis automáticas
+        run: |
+          echo "Repositório: ${{ github.repository }}"
+          echo "Organização: ${{ github.repository_owner }}"
+          echo "Autor do evento: ${{ github.actor }}"
+          echo "Branch: ${{ github.ref }}"
+
+      - name: Chamada API autenticada
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/orgs/${{ github.repository_owner }}/repos \
+               > src/data/org_repos.json
