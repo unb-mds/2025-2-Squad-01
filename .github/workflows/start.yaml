@@ -3,6 +3,9 @@ name: Coletar métricas da organização
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   metrics:
     runs-on: ubuntu-latest
@@ -35,17 +38,13 @@ jobs:
           HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                https://api.github.com/orgs/${{ github.repository_owner }}/repos \
                -o src/data/org_repos.json)
-
-          RESPONSE_BODY=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                          https://api.github.com/orgs/${{ github.repository_owner }}/repos)
-          
           
           echo "Status HTTP da resposta: $HTTP_STATUS"
           
           if [ "$HTTP_STATUS" -eq 200 ]; then
-            echo "✅ API retornou sucesso (200)"
+            echo "API retornou sucesso (200)"
           else
-            echo "❌ API retornou erro: $HTTP_STATUS"
+            echo "API retornou erro: $HTTP_STATUS"
             echo "Conteúdo da resposta:"
             cat src/data/org_repos.json
             exit 1
@@ -55,18 +54,24 @@ jobs:
         run: |
           echo "Verificando se o arquivo foi criado com sucesso..."
           if [ -f "src/data/org_repos.json" ]; then
-            echo "✅ Arquivo org_repos.json criado com sucesso!"
+            echo "Arquivo org_repos.json criado com sucesso!"
             echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
             echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
             echo "Primeiras linhas do arquivo:"
             head -5 src/data/org_repos.json
           else
-            echo "❌ Erro: Arquivo org_repos.json não foi criado!"
+            echo " Erro: Arquivo org_repos.json não foi criado!"
             exit 1
           fi
 
-      - name: Salvar no arquivo org-repos.json
+      - name: Commitando mudanças para o repositório
         run: |
-          echo "RESPOSTA DA API:"
-          echo "$RESPONSE_BODY"
-          echo "$RESPONSE_BODY" > src/data/org_repos.json
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/org_repos.json
+          git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo org_repos.json ao repositório"
+          git push
+
+      - name: Salvando informações a variaveis de ambiente
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
