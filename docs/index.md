@@ -4,17 +4,16 @@ CoOps é uma plataforma de visualização e análise de métricas de colaboraç�
 
 ## Navegação
 
- [Documentação do Backend](Documentacao-Backend.md)
- [Documentação do Frontend](Documentacao-Frontend.md)
- [Estudo Completo sobre GitHub Actions](Estudo-Completo-sobre-GitHub-Actions.md)
- [Benchmarking - LinearB](Benchmarking-LinearB.md)
- [Benchmarking Keypup](Benchmarking-Keypup.md)
- [Benchmarking Swarmia e SonarCloud](Benchmarking-Swarmia-e-SonarCloud.md)
- [Decisão Frontend](Decisao-Frontend.md)
- [Levantamento Inicial do Produto](Levantamento-Inicial-do-Produto.md)
- [SCRUM e Métodos Ágeis](SCRUM-e-Metodos-Agile.md)
- [Testar API](Testar-API.md)
-- [Testar API](TestarAPI.md)
+- [Documentação do Backend](Documentacao-Backend.md)
+- [Documentação do Frontend](Documentacao-Frontend.md)
+- [Estudo Completo sobre GitHub Actions](Estudo-Completo-sobre-GitHub-Actions.md)
+- [Benchmarking - LinearB](Benchmarking-LinearB.md)
+- [Benchmarking Keypup](Benchmarking-Keypup.md)
+- [Benchmarking Swarmia e SonarCloud](Benchmarking-Swarmia-e-SonarCloud.md)
+- [Decisão Frontend](Decisao-Frontend.md)
+- [Levantamento Inicial do Produto](Levantamento-Inicial-do-Produto.md)
+- [SCRUM e Métodos Ágeis](SCRUM-e-Metodos-Agile.md)
+- [Testar API](Testar-API.md)
 - [Fluxo do Usuário - Métricas GitHub](fluxos/fluxo_usuario_metricas_github.md)
 
 Consulte o menu acima para acessar as principais páginas da documentação.
