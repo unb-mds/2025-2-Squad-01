@@ -1,0 +1,42 @@
+# .github/workflows/save-prs.yaml
+name: Salvar informações de PRs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Buscar PRs e salvar JSON
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python src/fetch_prs.py
+
+      - name: Commitando mudanças para o repositório
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/extractions/prs.json
+          if ! git diff --cached --quiet; then
+            git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo prs.json ao repositório"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin ${{ github.ref_name }}
+          else
+            echo "Nenhuma mudança para commitar. Pulando commit e push."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

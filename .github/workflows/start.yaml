@@ -74,21 +74,14 @@ jobs:
             exit 1
           fi
 
-      # <<< NOVO PASSO >>>
-      - name: Coletar informações de PRs
-        run: |
-          chmod +x ./fetch_prs.sh
-          ./fetch_prs.sh
-        env:
-          ORG: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
 
       # <<< COMMIT FINAL AJUSTADO >>>
-      - name: Commitando mudanças para o repositório (org_repos.json e prs.json)
+      - name: Commitando mudanças para o repositório (org_repos.json)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/org_repos.json src/data/prs.json
+          git add src/data/org_repos.json 
           if ! git diff --cached --quiet; then
             git commit -m "[GITHUB_ACTIONS_BOT] Atualizando métricas de repositórios e PRs"
             git fetch origin ${{ github.ref_name }}
