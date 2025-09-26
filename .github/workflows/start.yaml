@@ -46,6 +46,32 @@ jobs:
             exit 1
           fi
 
+
+      - name: Chamada API autenticada
+        run: |
+          OWNER=${GITHUB_REPOSITORY_OWNER:-${{ github.repository_owner }}}
+          echo "Fazendo chamada para a API do GitHub..."
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/orgs/$OWNER/repos \
+               -o src/data/org_repos.json)
+          
+          echo "Status HTTP da resposta: $HTTP_STATUS"
+          
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "API retornou sucesso (200)"
+            # Verifica se o arquivo está vazio ou contém apenas []
+            if [ ! -s src/data/org_repos.json ] || grep -q '^\[\s*\]$' src/data/org_repos.json; then
+              echo "ERRO: org_repos.json está vazio após a chamada da API!"
+              echo "Conteúdo do arquivo:" && cat src/data/org_repos.json
+              exit 1
+            fi
+          else
+            echo "API retornou erro: $HTTP_STATUS"
+            echo "Conteúdo da resposta:"
+            cat src/data/org_repos.json
+            exit 1
+          fi
+
       - name: Verificar arquivo criado
         run: |
           echo "Verificando se o arquivo foi criado com sucesso..."
@@ -58,24 +84,6 @@ jobs:
             echo '[]' > src/data/org_repos.json
             echo "Tamanho do arquivo: $(wc -c < src/data/org_repos.json) bytes"
             echo "Número de repositórios encontrados: $(jq length src/data/org_repos.json 2>/dev/null || echo 'Erro ao contar repositórios')"
-          fi
-
-      - name: Chamada API autenticada
-        run: |
-          echo "Fazendo chamada para a API do GitHub..."
-          HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-               https://api.github.com/orgs/${{ github.repository_owner }}/repos \
-               -o src/data/org_repos.json)
-          
-          echo "Status HTTP da resposta: $HTTP_STATUS"
-          
-          if [ "$HTTP_STATUS" -eq 200 ]; then
-            echo "API retornou sucesso (200)"
-          else
-            echo "API retornou erro: $HTTP_STATUS"
-            echo "Conteúdo da resposta:"
-            cat src/data/org_repos.json
-            exit 1
           fi
 
 
