@@ -1,8 +1,14 @@
-# .github/workflows/save-prs.yaml
 name: Salvar informações de PRs
 
 on:
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      org:
+        required: true
+        type: string
+      token:
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -24,8 +30,9 @@ jobs:
 
       - name: Buscar PRs e salvar JSON
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python src/fetch_prs.py
+          GH_TOKEN: ${{ inputs.token }}
+          ORG: ${{ inputs.org }}
+        run: python fetch_prs.py
 
       - name: Commitando mudanças para o repositório
         run: |
@@ -38,5 +45,3 @@ jobs:
             git push origin ${{ github.ref_name }}
           else
             echo "Nenhuma mudança para commitar. Pulando commit e push."
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -74,9 +74,12 @@ jobs:
             exit 1
           fi
 
-      
+      - name: Rodar workflow de PRs
+        uses: ./.github/workflows/save-prs.yaml
+        with:
+          org: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # <<< COMMIT FINAL AJUSTADO >>>
       - name: Commitando mudanças para o repositório (org_repos.json)
         run: |
           git config --global user.name "github-actions[bot]"
@@ -89,7 +92,5 @@ jobs:
             git push origin ${{ github.ref_name }}
           else
             echo "Nenhuma mudança para commitar. Pulando commit e push."
-          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
