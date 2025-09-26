@@ -34,8 +34,10 @@ jobs:
           
       - name: Verificar o local do fork do repositório
         run: |
+          OWNER=${GITHUB_REPOSITORY_OWNER:-${{ github.repository_owner }}}
+
           TYPE=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/users/${{ github.repository_owner }} | jq -r .type)
+            https://api.github.com/users/$OWNER | jq -r .type)
           
           if [ "$TYPE" = "Organization" ]; then
             echo "Fork condiz com os parametros de organização. Seguindo com a execução..."
@@ -78,16 +80,19 @@ jobs:
 
 
       - name: Commitando mudanças para o repositório
+        if: ${{ !env.ACT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/org_repos.json
           if ! git diff --cached --quiet; then
             git commit -m "[GITHUB_ACTIONS_BOT] Adicionando o arquivo org_repos.json ao repositório"
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ secrets.GITHUB_REPOSITORY_OWNER }}/2025-2-Squad-01.git
             git push
           else
             echo "Nenhuma mudança para commitar. Pulando commit e push."
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
 
