@@ -91,11 +91,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      
-      - name: Disparar workflow save-issues
-        uses: peter-evans/workflow-dispatch@v1
-        with:
-          workflow: save-issues.yaml
-          ref: ${{ github.ref }}
-
-      
