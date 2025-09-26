@@ -25,7 +25,7 @@ jobs:
       - name: Buscar issues e salvar JSON
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python src/fetch_issues.py
+        run: python src/data/fetch_issues.py
 
       - name: Commitando mudanças para o repositório
         run: |
