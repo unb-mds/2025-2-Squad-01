@@ -60,9 +60,9 @@ Acompanhe o design do projeto no Figma:
 ---
 
 ## 👥 Equipe
-- **Scrum Master**: Heitor Macedo  
-- **Product Owner (PO)**: [Nome do PO]  
-- **Time de Desenvolvimento**: [Nomes dos integrantes]  
+- **Scrum Master**: Pedro Druck
+- **Product Owner (PO)**: Marcos Antonio  
+- **Time de Desenvolvimento**: Carlos Eduardo, Gustavo Xavier, Heitor Macedo, Pedro Rocha   
 
 ---
 
