@@ -1,114 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>CoOps - Métricas GitHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --gray: #7f8c8d;
+            --dark: #2c3e50;
         }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            color: var(--dark);
         }
-        
-        .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 2rem 0 1.5rem 0;
             text-align: center;
-            max-width: 600px;
-            width: 90%;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
         }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-            font-weight: 300;
+        header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
-        
-        p {
-            color: #7f8c8d;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
         }
-        
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: var(--white);
             text-decoration: none;
-            border-radius: 25px;
-            transition: transform 0.3s ease;
+            margin: 0 1.2rem;
             font-weight: 500;
+            font-size: 1.05rem;
+            transition: text-decoration 0.2s;
         }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        nav a:hover {
+            text-decoration: underline;
         }
-        
-        .features {
+        .main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        ul, ol {
+            margin-left: 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+        .team-list li {
+            margin-bottom: 0.3rem;
+        }
+        .c4-diagrams a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.2rem;
         }
-        
-        .feature {
-            padding: 1rem;
+        .card {
             background: #f8f9fa;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid var(--primary);
+            padding: 1.1rem 1rem 0.7rem 1rem;
+            min-height: 120px;
         }
-        
-        .feature h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+        .card h3 {
+            color: var(--dark);
             font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
-        
-        .feature p {
+        .card p {
             color: #6c757d;
-            font-size: 0.9rem;
+            font-size: 0.97rem;
             margin: 0;
+        }
+        @media (max-width: 600px) {
+            .main { padding: 1rem; }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome</h1>
-        <p>This is a simple, modern HTML index page. Clean design meets functionality.</p>
-        
-        <a href="#" class="btn">Get Started</a>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>Responsive</h3>
-                <p>Works on all devices</p>
+    <header>
+        <h1>CoOps – Métricas GitHub</h1>
+        <p>Visualização, análise e explicação de métricas de colaboração em repositórios e organizações GitHub.</p>
+        <nav>
+            <a href="#intro">Introdução</a>
+            <a href="#team">Equipe</a>
+            <a href="#tech">Tecnologias</a>
+            <a href="#arch">Arquitetura</a>
+            <a href="#req">Requisitos</a>
+            <a href="#stories">User Stories</a>
+        </nav>
+    </header>
+    <div class="main">
+        <section id="intro">
+            <h2>Introdução</h2>
+            <p>O projeto CoOps foi desenvolvido na disciplina Métodos de Desenvolvimento de Software (MDS) da Engenharia de Software (UnB). Seu objetivo é apoiar desenvolvedores, mantenedores e organizações na análise da colaboração dentro de projetos GitHub, fornecendo métricas claras, visuais e interpretadas por IA.</p>
+        </section>
+        <section id="team">
+            <h2>Equipe</h2>
+            <ul class="team-list">
+                <li><b>Scrum Master:</b> Pedro Druck </li>
+                <li><b>Product Owner (PO):</b> Marcos Antonio</li>
+                <li><b>Time de Desenvolvimento:</b> Gustavo, Pedro Rocha, Carlos, Heitor</li>
+            </ul>
+        </section>
+        <section id="tech">
+            <h2>Tecnologias Utilizadas</h2>
+            <div class="cards">
+                <div class="card"><h3>Python</h3><p>Extração de dados via API GitHub</p></div>
+                <div class="card"><h3>GitHub Actions</h3><p>Automação de workflows</p></div>
+                <div class="card"><h3>HTML5 &amp; CSS3</h3><p>Frontend e documentação (GitHub Pages)</p></div>
+                <div class="card"><h3>Markdown</h3><p>Documentação estruturada</p></div>
+                <div class="card"><h3>Figma</h3><p>Protótipos e design</p></div>
             </div>
-            <div class="feature">
-                <h3>Modern</h3>
-                <p>Clean and contemporary</p>
+        </section>
+        <section id="arch">
+            <h2>Arquitetura do Projeto</h2>
+            <p>O projeto segue uma arquitetura orientada a serviços, com automações para coleta de dados e geração de relatórios.</p>
+            <ul>
+                <li><b>Coletor de Métricas:</b> Scripts Python que extraem dados da API do GitHub.</li>
+                <li><b>Workflows:</b> GitHub Actions para orquestrar a coleta e atualização dos dados.</li>
+                <li><b>Frontend:</b> GitHub Pages para visualização e documentação.</li>
+            </ul>
+            <div class="c4-diagrams">
+                <p>Veja os <b>diagramas C4</b> para uma visão detalhada da arquitetura:</p>
+                <ul>
+                    <li><a href="docs/arquitetura-c4-contexto.png" target="_blank">Diagrama de Contexto</a> (adicione o arquivo em docs/)</li>
+                    <li><a href="docs/arquitetura-c4-container.png" target="_blank">Diagrama de Containers</a> (adicione o arquivo em docs/)</li>
+                </ul>
             </div>
-            <div class="feature">
-                <h3>Fast</h3>
-                <p>Lightweight and quick</p>
-            </div>
-        </div>
+        </section>
+        <section id="req">
+            <h2>Requisitos Funcionais</h2>
+            <ul>
+                <li>RF01: Exibir dashboard de métricas de colaboração.</li>
+                <li>RF02: Permitir alternar entre visão de repositório e organização.</li>
+                <li>RF03: Coletar e exibir métricas de issues, commits, pull requests, tecnologias e qualidade de código.</li>
+                <li>RF04: Fornecer explicações automáticas das métricas via IA.</li>
+                <li>RF05: Atualizar dados automaticamente via GitHub Actions.</li>
+            </ul>
+            <h2 style="margin-top:2rem;">Requisitos Não-Funcionais</h2>
+            <ul>
+                <li>RNF01: Interface responsiva e acessível.</li>
+                <li>RNF02: Código aberto e documentado.</li>
+                <li>RNF03: Atualização automática dos dados sem intervenção manual.</li>
+                <li>RNF04: Segurança dos dados sensíveis (tokens, etc).</li>
+            </ul>
+        </section>
+        <section id="stories">
+            <h2>User Stories</h2>
+            <ul>
+                <li>Como <b>mantenedor</b>, quero ver issues abertas e fechadas, para entender o andamento do projeto.</li>
+                <li>Como <b>desenvolvedor</b>, quero ver quantos commits fiz no mês, para acompanhar minha contribuição.</li>
+                <li>Como <b>líder de equipe</b>, quero ver o tempo médio para revisar PRs, para identificar gargalos.</li>
+                <li>Como <b>gestor de organização</b>, quero métricas consolidadas de todos os repositórios, para avaliar performance geral.</li>
+                <li>Como <b>usuário iniciante</b>, quero que a IA explique métricas, para interpretar melhor os gráficos.</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
