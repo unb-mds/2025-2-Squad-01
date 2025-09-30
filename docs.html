@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        nav {
+            margin-top: 1.2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        h2 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        ul, ol {
+            margin-left: 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        @media (max-width: 600px) {
+            .main { padding: 1rem; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentação do Projeto CoOps</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+        </nav>
+    </header>
+    <div class="main">
+        <section>
+            <h2>Visão Geral</h2>
+            <p>CoOps é uma plataforma para análise e visualização de métricas de colaboração em projetos GitHub, desenvolvida na disciplina MDS/UnB.</p>
+        </section>
+        <section>
+            <h2>Documentação Técnica</h2>
+            <ul>
+                <li><a href="docs/Documentacao-Backend.md">Backend</a></li>
+                <li><a href="docs/Documentacao-Frontend.md">Frontend</a></li>
+                <li><a href="docs/Estudo-Completo-sobre-GitHub-Actions.md">GitHub Actions</a></li>
+                <li><a href="docs/Benchmarking-LinearB.md">Benchmarking LinearB</a></li>
+                <li><a href="docs/Benchmarking-Keypup.md">Benchmarking Keypup</a></li>
+                <li><a href="docs/Benchmarking-Swarmia-e-SonarCloud.md">Benchmarking Swarmia e SonarCloud</a></li>
+                <li><a href="docs/Decisao-Frontend.md">Decisão Frontend</a></li>
+                <li><a href="docs/Levantamento-Inicial-do-Produto.md">Levantamento Inicial</a></li>
+                <li><a href="docs/SCRUM-e-Metodos-Agile.md">SCRUM e Métodos Ágeis</a></li>
+                <li><a href="docs/Testar-API.md">Testar API</a></li>
+                <li><a href="docs/fluxos/fluxo_usuario_metricas_github.md">Fluxo do Usuário</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Atas de Reuniões</h2>
+            <ul>
+                <li><a href="docs/atas/2025-08-26.md">26/08/2025 - Reunião Inicial</a></li>
+                <li><a href="docs/atas/2025-08-28.md">28/08/2025 - Definição do Projeto</a></li>
+                <li><a href="docs/atas/2025-09-01.md">01/09/2025 - Retrospectiva e Planejamento</a></li>
+                <li><a href="docs/atas/2025-09-08.md">08/09/2025 - Planejamento da Sprint 2</a></li>
+                <li><a href="docs/atas/2025-09-09.md">09/09/2025 - Definição de Acesso e Planejamento</a></li>
+                <li><a href="docs/atas/2025-09-15.md">15/09/2025 - Pivô Estratégico e Priorização</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Arquivos e Diagramas</h2>
+            <ul>
+                <li><a href="docs/arquitetura-c4-contexto.png" target="_blank">Diagrama C4 - Contexto</a></li>
+                <li><a href="docs/arquitetura-c4-container.png" target="_blank">Diagrama C4 - Containers</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
