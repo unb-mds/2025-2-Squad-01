@@ -37,5 +37,6 @@ jobs:
             git push
           else
             echo "Nenhuma mudança para commitar. Pulando commit e push."
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
