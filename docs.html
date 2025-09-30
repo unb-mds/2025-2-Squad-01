@@ -64,7 +64,7 @@
         }
 
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </style>
 </head>
 <body>
     <header>
@@ -75,14 +75,35 @@
     </header>
     <div class="main">
         <section>
-            <h2>Exemplo: Renderizar Markdown</h2>
-            <select id="mdSelect" style="margin-bottom:1rem;">
-                <option value="docs/Documentacao-Backend.md">Backend</option>
-                <option value="docs/Documentacao-Frontend.md">Frontend</option>
-                <option value="docs/Estudo-Completo-sobre-GitHub-Actions.md">GitHub Actions</option>
-            </select>
-            <button onclick="loadMarkdown()">Carregar</button>
-            <div id="mdContent" style="margin-top:2rem;"></div>
+            <h2>Visão Geral</h2>
+            <p>CoOps é uma plataforma para análise e visualização de métricas de colaboração em projetos GitHub, desenvolvida na disciplina MDS/UnB.</p>
+        </section>
+        <section>
+            <h2>Documentação Técnica</h2>
+            <ul>
+                <li><a href="docs/Documentacao-Backend.md">Backend</a></li>
+                <li><a href="docs/Documentacao-Frontend.md">Frontend</a></li>
+                <li><a href="docs/Estudo-Completo-sobre-GitHub-Actions.md">GitHub Actions</a></li>
+                <li><a href="docs/Benchmarking-LinearB.md">Benchmarking LinearB</a></li>
+                <li><a href="docs/Benchmarking-Keypup.md">Benchmarking Keypup</a></li>
+                <li><a href="docs/Benchmarking-Swarmia-e-SonarCloud.md">Benchmarking Swarmia e SonarCloud</a></li>
+                <li><a href="docs/Decisao-Frontend.md">Decisão Frontend</a></li>
+                <li><a href="docs/Levantamento-Inicial-do-Produto.md">Levantamento Inicial</a></li>
+                <li><a href="docs/SCRUM-e-Metodos-Agile.md">SCRUM e Métodos Ágeis</a></li>
+                <li><a href="docs/Testar-API.md">Testar API</a></li>
+                <li><a href="docs/fluxos/fluxo_usuario_metricas_github.md">Fluxo do Usuário</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Atas de Reuniões</h2>
+            <ul>
+                <li><a href="docs/atas/2025-08-26.md">26/08/2025 - Reunião Inicial</a></li>
+                <li><a href="docs/atas/2025-08-28.md">28/08/2025 - Definição do Projeto</a></li>
+                <li><a href="docs/atas/2025-09-01.md">01/09/2025 - Retrospectiva e Planejamento</a></li>
+                <li><a href="docs/atas/2025-09-08.md">08/09/2025 - Planejamento da Sprint 2</a></li>
+                <li><a href="docs/atas/2025-09-09.md">09/09/2025 - Definição de Acesso e Planejamento</a></li>
+                <li><a href="docs/atas/2025-09-15.md">15/09/2025 - Pivô Estratégico e Priorização</a></li>
+            </ul>
         </section>
         <section>
             <h2>Arquivos e Diagramas</h2>
@@ -92,18 +113,5 @@
             </ul>
         </section>
     </div>
-    <script>
-    function loadMarkdown() {
-        var file = document.getElementById('mdSelect').value;
-        fetch(file)
-            .then(response => response.text())
-            .then(text => {
-                document.getElementById('mdContent').innerHTML = marked.parse(text);
-            })
-            .catch(() => {
-                document.getElementById('mdContent').innerHTML = '<p>Erro ao carregar o arquivo Markdown.</p>';
-            });
-    }
-    </script>
 </body>
 </html>
