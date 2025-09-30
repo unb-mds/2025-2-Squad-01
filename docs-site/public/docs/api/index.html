@@ -3,8 +3,8 @@
 <head><script src="/2025-2-Squad-01/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=2025-2-Squad-01/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Equipe - CoOps - Documentação</title>
-    <meta name="description" content="Conheça os membros do Squad 01">
+    <title>GitHub API Integration - CoOps - Documentação</title>
+    <meta name="description" content="Como utilizamos a API do GitHub">
     
     <style>
         * {
@@ -380,59 +380,80 @@
     <main>
         <div class="content">
             
-<section>
-    <h1>Nossa Equipe</h1>
-    
-    
-    <div class="section-content">
-        <p>Conheça os talentosos membros do <strong>Squad 01</strong> que estão desenvolvendo o projeto CoOps na disciplina <strong>Métodos de Desenvolvimento de Software (MDS)</strong> da Engenharia de Software (UnB).</p>
-<h2 id="membros-da-equipe">Membros da Equipe</h2>
-<p><strong>Squad 01 - Turma 2025.2</strong></p>
-<h3 id="papéis-e-responsabilidades">Papéis e Responsabilidades</h3>
-<p><strong>Product Owner (PO):</strong> Marcos Antonio</p>
+<article>
+    <h1>GitHub API Integration</h1>
+    <div class="content">
+        <h1 id="integração-com-github-api">Integração com GitHub API</h1>
+<h2 id="api-do-github-v4-graphql">API do GitHub v4 (GraphQL)</h2>
+<h3 id="vantagens-do-graphql">Vantagens do GraphQL</h3>
 <ul>
-<li>Responsável pela visão do produto e priorização do backlog</li>
+<li><strong>Eficiência</strong>: Busca apenas dados necessários</li>
+<li><strong>Flexibilidade</strong>: Uma query, múltiplos recursos</li>
+<li><strong>Tipagem</strong>: Schema bem definido</li>
+<li><strong>Rate Limiting</strong>: Baseado em complexidade</li>
 </ul>
-<p><strong>Scrum Master:</strong> Pedro Druck</p>
+<h2 id="queries-principais">Queries Principais</h2>
+<h3 id="dados-do-repositório">Dados do Repositório</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">query</span> <span style="color:#a6e22e">GetRepository</span>($owner: <span style="color:#a6e22e">String</span>!, $name: <span style="color:#a6e22e">String</span>!) {
+</span></span><span style="display:flex;"><span>  repository(owner: $owner, <span style="color:#a6e22e">name</span>: $name) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>
+</span></span><span style="display:flex;"><span>    description
+</span></span><span style="display:flex;"><span>    stargazerCount
+</span></span><span style="display:flex;"><span>    forkCount
+</span></span><span style="display:flex;"><span>    issues(states: [<span style="color:#a6e22e">OPEN</span>, CLOSED]) {
+</span></span><span style="display:flex;"><span>      totalCount
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    pullRequests(states: [<span style="color:#a6e22e">OPEN</span>, CLOSED, MERGED]) {
+</span></span><span style="display:flex;"><span>      totalCount
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="contribuidores-e-atividade">Contribuidores e Atividade</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">query</span> <span style="color:#a6e22e">GetContributors</span>($owner: <span style="color:#a6e22e">String</span>!, $name: <span style="color:#a6e22e">String</span>!) {
+</span></span><span style="display:flex;"><span>  repository(owner: $owner, <span style="color:#a6e22e">name</span>: $name) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">collaborators</span>(first: <span style="color:#a6e22e">100</span>) {
+</span></span><span style="display:flex;"><span>      nodes {
+</span></span><span style="display:flex;"><span>        login
+</span></span><span style="display:flex;"><span>        avatarUrl
+</span></span><span style="display:flex;"><span>        bio
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    defaultBranchRef {
+</span></span><span style="display:flex;"><span>      target {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">...</span> <span style="color:#66d9ef">on</span> Commit {
+</span></span><span style="display:flex;"><span>          history(first: <span style="color:#a6e22e">100</span>) {
+</span></span><span style="display:flex;"><span>            nodes {
+</span></span><span style="display:flex;"><span>              author {
+</span></span><span style="display:flex;"><span>                user {
+</span></span><span style="display:flex;"><span>                  login
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>              committedDate
+</span></span><span style="display:flex;"><span>              message
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="métricas-calculadas">Métricas Calculadas</h2>
 <ul>
-<li>Facilita o processo Scrum e remove impedimentos</li>
+<li><strong>Frequência de Commits</strong>: Commits por período</li>
+<li><strong>Colaboração</strong>: PRs e reviews entre membros</li>
+<li><strong>Produtividade</strong>: Issues resolvidas vs criadas</li>
+<li><strong>Qualidade</strong>: Tempo médio de review</li>
+<li><strong>Engajamento</strong>: Comentários e discussões</li>
 </ul>
-<p><strong>Time de Desenvolvimento:</strong></p>
+<h2 id="rate-limiting-e-cache">Rate Limiting e Cache</h2>
 <ul>
-<li><strong>Carlos</strong> - Desenvolvedor</li>
-<li><strong>Gustavo</strong> - Desenvolvedor</li>
-<li><strong>Heitor</strong> - Desenvolvedor</li>
-<li><strong>Pedro Rocha</strong> - Desenvolvedor</li>
+<li><strong>Limite</strong>: 5000 pontos/hora</li>
+<li><strong>Cache</strong>: Redis com TTL</li>
+<li><strong>Fallback</strong>: Dados locais quando limite atingido</li>
 </ul>
-<h2 id="metodologia-de-trabalho">Metodologia de Trabalho</h2>
-<p>Nossa equipe adota práticas ágeis baseadas no <strong>Scrum</strong>, incluindo:</p>
-<ul>
-<li><strong>Sprints</strong> de 2 semanas</li>
-<li><strong>Daily Standups</strong> para sincronização diária</li>
-<li><strong>Sprint Planning</strong> para planejamento detalhado</li>
-<li><strong>Sprint Review</strong> para demonstração dos resultados</li>
-<li><strong>Sprint Retrospective</strong> para melhoria contínua</li>
-</ul>
-<h2 id="ferramentas-e-tecnologias">Ferramentas e Tecnologias</h2>
-<p><strong>Stack tecnológico do projeto CoOps:</strong></p>
-<ul>
-<li><strong>Versionamento:</strong> GitHub</li>
-<li><strong>CI/CD:</strong> GitHub Actions</li>
-<li><strong>Comunicação:</strong> Discord/Teams</li>
-<li><strong>Design:</strong> Figma</li>
-<li><strong>Documentação:</strong> Hugo (tema customizado)</li>
-<li><strong>Backend:</strong> Python</li>
-<li><strong>API:</strong> GitHub API</li>
-</ul>
-<h2 id="contribuições">Contribuições</h2>
-<p>O time é responsável por todas as etapas do projeto, desde o levantamento de requisitos, arquitetura, desenvolvimento backend e frontend, até a documentação e apresentação final.</p>
-<p><strong>Trabalhando em colaboração para criar uma solução inovadora de análise de métricas de colaboração no GitHub!</strong></p>
 
     </div>
-    
-    
-    
-</section>
+</article>
 
         </div>
     </main>

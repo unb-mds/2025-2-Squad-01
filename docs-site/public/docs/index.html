@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head><script src="/2025-2-Squad-01/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=2025-2-Squad-01/livereload" data-no-instant defer></script>
+<head><script src="/2025-2-Squad-01/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=2025-2-Squad-01/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentação - CoOps - Documentação</title>
@@ -365,7 +365,7 @@
             <a href="/" class="logo">CoOps - Documentação</a>
             <ul class="nav-links">
                 
-                <li><a href="https://unb-mds.github.io/2025-2-Squad-01/">Voltar ao Site</a></li>
+                <li><a href="/2025-2-Squad-01/">Início</a></li>
                 
                 <li><a href="/2025-2-Squad-01/docs/">Documentação</a></li>
                 
@@ -424,6 +424,581 @@
     </div>
     
     
+    
+    <div class="pages-list">
+        <h2>📋 Páginas desta seção:</h2>
+        <div class="cards">
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/levantamento-inicial/">Levantamento Inicial</a>
+                </h3>
+                
+                <p><h1 id="levantamento-inicial-do-produto">Levantamento Inicial do Produto</h1>
+<h2 id="visão-do-produto">Visão do Produto</h2>
+<p>O <strong>CoOps</strong> (Collaboration Operations) é uma ferramenta de análise de métricas de colaboração em repositórios GitHub, desenvolvida para ajudar equipes a compreender e melhorar seus processos de desenvolvimento.</p>
+<h2 id="problema-identificado">Problema Identificado</h2>
+<h3 id="desafios-atuais">Desafios Atuais</h3>
+<ul>
+<li><strong>Falta de Visibilidade</strong>: Dificuldade em acompanhar métricas de colaboração</li>
+<li><strong>Análise Manual</strong>: Processo demorado para extrair insights</li>
+<li><strong>Dados Dispersos</strong>: Informações espalhadas em várias interfaces</li>
+<li><strong>Benchmarking</strong>: Dificuldade em comparar performance entre projetos</li>
+</ul>
+<h3 id="público-alvo">Público-Alvo</h3>
+<ul>
+<li><strong>Gerentes de Projeto</strong>: Acompanhamento de produtividade</li>
+<li><strong>Tech Leads</strong>: Análise de colaboração da equipe</li>
+<li><strong>Desenvolvedores</strong>: Autoavaliação e melhoria contínua</li>
+<li><strong>Product Owners</strong>: Métricas para tomada de decisão</li>
+</ul>
+<h2 id="solução-proposta">Solução Proposta</h2>
+<h3 id="funcionalidades-core">Funcionalidades Core</h3>
+<ol>
+<li><strong>Dashboard Analítico</strong>: Visualização de métricas em tempo real</li>
+<li><strong>Análise de Colaboração</strong>: Insights sobre trabalho em equipe</li>
+<li><strong>Relatórios Automatizados</strong>: Geração de reports periódicos</li>
+<li><strong>Comparação de Repositórios</strong>: Benchmarking entre projetos</li>
+</ol>
+<h3 id="diferenciais">Diferenciais</h3>
+<ul>
+<li><strong>Interface Intuitiva</strong>: UX focada na experiência do usuário</li>
+<li><strong>Análise Avançada</strong>: Algoritmos de ML para insights</li>
+<li><strong>Integração Nativa</strong>: Aproveitamento completo da GitHub API</li>
+<li><strong>Open Source</strong>: Transparência e colaboração da comunidade</li>
+</ul>
+<h2 id="pesquisa-de-mercado">Pesquisa de Mercado</h2>
+<h3 id="ferramentas-similares-analisadas">Ferramentas Similares Analisadas</h3>
+<ul>
+<li><strong>GitHub Insights</strong>: Limitado aos repositórios próprios</li>
+<li><strong>GitKraken Insights</strong>: Foco em métricas de código</li>
+<li><strong>LinearB</strong>: Solução enterprise complexa</li>
+<li><strong>CodeClimate</strong>: Foco em qualidade, não colaboração</li>
+</ul>
+<h3 id="oportunidades-identificadas">Oportunidades Identificadas</h3>
+<ul>
+<li>Gap entre ferramentas simples e enterprise</li>
+<li>Necessidade de análise de colaboração específica</li>
+<li>Interface mais acessível para pequenas equipes</li>
+<li>Foco em métricas acionáveis vs apenas descritivas</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/requisitos/">Requisitos do Sistema</a>
+                </h3>
+                
+                <p><h1 id="requisitos-do-sistema">Requisitos do Sistema</h1>
+<h2 id="requisitos-funcionais">Requisitos Funcionais</h2>
+<h3 id="rf01---análise-de-repositórios">RF01 - Análise de Repositórios</h3>
+<ul>
+<li>O sistema deve permitir análise de repositórios GitHub públicos</li>
+<li>Deve extrair métricas de colaboração e produtividade</li>
+</ul>
+<h3 id="rf02---dashboard-de-métricas">RF02 - Dashboard de Métricas</h3>
+<ul>
+<li>Apresentar métricas em formato visual (gráficos, dashboards)</li>
+<li>Permitir comparação entre repositórios</li>
+</ul>
+<h3 id="rf03---relatórios">RF03 - Relatórios</h3>
+<ul>
+<li>Gerar relatórios sobre produtividade da equipe</li>
+<li>Exportar dados em formato CSV/JSON</li>
+</ul>
+<h2 id="requisitos-não-funcionais">Requisitos Não-Funcionais</h2>
+<h3 id="rnf01---performance">RNF01 - Performance</h3>
+<ul>
+<li>Tempo de resposta &lt; 3 segundos para consultas</li>
+<li>Suporte a múltiplas consultas simultâneas</li>
+</ul>
+<h3 id="rnf02---escalabilidade">RNF02 - Escalabilidade</h3>
+<ul>
+<li>Arquitetura preparada para crescimento</li>
+<li>Cache de dados para otimização</li>
+</ul>
+<h3 id="rnf03---usabilidade">RNF03 - Usabilidade</h3>
+<ul>
+<li>Interface intuitiva e responsiva</li>
+<li>Compatibilidade com navegadores modernos</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/arquitetura/">Arquitetura do Sistema</a>
+                </h3>
+                
+                <p><h1 id="arquitetura-do-sistema">Arquitetura do Sistema</h1>
+<h2 id="visão-geral">Visão Geral</h2>
+<p>O CoOps utiliza uma arquitetura moderna baseada em microserviços com as seguintes camadas:</p>
+<h2 id="frontend">Frontend</h2>
+<ul>
+<li><strong>Framework</strong>: ReactJS</li>
+<li><strong>Estilização</strong>: CSS Modules / Styled Components</li>
+<li><strong>State Management</strong>: Redux/Context API</li>
+<li><strong>Build</strong>: Vite/Webpack</li>
+</ul>
+<h2 id="backend">Backend</h2>
+<ul>
+<li><strong>Runtime</strong>: Python 3.9+</li>
+<li><strong>Framework</strong>: FastAPI</li>
+<li><strong>Database</strong>: PostgreSQL</li>
+<li><strong>Cache</strong>: Redis</li>
+<li><strong>API Externa</strong>: GitHub API v4 (GraphQL)</li>
+</ul>
+<h2 id="infraestrutura">Infraestrutura</h2>
+<ul>
+<li><strong>Deploy</strong>: GitHub Pages (Frontend) + Heroku (Backend)</li>
+<li><strong>CI/CD</strong>: GitHub Actions</li>
+<li><strong>Monitoramento</strong>: Logs centralizados</li>
+</ul>
+<h2 id="fluxo-de-dados">Fluxo de Dados</h2>
+<ol>
+<li><strong>Coleta</strong>: Extração de dados via GitHub API</li>
+<li><strong>Processamento</strong>: Análise e cálculo de métricas</li>
+<li><strong>Armazenamento</strong>: Persistência em banco de dados</li>
+<li><strong>Visualização</strong>: Dashboard interativo</li>
+</ol>
+<h2 id="segurança">Segurança</h2>
+<ul>
+<li>Autenticação via GitHub OAuth</li>
+<li>Rate limiting para API</li>
+<li>Validação de dados de entrada</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/frontend/">Frontend - ReactJS</a>
+                </h3>
+                
+                <p><h1 id="frontend---reactjs">Frontend - ReactJS</h1>
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<ul>
+<li><strong>React 18</strong>: Framework principal</li>
+<li><strong>TypeScript</strong>: Tipagem estática</li>
+<li><strong>React Router</strong>: Navegação SPA</li>
+<li><strong>Axios</strong>: Cliente HTTP</li>
+<li><strong>Chart.js</strong>: Visualização de dados</li>
+</ul>
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<pre tabindex="0"><code>src/
+├── components/     # Componentes reutilizáveis
+├── pages/         # Páginas principais
+├── hooks/         # Custom hooks
+├── services/      # API calls
+├── utils/         # Funções utilitárias
+├── types/         # Definições TypeScript
+└── styles/        # Estilos globais
+</code></pre><h2 id="componentes-principais">Componentes Principais</h2>
+<h3 id="dashboard">Dashboard</h3>
+<ul>
+<li>Exibe métricas principais do repositório</li>
+<li>Gráficos interativos de produtividade</li>
+<li>Filtros por período e colaboradores</li>
+</ul>
+<h3 id="análise-de-repositório">Análise de Repositório</h3>
+<ul>
+<li>Formulário de busca de repositórios</li>
+<li>Validação de URLs do GitHub</li>
+<li>Feedback visual durante carregamento</li>
+</ul>
+<h3 id="relatórios">Relatórios</h3>
+<ul>
+<li>Tabelas de dados detalhados</li>
+<li>Exportação de relatórios</li>
+<li>Comparação entre repositórios</li>
+</ul>
+<h2 id="estado-da-aplicação">Estado da Aplicação</h2>
+<ul>
+<li>Context API para dados globais</li>
+<li>Local state para componentes específicos</li>
+<li>Cache de requisições com React Query</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/backend/">Backend - Python/FastAPI</a>
+                </h3>
+                
+                <p><h1 id="backend---pythonfastapi">Backend - Python/FastAPI</h1>
+<h2 id="arquitetura-do-backend">Arquitetura do Backend</h2>
+<h3 id="fastapi-framework">FastAPI Framework</h3>
+<ul>
+<li><strong>Performance</strong>: Baseado em Starlette (async/await)</li>
+<li><strong>Documentação</strong>: Swagger/OpenAPI automático</li>
+<li><strong>Validação</strong>: Pydantic models</li>
+<li><strong>Testes</strong>: Pytest integrado</li>
+</ul>
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<pre tabindex="0"><code>backend/
+├── app/
+│   ├── api/           # Endpoints da API
+│   ├── core/          # Configurações
+│   ├── models/        # Modelos de dados
+│   ├── services/      # Lógica de negócio
+│   └── utils/         # Utilitários
+├── tests/             # Testes automatizados
+└── requirements.txt   # Dependências
+</code></pre><h2 id="endpoints-principais">Endpoints Principais</h2>
+<h3 id="apireposanalyze"><code>/api/repos/analyze</code></h3>
+<ul>
+<li><strong>POST</strong>: Analisa repositório GitHub</li>
+<li><strong>Parâmetros</strong>: URL do repositório</li>
+<li><strong>Retorna</strong>: Métricas de colaboração</li>
+</ul>
+<h3 id="apimetricsrepo_id"><code>/api/metrics/{repo_id}</code></h3>
+<ul>
+<li><strong>GET</strong>: Busca métricas salvas</li>
+<li><strong>Parâmetros</strong>: ID do repositório</li>
+<li><strong>Retorna</strong>: Dados históricos</li>
+</ul>
+<h3 id="apireportsexport"><code>/api/reports/export</code></h3>
+<ul>
+<li><strong>GET</strong>: Exporta relatório</li>
+<li><strong>Formato</strong>: JSON/CSV</li>
+<li><strong>Filtros</strong>: Data, repositório, colaboradores</li>
+</ul>
+<h2 id="integração-github-api">Integração GitHub API</h2>
+<ul>
+<li>Rate limiting respeitado</li>
+<li>Cache de resultados</li>
+<li>Webhook para atualizações automáticas</li>
+</ul>
+<h2 id="banco-de-dados">Banco de Dados</h2>
+<ul>
+<li><strong>PostgreSQL</strong>: Dados estruturados</li>
+<li><strong>Redis</strong>: Cache e sessões</li>
+<li><strong>Migrations</strong>: Alembic</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/api/">GitHub API Integration</a>
+                </h3>
+                
+                <p><h1 id="integração-com-github-api">Integração com GitHub API</h1>
+<h2 id="api-do-github-v4-graphql">API do GitHub v4 (GraphQL)</h2>
+<h3 id="vantagens-do-graphql">Vantagens do GraphQL</h3>
+<ul>
+<li><strong>Eficiência</strong>: Busca apenas dados necessários</li>
+<li><strong>Flexibilidade</strong>: Uma query, múltiplos recursos</li>
+<li><strong>Tipagem</strong>: Schema bem definido</li>
+<li><strong>Rate Limiting</strong>: Baseado em complexidade</li>
+</ul>
+<h2 id="queries-principais">Queries Principais</h2>
+<h3 id="dados-do-repositório">Dados do Repositório</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">query</span> <span style="color:#a6e22e">GetRepository</span>($owner: <span style="color:#a6e22e">String</span>!, $name: <span style="color:#a6e22e">String</span>!) {
+</span></span><span style="display:flex;"><span>  repository(owner: $owner, <span style="color:#a6e22e">name</span>: $name) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>
+</span></span><span style="display:flex;"><span>    description
+</span></span><span style="display:flex;"><span>    stargazerCount
+</span></span><span style="display:flex;"><span>    forkCount
+</span></span><span style="display:flex;"><span>    issues(states: [<span style="color:#a6e22e">OPEN</span>, CLOSED]) {
+</span></span><span style="display:flex;"><span>      totalCount
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    pullRequests(states: [<span style="color:#a6e22e">OPEN</span>, CLOSED, MERGED]) {
+</span></span><span style="display:flex;"><span>      totalCount
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="contribuidores-e-atividade">Contribuidores e Atividade</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#66d9ef">query</span> <span style="color:#a6e22e">GetContributors</span>($owner: <span style="color:#a6e22e">String</span>!, $name: <span style="color:#a6e22e">String</span>!) {
+</span></span><span style="display:flex;"><span>  repository(owner: $owner, <span style="color:#a6e22e">name</span>: $name) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">collaborators</span>(first: <span style="color:#a6e22e">100</span>) {
+</span></span><span style="display:flex;"><span>      nodes {
+</span></span><span style="display:flex;"><span>        login
+</span></span><span style="display:flex;"><span>        avatarUrl
+</span></span><span style="display:flex;"><span>        bio
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    defaultBranchRef {
+</span></span><span style="display:flex;"><span>      target {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">...</span> <span style="color:#66d9ef">on</span> Commit {
+</span></span><span style="display:flex;"><span>          history(first: <span style="color:#a6e22e">100</span>) {
+</span></span><span style="display:flex;"><span>            nodes {
+</span></span><span style="display:flex;"><span>              author {
+</span></span><span style="display:flex;"><span>                user {
+</span></span><span style="display:flex;"><span>                  login
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>              committedDate
+</span></span><span style="display:flex;"><span>              message
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="métricas-calculadas">Métricas Calculadas</h2>
+<ul>
+<li><strong>Frequência de Commits</strong>: Commits por período</li>
+<li><strong>Colaboração</strong>: PRs e reviews entre membros</li>
+<li><strong>Produtividade</strong>: Issues resolvidas vs criadas</li>
+<li><strong>Qualidade</strong>: Tempo médio de review</li>
+<li><strong>Engajamento</strong>: Comentários e discussões</li>
+</ul>
+<h2 id="rate-limiting-e-cache">Rate Limiting e Cache</h2>
+<ul>
+<li><strong>Limite</strong>: 5000 pontos/hora</li>
+<li><strong>Cache</strong>: Redis com TTL</li>
+<li><strong>Fallback</strong>: Dados locais quando limite atingido</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/scrum/">Metodologia Scrum</a>
+                </h3>
+                
+                <p><h1 id="metodologia-scrum">Metodologia Scrum</h1>
+<h2 id="framework-scrum-aplicado">Framework Scrum Aplicado</h2>
+<h3 id="papéis-da-equipe">Papéis da Equipe</h3>
+<ul>
+<li><strong>Product Owner</strong>: Marcos Antonio</li>
+<li><strong>Scrum Master</strong>: Pedro Druck</li>
+<li><strong>Development Team</strong>: Carlos, Gustavo, Heitor, Pedro Rocha</li>
+</ul>
+<h3 id="time-boxes">Time-boxes</h3>
+<ul>
+<li><strong>Sprint</strong>: 2 semanas</li>
+<li><strong>Sprint Planning</strong>: 2h (início da sprint)</li>
+<li><strong>Daily Scrum</strong>: 15min (todos os dias)</li>
+<li><strong>Sprint Review</strong>: 1h (final da sprint)</li>
+<li><strong>Sprint Retrospective</strong>: 1h (após review)</li>
+</ul>
+<h2 id="artefatos-scrum">Artefatos Scrum</h2>
+<h3 id="product-backlog">Product Backlog</h3>
+<ul>
+<li>Requisitos priorizados por valor de negócio</li>
+<li>User stories com critérios de aceitação</li>
+<li>Estimativas em story points</li>
+<li>Refinamento contínuo</li>
+</ul>
+<h3 id="sprint-backlog">Sprint Backlog</h3>
+<ul>
+<li>Items selecionados para a sprint atual</li>
+<li>Tarefas técnicas detalhadas</li>
+<li>Gráfico de burndown</li>
+<li>Impedimentos identificados</li>
+</ul>
+<h3 id="incremento">Incremento</h3>
+<ul>
+<li>Funcionalidades potencialmente entregáveis</li>
+<li>Definição de &ldquo;pronto&rdquo; clara</li>
+<li>Testes automatizados passando</li>
+<li>Documentação atualizada</li>
+</ul>
+<h2 id="cerimônias">Cerimônias</h2>
+<h3 id="sprint-planning">Sprint Planning</h3>
+<ul>
+<li><strong>Objetivo</strong>: Definir o que será desenvolvido</li>
+<li><strong>Duração</strong>: 2 horas</li>
+<li><strong>Saída</strong>: Sprint Backlog definido</li>
+</ul>
+<h3 id="daily-scrum">Daily Scrum</h3>
+<ul>
+<li><strong>Formato</strong>: O que fiz? O que vou fazer? Impedimentos?</li>
+<li><strong>Duração</strong>: 15 minutos</li>
+<li><strong>Foco</strong>: Sincronização da equipe</li>
+</ul>
+<h3 id="sprint-review">Sprint Review</h3>
+<ul>
+<li><strong>Objetivo</strong>: Demonstrar o incremento</li>
+<li><strong>Participantes</strong>: Equipe + stakeholders</li>
+<li><strong>Feedback</strong>: Coletado para próximas sprints</li>
+</ul>
+<h3 id="sprint-retrospective">Sprint Retrospective</h3>
+<ul>
+<li><strong>Foco</strong>: Melhoria contínua do processo</li>
+<li><strong>Formato</strong>: Start/Stop/Continue</li>
+<li><strong>Ações</strong>: Itens para próxima sprint</li>
+</ul>
+<h2 id="métricas-acompanhadas">Métricas Acompanhadas</h2>
+<ul>
+<li><strong>Velocity</strong>: Story points por sprint</li>
+<li><strong>Burndown</strong>: Progresso durante a sprint</li>
+<li><strong>Lead Time</strong>: Tempo de entrega de features</li>
+<li><strong>Quality</strong>: Bugs encontrados vs corrigidos</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/benchmarking/">Benchmarking</a>
+                </h3>
+                
+                <p><h1 id="benchmarking---análise-competitiva">Benchmarking - Análise Competitiva</h1>
+<h2 id="ferramentas-analisadas">Ferramentas Analisadas</h2>
+<h3 id="1-github-insights-nativo">1. GitHub Insights (Nativo)</h3>
+<p><strong>Prós:</strong></p>
+<ul>
+<li>Integração nativa com GitHub</li>
+<li>Dados em tempo real</li>
+<li>Gratuito para repositórios públicos</li>
+</ul>
+<p><strong>Contras:</strong></p>
+<ul>
+<li>Limitado aos próprios repositórios</li>
+<li>Métricas básicas apenas</li>
+<li>Interface não customizável</li>
+</ul>
+<p><strong>Avaliação:</strong> ⭐⭐⭐ (3/5)</p>
+<h3 id="2-linearb">2. LinearB</h3>
+<p><strong>Prós:</strong></p>
+<ul>
+<li>Análise avançada de produtividade</li>
+<li>Insights de workflow</li>
+<li>Integração múltiplas ferramentas</li>
+</ul>
+<p><strong>Contras:</strong></p>
+<ul>
+<li>Preço elevado ($39/dev/mês)</li>
+<li>Complexidade alta</li>
+<li>Foco enterprise</li>
+</ul>
+<p><strong>Avaliação:</strong> ⭐⭐⭐⭐ (4/5)</p>
+<h3 id="3-gitkraken-insights-glo-boards">3. GitKraken Insights (Glo Boards)</h3>
+<p><strong>Prós:</strong></p>
+<ul>
+<li>Interface visual atrativa</li>
+<li>Métricas de código</li>
+<li>Integração com GitKraken</li>
+</ul>
+<p><strong>Contras:</strong></p></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <a href="http://localhost:1314/2025-2-Squad-01/docs/atas/">Atas de Reunião</a>
+                </h3>
+                
+                <p><h1 id="atas-de-reunião">Atas de Reunião</h1>
+<h2 id="sprint-1---planning-26082025">Sprint 1 - Planning (26/08/2025)</h2>
+<h3 id="participantes">Participantes</h3>
+<ul>
+<li>Marcos Antonio (PO)</li>
+<li>Pedro Druck (SM)</li>
+<li>Carlos, Gustavo, Heitor, Pedro Rocha (Dev Team)</li>
+</ul>
+<h3 id="objetivos-da-sprint">Objetivos da Sprint</h3>
+<ul>
+<li>Definir escopo inicial do projeto</li>
+<li>Configurar ambiente de desenvolvimento</li>
+<li>Criar documentação básica</li>
+</ul>
+<h3 id="itens-do-backlog">Itens do Backlog</h3>
+<ol>
+<li><strong>Setup do repositório</strong> (3 pts) - Heitor</li>
+<li><strong>Pesquisa de ferramentas similares</strong> (5 pts) - Carlos</li>
+<li><strong>Definição de requisitos</strong> (8 pts) - Marcos</li>
+<li><strong>Arquitetura inicial</strong> (5 pts) - Pedro Rocha</li>
+</ol>
+<h3 id="decisões-tomadas">Decisões Tomadas</h3>
+<ul>
+<li>GitHub como plataforma principal</li>
+<li>Hugo para documentação</li>
+<li>Reuniões diárias às 19h</li>
+</ul>
+<hr>
+<h2 id="sprint-1---review-08092025">Sprint 1 - Review (08/09/2025)</h2>
+<h3 id="demonstrações">Demonstrações</h3>
+<ul>
+<li>✅ Repositório configurado com CI/CD</li>
+<li>✅ Benchmarking completo realizado</li>
+<li>✅ Requisitos documentados</li>
+<li>✅ Arquitetura definida</li>
+</ul>
+<h3 id="feedback-coletado">Feedback Coletado</h3>
+<ul>
+<li>Adicionar mais detalhes técnicos na arquitetura</li>
+<li>Incluir cronograma de desenvolvimento</li>
+<li>Definir métricas de sucesso</li>
+</ul>
+<h3 id="métricas-da-sprint">Métricas da Sprint</h3>
+<ul>
+<li><strong>Velocity</strong>: 21 story points</li>
+<li><strong>Burndown</strong>: Linear, sem impedimentos</li>
+<li><strong>Bugs</strong>: 0 encontrados</li>
+</ul>
+<hr>
+<h2 id="sprint-1---retrospective-08092025">Sprint 1 - Retrospective (08/09/2025)</h2>
+<h3 id="start-começar-a-fazer">Start (Começar a fazer)</h3>
+<ul>
+<li>Pair programming para conhecimento compartilhado</li>
+<li>Revisões de código mais rigorosas</li>
+<li>Testes unitários desde o início</li>
+</ul>
+<h3 id="stop-parar-de-fazer">Stop (Parar de fazer)</h3>
+<ul>
+<li>Commits muito grandes</li>
+<li>Documentação apenas no final</li>
+</ul>
+<h3 id="continue-continuar-fazendo">Continue (Continuar fazendo)</h3>
+<ul>
+<li>Daily meetings funcionando bem</li>
+<li>Comunicação via Discord eficiente</li>
+<li>Divisão clara de responsabilidades</li>
+</ul>
+<h3 id="action-items">Action Items</h3>
+<ol>
+<li>Configurar pre-commit hooks</li>
+<li>Definir template de PR</li>
+<li>Criar guia de contribuição</li>
+</ol>
+<hr>
+<h2 id="sprint-2---planning-09092025">Sprint 2 - Planning (09/09/2025)</h2>
+<h3 id="objetivos-da-sprint-1">Objetivos da Sprint</h3>
+<ul>
+<li>Iniciar desenvolvimento do MVP</li>
+<li>Configurar infraestrutura básica</li>
+<li>Implementar primeiras funcionalidades</li>
+</ul>
+<h3 id="backlog-items">Backlog Items</h3>
+<ol>
+<li><strong>API básica com FastAPI</strong> (8 pts) - Pedro Rocha</li>
+<li><strong>Interface inicial React</strong> (8 pts) - Gustavo</li>
+<li><strong>Integração GitHub API</strong> (13 pts) - Carlos</li>
+<li><strong>Database setup</strong> (5 pts) - Heitor</li>
+</ol>
+<h3 id="riscos-identificados">Riscos Identificados</h3>
+<ul>
+<li>Complexidade da GitHub API</li>
+<li>Rate limiting pode impactar desenvolvimento</li>
+<li>Necessidade de aprender novas tecnologias</li>
+</ul>
+<h3 id="mitigações">Mitigações</h3>
+<ul>
+<li>Spikes para explorar GitHub API</li>
+<li>Implementar cache desde início</li>
+<li>Pareamento para transferência de conhecimento</li>
+</ul></p>
+                
+                <p><small>📅 01/01/0001</small></p>
+            </div>
+            
+        </div>
+    </div>
     
 </section>
 
