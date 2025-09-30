@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Backend - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        nav {
+            margin-top: 1.2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        h2 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        ul, ol {
+            margin-left: 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        pre, code {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.5em 0.8em;
+            font-size: 0.97em;
+            color: #764ba2;
+            overflow-x: auto;
+        }
+        pre {
+            margin-bottom: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .main { padding: 1rem; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentação do Backend</h1>
+        <nav>
+            <a href="../index.html">Página Inicial</a>
+            <a href="../docs.html">Documentação</a>
+        </nav>
+    </header>
+    <div class="main">
+        <section>
+            <h2>O que é Backend?</h2>
+            <p>O <b>backend</b> é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.</p>
+            <ul>
+                <li><b>Processamento de Dados:</b> Manipula, valida e processa informações recebidas</li>
+                <li><b>Gerenciamento de Banco de Dados:</b> Realiza operações de CRUD (Create, Read, Update, Delete)</li>
+                <li><b>Autenticação e Autorização:</b> Controla acesso e permissões dos usuários</li>
+                <li><b>APIs REST:</b> Fornece endpoints para comunicação com o frontend</li>
+                <li><b>Lógica de Negócio:</b> Implementa as regras e processos específicos da aplicação</li>
+                <li><b>Segurança:</b> Protege dados sensíveis e previne ataques</li>
+                <li><b>Performance:</b> Otimiza consultas e processamento para melhor desempenho</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Como Funciona o Backend?</h2>
+            <ol>
+                <li>Recepção da Requisição: O cliente (frontend/mobile) envia uma requisição HTTP</li>
+                <li>Roteamento: O sistema identifica qual endpoint foi chamado</li>
+                <li>Processamento: A lógica de negócio é executada</li>
+                <li>Consulta ao Banco: Se necessário, dados são buscados ou salvos no banco</li>
+                <li>Resposta: O resultado é formatado e enviado de volta ao cliente</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Tecnologias Utilizadas</h2>
+            <h3>Django Framework</h3>
+            <ul>
+                <li>Agilidade na integração com APIs (GitHub, IA)</li>
+                <li>Estrutura pronta para manipulação e exposição de métricas</li>
+                <li>Facilidade para implementar autenticação e autorização</li>
+                <li>Suporte nativo a tarefas assíncronas para processamento de dados</li>
+                <li>Comunidade ativa e vasta documentação</li>
+                <li>Modularidade para expandir funcionalidades conforme o projeto evolui</li>
+            </ul>
+            <h3>PostgreSQL Database</h3>
+            <ul>
+                <li>Armazenamento eficiente de dados complexos e históricos</li>
+                <li>Consultas otimizadas para análise de métricas e resultados de IA</li>
+                <li>Suporte a extensões para machine learning e IA</li>
+                <li>Facilidade de integração com Django ORM</li>
+                <li>Escalabilidade para crescimento do volume de dados</li>
+                <li>Ferramentas avançadas para backup, replicação e alta disponibilidade</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Arquitetura do Backend do Projeto</h2>
+            <h3>Arquitetura MVC (Model-View-Controller)</h3>
+            <ul>
+                <li><b>Model:</b> Representa a estrutura dos dados e as regras de negócio da aplicação.</li>
+                <li><b>View:</b> Gerencia a apresentação dos dados para o usuário ou para outras aplicações (como APIs).</li>
+                <li><b>Controller:</b> Coordena a interação entre Model e View, recebendo requisições, executando regras de negócio e decidindo quais dados apresentar.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Exemplos Práticos com Django</h2>
+            <h3>Uso de Variáveis de Ambiente (.env)</h3>
+            <pre><code>import os
+from dotenv import load_dotenv
+
+load_dotenv()
+github_token = os.getenv('GITHUB_TOKEN')</code></pre>
+            <h3>Modelo</h3>
+            <pre><code>from django.db import models
+
+class Usuario(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)</code></pre>
+            <h3>Serializer</h3>
+            <pre><code>from rest_framework import serializers
+from .models import Usuario
+
+class UsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ['id', 'nome', 'email']</code></pre>
+            <h3>ViewSet</h3>
+            <pre><code>from rest_framework import viewsets
+from .models import Usuario
+from .serializers import UsuarioSerializer
+
+class UsuarioViewSet(viewsets.ModelViewSet):
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer</code></pre>
+            <h3>Routes/Urls</h3>
+            <pre><code>from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import UsuarioViewSet
+
+router = DefaultRouter()
+router.register(r'usuarios', UsuarioViewSet)
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+]</code></pre>
+            <h3>Consumo de APIs Externas</h3>
+            <pre><code>import requests
+
+def buscar_usuario_github(username):
+    url = f"https://api.github.com/users/{username}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    return None</code></pre>
+            <h3>Salvando Dados no Banco</h3>
+            <pre><code>user_data = buscar_usuario_github('octocat')
+if user_data:
+    Usuario.objects.create(nome=user_data['login'], email=user_data['email'] or '')</code></pre>
+            <h3>Expondo Dados via API</h3>
+            <p>O frontend pode acessar os dados salvos usando o endpoint <code>/api/usuarios/</code>.</p>
+        </section>
+    </div>
+</body>
+</html>
