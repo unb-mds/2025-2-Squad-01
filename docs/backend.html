@@ -338,13 +338,13 @@
 
             <div class="workflow">
                 <h2>Como Funciona o Backend?</h2>
-                <p>O backend segue uma arquitetura baseada em <strong>requisição-resposta</strong> com processamento em tempo real:</p>
+                <p>O backend segue uma arquitetura baseada em <strong>requisição-resposta</strong> com processamento automatizado via <strong>GitHub Actions</strong>:</p>
                 <ol>
-                    <li><strong>Recepção da Requisição:</strong> O cliente (frontend) solicita dados de métricas do GitHub</li>
-                    <li><strong>Roteamento:</strong> O sistema identifica qual endpoint foi chamado</li>
-                    <li><strong>Processamento:</strong> A lógica de negócio é executada e dados são buscados da API do GitHub</li>
-                    <li><strong>Transformação:</strong> Os dados passam pela arquitetura medalhão (Bronze → Silver → Gold)</li>
-                    <li><strong>Resposta:</strong> O resultado processado é formatado e enviado de volta ao cliente</li>
+                    <li><strong>Extração de Dados:</strong> GitHub Actions executa scripts Python diariamente para coletar dados da API do GitHub</li>
+                    <li><strong>Processamento ETL:</strong> Os dados passam pelo pipeline Bronze → Silver → Gold em camadas sequenciais</li>
+                    <li><strong>Armazenamento:</strong> Dados são armazenados como JSON/tabelas no próprio repositório GitHub</li>
+                    <li><strong>Consumo:</strong> Dashboard React consome os dados processados via GitHub API</li>
+                    <li><strong>Resposta:</strong> Interface apresenta métricas e KPIs em tempo real para os usuários</li>
                 </ol>
             </div>
 
@@ -352,32 +352,32 @@
                 <h2>Tecnologias Utilizadas</h2>
                 
                 <div class="tech-card">
-                    <h3>🐍 Django Framework</h3>
-                    <p>O <strong>Django</strong> é um framework web robusto para Python, ideal para projetos que exigem integração com APIs externas (como a do GitHub) e manipulação avançada de dados para modelos de IA.</p>
+                    <h3>🐍 Python + GitHub Actions</h3>
+                    <p>O <strong>Python</strong> é utilizado junto com <strong>GitHub Actions</strong> para criar um pipeline automatizado de ETL (Extract, Transform, Load) que processa dados da API do GitHub diariamente, seguindo a arquitetura medalhão.</p>
                     
                     <h4>Vantagens para o Projeto:</h4>
                     <div class="advantages">
-                        <div class="advantage-item">Agilidade na integração com APIs (GitHub)</div>
-                        <div class="advantage-item">Estrutura flexível para processamento e exposição de métricas</div>
-                        <div class="advantage-item">Facilidade para implementar autenticação com tokens de API</div>
-                        <div class="advantage-item">Suporte nativo a tarefas assíncronas para processamento de dados</div>
-                        <div class="advantage-item">Comunidade ativa e vasta documentação</div>
-                        <div class="advantage-item">Modularidade para expandir funcionalidades conforme o projeto evolui</div>
+                        <div class="advantage-item">Automação completa via GitHub Actions (execução diária)</div>
+                        <div class="advantage-item">Processamento eficiente de dados da API do GitHub</div>
+                        <div class="advantage-item">Armazenamento no próprio repositório (sem infraestrutura externa)</div>
+                        <div class="advantage-item">Pipeline robusto Bronze → Silver → Gold</div>
+                        <div class="advantage-item">Facilidade de manutenção e versionamento do código</div>
+                        <div class="advantage-item">Integração nativa com ecossistema GitHub</div>
                     </div>
                 </div>
 
                 <div class="tech-card">
-                    <h3>� Processamento em Tempo Real</h3>
-                    <p>O projeto utiliza <strong>processamento em memória</strong> para análise de dados do GitHub, sem necessidade de persistência em banco de dados. Os dados são obtidos em tempo real da API do GitHub e processados através da arquitetura medalhão.</p>
+                    <h3>📦 Armazenamento no Repositório GitHub</h3>
+                    <p>O projeto utiliza <strong>armazenamento baseado em arquivos</strong> diretamente no repositório GitHub, eliminando a necessidade de infraestrutura de banco de dados externa. Os dados são organizados em camadas dentro do próprio repositório.</p>
                     
                     <h4>Vantagens para o Projeto:</h4>
                     <div class="advantages">
-                        <div class="advantage-item">Dados sempre atualizados diretamente da fonte (GitHub)</div>
-                        <div class="advantage-item">Menor complexidade de infraestrutura sem banco de dados</div>
-                        <div class="advantage-item">Performance superior com processamento em memória</div>
-                        <div class="advantage-item">Facilidade de manutenção e deploy</div>
-                        <div class="advantage-item">Escalabilidade horizontal simples</div>
-                        <div class="advantage-item">Redução de custos operacionais sem infraestrutura de banco</div>
+                        <div class="advantage-item">Dados versionados junto com o código (histórico completo)</div>
+                        <div class="advantage-item">Zero custo de infraestrutura externa</div>
+                        <div class="advantage-item">Backup automático via GitHub</div>
+                        <div class="advantage-item">Acesso direto via GitHub API para o frontend</div>
+                        <div class="advantage-item">Transparência total dos dados processados</div>
+                        <div class="advantage-item">Facilidade de deploy e distribuição</div>
                     </div>
                 </div>
             </div>
