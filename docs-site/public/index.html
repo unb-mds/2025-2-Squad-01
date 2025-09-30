@@ -4,8 +4,8 @@
 	<meta name="generator" content="Hugo 0.150.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoOps - Squad 01 - CoOps - Squad 01</title>
-    <meta name="description" content="Plataforma inovadora para análise de métricas de colaboração no GitHub">
+    <title>Documentação - CoOps - CoOps - Documentação</title>
+    <meta name="description" content="Documentação técnica completa do projeto CoOps">
     
     <style>
         * {
@@ -15,38 +15,43 @@
         }
         
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #f093fb;
-            --accent-secondary: #f5576c;
-            --text-dark: #2c3e50;
-            --text-gray: #7f8c8d;
-            --text-light: #555;
-            --bg-light: #f8f9fa;
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --accent-secondary: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --text-light: #4b5563;
+            --bg-light: #f1f5f9;
             --bg-white: #ffffff;
-            --shadow: 0 4px 20px rgba(0,0,0,0.1);
-            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
-            --border-radius: 10px;
-            --border-radius-small: 5px;
+            --bg-card: #fefefe;
+            --shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+            --shadow-light: 0 2px 10px rgba(37, 99, 235, 0.08);
+            --border-radius: 12px;
+            --border-radius-small: 6px;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
         }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
             line-height: 1.7;
             color: var(--text-light);
-            background: var(--bg-light);
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
             font-size: 16px;
+            min-height: 100vh;
         }
         
          
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 1rem 0;
+            padding: 1.25rem 0;
             box-shadow: var(--shadow-light);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
         
         nav {
@@ -89,12 +94,13 @@
          
         main {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 2.5rem auto;
             padding: 0 2rem;
-            background: var(--bg-white);
+            background: var(--bg-card);
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             min-height: 70vh;
+            border: 1px solid rgba(37, 99, 235, 0.1);
         }
         
         .content {
@@ -145,29 +151,31 @@
         .btn {
             display: inline-block;
             padding: 0.875rem 1.75rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--gradient-primary);
             color: white;
             text-decoration: none;
             border-radius: var(--border-radius-small);
             font-weight: 600;
             transition: all 0.3s ease;
             margin: 0.5rem 0.5rem 0.5rem 0;
-            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+            border: none;
+            cursor: pointer;
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
             color: white;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            box-shadow: 0 3px 10px rgba(240, 147, 251, 0.3);
+            background: var(--gradient-accent);
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
         }
         
         .btn-secondary:hover {
-            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
             color: white;
         }
         
@@ -175,10 +183,23 @@
         .hero {
             text-align: center;
             padding: 4rem 0;
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+            background: var(--gradient-primary);
             color: white;
             margin: -3rem -3rem 3rem -3rem;
             border-radius: var(--border-radius) var(--border-radius) 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+            pointer-events: none;
         }
         
         .hero h1 {
@@ -206,17 +227,29 @@
         }
         
         .card {
-            background: var(--bg-white);
+            background: var(--bg-card);
             padding: 2rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            border: 1px solid #eee;
+            border: 1px solid rgba(37, 99, 235, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
         }
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
         }
         
         .card h3 {
@@ -330,16 +363,16 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">CoOps - Squad 01</a>
+            <a href="/" class="logo">CoOps - Documentação</a>
             <ul class="nav-links">
                 
-                <li><a href="/">🏠 Home</a></li>
+                <li><a href="https://unb-mds.github.io/2025-2-Squad-01/">Voltar ao Site</a></li>
                 
-                <li><a href="/docs/">📚 Documentação</a></li>
+                <li><a href="/docs/">Documentação</a></li>
                 
-                <li><a href="/equipe/">👥 Equipe</a></li>
+                <li><a href="/equipe/">Equipe</a></li>
                 
-                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">🔗 GitHub</a></li>
+                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
                 
             </ul>
         </nav>
@@ -348,65 +381,78 @@
     <main>
         <div class="content">
             
-<div class="hero">
-    <h1>CoOps - Squad 01</h1>
-    <p>Plataforma inovadora para análise e visualização de métricas de colaboração em repositórios GitHub</p>
+<div class="h            <h3>Desenvolvimento              <p><strong>Dica:</strong> Esta documentação está integrada ao site principal em ReactJS.</p>     <h3>Equipe</h3>/h3>ro">
+    <h1>CoOps - Documentação</h1>
+    <p>Documentação técnica completa do projeto CoOps - análise de métricas de colaboração no GitHub</p>
     <div>
-        <a href="/docs/" class="btn">📚 Documentação</a>
-        <a href="/equipe/" class="btn btn-secondary">👥 Nossa Equipe</a>
-        <a href="https://github.com/unb-mds/2025-2-Squad-01" class="btn">🔗 GitHub</a>
+        <a href="/docs/" class="btn">Começar</a>
+        <a href="/equipe/" class="btn btn-secondary">Nossa Equipe</a>
+        <a href="https://unb-mds.github.io/2025-2-Squad-01/" class="btn">Voltar ao Site</a>
+    </div>
+</div>"main" }}
+<div class="hero">
+    <h1>📚 CoOps - Documentação</h1>
+    <p>Documentação técnica completa do projeto CoOps - análise de métricas de colaboração no GitHub</p>
+    <div>
+        <a href="/docs/" class="btn">� Começar</a>
+        <a href="/docs/equipe/" class="btn btn-secondary">👥 Equipe</a>
+        <a href="/" class="btn">🏠 Voltar ao Site</a>
     </div>
 </div>
 
 <section>
-    <h2>🎯 Sobre o Projeto CoOps</h2>
-    <p>O <strong>CoOps</strong> é uma plataforma inovadora desenvolvida pelo <strong>Squad 01</strong> para apoiar desenvolvedores, mantenedores e organizações na análise da colaboração dentro de projetos GitHub.</p>
+    <h2>Seções da Documentação</h2>
     
     <div class="cards">
         <div class="card">
-            <h3>📊 Métricas Inteligentes</h3>
-            <p>Análise avançada de dados de colaboração com insights gerados por IA para melhor compreensão dos padrões de trabalho em equipe.</p>
-        </div>
-        
-        <div class="card">
-            <h3>📈 Visualizações Interativas</h3>
-            <p>Dashboards modernos e interativos que tornam os dados de colaboração facilmente interpretáveis e acionáveis.</p>
-        </div>
-        
-        <div class="card">
-            <h3>🔗 Integração GitHub</h3>
-            <p>Conecta diretamente com a API do GitHub para extrair dados em tempo real de repositórios e organizações.</p>
-        </div>
-    </div>
-    
-    <h2>🚀 Tecnologias Utilizadas</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Backend & API</h3>
+            <h3>Visão Geral</h3>
             <ul>
-                <li><strong>Python</strong> - Processamento de dados</li>
-                <li><strong>GitHub API</strong> - Extração de métricas</li>
-                <li><strong>IA/ML</strong> - Análise inteligente</li>
+                <li><a href="/docs/requisitos/">Requisitos</a></li>
+                <li><a href="/docs/arquitetura/">Arquitetura</a></li>
+                <li><a href="/docs/levantamento-inicial/">Levantamento Inicial</a></li>
             </ul>
         </div>
         
         <div class="card">
-            <h3>Frontend & DevOps</h3>
+            <h3>�️ Desenvolvimento</h3>
             <ul>
-                <li><strong>Hugo</strong> - Site e documentação</li>
-                <li><strong>GitHub Actions</strong> - CI/CD</li>
-                <li><strong>Figma</strong> - Design e prototipagem</li>
+                <li><a href="/docs/frontend/">Frontend</a></li>
+                <li><a href="/docs/backend/">Backend</a></li>
+                <li><a href="/docs/api/">Integração com GitHub API</a></li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3>Gestão do Projeto</h3>
+            <ul>
+                <li><a href="/docs/atas/">Atas de Reunião</a></li>
+                <li><a href="/docs/scrum/">Metodologia Scrum</a></li>
+                <li><a href="/docs/benchmarking/">Benchmarking</a></li>
             </ul>
         </div>
     </div>
     
-    <h2>💡 Metodologia Ágil</h2>
-    <p>Nossa equipe utiliza <strong>metodologias ágeis</strong> (Scrum) e <strong>práticas de desenvolvimento colaborativo</strong> para criar uma solução robusta e eficiente.</p>
-    
-    <p><strong>🚧 Projeto em Desenvolvimento Ativo:</strong> Acompanhe nosso progresso através do GitHub e da documentação técnica.</p>
+    <h2>Links Importantes</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Repositório</h3>
+            <p><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub do Projeto</a></p>
+        </div>
+        
+        <div class="card">
+            <h3>Design</h3>
+            <p><a href="#">Figma - Protótipos</a></p>
+        </div>
+        
+        <div class="card">
+            <h3>� Equipe</h3>
+            <p><a href="/equipe/">Conheça o Squad 01</a></p>
+        </div>
+    </div>
     
     <div style="text-align: center; margin-top: 3rem;">
-        <a href="/equipe/" class="btn">Conheça nossa equipe 👥</a>
+        <p><strong>� Dica:</strong> Esta documentação está integrada ao site principal em ReactJS.</p>
+        <a href="https://unb-mds.github.io/2025-2-Squad-01/" class="btn">Voltar ao Site Principal</a>
     </div>
 </section>
 
@@ -414,7 +460,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 CoOps - Squad 01. Desenvolvido com ❤️ pelo Squad 01.</p>
+        <p>&copy; 2025 CoOps - Documentação. Desenvolvido com ❤️ pelo Squad 01.</p>
     </footer>
 </body>
 </html>
