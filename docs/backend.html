@@ -326,25 +326,25 @@
             <div class="section">
                 <h2>Principais Responsabilidades do Backend</h2>
                 <ul>
-                    <li><strong>Processamento de Dados:</strong> Manipula, valida e processa informações recebidas</li>
-                    <li><strong>Gerenciamento de Banco de Dados:</strong> Realiza operações de CRUD (Create, Read, Update, Delete)</li>
-                    <li><strong>Autenticação e Autorização:</strong> Controla acesso e permissões dos usuários</li>
+                    <li><strong>Processamento de Dados:</strong> Manipula, valida e processa informações da API do GitHub</li>
+                    <li><strong>Integração com APIs Externas:</strong> Consome dados da API do GitHub em tempo real</li>
+                    <li><strong>Transformação de Dados:</strong> Aplica arquitetura medalhão para estruturar dados (Bronze, Silver, Gold)</li>
                     <li><strong>APIs REST:</strong> Fornece endpoints para comunicação com o frontend</li>
-                    <li><strong>Lógica de Negócio:</strong> Implementa as regras e processos específicos da aplicação</li>
-                    <li><strong>Segurança:</strong> Protege dados sensíveis e previne ataques</li>
-                    <li><strong>Performance:</strong> Otimiza consultas e processamento para melhor desempenho</li>
+                    <li><strong>Lógica de Negócio:</strong> Implementa as regras de análise de métricas de produtividade</li>
+                    <li><strong>Segurança:</strong> Protege tokens de acesso e previne ataques</li>
+                    <li><strong>Performance:</strong> Otimiza processamento de dados em memória para melhor desempenho</li>
                 </ul>
             </div>
 
             <div class="workflow">
                 <h2>Como Funciona o Backend?</h2>
-                <p>O backend segue uma arquitetura baseada em <strong>requisição-resposta</strong>:</p>
+                <p>O backend segue uma arquitetura baseada em <strong>requisição-resposta</strong> com processamento em tempo real:</p>
                 <ol>
-                    <li><strong>Recepção da Requisição:</strong> O cliente (frontend/mobile) envia uma requisição HTTP</li>
+                    <li><strong>Recepção da Requisição:</strong> O cliente (frontend) solicita dados de métricas do GitHub</li>
                     <li><strong>Roteamento:</strong> O sistema identifica qual endpoint foi chamado</li>
-                    <li><strong>Processamento:</strong> A lógica de negócio é executada</li>
-                    <li><strong>Consulta ao Banco:</strong> Se necessário, dados são buscados ou salvos no banco</li>
-                    <li><strong>Resposta:</strong> O resultado é formatado e enviado de volta ao cliente</li>
+                    <li><strong>Processamento:</strong> A lógica de negócio é executada e dados são buscados da API do GitHub</li>
+                    <li><strong>Transformação:</strong> Os dados passam pela arquitetura medalhão (Bronze → Silver → Gold)</li>
+                    <li><strong>Resposta:</strong> O resultado processado é formatado e enviado de volta ao cliente</li>
                 </ol>
             </div>
 
@@ -357,9 +357,9 @@
                     
                     <h4>Vantagens para o Projeto:</h4>
                     <div class="advantages">
-                        <div class="advantage-item">Agilidade na integração com APIs (GitHub, IA)</div>
-                        <div class="advantage-item">Estrutura pronta para manipulação e exposição de métricas</div>
-                        <div class="advantage-item">Facilidade para implementar autenticação e autorização</div>
+                        <div class="advantage-item">Agilidade na integração com APIs (GitHub)</div>
+                        <div class="advantage-item">Estrutura flexível para processamento e exposição de métricas</div>
+                        <div class="advantage-item">Facilidade para implementar autenticação com tokens de API</div>
                         <div class="advantage-item">Suporte nativo a tarefas assíncronas para processamento de dados</div>
                         <div class="advantage-item">Comunidade ativa e vasta documentação</div>
                         <div class="advantage-item">Modularidade para expandir funcionalidades conforme o projeto evolui</div>
@@ -367,68 +367,79 @@
                 </div>
 
                 <div class="tech-card">
-                    <h3>🐘 PostgreSQL Database</h3>
-                    <p>O <strong>PostgreSQL</strong> é um banco de dados relacional avançado, ideal para armazenar grandes volumes de métricas, dados históricos e resultados de modelos de IA.</p>
+                    <h3>� Processamento em Tempo Real</h3>
+                    <p>O projeto utiliza <strong>processamento em memória</strong> para análise de dados do GitHub, sem necessidade de persistência em banco de dados. Os dados são obtidos em tempo real da API do GitHub e processados através da arquitetura medalhão.</p>
                     
                     <h4>Vantagens para o Projeto:</h4>
                     <div class="advantages">
-                        <div class="advantage-item">Armazenamento eficiente de dados complexos e históricos</div>
-                        <div class="advantage-item">Consultas otimizadas para análise de métricas e resultados de IA</div>
-                        <div class="advantage-item">Suporte a extensões para machine learning e IA</div>
-                        <div class="advantage-item">Facilidade de integração com Django ORM</div>
-                        <div class="advantage-item">Escalabilidade para crescimento do volume de dados</div>
-                        <div class="advantage-item">Ferramentas avançadas para backup, replicação e alta disponibilidade</div>
+                        <div class="advantage-item">Dados sempre atualizados diretamente da fonte (GitHub)</div>
+                        <div class="advantage-item">Menor complexidade de infraestrutura sem banco de dados</div>
+                        <div class="advantage-item">Performance superior com processamento em memória</div>
+                        <div class="advantage-item">Facilidade de manutenção e deploy</div>
+                        <div class="advantage-item">Escalabilidade horizontal simples</div>
+                        <div class="advantage-item">Redução de custos operacionais sem infraestrutura de banco</div>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Arquitetura MVC (Model-View-Controller)</h2>
-                <p>O padrão MVC é uma arquitetura clássica e eficiente para organizar aplicações backend, separando responsabilidades em três camadas principais:</p>
+                <h2>Arquitetura Medalhão (Bronze, Silver, Gold)</h2>
+                <p>A arquitetura medalhão é um padrão moderno para processamento de dados que organiza o pipeline em três camadas hierárquicas, cada uma com responsabilidades específicas e níveis crescentes de qualidade e refinamento dos dados.</p>
                 
                 <div class="mvc-grid">
                     <div class="mvc-item model">
-                        <h4>1. Model</h4>
-                        <p><strong>Responsabilidade:</strong> Representa a estrutura dos dados e as regras de negócio da aplicação.</p>
-                        <p><strong>Função:</strong> Define os campos, tipos e validações dos dados que serão armazenados no banco.</p>
-                        <p><strong>Exemplo de uso:</strong> Usuários, produtos, métricas, etc. Toda manipulação de dados (criação, leitura, atualização, exclusão) é feita através dos modelos.</p>
-                        <p><strong>Benefício:</strong> Centraliza e organiza a lógica dos dados, facilitando manutenção e reuso.</p>
+                        <h4>1. Camada Bronze (Dados Brutos)</h4>
+                        <p><strong>Responsabilidade:</strong> Ingestão e armazenamento dos dados brutos exatamente como recebidos da API do GitHub.</p>
+                        <p><strong>Função:</strong> Captura dados em tempo real sem transformações, mantendo a estrutura original da API.</p>
+                        <p><strong>Exemplo de uso:</strong> Dados de commits, issues, pull requests, contribuidores diretamente da API GitHub.</p>
+                        <p><strong>Benefício:</strong> Preserva a integridade dos dados originais e permite reprocessamento posterior se necessário.</p>
                     </div>
                     
                     <div class="mvc-item view">
-                        <h4>2. View</h4>
-                        <p><strong>Responsabilidade:</strong> Gerencia a apresentação dos dados para o usuário ou para outras aplicações (como APIs).</p>
-                        <p><strong>Função:</strong> Recebe requisições, processa dados vindos dos modelos e retorna respostas (HTML, JSON, etc.).</p>
-                        <p><strong>Exemplo de uso:</strong> Endpoints de API, páginas web, respostas para o frontend.</p>
-                        <p><strong>Benefício:</strong> Separa a lógica de apresentação da lógica de negócio, tornando o sistema mais flexível e testável.</p>
+                        <h4>2. Camada Silver (Dados Limpos e Validados)</h4>
+                        <p><strong>Responsabilidade:</strong> Limpeza, validação e estruturação dos dados brutos da camada Bronze.</p>
+                        <p><strong>Função:</strong> Aplica regras de negócio, remove inconsistências, padroniza formatos e enriquece os dados.</p>
+                        <p><strong>Exemplo de uso:</strong> Normalização de datas, validação de tipos, agregação de métricas básicas, cálculo de estatísticas.</p>
+                        <p><strong>Benefício:</strong> Dados confiáveis e estruturados, prontos para análises mais complexas.</p>
                     </div>
                     
                     <div class="mvc-item controller">
-                        <h4>3. Controller</h4>
-                        <p><strong>Responsabilidade:</strong> Coordena a interação entre Model e View, recebendo requisições, executando regras de negócio e decidindo quais dados apresentar.</p>
-                        <p><strong>Função:</strong> Processa as requisições do usuário, chama os métodos dos modelos, aplica regras de negócio e retorna a resposta adequada pela View.</p>
-                        <p><strong>Exemplo de uso:</strong> Funções que recebem dados do frontend, validam, salvam no banco e retornam o resultado.</p>
-                        <p><strong>Benefício:</strong> Centraliza o fluxo da aplicação, facilitando o entendimento e manutenção do código.</p>
+                        <h4>3. Camada Gold (Dados Analíticos)</h4>
+                        <p><strong>Responsabilidade:</strong> Criação de datasets otimizados para análise e apresentação, com métricas de alto nível.</p>
+                        <p><strong>Função:</strong> Agrega dados da camada Silver em métricas de produtividade, KPIs e insights de negócio.</p>
+                        <p><strong>Exemplo de uso:</strong> Métricas de produtividade da equipe, análise de padrões de contribuição, relatórios executivos.</p>
+                        <p><strong>Benefício:</strong> Dados prontos para consumo direto pelo frontend, otimizados para performance e clareza.</p>
                     </div>
                 </div>
                 
-                <p>O padrão MVC torna o backend mais organizado, modular e fácil de manter, sendo ideal para projetos que precisam de clareza na separação de responsabilidades e escalabilidade.</p>
+                <div class="workflow">
+                    <h3>Fluxo de Processamento</h3>
+                    <pre><code>API GitHub → Bronze → Silver → Gold → Frontend</code></pre>
+                    <ol>
+                        <li><strong>Bronze:</strong> Dados brutos da API GitHub são coletados em tempo real</li>
+                        <li><strong>Silver:</strong> Dados são limpos, validados e estruturados</li>
+                        <li><strong>Gold:</strong> Métricas finais são calculadas e otimizadas para apresentação</li>
+                        <li><strong>Frontend:</strong> Consome dados da camada Gold via APIs REST</li>
+                    </ol>
+                </div>
+                
+                <p>A arquitetura medalhão garante qualidade progressiva dos dados, facilita manutenção e permite que diferentes partes do sistema consumam dados no nível de refinamento adequado às suas necessidades.</p>
             </div>
 
             <div class="section">
-                <h2>Exemplos Práticos com Django</h2>
-                <p>A seguir, veja como aplicar os conceitos do backend usando Django, PostgreSQL e integração com APIs externas:</p>
+                <h2>Exemplos Práticos com Django e Arquitetura Medalhão</h2>
+                <p>A seguir, veja como aplicar os conceitos do backend usando Django para processamento em tempo real com arquitetura medalhão:</p>
 
                 <div class="example-section">
                     <h3>1. Uso de Variáveis de Ambiente (.env)</h3>
                     <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Variáveis de ambiente são arquivos que armazenam informações sensíveis (como senhas, tokens de API, configurações de banco de dados) fora do código-fonte.</p>
+                        <p><strong>O que é?</strong> Variáveis de ambiente são arquivos que armazenam informações sensíveis (como tokens de API, configurações de acesso) fora do código-fonte.</p>
                         <p><strong>Por que usar?</strong> Segurança, facilidade de configuração e portabilidade entre ambientes.</p>
                     </div>
                     
                     <p><strong>Exemplo de arquivo .env:</strong></p>
                     <pre><code>GITHUB_TOKEN=seu_token_aqui
-DB_PASSWORD=sua_senha_aqui</code></pre>
+GITHUB_API_URL=https://api.github.com</code></pre>
                     
                     <p><strong>Como carregar no Django:</strong></p>
                     <pre><code>import os
@@ -439,110 +450,172 @@ github_token = os.getenv('GITHUB_TOKEN')</code></pre>
                 </div>
 
                 <div class="example-section">
-                    <h3>2. Modelo</h3>
+                    <h3>2. Camada Bronze - Consumo de Dados Brutos</h3>
                     <div class="concept-explanation">
-                        <p><strong>O que é?</strong> O modelo representa uma tabela do banco de dados. Ele define os campos e tipos de dados que serão armazenados.</p>
-                        <p><strong>Para que serve?</strong> Estruturar e organizar os dados da aplicação, facilitar operações de CRUD.</p>
-                    </div>
-                    
-                    <pre><code>from django.db import models
-
-class Usuario(models.Model):
-    nome = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)</code></pre>
-                </div>
-
-                <div class="example-section">
-                    <h3>3. Serializer</h3>
-                    <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Serializers transformam os dados dos modelos em formatos que podem ser enviados ou recebidos por APIs (geralmente JSON).</p>
-                        <p><strong>Para que serve?</strong> Converter dados do banco para JSON e validar dados recebidos via API.</p>
-                    </div>
-                    
-                    <pre><code>from rest_framework import serializers
-from .models import Usuario
-
-class UsuarioSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Usuario
-        fields = ['id', 'nome', 'email']</code></pre>
-                </div>
-
-                <div class="example-section">
-                    <h3>4. ViewSet</h3>
-                    <div class="concept-explanation">
-                        <p><strong>O que é?</strong> ViewSets são classes que controlam as operações de leitura, criação, atualização e exclusão dos dados via API.</p>
-                        <p><strong>Para que serve?</strong> Centralizar a lógica de acesso aos dados e expor operações CRUD via API.</p>
-                    </div>
-                    
-                    <pre><code>from rest_framework import viewsets
-from .models import Usuario
-from .serializers import UsuarioSerializer
-
-class UsuarioViewSet(viewsets.ModelViewSet):
-    queryset = Usuario.objects.all()
-    serializer_class = UsuarioSerializer</code></pre>
-                </div>
-
-                <div class="example-section">
-                    <h3>5. Routes/Urls</h3>
-                    <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Routes ou rotas definem os caminhos/endpoints que o frontend ou outros sistemas usam para acessar as APIs do backend.</p>
-                        <p><strong>Para que serve?</strong> Organizar e expor os serviços da aplicação.</p>
-                    </div>
-                    
-                    <pre><code>from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import UsuarioViewSet
-
-router = DefaultRouter()
-router.register(r'usuarios', UsuarioViewSet)
-
-urlpatterns = [
-    path('api/', include(router.urls)),
-]</code></pre>
-                </div>
-
-                <div class="example-section">
-                    <h3>6. Consumo de APIs Externas</h3>
-                    <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Consiste em buscar dados de outros sistemas (como o GitHub) usando requisições HTTP.</p>
-                        <p><strong>Para que serve?</strong> Integrar dados de fontes externas e enriquecer a aplicação com informações de outros serviços.</p>
+                        <p><strong>O que é?</strong> A camada Bronze coleta dados brutos diretamente da API do GitHub sem transformações, mantendo a estrutura original.</p>
+                        <p><strong>Para que serve?</strong> Capturar dados em tempo real da fonte original e preservar integridade dos dados para posterior reprocessamento.</p>
                     </div>
                     
                     <pre><code>import requests
+from datetime import datetime
 
-def buscar_usuario_github(username):
-    url = f"https://api.github.com/users/{username}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    return None</code></pre>
+class GitHubBronzeLayer:
+    def __init__(self, token):
+        self.token = token
+        self.headers = {'Authorization': f'token {token}'}
+    
+    def fetch_raw_commits(self, owner, repo):
+        """Busca dados brutos de commits diretamente da API"""
+        url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+        response = requests.get(url, headers=self.headers)
+        if response.status_code == 200:
+            return {
+                'data': response.json(),
+                'fetched_at': datetime.utcnow().isoformat(),
+                'source': 'github_api'
+            }
+        return None</code></pre>
                 </div>
 
                 <div class="example-section">
-                    <h3>7. Salvando Dados no Banco</h3>
+                    <h3>3. Camada Silver - Limpeza e Estruturação</h3>
                     <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Processo de armazenar dados recebidos de APIs externas ou do frontend no banco de dados usando os modelos do Django.</p>
-                        <p><strong>Para que serve?</strong> Persistir informações para uso futuro e organizar dados de forma estruturada.</p>
+                        <p><strong>O que é?</strong> A camada Silver processa os dados brutos da Bronze, aplicando limpeza, validação e estruturação.</p>
+                        <p><strong>Para que serve?</strong> Limpar e validar dados inconsistentes, padronizar formatos e estruturas, aplicar regras de negócio básicas.</p>
                     </div>
                     
-                    <pre><code>user_data = buscar_usuario_github('octocat')
-if user_data:
-    Usuario.objects.create(
-        nome=user_data['login'], 
-        email=user_data['email'] or ''
-    )</code></pre>
+                    <pre><code>from dataclasses import dataclass
+from typing import List
+
+@dataclass
+class CleanCommit:
+    sha: str
+    author: str
+    date: datetime
+    message: str
+    additions: int
+    deletions: int
+
+class GitHubSilverLayer:
+    def clean_commits(self, bronze_data: dict) -> List[CleanCommit]:
+        """Limpa e estrutura dados de commits da camada Bronze"""
+        commits = []
+        
+        for commit_data in bronze_data.get('data', []):
+            try:
+                clean_commit = CleanCommit(
+                    sha=commit_data['sha'][:7],
+                    author=commit_data['commit']['author']['name'],
+                    date=datetime.fromisoformat(
+                        commit_data['commit']['author']['date'].replace('Z', '+00:00')
+                    ),
+                    message=commit_data['commit']['message'].split('\n')[0],
+                    additions=commit_data.get('stats', {}).get('additions', 0),
+                    deletions=commit_data.get('stats', {}).get('deletions', 0)
+                )
+                commits.append(clean_commit)
+            except (KeyError, ValueError) as e:
+                print(f"Erro ao processar commit: {e}")
+                continue
+        
+        return commits</code></pre>
                 </div>
 
                 <div class="example-section">
-                    <h3>8. Expondo Dados via API</h3>
+                    <h3>4. Camada Gold - Métricas e Insights</h3>
                     <div class="concept-explanation">
-                        <p><strong>O que é?</strong> Permitir que o frontend ou outros sistemas acessem os dados salvos no backend por meio de endpoints definidos.</p>
-                        <p><strong>Para que serve?</strong> Compartilhar informações com outras aplicações e permitir visualização e manipulação dos dados.</p>
+                        <p><strong>O que é?</strong> A camada Gold agrega dados da Silver em métricas de alto nível e insights de negócio.</p>
+                        <p><strong>Para que serve?</strong> Calcular KPIs e métricas de produtividade, gerar insights para tomada de decisão, otimizar dados para apresentação no frontend.</p>
                     </div>
                     
-                    <p>O frontend pode acessar os dados salvos usando o endpoint <code>/api/usuarios/</code>.</p>
+                    <pre><code>from collections import defaultdict
+from dataclasses import dataclass
+
+@dataclass
+class ProductivityMetrics:
+    total_commits: int
+    active_contributors: int
+    average_commits_per_day: float
+    top_contributors: List[tuple]
+    commit_frequency: dict
+
+class GitHubGoldLayer:
+    def calculate_productivity_metrics(self, silver_commits: List[CleanCommit]):
+        """Calcula métricas de produtividade da camada Silver"""
+        
+        contributor_commits = defaultdict(int)
+        daily_commits = defaultdict(int)
+        
+        for commit in silver_commits:
+            contributor_commits[commit.author] += 1
+            day = commit.date.date()
+            daily_commits[day] += 1
+        
+        top_contributors = sorted(
+            contributor_commits.items(), 
+            key=lambda x: x[1], 
+            reverse=True
+        )[:5]
+        
+        total_days = len(daily_commits) if daily_commits else 1
+        avg_commits_per_day = len(silver_commits) / total_days
+        
+        return ProductivityMetrics(
+            total_commits=len(silver_commits),
+            active_contributors=len(contributor_commits),
+            average_commits_per_day=round(avg_commits_per_day, 2),
+            top_contributors=top_contributors,
+            commit_frequency=dict(daily_commits)
+        )</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>5. ViewSet para Exposição de Dados</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> ViewSets controlam o acesso aos dados processados através de endpoints REST.</p>
+                        <p><strong>Para que serve?</strong> Expor métricas da camada Gold via API e orquestrar o pipeline Bronze → Silver → Gold em tempo real.</p>
+                    </div>
+                    
+                    <pre><code>from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.decorators import action
+
+class GitHubMetricsViewSet(viewsets.ViewSet):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.bronze_layer = GitHubBronzeLayer(os.getenv('GITHUB_TOKEN'))
+        self.silver_layer = GitHubSilverLayer()
+        self.gold_layer = GitHubGoldLayer()
+    
+    @action(detail=False, methods=['get'])
+    def productivity_metrics(self, request):
+        """Endpoint para obter métricas de produtividade em tempo real"""
+        owner = request.query_params.get('owner')
+        repo = request.query_params.get('repo')
+        
+        # Pipeline Bronze → Silver → Gold
+        bronze_data = self.bronze_layer.fetch_raw_commits(owner, repo)
+        silver_commits = self.silver_layer.clean_commits(bronze_data)
+        gold_metrics = self.gold_layer.calculate_productivity_metrics(silver_commits)
+        
+        return Response(gold_metrics)</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>6. Exemplo de Uso no Frontend</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> Como o frontend pode consumir as métricas processadas pela arquitetura medalhão.</p>
+                        <p><strong>Para que serve?</strong> Apresentar dados de produtividade em tempo real e permitir análise visual das métricas.</p>
+                    </div>
+                    
+                    <p><strong>Exemplo de chamada:</strong></p>
+                    <pre><code>// Frontend consumindo métricas de produtividade
+fetch('/api/github-metrics/productivity_metrics/?owner=microsoft&repo=vscode')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Métricas de produtividade:', data);
+    // Exibir métricas no dashboard
+  });</code></pre>
                 </div>
             </div>
         </div>
