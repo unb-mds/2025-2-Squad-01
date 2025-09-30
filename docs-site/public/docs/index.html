@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - CoOps - Squad 01</title>
+    <meta name="description" content="Documentação técnica do projeto CoOps">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --accent-secondary: #f5576c;
+            --text-dark: #2c3e50;
+            --text-gray: #7f8c8d;
+            --text-light: #555;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --border-radius: 10px;
+            --border-radius-small: 5px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--bg-light);
+            font-size: 16px;
+        }
+        
+         
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius-small);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-1px);
+        }
+        
+         
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            min-height: 70vh;
+        }
+        
+        .content {
+            padding: 3rem;
+        }
+        
+         
+        h1 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            color: var(--text-dark);
+            margin: 2.5rem 0 1.5rem 0;
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: var(--text-gray);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+         
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+         
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius-small);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            box-shadow: 0 3px 10px rgba(240, 147, 251, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+            color: white;
+        }
+        
+         
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+            color: white;
+            margin: -3rem -3rem 3rem -3rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+         
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+         
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+         
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-small);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+         
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+        
+         
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            main {
+                margin: 1rem;
+                padding: 0;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .hero {
+                margin: -2rem -1.5rem 2rem -1.5rem;
+                padding: 3rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.875rem;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">CoOps - Squad 01</a>
+            <ul class="nav-links">
+                
+                <li><a href="/">🏠 Home</a></li>
+                
+                <li><a href="/docs/">📚 Documentação</a></li>
+                
+                <li><a href="/equipe/">👥 Equipe</a></li>
+                
+                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">🔗 GitHub</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            
+<section>
+    <h1>Documentação</h1>
+    
+    
+    <div class="section-content">
+        <h1 id="-documentação-do-projeto-coops">📚 Documentação do Projeto CoOps</h1>
+<p>Bem-vindo à documentação técnica do projeto <strong>CoOps</strong>! Aqui você encontrará todas as informações necessárias para compreender, contribuir e utilizar nossa plataforma.</p>
+<h2 id="-índice-da-documentação">📋 Índice da Documentação</h2>
+<h3 id="-visão-geral">🎯 Visão Geral</h3>
+<ul>
+<li><strong>Levantamento Inicial</strong> - Conceitos e objetivos do projeto</li>
+<li><strong>Requisitos</strong> - Funcionais e não-funcionais</li>
+<li><strong>Arquitetura</strong> - Estrutura técnica da solução</li>
+</ul>
+<h3 id="-desenvolvimento">🛠️ Desenvolvimento</h3>
+<ul>
+<li><strong>Tecnologias</strong> - Stack técnico utilizado</li>
+<li><strong>API GitHub</strong> - Como utilizamos a API</li>
+<li><strong>Frontend</strong> - Implementação da interface</li>
+<li><strong>Backend</strong> - Processamento de dados</li>
+</ul>
+<h3 id="-gestão-do-projeto">📈 Gestão do Projeto</h3>
+<ul>
+<li><strong>Metodologia Scrum</strong> - Como trabalhamos</li>
+<li><strong>Atas de Reuniões</strong> - Decisões e progresso</li>
+<li><strong>Benchmarking</strong> - Análise de ferramentas similares</li>
+</ul>
+<h3 id="-deploy-e-cicd">🚀 Deploy e CI/CD</h3>
+<ul>
+<li><strong>GitHub Actions</strong> - Automação de workflows</li>
+<li><strong>Hugo e GitHub Pages</strong> - Como este site funciona</li>
+</ul>
+<h2 id="-links-úteis">🔗 Links Úteis</h2>
+<ul>
+<li><a href="/">📊 <strong>Figma</strong></a> - Protótipos e design</li>
+<li><a href="https://github.com/unb-mds/2025-2-Squad-01">🐙 <strong>GitHub</strong></a> - Código fonte</li>
+<li><a href="/equipe/">👥 <strong>Equipe</strong></a> - Conheça o time</li>
+</ul>
+<hr>
+<p><em>A documentação está em constante atualização conforme o projeto evolui.</em></p>
+
+    </div>
+    
+    
+    
+</section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CoOps - Squad 01. Desenvolvido com ❤️ pelo Squad 01.</p>
+    </footer>
+</body>
+</html>

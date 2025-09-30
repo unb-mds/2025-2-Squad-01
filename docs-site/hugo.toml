@@ -1,0 +1,43 @@
+baseURL = '/docs/'
+languageCode = 'pt-br'
+title = 'CoOps - Documentação'
+description = 'Documentação técnica do projeto CoOps'
+
+# Configurações básicas
+enableRobotsTXT = true
+enableGitInfo = false
+
+# Configurações de markup
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+startLevel = 1
+
+# Parâmetros do site
+[params]
+author = "Squad 01"
+description = "Documentação técnica completa do projeto CoOps - análise de métricas de colaboração no GitHub"
+github_repo = 'https://github.com/unb-mds/2025-2-Squad-01'
+
+# Menu da documentação
+[menu]
+[[menu.main]]
+name = "🏠 Voltar ao Site"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "📚 Documentação"
+url = "/docs/"
+weight = 2
+
+[[menu.main]]
+name = "👥 Equipe"
+url = "/docs/equipe/"
+weight = 3
+
+[[menu.main]]
+name = "🔗 GitHub"
+url = "https://github.com/unb-mds/2025-2-Squad-01"
+weight = 4
