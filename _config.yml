@@ -1,0 +1,46 @@
+# Configuração do GitHub Pages
+title: "CoOps - Documentação"
+description: "Documentação técnica do projeto CoOps - análise de métricas de colaboração no GitHub"
+
+# GitHub Pages basic settings
+baseurl: ""
+url: "https://unb-mds.github.io"
+
+# Disable Jekyll
+plugins: []
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+
+# Include/exclude files
+include:
+  - docs
+  - mmd
+  - .nojekyll
+
+exclude:
+  - docs-site
+  - src
+  - .git
+  - .github
+  - node_modules
+  - "*.log"
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - LICENSE
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
