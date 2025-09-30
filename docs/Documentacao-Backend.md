@@ -1,8 +1,16 @@
 # Documentação do Backend
 
-## O que é Backend?
+## O que é B### 📦 Armazenamento no Repositório GitHub
 
-O **backend** é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.
+O projeto utiliza **armazenamento baseado em arquivos** diretamente no repositório GitHub, eliminando a necessidade de infraestrutura de banco de dados externa. Os dados são organizados em camadas dentro do próprio repositório.
+
+#### Vantagens para o Projeto:
+- ✅ Dados versionados junto com o código (histórico completo)
+- ✅ Zero custo de infraestrutura externa
+- ✅ Backup automático via GitHub
+- ✅ Acesso direto via GitHub API para o frontend
+- ✅ Transparência total dos dados processados
+- ✅ Facilidade de deploy e distribuiçãoO **backend** é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.
 
 ### Principais Responsabilidades do Backend:
 
@@ -16,28 +24,28 @@ O **backend** é a parte de uma aplicação web responsável por toda a lógica 
 
 ## Como Funciona o Backend?
 
-O backend segue uma arquitetura baseada em **requisição-resposta** com processamento em tempo real:
+O backend segue uma arquitetura baseada em **requisição-resposta** com processamento automatizado via **GitHub Actions**:
 
-1. **Recepção da Requisição**: O cliente (frontend) solicita dados de métricas do GitHub
-2. **Roteamento**: O sistema identifica qual endpoint foi chamado
-3. **Processamento**: A lógica de negócio é executada e dados são buscados da API do GitHub
-4. **Transformação**: Os dados passam pela arquitetura medalhão (Bronze → Silver → Gold)
-5. **Resposta**: O resultado processado é formatado e enviado de volta ao cliente
+1. **Extração de Dados**: GitHub Actions executa scripts Python diariamente para coletar dados da API do GitHub
+2. **Processamento ETL**: Os dados passam pelo pipeline Bronze → Silver → Gold em camadas sequenciais
+3. **Armazenamento**: Dados são armazenados como JSON/tabelas no próprio repositório GitHub
+4. **Consumo**: Dashboard React consome os dados processados via GitHub API
+5. **Resposta**: Interface apresenta métricas e KPIs em tempo real para os usuários
 
 
 ## Tecnologias Utilizadas
 
-### 🐍 Django Framework
+### 🐍 Python + GitHub Actions
 
-O **Django** é um framework web robusto para Python, ideal para projetos que exigem integração com APIs externas (como a do GitHub) e processamento avançado de dados em tempo real.
+O **Python** é utilizado junto com **GitHub Actions** para criar um pipeline automatizado de ETL (Extract, Transform, Load) que processa dados da API do GitHub diariamente, seguindo a arquitetura medalhão.
 
 #### Vantagens para o Projeto:
-- ✅ Agilidade na integração com APIs (GitHub)
-- ✅ Estrutura flexível para processamento e exposição de métricas
-- ✅ Facilidade para implementar autenticação com tokens de API
-- ✅ Suporte nativo a tarefas assíncronas para processamento de dados
-- ✅ Comunidade ativa e vasta documentação
-- ✅ Modularidade para expandir funcionalidades conforme o projeto evolui
+- ✅ Automação completa via GitHub Actions (execução diária)
+- ✅ Processamento eficiente de dados da API do GitHub
+- ✅ Armazenamento no próprio repositório (sem infraestrutura externa)
+- ✅ Pipeline robusto Bronze → Silver → Gold
+- ✅ Facilidade de manutenção e versionamento do código
+- ✅ Integração nativa com ecossistema GitHub
 
 ### � Processamento em Tempo Real
 
