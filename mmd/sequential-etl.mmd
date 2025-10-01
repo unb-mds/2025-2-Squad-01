@@ -1,0 +1,78 @@
+sequenceDiagram
+    participant GH as GitHub API
+    participant GA as GitHub Actions
+    participant PS as Python Scripts
+    participant BR as Bronze Layer
+    participant SV as Silver Layer
+    participant GD as Gold Layer
+    participant UI as Dashboard UI
+    participant U as Users
+    
+    Note over GA: Daily Trigger (Cron: 0 6 * * *)
+    
+    %% Fase 1: Extração (Bronze)
+    rect rgb(255, 240, 245)
+        Note over GA,BR: Fase 1: Extração → Bronze (Raw Data)
+        GA->>+PS: Execute ETL Script
+        PS->>+GH: Get Organization Data
+        GH-->>-PS: Organization info, Members
+        PS->>+GH: Get Repositories 
+        GH-->>-PS: Repository list + metadata
+        PS->>+GH: Get Issues/PRs/Commits
+        GH-->>-PS: Raw events data
+        PS->>+BR: Store Raw JSON
+        Note over BR: Append-only storage<br/>with timestamp
+        BR-->>-PS: Storage confirmed
+    end
+    
+    %% Fase 2: Transformação (Silver)
+    rect rgb(240, 248, 255)
+        Note over PS,SV: Fase 2: Transformação → Silver (Normalized)
+        PS->>+BR: Read Raw Data
+        BR-->>-PS: JSON payloads
+        Note over PS: Parse & Normalize:<br/>- dim_users, dim_repos<br/>- fact_commits, fact_prs<br/>- fact_issues, fact_reviews
+        PS->>+SV: Store Normalized Tables
+        Note over SV: Relational model<br/>with foreign keys<br/>& lineage columns
+        SV-->>-PS: Normalization confirmed
+    end
+    
+    %% Fase 3: Agregação (Gold)
+    rect rgb(240, 255, 240)  
+        Note over PS,GD: Fase 3: Agregação → Gold (KPIs)
+        PS->>+SV: Query Normalized Data
+        SV-->>-PS: Structured data
+        Note over PS: Calculate KPIs:<br/>- Throughput metrics<br/>- Collaboration networks<br/>- Lead times<br/>- Distribution indices
+        PS->>+GD: Store KPIs & Visualizations
+        Note over GD: Ready-to-consume<br/>metrics for dashboard
+        GD-->>-PS: KPIs stored
+        PS-->>-GA: ETL Complete
+    end
+    
+    %% Fase 4: Consumo
+    rect rgb(255, 255, 240)
+        Note over UI,U: Fase 4: Consumo pelo Dashboard
+        U->>+UI: Access Dashboard
+        UI->>+GD: Fetch KPIs (GitHub API)
+        GD-->>-UI: JSON KPIs + metadata
+        
+        alt Advanced Analysis
+            Note over U: Pesquisador avançado
+            U->>+SV: Direct access to Silver data
+            SV-->>-U: Raw structured data
+            Note over U: Custom analysis<br/>Network graphs<br/>Time series
+        end
+        
+        UI-->>-U: Interactive visualizations
+    end
+    
+    %% Error Handling
+    rect rgb(255, 245, 245)
+        Note over GA,PS: Error Handling & Monitoring  
+        alt API Rate Limit
+            GH-->>PS: 403 Rate Limited
+            PS->>PS: Wait & Retry with backoff
+        else Processing Error
+            PS-->>GA: Log error + Continue
+            Note over GA: Notification via GitHub Issues
+        end
+    end

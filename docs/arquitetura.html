@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitetura - CoOps Documentação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #1e40af;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #bfdbfe;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #1e40af;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #1e40af;
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #1e40af;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+        }
+
+        .adr-card {
+            background: #e0f2fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #0284c7;
+        }
+
+        .status {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-item h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .overview {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .overview h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        footer {
+            background: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                margin: 1rem;
+                padding: 0;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .tech-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">CoOps - Documentação</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="index.html">Documentação</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Arquitetura do Sistema</h1>
+
+            <div class="overview">
+                <h2>Visão Geral</h2>
+                <p>O projeto CoOps utiliza uma arquitetura moderna e modular, baseada em tecnologias web e integração com APIs do GitHub para análise de métricas de colaboração em repositórios e organizações.</p>
+            </div>
+
+            <div class="adr-card">
+                <h2>ADR 01: Escolha das Tecnologias para Desenvolvimento do Projeto <span class="status">✅ Aceito</span></h2>
+                
+                <h3>Contexto</h3>
+                <p>Nas discussões iniciais do projeto foi debatido sobre quais tecnologias utilizar.</p>
+                
+                <h3>Decisão</h3>
+                <p>As tecnologias definidas foram:</p>
+                <ul>
+                    <li><strong>Python</strong></li>
+                    <li><strong>React</strong></li>
+                    <li><strong>Biblioteca D3 (JavaScript)</strong></li>
+                    <li><strong>API GitHub</strong></li>
+                    <li><strong>GitHub Actions</strong></li>
+                    <li><strong>Firebase</strong></li>
+                    <li><strong>Arquivos JSON</strong> para armazenamento e transferência dos dados</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Detalhamento das Tecnologias</h2>
+                
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <h4>Python</h4>
+                        <p>Utilizado para a criação dos scripts que irão realizar o tratamento dos dados extraídos da API do GitHub.</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h4>React</h4>
+                        <p>Utilizado em conjunto com a biblioteca D3 para a criação da interface frontend, que consumirá os arquivos JSON e exibirá os gráficos com as métricas do GitHub.</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h4>Biblioteca D3 (JavaScript)</h4>
+                        <p>Biblioteca de código aberto para visualização de dados. Permite a construção de gráficos personalizados. Será utilizada junto com o React para consumir os dados dos arquivos JSON e criar as páginas de visualização gráfica das métricas do GitHub.</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h4>API GitHub</h4>
+                        <p>Utilizada para extrair os dados de repositórios e organizações do GitHub (commits, issues, datas de abertura e fechamento de issues, e pull requests).</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h4>GitHub Actions</h4>
+                        <p>Garante a atualização permanente dos arquivos JSON e, consequentemente, uma análise sempre atualizada das métricas. Essa integração com os arquivos JSON dispensa a necessidade de uma aplicação backend e simplifica a implementação do projeto.</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h4>Firebase</h4>
+                        <p>Utilizado para realizar a hospedagem do projeto, proporcionando uma solução escalável e de baixo custo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Consequências e Benefícios</h2>
+                <p>As tecnologias escolhidas proporcionam:</p>
+                <ul>
+                    <li><strong>Maior tempo de permanência do projeto:</strong> Utilizando tecnologias estáveis e amplamente suportadas.</li>
+                    <li><strong>Análises atualizadas:</strong> Com base nas métricas do GitHub através de automação via GitHub Actions.</li>
+                    <li><strong>Redução de custos com hospedagem:</strong> Utilizando Firebase para hospedagem estática.</li>
+                    <li><strong>Simplicidade arquitetural:</strong> Dispensando a necessidade de um backend complexo através do uso de arquivos JSON e GitHub Actions.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Fluxo de Dados</h2>
+                <ol>
+                    <li><strong>Extração:</strong> Scripts Python utilizam a API do GitHub para extrair dados de repositórios e organizações.</li>
+                    <li><strong>Processamento:</strong> Os dados são processados e transformados em arquivos JSON estruturados.</li>
+                    <li><strong>Atualização:</strong> GitHub Actions executa periodicamente os scripts para manter os dados atualizados.</li>
+                    <li><strong>Visualização:</strong> O frontend React consome os arquivos JSON e utiliza D3.js para gerar visualizações interativas.</li>
+                    <li><strong>Hospedagem:</strong> O projeto é servido através do Firebase para usuários finais.</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>Vantagens da Arquitetura Escolhida</h2>
+                <ul>
+                    <li><strong>Escalabilidade:</strong> Cada componente pode ser escalado independentemente.</li>
+                    <li><strong>Manutenibilidade:</strong> Separação clara de responsabilidades entre camadas.</li>
+                    <li><strong>Performance:</strong> Dados pré-processados em JSON resultam em carregamento rápido.</li>
+                    <li><strong>Custo-benefício:</strong> Utilização de serviços gratuitos ou de baixo custo.</li>
+                    <li><strong>Automatização:</strong> Processo completamente automatizado de atualização de dados.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CoOps - Documentação. Desenvolvido com ❤️ pelo Squad 01.</p>
+    </footer>
+</body>
+</html>

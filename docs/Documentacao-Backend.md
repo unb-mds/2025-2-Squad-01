@@ -1,90 +1,112 @@
 # Documentação do Backend
 
-## O que é Backend?
+## O que é B### 📦 Armazenamento no Repositório GitHub
 
-O **backend** é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.
+O projeto utiliza **armazenamento baseado em arquivos** diretamente no repositório GitHub, eliminando a necessidade de infraestrutura de banco de dados externa. Os dados são organizados em camadas dentro do próprio repositório.
+
+#### Vantagens para o Projeto:
+- ✅ Dados versionados junto com o código (histórico completo)
+- ✅ Zero custo de infraestrutura externa
+- ✅ Backup automático via GitHub
+- ✅ Acesso direto via GitHub API para o frontend
+- ✅ Transparência total dos dados processados
+- ✅ Facilidade de deploy e distribuiçãoO **backend** é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.
 
 ### Principais Responsabilidades do Backend:
 
-- **Processamento de Dados**: Manipula, valida e processa informações recebidas
-- **Gerenciamento de Banco de Dados**: Realiza operações de CRUD (Create, Read, Update, Delete)
-- **Autenticação e Autorização**: Controla acesso e permissões dos usuários
+- **Processamento de Dados**: Manipula, valida e processa informações da API do GitHub
+- **Integração com APIs Externas**: Consome dados da API do GitHub em tempo real
+- **Transformação de Dados**: Aplica arquitetura medalhão para estruturar dados (Bronze, Silver, Gold)
 - **APIs REST**: Fornece endpoints para comunicação com o frontend
-- **Lógica de Negócio**: Implementa as regras e processos específicos da aplicação
-- **Segurança**: Protege dados sensíveis e previne ataques
-- **Performance**: Otimiza consultas e processamento para melhor desempenho
+- **Lógica de Negócio**: Implementa as regras de análise de métricas de produtividade
+- **Segurança**: Protege tokens de acesso e previne ataques
+- **Performance**: Otimiza processamento de dados em memória para melhor desempenho
 
 ## Como Funciona o Backend?
 
-O backend segue uma arquitetura baseada em **requisição-resposta**:
+O backend segue uma arquitetura baseada em **requisição-resposta** com processamento automatizado via **GitHub Actions**:
 
-1. **Recepção da Requisição**: O cliente (frontend/mobile) envia uma requisição HTTP
-2. **Roteamento**: O sistema identifica qual endpoint foi chamado
-3. **Processamento**: A lógica de negócio é executada
-4. **Consulta ao Banco**: Se necessário, dados são buscados ou salvos no banco
-5. **Resposta**: O resultado é formatado e enviado de volta ao cliente
+1. **Extração de Dados**: GitHub Actions executa scripts Python diariamente para coletar dados da API do GitHub
+2. **Processamento ETL**: Os dados passam pelo pipeline Bronze → Silver → Gold em camadas sequenciais
+3. **Armazenamento**: Dados são armazenados como JSON/tabelas no próprio repositório GitHub
+4. **Consumo**: Dashboard React consome os dados processados via GitHub API
+5. **Resposta**: Interface apresenta métricas e KPIs em tempo real para os usuários
 
 
 ## Tecnologias Utilizadas
 
-### 🐍 Django Framework
+### 🐍 Python + GitHub Actions
 
-O **Django** é um framework web robusto para Python, ideal para projetos que exigem integração com APIs externas (como a do GitHub) e manipulação avançada de dados para modelos de IA.
-
-#### Vantagens para o Projeto:
-- ✅ Agilidade na integração com APIs (GitHub, IA)
-- ✅ Estrutura pronta para manipulação e exposição de métricas
-- ✅ Facilidade para implementar autenticação e autorização
-- ✅ Suporte nativo a tarefas assíncronas para processamento de dados
-- ✅ Comunidade ativa e vasta documentação
-- ✅ Modularidade para expandir funcionalidades conforme o projeto evolui
-
-### 🐘 PostgreSQL Database
-
-O **PostgreSQL** é um banco de dados relacional avançado, ideal para armazenar grandes volumes de métricas, dados históricos e resultados de modelos de IA.
+O **Python** é utilizado junto com **GitHub Actions** para criar um pipeline automatizado de ETL (Extract, Transform, Load) que processa dados da API do GitHub diariamente, seguindo a arquitetura medalhão.
 
 #### Vantagens para o Projeto:
-- ✅ Armazenamento eficiente de dados complexos e históricos
-- ✅ Consultas otimizadas para análise de métricas e resultados de IA
-- ✅ Suporte a extensões para machine learning e IA
-- ✅ Facilidade de integração com Django ORM
-- ✅ Escalabilidade para crescimento do volume de dados
-- ✅ Ferramentas avançadas para backup, replicação e alta disponibilidade
+- ✅ Automação completa via GitHub Actions (execução diária)
+- ✅ Processamento eficiente de dados da API do GitHub
+- ✅ Armazenamento no próprio repositório (sem infraestrutura externa)
+- ✅ Pipeline robusto Bronze → Silver → Gold
+- ✅ Facilidade de manutenção e versionamento do código
+- ✅ Integração nativa com ecossistema GitHub
 
-## Arquitetura do Backend do Projeo
+### � Processamento em Tempo Real
 
-### Arquitetura MVC (Model-View-Controller)
+O projeto utiliza **processamento em memória** para análise de dados do GitHub, sem necessidade de persistência em banco de dados. Os dados são obtidos em tempo real da API do GitHub e processados através da arquitetura medalhão.
 
-O padrão MVC é uma arquitetura clássica e eficiente para organizar aplicações backend, separando responsabilidades em três camadas principais:
+#### Vantagens para o Projeto:
+- ✅ Dados sempre atualizados diretamente da fonte (GitHub)
+- ✅ Menor complexidade de infraestrutura sem banco de dados
+- ✅ Performance superior com processamento em memória
+- ✅ Facilidade de manutenção e deploy
+- ✅ Escalabilidade horizontal simples
+- ✅ Redução de custos operacionais sem infraestrutura de banco
 
-#### 1. Model 
-- **Responsabilidade:** Representa a estrutura dos dados e as regras de negócio da aplicação.
-- **Função:** Define os campos, tipos e validações dos dados que serão armazenados no banco.
-- **Exemplo de uso:** Usuários, produtos, métricas, etc. Toda manipulação de dados (criação, leitura, atualização, exclusão) é feita através dos modelos.
-- **Benefício:** Centraliza e organiza a lógica dos dados, facilitando manutenção e reuso.
+## Arquitetura do Backend do Projeto
 
-#### 2. View 
-- **Responsabilidade:** Gerencia a apresentação dos dados para o usuário ou para outras aplicações (como APIs).
-- **Função:** Recebe requisições, processa dados vindos dos modelos e retorna respostas (HTML, JSON, etc.).
-- **Exemplo de uso:** Endpoints de API, páginas web, respostas para o frontend.
-- **Benefício:** Separa a lógica de apresentação da lógica de negócio, tornando o sistema mais flexível e testável.
+### Arquitetura Medalhão (Bronze, Silver, Gold)
 
-#### 3. Controller 
-- **Responsabilidade:** Coordena a interação entre Model e View, recebendo requisições, executando regras de negócio e decidindo quais dados apresentar.
-- **Função:** Processa as requisições do usuário, chama os métodos dos modelos, aplica regras de negócio e retorna a resposta adequada pela View.
-- **Exemplo de uso:** Funções que recebem dados do frontend, validam, salvam no banco e retornam o resultado.
-- **Benefício:** Centraliza o fluxo da aplicação, facilitando o entendimento e manutenção do código.
+A arquitetura medalhão é um padrão moderno para processamento de dados que organiza o pipeline em três camadas hierárquicas, cada uma com responsabilidades específicas e níveis crescentes de qualidade e refinamento dos dados.
+
+#### 1. Camada Bronze (Dados Brutos)
+- **Responsabilidade:** Ingestão e armazenamento dos dados brutos exatamente como recebidos da API do GitHub.
+- **Função:** Captura dados em tempo real sem transformações, mantendo a estrutura original da API.
+- **Exemplo de uso:** Dados de commits, issues, pull requests, contribuidores diretamente da API GitHub.
+- **Benefício:** Preserva a integridade dos dados originais e permite reprocessamento posterior se necessário.
+
+#### 2. Camada Silver (Dados Limpos e Validados)
+- **Responsabilidade:** Limpeza, validação e estruturação dos dados brutos da camada Bronze.
+- **Função:** Aplica regras de negócio, remove inconsistências, padroniza formatos e enriquece os dados.
+- **Exemplo de uso:** Normalização de datas, validação de tipos, agregação de métricas básicas, cálculo de estatísticas.
+- **Benefício:** Dados confiáveis e estruturados, prontos para análises mais complexas.
+
+#### 3. Camada Gold (Dados Analíticos)
+- **Responsabilidade:** Criação de datasets otimizados para análise e apresentação, com métricas de alto nível.
+- **Função:** Agrega dados da camada Silver em métricas de produtividade, KPIs e insights de negócio.
+- **Exemplo de uso:** Métricas de produtividade da equipe, análise de padrões de contribuição, relatórios executivos.
+- **Benefício:** Dados prontos para consumo direto pelo frontend, otimizados para performance e clareza.
 
 ---
-O padrão MVC torna o backend mais organizado, modular e fácil de manter, sendo ideal para projetos que precisam de clareza na separação de responsabilidades e escalabilidade.
 
-### Exemplos Práticos com Django:
+### Fluxo de Processamento
 
-A seguir, veja como aplicar os conceitos do backend usando Django, PostgreSQL e integração com APIs externas, com explicações detalhadas e exemplos simples para quem está começando:
+```
+API GitHub → Bronze → Silver → Gold → Frontend
+```
+
+1. **Bronze**: Dados brutos da API GitHub são coletados em tempo real
+2. **Silver**: Dados são limpos, validados e estruturados
+3. **Gold**: Métricas finais são calculadas e otimizadas para apresentação
+4. **Frontend**: Consome dados da camada Gold via APIs REST
+
+---
+
+A arquitetura medalhão garante qualidade progressiva dos dados, facilita manutenção e permite que diferentes partes do sistema consumam dados no nível de refinamento adequado às suas necessidades.
+
+### Exemplos Práticos com Django e Arquitetura Medalhão:
+
+A seguir, veja como aplicar os conceitos do backend usando Django para processamento em tempo real com arquitetura medalhão, com explicações detalhadas e exemplos práticos:
 
 #### 1. Uso de Variáveis de Ambiente (.env)
 **O que é?**
-Variáveis de ambiente são arquivos que armazenam informações sensíveis (como senhas, tokens de API, configurações de banco de dados) fora do código-fonte. O arquivo `.env` é lido pelo sistema e suas variáveis ficam disponíveis para o projeto.
+Variáveis de ambiente são arquivos que armazenam informações sensíveis (como tokens de API, configurações de acesso) fora do código-fonte. O arquivo `.env` é lido pelo sistema e suas variáveis ficam disponíveis para o projeto.
 
 **Por que usar .env?**
 - **Segurança:** Evita expor dados sensíveis no código, protegendo contra vazamentos em repositórios públicos.
@@ -94,7 +116,7 @@ Variáveis de ambiente são arquivos que armazenam informações sensíveis (com
 **Exemplo de arquivo `.env`:**
 ```
 GITHUB_TOKEN=seu_token_aqui
-DB_PASSWORD=sua_senha_aqui
+GITHUB_API_URL=https://api.github.com
 ```
 
 **Como carregar no Django:**
@@ -106,129 +128,245 @@ load_dotenv()
 github_token = os.getenv('GITHUB_TOKEN')
 ```
 
-#### 2. Modelo
+#### 2. Camada Bronze - Consumo de Dados Brutos
 **O que é?**
-O modelo representa uma tabela do banco de dados. Ele define os campos e tipos de dados que serão armazenados. No Django, cada modelo é uma classe Python que herda de `models.Model`.
+A camada Bronze coleta dados brutos diretamente da API do GitHub sem transformações, mantendo a estrutura original.
 
 **Para que serve?**
-- Estruturar e organizar os dados da aplicação
-- Facilitar operações de CRUD (criar, ler, atualizar, deletar)
+- Capturar dados em tempo real da fonte original
+- Preservar integridade dos dados para posterior reprocessamento
 
 **Exemplo:**
 ```python
-from django.db import models
+import requests
+from datetime import datetime
 
-class Usuario(models.Model):
-    nome = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+class GitHubBronzeLayer:
+    def __init__(self, token):
+        self.token = token
+        self.headers = {'Authorization': f'token {token}'}
+    
+    def fetch_raw_commits(self, owner, repo):
+        """Busca dados brutos de commits diretamente da API"""
+        url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+        response = requests.get(url, headers=self.headers)
+        if response.status_code == 200:
+            return {
+                'data': response.json(),
+                'fetched_at': datetime.utcnow().isoformat(),
+                'source': 'github_api'
+            }
+        return None
 ```
 
-#### 3. Serializer
+#### 3. Camada Silver - Limpeza e Estruturação
 **O que é?**
-Serializers transformam os dados dos modelos em formatos que podem ser enviados ou recebidos por APIs (geralmente JSON). Eles também validam dados recebidos antes de salvar no banco.
+A camada Silver processa os dados brutos da Bronze, aplicando limpeza, validação e estruturação.
 
 **Para que serve?**
-- Converter dados do banco para JSON
+- Limpar e validar dados inconsistentes
+- Padronizar formatos e estruturas
+- Aplicar regras de negócio básicas
+
+**Exemplo:**
+```python
+from dataclasses import dataclass
+from typing import List, Optional
+
+@dataclass
+class CleanCommit:
+    sha: str
+    author: str
+    date: datetime
+    message: str
+    additions: int
+    deletions: int
+
+class GitHubSilverLayer:
+    def clean_commits(self, bronze_data: dict) -> List[CleanCommit]:
+        """Limpa e estrutura dados de commits da camada Bronze"""
+        commits = []
+        
+        for commit_data in bronze_data.get('data', []):
+            try:
+                clean_commit = CleanCommit(
+                    sha=commit_data['sha'][:7],  # Versão curta do SHA
+                    author=commit_data['commit']['author']['name'],
+                    date=datetime.fromisoformat(
+                        commit_data['commit']['author']['date'].replace('Z', '+00:00')
+                    ),
+                    message=commit_data['commit']['message'].split('\n')[0],  # Primeira linha
+                    additions=commit_data.get('stats', {}).get('additions', 0),
+                    deletions=commit_data.get('stats', {}).get('deletions', 0)
+                )
+                commits.append(clean_commit)
+            except (KeyError, ValueError) as e:
+                print(f"Erro ao processar commit: {e}")
+                continue
+        
+        return commits
+```
+
+#### 4. Camada Gold - Métricas e Insights
+**O que é?**
+A camada Gold agrega dados da Silver em métricas de alto nível e insights de negócio.
+
+**Para que serve?**
+- Calcular KPIs e métricas de produtividade
+- Gerar insights para tomada de decisão
+- Otimizar dados para apresentação no frontend
+
+**Exemplo:**
+```python
+from collections import defaultdict
+from dataclasses import dataclass
+
+@dataclass
+class ProductivityMetrics:
+    total_commits: int
+    active_contributors: int
+    average_commits_per_day: float
+    top_contributors: List[tuple]
+    commit_frequency: dict
+
+class GitHubGoldLayer:
+    def calculate_productivity_metrics(self, silver_commits: List[CleanCommit]) -> ProductivityMetrics:
+        """Calcula métricas de produtividade da camada Silver"""
+        
+        # Análise de contribuidores
+        contributor_commits = defaultdict(int)
+        daily_commits = defaultdict(int)
+        
+        for commit in silver_commits:
+            contributor_commits[commit.author] += 1
+            day = commit.date.date()
+            daily_commits[day] += 1
+        
+        # Top 5 contribuidores
+        top_contributors = sorted(
+            contributor_commits.items(), 
+            key=lambda x: x[1], 
+            reverse=True
+        )[:5]
+        
+        # Média de commits por dia
+        total_days = len(daily_commits) if daily_commits else 1
+        avg_commits_per_day = len(silver_commits) / total_days
+        
+        return ProductivityMetrics(
+            total_commits=len(silver_commits),
+            active_contributors=len(contributor_commits),
+            average_commits_per_day=round(avg_commits_per_day, 2),
+            top_contributors=top_contributors,
+            commit_frequency=dict(daily_commits)
+        )
+```
+
+#### 5. Serializer para APIs
+**O que é?**
+Serializers transformam os dados processados das camadas medalhão em formatos JSON para APIs.
+
+**Para que serve?**
+- Converter dados Python para JSON
 - Validar dados recebidos via API
 
 **Exemplo:**
 ```python
 from rest_framework import serializers
-from .models import Usuario
 
-class UsuarioSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Usuario
-        fields = ['id', 'nome', 'email']
+class ProductivityMetricsSerializer(serializers.Serializer):
+    total_commits = serializers.IntegerField()
+    active_contributors = serializers.IntegerField()
+    average_commits_per_day = serializers.FloatField()
+    top_contributors = serializers.ListField(
+        child=serializers.ListField(child=serializers.CharField())
+    )
+    commit_frequency = serializers.DictField()
 ```
 
-#### 4. ViewSet
+#### 6. ViewSet para Exposição de Dados
 **O que é?**
-ViewSets são classes que controlam as operações de leitura, criação, atualização e exclusão dos dados via API. Eles facilitam a criação de endpoints RESTful.
+ViewSets controlam o acesso aos dados processados através de endpoints REST.
 
 **Para que serve?**
-- Centralizar a lógica de acesso aos dados
-- Expor operações CRUD via API
+- Expor métricas da camada Gold via API
+- Orquestrar o pipeline Bronze → Silver → Gold em tempo real
 
 **Exemplo:**
 ```python
 from rest_framework import viewsets
-from .models import Usuario
-from .serializers import UsuarioSerializer
+from rest_framework.response import Response
+from rest_framework.decorators import action
 
-class UsuarioViewSet(viewsets.ModelViewSet):
-    queryset = Usuario.objects.all()
-    serializer_class = UsuarioSerializer
+class GitHubMetricsViewSet(viewsets.ViewSet):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.bronze_layer = GitHubBronzeLayer(os.getenv('GITHUB_TOKEN'))
+        self.silver_layer = GitHubSilverLayer()
+        self.gold_layer = GitHubGoldLayer()
+    
+    @action(detail=False, methods=['get'])
+    def productivity_metrics(self, request):
+        """Endpoint para obter métricas de produtividade em tempo real"""
+        owner = request.query_params.get('owner')
+        repo = request.query_params.get('repo')
+        
+        if not owner or not repo:
+            return Response({'error': 'owner and repo parameters are required'}, status=400)
+        
+        # Pipeline Bronze → Silver → Gold
+        bronze_data = self.bronze_layer.fetch_raw_commits(owner, repo)
+        if not bronze_data:
+            return Response({'error': 'Failed to fetch data from GitHub'}, status=500)
+        
+        silver_commits = self.silver_layer.clean_commits(bronze_data)
+        gold_metrics = self.gold_layer.calculate_productivity_metrics(silver_commits)
+        
+        serializer = ProductivityMetricsSerializer(gold_metrics)
+        return Response(serializer.data)
 ```
 
-#### 5. Routes/Urls
+#### 7. Routes/Urls
 **O que é?**
-Routes ou rotas definem os caminhos/endpoints que o frontend ou outros sistemas usam para acessar as APIs do backend.
+Routes definem os endpoints que o frontend usa para acessar as métricas processadas.
 
 **Para que serve?**
-- Organizar e expor os serviços da aplicação
-- Permitir que clientes acessem dados e funcionalidades
+- Organizar e expor os serviços de métricas
+- Permitir acesso aos dados das diferentes camadas
 
 **Exemplo:**
 ```python
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import UsuarioViewSet
+from .views import GitHubMetricsViewSet
 
 router = DefaultRouter()
-router.register(r'usuarios', UsuarioViewSet)
+router.register(r'github-metrics', GitHubMetricsViewSet, basename='github-metrics')
 
 urlpatterns = [
     path('api/', include(router.urls)),
 ]
 ```
 
-#### 6. Consumo de APIs Externas
+#### 8. Exemplo de Uso no Frontend
 **O que é?**
-Consiste em buscar dados de outros sistemas (como o GitHub) usando requisições HTTP. No Python, o pacote mais comum é o `requests`.
+Como o frontend pode consumir as métricas processadas pela arquitetura medalhão.
 
 **Para que serve?**
-- Integrar dados de fontes externas
-- Enriquecer a aplicação com informações de outros serviços
+- Apresentar dados de produtividade em tempo real
+- Permitir análise visual das métricas
 
-**Exemplo:**
-```python
-import requests
-
-def buscar_usuario_github(username):
-    url = f"https://api.github.com/users/{username}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    return None
+**Exemplo de chamada:**
+```javascript
+// Frontend consumindo métricas de produtividade
+fetch('/api/github-metrics/productivity_metrics/?owner=microsoft&repo=vscode')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Métricas de produtividade:', data);
+    // Exibir métricas no dashboard
+  });
 ```
-
-#### 7. Salvando Dados no Banco
-**O que é?**
-Processo de armazenar dados recebidos de APIs externas ou do frontend no banco de dados usando os modelos do Django.
-
-**Para que serve?**
-- Persistir informações para uso futuro
-- Organizar dados de forma estruturada
-
-**Exemplo:**
-```python
-user_data = buscar_usuario_github('octocat')
-if user_data:
-    Usuario.objects.create(nome=user_data['login'], email=user_data['email'] or '')
-```
-
-#### 8. Expondo Dados via API
-**O que é?**
-Permitir que o frontend ou outros sistemas acessem os dados salvos no backend por meio de endpoints definidos.
-
-**Para que serve?**
-- Compartilhar informações com outras aplicações
-- Permitir visualização e manipulação dos dados
-
-**Exemplo:**
-O frontend pode acessar os dados salvos usando o endpoint `/api/usuarios/`.
 
 ---
-Esses exemplos mostram o fluxo básico de um backend com Django: buscar dados externos, salvar no banco, e expor via API, usando boas práticas para segurança e organização do código. Cada conceito é explicado para facilitar o entendimento de quem está começando.
+Esses exemplos mostram o fluxo completo da arquitetura medalhão: Bronze (dados brutos da API), Silver (dados limpos e estruturados), Gold (métricas finais), e exposição via API para consumo do frontend, tudo processado em tempo real sem necessidade de banco de dados.
 
