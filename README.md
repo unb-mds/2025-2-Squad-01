@@ -1,6 +1,6 @@
 # CoOps
 
-# 📊 Colaboração GitHub – Métricas
+# 📊 Sobre
 
 Projeto desenvolvido na disciplina **Métodos de Desenvolvimento de Software (MDS)** – Engenharia de Software (UnB).
 
@@ -75,7 +75,8 @@ Assim, os usuários podem compreender melhor **produtividade, gargalos e qualida
 - github cli (gh)
 - github act (cli extension)
 - docker desktop (instalado e rodando)
-
+  
+# Instalação
 1. Clone o repositório:
    ```powershell
    git clone https://github.com/unb-mds/2025-2-Squad-01.git
