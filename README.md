@@ -1,4 +1,4 @@
-# 2025-2---Squad-01
+# CoOps
 
 # 📊 Colaboração GitHub – Métricas
 
@@ -67,6 +67,26 @@ Assim, os usuários podem compreender melhor **produtividade, gargalos e qualida
 - **Time de Desenvolvimento**: Carlos Eduardo, Gustavo Xavier, Heitor Macedo, Pedro Rocha
 
 ---
+## Passos para rodar as funcionalidades do projeto
+
+# Pré-requisitos:
+- npm (v20) (Somente caso for rodar o front-end localmente)
+- python
+- github cli (gh)
+- github act (cli extension)
+- docker desktop (instalado e rodando)
+
+1. Clone o repositório:
+   ```powershell
+   git clone https://github.com/unb-mds/2025-2-Squad-01.git
+   cd 2025-2-Squad-01
+
+2. Inicie o Workflow usando o act:
+   ```powershell
+   gh act -W .github/workflows/bronze-extract.yaml -j extract-bronze-data --secret-file .secrets --bind
+
+   
+   
 
 ## 📚 Referências
 - [GitHub Repo Visualization](https://githubnext.com/projects/repo-visualization/#explore-for-yourself)
