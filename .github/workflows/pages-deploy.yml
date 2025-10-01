@@ -28,24 +28,24 @@ jobs:
         
       - name: Verify site directory exists
         run: |
-          if [ ! -d "./site" ]; then
-            echo "Error: ./site directory not found!"
+          if [ ! -d "./front-end/out" ]; then
+            echo "Error: ./front-end/out directory not found!"
             exit 1
           fi
-          echo "Site directory found with $(find ./site -type f | wc -l) files"
-          
+          echo "Site directory found with $(find ./front-end/out -type f | wc -l) files"
+
       - name: List site contents
         run: |
           echo "Site directory contents:"
-          ls -la ./site/
-          
+          ls -la ./front-end/out/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './site'
+          path: './front-end/out/'
           
       - name: Deploy to GitHub Pages
         id: deployment
