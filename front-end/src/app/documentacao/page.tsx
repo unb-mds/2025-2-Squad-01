@@ -273,12 +273,12 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">📋 Atas de Reuniões</h3>
                 <ul className="space-y-2 text-white/80">
-                  <li>• <span className="text-green-400">26/08/2025</span> - Reunião Inicial</li>
-                  <li>• <span className="text-green-400">28/08/2025</span> - Definição do Projeto</li>
-                  <li>• <span className="text-green-400">01/09/2025</span> - Retrospectiva e Planejamento</li>
-                  <li>• <span className="text-green-400">08/09/2025</span> - Planejamento da Sprint 2</li>
-                  <li>• <span className="text-green-400">09/09/2025</span> - Definição de Acesso e Planejamento</li>
-                  <li>• <span className="text-green-400">15/09/2025</span> - Pivô Estratégico e Priorização</li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-26.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">26/08/2025 - Reunião Inicial</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-28.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">28/08/2025 - Definição do Projeto</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-01.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">01/09/2025 - Retrospectiva e Planejamento</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-08.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">08/09/2025 - Planejamento da Sprint 2</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-09.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">09/09/2025 - Definição de Acesso e Planejamento</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-15.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">15/09/2025 - Pivô Estratégico e Priorização</a></li>
                 </ul>
               </div>
             </div>
