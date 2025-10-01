@@ -145,7 +145,7 @@ export default function DocumentacaoPage() {
                   <li>
                     <span className="text-blue-400 font-semibold">🏗️ Nível 1: Contexto do Sistema</span><br />
                     <a
-                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/docs_adr/Level1-System_Context_Diagram.svg"
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level1-System_Context_Diagram.svg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 underline hover:text-blue-300"
@@ -156,7 +156,7 @@ export default function DocumentacaoPage() {
                   <li>
                     <span className="text-green-400 font-semibold">📦 Nível 2: Diagrama de Contêineres</span><br />
                     <a
-                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/docs_adr/Level2-Container-Diagram.drawio.svg"
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level2-Container-Diagram.drawio.svg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-400 underline hover:text-green-300"
@@ -167,7 +167,7 @@ export default function DocumentacaoPage() {
                   <li>
                     <span className="text-purple-400 font-semibold">🧩 Nível 3: Diagrama de Componentes (Frontend)</span><br />
                     <a
-                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/docs_adr/Level-3-Frontend-Component-Diagram.svg"
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level-3-Frontend-Component-Diagram.svg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-purple-400 underline hover:text-purple-300"
