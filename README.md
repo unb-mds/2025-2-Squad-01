@@ -53,9 +53,11 @@ Assim, os usuários podem compreender melhor **produtividade, gargalos e qualida
 
 ---
 
+## 🎨 Story Map (Figma) 
+👉 [Link do TEMPLATE FIGMA](https://www.figma.com/board/fuD1KRb6yGlJuFWPZSOWXx/Template-MDS?node-id=0-1&t=jP65B3v7rqapejoa-1)
+
 ## 🎨 Protótipo (Figma)
-Acompanhe o design do projeto no Figma:  
-👉 [Link do FIGMA](https://www.figma.com/board/fuD1KRb6yGlJuFWPZSOWXx/Template-MDS?node-id=0-1&t=jP65B3v7rqapejoa-1)
+👉 [Link do TEMPLATE FIGMA](https://www.figma.com/proto/oCBp6kKarswmGbJAiIToyt/Prot%C3%B3tipo-Alta-Fidelidade?node-id=17-460&p=f&t=JcFBYqvzn89t0xPV-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1080&show-proto-sidebar=1)
 
 ---
 
