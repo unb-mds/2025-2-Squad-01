@@ -138,15 +138,63 @@ export default function DocumentacaoPage() {
                 </div>
               </div>
 
+              {/* Diagramas C4 */}
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold text-white mb-6">� Diagramas C4 - Arquitetura do Sistema</h4>
+                
+                {/* Level 1 - System Context */}
+                <div className="mb-8">
+                  <h5 className="text-md font-semibold text-blue-400 mb-4">🏗️ Nível 1: Contexto do Sistema</h5>
+                  <p className="text-white/80 text-sm mb-4">
+                    Visão de alto nível mostrando o sistema CoOps no seu contexto, incluindo usuários e sistemas externos.
+                  </p>
+                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/50">
+                    <img 
+                      src="/Level1-System_Context_Diagram.svg" 
+                      alt="Diagrama de Contexto do Sistema CoOps - Level 1 C4"
+                      className="w-full h-auto max-h-96 object-contain bg-white rounded"
+                      style={{ filter: 'brightness(1.1) contrast(1.1)' }}
+                    />
+                  </div>
+                </div>
+
+                {/* Level 2 - Container Diagram */}
+                <div className="mb-6">
+                  <h5 className="text-md font-semibold text-green-400 mb-4">📦 Nível 2: Diagrama de Contêineres</h5>
+                  <p className="text-white/80 text-sm mb-4">
+                    Decomposição do sistema mostrando os contêineres de alto nível e as tecnologias utilizadas.
+                  </p>
+                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/50">
+                    <img 
+                      src="/Level2-Container-Diagram.svg" 
+                      alt="Diagrama de Contêineres CoOps - Level 2 C4"
+                      className="w-full h-auto max-h-96 object-contain bg-white rounded"
+                      style={{ filter: 'brightness(1.1) contrast(1.1)' }}
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6">
-                <h4 className="text-lg font-semibold text-white mb-3">📋 Diagramas de Arquitetura:</h4>
-                <ul className="space-y-2 text-white/80">
-                  <li>• <span className="text-blue-400">Visão Geral da Arquitetura</span></li>
-                  <li>• <span className="text-blue-400">Documentação do Backend</span></li>
-                  <li>• <span className="text-blue-400">Diagrama: Arquitetura Medallion</span></li>
-                  <li>• <span className="text-blue-400">Diagrama: Fluxo ETL Sequencial</span></li>
-                  <li>• <span className="text-blue-400">Diagrama: Topologia do Dashboard</span></li>
-                </ul>
+                <h4 className="text-lg font-semibold text-white mb-3">📋 Componentes da Arquitetura:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <h5 className="font-semibold text-purple-400">👥 Atores do Sistema:</h5>
+                    <ul className="space-y-1 text-white/80 text-sm">
+                      <li>• <span className="text-blue-400">Gestores de Projetos</span> - Donos de organizações GitHub</li>
+                      <li>• <span className="text-green-400">Estudantes</span> - Contribuidores de engenharia de software</li>
+                      <li>• <span className="text-yellow-400">Pesquisadores</span> - Analistas de dados de repositórios</li>
+                    </ul>
+                  </div>
+                  <div className="space-y-2">
+                    <h5 className="font-semibold text-orange-400">🔧 Sistemas Principais:</h5>
+                    <ul className="space-y-1 text-white/80 text-sm">
+                      <li>• <span className="text-blue-400">Sistema de Visualização</span> - Interface de métricas</li>
+                      <li>• <span className="text-green-400">Sistema de Extração</span> - Coleta de dados GitHub</li>
+                      <li>• <span className="text-purple-400">Arquitetura Medallion</span> - Processamento em camadas</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -210,38 +258,112 @@ export default function DocumentacaoPage() {
 
           {/* User Stories */}
           <section id="stories">
-            <h2 className="text-3xl font-semibold text-white mb-6">User Stories</h2>
+            <h2 className="text-3xl font-semibold text-white mb-6">📖 User Stories</h2>
             <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-              <div className="space-y-4">
-                <div className="bg-slate-700/50 p-4 rounded-lg border-l-4 border-blue-500">
-                  <p className="text-white/90">
-                    Como <span className="font-semibold text-blue-400">mantenedor</span>, quero ver issues abertas e fechadas, 
-                    para entender o andamento do projeto.
-                  </p>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-blue-400 mb-3">Story Map Interativo</h3>
+                <p className="text-white/80 mb-6">
+                  Explore o mapeamento completo das histórias de usuário do CoOps. O Story Map apresenta 
+                  a jornada do usuário organizada por épicos, features e tarefas, mostrando o fluxo 
+                  completo desde o acesso inicial até a análise avançada de métricas.
+                </p>
+              </div>
+              
+              {/* Figma Embed */}
+              <div className="relative w-full bg-slate-900/50 rounded-lg border border-slate-600/50 overflow-hidden">
+                <div className="flex items-center justify-between p-4 bg-slate-700/50 border-b border-slate-600/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span className="text-white/60 text-sm">Story Map CoOps - User Stories</span>
+                  <a 
+                    href="https://www.figma.com/design/ZjoCsY6wHtB5A6t2mhJNda/Story-Map?node-id=1-2&t=zzf2jH3mjS7wdccr-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 text-sm underline"
+                  >
+                    Abrir no Figma →
+                  </a>
                 </div>
-                <div className="bg-slate-700/50 p-4 rounded-lg border-l-4 border-green-500">
-                  <p className="text-white/90">
-                    Como <span className="font-semibold text-green-400">desenvolvedor</span>, quero ver quantos commits fiz no mês, 
-                    para acompanhar minha contribuição.
-                  </p>
+                
+                <div className="relative pb-[75%] h-0">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FZjoCsY6wHtB5A6t2mhJNda%2FStory-Map%3Fnode-id%3D1-2%26t%3Dzzf2jH3mjS7wdccr-1"
+                    allowFullScreen
+                    style={{ border: 'none' }}
+                    title="Story Map CoOps - User Stories"
+                  />
                 </div>
-                <div className="bg-slate-700/50 p-4 rounded-lg border-l-4 border-purple-500">
-                  <p className="text-white/90">
-                    Como <span className="font-semibold text-purple-400">líder de equipe</span>, quero ver o tempo médio para revisar PRs, 
-                    para identificar gargalos.
-                  </p>
+              </div>
+
+              {/* Story Map Information */}
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-slate-700/30 p-4 rounded-lg">
+                  <h4 className="font-semibold text-green-400 mb-2">🎯 Épicos Principais</h4>
+                  <ul className="text-white/80 text-sm space-y-1">
+                    <li>• Autenticação e Acesso</li>
+                    <li>• Visualização de Métricas</li>
+                    <li>• Análise de Dados</li>
+                    <li>• Configurações do Sistema</li>
+                  </ul>
                 </div>
-                <div className="bg-slate-700/50 p-4 rounded-lg border-l-4 border-orange-500">
-                  <p className="text-white/90">
-                    Como <span className="font-semibold text-orange-400">gestor de organização</span>, quero métricas consolidadas de todos os repositórios, 
-                    para avaliar performance geral.
-                  </p>
+                
+                <div className="bg-slate-700/30 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-400 mb-2">👥 Personas Identificadas</h4>
+                  <ul className="text-white/80 text-sm space-y-1">
+                    <li>• <span className="text-blue-400">Gestor de Projetos</span></li>
+                    <li>• <span className="text-green-400">Desenvolvedor</span></li>
+                    <li>• <span className="text-yellow-400">Pesquisador</span></li>
+                    <li>• <span className="text-pink-400">Estudante</span></li>
+                  </ul>
                 </div>
-                <div className="bg-slate-700/50 p-4 rounded-lg border-l-4 border-pink-500">
-                  <p className="text-white/90">
-                    Como <span className="font-semibold text-pink-400">usuário iniciante</span>, quero que a IA explique métricas, 
-                    para interpretar melhor os gráficos.
-                  </p>
+
+                <div className="bg-slate-700/30 p-4 rounded-lg">
+                  <h4 className="font-semibold text-orange-400 mb-2">📊 Funcionalidades Core</h4>
+                  <ul className="text-white/80 text-sm space-y-1">
+                    <li>• Dashboard de métricas</li>
+                    <li>• Análise de colaboração</li>
+                    <li>• Relatórios automatizados</li>
+                    <li>• Exportação de dados</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Key User Stories Summary */}
+              <div className="mt-8 bg-slate-700/20 p-6 rounded-lg border border-slate-600/30">
+                <h4 className="text-lg font-semibold text-white mb-4">🔑 Histórias Principais</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-white/90 text-sm">
+                        <strong className="text-blue-400">Gestor:</strong> Visualizar métricas consolidadas da organização para tomada de decisões estratégicas
+                      </p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-white/90 text-sm">
+                        <strong className="text-green-400">Desenvolvedor:</strong> Acompanhar contribuições individuais e performance da equipe
+                      </p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-white/90 text-sm">
+                        <strong className="text-yellow-400">Pesquisador:</strong> Acessar dados brutos para análises acadêmicas e estudos
+                      </p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-white/90 text-sm">
+                        <strong className="text-pink-400">Estudante:</strong> Entender métricas de colaboração para aprendizado
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
