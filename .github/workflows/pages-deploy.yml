@@ -1,14 +1,7 @@
 name: Deploy Static Site to GitHub Pages
 
 on:
-  # Trigger on pushes to main branch
-  push:
-    branches: [ main ]
-    paths:
-      - 'site/**'
-      - '.github/workflows/pages-deploy.yml'
-  
-  # Allow manual trigger
+  # Allow manual trigger only
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
