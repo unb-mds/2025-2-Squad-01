@@ -164,6 +164,28 @@ export default function DocumentacaoPage() {
                       Visualizar Diagrama no GitHub
                     </a>
                   </li>
+                  <li>
+                    <span className="text-purple-400 font-semibold">🧩 Nível 3: Diagrama de Componentes (Frontend)</span><br />
+                    <a
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level-3-Frontend-Component-Diagram.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-400 underline hover:text-purple-300"
+                    >
+                      Visualizar Diagrama no GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <span className="text-pink-400 font-semibold">🧩 Nível 3: Diagrama de Componentes (ETL Scripts)</span><br />
+                    <a
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level3-ETL-Scripts-component-diagram.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 underline hover:text-pink-300"
+                    >
+                      Visualizar Diagrama no GitHub
+                    </a>
+                  </li>
                 </ul>
               </div>
 
@@ -470,18 +492,6 @@ export default function DocumentacaoPage() {
               </div>
             </div>
 
-            {/* Arquivos e Diagramas */}
-            <div className="mt-8 bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-              <h3 className="text-xl font-semibold text-purple-400 mb-4">📊 Arquivos e Diagramas</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <p className="text-purple-400 font-medium">• Diagrama C4 - Contexto</p>
-                </div>
-                <div>
-                  <p className="text-purple-400 font-medium">• Diagrama C4 - Containers</p>
-                </div>
-              </div>
-            </div>
           </section>
         </div>
 
