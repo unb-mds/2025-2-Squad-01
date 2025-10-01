@@ -39,6 +39,7 @@ export default function DocumentacaoPage() {
           <a href="#arch" className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors">Arquitetura</a>
           <a href="#req" className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors">Requisitos</a>
           <a href="#stories" className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors">User Stories</a>
+          <a href="#prototypes" className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors">Protótipos</a>
           <a href="#docs" className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors">Documentos</a>
         </div>
 
@@ -246,6 +247,73 @@ export default function DocumentacaoPage() {
             </div>
           </section>
 
+          {/* Protótipos */}
+          <section id="prototypes">
+            <h2 className="text-3xl font-semibold text-white mb-6">🎨 Protótipos</h2>
+            <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-blue-400 mb-3">Protótipo de Alta Fidelidade</h3>
+                <p className="text-white/80 mb-6">
+                  Visualize o protótipo interativo da aplicação CoOps desenvolvido no Figma. 
+                  O protótipo apresenta a interface principal com métricas de colaboração, 
+                  dashboards e funcionalidades de análise de repositórios GitHub.
+                </p>
+              </div>
+              
+              {/* Figma Embed */}
+              <div className="relative w-full bg-slate-900/50 rounded-lg border border-slate-600/50 overflow-hidden">
+                <div className="flex items-center justify-between p-4 bg-slate-700/50 border-b border-slate-600/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span className="text-white/60 text-sm">Protótipo CoOps - Alta Fidelidade</span>
+                  <a 
+                    href="https://www.figma.com/proto/oCBp6kKarswmGbJAiIToyt/Prot%C3%B3tipo-Alta-Fidelidade?node-id=17-460&p=f&t=JcFBYqvzn89t0xPV-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1080&show-proto-sidebar=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 text-sm underline"
+                  >
+                    Abrir no Figma →
+                  </a>
+                </div>
+                
+                <div className="relative pb-[75%] h-0">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FoCBp6kKarswmGbJAiIToyt%2FProt%25C3%25B3tipo-Alta-Fidelidade%3Fnode-id%3D17-460%26p%3Df%26t%3DJcFBYqvzn89t0xPV-0%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A1080%26show-proto-sidebar%3D1"
+                    allowFullScreen
+                    style={{ border: 'none' }}
+                    title="Protótipo CoOps - Alta Fidelidade"
+                  />
+                </div>
+              </div>
+
+              {/* Prototype Information */}
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-slate-700/30 p-4 rounded-lg">
+                  <h4 className="font-semibold text-green-400 mb-2">🎯 Funcionalidades Principais</h4>
+                  <ul className="text-white/80 text-sm space-y-1">
+                    <li>• Dashboard de métricas interativo</li>
+                    <li>• Visualização de dados de repositórios</li>
+                    <li>• Análise de colaboração entre desenvolvedores</li>
+                    <li>• Interface responsiva e intuitiva</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-slate-700/30 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-400 mb-2">🔗 Links Relacionados</h4>
+                  <ul className="text-white/80 text-sm space-y-1">
+                    <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/prototipo_alta_fidelidade.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Documentação do Protótipo</a></li>
+                    <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/prototipo_baixa_fidelidade.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Protótipo Baixa Fidelidade</a></li>
+                    <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/FIGMA.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Guia do Figma</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Documentação Técnica */}
           <section id="docs">
             <h2 className="text-3xl font-semibold text-white mb-6">Documentação Técnica</h2>
@@ -255,17 +323,22 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">📚 Documentos Técnicos</h3>
                 <ul className="space-y-2 text-white/80">
-                  <li>• <span className="text-blue-400">Backend</span></li>
-                  <li>• <span className="text-blue-400">Frontend</span></li>
-                  <li>• <span className="text-blue-400">GitHub Actions</span></li>
-                  <li>• <span className="text-blue-400">Benchmarking LinearB</span></li>
-                  <li>• <span className="text-blue-400">Benchmarking Keypup</span></li>
-                  <li>• <span className="text-blue-400">Benchmarking Swarmia e SonarCloud</span></li>
-                  <li>• <span className="text-blue-400">Decisão Frontend</span></li>
-                  <li>• <span className="text-blue-400">Levantamento Inicial</span></li>
-                  <li>• <span className="text-blue-400">SCRUM e Métodos Ágeis</span></li>
-                  <li>• <span className="text-blue-400">Testar API</span></li>
-                  <li>• <span className="text-blue-400">Fluxo do Usuário</span></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Backend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Backend</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Frontend</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Estudo-Completo-sobre-GitHub-Actions.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">GitHub Actions</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-LinearB.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking LinearB</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-Keypup.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking Keypup</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-Swarmia-e-SonarCloud.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking Swarmia e SonarCloud</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Decisao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Decisão Frontend</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Levantamento-Inicial-do-Produto.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Levantamento Inicial</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/SCRUM-e-Metodos-Agile.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">SCRUM e Métodos Ágeis</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Testar-API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Testar API</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/fluxos/fluxo_usuario_metricas_github.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Fluxo do Usuário</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Requisitos.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Requisitos</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/OqueEAPI.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">O que é API</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/FIGMA.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Figma</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/prototipo_baixa_fidelidade.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Protótipo Baixa Fidelidade</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/prototipo_alta_fidelidade.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Protótipo Alta Fidelidade</a></li>
                 </ul>
               </div>
 
