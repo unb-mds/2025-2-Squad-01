@@ -1,7 +1,14 @@
-name: Deploy Static Site to GitHub Pages
+name: Build and Deploy Next.js to GitHub Pages
 
 on:
-  # Allow manual trigger only
+  # Trigger on pushes to main branch (front-end changes)
+  push:
+    branches: [ main ]
+    paths:
+      - 'front-end/**'
+      - '.github/workflows/pages-deploy.yml'
+  
+  # Allow manual trigger
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -16,8 +23,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Deploy static files directly
-  deploy:
+  # Build Next.js and deploy to GitHub Pages
+  build-and-deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -26,26 +33,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Verify site directory exists
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './front-end/package-lock.json'
+          
+      - name: Install dependencies
+        run: |
+          cd front-end
+          npm ci
+          
+      - name: Build Next.js app for production
+        env:
+          NODE_ENV: production
+        run: |
+          cd front-end
+          npm run build
+          
+      - name: Verify build output
         run: |
           if [ ! -d "./front-end/out" ]; then
-            echo "Error: ./front-end/out directory not found!"
+            echo "Error: Build failed - ./front-end/out directory not found!"
             exit 1
           fi
-          echo "Site directory found with $(find ./front-end/out -type f | wc -l) files"
+          echo "Build successful! Found $(find ./front-end/out -type f | wc -l) files"
 
-      - name: List site contents
+      - name: List build contents
         run: |
-          echo "Site directory contents:"
+          echo "Build output contents:"
           ls -la ./front-end/out/
-
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './front-end/out/'
+          path: './front-end/out'
           
       - name: Deploy to GitHub Pages
         id: deployment
