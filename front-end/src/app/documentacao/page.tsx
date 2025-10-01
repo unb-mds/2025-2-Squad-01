@@ -140,39 +140,31 @@ export default function DocumentacaoPage() {
 
               {/* Diagramas C4 */}
               <div className="mt-8">
-                <h4 className="text-lg font-semibold text-white mb-6">� Diagramas C4 - Arquitetura do Sistema</h4>
-                
-                {/* Level 1 - System Context */}
-                <div className="mb-8">
-                  <h5 className="text-md font-semibold text-blue-400 mb-4">🏗️ Nível 1: Contexto do Sistema</h5>
-                  <p className="text-white/80 text-sm mb-4">
-                    Visão de alto nível mostrando o sistema CoOps no seu contexto, incluindo usuários e sistemas externos.
-                  </p>
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/50">
-                    <img 
-                      src="/Level1-System_Context_Diagram.svg" 
-                      alt="Diagrama de Contexto do Sistema CoOps - Level 1 C4"
-                      className="w-full h-auto max-h-96 object-contain bg-white rounded"
-                      style={{ filter: 'brightness(1.1) contrast(1.1)' }}
-                    />
-                  </div>
-                </div>
-
-                {/* Level 2 - Container Diagram */}
-                <div className="mb-6">
-                  <h5 className="text-md font-semibold text-green-400 mb-4">📦 Nível 2: Diagrama de Contêineres</h5>
-                  <p className="text-white/80 text-sm mb-4">
-                    Decomposição do sistema mostrando os contêineres de alto nível e as tecnologias utilizadas.
-                  </p>
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/50">
-                    <img 
-                      src="/Level2-Container-Diagram.svg" 
-                      alt="Diagrama de Contêineres CoOps - Level 2 C4"
-                      className="w-full h-auto max-h-96 object-contain bg-white rounded"
-                      style={{ filter: 'brightness(1.1) contrast(1.1)' }}
-                    />
-                  </div>
-                </div>
+                <h4 className="text-lg font-semibold text-white mb-6">📊 Diagramas C4 - Arquitetura do Sistema</h4>
+                <ul className="space-y-4 text-white/80 text-lg">
+                  <li>
+                    <span className="text-blue-400 font-semibold">🏗️ Nível 1: Contexto do Sistema</span><br />
+                    <a
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level1-System_Context_Diagram.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 underline hover:text-blue-300"
+                    >
+                      Visualizar Diagrama no GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <span className="text-green-400 font-semibold">📦 Nível 2: Diagrama de Contêineres</span><br />
+                    <a
+                      href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/arquitetura/Level2-Container-Diagram.drawio.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-400 underline hover:text-green-300"
+                    >
+                      Visualizar Diagrama no GitHub
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <div className="mt-6">
