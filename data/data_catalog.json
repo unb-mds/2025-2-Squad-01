@@ -1,0 +1,31 @@
+{
+  "generated_at": "2025-10-06T05:01:34.169234",
+  "bronze_layer": {
+    "description": "Raw data extracted directly from GitHub API",
+    "entities": {
+      "repositories_raw.json": "Complete raw repository data from GitHub API",
+      "repositories_filtered.json": "Filtered repositories excluding forks and blacklisted repos",
+      "repositories_detailed.json": "Detailed repository information with additional metadata",
+      "issues_all.json": "All issues across repositories",
+      "prs_all.json": "All pull requests across repositories",
+      "commits_all.json": "All commits across repositories",
+      "issue_events_all.json": "All issue-related events (comments, labels, etc.)"
+    }
+  },
+  "usage_patterns": {
+    "raw_data_analysis": [
+      "data/bronze/repositories_filtered.json",
+      "data/bronze/commits_all.json",
+      "data/bronze/issues_all.json"
+    ],
+    "repository_insights": [
+      "data/bronze/repositories_raw.json",
+      "data/bronze/repositories_detailed.json"
+    ],
+    "activity_tracking": [
+      "data/bronze/commits_all.json",
+      "data/bronze/issues_all.json",
+      "data/bronze/prs_all.json"
+    ]
+  }
+}
