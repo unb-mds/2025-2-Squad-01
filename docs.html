@@ -6,33 +6,47 @@
     <title>Documentação - CoOps</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --gray: #7f8c8d;
+            --dark: #2c3e50;
+        }
         body {
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6fa;
+            background: var(--bg);
             margin: 0;
-            color: #2c3e50;
+            color: var(--dark);
         }
         header {
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
             padding: 2rem 0 1.5rem 0;
             text-align: center;
             box-shadow: 0 2px 8px rgba(102,126,234,0.08);
         }
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.7rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
         nav {
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
         }
         nav a {
-            color: #fff;
+            color: var(--white);
             text-decoration: none;
             margin: 0 1.2rem;
             font-weight: 500;
             font-size: 1.05rem;
+            transition: text-decoration 0.2s;
         }
         nav a:hover {
             text-decoration: underline;
@@ -40,13 +54,13 @@
         .main {
             max-width: 900px;
             margin: 2.5rem auto;
-            background: #fff;
+            background: var(--white);
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(102,126,234,0.08);
             padding: 2.5rem 2rem 2rem 2rem;
         }
         h2 {
-            color: #764ba2;
+            color: var(--secondary);
             font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
@@ -60,17 +74,21 @@
         }
         @media (max-width: 600px) {
             .main { padding: 1rem; }
-            header h1 { font-size: 1.5rem; }
+            header h1 { font-size: 2rem; }
         }
-
     </style>
     </style>
 </head>
 <body>
     <header>
-        <h1>Documentação do Projeto CoOps</h1>
+        <h1>CoOps – Documentação</h1>
+        <p>Documentação técnica completa do projeto de análise de métricas GitHub.</p>
         <nav>
             <a href="index.html">Página Inicial</a>
+            <a href="docs/backend.html">Backend</a>
+            <a href="docs/arquitetura.html">Arquitetura</a>
+            <a href="docs/requisitos.html">Requisitos</a>
+            <a href="docs/scrum.html">Scrum</a>
         </nav>
     </header>
     <div class="main">

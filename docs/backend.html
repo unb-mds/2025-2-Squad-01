@@ -6,6 +6,14 @@
     <title>Backend - CoOps Documentação</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --gray: #7f8c8d;
+            --dark: #2c3e50;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -13,90 +21,86 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            color: var(--dark);
         }
 
         header {
-            background: #1e40af;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+        }
+
+        header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
         }
 
         nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+            margin-top: 1.5rem;
         }
 
         nav a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: text-decoration 0.2s;
         }
 
         nav a:hover {
-            color: #bfdbfe;
+            text-decoration: underline;
         }
 
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
+        .main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
         }
 
-        .content {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        section {
+            margin-bottom: 2.5rem;
         }
 
         h1 {
-            color: #1e40af;
+            color: var(--secondary);
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            border-bottom: 3px solid #1e40af;
-            padding-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         h2 {
-            color: #1e40af;
+            color: var(--secondary);
             font-size: 1.8rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         h3 {
-            color: #1e40af;
+            color: var(--secondary);
             font-size: 1.4rem;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
         }
 
         h4 {
-            color: #1e40af;
+            color: var(--secondary);
             font-size: 1.2rem;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
@@ -108,16 +112,16 @@
         }
 
         ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+            margin-left: 1.2rem;
+            margin-bottom: 0.7rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         strong {
-            color: #1e40af;
+            color: var(--secondary);
         }
 
         code {
@@ -125,7 +129,7 @@
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
             font-family: 'Consolas', 'Monaco', monospace;
-            color: #1e40af;
+            color: var(--secondary);
             font-size: 0.9rem;
         }
 
@@ -150,11 +154,11 @@
             padding: 1.5rem;
             background: #f8fafc;
             border-radius: 8px;
-            border-left: 4px solid #1e40af;
+            border-left: 4px solid var(--primary);
         }
 
         .overview {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             padding: 2rem;
             border-radius: 12px;
@@ -200,6 +204,62 @@
             gap: 1.5rem;
             margin: 1.5rem 0;
         }
+
+        .mvc-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .mvc-item.model {
+            border-left: 4px solid #dc2626;
+        }
+
+        .mvc-item.view {
+            border-left: 4px solid #2563eb;
+        }
+
+        .mvc-item.controller {
+            border-left: 4px solid #16a34a;
+        }
+
+        .workflow {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 1.5rem 0;
+        }
+
+        .workflow ol {
+            margin-left: 1rem;
+        }
+
+        .example-section {
+            background: #e0f2fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0284c7;
+            margin: 1rem 0;
+        }
+
+        .concept-explanation {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #16a34a;
+        }
+
+        @media (max-width: 600px) {
+            .main { padding: 1rem; }
+            header h1 { font-size: 2rem; }
+            .advantages { grid-template-columns: 1fr; }
+            .mvc-grid { grid-template-columns: 1fr; }
+            pre { font-size: 0.8rem; padding: 1rem; }
+        }
+    </style>
 
         .mvc-item {
             background: white;
@@ -303,19 +363,17 @@
 </head>
 <body>
     <header>
+        <h1>CoOps – Documentação Backend</h1>
+        <p>Documentação técnica completa do backend - arquitetura, tecnologias e implementação.</p>
         <nav>
-            <a href="../index.html" class="logo">CoOps - Documentação</a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="index.html">Documentação</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
-            </ul>
+            <a href="../index.html">Início</a>
+            <a href="index.html">Documentação</a>
+            <a href="arquitetura.html">Arquitetura</a>
+            <a href="requisitos.html">Requisitos</a>
+            <a href="scrum.html">Scrum</a>
         </nav>
     </header>
-
-    <main>
-        <div class="content">
+    <div class="main">
             <h1>Documentação do Backend</h1>
 
             <div class="overview">
@@ -619,10 +677,6 @@ fetch('/api/github-metrics/productivity_metrics/?owner=microsoft&repo=vscode')
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 CoOps - Documentação. Desenvolvido com ❤️ pelo Squad 01.</p>
-    </footer>
+    </div>
 </body>
 </html>
