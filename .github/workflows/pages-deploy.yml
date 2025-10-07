@@ -3,7 +3,7 @@ name: Build and Deploy Next.js to GitHub Pages
 on:
   # Trigger on pushes to main branch (front-end changes)
   push:
-    branches: [ main ]
+    branches: [ main, pages_design ]
     paths:
       - 'front-end/**'
       - '.github/workflows/pages-deploy.yml'
