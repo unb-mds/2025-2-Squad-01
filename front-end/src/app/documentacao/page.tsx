@@ -459,14 +459,14 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">📚 Documentos Técnicos</h3>
                 <ul className="space-y-2 text-white/80">
-                  <li>• <a href="/2025-2-Squad-01/docs/backend.html" className="text-blue-400 hover:text-blue-300 underline">Backend</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/arquitetura.html" className="text-blue-400 hover:text-blue-300 underline">Arquitetura</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/requisitos.html" className="text-blue-400 hover:text-blue-300 underline">Requisitos</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/levantamento-inicial.html" className="text-blue-400 hover:text-blue-300 underline">Levantamento Inicial</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/scrum.html" className="text-blue-400 hover:text-blue-300 underline">SCRUM e Métodos Ágeis</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/benchmarking.html" className="text-blue-400 hover:text-blue-300 underline">Benchmarking</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/frontend.html" className="text-blue-400 hover:text-blue-300 underline">Frontend</a></li>
-                  <li>• <a href="/2025-2-Squad-01/docs/api.html" className="text-blue-400 hover:text-blue-300 underline">API GitHub</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Backend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Backend</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Frontend</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Requisitos.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Requisitos</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Levantamento-Inicial-do-Produto.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Levantamento Inicial</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/SCRUM-e-Metodos-Agile.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">SCRUM e Métodos Ágeis</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-LinearB.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking LinearB</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-Keypup.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking Keypup</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/OqueEAPI.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">O que é API</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Estudo-Completo-sobre-GitHub-Actions.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">GitHub Actions</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Decisao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Decisão Frontend</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Testar-API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Testar API</a></li>
@@ -482,7 +482,7 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">📋 Atas de Reuniões</h3>
                 <ul className="space-y-2 text-white/80">
-                  <li>• <a href="/2025-2-Squad-01/docs/atas.html" className="text-green-400 hover:text-green-300 underline">Atas de Reuniões - Todas</a></li>
+                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/tree/main/docs/atas" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">Atas de Reuniões - Todas</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-26.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">26/08/2025 - Reunião Inicial</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-28.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">28/08/2025 - Definição do Projeto</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-01.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">01/09/2025 - Retrospectiva e Planejamento</a></li>
