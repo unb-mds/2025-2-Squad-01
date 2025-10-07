@@ -52,12 +52,6 @@ jobs:
           cd front-end
           npm run build
           
-      - name: Copy HTML docs to build output
-        run: |
-          # Copy docs HTML files to Next.js output
-          cp -r docs/ front-end/out/docs/
-          echo "Copied HTML documentation files to Next.js output"
-          
       - name: Verify build output
         run: |
           if [ ! -d "./front-end/out" ]; then
