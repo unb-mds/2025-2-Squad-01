@@ -459,18 +459,18 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">📚 Documentos Técnicos</h3>
                 <ul className="space-y-2 text-white/80">
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Backend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Backend</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Frontend</a></li>
+                  <li>• <a href="#backend" className="text-blue-400 hover:text-blue-300 underline">Backend</a></li>
+                  <li>• <a href="#frontend" className="text-blue-400 hover:text-blue-300 underline">Frontend</a></li>
+                  <li>• <a href="#requisitos" className="text-blue-400 hover:text-blue-300 underline">Requisitos</a></li>
+                  <li>• <a href="#levantamento" className="text-blue-400 hover:text-blue-300 underline">Levantamento Inicial</a></li>
+                  <li>• <a href="#scrum" className="text-blue-400 hover:text-blue-300 underline">SCRUM e Métodos Ágeis</a></li>
+                  <li>• <a href="#benchmarking" className="text-blue-400 hover:text-blue-300 underline">Benchmarking</a></li>
+                  <li>• <a href="#api" className="text-blue-400 hover:text-blue-300 underline">API e Desenvolvimento</a></li>
+                  <li>• <a href="#design" className="text-blue-400 hover:text-blue-300 underline">Design e Protótipos</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Estudo-Completo-sobre-GitHub-Actions.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">GitHub Actions</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-LinearB.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking LinearB</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-Keypup.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking Keypup</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Benchmarking-Swarmia-e-SonarCloud.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Benchmarking Swarmia e SonarCloud</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Decisao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Decisão Frontend</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Levantamento-Inicial-do-Produto.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Levantamento Inicial</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/SCRUM-e-Metodos-Agile.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">SCRUM e Métodos Ágeis</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Testar-API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Testar API</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/fluxos/fluxo_usuario_metricas_github.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Fluxo do Usuário</a></li>
-                  <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Requisitos.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Requisitos</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/OqueEAPI.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">O que é API</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/FIGMA.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Figma</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/prototipo_baixa_fidelidade.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Protótipo Baixa Fidelidade</a></li>
@@ -482,6 +482,7 @@ export default function DocumentacaoPage() {
               <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">📋 Atas de Reuniões</h3>
                 <ul className="space-y-2 text-white/80">
+                  <li>• <a href="#atas" className="text-green-400 hover:text-green-300 underline">Atas de Reuniões - Todas</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-26.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">26/08/2025 - Reunião Inicial</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-08-28.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">28/08/2025 - Definição do Projeto</a></li>
                   <li>• <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/atas/2025-09-01.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">01/09/2025 - Retrospectiva e Planejamento</a></li>
@@ -496,6 +497,118 @@ export default function DocumentacaoPage() {
         </div>
 
         {/* Call to Action */}
+        {/* Seções de Documentação */}
+        
+        {/* Backend */}
+        <section id="backend" className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-6">🔧 Backend</h2>
+          <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
+            <p className="text-white/80 mb-4">
+              O backend do CoOps é desenvolvido em Python e é responsável pela extração, processamento e análise dos dados do GitHub.
+            </p>
+            <ul className="text-white/80 space-y-2">
+              <li>• <strong>Tecnologias:</strong> Python, GitHub API, Pandas, NumPy</li>
+              <li>• <strong>Responsabilidades:</strong> Coleta de dados, processamento ETL, análise de métricas</li>
+              <li>• <strong>Arquitetura:</strong> Scripts modulares com automação via GitHub Actions</li>
+            </ul>
+            <div className="mt-4">
+              <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Backend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                📄 Ver documentação completa no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Frontend */}
+        <section id="frontend" className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-6">🎨 Frontend</h2>
+          <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
+            <p className="text-white/80 mb-4">
+              O frontend é desenvolvido em Next.js e fornece uma interface moderna e responsiva para visualização das métricas.
+            </p>
+            <ul className="text-white/80 space-y-2">
+              <li>• <strong>Tecnologias:</strong> Next.js, React, TypeScript, Tailwind CSS</li>
+              <li>• <strong>Features:</strong> Dashboard interativo, visualizações de dados, design responsivo</li>
+              <li>• <strong>Deploy:</strong> GitHub Pages com automação via GitHub Actions</li>
+            </ul>
+            <div className="mt-4">
+              <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Documentacao-Frontend.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                📄 Ver documentação completa no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Requisitos */}
+        <section id="requisitos" className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-6">📋 Requisitos</h2>
+          <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
+            <p className="text-white/80 mb-4">
+              Documentação completa dos requisitos funcionais e não-funcionais do projeto CoOps.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h4 className="text-blue-400 font-semibold mb-2">Requisitos Funcionais</h4>
+                <ul className="text-white/80 text-sm space-y-1">
+                  <li>• Dashboard de métricas</li>
+                  <li>• Visualização de dados</li>
+                  <li>• Análise de colaboração</li>
+                  <li>• Relatórios automáticos</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-blue-400 font-semibold mb-2">Requisitos Não-Funcionais</h4>
+                <ul className="text-white/80 text-sm space-y-1">
+                  <li>• Performance otimizada</li>
+                  <li>• Interface responsiva</li>
+                  <li>• Segurança de dados</li>
+                  <li>• Código aberto</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4">
+              <a href="https://github.com/unb-mds/2025-2-Squad-01/blob/main/docs/Requisitos.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                📄 Ver requisitos completos no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Atas */}
+        <section id="atas" className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-6">📝 Atas de Reuniões</h2>
+          <div className="bg-slate-800/40 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
+            <p className="text-white/80 mb-4">
+              Registro completo de todas as reuniões da equipe, decisões tomadas e planejamentos realizados.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h4 className="text-green-400 font-semibold mb-2">Reuniões Recentes</h4>
+                <ul className="text-white/80 text-sm space-y-1">
+                  <li>• 15/09/2025 - Pivô Estratégico</li>
+                  <li>• 09/09/2025 - Definição de Acesso</li>
+                  <li>• 08/09/2025 - Sprint 2</li>
+                  <li>• 01/09/2025 - Retrospectiva</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-green-400 font-semibold mb-2">Tópicos Principais</h4>
+                <ul className="text-white/80 text-sm space-y-1">
+                  <li>• Planejamento de sprints</li>
+                  <li>• Definições técnicas</li>
+                  <li>• Retrospectivas</li>
+                  <li>• Decisões estratégicas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4">
+              <a href="https://github.com/unb-mds/2025-2-Squad-01/tree/main/docs/atas" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">
+                📄 Ver todas as atas no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
         <div className="mt-16 text-center">
           <Link 
             href="/commits" 
