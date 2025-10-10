@@ -7,18 +7,18 @@ from utils.github_api import save_json_data, load_json_data
 
 def process_contribution_metrics() -> List[str]:
     
-    # Load bronze data
+    
     issues_data = load_json_data("data/bronze/issues_all.json") or []
     prs_data = load_json_data("data/bronze/prs_all.json") or []
     commits_data = load_json_data("data/bronze/commits_all.json") or []
     issue_events_data = load_json_data("data/bronze/issue_events_all.json") or []
     
-    # Skip metadata entries
+   
     for data_list in [issues_data, prs_data, commits_data, issue_events_data]:
         if isinstance(data_list, list) and len(data_list) > 0 and '_metadata' in data_list[0]:
             data_list = data_list[1:]
     
-    # Initialize contribution tracking
+    
     contributions = defaultdict(lambda: {
         'issues_created': 0,
         'issues_assigned': 0,
@@ -29,7 +29,7 @@ def process_contribution_metrics() -> List[str]:
         'total_contributions': 0
     })
     
-    # Count issue contributions
+   
     for issue in issues_data:
         if issue.get('user', {}).get('login'):
             creator = issue['user']['login']
@@ -111,7 +111,7 @@ def process_contribution_metrics() -> List[str]:
         if event.get('event') in ['commented', 'issue_comment']:
             repo_metrics[repo]['comments'] += 1
     
-    # Calculate totals for repos
+  
     repo_list = []
     for repo, metrics in repo_metrics.items():
         metrics['repo'] = repo
@@ -125,14 +125,14 @@ def process_contribution_metrics() -> List[str]:
     
     repo_list.sort(key=lambda x: x['total_activity'], reverse=True)
     
-    # Save repository metrics
+    
     repo_file = save_json_data(
         repo_list,
         "data/silver/repository_metrics.json"
     )
     generated_files.append(repo_file)
     
-    # Create contribution distribution analysis
+  
     total_contributors = len([c for c in contribution_list if c['has_contributed']])
     non_contributors = len([c for c in contribution_list if not c['has_contributed']])
     

@@ -22,11 +22,13 @@ def main():
     try:
 
         from silver.contribution_metrics import process_contribution_metrics 
+        from silver.member_analytics import process_member_analytics
 
         contrib_files = process_contribution_metrics()
- 
+        member_files = process_member_analytics()
+
         # Update registry
-        all_files = contrib_files 
+        all_files = contrib_files + member_files
         update_data_registry('silver', 'all_processed', all_files)
         
         print(f"\nSilver processing completed successfully!")
