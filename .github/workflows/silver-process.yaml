@@ -1,0 +1,95 @@
+name: Silver Layer - Data Processing
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  process-silver-data:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      silver-completed: ${{ steps.processing.outputs.completed }}
+    
+    steps:
+      - name: Checkout repository
+        if: ${{ !env.ACT }}
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy requests
+
+      - name: Verify Bronze data exists
+        run: |
+          if [ ! -d "data/bronze" ] || [ "$(find data/bronze -name '*.json' | wc -l)" -eq 0 ]; then
+            echo "No Bronze layer data found. Run bronze extraction first."
+            exit 1
+          fi
+          
+          echo "Bronze data verified: $(find data/bronze -name '*.json' | wc -l) files found"
+
+      - name: Process Silver layer data
+        id: processing
+        run: |
+          echo "Starting Silver layer processing..."
+          python src/silver_process.py --org "${GITHUB_REPOSITORY_OWNER}"
+          
+          # Check if files were generated
+          if [ "$(find data/silver -name '*.json' | wc -l)" -gt 0 ]; then
+            echo "Silver processing completed successfully"
+            echo "completed=true" >> $GITHUB_OUTPUT
+          else
+            echo "No files generated in silver layer"
+            echo "completed=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Update data registry
+        if: steps.processing.outputs.completed == 'true'
+        run: |
+          echo "Updating data registry with Silver layer files..."
+          python src/registry_manager.py
+
+      - name: List generated files
+        if: steps.processing.outputs.completed == 'true'
+        run: |
+          echo "Silver layer files generated:"
+          find data/silver -name '*.json' -type f | sort | while read file; do
+            size=$(du -h "$file" | cut -f1)
+            records=$(jq 'if type == "array" then length elif type == "object" and has("_metadata") then (.record_count // "N/A") else "1" end' "$file" 2>/dev/null || echo "N/A")
+            echo "  - $file ($size, $records records)"
+          done
+
+      - name: Commit and push Silver data
+        if: steps.processing.outputs.completed == 'true' && !env.ACT
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add data/silver/ data/master_registry.json data/data_catalog.json
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "[Silver] Update processed analytics data
+            
+            - Processed Bronze data into analytics-ready formats
+            - Generated $(find data/silver -name '*.json' | wc -l) silver layer files
+            - Updated data registry and catalog"
+            
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+            git push
+          else
+            echo "No changes to commit in Silver layer"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
