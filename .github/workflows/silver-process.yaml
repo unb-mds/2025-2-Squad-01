@@ -18,6 +18,18 @@ jobs:
       - name: Checkout repository
         if: ${{ !env.ACT }}
         uses: actions/checkout@v4
+        with:
+          # Fetch full history to ensure we have all data files
+          fetch-depth: 0
+
+      - name: Pull latest data files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Get current branch name
+          CURRENT_BRANCH=$(git branch --show-current)
+          echo "Current branch: $CURRENT_BRANCH"
+          git pull origin "$CURRENT_BRANCH" --no-edit || echo "Already up to date"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -76,7 +88,37 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          git add data/silver/ data/master_registry.json data/data_catalog.json
+          # Configure remote with token
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
+          # Try merge strategy instead of rebase to avoid conflicts
+          git config pull.rebase false
+          
+          # Add files before attempting merge
+          git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist yet"
+          
+          # Get current branch for pull/push operations
+          CURRENT_BRANCH=$(git branch --show-current)
+          echo "Working on branch: $CURRENT_BRANCH"
+          
+          # Pull with merge strategy and auto-resolve conflicts
+          if ! git pull origin "$CURRENT_BRANCH" --no-edit; then
+            echo "Merge conflicts detected, auto-resolving..."
+            
+            # For add/add conflicts, prefer our version (silver data)
+            git status --porcelain | grep "AA" | awk '{print $2}' | xargs -r git checkout --ours
+            git status --porcelain | grep "DU" | awk '{print $2}' | xargs -r git add
+            git status --porcelain | grep "UD" | awk '{print $2}' | xargs -r git rm
+            
+            # Re-add our silver files
+            git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
+            
+            # Complete the merge
+            git commit --no-edit -m "[Silver] Auto-resolve merge conflicts and update analytics data"
+          fi
+          
+          # Add silver files again and commit if there are changes
+          git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
           
           if ! git diff --cached --quiet; then
             git commit -m "[Silver] Update processed analytics data
@@ -84,12 +126,19 @@ jobs:
             - Processed Bronze data into analytics-ready formats
             - Generated $(find data/silver -name '*.json' | wc -l) silver layer files
             - Updated data registry and catalog"
-            
-            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-            git push
-          else
-            echo "No changes to commit in Silver layer"
           fi
+          
+          # Push with retry logic
+          for i in {1..3}; do
+            if git push origin "$CURRENT_BRANCH"; then
+              echo "Push successful on attempt $i"
+              break
+            else
+              echo "Push failed on attempt $i, retrying..."
+              git pull --no-edit origin "$CURRENT_BRANCH"
+              sleep 2
+            fi
+          done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
