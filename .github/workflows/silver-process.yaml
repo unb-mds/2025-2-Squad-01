@@ -79,8 +79,14 @@ jobs:
           # Configure remote with token
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           
+          # Stash any unstaged changes
+          git stash --include-untracked || echo "No changes to stash"
+          
           # Pull latest changes to avoid conflicts
           git pull --rebase origin main
+          
+          # Restore stashed changes
+          git stash pop || echo "No stash to pop"
           
           git add data/silver/ data/master_registry.json data/data_catalog.json
           
