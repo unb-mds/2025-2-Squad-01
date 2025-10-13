@@ -76,6 +76,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
+          # Configure remote with token
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
+          # Pull latest changes to avoid conflicts
+          git pull --rebase origin main
+          
           git add data/silver/ data/master_registry.json data/data_catalog.json
           
           if ! git diff --cached --quiet; then
@@ -85,8 +91,17 @@ jobs:
             - Generated $(find data/silver -name '*.json' | wc -l) silver layer files
             - Updated data registry and catalog"
             
-            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-            git push
+            # Push with retry logic
+            for i in {1..3}; do
+              if git push; then
+                echo "Push successful on attempt $i"
+                break
+              else
+                echo "Push failed on attempt $i, retrying..."
+                git pull --rebase origin main
+                sleep 2
+              fi
+            done
           else
             echo "No changes to commit in Silver layer"
           fi
