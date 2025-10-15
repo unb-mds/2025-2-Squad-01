@@ -1,7 +1,5 @@
-/* Diretivas do Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4 import (base, components e utilities) */
+@import "tailwindcss";
 
 /* Estilos Globais */
 :root {
@@ -20,6 +18,47 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Merriweather', serif; 
+}
+
+/* Título do sidebar */
+.titulo {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Scrollbar customizado */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(71, 85, 105, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Animações adicionais para a nova página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Animações */
@@ -352,4 +391,88 @@ body {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* =============================================== */
+/* ESTILOS PARA GRÁFICOS D3 NA PÁGINA DE COMMITS  */
+/* =============================================== */
+
+/* Estilos para o SVG do histograma */
+svg[aria-label="Histograma"] text {
+  fill: #e2e8f0 !important;
+  font-size: 12px;
+}
+
+svg[aria-label="Histograma"] line,
+svg[aria-label="Histograma"] path {
+  stroke: #475569 !important;
+}
+
+svg[aria-label="Histograma"] rect {
+  fill: #3b82f6 !important;
+}
+
+/* Estilos para o SVG do gráfico de pizza */
+svg[aria-label="Gráfico de pizza"] path {
+  stroke: #1e293b !important;
+  stroke-width: 2px;
+}
+
+/* Garantir que variável CSS do primary funcione */
+:root {
+  --color-primary: #3b82f6;
+}
+
+/* Estilos adicionais para garantir layout correto */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* Garantir que gradientes funcionem */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-slate-950 {
+  --tw-gradient-from: #020617;
+  --tw-gradient-to: rgb(2 6 23 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-slate-900 {
+  --tw-gradient-to: rgb(15 23 42 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #0f172a, var(--tw-gradient-to);
+}
+
+.to-slate-950 {
+  --tw-gradient-to: #020617;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/* Garantir backdrop blur */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
 }
