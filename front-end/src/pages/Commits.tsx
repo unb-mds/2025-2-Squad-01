@@ -26,11 +26,12 @@ import type {
   RepoActivitySummary,
   ProcessedActivity,
 } from './Utils';
+import DashboardLayout from '../components/DashboardLayout';
 
 // Removido - agora usamos ActivityData do Utils
 
 
-function Histogram({ data }: { data: HistogramDatum[] }) {
+export function Histogram({ data }: { data: HistogramDatum[] }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
@@ -173,7 +174,6 @@ export default function CommitsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedRepoId, setSelectedRepoId] = useState<number | 'all'>('all');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -262,204 +262,99 @@ export default function CommitsPage() {
   }, [selectedRepo]);
 
   return (
-    <div className="min-h-screen flex">
-      {/* Sidebar */}
-      <aside
-        className={`h-screen border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out ${
-          isSidebarOpen ? 'w-48' : 'w-16'
-        }`}
-        style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
-      >
-        <div className="h-full flex flex-col">
-          {/* Brand */}
-          <div className="p-4 border-b-2 flex items-center gap-3" style={{ borderBottomColor: '#333333' }}>
-            <span className="text-xl">📊</span>
-            {isSidebarOpen && (
-              <div>
-                <h1 className="text-lg font-semibold text-white leading-tight">Metrics</h1>
-                <p className="text-[11px] text-slate-400">Analytics Dashboard</p>
-              </div>
+    <DashboardLayout currentPage="commits">
+      {/* Header */}
+      <div className="mb-8">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-3xl font-bold text-white">Análise de Commits</h2>
+            {selectedRepo && (
+              <p className="text-slate-400 text-sm mt-2">
+                {selectedRepo.name === 'Todos os repositórios'
+                  ? `${repositories.length} repositório(s) • ${selectedRepo.activities.length} atividades`
+                  : `${selectedRepo.name} • ${selectedRepo.activities.length} atividades`}
+              </p>
             )}
           </div>
 
-          {/* Nav */}
-          <nav className="flex-1 p-2 space-y-1 overflow-y-auto">
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-            >
-              <span>📊</span>
-              {isSidebarOpen && <span className="text-sm">Issues</span>}
-            </button>
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-blue-300 border-l-2 border-blue-500 transition-colors ${
-                isSidebarOpen ? '' : 'border-l-0'
-              }`}
-              style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.25)'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.2)'}
-            >
-              <span>💻</span>
-              {isSidebarOpen && <span className="text-sm">Commits</span>}
-            </button>
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-            >
-              <span>🔀</span>
-              {isSidebarOpen && <span className="text-sm">Pull Requests</span>}
-            </button>
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-            >
-              <span>🤝</span>
-              {isSidebarOpen && <span className="text-sm">Colaboração</span>}
-            </button>
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-            >
-              <span>🏗️</span>
-              {isSidebarOpen && <span className="text-sm">Estrutura</span>}
-            </button>
-          </nav>
-
-          {/* Footer */}
-          <div className="p-3 border-t-2 space-y-2" style={{ borderTopColor: '#333333' }}>
-            <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-400 hover:text-white transition-colors`}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-            >
-              <span>🏠</span>
-              {isSidebarOpen && <span className="text-sm">Home</span>}
-            </button>
-            <div className="flex justify-center">
-              <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="w-10 h-10 flex items-center justify-center rounded-md transition-colors"
-                style={{ backgroundColor: '#333333' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#444444'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#333333'}
-                aria-label={isSidebarOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
-                title={isSidebarOpen ? 'Recolher' : 'Expandir'}
-              >
-                <svg
-                  className={`w-4 h-4 text-slate-300 transition-transform ${isSidebarOpen ? '' : 'rotate-180'}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Filtro */}
+          <select
+            value={selectedRepoId}
+            onChange={(e) =>
+              setSelectedRepoId(e.target.value === 'all' ? 'all' : Number(e.target.value))
+            }
+            className="px-4 py-2 border rounded text-white"
+            style={{ backgroundColor: '#333333', borderColor: '#444444' }}
+            disabled={loading}
+          >
+            <option value="all">
+              Todos os repositórios ({repositories.flatMap((r) => r.activities).length})
+            </option>
+            {repositories.map((repo) => (
+              <option key={repo.id} value={repo.id}>
+                {repo.name} ({repo.activities.length})
+              </option>
+            ))}
+          </select>
         </div>
-      </aside>
+      </div>
 
-      {/* Conteúdo principal */}
-      <main className="flex-1 overflow-y-auto" style={{ backgroundColor: '#181818' }}>
-        <div className="max-w-7xl mx-auto p-8">
-          {/* Header */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h2 className="text-3xl font-bold text-white">Análise de Commits</h2>
-                {selectedRepo && (
-                  <p className="text-slate-400 text-sm mt-2">
-                    {selectedRepo.name === 'Todos os repositórios'
-                      ? `${repositories.length} repositório(s) • ${selectedRepo.activities.length} atividades`
-                      : `${selectedRepo.name} • ${selectedRepo.activities.length} atividades`}
-                  </p>
-                )}
+      {/* Grid de gráficos */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Timeline de Commits */}
+        <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          <p className="text-left p-6 font-bold text-white mb-4">Timeline de Commits</p>
+          {loading ? (
+            <div className="h-[300px] flex items-center justify-center">
+              <div className="text-slate-400">Carregando...</div>
+            </div>
+          ) : error ? (
+            <div className="h-[300px] flex items-center justify-center">
+              <p className="text-red-400">{error}</p>
+            </div>
+          ) : (
+            <Histogram data={histogramData} />)
+          }
+        </div>
+
+        {/* Contribuidores */}
+        <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          <h3 className="text-lg font-bold text-white mb-4">Contribuidores</h3>
+          {loading ? (
+            <div className="h-[140px] flex items-center justify-center">
+              <div className="text-slate-400">Carregando...</div>
+            </div>
+          ) : error ? (
+            <div className="h-[140px] flex items-center justify-center">
+              <p className="text-red-400">{error}</p>
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center justify-center mb-2">
+                <PieChart data={pieData} />
               </div>
-
-              {/* Filtro */}
-              <select
-                value={selectedRepoId}
-                onChange={(e) =>
-                  setSelectedRepoId(e.target.value === 'all' ? 'all' : Number(e.target.value))
-                }
-                className="px-4 py-2 border rounded text-white"
-                style={{ backgroundColor: '#333333', borderColor: '#444444' }}
-                disabled={loading}
-              >
-                <option value="all">
-                  Todos os repositórios ({repositories.flatMap((r) => r.activities).length})
-                </option>
-                {repositories.map((repo) => (
-                  <option key={repo.id} value={repo.id}>
-                    {repo.name} ({repo.activities.length})
-                  </option>
+              <div className="max-h-[180px] overflow-y-auto space-y-2">
+                {pieData.map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center justify-between p-2 rounded"
+                    style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div 
+                        className="w-3 h-3 rounded-full" 
+                        style={{ backgroundColor: item.color }}
+                      ></div>
+                      <span className="text-sm text-slate-300">{item.label}</span>
+                    </div>
+                    <span className="text-xs font-bold text-slate-200">{item.value}</span>
+                  </div>
                 ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Grid de gráficos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Timeline de Commits */}
-            <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-              <p className="text-left p-6 font-bold text-white mb-4">Timeline de Commits</p>
-              {loading ? (
-                <div className="h-[300px] flex items-center justify-center">
-                  <div className="text-slate-400">Carregando...</div>
-                </div>
-              ) : error ? (
-                <div className="h-[300px] flex items-center justify-center">
-                  <p className="text-red-400">{error}</p>
-                </div>
-              ) : (
-                <Histogram data={histogramData} />)
-              }
-            </div>
-
-            {/* Contribuidores */}
-            <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-              <h3 className="text-lg font-bold text-white mb-4">Contribuidores</h3>
-              {loading ? (
-                <div className="h-[140px] flex items-center justify-center">
-                  <div className="text-slate-400">Carregando...</div>
-                </div>
-              ) : error ? (
-                <div className="h-[140px] flex items-center justify-center">
-                  <p className="text-red-400">{error}</p>
-                </div>
-              ) : (
-                <>
-                  <div className="flex items-center justify-center mb-2">
-                    <PieChart data={pieData} />
-                  </div>
-                  <div className="max-h-[180px] overflow-y-auto space-y-2">
-                    {pieData.map((item) => (
-                      <div
-                        key={item.label}
-                        className="flex items-center justify-between p-2 rounded"
-                        style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
-                      >
-                        <div className="flex items-center gap-2">
-                          <div 
-                            className="w-3 h-3 rounded-full" 
-                            style={{ backgroundColor: item.color }}
-                          ></div>
-                          <span className="text-sm text-slate-300">{item.label}</span>
-                        </div>
-                        <span className="text-xs font-bold text-slate-200">{item.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
+              </div>
+            </>
+          )}
         </div>
-      </main>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 }
