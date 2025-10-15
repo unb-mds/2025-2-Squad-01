@@ -1,0 +1,75 @@
+graph TB
+    %% Topologia Dashboard - Fábrica de Software Acadêmica
+    %% Arquitetura GitHub Actions + Firebase + React/D3.js
+    
+    subgraph Users ["👥 Stakeholders"]
+        D[Docentes/Gestores]
+        E[Estudantes]  
+        P[Pesquisadores]
+    end
+    
+    subgraph Frontend ["🌐 Frontend & Hosting"]
+        FB[Firebase Hosting]
+        RA[React + D3.js]
+        FB --> RA
+    end
+    
+    subgraph Repository ["📦 Repositório Central"]
+        MR[Dashboard Repository]
+        
+        subgraph DataLayers ["🗂️ Camadas de Dados"]
+            BR[Bronze<br/>Raw JSON]
+            SV[Silver<br/>Normalized]
+            GD[Gold<br/>KPIs]
+            
+            BR -->|ETL Transform| SV
+            SV -->|Aggregate| GD
+        end
+        
+        MR --> DataLayers
+    end
+    
+    subgraph Processing ["⚙️ Processamento Automatizado"]
+        GA[GitHub Actions<br/>Daily ETL]
+        PS[Python Scripts<br/>Bronze→Silver→Gold]
+        GA --> PS
+    end
+    
+    subgraph DataSources ["📊 Fontes de Dados"]
+        OR[Repositórios da<br/>Organização]
+        IS[Issues/PRs]
+        CS[Commits/Events]
+    end
+    
+    %% Fluxos de dados principais
+    OR -->|GitHub API| GA
+    IS -->|GitHub API| GA  
+    CS -->|GitHub API| GA
+    
+    PS -->|Store| BR
+    PS -->|Process| SV
+    PS -->|Generate| GD
+    
+    %% Acesso aos dados
+    RA -.->|GitHub API<br/>Read Data| MR
+    
+    %% Interação dos usuários
+    D -->|HTTPS| FB
+    E -->|HTTPS| FB
+    P -->|HTTPS| FB
+    
+    %% Acesso direto para pesquisadores
+    P -.->|API Access<br/>Bronze/Silver| MR
+    
+    %% Estilos
+    classDef userClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef frontendClass fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef dataClass fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef processClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef sourceClass fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    
+    class D,E,P userClass
+    class FB,RA frontendClass
+    class MR,BR,SV,GD dataClass
+    class GA,PS processClass
+    class OR,IS,CS sourceClass

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend - CoOps Documentação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --gray: #7f8c8d;
+            --dark: #2c3e50;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            color: var(--dark);
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+        }
+
+        header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: text-decoration 0.2s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        h4 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        strong {
+            color: var(--secondary);
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        pre code {
+            background: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .overview {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .overview h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #10b981;
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .advantage-item {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a34a;
+        }
+
+        .advantage-item::before {
+            content: '✅';
+            margin-right: 0.5rem;
+        }
+
+        .mvc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mvc-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .mvc-item.model {
+            border-left: 4px solid #dc2626;
+        }
+
+        .mvc-item.view {
+            border-left: 4px solid #2563eb;
+        }
+
+        .mvc-item.controller {
+            border-left: 4px solid #16a34a;
+        }
+
+        .workflow {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 1.5rem 0;
+        }
+
+        .workflow ol {
+            margin-left: 1rem;
+        }
+
+        .example-section {
+            background: #e0f2fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0284c7;
+            margin: 1rem 0;
+        }
+
+        .concept-explanation {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #16a34a;
+        }
+
+        @media (max-width: 600px) {
+            .main { padding: 1rem; }
+            header h1 { font-size: 2rem; }
+            .advantages { grid-template-columns: 1fr; }
+            .mvc-grid { grid-template-columns: 1fr; }
+            pre { font-size: 0.8rem; padding: 1rem; }
+        }
+    </style>
+
+        .mvc-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .mvc-item.model {
+            border-left: 4px solid #dc2626;
+        }
+
+        .mvc-item.view {
+            border-left: 4px solid #2563eb;
+        }
+
+        .mvc-item.controller {
+            border-left: 4px solid #16a34a;
+        }
+
+        .workflow {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 1.5rem 0;
+        }
+
+        .workflow ol {
+            margin-left: 1rem;
+        }
+
+        .example-section {
+            background: #e0f2fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0284c7;
+            margin: 1rem 0;
+        }
+
+        .concept-explanation {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #16a34a;
+        }
+
+        footer {
+            background: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                margin: 1rem;
+                padding: 0;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .advantages {
+                grid-template-columns: 1fr;
+            }
+
+            .mvc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            pre {
+                font-size: 0.8rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CoOps – Documentação Backend</h1>
+        <p>Documentação técnica completa do backend - arquitetura, tecnologias e implementação.</p>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="index.html">Documentação</a>
+            <a href="arquitetura.html">Arquitetura</a>
+            <a href="requisitos.html">Requisitos</a>
+            <a href="scrum.html">Scrum</a>
+        </nav>
+    </header>
+    <div class="main">
+            <h1>Documentação do Backend</h1>
+
+            <div class="overview">
+                <h2>O que é Backend?</h2>
+                <p>O <strong>backend</strong> é a parte de uma aplicação web responsável por toda a lógica de negócio, processamento de dados, autenticação, autorização e comunicação com o banco de dados. É a "parte invisível" da aplicação que funciona nos bastidores, processando as requisições enviadas pelo frontend e retornando as respostas apropriadas.</p>
+            </div>
+
+            <div class="section">
+                <h2>Principais Responsabilidades do Backend</h2>
+                <ul>
+                    <li><strong>Processamento de Dados:</strong> Manipula, valida e processa informações da API do GitHub</li>
+                    <li><strong>Integração com APIs Externas:</strong> Consome dados da API do GitHub em tempo real</li>
+                    <li><strong>Transformação de Dados:</strong> Aplica arquitetura medalhão para estruturar dados (Bronze, Silver, Gold)</li>
+                    <li><strong>APIs REST:</strong> Fornece endpoints para comunicação com o frontend</li>
+                    <li><strong>Lógica de Negócio:</strong> Implementa as regras de análise de métricas de produtividade</li>
+                    <li><strong>Segurança:</strong> Protege tokens de acesso e previne ataques</li>
+                    <li><strong>Performance:</strong> Otimiza processamento de dados em memória para melhor desempenho</li>
+                </ul>
+            </div>
+
+            <div class="workflow">
+                <h2>Como Funciona o Backend?</h2>
+                <p>O backend segue uma arquitetura baseada em <strong>requisição-resposta</strong> com processamento automatizado via <strong>GitHub Actions</strong>:</p>
+                <ol>
+                    <li><strong>Extração de Dados:</strong> GitHub Actions executa scripts Python diariamente para coletar dados da API do GitHub</li>
+                    <li><strong>Processamento ETL:</strong> Os dados passam pelo pipeline Bronze → Silver → Gold em camadas sequenciais</li>
+                    <li><strong>Armazenamento:</strong> Dados são armazenados como JSON/tabelas no próprio repositório GitHub</li>
+                    <li><strong>Consumo:</strong> Dashboard React consome os dados processados via GitHub API</li>
+                    <li><strong>Resposta:</strong> Interface apresenta métricas e KPIs em tempo real para os usuários</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>Tecnologias Utilizadas</h2>
+                
+                <div class="tech-card">
+                    <h3>🐍 Python + GitHub Actions</h3>
+                    <p>O <strong>Python</strong> é utilizado junto com <strong>GitHub Actions</strong> para criar um pipeline automatizado de ETL (Extract, Transform, Load) que processa dados da API do GitHub diariamente, seguindo a arquitetura medalhão.</p>
+                    
+                    <h4>Vantagens para o Projeto:</h4>
+                    <div class="advantages">
+                        <div class="advantage-item">Automação completa via GitHub Actions (execução diária)</div>
+                        <div class="advantage-item">Processamento eficiente de dados da API do GitHub</div>
+                        <div class="advantage-item">Armazenamento no próprio repositório (sem infraestrutura externa)</div>
+                        <div class="advantage-item">Pipeline robusto Bronze → Silver → Gold</div>
+                        <div class="advantage-item">Facilidade de manutenção e versionamento do código</div>
+                        <div class="advantage-item">Integração nativa com ecossistema GitHub</div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <h3>📦 Armazenamento no Repositório GitHub</h3>
+                    <p>O projeto utiliza <strong>armazenamento baseado em arquivos</strong> diretamente no repositório GitHub, eliminando a necessidade de infraestrutura de banco de dados externa. Os dados são organizados em camadas dentro do próprio repositório.</p>
+                    
+                    <h4>Vantagens para o Projeto:</h4>
+                    <div class="advantages">
+                        <div class="advantage-item">Dados versionados junto com o código (histórico completo)</div>
+                        <div class="advantage-item">Zero custo de infraestrutura externa</div>
+                        <div class="advantage-item">Backup automático via GitHub</div>
+                        <div class="advantage-item">Acesso direto via GitHub API para o frontend</div>
+                        <div class="advantage-item">Transparência total dos dados processados</div>
+                        <div class="advantage-item">Facilidade de deploy e distribuição</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Arquitetura Medalhão (Bronze, Silver, Gold)</h2>
+                <p>A arquitetura medalhão é um padrão moderno para processamento de dados que organiza o pipeline em três camadas hierárquicas, cada uma com responsabilidades específicas e níveis crescentes de qualidade e refinamento dos dados.</p>
+                
+                <div class="mvc-grid">
+                    <div class="mvc-item model">
+                        <h4>1. Camada Bronze (Dados Brutos)</h4>
+                        <p><strong>Responsabilidade:</strong> Ingestão e armazenamento dos dados brutos exatamente como recebidos da API do GitHub.</p>
+                        <p><strong>Função:</strong> Captura dados em tempo real sem transformações, mantendo a estrutura original da API.</p>
+                        <p><strong>Exemplo de uso:</strong> Dados de commits, issues, pull requests, contribuidores diretamente da API GitHub.</p>
+                        <p><strong>Benefício:</strong> Preserva a integridade dos dados originais e permite reprocessamento posterior se necessário.</p>
+                    </div>
+                    
+                    <div class="mvc-item view">
+                        <h4>2. Camada Silver (Dados Limpos e Validados)</h4>
+                        <p><strong>Responsabilidade:</strong> Limpeza, validação e estruturação dos dados brutos da camada Bronze.</p>
+                        <p><strong>Função:</strong> Aplica regras de negócio, remove inconsistências, padroniza formatos e enriquece os dados.</p>
+                        <p><strong>Exemplo de uso:</strong> Normalização de datas, validação de tipos, agregação de métricas básicas, cálculo de estatísticas.</p>
+                        <p><strong>Benefício:</strong> Dados confiáveis e estruturados, prontos para análises mais complexas.</p>
+                    </div>
+                    
+                    <div class="mvc-item controller">
+                        <h4>3. Camada Gold (Dados Analíticos)</h4>
+                        <p><strong>Responsabilidade:</strong> Criação de datasets otimizados para análise e apresentação, com métricas de alto nível.</p>
+                        <p><strong>Função:</strong> Agrega dados da camada Silver em métricas de produtividade, KPIs e insights de negócio.</p>
+                        <p><strong>Exemplo de uso:</strong> Métricas de produtividade da equipe, análise de padrões de contribuição, relatórios executivos.</p>
+                        <p><strong>Benefício:</strong> Dados prontos para consumo direto pelo frontend, otimizados para performance e clareza.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow">
+                    <h3>Fluxo de Processamento</h3>
+                    <pre><code>API GitHub → Bronze → Silver → Gold → Frontend</code></pre>
+                    <ol>
+                        <li><strong>Bronze:</strong> Dados brutos da API GitHub são coletados em tempo real</li>
+                        <li><strong>Silver:</strong> Dados são limpos, validados e estruturados</li>
+                        <li><strong>Gold:</strong> Métricas finais são calculadas e otimizadas para apresentação</li>
+                        <li><strong>Frontend:</strong> Consome dados da camada Gold via APIs REST</li>
+                    </ol>
+                </div>
+                
+                <p>A arquitetura medalhão garante qualidade progressiva dos dados, facilita manutenção e permite que diferentes partes do sistema consumam dados no nível de refinamento adequado às suas necessidades.</p>
+            </div>
+
+            <div class="section">
+                <h2>Exemplos Práticos com Python e Arquitetura Medalhão</h2>
+                <p>A seguir, veja como aplicar os conceitos do backend usando Python para processamento automatizado com arquitetura medalhão via GitHub Actions:</p>
+
+                <div class="example-section">
+                    <h3>1. Uso de Variáveis de Ambiente (.env)</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> Variáveis de ambiente são arquivos que armazenam informações sensíveis (como tokens de API, configurações de acesso) fora do código-fonte.</p>
+                        <p><strong>Por que usar?</strong> Segurança, facilidade de configuração e portabilidade entre ambientes.</p>
+                    </div>
+                    
+                    <p><strong>Exemplo de arquivo .env:</strong></p>
+                    <pre><code>GITHUB_TOKEN=seu_token_aqui
+GITHUB_API_URL=https://api.github.com</code></pre>
+                    
+                    <p><strong>Como carregar no Python:</strong></p>
+                    <pre><code>import os
+from dotenv import load_dotenv
+
+load_dotenv()
+github_token = os.getenv('GITHUB_TOKEN')</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>2. Camada Bronze - Consumo de Dados Brutos</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> A camada Bronze coleta dados brutos diretamente da API do GitHub sem transformações, mantendo a estrutura original.</p>
+                        <p><strong>Para que serve?</strong> Capturar dados em tempo real da fonte original e preservar integridade dos dados para posterior reprocessamento.</p>
+                    </div>
+                    
+                    <pre><code>import requests
+from datetime import datetime
+
+class GitHubBronzeLayer:
+    def __init__(self, token):
+        self.token = token
+        self.headers = {'Authorization': f'token {token}'}
+    
+    def fetch_raw_commits(self, owner, repo):
+        """Busca dados brutos de commits diretamente da API"""
+        url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+        response = requests.get(url, headers=self.headers)
+        if response.status_code == 200:
+            return {
+                'data': response.json(),
+                'fetched_at': datetime.utcnow().isoformat(),
+                'source': 'github_api'
+            }
+        return None</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>3. Camada Silver - Limpeza e Estruturação</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> A camada Silver processa os dados brutos da Bronze, aplicando limpeza, validação e estruturação.</p>
+                        <p><strong>Para que serve?</strong> Limpar e validar dados inconsistentes, padronizar formatos e estruturas, aplicar regras de negócio básicas.</p>
+                    </div>
+                    
+                    <pre><code>from dataclasses import dataclass
+from typing import List
+
+@dataclass
+class CleanCommit:
+    sha: str
+    author: str
+    date: datetime
+    message: str
+    additions: int
+    deletions: int
+
+class GitHubSilverLayer:
+    def clean_commits(self, bronze_data: dict) -> List[CleanCommit]:
+        """Limpa e estrutura dados de commits da camada Bronze"""
+        commits = []
+        
+        for commit_data in bronze_data.get('data', []):
+            try:
+                clean_commit = CleanCommit(
+                    sha=commit_data['sha'][:7],
+                    author=commit_data['commit']['author']['name'],
+                    date=datetime.fromisoformat(
+                        commit_data['commit']['author']['date'].replace('Z', '+00:00')
+                    ),
+                    message=commit_data['commit']['message'].split('\n')[0],
+                    additions=commit_data.get('stats', {}).get('additions', 0),
+                    deletions=commit_data.get('stats', {}).get('deletions', 0)
+                )
+                commits.append(clean_commit)
+            except (KeyError, ValueError) as e:
+                print(f"Erro ao processar commit: {e}")
+                continue
+        
+        return commits</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>4. Camada Gold - Métricas e Insights</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> A camada Gold agrega dados da Silver em métricas de alto nível e insights de negócio.</p>
+                        <p><strong>Para que serve?</strong> Calcular KPIs e métricas de produtividade, gerar insights para tomada de decisão, otimizar dados para apresentação no frontend.</p>
+                    </div>
+                    
+                    <pre><code>from collections import defaultdict
+from dataclasses import dataclass
+
+@dataclass
+class ProductivityMetrics:
+    total_commits: int
+    active_contributors: int
+    average_commits_per_day: float
+    top_contributors: List[tuple]
+    commit_frequency: dict
+
+class GitHubGoldLayer:
+    def calculate_productivity_metrics(self, silver_commits: List[CleanCommit]):
+        """Calcula métricas de produtividade da camada Silver"""
+        
+        contributor_commits = defaultdict(int)
+        daily_commits = defaultdict(int)
+        
+        for commit in silver_commits:
+            contributor_commits[commit.author] += 1
+            day = commit.date.date()
+            daily_commits[day] += 1
+        
+        top_contributors = sorted(
+            contributor_commits.items(), 
+            key=lambda x: x[1], 
+            reverse=True
+        )[:5]
+        
+        total_days = len(daily_commits) if daily_commits else 1
+        avg_commits_per_day = len(silver_commits) / total_days
+        
+        return ProductivityMetrics(
+            total_commits=len(silver_commits),
+            active_contributors=len(contributor_commits),
+            average_commits_per_day=round(avg_commits_per_day, 2),
+            top_contributors=top_contributors,
+            commit_frequency=dict(daily_commits)
+        )</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>5. ViewSet para Exposição de Dados</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> ViewSets controlam o acesso aos dados processados através de endpoints REST.</p>
+                        <p><strong>Para que serve?</strong> Expor métricas da camada Gold via API e orquestrar o pipeline Bronze → Silver → Gold em tempo real.</p>
+                    </div>
+                    
+                    <pre><code>from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.decorators import action
+
+class GitHubMetricsViewSet(viewsets.ViewSet):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.bronze_layer = GitHubBronzeLayer(os.getenv('GITHUB_TOKEN'))
+        self.silver_layer = GitHubSilverLayer()
+        self.gold_layer = GitHubGoldLayer()
+    
+    @action(detail=False, methods=['get'])
+    def productivity_metrics(self, request):
+        """Endpoint para obter métricas de produtividade em tempo real"""
+        owner = request.query_params.get('owner')
+        repo = request.query_params.get('repo')
+        
+        # Pipeline Bronze → Silver → Gold
+        bronze_data = self.bronze_layer.fetch_raw_commits(owner, repo)
+        silver_commits = self.silver_layer.clean_commits(bronze_data)
+        gold_metrics = self.gold_layer.calculate_productivity_metrics(silver_commits)
+        
+        return Response(gold_metrics)</code></pre>
+                </div>
+
+                <div class="example-section">
+                    <h3>6. Exemplo de Uso no Frontend</h3>
+                    <div class="concept-explanation">
+                        <p><strong>O que é?</strong> Como o frontend pode consumir as métricas processadas pela arquitetura medalhão.</p>
+                        <p><strong>Para que serve?</strong> Apresentar dados de produtividade em tempo real e permitir análise visual das métricas.</p>
+                    </div>
+                    
+                    <p><strong>Exemplo de chamada:</strong></p>
+                    <pre><code>// Frontend consumindo métricas de produtividade
+fetch('/api/github-metrics/productivity_metrics/?owner=microsoft&repo=vscode')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Métricas de produtividade:', data);
+    // Exibir métricas no dashboard
+  });</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

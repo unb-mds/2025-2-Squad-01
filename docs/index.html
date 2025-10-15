@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --gray: #7f8c8d;
+            --dark: #2c3e50;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        nav {
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: var(--bg);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card li {
+            margin: 0.5rem 0;
+        }
+        .card a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .card a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentação - CoOps</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="index.html">Documentação</a></li>
+            <li><a href="gestao/equipe.html">Equipe</a></li>
+            <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Documentação do Projeto CoOps</h1>
+            <p>Bem-vindo à documentação técnica do projeto CoOps! Aqui você encontrará todas as informações necessárias para compreender, contribuir e utilizar nossa plataforma.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Visão Geral</h3>
+                    <ul>
+                        <li><a href="gestao/requisitos.html">Requisitos</a></li>
+                        <li><a href="arquitetura/">Arquitetura</a></li>
+                        <li><a href="benchmarking/levantamento-inicial.html">Levantamento Inicial</a></li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Desenvolvimento</h3>
+                    <ul>
+                        <li><a href="frontend/frontend.html">Frontend</a></li>
+                        <li><a href="backend/backend.html">Backend</a></li>
+                        <li><a href="api/api.html">Integração com GitHub API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Gestão do Projeto</h3>
+                    <ul>
+                        <li><a href="atas/atas.html">Atas de Reunião</a></li>
+                        <li><a href="gestao/scrum.html">Metodologia Scrum</a></li>
+                        <li><a href="benchmarking/benchmarking.html">Benchmarking</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Links Importantes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Repositório</h3>
+                    <p><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub do Projeto</a></p>
+                </div>
+                
+                <div class="card">
+                    <h3>Design</h3>
+                    <p><a href="#">Figma - Protótipos</a></p>
+                </div>
+                
+                <div class="card">
+                    <h3>Equipe</h3>
+                    <p><a href="gestao/equipe.html">Conheça o Squad 01</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+name: Bronze Layer - Data Extraction
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run daily at 5 AM UTC
+    - cron: '0 5 * * *'
+    
+permissions:
+  contents: write
+
+jobs:
+  extract-bronze-data:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      bronze-completed: ${{ steps.extraction.outputs.completed }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas numpy
+
+      - name: Verify organization is valid
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OWNER=${GITHUB_REPOSITORY_OWNER:-${{ github.repository_owner }}}
+          
+          TYPE=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/users/$OWNER | jq -r .type)
+          
+          if [ "$TYPE" = "Organization" ]; then
+            echo "[SUCCESS] Valid organization: $OWNER"
+          else
+            echo "[ERROR]: $OWNER is not an organization (type: $TYPE)"
+            exit 1
+          fi
+
+      - name: Create data directories
+        run: |
+          mkdir -p data/bronze data/silver data/gold
+          mkdir -p cache
+          echo "[INFO]Created data layer directories"
+
+      - name: Extract Bronze layer data
+        id: extraction
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "[INFO] Starting Bronze layer extraction..."
+          python src/bronze_extract.py --token "$GITHUB_TOKEN" --org "${GITHUB_REPOSITORY_OWNER}" --cache
+          
+          # Check if files were generated
+          if [ "$(find data/bronze -name '*.json' | wc -l)" -gt 0 ]; then
+            echo "[SUCCESS] Bronze extraction completed successfully"
+            echo "completed=true" >> $GITHUB_OUTPUT
+          else
+            echo "[ERROR] No files generated in bronze layer"
+            echo "completed=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Generate data registry
+        if: steps.extraction.outputs.completed == 'true'
+        run: |
+          echo "[INFO] Generating data registry..."
+          python src/registry_manager.py
+
+      - name: List generated files
+        if: steps.extraction.outputs.completed == 'true'
+        run: |
+          echo "[INFO] Bronze layer files generated:"
+          find data/bronze -name '*.json' -type f | sort | while read file; do
+            size=$(du -h "$file" | cut -f1)
+            echo "  - $file ($size)"
+          done
+
+      - name: Commit and push Bronze data
+        if: steps.extraction.outputs.completed == 'true' && !env.ACT
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add data/bronze/ data/master_registry.json data/data_catalog.json
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "[INFO] [Bronze] Update extracted GitHub metrics data
+            
+            - Extracted organization data from GitHub API
+            - Generated $(find data/bronze -name '*.json' | wc -l) bronze layer files
+            - Updated data registry and catalog
+            - Triggered by: ${{ github.event_name }}"
+            
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+            git push
+          else
+            echo "[INFO] No changes to commit in Bronze layer"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  trigger-silver:
+    needs: extract-bronze-data
+    if: needs.extract-bronze-data.outputs.bronze-completed == 'true'
+    uses: ./.github/workflows/silver-process.yaml
+    secrets: inherit
