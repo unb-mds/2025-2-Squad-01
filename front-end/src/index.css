@@ -1,0 +1,478 @@
+/* Tailwind v4 import (base, components e utilities) */
+@import "tailwindcss";
+
+/* Estilos Globais */
+:root {
+  --background: #1a1a1a;
+  --foreground: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --foreground: #e0e0e0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Merriweather', serif; 
+}
+
+/* Título do sidebar */
+.titulo {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Scrollbar customizado */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(71, 85, 105, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Animações adicionais para a nova página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDelayed {
+  0%, 20% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDelayed2 {
+  0%, 40% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDelayed3 {
+  0%, 60% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fade-in-delayed {
+  animation: fadeInDelayed 1.2s ease-out forwards;
+}
+.animate-fade-in-delayed-2 {
+  animation: fadeInDelayed2 1.6s ease-out forwards;
+}
+
+.animate-fade-in-delayed-3 {
+  animation: fadeInDelayed3 2.7s ease-out forwards;
+}
+
+/* Estilos de Força Bruta para Botões da Home */
+.botao-principal, .botao-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.botao-principal {
+  background-color: #2563eb;
+}
+.botao-principal:hover {
+  background-color: #3b82f6;
+}
+.botao-secundario {
+  background-color: #4b5563;
+}
+.botao-secundario:hover {
+  background-color: #6b7280;
+}
+
+/* Estilos de Força Bruta para o Layout da Home */
+@media (min-width: 1024px) {
+  .container-principal {
+    display: grid;
+    grid-template-columns: minmax(150px, 450px) 1fr; /* Primeira entre 200-400px, segunda pega o resto */
+    padding-left: 0rem;
+    padding-top: 0rem;
+    text-align: left;
+    align-items: top;
+    gap: 2rem; /* Reduzido de 1rem para 0.5rem */
+  }
+} 
+@media (min-width: 640px) {
+  .container-botoes {
+    flex-direction: row;
+  }
+}
+.container-botoes {
+  padding-top: 1rem;
+  gap: 0.5rem; /* Reduzido de 1rem para 0.5rem */
+}
+
+/* Estilos para o gráfico da página principal */
+.grafico-container {
+  display: flex;
+  min-height: 400px;
+}
+
+.grafico-principal {
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+}
+
+
+
+/* Força o tamanho do título principal da home */
+.container-principal h1 {
+  font-size: 4rem; /* text-9xl = 128px = 8rem */
+}
+.container-principal h2 {
+  padding-top: 1rem;
+  font-size: 1.8rem; /* text-9xl = 128px = 8rem */
+}
+
+/* =============================================== */
+/* ESTILOS FINAIS COMPLETOS PARA DOCS              */
+/* =============================================== */
+
+.doc-page {
+  & .space-y-16 > * + * {
+    margin-top: 4rem;
+  }
+}
+
+.link-voltar {
+  display: inline-flex;
+  align-items: center;
+  color: #60a5fa;
+  margin-bottom: 2rem;
+  transition: color 150ms;
+  text-decoration: none;
+}
+.link-voltar:hover {
+  color: #93c5fd;
+}
+
+.doc-page h1 {
+  font-size: 3.75rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #2563eb;
+  font-family: 'Merriweather', serif;
+}
+
+.doc-page .text-xl {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.doc-nav a {
+  padding: 0.5rem 1rem;
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  border-radius: 0.5rem;
+  transition: background-color 150ms;
+  text-decoration: none;
+}
+
+.doc-nav a:hover {
+  background-color: rgba(37, 99, 235, 0.3);
+}
+
+.doc-section h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.doc-card {
+  background-color: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.doc-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.75;
+}
+
+#team .grid { display: grid; }
+#team .gap-6 { gap: 1.5rem; }
+@media (min-width: 768px) {
+  #team .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+#team .space-y-3 > * + * { margin-top: 0.75rem; }
+#team .flex { display: flex; }
+#team .items-center { align-items: center; }
+#team .space-x-3 > * + * { margin-left: 0.75rem; }
+#team .w-3 { width: 0.75rem; }
+#team .h-3 { height: 0.75rem; }
+#team .rounded-full { border-radius: 9999px; }
+#team .bg-blue-500 { background-color: #3b82f6; }
+#team .bg-green-500 { background-color: #22c55e; }
+#team .bg-purple-500 { background-color: #a855f7; }
+#team .font-semibold { font-weight: 600; }
+#team .text-blue-400 { color: #60a5fa; }
+#team .text-green-400 { color: #4ade80; }
+#team .text-purple-400 { color: #c084fc; }
+#team .ml-6 { margin-left: 1.5rem; }
+#team .mt-1 { margin-top: 0.25rem; }
+#team .text-white\/70 { color: rgba(255, 255, 255, 0.7); }
+
+#tech .grid { display: grid; gap: 1.5rem; }
+@media (min-width: 768px) {
+  #tech .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  #tech .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.tech-card {
+  background-color: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-left-width: 4px;
+  transition: all 150ms;
+}
+.tech-card:hover { transform: scale(1.05); }
+.tech-card h3 { color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.tech-card p { color: rgba(255, 255, 255, 0.7); }
+.border-l-yellow-500 { border-left-color: #eab308; }
+.border-l-blue-500 { border-left-color: #3b82f6; }
+.border-l-orange-500 { border-left-color: #f97316; }
+.border-l-gray-500 { border-left-color: #6b7280; }
+.border-l-pink-500 { border-left-color: #ec4899; }
+.border-l-cyan-500 { border-left-color: #06b6d4; }
+
+.arch-card {
+  background-color: rgba(51, 65, 85, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.arch-card h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #60a5fa;
+}
+.arch-card p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.arch-card:nth-child(2) h4 { color: #4ade80; }
+.arch-card:nth-child(3) h4 { color: #c084fc; }
+
+.figma-embed-container {
+  position: relative;
+  width: 100%;
+  background-color: rgba(15, 23, 42, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  overflow: hidden;
+}
+.figma-embed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(51, 65, 85, 0.5);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.5);
+}
+.figma-embed-header span {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.figma-embed-header a {
+  font-size: 0.875rem;
+  color: #60a5fa;
+  text-decoration: underline;
+}
+.figma-embed-header a:hover { color: #93c5fd; }
+.figma-embed-iframe-wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}
+.figma-embed-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.botao-final {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.375rem;
+  background-image: linear-gradient(to right, #2563eb, #3b82f6);
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  transition: all 150ms;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+.botao-final:hover {
+  background-image: linear-gradient(to right, #3b82f6, #60a5fa);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+
+/* Centraliza e diminui a largura de todo o conteúdo */
+.doc-page > .relative.mx-auto {
+  max-width: 80ch; /* Uma largura baseada em caracteres, boa para leitura */
+}
+
+/* Ajusta o grid dentro da seção de arquitetura para corresponder ao original */
+#arch .grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #arch .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Diminui um pouco o tamanho do embed do Figma/Protótipo */
+#stories .figma-embed-container,
+#prototypes .figma-embed-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =============================================== */
+/* ESTILOS PARA GRÁFICOS D3 NA PÁGINA DE COMMITS  */
+/* =============================================== */
+
+/* Estilos para o SVG do histograma */
+svg[aria-label="Histograma"] text {
+  fill: #e2e8f0 !important;
+  font-size: 12px;
+}
+
+svg[aria-label="Histograma"] line,
+svg[aria-label="Histograma"] path {
+  stroke: #475569 !important;
+}
+
+svg[aria-label="Histograma"] rect {
+  fill: #3b82f6 !important;
+}
+
+/* Estilos para o SVG do gráfico de pizza */
+svg[aria-label="Gráfico de pizza"] path {
+  stroke: #1e293b !important;
+  stroke-width: 2px;
+}
+
+/* Garantir que variável CSS do primary funcione */
+:root {
+  --color-primary: #3b82f6;
+}
+
+/* Estilos adicionais para garantir layout correto */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* Garantir que gradientes funcionem */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-slate-950 {
+  --tw-gradient-from: #020617;
+  --tw-gradient-to: rgb(2 6 23 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-slate-900 {
+  --tw-gradient-to: rgb(15 23 42 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #0f172a, var(--tw-gradient-to);
+}
+
+.to-slate-950 {
+  --tw-gradient-to: #020617;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/* Garantir backdrop blur */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}

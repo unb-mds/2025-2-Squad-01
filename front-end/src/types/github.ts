@@ -20,7 +20,6 @@ export type RepoCommitSummary = {
 };
 
 export type GithubSummaryResponse = {
-  org: string;
   generatedAt: string;
   repoCount: number;
   totalCommits: number;
