@@ -35,7 +35,7 @@ export default function PaginaPrincipal() {
                     to="/commits" 
                     className="botao-principal"
                   >
-                    Ver Métricas de Commits
+                    Ver Métricas
                   </Link>
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200">
@@ -147,7 +147,7 @@ export default function PaginaPrincipal() {
                   className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }}
                 />
                 {/* Pontos da linha */}
-                <circle className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }} cx="35" cy="205" r="5" fill="#ffffffff" />
+                <circle className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }} cx="35" cy="205" r="5" fill="#ffffffff " />
                 <circle className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }} cx="135" cy="115" r="5" fill="#ffffffff" />
                 <circle className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }} cx="235" cy="35" r="5" fill="#ffffffff" />
                 <circle className="animate-fade-in-delayed-3" style={{ animationDelay: '480ms' }} cx="335" cy="185" r="5" fill="#ffffffff" />

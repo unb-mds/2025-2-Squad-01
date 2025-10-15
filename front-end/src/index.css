@@ -86,8 +86,9 @@ body {
 @media (min-width: 1024px) {
   .container-principal {
     display: grid;
-    grid-template-columns: minmax(200px, 400px) 1fr; /* Primeira entre 200-400px, segunda pega o resto */
-    padding-left: 3rem;
+    grid-template-columns: minmax(150px, 450px) 1fr; /* Primeira entre 200-400px, segunda pega o resto */
+    padding-left: 6.5rem;
+    padding-top: 2rem;
     text-align: left;
     align-items: center;
     gap: 0.5rem; /* Reduzido de 1rem para 0.5rem */
@@ -99,17 +100,20 @@ body {
   }
 }
 .container-botoes {
+  padding-top: 1rem;
   gap: 0.5rem; /* Reduzido de 1rem para 0.5rem */
 }
 
 /* Estilos para o gráfico da página principal */
 .grafico-container {
+  display: flex;
   min-height: 400px;
 }
 
 .grafico-principal {
+  padding-top: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 950px;
   height: auto;
 }
 
@@ -118,6 +122,10 @@ body {
 /* Força o tamanho do título principal da home */
 .container-principal h1 {
   font-size: 4rem; /* text-9xl = 128px = 8rem */
+}
+.container-principal h2 {
+  padding-top: 4rem;
+  font-size: 1.8rem; /* text-9xl = 128px = 8rem */
 }
 
 /* =============================================== */
