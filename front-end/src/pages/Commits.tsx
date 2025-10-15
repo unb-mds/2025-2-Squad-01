@@ -1,5 +1,5 @@
 "use client";
-
+import { Utils} from './Utils';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   select,
@@ -12,30 +12,23 @@ import {
   arc as d3Arc,
   scaleOrdinal,
   schemeTableau10,
+  schemeBlues,
+  schemeGreens,
+  schemeSpectral
 } from 'd3';
 import type { PieArcDatum } from 'd3';
 import type {
-  RepoCommitSummary,
-  GithubSummaryResponse,
   HistogramDatum,
   PieDatum,
-  AggregatedCommit,
 } from '../types';
+import type {
+  ProcessedActivityResponse,
+  RepoActivitySummary,
+  ProcessedActivity,
+} from './Utils';
 
-// Types from the raw JSON file in data/bronze/commits_all.json
-// We only use the fields we need.
- type RawCommit = {
-  sha: string;
-  html_url: string;
-  commit: {
-    message: string;
-    author: { name: string; email?: string; date: string };
-    committer: { name: string; email?: string; date: string };
-  };
-  author: { login: string; html_url: string } | null;
-  repo_name: string;
-  _metadata?: unknown;
-};
+// Removido - agora usamos ActivityData do Utils
+
 
 function Histogram({ data }: { data: HistogramDatum[] }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -144,13 +137,13 @@ function PieChart({ data }: { data: PieDatum[] }) {
       return;
     }
 
-    const width = 320;
-    const height = 320;
+    const width = 240;
+    const height = 240;
     const radius = Math.min(width, height) / 2 - 6;
 
     const color = scaleOrdinal<string, string>()
       .domain(data.map((d) => d.label))
-      .range([...schemeTableau10, ...schemeTableau10]);
+      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
 
     svg.attr('viewBox', `0 0 ${width} ${height}`);
     const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
@@ -170,62 +163,13 @@ function PieChart({ data }: { data: PieDatum[] }) {
       .text((d) => `${d.data.label}: ${d.data.value} commit(s)`);
   }, [data]);
 
-  return <svg ref={svgRef} className="w-full h-[320px]" role="img" aria-label="Gráfico de pizza" />;
+  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza" />;
 }
 
-function processRawCommitsData(rawCommits: RawCommit[]): GithubSummaryResponse {
-  // Group commits by repository
-  const commitsByRepo = new Map<string, RawCommit[]>();
-
-  for (const commit of rawCommits) {
-    // Skip metadata entries
-    if ('_metadata' in commit) continue;
-    const repoName = commit.repo_name;
-    if (!repoName) continue;
-    if (!commitsByRepo.has(repoName)) {
-      commitsByRepo.set(repoName, []);
-    }
-    commitsByRepo.get(repoName)!.push(commit);
-  }
-
-  // Convert to our expected format
-  const repositories: RepoCommitSummary[] = [];
-  let repoId = 1;
-  for (const [repoName, repoCommits] of commitsByRepo.entries()) {
-    const aggregatedCommits: AggregatedCommit[] = repoCommits.map((commit) => ({
-      sha: commit.sha,
-      url: commit.html_url,
-      message: commit.commit.message,
-      author: {
-        login: commit.author?.login || commit.commit.author.email || 'unknown',
-        displayName: commit.commit.author.name || commit.author?.login || 'Desconhecido',
-        profileUrl: commit.author?.html_url,
-      },
-      committedAt: commit.commit.author.date,
-    }));
-
-    repositories.push({
-      id: repoId++,
-      name: repoName,
-      fullName: `unb-mds/${repoName}`,
-      url: `https://github.com/unb-mds/${repoName}`,
-      defaultBranch: 'main',
-      commits: aggregatedCommits,
-    });
-  }
-
-  const totalCommits = repositories.reduce((sum, repo) => sum + repo.commits.length, 0);
-  return {
-    org: 'unb-mds',
-    generatedAt: new Date().toISOString(),
-    repoCount: repositories.length,
-    totalCommits,
-    repositories,
-  };
-}
+// Função removida - agora usamos Utils.processActivityData()
 
 export default function CommitsPage() {
-  const [data, setData] = useState<GithubSummaryResponse | null>(null);
+  const [data, setData] = useState<ProcessedActivityResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedRepoId, setSelectedRepoId] = useState<number | 'all'>('all');
@@ -237,14 +181,7 @@ export default function CommitsPage() {
     async function fetchData() {
       try {
         setLoading(true);
-        const response = await fetch(
-          'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/%2353-remodelacao-front-end/data/bronze/commits_all.json'
-        );
-        if (!response.ok) {
-          throw new Error(`Erro ao buscar dados: ${response.status} ${response.statusText}`);
-        }
-        const rawCommits = await response.json();
-        const processedData = processRawCommitsData(rawCommits);
+        const processedData = await Utils.fetchAndProcessActivityData("commit");
         if (!cancelled) {
           setData(processedData);
           setSelectedRepoId('all');
@@ -264,18 +201,15 @@ export default function CommitsPage() {
     };
   }, []);
 
-  const repositories = useMemo<RepoCommitSummary[]>(() => data?.repositories ?? [], [data]);
+  const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 
-  const selectedRepo = useMemo<RepoCommitSummary | null>(() => {
+  const selectedRepo = useMemo<RepoActivitySummary | null>(() => {
     if (selectedRepoId === 'all') {
       return {
         id: -1,
         name: 'Todos os repositórios',
-        fullName: 'Todos os repositórios',
-        url: '#',
-        defaultBranch: 'main',
-        commits: repositories.flatMap((repo) => repo.commits),
-      } as RepoCommitSummary;
+        activities: repositories.flatMap((repo) => repo.activities),
+      } as RepoActivitySummary;
     }
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, selectedRepoId]);
@@ -290,8 +224,8 @@ export default function CommitsPage() {
   const histogramData = useMemo<HistogramDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const commit of selectedRepo.commits) {
-      const day = commit.committedAt.slice(0, 10);
+    for (const activity of selectedRepo.activities) {
+      const day = activity.date.slice(0, 10);
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
@@ -302,15 +236,28 @@ export default function CommitsPage() {
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const commit of selectedRepo.commits) {
-      const label = commit.author.displayName || commit.author.login || 'Desconhecido';
+    for (const activity of selectedRepo.activities) {
+      const label = activity.user.displayName || activity.user.login || 'Desconhecido';
       counts.set(label, (counts.get(label) ?? 0) + 1);
     }
     const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
     const top = sorted.slice(0, 8);
     const restTotal = sorted.slice(8).reduce((acc, [, value]) => acc + value, 0);
-    const result = top.map(([label, value]) => ({ label, value }));
-    if (restTotal > 0) result.push({ label: 'Outros', value: restTotal });
+
+    const colorScale = scaleOrdinal<string, string>()
+      .domain([...top.map(([label]) => label), 'Outros'])
+      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
+
+    const result = top.map(([label, value]) => ({
+      label,
+      value,
+      color: colorScale(label)
+    }));
+    if (restTotal > 0) result.push({ 
+      label: 'Outros', 
+      value: restTotal, 
+      color: colorScale('Outros') 
+    });
     return result;
   }, [selectedRepo]);
 
@@ -318,13 +265,14 @@ export default function CommitsPage() {
     <div className="min-h-screen flex">
       {/* Sidebar */}
       <aside
-        className={`h-screen bg-slate-900/90 border-r border-slate-800 flex-shrink-0 transition-all duration-300 ease-in-out ${
-          isSidebarOpen ? 'w-64' : 'w-16'
+        className={`h-screen border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out ${
+          isSidebarOpen ? 'w-48' : 'w-16'
         }`}
+        style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
       >
         <div className="h-full flex flex-col">
           {/* Brand */}
-          <div className="p-4 border-b border-slate-800 flex items-center gap-3">
+          <div className="p-4 border-b-2 flex items-center gap-3" style={{ borderBottomColor: '#333333' }}>
             <span className="text-xl">📊</span>
             {isSidebarOpen && (
               <div>
@@ -337,33 +285,44 @@ export default function CommitsPage() {
           {/* Nav */}
           <nav className="flex-1 p-2 space-y-1 overflow-y-auto">
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition-colors`}
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               <span>📊</span>
               {isSidebarOpen && <span className="text-sm">Issues</span>}
             </button>
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-blue-300 bg-blue-600/20 hover:bg-blue-600/25 border-l-2 border-blue-500 transition-colors ${
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-blue-300 border-l-2 border-blue-500 transition-colors ${
                 isSidebarOpen ? '' : 'border-l-0'
               }`}
+              style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.25)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.2)'}
             >
               <span>💻</span>
               {isSidebarOpen && <span className="text-sm">Commits</span>}
             </button>
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition-colors`}
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               <span>🔀</span>
               {isSidebarOpen && <span className="text-sm">Pull Requests</span>}
             </button>
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition-colors`}
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               <span>🤝</span>
               {isSidebarOpen && <span className="text-sm">Colaboração</span>}
             </button>
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition-colors`}
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-300 hover:text-white transition-colors`}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               <span>🏗️</span>
               {isSidebarOpen && <span className="text-sm">Estrutura</span>}
@@ -371,9 +330,11 @@ export default function CommitsPage() {
           </nav>
 
           {/* Footer */}
-          <div className="p-3 border-t border-slate-800 space-y-2">
+          <div className="p-3 border-t-2 space-y-2" style={{ borderTopColor: '#333333' }}>
             <button
-              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-400 hover:bg-slate-800 hover:text-white transition-colors`}
+              className={`w-full flex items-center ${isSidebarOpen ? 'justify-start gap-3' : 'justify-center'} px-3 py-2 rounded-md text-slate-400 hover:text-white transition-colors`}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#333333'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               <span>🏠</span>
               {isSidebarOpen && <span className="text-sm">Home</span>}
@@ -381,7 +342,10 @@ export default function CommitsPage() {
             <div className="flex justify-center">
               <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="w-10 h-10 flex items-center justify-center rounded-md bg-slate-800 hover:bg-slate-700"
+                className="w-10 h-10 flex items-center justify-center rounded-md transition-colors"
+                style={{ backgroundColor: '#333333' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#444444'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#333333'}
                 aria-label={isSidebarOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
                 title={isSidebarOpen ? 'Recolher' : 'Expandir'}
               >
@@ -400,7 +364,7 @@ export default function CommitsPage() {
       </aside>
 
       {/* Conteúdo principal */}
-      <main className="flex-1 overflow-y-auto bg-slate-950">
+      <main className="flex-1 overflow-y-auto" style={{ backgroundColor: '#181818' }}>
         <div className="max-w-7xl mx-auto p-8">
           {/* Header */}
           <div className="mb-8">
@@ -410,8 +374,8 @@ export default function CommitsPage() {
                 {selectedRepo && (
                   <p className="text-slate-400 text-sm mt-2">
                     {selectedRepo.name === 'Todos os repositórios'
-                      ? `${repositories.length} repositório(s) • ${selectedRepo.commits.length} commits`
-                      : `${selectedRepo.name} • ${selectedRepo.commits.length} commits`}
+                      ? `${repositories.length} repositório(s) • ${selectedRepo.activities.length} atividades`
+                      : `${selectedRepo.name} • ${selectedRepo.activities.length} atividades`}
                   </p>
                 )}
               </div>
@@ -422,15 +386,16 @@ export default function CommitsPage() {
                 onChange={(e) =>
                   setSelectedRepoId(e.target.value === 'all' ? 'all' : Number(e.target.value))
                 }
-                className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-white"
+                className="px-4 py-2 border rounded text-white"
+                style={{ backgroundColor: '#333333', borderColor: '#444444' }}
                 disabled={loading}
               >
                 <option value="all">
-                  Todos os repositórios ({repositories.flatMap((r) => r.commits).length})
+                  Todos os repositórios ({repositories.flatMap((r) => r.activities).length})
                 </option>
                 {repositories.map((repo) => (
                   <option key={repo.id} value={repo.id}>
-                    {repo.name} ({repo.commits.length})
+                    {repo.name} ({repo.activities.length})
                   </option>
                 ))}
               </select>
@@ -440,8 +405,8 @@ export default function CommitsPage() {
           {/* Grid de gráficos */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Timeline de Commits */}
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
-              <p className="text-left font-bold text-white mb-4">Timeline de Commits</p>
+            <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+              <p className="text-left p-6 font-bold text-white mb-4">Timeline de Commits</p>
               {loading ? (
                 <div className="h-[300px] flex items-center justify-center">
                   <div className="text-slate-400">Carregando...</div>
@@ -456,28 +421,35 @@ export default function CommitsPage() {
             </div>
 
             {/* Contribuidores */}
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
               <h3 className="text-lg font-bold text-white mb-4">Contribuidores</h3>
               {loading ? (
-                <div className="h-[240px] flex items-center justify-center">
+                <div className="h-[140px] flex items-center justify-center">
                   <div className="text-slate-400">Carregando...</div>
                 </div>
               ) : error ? (
-                <div className="h-[240px] flex items-center justify-center">
+                <div className="h-[140px] flex items-center justify-center">
                   <p className="text-red-400">{error}</p>
                 </div>
               ) : (
                 <>
-                  <div className="flex items-center justify-center mb-4">
+                  <div className="flex items-center justify-center mb-2">
                     <PieChart data={pieData} />
                   </div>
-                  <div className="max-h-[200px] overflow-y-auto space-y-2">
+                  <div className="max-h-[180px] overflow-y-auto space-y-2">
                     {pieData.map((item) => (
                       <div
                         key={item.label}
-                        className="flex items-center justify-between p-2 bg-slate-700/30 rounded"
+                        className="flex items-center justify-between p-2 rounded"
+                        style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
                       >
-                        <span className="text-sm text-slate-300">{item.label}</span>
+                        <div className="flex items-center gap-2">
+                          <div 
+                            className="w-3 h-3 rounded-full" 
+                            style={{ backgroundColor: item.color }}
+                          ></div>
+                          <span className="text-sm text-slate-300">{item.label}</span>
+                        </div>
                         <span className="text-xs font-bold text-slate-200">{item.value}</span>
                       </div>
                     ))}

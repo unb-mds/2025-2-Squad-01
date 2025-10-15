@@ -6,4 +6,5 @@ export type HistogramDatum = {
 export type PieDatum = {
   label: string;
   value: number;
+  color?: string;
 };
