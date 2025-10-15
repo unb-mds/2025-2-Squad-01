@@ -126,11 +126,11 @@ body {
   .container-principal {
     display: grid;
     grid-template-columns: minmax(150px, 450px) 1fr; /* Primeira entre 200-400px, segunda pega o resto */
-    padding-left: 6.5rem;
-    padding-top: 2rem;
+    padding-left: 0rem;
+    padding-top: 0rem;
     text-align: left;
-    align-items: center;
-    gap: 0.5rem; /* Reduzido de 1rem para 0.5rem */
+    align-items: top;
+    gap: 2rem; /* Reduzido de 1rem para 0.5rem */
   }
 } 
 @media (min-width: 640px) {
@@ -163,7 +163,7 @@ body {
   font-size: 4rem; /* text-9xl = 128px = 8rem */
 }
 .container-principal h2 {
-  padding-top: 4rem;
+  padding-top: 1rem;
   font-size: 1.8rem; /* text-9xl = 128px = 8rem */
 }
 
