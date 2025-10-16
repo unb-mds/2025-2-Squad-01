@@ -24,7 +24,7 @@ export default function PaginaPrincipal() {
               <div className="container-botoes flex flex-col sm:flex-row gap-4">
                 <div className="hover:scale-105 transition-transform duration-200">
                   <Link 
-                    to="/commits" 
+                    to="/repos/commits" 
                     className="botao-principal"
                   >
                     Ver Métricas

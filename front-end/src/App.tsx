@@ -13,15 +13,15 @@ function App() {
       {/* Rota Inicial: O caminho "/" renderiza o componente da página principal */}
       <Route path="/" element={<PaginaPrincipal />} />
       <Route path="/home" element={<PaginaPrincipal />} />
-
+      <Route path="/repos" element={<Commits />} />
       {/* Rota de Commits */}
-      <Route path="/commits" element={<Commits />} />
+      <Route path="/repos/commits" element={<Commits />} />
 
       {/* Rota de Documentação */}
       <Route path="/documentacao" element={<Documentacao />} />
 
-      <Route path="/issues" element={<Issues />} />
-      <Route path="/pullrequests" element={<PullRequestsPage />} />
+      <Route path="/repos/issues" element={<Issues />} />
+      <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
     </Routes>
   );
 }
