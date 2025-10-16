@@ -1,5 +1,6 @@
 {
   "name": "meu-novo-app",
+  "homepage": "https://unb-mds.github.io/2025-2-Squad-01/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "d3": "^7.9.0",
