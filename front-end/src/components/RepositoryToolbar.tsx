@@ -22,8 +22,8 @@ const menuItems: MenuItem[] = [
   { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'commits', label: 'Commits', icon: '💻' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
-  { id: 'collaboration', label: 'Colaboração', icon: '🤝' },
-  { id: 'structure', label: 'Estrutura', icon: '🏗️' },
+  { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
+  { id: 'structure', label: 'Structure', icon: '🏗️' },
 ];
 
 export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate }: SidebarProps) {
@@ -53,18 +53,19 @@ export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate
 
   return (
     <aside
-      className="h-35 w-full border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out"
+      className="h-34.5 w-full flex-shrink-0 transition-all duration-300 ease-in-out"
       style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
     >
       <div className="h-32 flex flex-col">
         {/* Brand */}
-        <div className="pt-4 pl-5 pb-1.5 border-b-2 flex items-center gap-3" style={{ borderBottomColor: '#333333' }}>
+        <div className="pt-4 pl-5 pb-1  border-b-1 flex items-center gap-3" style={{ borderBottomColor: '#333333' }}>
           <span className="text-xl">📊</span>
           <div>
-            <h1 className="text-lg font-semibold text-white leading-tight">Repository Activities Metrics</h1>
-            <p className="mt-1 text-[15px] text-slate-400">Current Repository: {currentRepo}</p>
+            <h1 className="text-lg font-semibold text-white leading-tight">Repository Related Metrics</h1>
+            <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400">Current repository: {currentRepo}</p>
             
           </div>
+          {/* Repo Selector */}
           <select
             value={selectedRepoId}
             onChange={(e) => {
@@ -73,12 +74,12 @@ export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate
               next.set('repo', value);
               setSearchParams(next, { replace: true });
             }}
-            className="px-4 py-2 border rounded text-white"
+            className="ml-auto mr-3 mb-2 px-4 py-2 border rounded text-white"
             style={{ backgroundColor: '#333333', borderColor: '#444444' }}
             disabled={loading}
           >
             <option value="all">
-              Todos os repositórios ({repositories.flatMap((r) => r.activities).length})
+              All repositories ({repositories.flatMap((r) => r.activities).length})
             </option>
             {repositories.map((repo) => (
               <option key={repo.id} value={repo.id}>

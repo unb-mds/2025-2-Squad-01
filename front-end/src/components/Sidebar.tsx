@@ -36,25 +36,25 @@ export default function Sidebar({currentPage, onNavigate }: SidebarProps) {
 
   return (
     <aside
-      className={`h-screen border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out ${
-        isSidebarOpen ? 'w-48' : 'w-16'
+      className={`h-auto border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out ${
+        isSidebarOpen ? 'w-46' : 'w-16'
       }`}
       style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
     >
       <div className="h-full flex flex-col">
         {/* Brand */}
-        <div className="p-4 border-b-2 flex items-center gap-3" style={{ borderBottomColor: '#333333' }}>
+        <div className="h-18 flex items-center gap-3 px-4" style={{ borderBottomColor: '#333333', borderBottomWidth: '0px' }}
+        >
           <span className="text-xl">📊</span>
           {isSidebarOpen && (
             <div>
-              <h1 className="text-lg font-semibold text-white leading-tight">Metrics</h1>
-              <p className="text-[11px] text-slate-400">Analytics Dashboard</p>
+              <h1 className="text-lg font-semibold text-white leading-tight">CoOps</h1>
             </div>
           )}
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 p-2 space-y-1 overflow-y-auto">
+        <nav className="flex-1 p-1 space-y-1 overflow-y-auto">
           {menuItems.map((item) => {
             const isActive = currentPage === item.id;
             return (

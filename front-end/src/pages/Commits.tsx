@@ -45,7 +45,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', '#e2e8f0')
-        .text('Nenhum commit disponível para este repositório');
+  .text('No commits available for this repository');
       return;
     }
 
@@ -99,7 +99,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
       .attr('fill', '#e2e8f0')
       .attr('text-anchor', 'start')
       .attr('font-size', 12)
-      .text('Commits');
+  .text('Commits');
 
     svg
       .append('g')
@@ -133,7 +133,7 @@ function PieChart({ data }: { data: PieDatum[] }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', 'currentColor')
-        .text('Nenhum commit disponível para este repositório');
+  .text('No commits available for this repository');
       return;
     }
 
@@ -209,7 +209,7 @@ export default function CommitsPage() {
     if (selectedRepoId === 'all') {
       return {
         id: -1,
-        name: 'Todos os repositórios',
+  name: 'All repositories',
         activities: repositories.flatMap((repo) => repo.activities),
       } as RepoActivitySummary;
     }
@@ -242,7 +242,7 @@ export default function CommitsPage() {
     const restTotal = sorted.slice(8).reduce((acc, [, value]) => acc + value, 0);
 
     const colorScale = scaleOrdinal<string, string>()
-      .domain([...top.map(([label]) => label), 'Outros'])
+  .domain([...top.map(([label]) => label), 'Others'])
       .range([...schemeSpectral[3], ...schemeSpectral[11]]);
 
     const result = top.map(([label, value]) => ({
@@ -251,25 +251,25 @@ export default function CommitsPage() {
       color: colorScale(label)
     }));
     if (restTotal > 0) result.push({ 
-      label: 'Outros', 
+      label: 'Others', 
       value: restTotal, 
-      color: colorScale('Outros') 
+      color: colorScale('Others') 
     });
     return result;
   }, [selectedRepo]);
 
   return (
-    <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No Repository Selected"}>
+  <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No repository selected"}>
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-bold text-white">Análise de Commits</h2>
+            <h2 className="text-3xl font-bold text-white">Commits analysis</h2>
             {selectedRepo && (
               <p className="text-slate-400 text-sm mt-2">
-                {selectedRepo.name === 'Todos os repositórios'
-                  ? `${repositories.length} repositório(s) • ${selectedRepo.activities.length} atividades`
-                  : `${selectedRepo.name} • ${selectedRepo.activities.length} atividades`}
+                {selectedRepo.name === 'All repositories'
+                  ? `${repositories.length} repositories • ${selectedRepo.activities.length} activities`
+                  : `${selectedRepo.name} • ${selectedRepo.activities.length} commits`}
               </p>
             )}
           </div>
@@ -280,9 +280,9 @@ export default function CommitsPage() {
 
       {/* Grid de gráficos */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Timeline de Commits */}
+  {/* Commits timeline */}
         <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <p className="text-left p-6 font-bold text-white mb-4">Timeline de Commits</p>
+          <p className="text-left p-6 font-bold text-white mb-4">Commits timeline</p>
           {loading ? (
             <div className="h-[300px] flex items-center justify-center">
               <div className="text-slate-400">Carregando...</div>
@@ -298,10 +298,10 @@ export default function CommitsPage() {
 
         {/* Contribuidores */}
         <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <h3 className="text-lg font-bold text-white mb-4">Contribuidores</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Contributors</h3>
           {loading ? (
             <div className="h-[140px] flex items-center justify-center">
-              <div className="text-slate-400">Carregando...</div>
+              <div className="text-slate-400">Loading...</div>
             </div>
           ) : error ? (
             <div className="h-[140px] flex items-center justify-center">
