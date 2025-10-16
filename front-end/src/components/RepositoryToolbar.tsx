@@ -62,7 +62,7 @@ export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate
           <span className="text-xl">📊</span>
           <div>
             <h1 className="text-lg font-semibold text-white leading-tight">Repository Related Metrics</h1>
-            <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400">Current repository: {currentRepo}</p>
+            <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400">Currently Viewing: {currentRepo}</p>
             
           </div>
           {/* Repo Selector */}
