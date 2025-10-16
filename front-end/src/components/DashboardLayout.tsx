@@ -8,6 +8,7 @@ import type {
 interface DashboardLayoutProps {
   children: ReactNode;
   currentPage?: string;
+  currentSubPage?: string;
   onRepo?: boolean;
   currentRepo?: string;
   data?: ProcessedActivityResponse | null;
@@ -16,7 +17,8 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ 
   children, 
-  currentPage = 'commits', 
+  currentPage, 
+  currentSubPage,
   onRepo = true,
   currentRepo = "No Repository Selected",
   data = null,
@@ -26,7 +28,7 @@ export default function DashboardLayout({
     <div className="min-h-screen flex">
       <Sidebar currentPage={currentPage} onNavigate={onNavigate} />
       <div className="flex flex-col flex-1">
-        {onRepo && <RepoToolbar currentRepo={currentRepo} data={data} onNavigate={onNavigate} />}
+        {onRepo && <RepoToolbar currentRepo={currentRepo} currentPage={currentSubPage} data={data} onNavigate={onNavigate} />}
         {/* Conteúdo principal */}
         <main className="flex-1 overflow-y-auto" style={{ backgroundColor: '#181818' }}>
           <div className="max-w-7xl mx-auto p-8">

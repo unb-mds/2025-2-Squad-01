@@ -7,6 +7,7 @@ import type {
 
 interface SidebarProps {
   currentRepo?: string;
+  currentPage?: string;
   data?: ProcessedActivityResponse | null;
   onNavigate?: (page: string) => void;
 }
@@ -25,12 +26,12 @@ const menuItems: MenuItem[] = [
   { id: 'structure', label: 'Estrutura', icon: '🏗️' },
 ];
 
-export default function RepoToolbar({ currentRepo = "default-repo", data, onNavigate }: SidebarProps) {
+export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate }: SidebarProps) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleItemClick = (itemId: string) => {
-    navigate(`/${itemId}`);
+    navigate(`/repos/${itemId}`);
     console.log(`Navegando para: ${itemId}`);
   };
 
@@ -94,7 +95,7 @@ export default function RepoToolbar({ currentRepo = "default-repo", data, onNavi
         {/* Nav */}
         <nav className="flex-1 p-2 py-3 border-b-2" style={{ borderBottomColor: '#333333' }}>
           {menuItems.map((item) => {
-            const isActive = currentRepo === item.id;
+            const isActive = currentPage === item.id;
             return (
               <button
                 key={item.id}

@@ -259,7 +259,7 @@ export default function CommitsPage() {
   }, [selectedRepo]);
 
   return (
-    <DashboardLayout currentPage="repos/commits" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No Repository Selected"}>
+    <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No Repository Selected"}>
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">

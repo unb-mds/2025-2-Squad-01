@@ -13,7 +13,7 @@ function App() {
       {/* Rota Inicial: O caminho "/" renderiza o componente da página principal */}
       <Route path="/" element={<PaginaPrincipal />} />
       <Route path="/home" element={<PaginaPrincipal />} />
-
+      <Route path="/repos" element={<Commits />} />
       {/* Rota de Commits */}
       <Route path="/repos/commits" element={<Commits />} />
 

@@ -14,11 +14,11 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   { id: 'organization', label: 'Organization', icon: '📊' },
-  { id: 'repos/commits', label: 'Repositories', icon: '💻' },
+  { id: 'repos', label: 'Repositories', icon: '💻' },
 
 ];
 
-export default function Sidebar({ currentPage = 'commits', onNavigate }: SidebarProps) {
+export default function Sidebar({currentPage, onNavigate }: SidebarProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   
 
