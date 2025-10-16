@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Ensure assets resolve correctly when hosted under GitHub Pages project path
-  base: "/2025-2-Squad-01/",
+  base: "/2025-2-Squad-01",
 })
