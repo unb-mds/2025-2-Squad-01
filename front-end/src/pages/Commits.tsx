@@ -27,8 +27,7 @@ import type {
   ProcessedActivity,
 } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
-
-// Removido - agora usamos ActivityData do Utils
+import { useSearchParams } from 'react-router-dom';
 
 
 export function Histogram({ data }: { data: HistogramDatum[] }) {
@@ -167,13 +166,11 @@ function PieChart({ data }: { data: PieDatum[] }) {
   return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza" />;
 }
 
-// Função removida - agora usamos Utils.processActivityData()
-
 export default function CommitsPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [selectedRepoId, setSelectedRepoId] = useState<number | 'all'>('all');
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -184,7 +181,6 @@ export default function CommitsPage() {
         const processedData = await Utils.fetchAndProcessActivityData("commit");
         if (!cancelled) {
           setData(processedData);
-          setSelectedRepoId('all');
           setError(null);
         }
       } catch (err) {
@@ -204,6 +200,12 @@ export default function CommitsPage() {
   const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 
   const selectedRepo = useMemo<RepoActivitySummary | null>(() => {
+    const selectedParam = searchParams.get('repo');
+    const selectedRepoId: number | 'all' = !selectedParam || selectedParam === 'all'
+      ? 'all'
+      : Number.isNaN(Number(selectedParam))
+        ? 'all'
+        : Number(selectedParam);
     if (selectedRepoId === 'all') {
       return {
         id: -1,
@@ -212,14 +214,9 @@ export default function CommitsPage() {
       } as RepoActivitySummary;
     }
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
-  }, [repositories, selectedRepoId]);
+  }, [repositories, searchParams]);
 
-  useEffect(() => {
-    if (repositories.length === 0) return;
-    if (selectedRepoId === 'all') return;
-    const exists = repositories.some((repo) => repo.id === selectedRepoId);
-    if (!exists) setSelectedRepoId('all');
-  }, [repositories, selectedRepoId]);
+  // No local selection state; selection is driven by URL param managed by RepoToolbar
 
   const histogramData = useMemo<HistogramDatum[]>(() => {
     if (!selectedRepo) return [];
@@ -262,7 +259,7 @@ export default function CommitsPage() {
   }, [selectedRepo]);
 
   return (
-    <DashboardLayout currentPage="commits">
+    <DashboardLayout currentPage="repos/commits" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No Repository Selected"}>
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
@@ -277,25 +274,7 @@ export default function CommitsPage() {
             )}
           </div>
 
-          {/* Filtro */}
-          <select
-            value={selectedRepoId}
-            onChange={(e) =>
-              setSelectedRepoId(e.target.value === 'all' ? 'all' : Number(e.target.value))
-            }
-            className="px-4 py-2 border rounded text-white"
-            style={{ backgroundColor: '#333333', borderColor: '#444444' }}
-            disabled={loading}
-          >
-            <option value="all">
-              Todos os repositórios ({repositories.flatMap((r) => r.activities).length})
-            </option>
-            {repositories.map((repo) => (
-              <option key={repo.id} value={repo.id}>
-                {repo.name} ({repo.activities.length})
-              </option>
-            ))}
-          </select>
+          {/* Filtro removido: seleção é feita no RepositoryToolbar */}
         </div>
       </div>
 

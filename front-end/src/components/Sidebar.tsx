@@ -13,11 +13,9 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'issues', label: 'Issues', icon: '📊' },
-  { id: 'commits', label: 'Commits', icon: '💻' },
-  { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
-  { id: 'collaboration', label: 'Colaboração', icon: '🤝' },
-  { id: 'structure', label: 'Estrutura', icon: '🏗️' },
+  { id: 'organization', label: 'Organization', icon: '📊' },
+  { id: 'repos/commits', label: 'Repositories', icon: '💻' },
+
 ];
 
 export default function Sidebar({ currentPage = 'commits', onNavigate }: SidebarProps) {
