@@ -21,7 +21,7 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
         filtered_repos = filtered_repos[1:]
     
     # Extract issues from each repository
-    for repo in filtered_repos[:5]:  # LIMITE DE 5 REPOS
+    for repo in filtered_repos:
         if not repo or not isinstance(repo, dict):
             print(f"Skipping invalid repo entry: {repo}")
             continue
