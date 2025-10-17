@@ -1,4 +1,3 @@
-
 import { scaleOrdinal } from "d3-scale";
 
 // Novo tipo para os dados de atividade do GitHub
@@ -35,10 +34,24 @@ export interface ProcessedActivity {
 export class Utils {
 
     static processActivityData(rawActivities: ActivityData[], filterType?: string): ProcessedActivityResponse {
-      // Filtrar por tipo se especificado
-      const filteredActivities = filterType 
-        ? rawActivities.filter(activity => activity.type === filterType)
-        : rawActivities;
+      // Definir tipos relacionados com cada categoria
+      const issueTypes = ['issue_created', 'issue_closed', 'event_labeled', 'event_assigned', 'event_milestoned', 'event_demilestoned', 'event_reopened', 'event_renamed', 'event_unassigned'];
+      const commitTypes = ['commit'];
+      const prTypes = ['pr_created', 'pr_closed'];
+
+      // Filtrar por categoria se especificado
+      let filteredActivities = rawActivities;
+      
+      if (filterType === 'issue') {
+        filteredActivities = rawActivities.filter(activity => issueTypes.includes(activity.type));
+      } else if (filterType === 'commit') {
+        filteredActivities = rawActivities.filter(activity => commitTypes.includes(activity.type));
+      } else if (filterType === 'pull_request') {
+        filteredActivities = rawActivities.filter(activity => prTypes.includes(activity.type));
+      } else if (filterType) {
+        // Se um tipo específico foi fornecido, filtrar por ele
+        filteredActivities = rawActivities.filter(activity => activity.type === filterType);
+      }
 
       // Agrupar atividades por repositório
       const activitiesByRepo = new Map<string, ActivityData[]>();
@@ -82,6 +95,7 @@ export class Utils {
         repositories,
       };
     }
+    
     static async fetchAndProcessActivityData(type?: string): Promise<ProcessedActivityResponse> {
         const response = await fetch(
           'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/temporal_events.json'
