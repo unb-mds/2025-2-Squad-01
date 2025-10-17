@@ -1,17 +1,13 @@
-import { useState } from 'react';
-
 interface FilterProps {
   title: string;
   content: string[];
   sendSelectedValue?: (value: string) => void;
+  value?: string;
 
 }
 
-
-export function Filter({ title, content, sendSelectedValue}: FilterProps) {
-
-  const [internal, setInternal] = useState<string>(content[0] || '');
-  const selected = internal;
+export function Filter({ title, content, sendSelectedValue, value}: FilterProps) {
+  const selected = value ?? content[0] ?? '';
   const sendSelected = (value: string) => {
     if (sendSelectedValue) sendSelectedValue(value);
   };
@@ -26,7 +22,6 @@ export function Filter({ title, content, sendSelectedValue}: FilterProps) {
       value={selected} 
       onChange={(e) => {
         const v = e.target.value;
-        setInternal(v);
         sendSelected(v);
       }}
 

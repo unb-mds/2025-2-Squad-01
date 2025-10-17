@@ -169,6 +169,8 @@ export default function CommitsPage() {
   const [error, setError] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
   const [selectedMember, setSelectedMember] = useState<string>('All');
+  const [selectedTime, setSelectedTime] = useState<string>('Last 24 hours');
+
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -243,16 +245,56 @@ export default function CommitsPage() {
   }, [selectedRepo, selectedMember]);
 
   const histogramData = useMemo<HistogramDatum[]>(() => {
+
+    const now = new Date();
+    const cutoff = (() => {
+      switch (selectedTime) {
+        case 'Last 24 hours': {
+          const d = new Date(now);
+          d.setDate(d.getDate() - 1);
+          return d;
+        }
+        case 'Last 7 days': {
+          const d = new Date(now);
+          d.setDate(d.getDate() - 7);
+          return d;
+        }
+        case 'Last 30 days': {
+          const d = new Date(now);
+          d.setDate(d.getDate() - 30);
+          return d;
+        }
+        case 'Last 6 months': {
+          const d = new Date(now);
+          d.setMonth(d.getMonth() - 6);
+          return d;
+        }
+        case 'Last Year': {
+          const d = new Date(now);
+          d.setFullYear(d.getFullYear() - 1);
+          return d;
+        }
+        default:
+          return null;
+      }
+    })();
+
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
     for (const activity of filteredActivities) {
       const day = activity.date.slice(0, 10);
+
+      if (cutoff) {
+        const activityDate = new Date(day + 'T00:00:00Z');
+        if (activityDate < cutoff) continue;
+      }
+
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
       .map(([dateLabel, count]) => ({ dateLabel, count }))
       .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo, filteredActivities]);
+  }, [selectedRepo, filteredActivities, selectedTime]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
@@ -290,7 +332,7 @@ export default function CommitsPage() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-bold text-white">Commits analysis</h2>
+            <h2 className="text-3xl font-bold text-white">Commits analysis {selectedTime} {selectedMember}</h2>
             {selectedRepo && (
               <p className="text-slate-400 text-sm mt-2">
                 {selectedRepo.name === 'All repositories'
@@ -312,7 +354,7 @@ export default function CommitsPage() {
             <h3 className="text-xl font-bold text-white">Timeline</h3>
           </div>
 
-          <BaseFilters members={members} selectedMember={selectedMember} onMemberChange={setSelectedMember}></BaseFilters>
+          <BaseFilters members={members} selectedMember={selectedMember} selectedTime={selectedTime} onMemberChange={setSelectedMember} onTimeChange={setSelectedTime}></BaseFilters>
 
           {/* Área do gráfico */}
           <div className="p-1">

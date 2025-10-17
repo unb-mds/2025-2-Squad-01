@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 import { Filter } from './Filter';
 
 
@@ -17,27 +17,11 @@ export default function BaseFilters({
   selectedMember: selectedMemberProp,
   selectedTime: selectedTimeProp,
 }: FilterProps) {
-  const [selectedMember, setSelectedMember] = useState<string>(members?.[0] ?? '');
-  const [selectedTime, setSelectedTime] = useState<string>('Last 30 days');
-  // Keep internal state in sync when parent provides a value
-  useEffect(() => {
-    if (selectedMemberProp !== undefined) {
-      setSelectedMember(selectedMemberProp);
-      setSelectedTime(selectedTimeProp);
-    }
-  }, [selectedMemberProp, selectedTimeProp]);
-
   const sendSelectedMember = (selected: string) => {
-    // Guarda o valor selecionado na variável de estado local
-    setSelectedMember(selected);
-    // Propaga para o parent (Commits) se fornecido
     if (onMemberChange) onMemberChange(selected);
   };
   
   const sendSelectedTime = (selected: string) => {
-    // Guarda o valor selecionado na variável de estado local
-    setSelectedTime(selected);
-    // Propaga para o parent (Commits) se fornecido
     if (onTimeChange) onTimeChange(selected);
   };
   return (
@@ -46,10 +30,27 @@ export default function BaseFilters({
             
             <div className="space-y-3">
               {/* Filtro Timeline */}
-            <Filter title="Timeline" content={['Last 24 hours', 'Last 7 days', 'Last 30 days', 'Last 6 months', 'Last Year']} sendSelectedValue={sendSelectedTime} />
+            <Filter
+              title="Timeline"
+              content={[
+                'Last 24 hours',
+                'Last 7 days',
+                'Last 30 days',
+                'Last 6 months',
+                'Last Year',
+                'All Time',
+              ]}
+              value={selectedTimeProp}
+              sendSelectedValue={sendSelectedTime}
+            />
               
               {/* Filtro Members */}
-            <Filter title="Members" content={members || []} sendSelectedValue={sendSelectedMember} />
+            <Filter
+              title="Members"
+              content={members || []}
+              value={selectedMemberProp}
+              sendSelectedValue={sendSelectedMember}
+            />
 
           </div>
     </div>
