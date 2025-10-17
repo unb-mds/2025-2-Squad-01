@@ -25,143 +25,9 @@ import type {
 import DashboardLayout from '../components/DashboardLayout';
 import { useSearchParams } from 'react-router-dom';
 import BaseFilters from '../components/base-filters';
+import { Histogram } from '../components/Graphs';
+import { PieChart } from '../components/Graphs';
 
-
-export function Histogram({ data }: { data: HistogramDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', '#e2e8f0')
-  .text('No commits available for this repository');
-      return;
-    }
-
-    const width = 700;
-    const height = 300;
-    const margin = { top: 24, right: 24, bottom: 72, left: 56 };
-
-    const x = scaleBand<string>()
-      .domain(data.map((d) => d.dateLabel))
-      .range([margin.left, width - margin.right])
-      .padding(0.12);
-
-    const y = scaleLinear()
-      .domain([0, max(data, (d: HistogramDatum) => d.count) ?? 0])
-      .nice()
-      .range([height - margin.bottom, margin.top]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-
-    const tickInterval = Math.max(1, Math.floor(data.length / 12));
-    const tickValues = data
-      .map((d, i) => ({ v: d.dateLabel, i }))
-      .filter((x) => x.i % tickInterval === 0)
-      .map((x) => x.v);
-
-    const xAxis = svg
-      .append('g')
-      .attr('transform', `translate(0, ${height - margin.bottom})`)
-      .call(axisBottom(x).tickValues(tickValues).tickFormat((v) => String(v)));
-    xAxis
-      .selectAll('text')
-      .style('text-anchor', 'end')
-      .style('fill', '#e2e8f0')
-      .attr('dx', '-0.6em')
-      .attr('dy', '0.15em')
-      .attr('transform', 'rotate(-35)');
-    xAxis.selectAll('line').style('stroke', '#475569');
-    xAxis.select('.domain').style('stroke', '#475569');
-
-    const yAxis = svg
-      .append('g')
-      .attr('transform', `translate(${margin.left},0)`) 
-      .call(axisLeft(y).ticks(6));
-    yAxis.selectAll('text').style('fill', '#e2e8f0');
-    yAxis.selectAll('line').style('stroke', '#475569');
-    yAxis.select('.domain').style('stroke', '#475569');
-    yAxis
-      .append('text')
-      .attr('x', 0)
-      .attr('y', margin.top - 16)
-      .attr('fill', '#e2e8f0')
-      .attr('text-anchor', 'start')
-      .attr('font-size', 12)
-  .text('Commits');
-
-    svg
-      .append('g')
-      .selectAll('rect')
-      .data<HistogramDatum>(data)
-      .join('rect')
-      .attr('x', (d) => x(d.dateLabel) ?? margin.left)
-      .attr('y', (d) => y(d.count))
-      .attr('width', x.bandwidth())
-      .attr('height', (d) => y(0) - y(d.count))
-      .attr('rx', 4)
-      .attr('fill', '#3b82f6')
-      .append('title')
-      .text((d) => `${d.dateLabel}: ${d.count} commit(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histogram" />;
-}
-
-function PieChart({ data }: { data: PieDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'currentColor')
-  .text('No commits available for this repository');
-      return;
-    }
-
-    const width = 240;
-    const height = 240;
-    const radius = Math.min(width, height) / 2 - 6;
-
-    const color = scaleOrdinal<string, string>()
-      .domain(data.map((d) => d.label))
-      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-    const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
-    const pieGen = d3Pie<PieDatum>().sort(null).value((d) => d.value);
-    const arcGen = d3Arc<PieArcDatum<PieDatum>>().innerRadius(0).outerRadius(radius);
-    const arcs = pieGen(data);
-
-    g
-      .selectAll('path')
-      .data<PieArcDatum<PieDatum>>(arcs)
-      .join('path')
-      .attr('d', (d) => arcGen(d) ?? '')
-      .attr('fill', (d) => color(d.data.label))
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.2)
-      .append('title')
-      .text((d) => `${d.data.label}: ${d.data.value} commit(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Pie chart" />;
-}
 
 export default function CommitsPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
@@ -332,7 +198,7 @@ export default function CommitsPage() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-bold text-white">Commits analysis {selectedTime} {selectedMember}</h2>
+            <h2 className="text-3xl font-bold text-white">Commits analysis </h2>
             {selectedRepo && (
               <p className="text-slate-400 text-sm mt-2">
                 {selectedRepo.name === 'All repositories'
@@ -345,9 +211,9 @@ export default function CommitsPage() {
       </div>
 
       {/* Grid de gráficos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
   {/* Commits timeline */}
-        <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+        <div className="border rounded-lg h-200 w-190" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
           
           {/* Header da seção */}
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
@@ -357,13 +223,13 @@ export default function CommitsPage() {
           <BaseFilters members={members} selectedMember={selectedMember} selectedTime={selectedTime} onMemberChange={setSelectedMember} onTimeChange={setSelectedTime}></BaseFilters>
 
           {/* Área do gráfico */}
-          <div className="p-1">
+          <div className="pt-3 h-auto w-auto">
             {loading ? (
-              <div className="h-[300px] flex items-center justify-center">
+              <div className="h-[420px] flex items-center justify-center">
                 <div className="text-slate-400">Loading...</div>
               </div>
             ) : error ? (
-              <div className="h-[300px] flex items-center justify-center">
+              <div className="h-[420px] flex items-center justify-center">
                 <p className="text-red-400">{error}</p>
               </div>
             ) : (
@@ -395,7 +261,7 @@ export default function CommitsPage() {
                 <div className="flex items-center justify-center mb-2">
                   <PieChart data={pieData} />
                 </div>
-                <div className="max-h-[180px] overflow-y-auto space-y-2">
+                <div className="max-h-[400px] overflow-y-auto space-y-2">
                   {pieData.map((item) => (
                     <div
                       key={item.label}
