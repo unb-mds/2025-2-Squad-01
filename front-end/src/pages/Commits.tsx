@@ -282,56 +282,116 @@ export default function CommitsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
   {/* Commits timeline */}
         <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <p className="text-left p-6 font-bold text-white mb-4">Commits timeline</p>
-          {loading ? (
-            <div className="h-[300px] flex items-center justify-center">
-              <div className="text-slate-400">Carregando...</div>
+          
+          {/* Header da seção */}
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h3 className="text-xl font-bold text-white">Timeline</h3>
+          </div>
+          
+          {/* Filtros */}
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h4 className="text-lg font-semibold text-white mb-4">Filters</h4>
+            
+            <div className="space-y-3">
+              {/* Filtro Timeline */}
+              <div className="flex items-center gap-4">
+                <label className="text-sm font-medium text-slate-300 min-w-[80px]">
+                  Timeline:
+                </label>
+                <select 
+                  id="timeline-filter" 
+                  name="timeline_filter" 
+                  className="px-3 py-2 text-sm rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                  style={{ backgroundColor: '#333333', borderColor: '#444444', color: 'white' }}
+                >
+                  <option value="">All periods</option>
+                  <option value="week">Last week</option>
+                  <option value="month">Last month</option>
+                  <option value="quarter">Last quarter</option>
+                  <option value="year">Last year</option>
+                </select>
+              </div>
+              
+              {/* Filtro Members */}
+              <div className="flex items-center gap-4">
+                <label className="text-sm font-medium text-slate-300 min-w-[80px]">
+                  Members:
+                </label>
+                <select 
+                  id="members-filter" 
+                  name="members_filter" 
+                  className="px-3 py-2 text-sm rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                  style={{ backgroundColor: '#333333', borderColor: '#444444', color: 'white' }}
+                >
+                  <option value="">All contributors</option>
+                  <option value="top5">Top 5 contributors</option>
+                  <option value="active">Active contributors</option>
+                  <option value="recent">Recent contributors</option>
+                </select>
+              </div>
             </div>
-          ) : error ? (
-            <div className="h-[300px] flex items-center justify-center">
-              <p className="text-red-400">{error}</p>
-            </div>
-          ) : (
-            <Histogram data={histogramData} />)
-          }
+          </div>
+            
+          {/* Área do gráfico */}
+          <div className="p-1">
+            {loading ? (
+              <div className="h-[300px] flex items-center justify-center">
+                <div className="text-slate-400">Carregando...</div>
+              </div>
+            ) : error ? (
+              <div className="h-[300px] flex items-center justify-center">
+                <p className="text-red-400">{error}</p>
+              </div>
+            ) : (
+              <Histogram data={histogramData} />
+            )}
+          </div>
         </div>
 
         {/* Contribuidores */}
-        <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <h3 className="text-lg font-bold text-white mb-4">Contributors</h3>
-          {loading ? (
-            <div className="h-[140px] flex items-center justify-center">
-              <div className="text-slate-400">Loading...</div>
-            </div>
-          ) : error ? (
-            <div className="h-[140px] flex items-center justify-center">
-              <p className="text-red-400">{error}</p>
-            </div>
-          ) : (
-            <>
-              <div className="flex items-center justify-center mb-2">
-                <PieChart data={pieData} />
+        <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          
+          {/* Header da seção */}
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h3 className="text-xl font-bold text-white">Contributors</h3>
+          </div>
+          
+          {/* Área do gráfico */}
+          <div className="p-6">
+            {loading ? (
+              <div className="h-[140px] flex items-center justify-center">
+                <div className="text-slate-400">Loading...</div>
               </div>
-              <div className="max-h-[180px] overflow-y-auto space-y-2">
-                {pieData.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center justify-between p-2 rounded"
-                    style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <div 
-                        className="w-3 h-3 rounded-full" 
-                        style={{ backgroundColor: item.color }}
-                      ></div>
-                      <span className="text-sm text-slate-300">{item.label}</span>
+            ) : error ? (
+              <div className="h-[140px] flex items-center justify-center">
+                <p className="text-red-400">{error}</p>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center justify-center mb-2">
+                  <PieChart data={pieData} />
+                </div>
+                <div className="max-h-[180px] overflow-y-auto space-y-2">
+                  {pieData.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex items-center justify-between p-2 rounded"
+                      style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
+                    >
+                      <div className="flex items-center gap-2">
+                        <div 
+                          className="w-3 h-3 rounded-full" 
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                        <span className="text-sm text-slate-300">{item.label}</span>
+                      </div>
+                      <span className="text-xs font-bold text-slate-200">{item.value}</span>
                     </div>
-                    <span className="text-xs font-bold text-slate-200">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </DashboardLayout>
