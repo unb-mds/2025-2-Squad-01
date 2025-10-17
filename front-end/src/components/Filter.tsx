@@ -1,14 +1,20 @@
 import { useState } from 'react';
 
 interface FilterProps {
-  title: string,
+  title: string;
   content: string[];
+  sendSelectedValue?: (value: string) => void;
+
 }
 
 
-export function Filter({ title, content }: FilterProps) {
+export function Filter({ title, content, sendSelectedValue}: FilterProps) {
 
-const [selected, setSelected] = useState<string>(content[0] || '');
+  const [internal, setInternal] = useState<string>(content[0] || '');
+  const selected = internal;
+  const sendSelected = (value: string) => {
+    if (sendSelectedValue) sendSelectedValue(value);
+  };
 
   return (
   <div className="flex items-center gap-4">
@@ -18,7 +24,12 @@ const [selected, setSelected] = useState<string>(content[0] || '');
     <select 
       id={`${title.toLowerCase()}-filter`}
       value={selected} 
-      onChange={(e) => setSelected(e.target.value)}
+      onChange={(e) => {
+        const v = e.target.value;
+        setInternal(v);
+        sendSelected(v);
+      }}
+
       className="px-3 py-2 text-sm rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" style={{
       backgroundColor: '#333333',
       borderColor: '#444444',

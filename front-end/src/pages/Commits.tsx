@@ -113,7 +113,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
       .text((d) => `${d.dateLabel}: ${d.count} commit(s)`);
   }, [data]);
 
-  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histograma" />;
+  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histogram" />;
 }
 
 function PieChart({ data }: { data: PieDatum[] }) {
@@ -160,7 +160,7 @@ function PieChart({ data }: { data: PieDatum[] }) {
       .text((d) => `${d.data.label}: ${d.data.value} commit(s)`);
   }, [data]);
 
-  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza" />;
+  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Pie chart" />;
 }
 
 export default function CommitsPage() {
@@ -168,6 +168,7 @@ export default function CommitsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
+  const [selectedMember, setSelectedMember] = useState<string>('All');
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -206,42 +207,58 @@ export default function CommitsPage() {
     if (selectedRepoId === 'all') {
       return {
         id: -1,
-  name: 'All repositories',
+        name: 'All repositories',
         activities: repositories.flatMap((repo) => repo.activities),
       } as RepoActivitySummary;
     }
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, searchParams]);
 
+  // Reset member filter when repository changes
+  useEffect(() => {
+    setSelectedMember('All');
+  }, [selectedRepo?.id]);
+
   const members = useMemo<string[]>(() => {
     if (!selectedRepo) return [];
     const memberSet = new Set<string>();
+    
     for ( const activity of selectedRepo.activities) {
-      const name = activity.user.displayName || activity.user.login || 'Desconhecido';  
+      const name = activity.user.displayName || activity.user.login || 'Unknown';  
       memberSet.add(name);
     }
-    return Array.from(memberSet).sort((a,b) => a.localeCompare(b));
+    const membersFound = Array.from(memberSet).sort((a,b) => a.localeCompare(b));
+    return ['All', ...membersFound];
   }, [selectedRepo]);
 
-  // No local selection state; selection is driven by URL param managed by RepoToolbar
+  const filteredActivities = useMemo(() => {
+    if (!selectedRepo) return [] as typeof selectedRepo.activities | [];
+    
+    if (!selectedMember || selectedMember === 'All') return selectedRepo.activities;
+    
+    return selectedRepo.activities.filter((activity) => {
+      const name = activity.user.displayName || activity.user.login || 'Unknown';
+      return name === selectedMember;
+    });
+  }, [selectedRepo, selectedMember]);
 
   const histogramData = useMemo<HistogramDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
+    for (const activity of filteredActivities) {
       const day = activity.date.slice(0, 10);
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
       .map(([dateLabel, count]) => ({ dateLabel, count }))
       .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo]);
+  }, [selectedRepo, filteredActivities]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
     for (const activity of selectedRepo.activities) {
-      const label = activity.user.displayName || activity.user.login || 'Desconhecido';
+      const label = activity.user.displayName || activity.user.login || 'Unknown';
       counts.set(label, (counts.get(label) ?? 0) + 1);
     }
     const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
@@ -265,7 +282,7 @@ export default function CommitsPage() {
     return result;
 
     
-  }, [selectedRepo]);
+  }, [selectedRepo, filteredActivities]);
 
   return (
   <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No repository selected"}>
@@ -282,8 +299,6 @@ export default function CommitsPage() {
               </p>
             )}
           </div>
-
-          {/* Filtro removido: seleção é feita no RepositoryToolbar */}
         </div>
       </div>
 
@@ -297,13 +312,13 @@ export default function CommitsPage() {
             <h3 className="text-xl font-bold text-white">Timeline</h3>
           </div>
 
-          <BaseFilters members={members}></BaseFilters>
+          <BaseFilters members={members} selectedMember={selectedMember} onMemberChange={setSelectedMember}></BaseFilters>
 
           {/* Área do gráfico */}
           <div className="p-1">
             {loading ? (
               <div className="h-[300px] flex items-center justify-center">
-                <div className="text-slate-400">Carregando...</div>
+                <div className="text-slate-400">Loading...</div>
               </div>
             ) : error ? (
               <div className="h-[300px] flex items-center justify-center">
