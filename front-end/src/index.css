@@ -1,7 +1,7 @@
-/* Tailwind v4 import (base, components e utilities) */
-@import "tailwindcss";
+/* Tailwind v4 import (base, components and utilities) */
+@import 'tailwindcss';
 
-/* Estilos Globais */
+/* Global Styles */
 :root {
   --background: #1a1a1a;
   --foreground: #f3f4f6;
@@ -17,16 +17,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Merriweather', serif; 
+  font-family: 'Merriweather', serif;
 }
 
-/* Título do sidebar */
+/* Sidebar title */
 .titulo {
   font-family: 'Merriweather', serif;
   letter-spacing: 0.5px;
 }
 
-/* Scrollbar customizado */
+/* Custom scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -45,7 +45,7 @@ body {
   background: rgba(148, 163, 184, 0.5);
 }
 
-/* Animações adicionais para a nova página */
+/* Additional animations for page transitions */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -61,23 +61,50 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Animações */
+/* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes fadeInDelayed {
-  0%, 20% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes fadeInDelayed2 {
-  0%, 40% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0%,
+  40% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInDelayed3 {
-  0%, 60% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0%,
+  60% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -94,8 +121,9 @@ body {
   animation: fadeInDelayed3 2.7s ease-out forwards;
 }
 
-/* Estilos de Força Bruta para Botões da Home */
-.botao-principal, .botao-secundario {
+/* Home page button styles */
+.botao-principal,
+.botao-secundario {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -121,18 +149,18 @@ body {
   background-color: #6b7280;
 }
 
-/* Estilos de Força Bruta para o Layout da Home */
+/* Home page layout styles */
 @media (min-width: 1024px) {
   .container-principal {
     display: grid;
-    grid-template-columns: minmax(150px, 450px) 1fr; /* Primeira entre 200-400px, segunda pega o resto */
+    grid-template-columns: minmax(150px, 450px) 1fr;
     padding-left: 0rem;
     padding-top: 0rem;
     text-align: left;
     align-items: top;
-    gap: 2rem; /* Reduzido de 1rem para 0.5rem */
+    gap: 2rem;
   }
-} 
+}
 @media (min-width: 640px) {
   .container-botoes {
     flex-direction: row;
@@ -140,10 +168,10 @@ body {
 }
 .container-botoes {
   padding-top: 1rem;
-  gap: 0.5rem; /* Reduzido de 1rem para 0.5rem */
+  gap: 0.5rem;
 }
 
-/* Estilos para o gráfico da página principal */
+/* Home page chart styles */
 .grafico-container {
   display: flex;
   min-height: 400px;
@@ -156,19 +184,17 @@ body {
   height: auto;
 }
 
-
-
-/* Força o tamanho do título principal da home */
+/* Home page heading sizes */
 .container-principal h1 {
-  font-size: 4rem; /* text-9xl = 128px = 8rem */
+  font-size: 4rem;
 }
 .container-principal h2 {
   padding-top: 1rem;
-  font-size: 1.8rem; /* text-9xl = 128px = 8rem */
+  font-size: 1.8rem;
 }
 
 /* =============================================== */
-/* ESTILOS FINAIS COMPLETOS PARA DOCS              */
+/* DOCUMENTATION PAGE STYLES                       */
 /* =============================================== */
 
 .doc-page {
@@ -243,37 +269,82 @@ body {
   line-height: 1.75;
 }
 
-#team .grid { display: grid; }
-#team .gap-6 { gap: 1.5rem; }
+#team .grid {
+  display: grid;
+}
+#team .gap-6 {
+  gap: 1.5rem;
+}
 @media (min-width: 768px) {
   #team .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-#team .space-y-3 > * + * { margin-top: 0.75rem; }
-#team .flex { display: flex; }
-#team .items-center { align-items: center; }
-#team .space-x-3 > * + * { margin-left: 0.75rem; }
-#team .w-3 { width: 0.75rem; }
-#team .h-3 { height: 0.75rem; }
-#team .rounded-full { border-radius: 9999px; }
-#team .bg-blue-500 { background-color: #3b82f6; }
-#team .bg-green-500 { background-color: #22c55e; }
-#team .bg-purple-500 { background-color: #a855f7; }
-#team .font-semibold { font-weight: 600; }
-#team .text-blue-400 { color: #60a5fa; }
-#team .text-green-400 { color: #4ade80; }
-#team .text-purple-400 { color: #c084fc; }
-#team .ml-6 { margin-left: 1.5rem; }
-#team .mt-1 { margin-top: 0.25rem; }
-#team .text-white\/70 { color: rgba(255, 255, 255, 0.7); }
+#team .space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+#team .flex {
+  display: flex;
+}
+#team .items-center {
+  align-items: center;
+}
+#team .space-x-3 > * + * {
+  margin-left: 0.75rem;
+}
+#team .w-3 {
+  width: 0.75rem;
+}
+#team .h-3 {
+  height: 0.75rem;
+}
+#team .rounded-full {
+  border-radius: 9999px;
+}
+#team .bg-blue-500 {
+  background-color: #3b82f6;
+}
+#team .bg-green-500 {
+  background-color: #22c55e;
+}
+#team .bg-purple-500 {
+  background-color: #a855f7;
+}
+#team .font-semibold {
+  font-weight: 600;
+}
+#team .text-blue-400 {
+  color: #60a5fa;
+}
+#team .text-green-400 {
+  color: #4ade80;
+}
+#team .text-purple-400 {
+  color: #c084fc;
+}
+#team .ml-6 {
+  margin-left: 1.5rem;
+}
+#team .mt-1 {
+  margin-top: 0.25rem;
+}
+#team .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7);
+}
 
-#tech .grid { display: grid; gap: 1.5rem; }
+#tech .grid {
+  display: grid;
+  gap: 1.5rem;
+}
 @media (min-width: 768px) {
-  #tech .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #tech .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (min-width: 1024px) {
-  #tech .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #tech .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 .tech-card {
   background-color: rgba(30, 41, 59, 0.4);
@@ -284,15 +355,36 @@ body {
   border-left-width: 4px;
   transition: all 150ms;
 }
-.tech-card:hover { transform: scale(1.05); }
-.tech-card h3 { color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
-.tech-card p { color: rgba(255, 255, 255, 0.7); }
-.border-l-yellow-500 { border-left-color: #eab308; }
-.border-l-blue-500 { border-left-color: #3b82f6; }
-.border-l-orange-500 { border-left-color: #f97316; }
-.border-l-gray-500 { border-left-color: #6b7280; }
-.border-l-pink-500 { border-left-color: #ec4899; }
-.border-l-cyan-500 { border-left-color: #06b6d4; }
+.tech-card:hover {
+  transform: scale(1.05);
+}
+.tech-card h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.tech-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.border-l-yellow-500 {
+  border-left-color: #eab308;
+}
+.border-l-blue-500 {
+  border-left-color: #3b82f6;
+}
+.border-l-orange-500 {
+  border-left-color: #f97316;
+}
+.border-l-gray-500 {
+  border-left-color: #6b7280;
+}
+.border-l-pink-500 {
+  border-left-color: #ec4899;
+}
+.border-l-cyan-500 {
+  border-left-color: #06b6d4;
+}
 
 .arch-card {
   background-color: rgba(51, 65, 85, 0.5);
@@ -308,8 +400,12 @@ body {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.8);
 }
-.arch-card:nth-child(2) h4 { color: #4ade80; }
-.arch-card:nth-child(3) h4 { color: #c084fc; }
+.arch-card:nth-child(2) h4 {
+  color: #4ade80;
+}
+.arch-card:nth-child(3) h4 {
+  color: #c084fc;
+}
 
 .figma-embed-container {
   position: relative;
@@ -336,7 +432,9 @@ body {
   color: #60a5fa;
   text-decoration: underline;
 }
-.figma-embed-header a:hover { color: #93c5fd; }
+.figma-embed-header a:hover {
+  color: #93c5fd;
+}
 .figma-embed-iframe-wrapper {
   position: relative;
   padding-bottom: 75%;
@@ -361,20 +459,24 @@ body {
   font-weight: 600;
   color: white;
   transition: all 150ms;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
 .botao-final:hover {
   background-image: linear-gradient(to right, #3b82f6, #60a5fa);
-  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+  box-shadow:
+    0 10px 15px -3px rgba(59, 130, 246, 0.25),
+    0 4px 6px -4px rgba(59, 130, 246, 0.25);
 }
 
-/* Centraliza e diminui a largura de todo o conteúdo */
+/* Center and limit content width for better readability */
 .doc-page > .relative.mx-auto {
-  max-width: 80ch; /* Uma largura baseada em caracteres, boa para leitura */
+  max-width: 80ch;
 }
 
-/* Ajusta o grid dentro da seção de arquitetura para corresponder ao original */
+/* Architecture section grid layout */
 #arch .grid {
   display: grid;
   gap: 1rem;
@@ -385,7 +487,7 @@ body {
   }
 }
 
-/* Diminui um pouco o tamanho do embed do Figma/Protótipo */
+/* Figma embed sizing */
 #stories .figma-embed-container,
 #prototypes .figma-embed-container {
   max-width: 90%;
@@ -394,36 +496,36 @@ body {
 }
 
 /* =============================================== */
-/* ESTILOS PARA GRÁFICOS D3 NA PÁGINA DE COMMITS  */
+/* D3 CHART STYLES FOR COMMITS PAGE               */
 /* =============================================== */
 
-/* Estilos para o SVG do histograma */
-svg[aria-label="Histograma"] text {
+/* Histogram SVG styles */
+svg[aria-label='Histograma'] text {
   fill: #e2e8f0 !important;
   font-size: 12px;
 }
 
-svg[aria-label="Histograma"] line,
-svg[aria-label="Histograma"] path {
+svg[aria-label='Histograma'] line,
+svg[aria-label='Histograma'] path {
   stroke: #475569 !important;
 }
 
-svg[aria-label="Histograma"] rect {
+svg[aria-label='Histograma'] rect {
   fill: #3b82f6 !important;
 }
 
-/* Estilos para o SVG do gráfico de pizza */
-svg[aria-label="Gráfico de pizza"] path {
+/* Pie chart SVG styles */
+svg[aria-label='Gráfico de pizza'] path {
   stroke: #1e293b !important;
   stroke-width: 2px;
 }
 
-/* Garantir que variável CSS do primary funcione */
+/* Primary color CSS variable */
 :root {
   --color-primary: #3b82f6;
 }
 
-/* Estilos adicionais para garantir layout correto */
+/* Additional layout utilities */
 .min-h-screen {
   min-height: 100vh;
 }
@@ -444,7 +546,7 @@ svg[aria-label="Gráfico de pizza"] path {
   pointer-events: none;
 }
 
-/* Garantir que gradientes funcionem */
+/* Gradient utilities */
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -468,7 +570,7 @@ svg[aria-label="Gráfico de pizza"] path {
   color: #ffffff;
 }
 
-/* Garantir backdrop blur */
+/* Backdrop blur utilities */
 .backdrop-blur-xl {
   backdrop-filter: blur(24px);
 }
