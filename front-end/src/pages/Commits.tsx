@@ -110,49 +110,49 @@ export default function CommitsPage() {
     });
   }, [selectedRepo, selectedMember]);
 
-  const histogramData = useMemo<HistogramDatum[]>(() => {
-
+  // Shared cutoff date based on selectedTime (used by histogram and pie)
+  const cutoffDate = useMemo<Date | null>(() => {
     const now = new Date();
-    const cutoff = (() => {
-      switch (selectedTime) {
-        case 'Last 24 hours': {
-          const d = new Date(now);
-          d.setDate(d.getDate() - 1);
-          return d;
-        }
-        case 'Last 7 days': {
-          const d = new Date(now);
-          d.setDate(d.getDate() - 7);
-          return d;
-        }
-        case 'Last 30 days': {
-          const d = new Date(now);
-          d.setDate(d.getDate() - 30);
-          return d;
-        }
-        case 'Last 6 months': {
-          const d = new Date(now);
-          d.setMonth(d.getMonth() - 6);
-          return d;
-        }
-        case 'Last Year': {
-          const d = new Date(now);
-          d.setFullYear(d.getFullYear() - 1);
-          return d;
-        }
-        default:
-          return null;
+    switch (selectedTime) {
+      case 'Last 24 hours': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 1);
+        return d;
       }
-    })();
+      case 'Last 7 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 7);
+        return d;
+      }
+      case 'Last 30 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 30);
+        return d;
+      }
+      case 'Last 6 months': {
+        const d = new Date(now);
+        d.setMonth(d.getMonth() - 6);
+        return d;
+      }
+      case 'Last Year': {
+        const d = new Date(now);
+        d.setFullYear(d.getFullYear() - 1);
+        return d;
+      }
+      default:
+        return null; // All Time
+    }
+  }, [selectedTime]);
 
+  const histogramData = useMemo<HistogramDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
     for (const activity of filteredActivities) {
       const day = activity.date.slice(0, 10);
 
-      if (cutoff) {
+      if (cutoffDate) {
         const activityDate = new Date(day + 'T00:00:00Z');
-        if (activityDate < cutoff) continue;
+        if (activityDate < cutoffDate) continue;
       }
 
       counts.set(day, (counts.get(day) ?? 0) + 1);
@@ -160,12 +160,18 @@ export default function CommitsPage() {
     return [...counts.entries()]
       .map(([dateLabel, count]) => ({ dateLabel, count }))
       .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo, filteredActivities, selectedTime]);
+  }, [selectedRepo, filteredActivities, cutoffDate]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
+    for (const activity of filteredActivities) {
+      // Apply the same timeline cutoff to the pie chart data
+      if (cutoffDate) {
+        const day = activity.date.slice(0, 10);
+        const activityDate = new Date(day + 'T00:00:00Z');
+        if (activityDate < cutoffDate) continue;
+      }
       const label = activity.user.displayName || activity.user.login || 'Unknown';
       counts.set(label, (counts.get(label) ?? 0) + 1);
     }
@@ -190,7 +196,7 @@ export default function CommitsPage() {
     return result;
 
     
-  }, [selectedRepo, filteredActivities]);
+  }, [selectedRepo, filteredActivities, cutoffDate]);
 
   return (
   <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No repository selected"}>
@@ -209,10 +215,15 @@ export default function CommitsPage() {
           </div>
         </div>
       </div>
+      
+        <BaseFilters members={members} selectedMember={selectedMember} selectedTime={selectedTime} onMemberChange={setSelectedMember} onTimeChange={setSelectedTime}></BaseFilters>
 
+      
       {/* Grid de gráficos */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
   {/* Commits timeline */}
+  
+  
         <div className="border rounded-lg h-200 w-190" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
           
           {/* Header da seção */}
@@ -220,8 +231,7 @@ export default function CommitsPage() {
             <h3 className="text-xl font-bold text-white">Timeline</h3>
           </div>
 
-          <BaseFilters members={members} selectedMember={selectedMember} selectedTime={selectedTime} onMemberChange={setSelectedMember} onTimeChange={setSelectedTime}></BaseFilters>
-
+          
           {/* Área do gráfico */}
           <div className="pt-3 h-auto w-auto">
             {loading ? (

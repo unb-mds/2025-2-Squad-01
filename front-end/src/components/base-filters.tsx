@@ -25,10 +25,10 @@ export default function BaseFilters({
     if (onTimeChange) onTimeChange(selected);
   };
   return (
-    <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
-            <h4 className="text-lg font-semibold text-white mb-4">Filters</h4>
+    <div className="px-6 py-4" style={{ borderBottomColor: '#333333' }}>
+            <h4 className="text-lg font-semibold text-white mb-3">Filters</h4>
             
-            <div className="space-y-3">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
               {/* Filtro Timeline */}
             <Filter
               title="Timeline"
