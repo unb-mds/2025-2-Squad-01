@@ -16,8 +16,8 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'commits', label: 'Commits', icon: '💻' },
+  { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
   { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
   { id: 'structure', label: 'Structure', icon: '🏗️' },
