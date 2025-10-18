@@ -29,9 +29,9 @@ def extract_commits(client: GitHubAPIClient, config: OrganizationConfig, use_cac
         
         print(f"Processing commits for: {repo_name}")
         
-        # Get commits
-        commits_url = f"https://api.github.com/repos/{full_name}/commits?per_page=100"
-        commits = client.get_with_cache(commits_url, use_cache)
+        # Get commits (paginated)
+        commits_base = f"https://api.github.com/repos/{full_name}/commits"
+        commits = client.get_paginated(commits_base, use_cache=use_cache, per_page=100)
         
         if commits:
             # Add repo context to each commit

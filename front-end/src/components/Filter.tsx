@@ -13,7 +13,7 @@ export function Filter({ title, content, sendSelectedValue, value}: FilterProps)
   };
 
   return (
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-4 ">
     <label className="text-sm font-medium text-slate-300 min-w-[80px]">
       {title}:
     </label>

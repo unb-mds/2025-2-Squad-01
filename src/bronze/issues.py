@@ -29,13 +29,13 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
         repo_name = repo.get('name', 'unknown')
         full_name = repo.get('full_name', repo_name)
         
-        print(f"Processing issues for: {repo_name}")
+    print(f"Processing issues for: {repo_name}")
         
-        # Get issues (includes PRs)
-        issues_url = f"https://api.github.com/repos/{full_name}/issues?state=all&per_page=100"
-        issues = client.get_with_cache(issues_url, use_cache)
+    # Get issues (includes PRs)
+    issues_base = f"https://api.github.com/repos/{full_name}/issues?state=all"
+    issues = client.get_paginated(issues_base, use_cache=use_cache, per_page=100)
         
-        if issues:
+    if issues:
             # Separate issues from PRs
             repo_issues = []
             repo_prs = []
@@ -64,11 +64,11 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
                 )
                 generated_files.append(repo_prs_file)
         
-        # Get issue events
-        events_url = f"https://api.github.com/repos/{full_name}/issues/events?per_page=100"
-        events = client.get_with_cache(events_url, use_cache)
+    # Get issue events
+    events_base = f"https://api.github.com/repos/{full_name}/issues/events"
+    events = client.get_paginated(events_base, use_cache=use_cache, per_page=100)
         
-        if events:
+    if events:
             repo_events = [{**event, 'repo_name': repo_name} for event in events]
             all_issue_events.extend(repo_events)
             
