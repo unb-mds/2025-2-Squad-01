@@ -1,27 +1,24 @@
 import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Commits from './pages/Commits';
+import Issues from './pages/Issues';
+import PullRequests from './pages/PullRequests';
 
-// Vamos chamar o componente da página inicial de "PaginaPrincipal" para não confundir com "Home"
-import PaginaPrincipal from './pages/PaginaPrincipal.tsx';
-import Commits from './pages/Commits.tsx';
-import Documentacao from './pages/Documentacao.tsx';
-import Issues from "./pages/Issues.tsx";
-import PullRequestsPage from "./pages/PullRequests.tsx";
-
+/**
+ * App Component
+ *
+ * Root application component defining all routes.
+ * Manages navigation between home page and metric analysis pages.
+ */
 function App() {
   return (
     <Routes>
-      {/* Rota Inicial: O caminho "/" renderiza o componente da página principal */}
-      <Route path="/" element={<PaginaPrincipal />} />
-      <Route path="/home" element={<PaginaPrincipal />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<HomePage />} />
       <Route path="/repos" element={<Commits />} />
-      {/* Rota de Commits */}
       <Route path="/repos/commits" element={<Commits />} />
-
-      {/* Rota de Documentação */}
-      <Route path="/documentacao" element={<Documentacao />} />
-
       <Route path="/repos/issues" element={<Issues />} />
-      <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
+      <Route path="/repos/pullrequests" element={<PullRequests />} />
     </Routes>
   );
 }
