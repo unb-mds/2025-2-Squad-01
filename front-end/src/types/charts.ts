@@ -23,3 +23,8 @@ export type HeatmapDataPoint = {
   activity_count: number;
   _metadata?: any;
 };
+export type BasicDatum = {
+  date: string;
+  value: number;
+};
+ 

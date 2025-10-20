@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { scaleOrdinal, schemeSpectral } from 'd3';
-import type { HistogramDatum, PieDatum } from '../types';
+import type { HistogramDatum, PieDatum, BasicDatum } from '../types';
 import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
-import { Histogram, PieChart } from '../components/Graphs';
+import { Histogram, LineChart, PieChart } from '../components/Graphs';
 import { Utils } from './Utils';
 
 /**
@@ -134,25 +134,42 @@ export default function CommitsPage() {
     }
   }, [selectedTime]);
 
-  const histogramData = useMemo<HistogramDatum[]>(() => {
+  const BasicData = useMemo<BasicDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
 
-    for (const activity of filteredActivities) {
-      const day = activity.date.slice(0, 10);
+    const groupByHour = selectedTime === 'Last 24 hours';
 
+    for (const activity of filteredActivities) {
+      // Use full ISO date
+      const iso = activity.date;
+
+      // Determine grouping key
+      let key: string;
+      if (groupByHour) {
+        // Truncate to hour
+        const d = new Date(iso);
+        const hourKey = new Date(d);
+        hourKey.setMinutes(0, 0, 0);
+        key = hourKey.toISOString();
+      } else {
+        // Group by day (YYYY-MM-DD)
+        key = iso.slice(0, 10);
+      }
+
+      // Cutoff filtering
       if (cutoffDate) {
-        const activityDate = new Date(day + 'T00:00:00Z');
+        const activityDate = new Date(key.length > 10 ? key : key + 'T00:00:00Z');
         if (activityDate < cutoffDate) continue;
       }
 
-      counts.set(day, (counts.get(day) ?? 0) + 1);
+      counts.set(key, (counts.get(key) ?? 0) + 1);
     }
 
     return [...counts.entries()]
-      .map(([dateLabel, count]) => ({ dateLabel, count }))
-      .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo, filteredActivities, cutoffDate]);
+      .map(([date, value]) => ({ date, value }))
+      .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  }, [selectedRepo, filteredActivities, cutoffDate, selectedTime]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
@@ -160,8 +177,11 @@ export default function CommitsPage() {
 
     for (const activity of filteredActivities) {
       if (cutoffDate) {
-        const day = activity.date.slice(0, 10);
-        const activityDate = new Date(day + 'T00:00:00Z');
+        // For Last 24 hours, compare full timestamp; otherwise compare day boundary
+        const activityDate =
+          selectedTime === 'Last 24 hours'
+            ? new Date(activity.date)
+            : new Date(activity.date.slice(0, 10) + 'T00:00:00Z');
         if (activityDate < cutoffDate) continue;
       }
       const label = activity.user.displayName || activity.user.login || 'Unknown';
@@ -228,7 +248,7 @@ export default function CommitsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
         {/* Commits Timeline */}
         <div
-          className="border rounded-lg h-200 w-190"
+          className="border rounded-lg h-300 w-190"
           style={{ backgroundColor: '#222222', borderColor: '#333333' }}
         >
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
@@ -245,7 +265,10 @@ export default function CommitsPage() {
                 <p className="text-red-400">{error}</p>
               </div>
             ) : (
-              <Histogram data={histogramData} />
+              <>
+                <LineChart data={BasicData} timeRange={selectedTime} />
+                <Histogram data={BasicData}  />
+              </>
             )}
           </div>
         </div>

@@ -2,6 +2,4 @@
 export type { AggregatedCommit, RepoCommitSummary, GithubSummaryResponse } from './github';
 
 // Export chart-related types
-export type { HistogramDatum, PieDatum, CollaborationEdge, HeatmapDataPoint } from './charts';
-
-
+export type { HistogramDatum, PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint } from './charts';
