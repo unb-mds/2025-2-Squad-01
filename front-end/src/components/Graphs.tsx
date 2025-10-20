@@ -175,7 +175,7 @@ export function PieChart({ data }: { data: PieDatum[] }) {
   return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Pie chart" />;
 }
 
-export function LineChart({ data, timeRange }: { data: BasicDatum[]; timeRange?: string })
+export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?: string })
 {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
@@ -335,5 +335,5 @@ export function LineChart({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       .attr('stroke-width', 1)
       .style('opacity', opacity);
   }, [data, timeRange]);
-  return (<>{<svg ref={svgRef} className="w-full" role="img" aria-label="Line chart" />} <Filter title={"Select Graph"} content={["Line Graph","Bar Graph"]}  /> </>);
+  return (<>{<svg ref={svgRef} className="w-full" role="img" aria-label="Line graph" />} <Filter title={"Select Graph"} content={["Line Graph","Bar Graph"]}  /> </>);
 }
