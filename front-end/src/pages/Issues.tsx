@@ -1,20 +1,7 @@
 "use client";
 import { Utils} from './Utils';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import {
-  select,
-  scaleBand,
-  scaleLinear,
-  axisBottom,
-  axisLeft,
-  max,
-  pie as d3Pie,
-  arc as d3Arc,
-  scaleOrdinal,
-  schemeTableau10,
-  schemeSpectral
-} from 'd3';
-import type { PieArcDatum } from 'd3';
+import { useEffect, useMemo, useState } from 'react';
+import { scaleOrdinal, schemeSpectral } from 'd3';
 import type {
   HistogramDatum,
   PieDatum,
@@ -24,149 +11,20 @@ import type {
   RepoActivitySummary,
 } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
+import BaseFilters from '../components/BaseFilters';
 import { useSearchParams } from 'react-router-dom';
-
-export function Histogram({ data }: { data: HistogramDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', '#e2e8f0')
-        .text('No issues available for this repository');
-      return;
-    }
-
-    const width = 700;
-    const height = 300;
-    const margin = { top: 24, right: 24, bottom: 72, left: 56 };
-
-    const x = scaleBand<string>()
-      .domain(data.map((d) => d.dateLabel))
-      .range([margin.left, width - margin.right])
-      .padding(0.12);
-
-    const y = scaleLinear()
-      .domain([0, max(data, (d: HistogramDatum) => d.count) ?? 0])
-      .nice()
-      .range([height - margin.bottom, margin.top]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-
-    const tickInterval = Math.max(1, Math.floor(data.length / 12));
-    const tickValues = data
-      .map((d, i) => ({ v: d.dateLabel, i }))
-      .filter((x) => x.i % tickInterval === 0)
-      .map((x) => x.v);
-
-    const xAxis = svg
-      .append('g')
-      .attr('transform', `translate(0, ${height - margin.bottom})`)
-      .call(axisBottom(x).tickValues(tickValues).tickFormat((v) => String(v)));
-    xAxis
-      .selectAll('text')
-      .style('text-anchor', 'end')
-      .style('fill', '#e2e8f0')
-      .attr('dx', '-0.6em')
-      .attr('dy', '0.15em')
-      .attr('transform', 'rotate(-35)');
-    xAxis.selectAll('line').style('stroke', '#475569');
-    xAxis.select('.domain').style('stroke', '#475569');
-
-    const yAxis = svg
-      .append('g')
-      .attr('transform', `translate(${margin.left},0)`) 
-      .call(axisLeft(y).ticks(6));
-    yAxis.selectAll('text').style('fill', '#e2e8f0');
-    yAxis.selectAll('line').style('stroke', '#475569');
-    yAxis.select('.domain').style('stroke', '#475569');
-    yAxis
-      .append('text')
-      .attr('x', 0)
-      .attr('y', margin.top - 16)
-      .attr('fill', '#e2e8f0')
-      .attr('text-anchor', 'start')
-      .attr('font-size', 12)
-      .text('Issues');
-
-    svg
-      .append('g')
-      .selectAll('rect')
-      .data<HistogramDatum>(data)
-      .join('rect')
-      .attr('x', (d) => x(d.dateLabel) ?? margin.left)
-      .attr('y', (d) => y(d.count))
-      .attr('width', x.bandwidth())
-      .attr('height', (d) => y(0) - y(d.count))
-      .attr('rx', 4)
-      .attr('fill', '#10b981') // Verde para issues
-      .append('title')
-      .text((d) => `${d.dateLabel}: ${d.count} issue(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histograma de Issues" />;
-}
-
-function PieChart({ data }: { data: PieDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'currentColor')
-        .text('No issues available for this repository');
-      return;
-    }
-
-    const width = 240;
-    const height = 240;
-    const radius = Math.min(width, height) / 2 - 6;
-
-    const color = scaleOrdinal<string, string>()
-      .domain(data.map((d) => d.label))
-      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-    const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
-    const pieGen = d3Pie<PieDatum>().sort(null).value((d) => d.value);
-    const arcGen = d3Arc<PieArcDatum<PieDatum>>().innerRadius(0).outerRadius(radius);
-    const arcs = pieGen(data);
-
-    g
-      .selectAll('path')
-      .data<PieArcDatum<PieDatum>>(arcs)
-      .join('path')
-      .attr('d', (d) => arcGen(d) ?? '')
-      .attr('fill', (d) => color(d.data.label))
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.2)
-      .append('title')
-      .text((d) => `${d.data.label}: ${d.data.value} issue(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza de Issues" />;
-}
+import { Histogram } from '../components/Histogram';
+import { PieChart } from '../components/PieChart';
 
 export default function IssuesPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
+  
+  // Estados para os filtros
+  const [selectedMember, setSelectedMember] = useState<string>('All Members');
+  const [selectedTime, setSelectedTime] = useState<string>('All Time');
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -212,22 +70,84 @@ export default function IssuesPage() {
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, searchParams]);
 
-  const histogramData = useMemo<HistogramDatum[]>(() => {
+  // Extrair lista de membros únicos
+  const members = useMemo<string[]>(() => {
+    if (!selectedRepo) return ['All Members'];
+    const uniqueMembers = new Set<string>();
+    selectedRepo.activities.forEach((activity) => {
+      const memberName = activity.user.displayName || activity.user.login || 'Desconhecido';
+      uniqueMembers.add(memberName);
+    });
+    return ['All Members', ...Array.from(uniqueMembers).sort()];
+  }, [selectedRepo]);
+
+  // Função para filtrar por período de tempo
+  const filterByTime = (activities: any[], timeFilter: string) => {
+    if (timeFilter === 'All Time') return activities;
+    
+    const now = new Date();
+    const cutoffDate = new Date();
+    
+    switch (timeFilter) {
+      case 'Last 24 hours':
+        cutoffDate.setHours(now.getHours() - 24);
+        break;
+      case 'Last 7 days':
+        cutoffDate.setDate(now.getDate() - 7);
+        break;
+      case 'Last 30 days':
+        cutoffDate.setDate(now.getDate() - 30);
+        break;
+      case 'Last 6 months':
+        cutoffDate.setMonth(now.getMonth() - 6);
+        break;
+      case 'Last Year':
+        cutoffDate.setFullYear(now.getFullYear() - 1);
+        break;
+      default:
+        return activities;
+    }
+    
+    return activities.filter((activity) => {
+      const activityDate = new Date(activity.date);
+      return activityDate >= cutoffDate;
+    });
+  };
+
+  // Aplicar filtros nas atividades
+  const filteredActivities = useMemo(() => {
     if (!selectedRepo) return [];
+    
+    let activities = selectedRepo.activities;
+    
+    // Filtrar por membro
+    if (selectedMember !== 'All Members') {
+      activities = activities.filter((activity) => {
+        const memberName = activity.user.displayName || activity.user.login || 'Desconhecido';
+        return memberName === selectedMember;
+      });
+    }
+    
+    // Filtrar por tempo
+    activities = filterByTime(activities, selectedTime);
+    
+    return activities;
+  }, [selectedRepo, selectedMember, selectedTime]);
+
+  const histogramData = useMemo<HistogramDatum[]>(() => {
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
+    for (const activity of filteredActivities) {
       const day = activity.date.slice(0, 10);
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
       .map(([dateLabel, count]) => ({ dateLabel, count }))
       .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo]);
+  }, [filteredActivities]);
 
   const pieData = useMemo<PieDatum[]>(() => {
-    if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
+    for (const activity of filteredActivities) {
       const label = activity.user.displayName || activity.user.login || 'Desconhecido';
       counts.set(label, (counts.get(label) ?? 0) + 1);
     }
@@ -250,7 +170,7 @@ export default function IssuesPage() {
       color: colorScale('Others') 
     });
     return result;
-  }, [selectedRepo]);
+  }, [filteredActivities]);
 
   return (
     <DashboardLayout currentSubPage="issues" currentPage="repos" data={data} currentRepo={selectedRepo ? selectedRepo.name : "No repository selected"}>
@@ -262,12 +182,23 @@ export default function IssuesPage() {
             {selectedRepo && (
               <p className="text-slate-400 text-sm mt-2">
                 {selectedRepo.name === 'All repositories'
-                  ? `${repositories.length} repositories • ${selectedRepo.activities.length} activities`
-                  : `${selectedRepo.name} • ${selectedRepo.activities.length} issues`}
+                  ? `${repositories.length} repositories • ${filteredActivities.length} activities (filtered from ${selectedRepo.activities.length})`
+                  : `${selectedRepo.name} • ${filteredActivities.length} issues (filtered from ${selectedRepo.activities.length})`}
               </p>
             )}
           </div>
         </div>
+      </div>
+
+      {/* Filtros */}
+      <div className="mb-6 border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+        <BaseFilters
+          members={members}
+          selectedMember={selectedMember}
+          onMemberChange={setSelectedMember}
+          selectedTime={selectedTime}
+          onTimeChange={setSelectedTime}
+        />
       </div>
 
       {/* Grid de gráficos */}
