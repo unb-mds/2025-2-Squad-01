@@ -15,13 +15,15 @@ import {
   forceManyBody,
   forceCenter,
   drag as d3Drag,
-  Simulation, SimulationNodeDatum, SimulationLinkDatum, D3DragEvent, 
+  Simulation, SimulationNodeDatum, SimulationLinkDatum, D3DragEvent,
   ScaleSequential, scaleSequential, interpolateReds, ScaleLinear, axisRight,
   range as d3Range
 } from 'd3';
+import * as d3 from 'd3';
 import { zoom } from 'd3-zoom';
 import type { PieArcDatum } from 'd3';
-import type { HistogramDatum, PieDatum, CollaborationEdge, HeatmapDataPoint} from '../types';
+import type { PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint } from '../types';
+import { Filter } from './Filter';
 
 interface NodeData extends SimulationNodeDatum { id: string; }
 interface LinkData extends SimulationLinkDatum<NodeData> { source: NodeData; target: NodeData; }
@@ -34,7 +36,7 @@ interface LinkData extends SimulationLinkDatum<NodeData> { source: NodeData; tar
  *
  * @param data - Array of histogram data points with date labels and counts
  */
-export function Histogram({ data }: { data: HistogramDatum[] }) {
+export function Histogram({ data, timeRange }: { data: BasicDatum[]; timeRange?: string }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
@@ -59,12 +61,12 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
     const margin = { top: 20, right: 20, bottom: 40, left: 58 };
 
     const x = scaleBand<string>()
-      .domain(data.map((d) => d.dateLabel))
+      .domain(data.map((d) => d.date))
       .range([margin.left, width - margin.right])
       .padding(0.12);
 
     const y = scaleLinear()
-      .domain([0, max(data, (d: HistogramDatum) => d.count) ?? 0])
+      .domain([0, max(data, (d: BasicDatum) => d.value) ?? 0])
       .nice()
       .range([height - margin.bottom, margin.top]);
 
@@ -72,7 +74,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
 
     const tickInterval = Math.max(1, Math.floor(data.length / 12));
     const tickValues = data
-      .map((d, i) => ({ v: d.dateLabel, i }))
+      .map((d, i) => ({ v: d.date, i }))
       .filter((x) => x.i % tickInterval === 0)
       .map((x) => x.v);
 
@@ -113,16 +115,16 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
     svg
       .append('g')
       .selectAll('rect')
-      .data<HistogramDatum>(data)
+      .data<BasicDatum>(data)
       .join('rect')
-      .attr('x', (d) => x(d.dateLabel) ?? margin.left)
-      .attr('y', (d) => y(d.count))
+      .attr('x', (d) => x(d.date) ?? margin.left)
+      .attr('y', (d) => y(d.value))
       .attr('width', x.bandwidth())
-      .attr('height', (d) => y(0) - y(d.count))
+      .attr('height', (d) => y(0) - y(d.value))
       .attr('rx', 4)
       .attr('fill', '#3b82f6')
       .append('title')
-      .text((d) => `${d.dateLabel}: ${d.count} commit(s)`);
+      .text((d) => `${d.date}: ${d.value} commit(s)`);
   }, [data]);
 
   return <svg ref={svgRef} className="w-full h-[520px]" role="img" aria-label="Histogram" />;
@@ -186,16 +188,16 @@ export function PieChart({ data }: { data: PieDatum[] }) {
 }
 
 type CollaborationNetworkGraphProps = {
-  data: CollaborationEdge[]; 
-  width?: number; 
-  height?: number; 
+  data: CollaborationEdge[];
+  width?: number;
+  height?: number;
 };
 
 export function CollaborationNetworkGraph({
   data,
   width = 600,
   height = 500,
-}: { data: CollaborationEdge[], width?: number, height?: number }) {
+}: { data: CollaborationEdge[]; width?: number; height?: number }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   const graphData = useMemo(() => {
@@ -205,7 +207,7 @@ export function CollaborationNetworkGraph({
       userSet.add(edge.user1);
       userSet.add(edge.user2);
     });
-    const nodes: NodeData[] = Array.from(userSet).map(id => ({ id })); 
+    const nodes: NodeData[] = Array.from(userSet).map(id => ({ id }));
     const links: { source: string | NodeData; target: string | NodeData }[] = validEdges.map(edge => ({
   source: edge.user1,
   target: edge.user2,
@@ -216,7 +218,7 @@ export function CollaborationNetworkGraph({
   useEffect(() => {
     if (!svgRef.current || graphData.nodes.length === 0) return;
 
-    const svg = select(svgRef.current);
+  const svg = select(svgRef.current);
     svg.selectAll('*').remove();
 
     const container = svg.append("g");
@@ -296,11 +298,11 @@ export function CollaborationNetworkGraph({
       .on("end", dragended as any);
   }
 
-    const zoomBehavior = zoom<SVGSVGElement, unknown>() 
-    .scaleExtent([0.1, 4]) 
-    .on("zoom", (event) => { 
-        container.attr("transform", event.transform); 
-    });
+  const zoomBehavior = zoom<SVGSVGElement, unknown>()
+  .scaleExtent([0.1, 4])
+  .on("zoom", (event) => {
+    container.attr("transform", event.transform);
+  });
 
     svg.call(zoomBehavior);
 
@@ -311,12 +313,12 @@ export function CollaborationNetworkGraph({
   }, [graphData, width, height]);
 
   return (
-    <svg 
-         ref={svgRef} 
-         viewBox={`0 0 ${800} ${300}`} 
+    <svg
+         ref={svgRef}
+         viewBox={`0 0 ${800} ${300}`}
          preserveAspectRatio="xMidYMid meet" // Mantém a proporção e centraliza o conteúdo.
-         style={{ width: '100%', height: '100%' }} 
-      > 
+         style={{ width: '100%', height: '100%' }}
+      >
       </svg>
   );
 }
@@ -326,7 +328,7 @@ export function ActivityHeatmap({
   data,
   width = 700, // Largura total do SVG
   height = 250 // Altura total do SVG
-}: { data: HeatmapDataPoint[], width?: number, height?: number }) {
+}: { data: HeatmapDataPoint[]; width?: number; height?: number }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   const processedData = useMemo(() => {
@@ -339,7 +341,7 @@ export function ActivityHeatmap({
         return;
     }
 
-    const svg = select(svgRef.current);
+  const svg = select(svgRef.current);
     svg.selectAll('*').remove(); 
 
     svg.attr('viewBox', `0 0 ${width} ${height}`); 
@@ -364,8 +366,8 @@ export function ActivityHeatmap({
         return; 
     }
 
-    const hoursDomain = d3Range(24).map(String);
-    const daysDomain = d3Range(7).map(String);
+  const hoursDomain = d3Range(24).map(String);
+  const daysDomain = d3Range(7).map(String);
     
     const xScale = scaleBand()
       .domain(hoursDomain)
@@ -377,7 +379,7 @@ export function ActivityHeatmap({
       .range([0, graphHeight]) // Usa graphHeight baseado na prop
       .padding(0.05);
 
-    const maxCount = max(processedData, d => d.activity_count) || 1; 
+  const maxCount = max(processedData, d => d.activity_count) || 1; 
     const minCount = 0; 
 
     const colorScale = scaleSequential(interpolateReds)
@@ -421,7 +423,7 @@ export function ActivityHeatmap({
     const legendGroup = svg.append("g")
         .attr("transform", `translate(${margin.left + graphWidth + 10}, ${margin.top})`); 
 
-    const legendScale = scaleLinear<number>() 
+  const legendScale = scaleLinear<number>() 
         .domain([minCount, maxCount]) 
         .range([graphHeight, 0]); // Usa graphHeight baseado na prop
 
@@ -453,4 +455,161 @@ export function ActivityHeatmap({
       </svg>
       </div>
   );
+}
+export function LineChart({ data, timeRange }: { data: BasicDatum[]; timeRange?: string })
+{
+  const svgRef = useRef<SVGSVGElement | null>(null);
+
+  useEffect(() => {
+    if (!svgRef.current) return;
+    const svg = select(svgRef.current);
+    svg.selectAll('*').remove();
+
+
+
+    const margin = { top: 40, right: 20, bottom: 36, left: 58 };
+    const innerWidth = 920 - margin.left - margin.right;
+    const innerHeight = 500 - margin.top - margin.bottom;
+    const outerWidth = innerWidth + margin.left + margin.right;
+    const outerHeight = innerHeight + margin.top + margin.bottom;
+
+    svg.attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`);
+
+    const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+    const x = d3.scaleTime().range([0, innerWidth]);
+    const y = d3.scaleLinear().range([innerHeight, 0]);
+
+    // Domains with guards for degenerate cases
+    const xExtent = d3.extent(data, (d) => new Date(d.date)) as [Date, Date];
+    let xMin = xExtent[0];
+    let xMax = xExtent[1];
+    if (xMin && xMax && +xMin === +xMax) {
+      // Expand minimally based on selected time range to avoid zero-length scale
+      if (timeRange === 'Last 24 hours') {
+        xMax = new Date(xMax.getTime() + 60 * 60 * 1000); // +1 hour
+      } else if (timeRange === 'Last 7 days' || timeRange === 'Last 30 days') {
+        xMax = new Date(xMax.getTime() + 24 * 60 * 60 * 1000); // +1 day
+      } else {
+        const tmp = new Date(xMax);
+        tmp.setMonth(tmp.getMonth() + 1); // +1 month
+        xMax = tmp;
+      }
+    }
+    if (xMin && xMax) x.domain([xMin, xMax]);
+
+    const yMax = d3.max(data, (d) => d.value) ?? 0;
+    y.domain([0, yMax <= 0 ? 1 : yMax]).nice();
+
+    // Simplified tick sampling like the bar chart: pick ~12 ticks from data points
+    const tickInterval = Math.max(1, Math.floor(data.length / 12));
+    const tickValues: Date[] = data
+      .map((d, i) => ({ v: new Date(d.date), i }))
+      .filter((x) => x.i % tickInterval === 0)
+      .map((x) => x.v);
+    const tickFormatter =
+      timeRange === 'Last 24 hours'
+        ? (d3.timeFormat('%H:%M') as unknown as (n: number | { valueOf(): number }) => string)
+        : timeRange === 'Last 30 days'
+        ? (d3.timeFormat('%m-%d') as unknown as (n: number | { valueOf(): number }) => string)
+        : timeRange === 'Last 6 months'
+        ? (d3.timeFormat('%Y-%m') as unknown as (n: number | { valueOf(): number }) => string)
+        : timeRange === 'Last Year'
+        ? (d3.timeFormat('%Y-%m') as unknown as (n: number | { valueOf(): number }) => string)
+        : (d3.timeFormat('%Y') as unknown as (n: number | { valueOf(): number }) => string);
+
+    // Grid lines (Y): horizontal lines across the chart area
+    const yGrid = g
+      .append('g')
+      .attr('class', 'grid-y')
+      .call(
+        d3
+          .axisLeft(y)
+          .ticks(6)
+          .tickSize(-innerWidth)
+          .tickFormat(() => '')
+      );
+    yGrid.select('.domain').remove();
+    yGrid.selectAll('line').style('stroke', '#2f3640').style('stroke-opacity', 0.7);
+
+    // Grid lines (X): vertical lines aligned with tickValues (data points)
+    const xGrid = g
+      .append('g')
+      .attr('class', 'grid-x')
+      .attr('transform', `translate(0, ${innerHeight})`)
+      .call(
+        d3
+          .axisBottom(x)
+          .tickValues(tickValues)
+          .tickSize(-innerHeight)
+          .tickFormat(() => '')
+      );
+    xGrid.select('.domain').remove();
+    xGrid.selectAll('line').style('stroke', '#2f3640').style('stroke-opacity', 0.7);
+
+    // X Axis appended within chart group (aligned with plot area), centered text
+    const xAxis = g
+      .append('g')
+      .attr('transform', `translate(0, ${innerHeight})`)
+      .style('color', '#e2e8f0')
+      .style('font-size', '12px')
+      .call(
+        d3
+          .axisBottom(x)
+          .tickValues(tickValues)
+          .tickFormat(tickFormatter)
+      );
+    // Keep X domain line visible and style it
+    xAxis.select('.domain').remove();
+    xAxis.selectAll('.tick line').style('stroke-opacity', 0); // hidden; xGrid handles vertical lines
+    xAxis.selectAll('.tick text').attr('fill', '#777').style('text-anchor', 'middle');
+
+    // Y Axis appended within chart group; remove domain line
+    const yAxis = g
+      .append('g')
+      .style('font-size', '12px')
+      .call(
+        d3
+          .axisLeft(y)
+          .ticks(6)
+          .tickSize(0)
+          .tickPadding(10)
+
+      );
+    yAxis.select('.domain').remove();
+    yAxis.selectAll('.tick text').style('fill', '#777');
+
+    // Line generator and path
+    const line = d3
+      .line<BasicDatum>()
+      .x((d) => x(new Date(d.date)))
+      .y((d) => y(d.value));
+
+    g.append('path')
+      .datum(data)
+      .attr('fill', 'none')
+      .attr('stroke', '#3b82f6')
+      .attr('stroke-width', 2)
+      // pass the generator function so d3 invokes it with bound data
+      .attr('d', line as unknown as any);
+    let opacity = 1;
+    if (timeRange !== 'Last 24 hours' && timeRange !== 'Last 7 days' && timeRange !== 'Last 30 days') {
+      opacity = 0;
+    }
+    else{
+      opacity = 1;
+    }
+    g.append('g')
+      .selectAll('circle')
+      .data(data)
+      .join('circle')
+      .attr('cx', (d) => x(new Date(d.date)))
+      .attr('cy', (d) => y(d.value))
+      .attr('r', 3)
+      .attr('fill', '#60a5fa')
+      .attr('stroke', '#1d4ed8')
+      .attr('stroke-width', 1)
+      .style('opacity', opacity);
+  }, [data, timeRange]);
+  return (<>{<svg ref={svgRef} className="w-full" role="img" aria-label="Line chart" />} <Filter title={"Select Graph"} content={["Line Graph","Bar Graph"]}  /> </>);
 }
