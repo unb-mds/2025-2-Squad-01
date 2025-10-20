@@ -85,6 +85,9 @@ def process_temporal_analysis() -> List[str]:
                 'type': 'commit',
                 'repo': commit.get('repo_name', 'unknown'),
                 'user': commit.get('author', {}).get('login', 'unknown') if commit.get('author') else 'unknown'
+                'additions': commit.get('additions', 'none'),
+                'deletions': commit.get('deletions', 'none'),
+                'total_changes': commit.get('total_changes', 'none')
             })
     
 

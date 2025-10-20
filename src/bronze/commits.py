@@ -34,13 +34,39 @@ def extract_commits(client: GitHubAPIClient, config: OrganizationConfig, use_cac
         commits = client.get_paginated(commits_base, use_cache=use_cache, per_page=100)
         
         if commits:
-            # Add repo context to each commit
-            repo_commits = [{**commit, 'repo_name': repo_name} for commit in commits]
-            all_commits.extend(repo_commits)
+        #    # Add repo context to each commit
+       #     repo_commits = [{**commit, 'repo_name': repo_name} for commit in commits]
+      #      all_commits.extend(repo_commits)
+
+            data_commits = []
+            for commit in commits:
+                sha = commit.get('sha')
+                additions = None
+                deletions = None
+                total_changes = None
+                if sha:
+                    details_url = f"https://api.github.com/repos/{full_name}/commits/{sha}"
+                    details = client.get_with_cache(details_url, use_cache)
+                    if details and isinstance(details, dict):
+                        stats = details.get('stats') or {}
+                        additions = stats.get('additions')
+                        deletions = stats.get('deletions')
+                        total_changes = stats.get('total')
+                # Merge original commit with stats and repo context
+                data_commits.append({
+                    **commit,
+                    'repo_name': repo_name,
+                    'additions': additions,
+                    'deletions': deletions,
+                    'total_changes': total_changes
+                })
+
+            # Add to global list
+            all_commits.extend(data_commits)
             
             # Save per-repo commits
             repo_commits_file = save_json_data(
-                repo_commits,
+                data_commits,
                 f"data/bronze/commits_{repo_name}.json"
             )
             generated_files.append(repo_commits_file)
