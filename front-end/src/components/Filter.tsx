@@ -23,13 +23,13 @@ export function Filter({ title, content, sendSelectedValue, value }: FilterProps
   };
 
   return (
-    <div className="flex items-center gap-4">
-      <label className="text-sm font-medium text-slate-300 min-w-[80px]">{title}:</label>
+    <div className="flex items-center gap-3 sm:gap-4 justify-center">
+      <label className="text-sm font-medium text-slate-300 min-w-[80px] text-right">{title}:</label>
       <select
         id={`${title.toLowerCase()}-filter`}
         value={selected}
         onChange={(e) => handleChange(e.target.value)}
-        className="px-3 py-2 text-sm rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        className="px-3 py-2 text-sm rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-w-[190px]"
         style={{
           backgroundColor: '#333333',
           borderColor: '#444444',

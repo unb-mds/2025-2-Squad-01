@@ -8,3 +8,8 @@ export type PieDatum = {
   value: number;
   color?: string;
 };
+
+export type BasicDatum = {
+  date: string;
+  value: number;
+};
