@@ -75,6 +75,38 @@ class GitHubAPIClient:
         except requests.exceptions.RequestException as e:
             print(f"[ERROR] Request error for {url}: {str(e)}")
             return None
+
+    def get_paginated(
+        self,
+        base_url: str,
+        use_cache: bool = True,
+        per_page: int = 100,
+        start_page: int = 1,
+        max_pages: Optional[int] = None,
+    ) -> List[Any]:
+        """
+        Fetch all pages for list endpoints that support per_page & page params.
+        Stops when a page returns fewer than per_page results or when max_pages is reached.
+        """
+        results: List[Any] = []
+        page = start_page
+        while True:
+            if max_pages is not None and page > max_pages:
+                break
+            sep = '&' if ('?' in base_url) else '?'
+            url = f"{base_url}{sep}per_page={per_page}&page={page}"
+            data = self.get_with_cache(url, use_cache)
+            if data is None:
+                break
+            if isinstance(data, list):
+                results.extend(data)
+                if len(data) < per_page:
+                    break
+            else:
+                # Non-list response; stop paging
+                break
+            page += 1
+        return results
     
     def _log_rate_limit(self, response: requests.Response) -> None:
 
@@ -143,14 +175,10 @@ class OrganizationConfig:
     
     def __init__(self, org_name: str):
         self.org_name = org_name
-        self.repo_blacklist = [
-            "Hi.Events",
-            "Qualifying-Software-Engineers-Undergraduates-in-DevOps"
-        ]
+        # Allow full extraction by default (no blacklist)
+        self.repo_blacklist: List[str] = []
     
     def should_skip_repo(self, repo: Dict[str, Any]) -> bool:
         
-        return (
-            repo.get('name') in self.repo_blacklist or
-            repo.get('fork', False)
-        )
+        # Do not skip any repository to enable full extraction
+        return False

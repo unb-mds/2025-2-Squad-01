@@ -6,7 +6,7 @@ from utils.github_api import GitHubAPIClient, OrganizationConfig, save_json_data
 def extract_repositories(client: GitHubAPIClient, config: OrganizationConfig, use_cache: bool = True) -> List[str]:  
     
     repos_url = f"https://api.github.com/orgs/{config.org_name}/repos"
-    raw_repos = client.get_with_cache(repos_url, use_cache)
+    raw_repos = client.get_paginated(repos_url, use_cache=use_cache, per_page=100)
     
     if not raw_repos:
         print("ERROR: Failed to fetch repositories")
@@ -39,7 +39,7 @@ def extract_repositories(client: GitHubAPIClient, config: OrganizationConfig, us
     
     # Save individual repositories
     repo_details = []
-    for repo in filtered_repos[:5]:  # LIMITE DE 5 REPOS
+    for repo in filtered_repos:
         repo_detail_url = f"https://api.github.com/repos/{repo['full_name']}"
         detail = client.get_with_cache(repo_detail_url, use_cache)
         if detail:

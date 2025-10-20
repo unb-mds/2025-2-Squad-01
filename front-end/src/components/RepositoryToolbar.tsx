@@ -26,7 +26,7 @@ const menuItems: MenuItem[] = [
   { id: 'structure', label: 'Structure', icon: '🏗️' },
 ];
 
-export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate }: SidebarProps) {
+export default function RepoToolbar({ currentRepo, currentPage, data}: SidebarProps) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -36,7 +36,6 @@ export default function RepoToolbar({ currentRepo, currentPage, data, onNavigate
   };
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 

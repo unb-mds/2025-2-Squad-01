@@ -11,9 +11,6 @@ import {
   pie as d3Pie,
   arc as d3Arc,
   scaleOrdinal,
-  schemeTableau10,
-  schemeBlues,
-  schemeGreens,
   schemeSpectral
 } from 'd3';
 import type { PieArcDatum } from 'd3';
@@ -24,153 +21,22 @@ import type {
 import type {
   ProcessedActivityResponse,
   RepoActivitySummary,
-  ProcessedActivity,
 } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
 import { useSearchParams } from 'react-router-dom';
+import BaseFilters from '../components/base-filters';
+import { Histogram } from '../components/Graphs';
+import { PieChart } from '../components/Graphs';
 
-
-export function Histogram({ data }: { data: HistogramDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', '#e2e8f0')
-  .text('No commits available for this repository');
-      return;
-    }
-
-    const width = 700;
-    const height = 300;
-    const margin = { top: 24, right: 24, bottom: 72, left: 56 };
-
-    const x = scaleBand<string>()
-      .domain(data.map((d) => d.dateLabel))
-      .range([margin.left, width - margin.right])
-      .padding(0.12);
-
-    const y = scaleLinear()
-      .domain([0, max(data, (d: HistogramDatum) => d.count) ?? 0])
-      .nice()
-      .range([height - margin.bottom, margin.top]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-
-    const tickInterval = Math.max(1, Math.floor(data.length / 12));
-    const tickValues = data
-      .map((d, i) => ({ v: d.dateLabel, i }))
-      .filter((x) => x.i % tickInterval === 0)
-      .map((x) => x.v);
-
-    const xAxis = svg
-      .append('g')
-      .attr('transform', `translate(0, ${height - margin.bottom})`)
-      .call(axisBottom(x).tickValues(tickValues).tickFormat((v) => String(v)));
-    xAxis
-      .selectAll('text')
-      .style('text-anchor', 'end')
-      .style('fill', '#e2e8f0')
-      .attr('dx', '-0.6em')
-      .attr('dy', '0.15em')
-      .attr('transform', 'rotate(-35)');
-    xAxis.selectAll('line').style('stroke', '#475569');
-    xAxis.select('.domain').style('stroke', '#475569');
-
-    const yAxis = svg
-      .append('g')
-      .attr('transform', `translate(${margin.left},0)`) 
-      .call(axisLeft(y).ticks(6));
-    yAxis.selectAll('text').style('fill', '#e2e8f0');
-    yAxis.selectAll('line').style('stroke', '#475569');
-    yAxis.select('.domain').style('stroke', '#475569');
-    yAxis
-      .append('text')
-      .attr('x', 0)
-      .attr('y', margin.top - 16)
-      .attr('fill', '#e2e8f0')
-      .attr('text-anchor', 'start')
-      .attr('font-size', 12)
-  .text('Commits');
-
-    svg
-      .append('g')
-      .selectAll('rect')
-      .data<HistogramDatum>(data)
-      .join('rect')
-      .attr('x', (d) => x(d.dateLabel) ?? margin.left)
-      .attr('y', (d) => y(d.count))
-      .attr('width', x.bandwidth())
-      .attr('height', (d) => y(0) - y(d.count))
-      .attr('rx', 4)
-      .attr('fill', '#3b82f6')
-      .append('title')
-      .text((d) => `${d.dateLabel}: ${d.count} commit(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histograma" />;
-}
-
-function PieChart({ data }: { data: PieDatum[] }) {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-    if (!data.length) {
-      svg
-        .append('text')
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'currentColor')
-  .text('No commits available for this repository');
-      return;
-    }
-
-    const width = 240;
-    const height = 240;
-    const radius = Math.min(width, height) / 2 - 6;
-
-    const color = scaleOrdinal<string, string>()
-      .domain(data.map((d) => d.label))
-      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-    const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
-    const pieGen = d3Pie<PieDatum>().sort(null).value((d) => d.value);
-    const arcGen = d3Arc<PieArcDatum<PieDatum>>().innerRadius(0).outerRadius(radius);
-    const arcs = pieGen(data);
-
-    g
-      .selectAll('path')
-      .data<PieArcDatum<PieDatum>>(arcs)
-      .join('path')
-      .attr('d', (d) => arcGen(d) ?? '')
-      .attr('fill', (d) => color(d.data.label))
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.2)
-      .append('title')
-      .text((d) => `${d.data.label}: ${d.data.value} commit(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza" />;
-}
 
 export default function CommitsPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
+  const [selectedMember, setSelectedMember] = useState<string>('All');
+  const [selectedTime, setSelectedTime] = useState<string>('Last 24 hours');
+
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -209,32 +75,104 @@ export default function CommitsPage() {
     if (selectedRepoId === 'all') {
       return {
         id: -1,
-  name: 'All repositories',
+        name: 'All repositories',
         activities: repositories.flatMap((repo) => repo.activities),
       } as RepoActivitySummary;
     }
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, searchParams]);
 
-  // No local selection state; selection is driven by URL param managed by RepoToolbar
+  // Reset member filter when repository changes
+  useEffect(() => {
+    setSelectedMember('All');
+  }, [selectedRepo?.id]);
+
+  const members = useMemo<string[]>(() => {
+    if (!selectedRepo) return [];
+    const memberSet = new Set<string>();
+    
+    for ( const activity of selectedRepo.activities) {
+      const name = activity.user.displayName || activity.user.login || 'Unknown';  
+      memberSet.add(name);
+    }
+    const membersFound = Array.from(memberSet).sort((a,b) => a.localeCompare(b));
+    return ['All', ...membersFound];
+  }, [selectedRepo]);
+
+  const filteredActivities = useMemo(() => {
+    if (!selectedRepo) return [] as typeof selectedRepo.activities | [];
+    
+    if (!selectedMember || selectedMember === 'All') return selectedRepo.activities;
+    
+    return selectedRepo.activities.filter((activity) => {
+      const name = activity.user.displayName || activity.user.login || 'Unknown';
+      return name === selectedMember;
+    });
+  }, [selectedRepo, selectedMember]);
+
+  // Shared cutoff date based on selectedTime (used by histogram and pie)
+  const cutoffDate = useMemo<Date | null>(() => {
+    const now = new Date();
+    switch (selectedTime) {
+      case 'Last 24 hours': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 1);
+        return d;
+      }
+      case 'Last 7 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 7);
+        return d;
+      }
+      case 'Last 30 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 30);
+        return d;
+      }
+      case 'Last 6 months': {
+        const d = new Date(now);
+        d.setMonth(d.getMonth() - 6);
+        return d;
+      }
+      case 'Last Year': {
+        const d = new Date(now);
+        d.setFullYear(d.getFullYear() - 1);
+        return d;
+      }
+      default:
+        return null; // All Time
+    }
+  }, [selectedTime]);
 
   const histogramData = useMemo<HistogramDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
+    for (const activity of filteredActivities) {
       const day = activity.date.slice(0, 10);
+
+      if (cutoffDate) {
+        const activityDate = new Date(day + 'T00:00:00Z');
+        if (activityDate < cutoffDate) continue;
+      }
+
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
       .map(([dateLabel, count]) => ({ dateLabel, count }))
       .sort((a, b) => (a.dateLabel < b.dateLabel ? -1 : a.dateLabel > b.dateLabel ? 1 : 0));
-  }, [selectedRepo]);
+  }, [selectedRepo, filteredActivities, cutoffDate]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
     const counts = new Map<string, number>();
-    for (const activity of selectedRepo.activities) {
-      const label = activity.user.displayName || activity.user.login || 'Desconhecido';
+    for (const activity of filteredActivities) {
+      // Apply the same timeline cutoff to the pie chart data
+      if (cutoffDate) {
+        const day = activity.date.slice(0, 10);
+        const activityDate = new Date(day + 'T00:00:00Z');
+        if (activityDate < cutoffDate) continue;
+      }
+      const label = activity.user.displayName || activity.user.login || 'Unknown';
       counts.set(label, (counts.get(label) ?? 0) + 1);
     }
     const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
@@ -256,7 +194,9 @@ export default function CommitsPage() {
       color: colorScale('Others') 
     });
     return result;
-  }, [selectedRepo]);
+
+    
+  }, [selectedRepo, filteredActivities, cutoffDate]);
 
   return (
   <DashboardLayout currentSubPage="commits" currentPage="repos" data ={data} currentRepo={selectedRepo ? selectedRepo.name : "No repository selected"}>
@@ -264,7 +204,7 @@ export default function CommitsPage() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-bold text-white">Commits analysis</h2>
+            <h2 className="text-3xl font-bold text-white">Commits analysis </h2>
             {selectedRepo && (
               <p className="text-slate-400 text-sm mt-2">
                 {selectedRepo.name === 'All repositories'
@@ -273,65 +213,85 @@ export default function CommitsPage() {
               </p>
             )}
           </div>
-
-          {/* Filtro removido: seleção é feita no RepositoryToolbar */}
         </div>
       </div>
+      
+        <BaseFilters members={members} selectedMember={selectedMember} selectedTime={selectedTime} onMemberChange={setSelectedMember} onTimeChange={setSelectedTime}></BaseFilters>
 
+      
       {/* Grid de gráficos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
   {/* Commits timeline */}
-        <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <p className="text-left p-6 font-bold text-white mb-4">Commits timeline</p>
-          {loading ? (
-            <div className="h-[300px] flex items-center justify-center">
-              <div className="text-slate-400">Carregando...</div>
-            </div>
-          ) : error ? (
-            <div className="h-[300px] flex items-center justify-center">
-              <p className="text-red-400">{error}</p>
-            </div>
-          ) : (
-            <Histogram data={histogramData} />)
-          }
+  
+  
+        <div className="border rounded-lg h-200 w-190" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          
+          {/* Header da seção */}
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h3 className="text-xl font-bold text-white">Timeline</h3>
+          </div>
+
+          
+          {/* Área do gráfico */}
+          <div className="pt-3 h-auto w-auto">
+            {loading ? (
+              <div className="h-[420px] flex items-center justify-center">
+                <div className="text-slate-400">Loading...</div>
+              </div>
+            ) : error ? (
+              <div className="h-[420px] flex items-center justify-center">
+                <p className="text-red-400">{error}</p>
+              </div>
+            ) : (
+              <Histogram data={histogramData} />
+            )}
+          </div>
         </div>
 
         {/* Contribuidores */}
-        <div className="border rounded-lg p-6" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-          <h3 className="text-lg font-bold text-white mb-4">Contributors</h3>
-          {loading ? (
-            <div className="h-[140px] flex items-center justify-center">
-              <div className="text-slate-400">Loading...</div>
-            </div>
-          ) : error ? (
-            <div className="h-[140px] flex items-center justify-center">
-              <p className="text-red-400">{error}</p>
-            </div>
-          ) : (
-            <>
-              <div className="flex items-center justify-center mb-2">
-                <PieChart data={pieData} />
+        <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          
+          {/* Header da seção */}
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h3 className="text-xl font-bold text-white">Contributors</h3>
+          </div>
+          
+          {/* Área do gráfico */}
+          <div className="p-6">
+            {loading ? (
+              <div className="h-[140px] flex items-center justify-center">
+                <div className="text-slate-400">Loading...</div>
               </div>
-              <div className="max-h-[180px] overflow-y-auto space-y-2">
-                {pieData.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center justify-between p-2 rounded"
-                    style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <div 
-                        className="w-3 h-3 rounded-full" 
-                        style={{ backgroundColor: item.color }}
-                      ></div>
-                      <span className="text-sm text-slate-300">{item.label}</span>
+            ) : error ? (
+              <div className="h-[140px] flex items-center justify-center">
+                <p className="text-red-400">{error}</p>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center justify-center mb-2">
+                  <PieChart data={pieData} />
+                </div>
+                <div className="max-h-[400px] overflow-y-auto space-y-2">
+                  {pieData.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex items-center justify-between p-2 rounded"
+                      style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
+                    >
+                      <div className="flex items-center gap-2">
+                        <div 
+                          className="w-3 h-3 rounded-full" 
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                        <span className="text-sm text-slate-300">{item.label}</span>
+                      </div>
+                      <span className="text-xs font-bold text-slate-200">{item.value}</span>
                     </div>
-                    <span className="text-xs font-bold text-slate-200">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </DashboardLayout>

@@ -19,7 +19,7 @@ def extract_commits(client: GitHubAPIClient, config: OrganizationConfig, use_cac
         filtered_repos = filtered_repos[1:]
     
     # Extract commits from each repository
-    for repo in filtered_repos[:5]:  # LIMITE DE 5 REPOS
+    for repo in filtered_repos:
         if not repo or not isinstance(repo, dict):
             print(f"Skipping invalid repo entry: {repo}")
             continue
@@ -29,9 +29,9 @@ def extract_commits(client: GitHubAPIClient, config: OrganizationConfig, use_cac
         
         print(f"Processing commits for: {repo_name}")
         
-        # Get commits
-        commits_url = f"https://api.github.com/repos/{full_name}/commits?per_page=100"
-        commits = client.get_with_cache(commits_url, use_cache)
+        # Get commits (paginated)
+        commits_base = f"https://api.github.com/repos/{full_name}/commits"
+        commits = client.get_paginated(commits_base, use_cache=use_cache, per_page=100)
         
         if commits:
             # Add repo context to each commit

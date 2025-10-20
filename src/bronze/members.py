@@ -28,7 +28,7 @@ def extract_members(client: GitHubAPIClient, config: OrganizationConfig, use_cac
             contributors_set = set()
             contributor_details = {}
             
-            for repo in repos_data[:5]: 
+            for repo in repos_data:
                 if repo and isinstance(repo, dict) and repo.get('full_name'):
                     contrib_url = f"https://api.github.com/repos/{repo['full_name']}/contributors"
                     repo_contributors = client.get_with_cache(contrib_url, use_cache)
@@ -102,11 +102,11 @@ def extract_members(client: GitHubAPIClient, config: OrganizationConfig, use_cac
     
     # Get detailed member info
     detailed_members = []
-    for member in raw_members:
-        member_url = f"https://api.github.com/users/{member['login']}"
-        detail = client.get_with_cache(member_url, use_cache)
-        if detail:
-            detailed_members.append(detail)
+  #  for member in raw_members:
+   #     member_url = f"https://api.github.com/users/{member['login']}"
+   #     detail = client.get_with_cache(member_url, use_cache)
+   #     if detail:
+   #         detailed_members.append(detail)
     
     if detailed_members:
         detailed_file = save_json_data(
