@@ -1,5 +1,4 @@
-
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   select,
   scaleBand,
@@ -10,16 +9,19 @@ import {
   pie as d3Pie,
   arc as d3Arc,
   scaleOrdinal,
-  schemeSpectral
+  schemeSpectral,
 } from 'd3';
 import type { PieArcDatum } from 'd3';
-import type {
-  HistogramDatum,
-  PieDatum,
-} from '../types';
+import type { HistogramDatum, PieDatum } from '../types';
 
-
-
+/**
+ * Histogram Component
+ *
+ * D3-based bar chart for visualizing commit activity over time.
+ * Displays commit counts per day with responsive scaling and tooltips.
+ *
+ * @param data - Array of histogram data points with date labels and counts
+ */
 export function Histogram({ data }: { data: HistogramDatum[] }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
@@ -35,8 +37,8 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', '#e2e8f0')
-  .text('No commits available! Please change your filters or select another repository.');
-  
+        .text('No commits available! Please change your filters or select another repository.');
+
       return;
     }
 
@@ -65,7 +67,11 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
     const xAxis = svg
       .append('g')
       .attr('transform', `translate(0, ${height - margin.bottom})`)
-      .call(axisBottom(x).tickValues(tickValues).tickFormat((v) => String(v)));
+      .call(
+        axisBottom(x)
+          .tickValues(tickValues)
+          .tickFormat((v) => String(v))
+      );
     xAxis
       .selectAll('text')
       .style('text-anchor', 'end')
@@ -78,7 +84,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
 
     const yAxis = svg
       .append('g')
-      .attr('transform', `translate(${margin.left},0)`) 
+      .attr('transform', `translate(${margin.left},0)`)
       .call(axisLeft(y).ticks(6));
     yAxis.selectAll('text').style('fill', '#e2e8f0');
     yAxis.selectAll('line').style('stroke', '#475569');
@@ -90,7 +96,7 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
       .attr('fill', '#e2e8f0')
       .attr('text-anchor', 'start')
       .attr('font-size', 12)
-  .text('Commits');
+      .text('Commits');
 
     svg
       .append('g')
@@ -110,6 +116,14 @@ export function Histogram({ data }: { data: HistogramDatum[] }) {
   return <svg ref={svgRef} className="w-full h-[520px]" role="img" aria-label="Histogram" />;
 }
 
+/**
+ * PieChart Component
+ *
+ * D3-based pie chart for visualizing contributor distribution.
+ * Shows commit counts per contributor with color-coded segments.
+ *
+ * @param data - Array of pie data with labels, values, and colors
+ */
 export function PieChart({ data }: { data: PieDatum[] }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
@@ -117,6 +131,7 @@ export function PieChart({ data }: { data: PieDatum[] }) {
     if (!svgRef.current) return;
     const svg = select(svgRef.current);
     svg.selectAll('*').remove();
+
     if (!data.length) {
       svg
         .append('text')
@@ -124,7 +139,7 @@ export function PieChart({ data }: { data: PieDatum[] }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', 'currentColor')
-  .text('No commits available for this repository');
+        .text('No commits available for this repository');
       return;
     }
 
@@ -138,12 +153,13 @@ export function PieChart({ data }: { data: PieDatum[] }) {
 
     svg.attr('viewBox', `0 0 ${width} ${height}`);
     const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
-    const pieGen = d3Pie<PieDatum>().sort(null).value((d) => d.value);
+    const pieGen = d3Pie<PieDatum>()
+      .sort(null)
+      .value((d) => d.value);
     const arcGen = d3Arc<PieArcDatum<PieDatum>>().innerRadius(0).outerRadius(radius);
     const arcs = pieGen(data);
 
-    g
-      .selectAll('path')
+    g.selectAll('path')
       .data<PieArcDatum<PieDatum>>(arcs)
       .join('path')
       .attr('d', (d) => arcGen(d) ?? '')
