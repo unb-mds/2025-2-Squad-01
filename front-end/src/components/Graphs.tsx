@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef, useMemo, useState } from 'react';
 import {
   select,
   scaleBand,
@@ -36,8 +36,10 @@ interface LinkData extends SimulationLinkDatum<NodeData> { source: NodeData; tar
  *
  * @param data - Array of histogram data points with date labels and counts
  */
-export function Histogram({ data, timeRange }: { data: BasicDatum[]; timeRange?: string }) {
+export function Histogram({ data }: { data: BasicDatum[]; }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const [showLineGraph, setShowLineGraph] = useState(false);
+
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -88,19 +90,23 @@ export function Histogram({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       );
     xAxis
       .selectAll('text')
+      .style('opacity', '0.6')
       .style('text-anchor', 'end')
       .style('fill', '#e2e8f0')
       .attr('dx', '-0.6em')
       .attr('dy', '0.15em')
       .attr('transform', 'rotate(-35)');
     xAxis.selectAll('line').style('stroke', '#475569');
-    xAxis.select('.domain').style('stroke', '#475569');
+    xAxis.select('.domain').remove();
 
     const yAxis = svg
       .append('g')
       .attr('transform', `translate(${margin.left},0)`)
       .call(axisLeft(y).ticks(6));
-    yAxis.selectAll('text').style('fill', '#e2e8f0');
+        yAxis.selectAll('text')
+      .selectAll('text')
+      .style('fill', '#e2e8f0')
+      .style('opacity', '0.6');
     yAxis.selectAll('line').style('stroke', '#475569');
     yAxis.select('.domain').style('stroke', '#475569');
     yAxis
@@ -112,6 +118,43 @@ export function Histogram({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       .attr('font-size', 12)
       .text('Commits');
 
+    const lineOpacity = showLineGraph ? 1 : 0;
+    const rectOpacity = showLineGraph ? 0 : 1;
+
+
+    // Grid lines (Y): horizontal lines across the chart area
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+
+    const yGrid = svg
+      .append('g')
+      .attr('class', 'grid-y')
+      .attr('transform', `translate(${margin.left},0)`)
+      .call(
+        d3
+          .axisLeft(y)
+          .ticks(6)
+          .tickSize(-innerWidth)
+          .tickFormat(() => '')
+      );
+    yGrid.select('.domain').remove();
+    yGrid.selectAll('line').style('stroke', '#2f3640').style('stroke-opacity', lineOpacity - 0.3);
+
+    // Grid lines (X): vertical lines aligned with tickValues (data points)
+    const xGrid = svg
+      .append('g')
+      .attr('class', 'grid-x')
+      .attr('transform', `translate(0, ${height - margin.bottom})`)
+      .call(
+        d3
+          .axisBottom(x)
+          .tickValues(tickValues)
+          .tickSize(-innerHeight)
+          .tickFormat(() => '')
+      );
+    xGrid.select('.domain').remove();
+    xGrid.selectAll('line').style('stroke', '#2f3640').style('stroke-opacity', lineOpacity - 0.3);
+    
     svg
       .append('g')
       .selectAll('rect')
@@ -123,11 +166,70 @@ export function Histogram({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       .attr('height', (d) => y(0) - y(d.value))
       .attr('rx', 4)
       .attr('fill', '#3b82f6')
+      .style('opacity', rectOpacity)
       .append('title')
       .text((d) => `${d.date}: ${d.value} commit(s)`);
-  }, [data]);
 
-  return <svg ref={svgRef} className="w-full h-[520px]" role="img" aria-label="Histogram" />;
+
+    // Line chart overlay
+    const line = d3.line<BasicDatum>()
+      .x((d) => (x(d.date) ?? margin.left) + x.bandwidth() / 2)
+      .y((d) => y(d.value));
+
+    svg
+      .append('path')
+      .datum(data)
+      .attr('fill', 'none')
+      .attr('stroke', '#3b82f6')
+      .attr('stroke-width', 2)
+      .style('opacity', lineOpacity)
+      .attr('d', line as any);
+
+    // Add points on the line
+    svg
+      .append('g')
+      .selectAll('circle')
+      .data(data)
+      .join('circle')
+      .attr('cx', (d) => (x(d.date) ?? margin.left) + x.bandwidth() / 2)
+      .attr('cy', (d) => y(d.value))
+      .attr('r', 3)
+      .attr('fill', '#3b82f6')
+      .attr('stroke', '#3b82f6')
+      .attr('stroke-width', 1.5)
+      .style('opacity', 0)
+      .append('title')
+      .text((d) => `${d.date}: ${d.value} commit(s)`);
+
+
+      
+  }, [data, showLineGraph]);
+
+  return (
+    <>
+      <svg ref={svgRef} className="w-full h-[520px]" role="img" aria-label="Histogram" />
+      <button 
+        onClick={() => setShowLineGraph((prev) => !prev)}
+        className=" px-4 py-2 ml-8 mt-5 border-1 border-gray-500 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 flex items-center gap-2"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-5 w-5" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" 
+          />
+        </svg>
+        {showLineGraph ? 'Bar Graph' : 'Line Graph'}
+      </button>
+    </>
+  );
 }
 
 /**
@@ -154,9 +256,10 @@ export function PieChart({ data }: { data: PieDatum[] }) {
         .attr('text-anchor', 'middle')
         .attr('fill', 'currentColor')
         .text('No commits available for this repository');
+      
       return;
     }
-
+    
     const width = 240;
     const height = 240;
     const radius = Math.min(width, height) / 2 - 6;
@@ -568,6 +671,7 @@ export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?:
     const yAxis = g
       .append('g')
       .style('font-size', '12px')
+      
       .call(
         d3
           .axisLeft(y)
@@ -577,7 +681,8 @@ export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?:
 
       );
     yAxis.select('.domain').remove();
-    yAxis.selectAll('.tick text').style('fill', '#777');
+    
+      
 
     // Line generator and path
     const line = d3
