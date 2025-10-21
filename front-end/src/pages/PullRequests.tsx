@@ -16,139 +16,11 @@ import {
 import type { PieArcDatum } from 'd3';
 import DashboardLayout from '../components/DashboardLayout';
 import { Utils, ProcessedActivityResponse, RepoActivitySummary } from './Utils';
-import BaseFilters from '../components/base-filters';
+import BaseFilters from '../components/BaseFilters';
+import { Histogram } from '../components/Graphs';
+import { BasicDatum, HistogramDatum, PieDatum } from '../types';
+import { PieChart } from '../components/Graphs';
 
-// Componente de Histograma
-interface HistogramProps {
-  data: { date: string; count: number }[];
-}
-
-function Histogram({ data }: HistogramProps) {
-  const svgRef = useRef<SVGSVGElement>(null);
-
-  useEffect(() => {
-    if (!svgRef.current || !data.length) return;
-
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-
-    const width = 700;
-    const height = 300;
-    const margin = { top: 24, right: 24, bottom: 72, left: 56 };
-
-    const x = scaleBand<string>()
-      .domain(data.map((d) => d.date))
-      .range([margin.left, width - margin.right])
-      .padding(0.12);
-
-    const y = scaleLinear()
-      .domain([0, max(data, (d) => d.count) ?? 0])
-      .nice()
-      .range([height - margin.bottom, margin.top]);
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-
-    const tickInterval = Math.max(1, Math.floor(data.length / 12));
-    const tickValues = data
-      .map((d, i) => ({ v: d.date, i }))
-      .filter((x) => x.i % tickInterval === 0)
-      .map((x) => x.v);
-
-    const xAxis = svg
-      .append('g')
-      .attr('transform', `translate(0, ${height - margin.bottom})`)
-      .call(axisBottom(x).tickValues(tickValues).tickFormat((v) => String(v)));
-    xAxis
-      .selectAll('text')
-      .style('text-anchor', 'end')
-      .style('fill', '#e2e8f0')
-      .attr('dx', '-0.6em')
-      .attr('dy', '0.15em')
-      .attr('transform', 'rotate(-35)');
-    xAxis.selectAll('line').style('stroke', '#475569');
-    xAxis.select('.domain').style('stroke', '#475569');
-
-    const yAxis = svg
-      .append('g')
-      .attr('transform', `translate(${margin.left},0)`) 
-      .call(axisLeft(y).ticks(6));
-    yAxis.selectAll('text').style('fill', '#e2e8f0');
-    yAxis.selectAll('line').style('stroke', '#475569');
-    yAxis.select('.domain').style('stroke', '#475569');
-    yAxis
-      .append('text')
-      .attr('x', 0)
-      .attr('y', margin.top - 16)
-      .attr('fill', '#e2e8f0')
-      .attr('text-anchor', 'start')
-      .attr('font-size', 12)
-      .text('Pull Requests');
-
-    svg
-      .append('g')
-      .selectAll('rect')
-      .data(data)
-      .join('rect')
-      .attr('x', (d) => x(d.date) ?? margin.left)
-      .attr('y', (d) => y(d.count))
-      .attr('width', x.bandwidth())
-      .attr('height', (d) => y(0) - y(d.count))
-      .attr('rx', 4)
-      .attr('fill', '#3b82f6')
-      .append('title')
-      .text((d) => `${d.date}: ${d.count} pull request(s)`);
-  }, [data]);
-
-  return <svg ref={svgRef} className="w-full h-[300px]" role="img" aria-label="Histograma" />;
-}
-
-// Componente de Pizza
-interface PieChartProps {
-  data: { name: string; value: number; color: string }[];
-}
-
-function PieChart({ data }: PieChartProps) {
-  const svgRef = useRef<SVGSVGElement>(null);
-
-  useEffect(() => {
-    if (!svgRef.current || !data.length) return;
-
-    const svg = select(svgRef.current);
-    svg.selectAll('*').remove();
-
-    const width = 240;
-    const height = 240;
-    const radius = Math.min(width, height) / 2 - 6;
-
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
-    const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
-
-    const pie = d3Pie<{ name: string; value: number; color: string }>()
-      .value(d => d.value)
-      .sort(null);
-
-    const arc = d3Arc<PieArcDatum<{ name: string; value: number; color: string }>>()
-      .innerRadius(0)
-      .outerRadius(radius);
-
-    const arcs = pie(data);
-
-    g.selectAll('path')
-      .data<PieArcDatum<{ name: string; value: number; color: string }>>(arcs)
-      .join('path')
-      .attr('d', (d) => arc(d) ?? '')
-      .attr('fill', d => d.data.color)
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.2)
-      .append('title')
-      .text((d) => `${d.data.name}: ${d.data.value} pull request(s)`);
-
-  }, [data]);
-
-  return (
-    <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Gráfico de pizza" />
-  );
-}
 
 export default function PullRequestsPage() {
   const [searchParams] = useSearchParams();
@@ -280,7 +152,7 @@ export default function PullRequestsPage() {
   }, [selectedTime]);
 
   // Processar dados para o histograma
-  const histogramData = useMemo(() => {
+  const histogramData = useMemo<BasicDatum[]>(() => {
     if (!selectedRepoData) return [];
     
     const counts = new Map<string, number>();
@@ -296,12 +168,12 @@ export default function PullRequestsPage() {
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
     return [...counts.entries()]
-      .map(([date, count]) => ({ date, count }))
+      .map(([date, value]) => ({ date, value }))
       .sort((a, b) => a.date.localeCompare(b.date));
   }, [selectedRepoData, filteredActivities, cutoffDate]);
 
   // Processar dados para o gráfico de pizza
-  const pieChartData = useMemo(() => {
+  const pieChartData = useMemo<PieDatum[]>(() => {
     if (!selectedRepoData) return [];
     
     const userCounts: Record<string, number> = {};
@@ -318,24 +190,24 @@ export default function PullRequestsPage() {
     }
     
     const sorted = Object.entries(userCounts)
-      .map(([name, value]) => ({ name, value }))
+      .map(([label, value]) => ({ label, value }))
       .sort((a, b) => b.value - a.value);
     
     const top = sorted.slice(0, 8);
     const restTotal = sorted.slice(8).reduce((acc, item) => acc + item.value, 0);
     
     const colorScale = scaleOrdinal<string, string>()
-      .domain([...top.map(item => item.name), 'Others'])
+      .domain([...top.map(item => item.label), 'Others'])
       .range([...schemeSpectral[3], ...schemeSpectral[11]]);
     
     const result = top.map(item => ({
-      name: item.name,
+      label: item.label,
       value: item.value,
-      color: colorScale(item.name)
+      color: colorScale(item.label)
     }));
-    if (restTotal > 0) result.push({ 
-      name: 'Others', 
-      value: restTotal, 
+    if (restTotal > 0) result.push({
+      label: 'Others',
+      value: restTotal,
       color: colorScale('Others') 
     });
     return result;
@@ -390,11 +262,11 @@ export default function PullRequestsPage() {
           {selectedRepoData && (
             <>
               {/* Grid de gráficos - Layout horizontal */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-90 mb-8">
                 {/* Timeline */}
-                <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+                <div className="border rounded-lg h-300 w-170" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
                   {/* Header da seção */}
-                  <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+                  <div className="px-6 py-4 border-b " style={{ borderBottomColor: '#333333' }}>
                     <h3 className="text-xl font-bold text-white">Timeline</h3>
                   </div>
                   
@@ -443,7 +315,7 @@ export default function PullRequestsPage() {
                         <div className="max-h-[400px] overflow-y-auto space-y-2">
                           {pieChartData.map((item) => (
                             <div
-                              key={item.name}
+                              key={item.label}
                               className="flex items-center justify-between p-2 rounded"
                               style={{ backgroundColor: 'rgba(51, 51, 51, 0.3)' }}
                             >
@@ -452,7 +324,7 @@ export default function PullRequestsPage() {
                                   className="w-3 h-3 rounded-full" 
                                   style={{ backgroundColor: item.color }}
                                 ></div>
-                                <span className="text-sm text-slate-300">{item.name}</span>
+                                <span className="text-sm text-slate-300">{item.label}</span>
                               </div>
                               <span className="text-xs font-bold text-slate-200">{item.value}</span>
                             </div>

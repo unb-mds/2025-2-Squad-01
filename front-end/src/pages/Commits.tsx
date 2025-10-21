@@ -250,7 +250,7 @@ export default function CommitsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
         {/* Commits Timeline */}
         <div
-          className="border rounded-lg h-300 w-190"
+          className="border rounded-lg h-300 w-170"
           style={{ backgroundColor: '#222222', borderColor: '#333333' }}
         >
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
