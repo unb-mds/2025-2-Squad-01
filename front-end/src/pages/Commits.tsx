@@ -244,23 +244,7 @@ export default function CommitsPage() {
         onMemberChange={setSelectedMember}
         onTimeChange={setSelectedTime}
       />
-      {/* Chart type toggle */}
-      <div className="px-6 pb-2 -mt-2">
-        <div className="inline-flex rounded-md overflow-hidden border border-slate-700 bg-slate-800">
-          <button
-            className={`px-3 py-1.5 text-sm ${chartType === 'line' ? 'bg-slate-700 text-white' : 'text-slate-300'}`}
-            onClick={() => setChartType('line')}
-          >
-            Line graph
-          </button>
-          <button
-            className={`px-3 py-1.5 text-sm border-l border-slate-700 ${chartType === 'bar' ? 'bg-slate-700 text-white' : 'text-slate-300'}`}
-            onClick={() => setChartType('bar')}
-          >
-            Bar graph
-          </button>
-        </div>
-      </div>
+
 
       {/* Charts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
@@ -283,11 +267,8 @@ export default function CommitsPage() {
                 <p className="text-red-400">{error}</p>
               </div>
             ) : (
-              chartType === 'line' ? (
-                <LineGraph data={BasicData} timeRange={selectedTime} />
-              ) : (
-                <Histogram data={BasicData} />
-              )
+              <Histogram data={BasicData} />
+             
             )}
           </div>
         </div>
