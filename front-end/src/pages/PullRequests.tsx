@@ -16,7 +16,7 @@ import {
 import type { PieArcDatum } from 'd3';
 import DashboardLayout from '../components/DashboardLayout';
 import { Utils, ProcessedActivityResponse, RepoActivitySummary } from './Utils';
-import BaseFilters from '../components/base-filters';
+import BaseFilters from '../components/BaseFilters';
 
 // Componente de Histograma
 interface HistogramProps {
