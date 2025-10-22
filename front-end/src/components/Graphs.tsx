@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import {
   select,
   scaleBand,
@@ -10,9 +10,25 @@ import {
   arc as d3Arc,
   scaleOrdinal,
   schemeSpectral,
+  forceSimulation,
+  forceLink,
+  forceManyBody,
+  forceCenter,
+  drag as d3Drag,
 } from 'd3';
 import type { PieArcDatum } from 'd3';
 import type { HistogramDatum, PieDatum } from '../types';
+type CollaborationEdge = {
+  user1: string;
+  user2: string;
+  repo: string;
+  collaboration_type: string;
+  _metadata?: any; // Para ignorar a entrada de metadados
+};
+// Tipo para os nós (círculos) no D3
+type NodeData = { id: string }; 
+// Tipo para os links (linhas) no D3
+type LinkData = { source: string; target: string };
 
 /**
  * Histogram Component
@@ -171,4 +187,132 @@ export function PieChart({ data }: { data: PieDatum[] }) {
   }, [data]);
 
   return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Pie chart" />;
+}
+
+type CollaborationNetworkGraphProps = {
+  data: CollaborationEdge[]; 
+  width?: number; 
+  height?: number; 
+};
+
+export function CollaborationNetworkGraph({
+  data,
+  width = 600, 
+  height = 500, 
+}: CollaborationNetworkGraphProps) {
+  const svgRef = useRef<SVGSVGElement | null>(null);
+
+  // Process Data into Nodes and Links
+  const graphData = useMemo(() => {
+    // Filtra metadados e garante que user1/user2 existam
+    const validEdges = data.filter(d => d && d.user1 && d.user2); 
+    const userSet = new Set<string>();
+    validEdges.forEach(edge => {
+      userSet.add(edge.user1);
+      userSet.add(edge.user2);
+    });
+    const nodes: NodeData[] = Array.from(userSet).map(id => ({ id }));
+    const links: LinkData[] = validEdges.map(edge => ({
+      source: edge.user1,
+      target: edge.user2,
+    }));
+    return { nodes, links };
+  }, [data]); 
+
+  // D3 Simulation and Drawing
+  useEffect(() => {
+    if (!svgRef.current || graphData.nodes.length === 0) return;
+
+    const svg = select(svgRef.current);
+    svg.selectAll('*').remove(); 
+
+    const simulation = forceSimulation<NodeData>(graphData.nodes)
+      .force("link", forceLink<NodeData, LinkData>(graphData.links)
+                       .id(d => d.id) 
+                       .distance(50)) 
+      .force("charge", forceManyBody().strength(-150)) // Ajuste a força se necessário
+      .force("center", forceCenter(width / 2, height / 2)); 
+
+    const link = svg.append("g")
+        .attr("stroke", "#666") 
+        .attr("stroke-opacity", 0.5)
+      .selectAll("line")
+      .data(graphData.links)
+      .join("line")
+        .attr("stroke-width", 1); 
+
+    const node = svg.append("g")
+        .attr("stroke", "#ccc") 
+        .attr("stroke-width", 1)
+      .selectAll<SVGCircleElement, NodeData>("circle") 
+      .data(graphData.nodes)
+      .join("circle")
+        .attr("r", 6) 
+        .attr("fill", "#e67e22") 
+        .call(drag(simulation)); 
+
+    node.append("title").text(d => d.id);
+
+    const labels = svg.append("g")
+        .attr("class", "labels")
+      .selectAll("text")
+      .data(graphData.nodes)
+      .join("text")
+        .attr("dx", 14) 
+        .attr("dy", ".35em") 
+        .attr("fill", "#aaa") 
+        .style("font-size", "9px") 
+        .style("pointer-events", "none") 
+        .text(d => d.id);
+
+    simulation.on("tick", () => {
+      // Atualiza posições
+      link
+          .attr("x1", d => (d.source as any).x)
+          .attr("y1", d => (d.source as any).y)
+          .attr("x2", d => (d.target as any).x)
+          .attr("y2", d => (d.target as any).y);
+      node
+          .attr("cx", d => (d as any).x)
+          .attr("cy", d => (d as any).y);
+      labels
+          .attr("x", d => (d as any).x)
+          .attr("y", d => (d as any).y);
+    });
+
+    // Função interna para arrastar (usa o import d3Drag)
+    function drag(simulation: d3.Simulation<NodeData, undefined>) {
+        function dragstarted(event: any, d: any) { 
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }        
+        function dragged(event: any, d: any) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }        
+        function dragended(event: any, d: any) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }        
+        // Usa d3Drag aqui
+        return d3Drag<SVGCircleElement, NodeData>() 
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+    }
+
+    // Limpa a simulação quando o componente desmontar
+    return () => {
+      simulation.stop();
+    };
+
+  }, [graphData, width, height]); 
+
+  // Retorna o elemento SVG que o D3 vai manipular
+  return (
+    <svg ref={svgRef} viewBox={`0 0 ${width} ${height}`} width={width} height={height} style={{ maxWidth: '100%', height: 'auto' }}>
+    </svg>
+  );
 }
