@@ -160,6 +160,68 @@ export default function DocumentacaoPage() {
             🚀 Explorar Métricas →
           </Link>
         </div>
+
+        <div className="space-y-16 mt-16">
+          <section id="prototypes">
+            <h2>🎨 Protótipo de Alta Fidelidade</h2>
+            <div className="doc-card">
+              <h3>Protótipo Interativo</h3>
+              <p>Explore o protótipo de alta fidelidade do CoOps...</p>
+              <div className="figma-embed-container">
+                <div className="figma-embed-header">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span>Protótipo Alta Fidelidade - CoOps</span>
+                  <a href="https://www.figma.com/proto/oCBp6kKarswmGbJAiIToyt/Prot%C3%B3tipo-Alta-Fidelidade?node-id=1-1080&p=f&t=JcFBYqvzn89t0xPV-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1080" target="_blank" rel="noopener noreferrer">Abrir no Figma →</a>
+                </div>
+                <div className="figma-embed-iframe-wrapper">
+                  <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FoCBp6kKarswmGbJAiIToyt%2FProt%25C3%25B3tipo-Alta-Fidelidade%3Fnode-id%3D1-1080%26p%3Df%26t%3DJcFBYqvzn89t0xPV-0%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A1080&hide-ui=1" allowFullScreen></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="docs">
+            <h2>📚 Documentos</h2>
+            <div className="doc-card">
+              <h3>Documentação Técnica</h3>
+              <p>Acesse toda a documentação detalhada do projeto CoOps...</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/api/api.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-green-500 hover:bg-slate-800/50 transition-all">
+                  <h3>🔌 API</h3>
+                  <p>Integração com a API do GitHub</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/arquitetura/arquitetura.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-purple-500 hover:bg-slate-800/50 transition-all">
+                  <h3>📐 Arquitetura</h3>
+                  <p>Arquitetura do sistema</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/atas/atas.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-blue-500 hover:bg-slate-800/50 transition-all">
+                  <h3>📝 Atas</h3>
+                  <p>Atas de reuniões do time</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/backend/backend.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-red-500 hover:bg-slate-800/50 transition-all">
+                  <h3>⚙️ Backend</h3>
+                  <p>Documentação do backend</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/benchmarking/benchmarking.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-orange-500 hover:bg-slate-800/50 transition-all">
+                  <h3>📊 Benchmarking</h3>
+                  <p>Análise comparativa</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/benchmarking/levantamento-inicial.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-yellow-500 hover:bg-slate-800/50 transition-all">
+                  <h3>🔍 Levantamento</h3>
+                  <p>Levantamento inicial do produto</p>
+                </a>
+                <a href="https://unb-mds.github.io/2025-2-Squad-01/docs/frontend/frontend.html" target="_blank" rel="noopener noreferrer" className="tech-card border-l-cyan-500 hover:bg-slate-800/50 transition-all">
+                  <h3>🎨 Frontend</h3>
+                  <p>Documentação do frontend</p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
