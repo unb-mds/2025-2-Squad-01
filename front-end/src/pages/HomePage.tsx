@@ -31,7 +31,7 @@ export default function HomePage() {
             <div className="mt-10 space-y-4 animate-fade-in-delayed-2">
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="hover:scale-105 transition-transform duration-200">
-                  <Link to="/repos/commits" className="botao-principal">
+                  <Link to="/repos" className="botao-principal">
                     Ver Métricas
                   </Link>
                 </div>
