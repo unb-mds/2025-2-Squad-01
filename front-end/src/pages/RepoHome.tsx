@@ -32,11 +32,8 @@ export default function RepoHomePage() { // Renomeado de volta para RepoHomePage
 
         // Busca os dois arquivos em paralelo
         const [collabResponse, heatmapResponse] = await Promise.all([
-          fetch('data/collaboration_edges.json'),
-          fetch('data/activity_heatmap.json'),
-
-          // fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/collaboration_edges.json'),
-          // fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/activity_heatmap.json') // <-- Busca o heatmap
+          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/collaboration_edges.json'),
+           fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/activity_heatmap.json') 
         ]);
 
         if (!collabResponse.ok) {
