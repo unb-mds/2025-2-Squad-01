@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage';
 import Commits from './pages/Commits';
 import NotFound from './pages/NotFound';
 import PullRequests from './pages/PullRequests';
-import RepoHome from './pages/RepoHome';
+import CollaborationPage from './pages/Collaboration';
 
 /**
  * App Component
@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/home" element={<HomePage />} />
-      <Route path="/repos" element={<RepoHome />} />
+      <Route path="/repos/collaboration" element={<CollaborationPage />} />
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequests />} />
 
