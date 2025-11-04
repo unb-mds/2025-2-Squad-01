@@ -87,10 +87,8 @@ def extract_commits(
                     },
                     'additions': additions,
                     'deletions': deletions,
-                    'changed_files': changed_files,
                     'total_changes': total_changes,
                     'repo_name': repo_name,
-                    '_source': 'graphql',
                 })
 
             if not nodes:
@@ -124,7 +122,6 @@ def extract_commits(
                         'additions': additions,
                         'deletions': deletions,
                         'total_changes': total_changes,
-                        '_source': 'rest-fallback'
                     })
                 print(f"Found {len(data_commits)} commits in {repo_name} via REST fallback")
             else:
@@ -162,7 +159,6 @@ def extract_commits(
                         'additions': additions,
                         'deletions': deletions,
                         'total_changes': total_changes,
-                        '_source': 'rest'
                     })
 
                 print(f"Found {len(commits)} commits in {repo_name} via REST")
