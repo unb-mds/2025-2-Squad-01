@@ -15,6 +15,8 @@ def extract_members(client: GitHubAPIClient, config: OrganizationConfig, use_cac
         print("   - Insufficient token permissions")
         print("   - Organization configuration")
         print("Activating fallback: discovering active contributors...")
+
+        
         
         
         from utils.github_api import load_json_data

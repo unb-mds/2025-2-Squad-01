@@ -15,6 +15,11 @@ def main():
     parser.add_argument('--token', required=True, help='GitHub Personal Access Token')
     parser.add_argument('--org', default='coops-org', help='GitHub organization name')
     parser.add_argument('--cache', action='store_true', help='Use cached data when available')
+    parser.add_argument('--commits-method', choices=['rest', 'graphql'], default='rest', help='Extraction method for commits (REST v3 or GraphQL v4)')
+    parser.add_argument('--since', help='ISO-8601 timestamp (e.g., 2024-01-01T00:00:00Z) to limit commit extraction start')
+    parser.add_argument('--until', help='ISO-8601 timestamp (e.g., 2024-12-31T23:59:59Z) to limit commit extraction end')
+    parser.add_argument('--max-commits-per-repo', type=int, help='Optional hard cap of commits per repo to fetch (GraphQL only)')
+    parser.add_argument('--commits-page-size', type=int, default=50, help='Commits page size for pagination (REST & GraphQL). Default: 50')
     
     args = parser.parse_args()
     
@@ -40,7 +45,16 @@ def main():
         issue_files = extract_issues(client, config, use_cache=args.cache)
 
         print("\n[INFO]: Extracting commits...")
-        commit_files = extract_commits(client, config, use_cache=args.cache)
+        commit_files = extract_commits(
+            client,
+            config,
+            use_cache=args.cache,
+            method=args.commits_method,
+            since=args.since,
+            until=args.until,
+            max_commits_per_repo=args.max_commits_per_repo,
+            page_size=args.commits_page_size,
+        )
 
         print("\n[INFO]: Extracting organization members...")
         member_files = extract_members(client, config, use_cache=args.cache)
