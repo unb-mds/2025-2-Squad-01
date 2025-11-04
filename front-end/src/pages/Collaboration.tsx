@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import DashboardLayout from '../components/DashboardLayout';
 import { CollaborationNetworkGraph, ActivityHeatmap } from '../components/Graphs';
 import { CollaborationEdge, HeatmapDataPoint } from '../types';
+import { useMemo } from 'react'; 
+import { useSearchParams } from 'react-router-dom'; 
+import { Utils } from './Utils'; 
+import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils'; 
+
 
 type RepoHomePageData = {
   collaboration?: CollaborationEdge[];
@@ -17,11 +22,13 @@ function PlaceholderCard({ title }: { title: string }) {
   );
 }
 
-export default function RepoHomePage() { // Renomeado de volta para RepoHomePage
+export default function CollaborationPage() { 
 
   const [pageData, setPageData] = useState<RepoHomePageData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [ mainData, setMainData ] = useState<ProcessedActivityResponse | null>(null); 
+  const [searchParams] = useSearchParams();
 
   
   useEffect(() => {
@@ -31,9 +38,10 @@ export default function RepoHomePage() { // Renomeado de volta para RepoHomePage
         setError(null);
 
         // Busca os dois arquivos em paralelo
-        const [collabResponse, heatmapResponse] = await Promise.all([
+        const [collabResponse, heatmapResponse, processedMainData] = await Promise.all([
           fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/collaboration_edges.json'),
-           fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/activity_heatmap.json') 
+          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/activity_heatmap.json'), 
+          Utils.fetchAndProcessActivityData('commit')
         ]);
 
         if (!collabResponse.ok) {
@@ -50,16 +58,40 @@ export default function RepoHomePage() { // Renomeado de volta para RepoHomePage
           collaboration: collaborationData,
           heatmap: heatmapData
         });
+        setMainData(processedMainData);
 
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Ocorreu um erro desconhecido');
         setPageData(null);
+        setMainData(null);
       } finally {
         setLoading(false);
       }
     }
     fetchData();
   }, []); // Array vazio = rodar só na montagem
+
+  const repositories = useMemo<RepoActivitySummary[]>(() => mainData?.repositories ?? [], [mainData]);
+
+  const selectedRepo = useMemo<RepoActivitySummary | null>(() => {
+    const selectedParam = searchParams.get('repo');
+    const selectedRepoId: number | 'all' =
+      !selectedParam || selectedParam === 'all'
+        ? 'all'
+        : Number.isNaN(Number(selectedParam))
+          ? 'all'
+          : Number(selectedParam);
+
+    if (selectedRepoId === 'all') {
+      return {
+        id: -1,
+        name: 'All repositories',
+        activities: repositories.flatMap((repo) => repo.activities),
+      } as RepoActivitySummary;
+    }
+    return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
+  }, [repositories, searchParams]);
+
 
 if (pageData && !loading && !error) { // Adiciona verificações de loading/error
     console.log("Dados disponíveis para renderizar Heatmap:", pageData.heatmap);
@@ -68,7 +100,9 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
   return (
     <DashboardLayout
       currentPage="repos"
-      currentSubPage={null}
+      currentSubPage="collaboration"
+      data={mainData}
+      currentRepo={selectedRepo ? selectedRepo.name : 'No Repository Selected'}
     >
       {/* --- Estados de Carregamento e Erro --- */}
       {loading && (
