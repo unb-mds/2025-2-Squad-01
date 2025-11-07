@@ -23,8 +23,17 @@ export type HeatmapDataPoint = {
   activity_count: number;
   _metadata?: any;
 };
+
 export type BasicDatum = {
   date: string;
   value: number;
 };
- 
+
+export type CommitMetricsDatum = {
+  date: string;
+  commits: number;
+  additions: number;
+  deletions: number;
+  totalLines: number;
+  changesPerCommit: number;
+};

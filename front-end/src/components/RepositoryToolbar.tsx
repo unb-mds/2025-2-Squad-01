@@ -19,6 +19,7 @@ const menuItems: MenuItem[] = [
   { id: 'commits', label: 'Commits', icon: '💻' },
   { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
+  { id: 'commit-analysis', label: 'Commit Analysis', icon: '📈' },
   { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
   { id: 'structure', label: 'Structure', icon: '🏗️' },
 ];

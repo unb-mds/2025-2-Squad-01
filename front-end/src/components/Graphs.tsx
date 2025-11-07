@@ -17,12 +17,15 @@ import {
   drag as d3Drag,
   Simulation, SimulationNodeDatum, SimulationLinkDatum, D3DragEvent,
   ScaleSequential, scaleSequential, interpolateReds, ScaleLinear, axisRight,
-  range as d3Range
+  range as d3Range,
+  area,
+  line,
+  curveMonotoneX
 } from 'd3';
 import * as d3 from 'd3';
 import { zoom } from 'd3-zoom';
 import type { PieArcDatum } from 'd3';
-import type { PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint } from '../types';
+import type { PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint, CommitMetricsDatum } from '../types';
 import { Filter } from './Filter';
 
 interface NodeData extends SimulationNodeDatum { id: string; }
@@ -698,7 +701,7 @@ export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       // pass the generator function so d3 invokes it with bound data
       .attr('d', line as unknown as any);
     let opacity = 1;
-    if (timeRange !== 'Last 24 hours' && timeRange !== 'Last 7 days' && timeRange !== 'Last 30 days') {
+    if (timeRange !== 'Last 24 horas' && timeRange !== 'Últimos 7 dias' && timeRange !== 'Últimos 30 dias') {
       opacity = 0;
     }
     else{
@@ -717,4 +720,298 @@ export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?:
       .style('opacity', opacity);
   }, [data, timeRange]);
   return (<>{<svg ref={svgRef} className="w-full" role="img" aria-label="Line graph" />} <Filter title={"Select Graph"} content={["Line Graph","Bar Graph"]}  /> </>);
+}
+
+/**
+ * CommitMetricsChart Component
+ *
+ * Advanced D3-based chart combining area, stacked bars, and lines to visualize:
+ * - Total lines (area chart - background)
+ * - Additions and Deletions (stacked bar chart)
+ * - Number of commits (line chart)
+ * - Changes per commit (line chart)
+ *
+ * @param data - Array of commit metrics data by date
+ */
+export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
+  const svgRef = useRef<SVGSVGElement | null>(null);
+
+  useEffect(() => {
+    if (!svgRef.current) return;
+    const svg = select(svgRef.current);
+    svg.selectAll('*').remove();
+
+    if (!data.length) {
+      svg
+        .append('text')
+        .attr('x', '50%')
+        .attr('y', '50%')
+        .attr('text-anchor', 'middle')
+        .attr('fill', '#e2e8f0')
+        .text('No commit metrics available');
+      return;
+    }
+
+    const width = 1000;
+    const height = 500;
+    const margin = { top: 60, right: 80, bottom: 60, left: 70 };
+
+    svg.attr('viewBox', `0 0 ${width} ${height}`);
+
+    // Scales
+    const xScale = scaleBand<string>()
+      .domain(data.map((d) => d.date))
+      .range([margin.left, width - margin.right])
+      .padding(0.2);
+
+    const yScaleLines = scaleLinear()
+      .domain([0, max(data, (d) => d.totalLines) ?? 0])
+      .nice()
+      .range([height - margin.bottom, margin.top]);
+
+    const yScaleCommits = scaleLinear()
+      .domain([0, max(data, (d) => Math.max(d.commits, d.changesPerCommit)) ?? 0])
+      .nice()
+      .range([height - margin.bottom, margin.top]);
+
+    const yScaleChanges = scaleLinear()
+      .domain([0, max(data, (d) => d.additions + d.deletions) ?? 0])
+      .nice()
+      .range([height - margin.bottom, margin.top]);
+
+    // Grid lines (horizontal)
+    const gridLines = svg
+      .append('g')
+      .attr('class', 'grid');
+
+    const yTicks = yScaleLines.ticks(8);
+    yTicks.forEach((tick) => {
+      gridLines
+        .append('line')
+        .attr('x1', margin.left)
+        .attr('x2', width - margin.right)
+        .attr('y1', yScaleLines(tick))
+        .attr('y2', yScaleLines(tick))
+        .attr('stroke', '#334155')
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', 0.3);
+    });
+
+    // X Axis
+    const tickInterval = Math.max(1, Math.floor(data.length / 15));
+    const tickValues = data
+      .map((d, i) => ({ v: d.date, i }))
+      .filter((x) => x.i % tickInterval === 0)
+      .map((x) => x.v);
+
+    const xAxis = svg
+      .append('g')
+      .attr('transform', `translate(0, ${height - margin.bottom})`)
+      .call(
+        axisBottom(xScale)
+          .tickValues(tickValues)
+          .tickFormat((v) => String(v))
+      );
+    
+    xAxis
+      .selectAll('text')
+      .style('text-anchor', 'end')
+      .style('fill', '#94a3b8')
+      .attr('dx', '-0.8em')
+      .attr('dy', '0.15em')
+      .attr('transform', 'rotate(-45)')
+      .style('font-size', '11px');
+    
+    xAxis.selectAll('line').style('stroke', '#334155');
+    xAxis.select('.domain').style('stroke', '#334155');
+
+    // Left Y Axis (Total Lines)
+    const yAxisLeft = svg
+      .append('g')
+      .attr('transform', `translate(${margin.left}, 0)`)
+      .call(axisLeft(yScaleLines).ticks(8));
+    
+    yAxisLeft.selectAll('text').style('fill', '#94a3b8').style('font-size', '11px');
+    yAxisLeft.selectAll('line').style('stroke', '#334155');
+    yAxisLeft.select('.domain').style('stroke', '#334155');
+
+    // Right Y Axis (Commits / Changes per Commit)
+    const yAxisRight = svg
+      .append('g')
+      .attr('transform', `translate(${width - margin.right}, 0)`)
+      .call(axisRight(yScaleCommits).ticks(8));
+    
+    yAxisRight.selectAll('text').style('fill', '#94a3b8').style('font-size', '11px');
+    yAxisRight.selectAll('line').style('stroke', '#334155');
+    yAxisRight.select('.domain').style('stroke', '#334155');
+
+    // Area chart (Total Lines) - Background
+    const areaGenerator = area<CommitMetricsDatum>()
+      .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
+      .y0(height - margin.bottom)
+      .y1((d) => yScaleLines(d.totalLines))
+      .curve(curveMonotoneX);
+
+    svg
+      .append('path')
+      .datum(data)
+      .attr('fill', '#475569')
+      .attr('fill-opacity', 0.3)
+      .attr('d', areaGenerator);
+
+    // Stacked Bar Chart (Additions and Deletions)
+    const barWidth = xScale.bandwidth();
+
+    // Additions (green bars)
+    svg
+      .append('g')
+      .selectAll('rect')
+      .data(data)
+      .join('rect')
+      .attr('x', (d) => xScale(d.date) ?? 0)
+      .attr('y', (d) => yScaleChanges(d.additions))
+      .attr('width', barWidth)
+      .attr('height', (d) => Math.max(0, height - margin.bottom - yScaleChanges(d.additions)))
+      .attr('fill', '#84cc16')
+      .attr('opacity', 0.8)
+      .append('title')
+      .text((d) => `${d.date}\nAdditions: +${d.additions}`);
+
+    // Deletions (red bars, stacked on top)
+    svg
+      .append('g')
+      .selectAll('rect')
+      .data(data)
+      .join('rect')
+      .attr('x', (d) => xScale(d.date) ?? 0)
+      .attr('y', (d) => yScaleChanges(d.additions + d.deletions))
+      .attr('width', barWidth)
+      .attr('height', (d) => Math.max(0, yScaleChanges(d.additions) - yScaleChanges(d.additions + d.deletions)))
+      .attr('fill', '#ef4444')
+      .attr('opacity', 0.8)
+      .append('title')
+      .text((d) => `${d.date}\nDeletions: -${d.deletions}`);
+
+    // Line Chart - Commits (orange)
+    const commitsLine = line<CommitMetricsDatum>()
+      .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
+      .y((d) => yScaleCommits(d.commits))
+      .curve(curveMonotoneX);
+
+    svg
+      .append('path')
+      .datum(data)
+      .attr('fill', 'none')
+      .attr('stroke', '#f97316')
+      .attr('stroke-width', 2.5)
+      .attr('d', commitsLine);
+
+    // Commits line points
+    svg
+      .append('g')
+      .selectAll('circle')
+      .data(data)
+      .join('circle')
+      .attr('cx', (d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
+      .attr('cy', (d) => yScaleCommits(d.commits))
+      .attr('r', 3.5)
+      .attr('fill', '#f97316')
+      .attr('stroke', '#1e293b')
+      .attr('stroke-width', 1.5)
+      .append('title')
+      .text((d) => `${d.date}\nCommits: ${d.commits}`);
+
+    // Line Chart - Changes per Commit (blue)
+    const changesLine = line<CommitMetricsDatum>()
+      .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
+      .y((d) => yScaleCommits(d.changesPerCommit))
+      .curve(curveMonotoneX);
+
+    svg
+      .append('path')
+      .datum(data)
+      .attr('fill', 'none')
+      .attr('stroke', '#3b82f6')
+      .attr('stroke-width', 2.5)
+      .attr('d', changesLine);
+
+    // Changes per commit line points
+    svg
+      .append('g')
+      .selectAll('circle')
+      .data(data)
+      .join('circle')
+      .attr('cx', (d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
+      .attr('cy', (d) => yScaleCommits(d.changesPerCommit))
+      .attr('r', 3.5)
+      .attr('fill', '#3b82f6')
+      .attr('stroke', '#1e293b')
+      .attr('stroke-width', 1.5)
+      .append('title')
+      .text((d) => `${d.date}\nChanges/Commit: ${d.changesPerCommit.toFixed(1)}`);
+
+    // Legend
+    const legend = svg
+      .append('g')
+      .attr('transform', `translate(${margin.left}, ${margin.top - 40})`);
+
+    const legendItems = [
+      { label: 'Total lines', color: '#475569', type: 'area' },
+      { label: 'Commits', color: '#f97316', type: 'line' },
+      { label: 'Changes per commit', color: '#3b82f6', type: 'line' },
+      { label: 'Additions', color: '#84cc16', type: 'rect' },
+      { label: 'Deletions', color: '#ef4444', type: 'rect' },
+    ];
+
+    legendItems.forEach((item, i) => {
+      const legendItem = legend
+        .append('g')
+        .attr('transform', `translate(${i * 140}, 0)`);
+
+      if (item.type === 'line') {
+        legendItem
+          .append('line')
+          .attr('x1', 0)
+          .attr('x2', 20)
+          .attr('y1', 6)
+          .attr('y2', 6)
+          .attr('stroke', item.color)
+          .attr('stroke-width', 2.5);
+        
+        legendItem
+          .append('circle')
+          .attr('cx', 10)
+          .attr('cy', 6)
+          .attr('r', 3.5)
+          .attr('fill', item.color)
+          .attr('stroke', '#1e293b')
+          .attr('stroke-width', 1.5);
+      } else if (item.type === 'rect') {
+        legendItem
+          .append('rect')
+          .attr('width', 20)
+          .attr('height', 12)
+          .attr('fill', item.color)
+          .attr('opacity', 0.8);
+      } else {
+        legendItem
+          .append('rect')
+          .attr('width', 20)
+          .attr('height', 12)
+          .attr('fill', item.color)
+          .attr('opacity', 0.3);
+      }
+
+      legendItem
+        .append('text')
+        .attr('x', 25)
+        .attr('y', 10)
+        .attr('fill', '#e2e8f0')
+        .style('font-size', '12px')
+        .text(item.label);
+    });
+
+  }, [data]);
+
+  return <svg ref={svgRef} className="w-full h-[600px]" role="img" aria-label="Commit Metrics Chart" />;
 }
