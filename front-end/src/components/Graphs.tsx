@@ -953,7 +953,7 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
     // Legend
     const legend = svg
       .append('g')
-      .attr('transform', `translate(${margin.left}, ${margin.top - 40})`);
+      .attr('transform', `translate(${margin.left}, ${margin.top - 25})`);
 
     const legendItems = [
       { label: 'Total lines', color: '#475569', type: 'area' },
@@ -966,7 +966,7 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
     legendItems.forEach((item, i) => {
       const legendItem = legend
         .append('g')
-        .attr('transform', `translate(${i * 140}, 0)`);
+        .attr('transform', `translate(${i * 155}, 0)`);
 
       if (item.type === 'line') {
         legendItem
