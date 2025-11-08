@@ -16,7 +16,40 @@ export default function CommitAnalysisPage() {
   const [data, setData] = useState<CommitMetricsDatum[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedRepo] = useState<string>('2025-2-Squad-01');
+  const [selectedRepo, setSelectedRepo] = useState<string>('2025-2-Squad-01');
+  const [selectedAuthor, setSelectedAuthor] = useState<string>('all');
+  const [authors, setAuthors] = useState<string[]>([]);
+  const [availableRepos, setAvailableRepos] = useState<string[]>([]);
+
+  // Fetch available repositories on mount
+  useEffect(() => {
+    async function fetchAvailableRepos() {
+      try {
+        // Fetch the list of available repositories from JSON file
+        const response = await fetch('/2025-2-Squad-01/available_repos.json');
+        
+        if (response.ok) {
+          const repos = await response.json();
+          console.log('Available repos loaded:', repos);
+          setAvailableRepos(repos);
+          
+          // Set first repo as default if current selection not available
+          if (!repos.includes(selectedRepo)) {
+            setSelectedRepo(repos[0]);
+          }
+        } else {
+          throw new Error('Could not fetch repo list');
+        }
+      } catch (err) {
+        console.warn('Could not fetch repo list, using fallback:', err);
+        // Fallback to hardcoded list
+        const fallback = ['2025-2-Squad-01', '.github', '2023-2-JuizVirtual'];
+        setAvailableRepos(fallback);
+      }
+    }
+
+    fetchAvailableRepos();
+  }, []);
 
   useEffect(() => {
     async function fetchCommitMetrics() {
@@ -24,16 +57,119 @@ export default function CommitAnalysisPage() {
         setLoading(true);
         setError(null);
         
-        // Using mock data with additions/deletions until GraphQL extraction is available
-        // Files in public/ are served from base path: /2025-2-Squad-01/
-        const response = await fetch(`/2025-2-Squad-01/commits_metrics_${selectedRepo}_mock.json`);
+        // Fetch data by author
+        const response = await fetch(`/2025-2-Squad-01/commits_by_author_${selectedRepo}.json`);
         
         if (!response.ok) {
           throw new Error(`Failed to fetch commit metrics: ${response.statusText}`);
         }
         
         const jsonData = await response.json();
-        setData(jsonData.metrics || []);
+        
+        // Extract authors from the new format (array of author objects)
+        if (Array.isArray(jsonData)) {
+          const authorList = jsonData.map((authorData: any) => authorData.author);
+          setAuthors(authorList);
+          
+          // If 'all' is selected, merge all authors' data
+          if (selectedAuthor === 'all') {
+            // Aggregate all weeks across all authors
+            const allWeeks = new Map<string, CommitMetricsDatum>();
+            
+            for (const authorData of jsonData) {
+              const weeks = authorData.weeks || [];
+              weeks.forEach((week: any) => {
+                const existing = allWeeks.get(week.week);
+                if (existing) {
+                  existing.commits += week.commits;
+                  existing.additions += week.additions;
+                  existing.deletions += week.deletions;
+                } else {
+                  allWeeks.set(week.week, {
+                    date: week.week,
+                    commits: week.commits,
+                    additions: week.additions,
+                    deletions: week.deletions,
+                    totalLines: 0,
+                    changesPerCommit: 0
+                  });
+                }
+              });
+            }
+            
+            // Sort and recalculate cumulative metrics
+            const sortedData = Array.from(allWeeks.values()).sort((a, b) => 
+              a.date.localeCompare(b.date)
+            );
+            
+            let totalLines = 0;
+            sortedData.forEach(week => {
+              totalLines += (week.additions - week.deletions);
+              week.totalLines = Math.max(0, totalLines);
+              week.changesPerCommit = week.commits > 0 
+                ? Number(((week.additions + week.deletions) / week.commits).toFixed(1))
+                : 0;
+            });
+            
+            setData(sortedData);
+          } else {
+            // Get data for selected author
+            const authorData = jsonData.find((a: any) => a.author === selectedAuthor);
+            if (authorData && authorData.weeks) {
+              const processedData = authorData.weeks.map((week: any) => ({
+                date: week.week,
+                commits: week.commits,
+                additions: week.additions,
+                deletions: week.deletions,
+                totalLines: week.total_lines,
+                changesPerCommit: week.changes_per_commit
+              }));
+              setData(processedData);
+            } else {
+              setData([]);
+            }
+          }
+        } else {
+          // Old format fallback
+          const authorList = jsonData._metadata?.authors || Object.keys(jsonData.authors || {});
+          setAuthors(authorList);
+          
+          if (selectedAuthor === 'all') {
+            const allWeeks = new Map<string, CommitMetricsDatum>();
+            
+            for (const author in jsonData.authors) {
+              const authorData = jsonData.authors[author];
+              authorData.forEach((week: CommitMetricsDatum) => {
+                const existing = allWeeks.get(week.date);
+                if (existing) {
+                  existing.commits += week.commits;
+                  existing.additions += week.additions;
+                  existing.deletions += week.deletions;
+                } else {
+                  allWeeks.set(week.date, { ...week });
+                }
+              });
+            }
+            
+            const sortedData = Array.from(allWeeks.values()).sort((a, b) => 
+              a.date.localeCompare(b.date)
+            );
+            
+            let totalLines = 0;
+            sortedData.forEach(week => {
+              totalLines += (week.additions - week.deletions);
+              week.totalLines = Math.max(0, totalLines);
+              week.changesPerCommit = week.commits > 0 
+                ? Number(((week.additions + week.deletions) / week.commits).toFixed(1))
+                : 0;
+            });
+            
+            setData(sortedData);
+          } else {
+            const authorData = jsonData.authors[selectedAuthor] || [];
+            setData(authorData);
+          }
+        }
       } catch (err) {
         console.error('Error fetching commit metrics:', err);
         setError(err instanceof Error ? err.message : 'Unknown error');
@@ -43,7 +179,7 @@ export default function CommitAnalysisPage() {
     }
 
     fetchCommitMetrics();
-  }, [selectedRepo]);
+  }, [selectedRepo, selectedAuthor]);
 
   // Calculate statistics from real data
   const stats = data.length > 0 ? {
@@ -71,6 +207,57 @@ export default function CommitAnalysisPage() {
           <p className="text-slate-400 text-sm mt-2">
             Advanced visualization of commit metrics over time
           </p>
+        </div>
+
+        {/* Repository and Author Filters */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          {/* Repository Selector */}
+          <div className="border rounded-lg p-4" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+            <label htmlFor="repo-select" className="block text-slate-400 text-sm mb-2">
+              Select Repository
+            </label>
+            <select
+              id="repo-select"
+              value={selectedRepo}
+              onChange={(e) => {
+                setSelectedRepo(e.target.value);
+                setSelectedAuthor('all'); // Reset author selection
+              }}
+              className="w-full px-4 py-2 rounded-lg border text-white"
+              style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
+            >
+              {availableRepos.length === 0 ? (
+                <option>Loading repositories...</option>
+              ) : (
+                availableRepos.map((repo) => (
+                  <option key={repo} value={repo}>
+                    {repo}
+                  </option>
+                ))
+              )}
+            </select>
+          </div>
+
+          {/* Author Filter */}
+          <div className="border rounded-lg p-4" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+            <label htmlFor="author-select" className="block text-slate-400 text-sm mb-2">
+              Filter by Author
+            </label>
+            <select
+              id="author-select"
+              value={selectedAuthor}
+              onChange={(e) => setSelectedAuthor(e.target.value)}
+              className="w-full px-4 py-2 rounded-lg border text-white"
+              style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
+            >
+              <option value="all">All Authors ({authors.length})</option>
+              {authors.map((author) => (
+                <option key={author} value={author}>
+                  {author}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {/* Info Cards */}
