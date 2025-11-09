@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import DashboardLayout from '../components/DashboardLayout';
 import { CommitMetricsChart } from '../components/Graphs';
 import type { CommitMetricsDatum } from '../types';
@@ -13,13 +14,21 @@ import type { CommitMetricsDatum } from '../types';
  * - Average changes per commit (line)
  */
 export default function CommitAnalysisPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [data, setData] = useState<CommitMetricsDatum[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedRepo, setSelectedRepo] = useState<string>('2025-2-Squad-01');
   const [selectedAuthor, setSelectedAuthor] = useState<string>('all');
+  const [selectedTimeline, setSelectedTimeline] = useState<string>('all');
   const [authors, setAuthors] = useState<string[]>([]);
   const [availableRepos, setAvailableRepos] = useState<string[]>([]);
+
+  // Get repository from URL params (set by RepositoryToolbar)
+  const repoParam = searchParams.get('repo');
+  const selectedRepo = repoParam && repoParam !== 'all' ? repoParam : '2025-2-Squad-01';
+  
+  console.log('CommitAnalysis - repoParam:', repoParam);
+  console.log('CommitAnalysis - selectedRepo:', selectedRepo);
 
   // Fetch available repositories on mount
   useEffect(() => {
@@ -32,11 +41,6 @@ export default function CommitAnalysisPage() {
           const repos = await response.json();
           console.log('Available repos loaded:', repos);
           setAvailableRepos(repos);
-          
-          // Set first repo as default if current selection not available
-          if (!repos.includes(selectedRepo)) {
-            setSelectedRepo(repos[0]);
-          }
         } else {
           throw new Error('Could not fetch repo list');
         }
@@ -57,14 +61,19 @@ export default function CommitAnalysisPage() {
         setLoading(true);
         setError(null);
         
+        console.log('Fetching commit metrics for repo:', selectedRepo);
+        
         // Fetch data by author
-        const response = await fetch(`/2025-2-Squad-01/commits_by_author_${selectedRepo}.json`);
+        const url = `/2025-2-Squad-01/commits_by_author_${selectedRepo}.json`;
+        console.log('Fetching URL:', url);
+        const response = await fetch(url);
         
         if (!response.ok) {
           throw new Error(`Failed to fetch commit metrics: ${response.statusText}`);
         }
         
         const jsonData = await response.json();
+        console.log('Loaded JSON data:', jsonData);
         
         // Extract authors from the new format (array of author objects)
         if (Array.isArray(jsonData)) {
@@ -181,15 +190,80 @@ export default function CommitAnalysisPage() {
     fetchCommitMetrics();
   }, [selectedRepo, selectedAuthor]);
 
-  // Calculate statistics from real data
-  const stats = data.length > 0 ? {
-    totalCommits: data.reduce((sum, d) => sum + d.commits, 0),
-    totalAdditions: data.reduce((sum, d) => sum + d.additions, 0),
-    totalDeletions: data.reduce((sum, d) => sum + d.deletions, 0),
-    avgChangesPerCommit: data.length > 0 
-      ? (data.reduce((sum, d) => sum + d.changesPerCommit, 0) / data.length).toFixed(1)
+  // Apply timeline filter to data using useMemo
+  const filteredData = useMemo(() => {
+    if (selectedTimeline === 'all') return data;
+
+    const now = new Date();
+    const cutoffDate = new Date();
+
+    switch (selectedTimeline) {
+      case 'last-week':
+        cutoffDate.setDate(now.getDate() - 7);
+        break;
+      case 'last-month':
+        cutoffDate.setMonth(now.getMonth() - 1);
+        break;
+      case 'last-3-months':
+        cutoffDate.setMonth(now.getMonth() - 3);
+        break;
+      case 'last-6-months':
+        cutoffDate.setMonth(now.getMonth() - 6);
+        break;
+      case 'last-year':
+        cutoffDate.setFullYear(now.getFullYear() - 1);
+        break;
+      default:
+        return data;
+    }
+
+    console.log('Filtering timeline:', selectedTimeline);
+    console.log('Cutoff date:', cutoffDate.toISOString());
+    console.log('Total data points:', data.length);
+    
+    // Helper function to parse ISO week format (YYYY-Www) to a Date
+    const parseISOWeek = (weekStr: string): Date => {
+      // Handle 'unknown' or invalid formats
+      if (!weekStr || weekStr === 'unknown' || !weekStr.includes('-W')) {
+        return new Date(0); // Return epoch for invalid dates
+      }
+      
+      const [yearStr, weekStr2] = weekStr.split('-W');
+      const year = parseInt(yearStr);
+      const week = parseInt(weekStr2);
+      
+      // ISO week date calculation
+      // Week 1 is the week with the first Thursday of the year
+      const jan4 = new Date(year, 0, 4);
+      const weekStart = new Date(jan4);
+      weekStart.setDate(jan4.getDate() - (jan4.getDay() || 7) + 1);
+      weekStart.setDate(weekStart.getDate() + (week - 1) * 7);
+      
+      return weekStart;
+    };
+    
+    const filtered = data.filter(d => {
+      const itemDate = parseISOWeek(d.date);
+      const matches = itemDate >= cutoffDate;
+      if (!matches) {
+        console.log('Filtered out:', d.date, 'parsed to', itemDate.toISOString(), 'cutoff:', cutoffDate.toISOString());
+      }
+      return matches;
+    });
+    
+    console.log('Filtered data points:', filtered.length);
+    return filtered;
+  }, [data, selectedTimeline]);
+
+  // Calculate statistics from filtered data
+  const stats = filteredData.length > 0 ? {
+    totalCommits: filteredData.reduce((sum, d) => sum + d.commits, 0),
+    totalAdditions: filteredData.reduce((sum, d) => sum + d.additions, 0),
+    totalDeletions: filteredData.reduce((sum, d) => sum + d.deletions, 0),
+    avgChangesPerCommit: filteredData.length > 0 
+      ? (filteredData.reduce((sum, d) => sum + d.changesPerCommit, 0) / filteredData.length).toFixed(1)
       : '0.0',
-    currentTotalLines: data.length > 0 ? data[data.length - 1].totalLines : 0,
+    currentTotalLines: filteredData.length > 0 ? filteredData[filteredData.length - 1].totalLines : 0,
   } : {
     totalCommits: 0,
     totalAdditions: 0,
@@ -199,7 +273,10 @@ export default function CommitAnalysisPage() {
   };
 
   return (
-    <DashboardLayout currentPage="analysis" currentSubPage="commit-analysis">
+    <DashboardLayout 
+      currentPage="analysis" 
+      currentSubPage="commit-analysis"
+    >
       <div className="space-y-6">
         {/* Header */}
         <div className="mb-8">
@@ -209,54 +286,50 @@ export default function CommitAnalysisPage() {
           </p>
         </div>
 
-        {/* Repository and Author Filters */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {/* Repository Selector */}
-          <div className="border rounded-lg p-4" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-            <label htmlFor="repo-select" className="block text-slate-400 text-sm mb-2">
-              Select Repository
-            </label>
-            <select
-              id="repo-select"
-              value={selectedRepo}
-              onChange={(e) => {
-                setSelectedRepo(e.target.value);
-                setSelectedAuthor('all'); // Reset author selection
-              }}
-              className="w-full px-4 py-2 rounded-lg border text-white"
-              style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
-            >
-              {availableRepos.length === 0 ? (
-                <option>Loading repositories...</option>
-              ) : (
-                availableRepos.map((repo) => (
-                  <option key={repo} value={repo}>
-                    {repo}
-                  </option>
-                ))
-              )}
-            </select>
-          </div>
+        {/* Filters Section - Timeline and Members */}
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-white mb-4">Filters</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Timeline Filter */}
+            <div>
+              <label className="block text-slate-400 text-sm mb-2">
+                Timeline:
+              </label>
+              <select
+                value={selectedTimeline}
+                onChange={(e) => setSelectedTimeline(e.target.value)}
+                className="w-full px-4 py-2 rounded-lg border text-white"
+                style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
+              >
+                <option value="all">All Time</option>
+                <option value="last-week">Last Week</option>
+                <option value="last-month">Last Month</option>
+                <option value="last-3-months">Last 3 Months</option>
+                <option value="last-6-months">Last 6 Months</option>
+                <option value="last-year">Last Year</option>
+              </select>
+            </div>
 
-          {/* Author Filter */}
-          <div className="border rounded-lg p-4" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
-            <label htmlFor="author-select" className="block text-slate-400 text-sm mb-2">
-              Filter by Author
-            </label>
-            <select
-              id="author-select"
-              value={selectedAuthor}
-              onChange={(e) => setSelectedAuthor(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border text-white"
-              style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
-            >
-              <option value="all">All Authors ({authors.length})</option>
-              {authors.map((author) => (
-                <option key={author} value={author}>
-                  {author}
-                </option>
-              ))}
-            </select>
+            {/* Members Filter */}
+            <div>
+              <label className="block text-slate-400 text-sm mb-2">
+                Members:
+              </label>
+              <select
+                id="author-select"
+                value={selectedAuthor}
+                onChange={(e) => setSelectedAuthor(e.target.value)}
+                className="w-full px-4 py-2 rounded-lg border text-white"
+                style={{ backgroundColor: '#1a1a1a', borderColor: '#333333' }}
+              >
+                <option value="all">All</option>
+                {authors.map((author) => (
+                  <option key={author} value={author}>
+                    {author}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
@@ -314,7 +387,7 @@ export default function CommitAnalysisPage() {
             
             {/* Área do gráfico */}
             <div className="p-6">
-              <CommitMetricsChart data={data} />
+              <CommitMetricsChart data={filteredData} />
             </div>
           </div>
         )}
