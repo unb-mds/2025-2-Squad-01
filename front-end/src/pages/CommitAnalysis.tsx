@@ -26,9 +26,6 @@ export default function CommitAnalysisPage() {
   // Get repository from URL params (set by RepositoryToolbar)
   const repoParam = searchParams.get('repo');
   const selectedRepo = repoParam && repoParam !== 'all' ? repoParam : '2025-2-Squad-01';
-  
-  console.log('CommitAnalysis - repoParam:', repoParam);
-  console.log('CommitAnalysis - selectedRepo:', selectedRepo);
 
   // Fetch available repositories on mount
   useEffect(() => {
@@ -39,7 +36,6 @@ export default function CommitAnalysisPage() {
         
         if (response.ok) {
           const repos = await response.json();
-          console.log('Available repos loaded:', repos);
           setAvailableRepos(repos);
         } else {
           throw new Error('Could not fetch repo list');
@@ -61,11 +57,8 @@ export default function CommitAnalysisPage() {
         setLoading(true);
         setError(null);
         
-        console.log('Fetching commit metrics for repo:', selectedRepo);
-        
         // Fetch data by author
         const url = `/2025-2-Squad-01/commits_by_author_${selectedRepo}.json`;
-        console.log('Fetching URL:', url);
         const response = await fetch(url);
         
         if (!response.ok) {
@@ -73,7 +66,6 @@ export default function CommitAnalysisPage() {
         }
         
         const jsonData = await response.json();
-        console.log('Loaded JSON data:', jsonData);
         
         // Extract authors from the new format (array of author objects)
         if (Array.isArray(jsonData)) {
@@ -216,10 +208,6 @@ export default function CommitAnalysisPage() {
       default:
         return data;
     }
-
-    console.log('Filtering timeline:', selectedTimeline);
-    console.log('Cutoff date:', cutoffDate.toISOString());
-    console.log('Total data points:', data.length);
     
     // Helper function to parse ISO week format (YYYY-Www) to a Date
     const parseISOWeek = (weekStr: string): Date => {
@@ -242,17 +230,7 @@ export default function CommitAnalysisPage() {
       return weekStart;
     };
     
-    const filtered = data.filter(d => {
-      const itemDate = parseISOWeek(d.date);
-      const matches = itemDate >= cutoffDate;
-      if (!matches) {
-        console.log('Filtered out:', d.date, 'parsed to', itemDate.toISOString(), 'cutoff:', cutoffDate.toISOString());
-      }
-      return matches;
-    });
-    
-    console.log('Filtered data points:', filtered.length);
-    return filtered;
+    return data.filter(d => parseISOWeek(d.date) >= cutoffDate);
   }, [data, selectedTimeline]);
 
   // Calculate statistics from filtered data
