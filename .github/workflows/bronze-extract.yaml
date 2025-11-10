@@ -68,7 +68,7 @@ jobs:
             --token "$GITHUB_TOKEN" \
             --org "${GITHUB_REPOSITORY_OWNER}" \
             --cache \
-            --use-graphql
+            --commits-method graphql
           
           # Check if files were generated
           if [ "$(find data/bronze -name '*.json' | wc -l)" -gt 0 ]; then
