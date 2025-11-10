@@ -1,10 +1,6 @@
-/**
- * Utils Module
- *
- * Utility functions and types for processing GitHub activity data.
- * Handles data fetching, processing, and transformation for visualization.
- */
+import { scaleOrdinal } from "d3-scale";
 
+// Novo tipo para os dados de atividade do GitHub
 export interface ActivityData {
   date: string;
   type: string;
@@ -39,20 +35,37 @@ export class Utils {
    * Process raw activity data from GitHub into a structured format
    *
    * @param rawActivities - Raw activity data from GitHub API
-   * @param filterType - Optional type filter (e.g., 'commit', 'issue', 'pr')
+   * @param filterType - Optional type filter (e.g., 'commit', 'issue', 'pull_request')
    * @returns Processed activity response with grouped repositories
    */
   static processActivityData(
     rawActivities: ActivityData[],
     filterType?: string
   ): ProcessedActivityResponse {
-    const filteredActivities = filterType
-      ? rawActivities.filter((activity) => activity.type === filterType)
-      : rawActivities;
+    // Definir tipos relacionados com cada categoria
+    const issueTypes = ['issue_created', 'issue_closed', 'event_labeled', 'event_assigned', 'event_milestoned', 'event_demilestoned', 'event_reopened', 'event_renamed', 'event_unassigned'];
+    const commitTypes = ['commit'];
+    const prTypes = ['pr_created', 'pr_closed'];
 
+    // Filtrar por categoria se especificado
+    let filteredActivities = rawActivities;
+    
+    if (filterType === 'issue') {
+      filteredActivities = rawActivities.filter(activity => issueTypes.includes(activity.type));
+    } else if (filterType === 'commit') {
+      filteredActivities = rawActivities.filter(activity => commitTypes.includes(activity.type));
+    } else if (filterType === 'pull_request') {
+      filteredActivities = rawActivities.filter(activity => prTypes.includes(activity.type));
+    } else if (filterType) {
+      // Se um tipo específico foi fornecido, filtrar por ele
+      filteredActivities = rawActivities.filter(activity => activity.type === filterType);
+    }
+
+    // Agrupar atividades por repositório
     const activitiesByRepo = new Map<string, ActivityData[]>();
 
     for (const activity of filteredActivities) {
+      // Pular entradas de metadata
       if ('_metadata' in activity) continue;
 
       const repoName = activity.repo;
@@ -64,6 +77,7 @@ export class Utils {
       activitiesByRepo.get(repoName)!.push(activity);
     }
 
+    // Converter para o formato esperado
     const repositories: RepoActivitySummary[] = [];
     let repoId = 1;
 
