@@ -4,6 +4,7 @@ import Commits from './pages/Commits';
 import NotFound from './pages/NotFound';
 import CollaborationPage from './pages/Collaboration';
 import PullRequestsPage from './pages/PullRequests';
+import IssuesPage from './pages/Issues';
 
 /**
  * App Component
@@ -20,6 +21,7 @@ function App() {
       <Route path="/repos/collaboration" element={<CollaborationPage />} />
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
+      <Route path="/repos/issues" element={<IssuesPage />} />
       {/* Fallback route for not implemented pages */}
       <Route path="*" element={<NotFound />} />
     </Routes>
