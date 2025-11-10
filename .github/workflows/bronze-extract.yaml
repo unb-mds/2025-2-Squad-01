@@ -62,7 +62,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "[INFO] Starting Bronze layer extraction..."
-          python src/bronze_extract.py --token "$GITHUB_TOKEN" --org "${GITHUB_REPOSITORY_OWNER}" --cache
+          # Use GraphQL for commits to avoid per-commit REST stats calls
+          # Full history: no since/until or max limits
+          python src/bronze_extract.py \
+            --token "$GITHUB_TOKEN" \
+            --org "${GITHUB_REPOSITORY_OWNER}" \
+            --cache \
+            --commits-method graphql
           
           # Check if files were generated
           if [ "$(find data/bronze -name '*.json' | wc -l)" -gt 0 ]; then

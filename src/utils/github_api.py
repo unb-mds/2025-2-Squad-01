@@ -6,7 +6,7 @@ import time
 import hashlib
 import requests
 from datetime import datetime
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Tuple
 
 class GitHubAPIClient:
     def __init__(self, token: str, cache_dir: str = "cache"):
@@ -18,26 +18,27 @@ class GitHubAPIClient:
         self.cache_dir = cache_dir
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
+        # GraphQL endpoint
+        self.graphql_url = "https://api.github.com/graphql"
     
-    def _get_cache_key(self, url: str) -> str:
-
-        return hashlib.md5(url.encode()).hexdigest() + ".json"
+    def _get_cache_key(self, key: str) -> str:
+        """Create a stable cache key from an arbitrary string."""
+        return hashlib.md5(key.encode()).hexdigest() + ".json"
     
-    def _cache_get(self, url: str) -> Optional[Any]:
+    def _cache_get(self, cache_key: str) -> Optional[Any]:
         """Get response from cache if exists"""
-        cache_file = os.path.join(self.cache_dir, self._get_cache_key(url))
+        cache_file = os.path.join(self.cache_dir, self._get_cache_key(cache_key))
         if os.path.exists(cache_file):
             with open(cache_file, 'r', encoding='utf-8') as f:
                 return json.load(f)
         return None
     
-    def _cache_set(self, url: str, data: Any) -> None:
-
-        cache_file = os.path.join(self.cache_dir, self._get_cache_key(url))
+    def _cache_set(self, cache_key: str, data: Any) -> None:
+        cache_file = os.path.join(self.cache_dir, self._get_cache_key(cache_key))
         with open(cache_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
     
-    def get_with_cache(self, url: str, use_cache: bool = True) -> Any:
+    def get_with_cache(self, url: str, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
 
         if use_cache:
             cached = self._cache_get(url)
@@ -46,35 +47,208 @@ class GitHubAPIClient:
                 return cached
         
         print(f"→ Fetching from API: {url}")
-        try:
-            response = requests.get(url, headers=self.headers, timeout=30)
-            
-            if response.status_code == 200:
-                data = response.json()
-                if use_cache:
-                    self._cache_set(url, data)
-                self._log_rate_limit(response)
-                return data
-            elif response.status_code == 403:
-                print(f"[ERROR] API request forbidden (403) - might be private or rate limited: {response.text}")
-                if "rate limit" in response.text.lower():
-                    print("Rate limit exceeded. Waiting 60 seconds...")
-                    time.sleep(60)
+        attempt = 0
+        while attempt < retries:
+            try:
+                response = requests.get(url, headers=self.headers, timeout=30)
+
+                if response.status_code == 200:
+                    data = response.json()
+                    if use_cache:
+                        self._cache_set(url, data)
+                    self._log_rate_limit(response)
+                    return data
+                elif response.status_code == 403:
+                    print(f"[ERROR] API request forbidden (403) - might be private or rate limited: {response.text}")
+                    if "rate limit" in response.text.lower():
+                        print("Rate limit exceeded. Waiting 60 seconds...")
+                        time.sleep(60)
+                        # After sleep, continue loop to retry
+                    else:
+                        print("Access forbidden - resource might be private or require different permissions")
+                        return None
+                elif response.status_code == 404:
+                    print(f"[ERROR] Resource not found (404): {url}")
+                    return None
+                elif 500 <= response.status_code < 600:
+                    attempt += 1
+                    wait = backoff_base * (2 ** (attempt - 1))
+                    print(f"[WARN] API {response.status_code} - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
+                    time.sleep(wait)
+                    continue
                 else:
-                    print("Access forbidden - resource might be private or require different permissions")
+                    print(f"[ERROR] API request failed: {response.status_code} - {response.text}")
+                    return None
+            except requests.exceptions.Timeout:
+                attempt += 1
+                wait = backoff_base * (2 ** (attempt - 1))
+                print(f"[ERROR] Request timeout for: {url} - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
+                time.sleep(wait)
+                continue
+            except requests.exceptions.RequestException as e:
+                print(f"[ERROR] Request error for {url}: {str(e)}")
                 return None
-            elif response.status_code == 404:
-                print(f"[ERROR] Resource not found (404): {url}")
+        print(f"[ERROR] Exhausted retries for: {url}")
+        return None
+
+    # ----------------------
+    # GraphQL support (API v4)
+    # ----------------------
+    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
+        """Execute a GraphQL query against GitHub's v4 API with optional caching."""
+        payload = {"query": query, "variables": variables or {}}
+
+        # Build a deterministic cache key based on query + variables
+        cache_key = None
+        if use_cache:
+            try:
+                cache_key = "graphql:" + hashlib.md5(
+                    (query + "::" + json.dumps(payload["variables"], sort_keys=True, ensure_ascii=False)).encode("utf-8")
+                ).hexdigest()
+                cached = self._cache_get(cache_key)
+                if cached is not None:
+                    print("✓ Using cached GraphQL response")
+                    return cached
+            except Exception:
+                # Fallback to no-cache if serialization fails
+                cache_key = None
+
+        headers = dict(self.headers)
+        headers["Content-Type"] = "application/json"
+
+        attempt = 0
+        while attempt < retries:
+            try:
+                # Throttle GraphQL calls to avoid secondary rate limits and API bursts
+                time.sleep(0.5)
+
+                response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=60)
+                if response.status_code == 200:
+                    data = response.json()
+                    if "errors" in data:
+                        print(f"[ERROR] GraphQL returned errors: {data['errors']}")
+                        # GraphQL 'errors' are not retriable in general; stop
+                        return None
+                    if use_cache and cache_key:
+                        self._cache_set(cache_key, data)
+                    self._log_rate_limit(response)
+                    return data
+                elif response.status_code == 403:
+                    print(f"[ERROR] GraphQL forbidden (403): {response.text}")
+                    return None
+                elif 500 <= response.status_code < 600:
+                    attempt += 1
+                    wait = backoff_base * (2 ** (attempt - 1))
+                    print(f"[WARN] GraphQL {response.status_code} - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
+                    time.sleep(wait)
+                    continue
+                else:
+                    print(f"[ERROR] GraphQL request failed: {response.status_code} - {response.text}")
+                    return None
+            except requests.exceptions.Timeout:
+                attempt += 1
+                wait = backoff_base * (2 ** (attempt - 1))
+                print(f"[ERROR] GraphQL request timeout - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
+                time.sleep(wait)
+                continue
+            except requests.exceptions.RequestException as e:
+                print(f"[ERROR] GraphQL request error: {str(e)}")
                 return None
+        print("[ERROR] Exhausted GraphQL retries")
+        return None
+
+    def graphql_commit_history(
+        self,
+        owner: str,
+        repo: str,
+        page_size: int = 50,
+        max_pages: Optional[int] = None,
+        max_commits: Optional[int] = None,
+        since: Optional[str] = None,
+        until: Optional[str] = None,
+        use_cache: bool = True,
+    ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+
+        commits: List[Dict[str, Any]] = []
+        cursor: Optional[str] = None
+        pages = 0
+        rate_meta: Dict[str, Any] = {}
+
+        query = """
+        query($owner: String!, $name: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
+          repository(owner: $owner, name: $name) {
+            name
+            defaultBranchRef {
+              name
+              target {
+                ... on Commit {
+                  history(first: $pageSize, after: $cursor, since: $since, until: $until) {
+                    pageInfo { hasNextPage endCursor }
+                    nodes {
+                      oid
+                      messageHeadline
+                      committedDate
+                      pushedDate
+                      url
+                      author { name email date user { login } }
+                      committer { name email date user { login } }
+                      additions
+                      deletions
+                    }
+                  }
+                }
+              }
+            }
+          }
+          rateLimit { remaining resetAt limit cost }
+        }
+        """
+
+        while True:
+            if max_pages is not None and pages >= max_pages:
+                break
+
+            variables = {
+                "owner": owner,
+                "name": repo,
+                "pageSize": page_size,
+                "cursor": cursor,
+                "since": since,
+                "until": until,
+            }
+            data = self.graphql(query, variables, use_cache=use_cache)
+            if not data:
+                break
+
+            repo_data = data.get("data", {}).get("repository")
+            rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
+            if not repo_data or not repo_data.get("defaultBranchRef"):
+                # No default branch or repo not found
+                break
+
+            target = repo_data["defaultBranchRef"].get("target", {})
+            history = target.get("history") if isinstance(target, dict) else None
+            if not history:
+                break
+
+            nodes = history.get("nodes", [])
+            # Enforce optional max_commits limit across pages
+            if max_commits is not None and max_commits >= 0:
+                remaining = max_commits - len(commits)
+                if remaining <= 0:
+                    break
+                commits.extend(nodes[:remaining])
             else:
-                print(f"[ERROR] API request failed: {response.status_code} - {response.text}")
-                return None
-        except requests.exceptions.Timeout:
-            print(f"[ERROR] Request timeout for: {url}")
-            return None
-        except requests.exceptions.RequestException as e:
-            print(f"[ERROR] Request error for {url}: {str(e)}")
-            return None
+                commits.extend(nodes)
+
+            page_info = history.get("pageInfo", {})
+            has_next = page_info.get("hasNextPage")
+            cursor = page_info.get("endCursor")
+            pages += 1
+            if not has_next:
+                break
+
+        return commits, rate_meta
 
     def get_paginated(
         self,
