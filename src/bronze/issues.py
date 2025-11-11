@@ -4,7 +4,17 @@ from typing import List
 from utils.github_api import GitHubAPIClient, OrganizationConfig, save_json_data, load_json_data
 
 def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cache: bool = True) -> List[str]:
-
+    """
+    Extract issues, pull requests, and issue events from GitHub repositories.
+    
+    OPTIMIZATION NOTE: Issue events are filtered to include only essential fields 
+    (id, event, created_at, repo_name, actor.login, issue.number) to significantly 
+    reduce file size. This is important for organizations with many issues/events, 
+    where the full event data can exceed hundreds of MB.
+    
+    The Silver layer only uses these specific fields, so filtering at Bronze layer
+    prevents unnecessary data storage and processing overhead.
+    """
     # Load filtered repositories
     filtered_repos = load_json_data("data/bronze/repositories_filtered.json")
     if not filtered_repos:
@@ -64,12 +74,28 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
                 )
                 generated_files.append(repo_prs_file)
         
-        # Get issue events
+        # Get issue events (filter to keep only essential fields to reduce file size)
         events_base = f"https://api.github.com/repos/{full_name}/issues/events"
         events = client.get_paginated(events_base, use_cache=use_cache, per_page=100)
         
         if events:
-            repo_events = [{**event, 'repo_name': repo_name} for event in events]
+            # Extract only essential fields to drastically reduce file size
+            repo_events = []
+            for event in events:
+                filtered_event = {
+                    'id': event.get('id'),
+                    'event': event.get('event'),
+                    'created_at': event.get('created_at'),
+                    'repo_name': repo_name,
+                    'actor': {
+                        'login': event.get('actor', {}).get('login')
+                    } if event.get('actor') else None,
+                    'issue': {
+                        'number': event.get('issue', {}).get('number')
+                    } if event.get('issue') else None
+                }
+                repo_events.append(filtered_event)
+            
             all_issue_events.extend(repo_events)
             
             # Save per-repo events
