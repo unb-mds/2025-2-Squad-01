@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { scaleOrdinal, schemeSpectral } from 'd3';
-import type { HistogramDatum, PieDatum, BasicDatum } from '../types';
+import type { PieDatum, BasicDatum } from '../types';
 import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
-import { Histogram, LineGraph, PieChart } from '../components/Graphs';
+import { Histogram, PieChart, CommitMetricsChart, LineGraph} from '../components/Graphs';
 import { Utils } from './Utils';
+import { line } from 'd3';
 
 /**
  * CommitsPage Component
@@ -26,7 +26,7 @@ export default function CommitsPage() {
   const [selectedMember, setSelectedMember] = useState<string>('All');
   const [selectedTime, setSelectedTime] = useState<string>('Last 24 hours');
   const [chartType, setChartType] = useState<'line' | 'bar'>('line');
-
+  const [lineToggle, setLineToggle] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     let cancelled = false;
@@ -135,84 +135,27 @@ export default function CommitsPage() {
     }
   }, [selectedTime]);
 
+ 
+
   const BasicData = useMemo<BasicDatum[]>(() => {
     if (!selectedRepo) return [];
-    const counts = new Map<string, number>();
-
+    
     const groupByHour = selectedTime === 'Last 24 hours';
-
-    for (const activity of filteredActivities) {
-      // Use full ISO date
-      const iso = activity.date;
-
-      // Determine grouping key
-      let key: string;
-      if (groupByHour) {
-        // Truncate to hour
-        const d = new Date(iso);
-        const hourKey = new Date(d);
-        hourKey.setMinutes(0, 0, 0);
-        key = hourKey.toISOString();
-      } else {
-        // Group by day (YYYY-MM-DD)
-        key = iso.slice(0, 10);
-      }
-
-      // Cutoff filtering
-      if (cutoffDate) {
-        const activityDate = new Date(key.length > 10 ? key : key + 'T00:00:00Z');
-        if (activityDate < cutoffDate) continue;
-      }
-
-      counts.set(key, (counts.get(key) ?? 0) + 1);
-    }
-
-    return [...counts.entries()]
-      .map(([date, value]) => ({ date, value }))
-      .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    
+    return Utils.aggregateBasicData(filteredActivities, {
+      groupByHour,
+      cutoffDate,
+    });
   }, [selectedRepo, filteredActivities, cutoffDate, selectedTime]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
-    const counts = new Map<string, number>();
-
-    for (const activity of filteredActivities) {
-      if (cutoffDate) {
-        // For Last 24 hours, compare full timestamp; otherwise compare day boundary
-        const activityDate =
-          selectedTime === 'Last 24 hours'
-            ? new Date(activity.date)
-            : new Date(activity.date.slice(0, 10) + 'T00:00:00Z');
-        if (activityDate < cutoffDate) continue;
-      }
-      const label = activity.user.displayName || activity.user.login || 'Unknown';
-      counts.set(label, (counts.get(label) ?? 0) + 1);
-    }
-
-    const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-    const top = sorted.slice(0, 8);
-    const restTotal = sorted.slice(8).reduce((acc, [, value]) => acc + value, 0);
-
-    const colorScale = scaleOrdinal<string, string>()
-      .domain([...top.map(([label]) => label), 'Others'])
-      .range([...schemeSpectral[3], ...schemeSpectral[11]]);
-
-    const result = top.map(([label, value]) => ({
-      label,
-      value,
-      color: colorScale(label),
-    }));
-
-    if (restTotal > 0) {
-      result.push({
-        label: 'Others',
-        value: restTotal,
-        color: colorScale('Others'),
-      });
-    }
-
-    return result;
-  }, [selectedRepo, filteredActivities, cutoffDate]);
+    
+    return Utils.aggregatePieData(filteredActivities, {
+      cutoffDate,
+      selectedTime,
+    });
+  }, [selectedRepo, filteredActivities, cutoffDate, selectedTime]);
 
   return (
     <DashboardLayout
@@ -250,7 +193,7 @@ export default function CommitsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
         {/* Commits Timeline */}
         <div
-          className="border rounded-lg h-300 w-170"
+          className="border rounded-lg h-170 w-170"
           style={{ backgroundColor: '#222222', borderColor: '#333333' }}
         >
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
@@ -317,6 +260,36 @@ export default function CommitsPage() {
               </>
             )}
           </div>
+        </div>
+      </div>
+      <div className="mt-5">
+        <div
+          className="border rounded-lg"
+          style={{ backgroundColor: '#222222', borderColor: '#333333' }}
+        >
+          <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
+            <h3 className="text-xl font-bold text-white">Commits Content Analysis</h3>
+            <p className="text-slate-400 text-sm mt-1">
+              Detailed analysis of code changes, commit frequency, and productivity metrics
+            </p>
+          </div>
+         <div className="flex items-center justify-center mb-2">
+                  <CommitMetricsChart data={BasicData} line_toggle={lineToggle} />
+          </div>
+          <div className="flex items-center justify-center mb-2">
+            <button
+              onClick={() => setLineToggle((prev) => !prev)}
+              aria-pressed={lineToggle}
+              title={lineToggle ? 'Hide Line Graph' : 'Show Line Graph'}
+              className={`px-4 py-2 text-white rounded-lg transition-colors duration-200 ${
+                lineToggle
+                  ? 'border border-green-500 bg-green-600 hover:bg-green-700'
+                  : 'border border-gray-500 bg-gray-600 hover:bg-gray-700'
+              }`}
+            >
+              {lineToggle ? 'Hide Line Graph' : 'Show Line Graph'}
+            </button>
+           </div>
         </div>
       </div>
     </DashboardLayout>

@@ -25,7 +25,7 @@ import {
 import * as d3 from 'd3';
 import { zoom } from 'd3-zoom';
 import type { PieArcDatum } from 'd3';
-import type { PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint, CommitMetricsDatum } from '../types';
+import type { PieDatum, BasicDatum, CollaborationEdge, HeatmapDataPoint} from '../types';
 import { Filter } from './Filter';
 
 interface NodeData extends SimulationNodeDatum { id: string; }
@@ -733,7 +733,7 @@ export function LineGraph({ data, timeRange }: { data: BasicDatum[]; timeRange?:
  *
  * @param data - Array of commit metrics data by date
  */
-export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
+export function CommitMetricsChart({ data, line_toggle }: { data: BasicDatum[] , line_toggle: boolean}) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
@@ -770,7 +770,7 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
       .range([height - margin.bottom, margin.top]);
 
     const yScaleCommits = scaleLinear()
-      .domain([0, max(data, (d) => Math.max(d.commits, d.changesPerCommit)) ?? 0])
+      .domain([0, max(data, (d) => Math.max(d.value, d.totalLines)) ?? 0])
       .nice()
       .range([height - margin.bottom, margin.top]);
 
@@ -779,19 +779,19 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
       .nice()
       .range([height - margin.bottom, margin.top]);
 
-    // Grid lines (horizontal)
+    // Grid lines (horizontal) - CHANGED: Now based on yScaleChanges (additions + deletions)
     const gridLines = svg
       .append('g')
       .attr('class', 'grid');
 
-    const yTicks = yScaleLines.ticks(8);
+    const yTicks = yScaleChanges.ticks(8);
     yTicks.forEach((tick) => {
       gridLines
         .append('line')
         .attr('x1', margin.left)
         .attr('x2', width - margin.right)
-        .attr('y1', yScaleLines(tick))
-        .attr('y2', yScaleLines(tick))
+        .attr('y1', yScaleChanges(tick))
+        .attr('y2', yScaleChanges(tick))
         .attr('stroke', '#334155')
         .attr('stroke-width', 1)
         .attr('stroke-opacity', 0.3);
@@ -825,28 +825,18 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
     xAxis.selectAll('line').style('stroke', '#334155');
     xAxis.select('.domain').style('stroke', '#334155');
 
-    // Left Y Axis (Total Lines)
+    // Left Y Axis - CHANGED: Now represents Additions + Deletions instead of Total Lines
     const yAxisLeft = svg
       .append('g')
       .attr('transform', `translate(${margin.left}, 0)`)
-      .call(axisLeft(yScaleLines).ticks(8));
+      .call(axisLeft(yScaleChanges).ticks(8));
     
     yAxisLeft.selectAll('text').style('fill', '#94a3b8').style('font-size', '11px');
     yAxisLeft.selectAll('line').style('stroke', '#334155');
     yAxisLeft.select('.domain').style('stroke', '#334155');
 
-    // Right Y Axis (Commits / Changes per Commit)
-    const yAxisRight = svg
-      .append('g')
-      .attr('transform', `translate(${width - margin.right}, 0)`)
-      .call(axisRight(yScaleCommits).ticks(8));
-    
-    yAxisRight.selectAll('text').style('fill', '#94a3b8').style('font-size', '11px');
-    yAxisRight.selectAll('line').style('stroke', '#334155');
-    yAxisRight.select('.domain').style('stroke', '#334155');
-
     // Area chart (Total Lines) - Background
-    const areaGenerator = area<CommitMetricsDatum>()
+    const areaGenerator = area<BasicDatum>()
       .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
       .y0(height - margin.bottom)
       .y1((d) => yScaleLines(d.totalLines))
@@ -892,39 +882,15 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
       .append('title')
       .text((d) => `${d.date}\nDeletions: -${d.deletions}`);
 
-    // Line Chart - Commits (orange)
-    const commitsLine = line<CommitMetricsDatum>()
-      .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
-      .y((d) => yScaleCommits(d.commits))
-      .curve(curveMonotoneX);
 
-    svg
-      .append('path')
-      .datum(data)
-      .attr('fill', 'none')
-      .attr('stroke', '#f97316')
-      .attr('stroke-width', 2.5)
-      .attr('d', commitsLine);
-
-    // Commits line points
-    svg
-      .append('g')
-      .selectAll('circle')
-      .data(data)
-      .join('circle')
-      .attr('cx', (d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
-      .attr('cy', (d) => yScaleCommits(d.commits))
-      .attr('r', 3.5)
-      .attr('fill', '#f97316')
-      .attr('stroke', '#1e293b')
-      .attr('stroke-width', 1.5)
-      .append('title')
-      .text((d) => `${d.date}\nCommits: ${d.commits}`);
-
+    // CHANGED: Line opacity controlled by line_toggle prop
+    const line_opacity = line_toggle ? 1.0 : 0.0;
+    
     // Line Chart - Changes per Commit (blue)
-    const changesLine = line<CommitMetricsDatum>()
+    // CHANGED: Now uses yScaleChanges to align with the top of stacked bars
+    const changesLine = line<BasicDatum>()
       .x((d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
-      .y((d) => yScaleCommits(d.changesPerCommit))
+      .y((d) => yScaleChanges(d.additions + d.deletions))
       .curve(curveMonotoneX);
 
     svg
@@ -933,6 +899,7 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
       .attr('fill', 'none')
       .attr('stroke', '#3b82f6')
       .attr('stroke-width', 2.5)
+      .style('opacity', line_opacity)
       .attr('d', changesLine);
 
     // Changes per commit line points
@@ -942,13 +909,14 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
       .data(data)
       .join('circle')
       .attr('cx', (d) => (xScale(d.date) ?? 0) + xScale.bandwidth() / 2)
-      .attr('cy', (d) => yScaleCommits(d.changesPerCommit))
+      .attr('cy', (d) => yScaleChanges(d.additions + d.deletions))
       .attr('r', 3.5)
       .attr('fill', '#3b82f6')
       .attr('stroke', '#1e293b')
       .attr('stroke-width', 1.5)
+      .style('opacity', line_opacity)
       .append('title')
-      .text((d) => `${d.date}\nChanges/Commit: ${d.changesPerCommit.toFixed(1)}`);
+      .text((d) => `${d.date}\nChanges: ${(d.additions + d.deletions)}`);
 
     // Legend
     const legend = svg
@@ -957,7 +925,6 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
 
     const legendItems = [
       { label: 'Total lines', color: '#475569', type: 'area' },
-      { label: 'Commits', color: '#f97316', type: 'line' },
       { label: 'Changes per commit', color: '#3b82f6', type: 'line' },
       { label: 'Additions', color: '#84cc16', type: 'rect' },
       { label: 'Deletions', color: '#ef4444', type: 'rect' },
@@ -1011,7 +978,7 @@ export function CommitMetricsChart({ data }: { data: CommitMetricsDatum[] }) {
         .text(item.label);
     });
 
-  }, [data]);
+  }, [data, line_toggle]);
 
   return <svg ref={svgRef} className="w-full h-[600px]" role="img" aria-label="Commit Metrics Chart" />;
 }
