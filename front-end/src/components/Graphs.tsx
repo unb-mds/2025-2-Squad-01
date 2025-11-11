@@ -930,10 +930,14 @@ export function CommitMetricsChart({ data, line_toggle }: { data: BasicDatum[] ,
       { label: 'Deletions', color: '#ef4444', type: 'rect' },
     ];
 
+    // CHANGED: Calculate spacing based on available width for better alignment
+    const legendWidth = width - margin.left - margin.right;
+    const itemSpacing = legendWidth / legendItems.length;
+
     legendItems.forEach((item, i) => {
       const legendItem = legend
         .append('g')
-        .attr('transform', `translate(${i * 155}, 0)`);
+        .attr('transform', `translate(${i * itemSpacing}, 0)`);
 
       if (item.type === 'line') {
         legendItem
