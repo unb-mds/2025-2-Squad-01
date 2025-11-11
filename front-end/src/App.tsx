@@ -4,7 +4,7 @@ import Commits from './pages/Commits';
 import NotFound from './pages/NotFound';
 import CollaborationPage from './pages/Collaboration';
 import PullRequestsPage from './pages/PullRequests';
-import CommitAnalysis from './pages/CommitAnalysis';
+import IssuesPage from './pages/Issues';
 
 /**
  * App Component

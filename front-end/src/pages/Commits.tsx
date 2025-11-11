@@ -6,6 +6,7 @@ import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
 import { Histogram, PieChart, CommitMetricsChart} from '../components/Graphs';
 import { Utils } from './Utils';
+import { line } from 'd3';
 
 /**
  * CommitsPage Component
@@ -70,6 +71,8 @@ export default function CommitsPage() {
     if (!selectedRepo) return [];
     return Utils.applyFilters(selectedRepo.activities, selectedMember, selectedTime);
   }, [selectedRepo, selectedMember, selectedTime]);
+
+ 
 
   const BasicData = useMemo<BasicDatum[]>(() => {
     if (!selectedRepo) return [];
