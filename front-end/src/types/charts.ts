@@ -27,13 +27,8 @@ export type HeatmapDataPoint = {
 export type BasicDatum = {
   date: string;
   value: number;
-};
-
-export type CommitMetricsDatum = {
-  date: string;
-  commits: number;
-  additions: number;
-  deletions: number;
-  totalLines: number;
-  changesPerCommit: number;
+  // Optional fields for commit-specific data
+  additions?: number;
+  deletions?: number;
+  totalLines?: number;
 };
