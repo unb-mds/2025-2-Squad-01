@@ -174,14 +174,13 @@ def extract_commits(
             )
             generated_files.append(repo_commits_file)
     
-    # Save all commits
-    if all_commits:
-        all_commits_file = save_json_data(
-            all_commits,
-            "data/bronze/commits_all.json"
-        )
-        generated_files.append(all_commits_file)
+    # Save all commits (always save, even if empty, to ensure files exist)
+    all_commits_file = save_json_data(
+        all_commits,
+        "data/bronze/commits_all.json"
+    )
+    generated_files.append(all_commits_file)
 
-        print(f"Total commits extracted: {len(all_commits)}")
+    print(f"Total commits extracted: {len(all_commits)}")
 
     return generated_files
