@@ -29,13 +29,13 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
         repo_name = repo.get('name', 'unknown')
         full_name = repo.get('full_name', repo_name)
         
-    print(f"Processing issues for: {repo_name}")
+        print(f"Processing issues for: {repo_name}")
         
-    # Get issues (includes PRs)
-    issues_base = f"https://api.github.com/repos/{full_name}/issues?state=all"
-    issues = client.get_paginated(issues_base, use_cache=use_cache, per_page=100)
+        # Get issues (includes PRs)
+        issues_base = f"https://api.github.com/repos/{full_name}/issues?state=all"
+        issues = client.get_paginated(issues_base, use_cache=use_cache, per_page=100)
         
-    if issues:
+        if issues:
             # Separate issues from PRs
             repo_issues = []
             repo_prs = []
@@ -64,11 +64,11 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
                 )
                 generated_files.append(repo_prs_file)
         
-    # Get issue events
-    events_base = f"https://api.github.com/repos/{full_name}/issues/events"
-    events = client.get_paginated(events_base, use_cache=use_cache, per_page=100)
+        # Get issue events
+        events_base = f"https://api.github.com/repos/{full_name}/issues/events"
+        events = client.get_paginated(events_base, use_cache=use_cache, per_page=100)
         
-    if events:
+        if events:
             repo_events = [{**event, 'repo_name': repo_name} for event in events]
             all_issue_events.extend(repo_events)
             
@@ -79,27 +79,24 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
             )
             generated_files.append(events_file)
     
-    # Save aggregated files
-    if all_issues:
-        all_issues_file = save_json_data(
-            all_issues,
-            "data/bronze/issues_all.json"
-        )
-        generated_files.append(all_issues_file)
+    # Save aggregated files (always save, even if empty, to ensure files exist)
+    all_issues_file = save_json_data(
+        all_issues,
+        "data/bronze/issues_all.json"
+    )
+    generated_files.append(all_issues_file)
     
-    if all_prs:
-        all_prs_file = save_json_data(
-            all_prs,
-            "data/bronze/prs_all.json"
-        )
-        generated_files.append(all_prs_file)
+    all_prs_file = save_json_data(
+        all_prs,
+        "data/bronze/prs_all.json"
+    )
+    generated_files.append(all_prs_file)
     
-    if all_issue_events:
-        all_events_file = save_json_data(
-            all_issue_events,
-            "data/bronze/issue_events_all.json"
-        )
-        generated_files.append(all_events_file)
+    all_events_file = save_json_data(
+        all_issue_events,
+        "data/bronze/issue_events_all.json"
+    )
+    generated_files.append(all_events_file)
     
     print(f"Extracted {len(all_issues)} issues, {len(all_prs)} PRs, {len(all_issue_events)} events")
     

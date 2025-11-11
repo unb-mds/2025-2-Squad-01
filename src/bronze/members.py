@@ -104,20 +104,23 @@ def extract_members(client: GitHubAPIClient, config: OrganizationConfig, use_cac
     
     # Get detailed member info
     detailed_members = []
-  #  for member in raw_members:
-   #     member_url = f"https://api.github.com/users/{member['login']}"
-   #     detail = client.get_with_cache(member_url, use_cache)
-   #     if detail:
-   #         detailed_members.append(detail)
+    # Note: Detailed member extraction is commented out to reduce API calls
+    # Uncomment the following lines if detailed member info is needed:
+    # for member in raw_members:
+    #     member_url = f"https://api.github.com/users/{member['login']}"
+    #     detail = client.get_with_cache(member_url, use_cache)
+    #     if detail:
+    #         detailed_members.append(detail)
     
+    # Always save detailed members file (even if empty) to ensure file exists
+    detailed_file = save_json_data(
+        detailed_members,
+        "data/bronze/members_detailed.json"
+    )
+    generated_files.append(detailed_file)
+    
+    # Save individual member files only if we have detailed data
     if detailed_members:
-        detailed_file = save_json_data(
-            detailed_members,
-            "data/bronze/members_detailed.json"
-        )
-        generated_files.append(detailed_file)
-        
-        # Save individual member files
         for member in detailed_members:
             member_file = save_json_data(
                 member,
