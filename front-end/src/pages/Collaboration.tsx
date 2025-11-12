@@ -125,7 +125,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
           <p className="text-slate-400 text-sm mb-8">Informações gerais e métricas chave de colaboração.</p>
 
           {/* Grid para os Cards dos Gráficos */}
-          <div className="grid grid-cols-1 gap-6 h-full">
+          <div className="grid grid-cols-1 gap-6">
 
             {/* Card: Rede de Colaboração */}
             <div
@@ -184,7 +184,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
 
             {/* Card: Heatmap de Atividade */}
             <div
-              className="border rounded-lg flex flex-col h-full overflow-hidden"
+              className="border rounded-lg flex flex-col min-h-[500px] overflow-hidden"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}
             >
               {/* Header do Card*/}
@@ -196,9 +196,9 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
               </div> 
 
               {/* Conteúdo do Card */}
-              <div className="flex-grow p-6 flex items-center justify-center overflow-hidden h-full w-full">
+              <div className="flex-grow p-6 flex items-center justify-center overflow-hidden">
                 {pageData?.heatmap && pageData.heatmap.length > 0 ? (
-                  <div className="flex items-center justify-center w-full h-full">
+                  <div className="flex items-center justify-center w-full">
                     <div className="transform scale-140 origin-center">
                       <ActivityHeatmap data={pageData.heatmap} />
                     </div>
