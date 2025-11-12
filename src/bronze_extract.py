@@ -36,6 +36,7 @@ def main():
         from bronze.issues import extract_issues
         from bronze.commits import extract_commits
         from bronze.members import extract_members
+        from bronze.repository_structure import extract_repository_structure
         
         # Extract data in dependency order
         print("\n[INFO]: Extracting repositories...")
@@ -59,9 +60,11 @@ def main():
         print("\n[INFO]: Extracting organization members...")
         member_files = extract_members(client, config, use_cache=args.cache)
         
+        print("\n[INFO]: Extracting repository structures...")
+        structure_files = extract_repository_structure(client, config, use_cache=args.cache)
 
         # Update registry
-        all_files = repo_files + issue_files + commit_files + member_files
+        all_files = repo_files + issue_files + commit_files + member_files + structure_files
         update_data_registry('bronze', 'all_extractions', all_files)
 
         print(f"\n[SUCCESS] Bronze extraction completed successfully!")
