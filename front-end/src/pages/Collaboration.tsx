@@ -9,7 +9,7 @@ import { Utils } from './Utils';
 import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils'; 
 
 
-type RepoHomePageData = {
+type CollaborationPageData = {
   collaboration?: CollaborationEdge[];
   heatmap?: HeatmapDataPoint[];
 };
@@ -24,7 +24,7 @@ function PlaceholderCard({ title }: { title: string }) {
 
 export default function CollaborationPage() { 
 
-  const [pageData, setPageData] = useState<RepoHomePageData | null>(null);
+  const [pageData, setPageData] = useState<CollaborationPageData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [ mainData, setMainData ] = useState<ProcessedActivityResponse | null>(null); 
@@ -55,8 +55,8 @@ export default function CollaborationPage() {
         const heatmapData: HeatmapDataPoint[] = await heatmapResponse.json();
 
         setPageData({
-          collaboration: collaborationData,
-          heatmap: heatmapData
+          collaboration: collaborationData.filter(d => d && !d._metadata),
+          heatmap: heatmapData.filter(d => d && !d._metadata),
         });
         setMainData(processedMainData);
 
@@ -92,6 +92,15 @@ export default function CollaborationPage() {
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, searchParams]);
 
+  const filteredCollaborationData = useMemo(() => {
+    if (!pageData?.collaboration || !selectedRepo) return [];
+    if (selectedRepo.name === 'All repositories') {
+      return pageData.collaboration;
+    }
+    return pageData.collaboration.filter(edge => edge.repo === selectedRepo.name);
+    }, [pageData?.collaboration, selectedRepo]);
+
+
 
 if (pageData && !loading && !error) { // Adiciona verificações de loading/error
     console.log("Dados disponíveis para renderizar Heatmap:", pageData.heatmap);
@@ -116,7 +125,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
       )}
 
       {/* --- Estado de Sucesso (Dados Carregados) --- */}
-      {pageData && !loading && !error && (
+      {pageData && mainData && selectedRepo && !loading && !error && (
         <div>
           <h1 className="text-3xl font-bold text-white mb-4">Visão Geral do Repositório</h1>
           <p className="text-slate-400 text-sm mb-8">Informações gerais e métricas chave de colaboração.</p>
@@ -138,8 +147,8 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
               </div> 
               {/* Conteúdo do Card */}
               <div className="flex-grow p-2 overflow-hidden">
-                {pageData.collaboration && pageData.collaboration.length > 0 ? (
-                  <CollaborationNetworkGraph data={pageData.collaboration} />
+                {filteredCollaborationData.length > 0 ? (
+                  <CollaborationNetworkGraph data={filteredCollaborationData} />
                 ) : (
                   <p className="text-white/50 text-center py-10">Dados de colaboração não disponíveis.</p>
                 )}
