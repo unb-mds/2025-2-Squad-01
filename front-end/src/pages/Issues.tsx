@@ -32,7 +32,7 @@ export default function IssuesPage() {
     async function fetchData() {
       try {
         setLoading(true);
-        const processedData = await Utils.fetchAndProcessActivityData("issue");
+        const processedData = await Utils.fetchAndProcessActivityData('issue');
         if (!cancelled) {
           setData(processedData);
           setError(null);
