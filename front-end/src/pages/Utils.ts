@@ -60,9 +60,9 @@ export class Utils {
     filterType?: string
   ): ProcessedActivityResponse {
     // Definir tipos relacionados com cada categoria
-    const issueTypes = ['issue_created', 'issue_closed', 'event_labeled', 'event_assigned', 'event_milestoned', 'event_demilestoned', 'event_reopened', 'event_renamed', 'event_unassigned'];
+    const issueTypes = ['issue_created'];
     const commitTypes = ['commit'];
-    const prTypes = ['pr_created', 'pr_closed'];
+    const prTypes = ['pr_created'];
 
     // Filtrar por categoria se especificado
     let filteredActivities = rawActivities;
@@ -137,7 +137,7 @@ export class Utils {
    */
   static async fetchAndProcessActivityData(type?: string): Promise<ProcessedActivityResponse> {
     const response = await fetch(
-      'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/temporal_events.json'
+      'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/commits_graphql/data/silver/temporal_events.json'
     );
 
     if (!response.ok) {
@@ -303,5 +303,152 @@ export class Utils {
     }
 
     return result;
+  }
+
+  /**
+   * Apply member and time filters to activities
+   * 
+   * @param activities - Activities to filter
+   * @param selectedMember - Member name to filter by (or 'All')
+   * @param selectedTime - Time range to filter by (e.g., 'Last 24 hours', 'All Time')
+   * @returns Filtered activities
+   */
+  static applyFilters(
+    activities: ProcessedActivity[],
+    selectedMember: string,
+    selectedTime: string
+  ): ProcessedActivity[] {
+    let filteredActivities = activities;
+    
+    // Filtrar por membro
+    if (selectedMember && selectedMember !== 'All') {
+      filteredActivities = filteredActivities.filter((activity) => {
+        const name = activity.user.displayName || activity.user.login || 'Unknown';
+        return name === selectedMember;
+      });
+    }
+    
+    // Filtrar por tempo
+    if (selectedTime !== 'All Time') {
+      const now = new Date();
+      const cutoffDate = new Date();
+      
+      switch (selectedTime) {
+        case 'Last 24 hours':
+          cutoffDate.setHours(now.getHours() - 24);
+          break;
+        case 'Last 7 days':
+          cutoffDate.setDate(now.getDate() - 7);
+          break;
+        case 'Last 30 days':
+          cutoffDate.setDate(now.getDate() - 30);
+          break;
+        case 'Last 6 months':
+          cutoffDate.setMonth(now.getMonth() - 6);
+          break;
+        case 'Last Year':
+          cutoffDate.setFullYear(now.getFullYear() - 1);
+          break;
+      }
+      
+      filteredActivities = filteredActivities.filter((activity) => {
+        const activityDate = new Date(activity.date);
+        return activityDate >= cutoffDate;
+      });
+    }
+    
+    return filteredActivities;
+  }
+
+  /**
+   * Select repository and extract list of members
+   * 
+   * @param repositories - Array of repositories to select from
+   * @param repoParam - Repository parameter from URL (repo ID or 'all')
+   * @param selectedMember - Member name (not used in this function, kept for compatibility)
+   * @returns Object containing selected repo and list of members
+   */
+  static selectRepoAndFilter(
+    repositories: RepoActivitySummary[],
+    repoParam: string | null,
+    selectedMember?: string
+  ): {
+    selectedRepo: RepoActivitySummary | null;
+    members: string[];
+  } {
+    // Determine selected repository ID from URL parameter
+    const selectedRepoId: number | 'all' =
+      !repoParam || repoParam === 'all'
+        ? 'all'
+        : Number.isNaN(Number(repoParam))
+          ? 'all'
+          : Number(repoParam);
+
+    let selectedRepo: RepoActivitySummary | null;
+
+    // Create aggregate repository for 'all' selection
+    if (selectedRepoId === 'all') {
+      selectedRepo = {
+        id: -1,
+        name: 'All repositories',
+        activities: repositories.flatMap((r) => r.activities),
+      } as RepoActivitySummary;
+    } else {
+      selectedRepo = repositories.find((r) => r.id === selectedRepoId) ?? null;
+    }
+
+    if (!selectedRepo) {
+      return { selectedRepo: null, members: [] };
+    }
+
+    // Extract unique member names from ALL activities
+    const memberSet = new Set<string>();
+    for (const activity of selectedRepo.activities) {
+      const name = activity.user?.displayName || activity.user?.login || 'Unknown';
+      memberSet.add(name);
+    }
+    const membersFound = Array.from(memberSet).sort((a, b) => a.localeCompare(b));
+    const members = ['All', ...membersFound];
+
+    return { selectedRepo, members };
+  }
+
+  /**
+   * Calculate cutoff date based on time range selection
+   * 
+   * @param selectedTime - Time range string (e.g., 'Last 24 hours', 'Last 7 days')
+   * @returns Date representing the cutoff, or null if no filter
+   */
+  static calculateCutoffDate(selectedTime: string): Date | null {
+    const now = new Date();
+    switch (selectedTime) {
+      case 'Last 24 hours': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 1);
+        return d;
+      }
+      case 'Last 7 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 7);
+        return d;
+      }
+      case 'Last 30 days': {
+        const d = new Date(now);
+        d.setDate(d.getDate() - 30);
+        return d;
+      }
+      case 'Last 6 months': {
+        const d = new Date(now);
+        d.setMonth(d.getMonth() - 6);
+        return d;
+      }
+      case 'Last Year': {
+        const d = new Date(now);
+        d.setFullYear(d.getFullYear() - 1);
+        return d;
+      }
+      default:
+        return null;
+    }
   }
 }

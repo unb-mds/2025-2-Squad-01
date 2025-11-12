@@ -39,7 +39,7 @@ interface LinkData extends SimulationLinkDatum<NodeData> { source: NodeData; tar
  *
  * @param data - Array of histogram data points with date labels and counts
  */
-export function Histogram({ data }: { data: BasicDatum[]; }) {
+export function Histogram({ data, type }: { data: BasicDatum[], type: string }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [showLineGraph, setShowLineGraph] = useState(false);
 
@@ -56,7 +56,7 @@ export function Histogram({ data }: { data: BasicDatum[]; }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', '#e2e8f0')
-        .text('No commits available! Please change your filters or select another repository.');
+        .text(`No ${type} available! Please change your filters or select another repository.`);
 
       return;
     }
@@ -119,7 +119,7 @@ export function Histogram({ data }: { data: BasicDatum[]; }) {
       .attr('fill', '#e2e8f0')
       .attr('text-anchor', 'start')
       .attr('font-size', 12)
-      .text('Commits');
+      .text(`${type}s Count`);
 
     const lineOpacity = showLineGraph ? 1 : 0;
     const rectOpacity = showLineGraph ? 0 : 1;
@@ -171,7 +171,7 @@ export function Histogram({ data }: { data: BasicDatum[]; }) {
       .attr('fill', '#3b82f6')
       .style('opacity', rectOpacity)
       .append('title')
-      .text((d) => `${d.date}: ${d.value} commit(s)`);
+      .text((d) => `${d.date}: ${d.value} ${type}(s)`);
 
 
     // Line chart overlay
@@ -202,7 +202,7 @@ export function Histogram({ data }: { data: BasicDatum[]; }) {
       .attr('stroke-width', 1.5)
       .style('opacity', 0)
       .append('title')
-      .text((d) => `${d.date}: ${d.value} commit(s)`);
+      .text((d) => `${d.date}: ${d.value} ${type}(s)`);
 
 
       
@@ -235,15 +235,7 @@ export function Histogram({ data }: { data: BasicDatum[]; }) {
   );
 }
 
-/**
- * PieChart Component
- *
- * D3-based pie chart for visualizing contributor distribution.
- * Shows commit counts per contributor with color-coded segments.
- *
- * @param data - Array of pie data with labels, values, and colors
- */
-export function PieChart({ data }: { data: PieDatum[] }) {
+export function PieChart({ data, type }: { data: PieDatum[]; type: string }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
@@ -258,7 +250,7 @@ export function PieChart({ data }: { data: PieDatum[] }) {
         .attr('y', '50%')
         .attr('text-anchor', 'middle')
         .attr('fill', 'currentColor')
-        .text('No commits available for this repository');
+        .text('No data available for this repository');
       
       return;
     }
@@ -287,7 +279,7 @@ export function PieChart({ data }: { data: PieDatum[] }) {
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.2)
       .append('title')
-      .text((d) => `${d.data.label}: ${d.data.value} commit(s)`);
+      .text((d) => `${d.data.label}: ${d.data.value} ${type}(s)`);
   }, [data]);
 
   return <svg ref={svgRef} className="w-full h-[240px]" role="img" aria-label="Pie chart" />;

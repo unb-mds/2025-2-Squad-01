@@ -4,9 +4,8 @@ import type { PieDatum, BasicDatum } from '../types';
 import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils';
 import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
-import { Histogram, PieChart, CommitMetricsChart, LineGraph} from '../components/Graphs';
+import { Histogram, PieChart, CommitMetricsChart} from '../components/Graphs';
 import { Utils } from './Utils';
-import { line } from 'd3';
 
 /**
  * CommitsPage Component
@@ -56,106 +55,43 @@ export default function CommitsPage() {
 
   const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 
-  const selectedRepo = useMemo<RepoActivitySummary | null>(() => {
-    const selectedParam = searchParams.get('repo');
-    const selectedRepoId: number | 'all' =
-      !selectedParam || selectedParam === 'all'
-        ? 'all'
-        : Number.isNaN(Number(selectedParam))
-          ? 'all'
-          : Number(selectedParam);
+  const repoParam = searchParams.get('repo');
 
-    if (selectedRepoId === 'all') {
-      return {
-        id: -1,
-        name: 'All repositories',
-        activities: repositories.flatMap((repo) => repo.activities),
-      } as RepoActivitySummary;
-    }
-    return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
-  }, [repositories, searchParams]);
+  const { selectedRepo, members } = useMemo(() => {
+    return Utils.selectRepoAndFilter(repositories, repoParam, selectedMember);
+  }, [repositories, repoParam, selectedMember]);
 
   useEffect(() => {
     setSelectedMember('All');
   }, [selectedRepo?.id]);
 
-  const members = useMemo<string[]>(() => {
-    if (!selectedRepo) return [];
-    const memberSet = new Set<string>();
-
-    for (const activity of selectedRepo.activities) {
-      const name = activity.user.displayName || activity.user.login || 'Unknown';
-      memberSet.add(name);
-    }
-    const membersFound = Array.from(memberSet).sort((a, b) => a.localeCompare(b));
-    return ['All', ...membersFound];
-  }, [selectedRepo]);
-
+  // Aplicar filtros nas atividades (membro + tempo)
   const filteredActivities = useMemo(() => {
     if (!selectedRepo) return [];
-
-    if (!selectedMember || selectedMember === 'All') return selectedRepo.activities;
-
-    return selectedRepo.activities.filter((activity) => {
-      const name = activity.user.displayName || activity.user.login || 'Unknown';
-      return name === selectedMember;
-    });
-  }, [selectedRepo, selectedMember]);
-
-  const cutoffDate = useMemo<Date | null>(() => {
-    const now = new Date();
-    switch (selectedTime) {
-      case 'Last 24 hours': {
-        const d = new Date(now);
-        d.setDate(d.getDate() - 1);
-        return d;
-      }
-      case 'Last 7 days': {
-        const d = new Date(now);
-        d.setDate(d.getDate() - 7);
-        return d;
-      }
-      case 'Last 30 days': {
-        const d = new Date(now);
-        d.setDate(d.getDate() - 30);
-        return d;
-      }
-      case 'Last 6 months': {
-        const d = new Date(now);
-        d.setMonth(d.getMonth() - 6);
-        return d;
-      }
-      case 'Last Year': {
-        const d = new Date(now);
-        d.setFullYear(d.getFullYear() - 1);
-        return d;
-      }
-      default:
-        return null;
-    }
-  }, [selectedTime]);
-
- 
+    return Utils.applyFilters(selectedRepo.activities, selectedMember, selectedTime);
+  }, [selectedRepo, selectedMember, selectedTime]);
 
   const BasicData = useMemo<BasicDatum[]>(() => {
     if (!selectedRepo) return [];
     
     const groupByHour = selectedTime === 'Last 24 hours';
     
+    // Não passa cutoffDate, pois o filtro já foi aplicado
     return Utils.aggregateBasicData(filteredActivities, {
       groupByHour,
-      cutoffDate,
+      cutoffDate: null,
     });
-  }, [selectedRepo, filteredActivities, cutoffDate, selectedTime]);
+  }, [selectedRepo, filteredActivities, selectedTime]);
 
   const pieData = useMemo<PieDatum[]>(() => {
     if (!selectedRepo) return [];
     
+    // Não passa cutoffDate, pois o filtro já foi aplicado
     return Utils.aggregatePieData(filteredActivities, {
-      cutoffDate,
+      cutoffDate: null,
       selectedTime,
     });
-  }, [selectedRepo, filteredActivities, cutoffDate, selectedTime]);
+  }, [selectedRepo, filteredActivities, selectedTime]);
 
   return (
     <DashboardLayout
@@ -210,8 +146,7 @@ export default function CommitsPage() {
                 <p className="text-red-400">{error}</p>
               </div>
             ) : (
-              <Histogram data={BasicData} />
-             
+              <Histogram data={BasicData} type="Commit" />
             )}
           </div>
         </div>
@@ -237,7 +172,7 @@ export default function CommitsPage() {
             ) : (
               <>
                 <div className="flex items-center justify-center mb-2">
-                  <PieChart data={pieData} />
+                  <PieChart data={pieData} type='Commit' />
                 </div>
                 <div className="max-h-[400px] overflow-y-auto space-y-2">
                   {pieData.map((item) => (
