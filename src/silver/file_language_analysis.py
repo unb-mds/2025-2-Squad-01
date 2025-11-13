@@ -53,10 +53,24 @@ def detect_language_by_extension(extension: str) -> str:
     
     return extension_map.get(extension.lower(), 'Unknown')
 
-def calculate_language_stats(tree: List[Dict[str, Any]]) -> Dict[str, Any]:
+def calculate_language_stats(
+    tree: List[Dict[str, Any]], 
+    max_sample_files: int = 10,
+    sample_strategy: str = 'largest'
+) -> Dict[str, Any]:
     """
     Calcula estatísticas de linguagens recursivamente na árvore de arquivos.
+    
+    Args:
+        tree: Árvore de arquivos e diretórios
+        max_sample_files: Número máximo de arquivos de exemplo por linguagem (padrão: 10)
+        sample_strategy: Estratégia de amostragem - 'largest' (maiores) ou 'first' (primeiros)
+    
+    Returns:
+        Dicionário com estatísticas agregadas e amostras limitadas
     """
+
+    # Estrutura otimizada: armazena todos temporariamente, mas limita na saída final
     language_stats = defaultdict(lambda: {'count': 0, 'total_size': 0, 'files': []})
     
     def traverse_tree(nodes: List[Dict[str, Any]], parent_path: str = ""):
@@ -83,15 +97,29 @@ def calculate_language_stats(tree: List[Dict[str, Any]]) -> Dict[str, Any]:
     # Calcular percentuais
     total_size = sum(stats['total_size'] for stats in language_stats.values())
     
+
     language_summary = []
     for language, stats in language_stats.items():
         percentage = (stats['total_size'] / total_size * 100) if total_size > 0 else 0
+        
+        # Selecionar amostra de arquivos baseado na estratégia
+        all_files = stats['files']
+        
+        if sample_strategy == 'largest':
+            # Pegar os N maiores arquivos
+            sample_files = sorted(all_files, key=lambda x: x['size'], reverse=True)[:max_sample_files]
+        else:  # 'first'
+            # Pegar os N primeiros arquivos
+            sample_files = all_files[:max_sample_files]
+        
         language_summary.append({
             'language': language,
             'file_count': stats['count'],
             'total_bytes': stats['total_size'],
             'percentage': round(percentage, 2),
-            'files': stats['files']
+            'sample_files': sample_files,  # Amostra limitada
+            'sample_size': len(sample_files),  # Quantos arquivos na amostra
+            'has_more': len(all_files) > max_sample_files  # Indica se há mais arquivos
         })
     
     # Ordenar por percentual
@@ -103,9 +131,21 @@ def calculate_language_stats(tree: List[Dict[str, Any]]) -> Dict[str, Any]:
         'languages': language_summary
     }
 
-def process_file_language_analysis() -> List[str]:
+def process_file_language_analysis(
+    max_sample_files: int = 10,
+    sample_strategy: str = 'largest',
+    save_detailed: bool = False
+) -> List[str]:
     """
     Processa todos os arquivos de estrutura do bronze e analisa linguagens.
+    
+    Args:
+        max_sample_files: Número máximo de arquivos de exemplo por linguagem
+        sample_strategy: 'largest' para maiores arquivos, 'first' para primeiros
+        save_detailed: Se True, salva lista completa de arquivos em arquivo separado
+    
+    Returns:
+        Lista de caminhos de arquivos gerados
     """
     
     # Encontrar todos os arquivos de estrutura
@@ -127,14 +167,23 @@ def process_file_language_analysis() -> List[str]:
             print(f"  Skipping {repo_name}: invalid structure data")
             continue
         
-        # Calcular estatísticas de linguagem
-        language_stats = calculate_language_stats(structure_data['tree'])
+        
+         # Calcular estatísticas de linguagem com amostragem limitada
+        language_stats = calculate_language_stats(
+            structure_data['tree'],
+            max_sample_files=max_sample_files,
+            sample_strategy=sample_strategy
+        )
         
         analysis = {
             'repository': repo_name,
             'owner': structure_data.get('owner'),
             'branch': structure_data.get('branch'),
             'analyzed_at': structure_data.get('extracted_at'),
+            'sample_config': {
+                'max_files_per_language': max_sample_files,
+                'strategy': sample_strategy
+            },
             **language_stats
         }
         
@@ -146,6 +195,26 @@ def process_file_language_analysis() -> List[str]:
             f"data/silver/language_analysis_{repo_name}.json"
         )
         generated_files.append(analysis_file)
+
+                # Opcionalmente salvar lista completa em arquivo separado
+        if save_detailed:
+            # Recalcular SEM limite de amostra para arquivo detalhado
+            detailed_stats = calculate_language_stats(
+                structure_data['tree'],
+                max_sample_files=999999,  # Sem limite
+                sample_strategy=sample_strategy
+            )
+            
+            detailed_file = save_json_data(
+                {
+                    'repository': repo_name,
+                    'owner': structure_data.get('owner'),
+                    **detailed_stats
+                },
+                f"data/silver/language_analysis_{repo_name}_detailed.json"
+            )
+            generated_files.append(detailed_file)
+            print(f"  ✓ Detailed analysis saved: {detailed_file}") 
     
     # Salvar análise consolidada
     if all_repo_analyses:
@@ -156,4 +225,6 @@ def process_file_language_analysis() -> List[str]:
         generated_files.append(consolidated_file)
     
     print(f"\nLanguage analysis completed! Generated {len(generated_files)} files")
+    print(f"Configuration: max_sample_files={max_sample_files}, strategy={sample_strategy}")
+    
     return generated_files
