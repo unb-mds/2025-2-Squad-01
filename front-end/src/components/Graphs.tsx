@@ -14,6 +14,7 @@ import {
   forceLink,
   forceManyBody,
   forceCenter,
+  forceCollide,
   drag as d3Drag,
   Simulation, SimulationNodeDatum, SimulationLinkDatum, D3DragEvent,
   ScaleSequential, scaleSequential, interpolateReds, ScaleLinear, axisRight,
@@ -297,21 +298,63 @@ export function CollaborationNetworkGraph({
   height = 500,
 }: { data: CollaborationEdge[]; width?: number; height?: number }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const [hoveredNode, setHoveredNode] = useState<string | null>(null);
+  const [filterThreshold, setFilterThreshold] = useState<number>(2);
+  const [hideBots, setHideBots] = useState<boolean>(true);
+  const [resetKey, setResetKey] = useState<number>(0);
 
   const graphData = useMemo(() => {
-    const validEdges = data.filter(d => d && d.user1 && d.user2);
-    const userSet = new Set<string>();
+    let validEdges = data.filter(d => d && d.user1 && d.user2);
+    
+    // Filtrar bots se necessário
+    if (hideBots) {
+      validEdges = validEdges.filter(edge =>
+        !edge.user1.includes('[bot]') && !edge.user2.includes('[bot]')
+      );
+    }
+    
+    // Calcular grau de cada nó e repositórios
+    const nodeDegree = new Map<string, number>();
+    const nodeRepos = new Map<string, Set<string>>();
+    
     validEdges.forEach(edge => {
-      userSet.add(edge.user1);
-      userSet.add(edge.user2);
+      nodeDegree.set(edge.user1, (nodeDegree.get(edge.user1) || 0) + 1);
+      nodeDegree.set(edge.user2, (nodeDegree.get(edge.user2) || 0) + 1);
+      
+      if (!nodeRepos.has(edge.user1)) nodeRepos.set(edge.user1, new Set());
+      if (!nodeRepos.has(edge.user2)) nodeRepos.set(edge.user2, new Set());
+      
+      if (edge.repo) {
+        nodeRepos.get(edge.user1)!.add(edge.repo);
+        nodeRepos.get(edge.user2)!.add(edge.repo);
+      }
     });
-    const nodes: NodeData[] = Array.from(userSet).map(id => ({ id }));
-    const links: { source: string | NodeData; target: string | NodeData }[] = validEdges.map(edge => ({
-  source: edge.user1,
-  target: edge.user2,
-}));
-    return { nodes, links };
-  }, [data]);
+    
+    // Filtrar nós por threshold de conexões
+    const filteredNodes = Array.from(nodeDegree.entries())
+      .filter(([_, degree]) => degree >= filterThreshold)
+      .map(([id]) => id);
+    
+    const filteredNodeSet = new Set(filteredNodes);
+    
+    // Filtrar edges para incluir apenas nós selecionados
+    const filteredEdges = validEdges.filter(edge =>
+      filteredNodeSet.has(edge.user1) && filteredNodeSet.has(edge.user2)
+    );
+    
+    const nodes: NodeData[] = filteredNodes.map(id => ({ 
+      id, 
+      degree: nodeDegree.get(id) || 0,
+      repos: nodeRepos.get(id)?.size || 0
+    } as any));
+    
+    const links = filteredEdges.map(edge => ({
+      source: edge.user1,
+      target: edge.user2,
+    }));
+    
+    return { nodes, links, nodeDegree };
+  }, [data, filterThreshold, hideBots]);
 
   useEffect(() => {
     if (!svgRef.current || graphData.nodes.length === 0) return;
@@ -321,30 +364,137 @@ export function CollaborationNetworkGraph({
 
     const container = svg.append("g");
 
+    const centerX = width / 2;
+    const centerY = height / 2;
+    
+    // Posicionamento inicial compacto no centro
+    graphData.nodes.forEach((node: any, index: number) => {
+      const angle = (index / graphData.nodes.length) * Math.PI * 2;
+      const radius = 100; // Raio menor - todos começam próximos
+      node.x = centerX + Math.cos(angle) * radius/2;
+      node.y = centerY + Math.sin(angle) * radius/2;
+    });
+
     const simulation = forceSimulation<NodeData, LinkData>(graphData.nodes)
       .force("link", forceLink<NodeData, LinkData>(graphData.links as any)
-                       .id((d: NodeData) => d.id) // Tipo explícito aqui
-                       .distance(50))
-      .force("charge", forceManyBody().strength(-150))
-      .force("center", forceCenter(width / 2, height / 2));
+                       .id((d: NodeData) => d.id)
+                       .distance(200)) // Links mais curtos
+      .force("charge", forceManyBody().strength(-60)) // Menos repulsão
+      .force("center", forceCenter(centerX, centerY).strength(0.1)) // Força de centro moderada
+      .force("collide", forceCollide<NodeData>().radius((d: any) => {
+        const degree = d.degree || 1;
+        const logScale = Math.log(degree + 3);
+        return Math.min(logScale * 3 + 2, 9) + 3;
+      }).strength(0.7)); // Colisão mais forte
 
     const link = container.append("g")
-        .attr("stroke", "#666")
-        .attr("stroke-opacity", 0.5)
+        .attr("stroke", "#444")
+        .attr("stroke-opacity", 0.3)
       .selectAll("line")
       .data(graphData.links)
       .join("line")
-        .attr("stroke-width", 1);
+        .attr("stroke-width", 1)
+        .attr("class", (d: any) => `link-${d.source.id}-${d.target.id}`);
 
     const node = container.append("g")
-        .attr("stroke", "#ccc")
-        .attr("stroke-width", 1)
-      .selectAll<SVGCircleElement, NodeData>("circle") // Tipo explícito
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 2)
+      .selectAll<SVGCircleElement, any>("circle")
       .data(graphData.nodes)
       .join("circle")
-        .attr("r", 6)
-        .attr("fill", "#e67e22")
-        .call(drag(simulation)); // Passa simulação
+        .attr("r", (d: any) => {
+          // Usar escala logarítmica para evitar nós muito grandes
+          const degree = d.degree || 1;
+          const logScale = Math.log(degree + 3);
+          return Math.min(logScale * 3 + 3, 9); // Min 2, Max 10
+        })
+        .attr("fill", (d: any) => {
+          // Cor baseada no grau (número de conexões)
+          const degree = d.degree || 0;
+          if (degree < 3) return "#3498db"; // Azul para poucos
+          if (degree < 10) return "#e67e22"; // Laranja para médios
+          if (degree < 20) return "#e74c3c"; // Vermelho para muitos
+          return "#c0392b"; // Vermelho escuro para muitos mesmo
+        })
+        .attr("class", d => `node-${d.id}`)
+        .on("mouseenter", (event: any, d: any) => {
+          setHoveredNode(d.id);
+          
+          // Destacar nó
+          select(event.currentTarget as SVGCircleElement)
+            .transition()
+            .duration(200)
+            .attr("r", (n: any) => {
+              const degree = n.degree || 1;
+              const logScale = Math.log(degree + 3);
+              return Math.min(logScale * 3 + 3, 8) + 3; // +2 ao hover
+            })
+            .attr("stroke-width", 3);
+          
+          // Destacar conexões
+          link.style("stroke-opacity", (l: any) => 
+            (l.source as any).id === d.id || (l.target as any).id === d.id ? 0.8 : 0.1
+          )
+          .style("stroke-width", (l: any) =>
+            (l.source as any).id === d.id || (l.target as any).id === d.id ? 2 : 1
+          );
+
+          // Criar tooltip com informações do usuário
+          const tooltip = container.append("g")
+            .attr("class", "node-tooltip")
+            .attr("transform", `translate(${d.x + 15}, ${d.y - 30})`);
+
+          // Fundo do tooltip
+          const padding = 8;
+          const lineHeight = 14;
+          const lines = [
+            `Usuário: ${d.id}`,
+            `Conexões: ${d.degree || 0}`,
+            `Repositórios: ${d.repos || 0}`
+          ];
+          const maxWidth = Math.max(...lines.map(l => l.length * 6));
+          
+          tooltip.append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", maxWidth + padding * 2)
+            .attr("height", lines.length * lineHeight + padding * 2)
+            .attr("fill", "#2c3e50")
+            .attr("stroke", "#ecf0f1")
+            .attr("stroke-width", 1)
+            .attr("rx", 4);
+
+          // Texto do tooltip
+          lines.forEach((line, i) => {
+            tooltip.append("text")
+              .attr("x", padding)
+              .attr("y", padding + (i + 1) * lineHeight - 2)
+              .attr("fill", "#ecf0f1")
+              .style("font-size", "11px")
+              .style("font-family", "monospace")
+              .text(line);
+          });
+        })
+        .on("mouseleave", (event: any) => {
+          setHoveredNode(null);
+          
+          // Remover tooltip
+          container.selectAll(".node-tooltip").remove();
+          
+          select(event.currentTarget as SVGCircleElement)
+            .transition()
+            .duration(200)
+            .attr("r", (d: any) => {
+              const degree = d.degree || 1;
+              const logScale = Math.log(degree + 3);
+              return Math.min(logScale * 3 + 3, 8);
+            })
+            .attr("stroke-width", 2);
+          
+          link.style("stroke-opacity", 0.3)
+            .style("stroke-width", 1);
+        })
+        .call(drag(simulation));
 
     node.append("title").text(d => d.id);
 
@@ -352,12 +502,13 @@ export function CollaborationNetworkGraph({
       .selectAll("text")
       .data(graphData.nodes)
       .join("text")
-        .attr("dx", 14)
+        .attr("text-anchor", "middle")
         .attr("dy", ".35em")
-        .attr("fill", "#aaa")
-        .style("font-size", "9px")
+        .attr("fill", "#1a1a1a")
+        .style("font-size", "6px")
+        .style("font-weight", "bold")
         .style("pointer-events", "none")
-        .text(d => d.id);
+        .text(d => d.id.substring(0, 3)); // Mostrar apenas 3 primeiras letras
 
     simulation.on("tick", () => {
       link
@@ -404,23 +555,103 @@ export function CollaborationNetworkGraph({
 
     svg.call(zoomBehavior);
 
+    // Zoom automático para mostrar todos os nós após um pequeno delay
+    setTimeout(() => {
+      const nodes = graphData.nodes as any[];
+      if (nodes.length === 0) return;
+      
+      const xValues = nodes.map(d => d.x || 0);
+      const yValues = nodes.map(d => d.y || 0);
+      
+      const minX = Math.min(...xValues);
+      const maxX = Math.max(...xValues);
+      const minY = Math.min(...yValues);
+      const maxY = Math.max(...yValues);
+      
+      const padding = 50;
+      const fullWidth = maxX - minX + padding * 2;
+      const fullHeight = maxY - minY + padding * 2;
+      
+      const scale = Math.min(width / fullWidth, height / fullHeight) * 0.9;
+      const translateX = (width - fullWidth * scale) / 2 - minX * scale + padding * scale;
+      const translateY = (height - fullHeight * scale) / 2 - minY * scale + padding * scale;
+      
+      svg.transition()
+        .duration(200)
+        .call(zoomBehavior.transform as any, d3.zoomIdentity.translate(translateX, translateY).scale(scale));
+    }, 1000);
+
     return () => {
       simulation.stop();
     };
 
-  }, [graphData, width, height]);
+  }, [graphData, width, height, resetKey]);
 
   return (
     <div className="w-full h-full flex flex-col">
+      <div className="bg-gray-800 px-4 py-3 border-b border-gray-700">
+        <div className="flex items-center gap-6 flex-wrap">
+          <label className="text-sm text-gray-300">
+            Conexões mínimas:
+            <input 
+              type="range" 
+              min="1" 
+              max="20" 
+              value={filterThreshold}
+              onChange={(e) => setFilterThreshold(parseInt(e.target.value))}
+              className="ml-2 w-32"
+            />
+            <span className="ml-2 font-bold text-orange-400">{filterThreshold}+</span>
+          </label>
+          
+          <label className="text-sm text-gray-300 flex items-center gap-2 cursor-pointer">
+            <input 
+              type="checkbox" 
+              checked={hideBots}
+              onChange={(e) => setHideBots(e.target.checked)}
+              className="w-4 h-4"
+            />
+            <span>Ocultar bots</span>
+          </label>
+          
+          <button
+            onClick={() => setResetKey(prev => prev + 1)}
+            className="text-sm px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded"
+          >
+            Resetar vista
+          </button>
+        </div>
+        <div className="text-xs text-gray-400 mt-2 flex gap-6">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#3498db" }}></div>
+            <span>Poucos (&lt;3)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#e67e22" }}></div>
+            <span>Médios (3-9)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#e74c3c" }}></div>
+            <span>Muitos (10-19)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#c0392b" }}></div>
+            <span>Muito muitos (20+)</span>
+          </div>
+        </div>
+      </div>
+      
       <svg
          ref={svgRef}
          viewBox={`0 0 ${800} ${300}`}
-         preserveAspectRatio="xMidYMid meet" // Mantém a proporção e centraliza o conteúdo.
+         preserveAspectRatio="xMidYMid meet"
          style={{ width: '100%', height: '100%' }}
       >
       </svg>
+      
       <div className="text-xs text-gray-400 px-2 py-1 bg-gray-900 text-center">
         Exibindo {graphData.nodes.length} colaboradores com {graphData.links.length} conexões
+        {hoveredNode && <span> | Hovering: <strong>{hoveredNode}</strong></span>}
       </div>
     </div>
   );
