@@ -411,13 +411,18 @@ export function CollaborationNetworkGraph({
   }, [graphData, width, height]);
 
   return (
-    <svg
+    <div className="w-full h-full flex flex-col">
+      <svg
          ref={svgRef}
          viewBox={`0 0 ${800} ${300}`}
          preserveAspectRatio="xMidYMid meet" // Mantém a proporção e centraliza o conteúdo.
          style={{ width: '100%', height: '100%' }}
       >
       </svg>
+      <div className="text-xs text-gray-400 px-2 py-1 bg-gray-900 text-center">
+        Exibindo {graphData.nodes.length} colaboradores com {graphData.links.length} conexões
+      </div>
+    </div>
   );
 }
 const dayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
