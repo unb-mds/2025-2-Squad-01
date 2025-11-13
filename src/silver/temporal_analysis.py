@@ -3,16 +3,7 @@
 from collections import defaultdict
 from datetime import datetime, timedelta
 from typing import List, Dict, Any
-from utils.github_api import save_json_data, load_json_data
-
-def parse_github_date(date_str: str) -> datetime:
-
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%SZ')
-    except:
-        return None
+from utils.github_api import save_json_data, load_json_data, parse_github_date
 
 def process_temporal_analysis() -> List[str]:
 
@@ -37,40 +28,54 @@ def process_temporal_analysis() -> List[str]:
     for issue in issues_data:
         created_at = parse_github_date(issue.get('created_at'))
         if created_at:
+            # Use name as primary identifier, fallback to login if name not available
+            user = issue.get('user', {})
+            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            
             all_events.append({
                 'date': created_at,
                 'type': 'issue_created',
                 'repo': issue.get('repo_name', 'unknown'),
-                'user': issue.get('user', {}).get('login', 'unknown')
+                'user': user_identifier
             })
         
         updated_at = parse_github_date(issue.get('updated_at'))
         if updated_at and issue.get('state') == 'closed':
+            user = issue.get('user', {})
+            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            
             all_events.append({
                 'date': updated_at,
                 'type': 'issue_closed',
                 'repo': issue.get('repo_name', 'unknown'),
-                'user': issue.get('user', {}).get('login', 'unknown')
+                'user': user_identifier
             })
     
 
     for pr in prs_data:
         created_at = parse_github_date(pr.get('created_at'))
         if created_at:
+            # Use name as primary identifier, fallback to login if name not available
+            user = pr.get('user', {})
+            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            
             all_events.append({
                 'date': created_at,
                 'type': 'pr_created',
                 'repo': pr.get('repo_name', 'unknown'),
-                'user': pr.get('user', {}).get('login', 'unknown')
+                'user': user_identifier
             })
         
         updated_at = parse_github_date(pr.get('updated_at'))
         if updated_at and pr.get('state') == 'closed':
+            user = pr.get('user', {})
+            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            
             all_events.append({
                 'date': updated_at,
                 'type': 'pr_closed',
                 'repo': pr.get('repo_name', 'unknown'),
-                'user': pr.get('user', {}).get('login', 'unknown')
+                'user': user_identifier
             })
     
 
@@ -80,25 +85,45 @@ def process_temporal_analysis() -> List[str]:
             commit_date = parse_github_date(commit['commit']['author']['date'])
         
         if commit_date:
+            # Try to get user identifier from multiple possible locations
+            # Priority: name (more reliable) > login (can be null) > 'unknown'
+            user_identifier = 'unknown'
+            
+            # First try: commit.commit.author.name (most reliable, always present)
+            if commit.get('commit', {}).get('author', {}).get('name'):
+                user_identifier = commit['commit']['author']['name']
+            # Second try: commit.commit.author.login (from GraphQL or enriched REST)
+            elif commit.get('commit', {}).get('author', {}).get('login'):
+                user_identifier = commit['commit']['author']['login']
+            # Third try: commit.author.login (from REST API root level)
+            elif commit.get('author', {}).get('login'):
+                user_identifier = commit['author']['login']
+            
             all_events.append({
                 'date': commit_date,
                 'type': 'commit',
                 'repo': commit.get('repo_name', 'unknown'),
-                'user': commit.get('author', {}).get('login', 'unknown') if commit.get('author') else 'unknown',
-                'additions': commit.get('additions', 'none'),
-                'deletions': commit.get('deletions', 'none'),
-                'total_changes': commit.get('total_changes', 'none')
+                'user': user_identifier,
+                'additions': commit.get('additions'),
+                'deletions': commit.get('deletions'),
+                'total_changes': commit.get('total_changes')
             })
     
 
     for event in issue_events_data:
         event_date = parse_github_date(event.get('created_at'))
         if event_date:
+            # Use name as primary identifier, fallback to login if name not available
+            actor = event.get('actor', {})
+            user_identifier = 'unknown'
+            if actor:
+                user_identifier = actor.get('name') or actor.get('login') or 'unknown'
+            
             all_events.append({
                 'date': event_date,
                 'type': f"event_{event.get('event', 'unknown')}",
                 'repo': event.get('repo_name', 'unknown'),
-                'user': event.get('actor', {}).get('login', 'unknown') if event.get('actor') else 'unknown'
+                'user': user_identifier
             })
 
     all_events.sort(key=lambda x: x['date'])

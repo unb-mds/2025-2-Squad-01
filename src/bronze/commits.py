@@ -116,8 +116,16 @@ def extract_commits(
                             additions = stats.get('additions')
                             deletions = stats.get('deletions')
                             total_changes = stats.get('total')
+                    
+                    # Ensure commit.commit.author.login is populated from commit.author.login if available
+                    commit_data = {**commit}
+                    if 'commit' in commit_data and 'author' in commit_data['commit']:
+                        # If commit.author.login exists at root level, copy it to commit.commit.author.login
+                        if 'author' in commit_data and isinstance(commit_data['author'], dict) and 'login' in commit_data['author']:
+                            commit_data['commit']['author']['login'] = commit_data['author']['login']
+                    
                     data_commits.append({
-                        **commit,
+                        **commit_data,
                         'repo_name': repo_name,
                         'additions': additions,
                         'deletions': deletions,
@@ -152,9 +160,17 @@ def extract_commits(
                             additions = stats.get('additions')
                             deletions = stats.get('deletions')
                             total_changes = stats.get('total')
+                    
+                    # Ensure commit.commit.author.login is populated from commit.author.login if available
+                    commit_data = {**commit}
+                    if 'commit' in commit_data and 'author' in commit_data['commit']:
+                        # If commit.author.login exists at root level, copy it to commit.commit.author.login
+                        if 'author' in commit_data and isinstance(commit_data['author'], dict) and 'login' in commit_data['author']:
+                            commit_data['commit']['author']['login'] = commit_data['author']['login']
+                    
                     # Merge original commit with stats and repo context
                     data_commits.append({
-                        **commit,
+                        **commit_data,
                         'repo_name': repo_name,
                         'additions': additions,
                         'deletions': deletions,

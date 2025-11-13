@@ -356,3 +356,46 @@ class OrganizationConfig:
         
         # Do not skip any repository to enable full extraction
         return False
+
+
+def parse_github_date(date_str: str) -> Optional[datetime]:
+    """
+    Parse GitHub API date strings in various formats.
+    Handles both UTC (Z) and timezone offset formats.
+    
+    Args:
+        date_str: Date string from GitHub API
+        
+    Returns:
+        datetime object or None if parsing fails
+    """
+    if not date_str:
+        return None
+    
+    date_str = str(date_str).strip()
+    
+    # Try multiple date formats that GitHub uses
+    formats = [
+        '%Y-%m-%dT%H:%M:%SZ',  # UTC format: 2025-09-21T17:13:42Z
+        '%Y-%m-%dT%H:%M:%S',    # Without timezone
+    ]
+    
+    # Handle ISO 8601 format with timezone offset (e.g., 2025-09-21T17:13:42-03:00)
+    if '+' in date_str or (date_str.count('-') > 2):  # Check for timezone offset
+        try:
+            # Extract the base datetime part (YYYY-MM-DDTHH:MM:SS)
+            # Remove timezone suffix like -03:00 or +05:30
+            base_date_str = date_str[:19]  # First 19 chars: YYYY-MM-DDTHH:MM:SS
+            return datetime.strptime(base_date_str, '%Y-%m-%dT%H:%M:%S')
+        except (ValueError, IndexError):
+            pass
+    
+    # Try standard formats
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    
+    # If all parsing fails, return None
+    return None
