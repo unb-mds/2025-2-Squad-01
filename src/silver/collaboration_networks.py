@@ -32,16 +32,19 @@ def process_collaboration_networks() -> List[str]:
         repo = pr.get('repo_name', 'unknown')
         if pr.get('user', {}).get('login'):
             repo_collaborators[repo].add(pr['user']['login'])
+
     
     for commit in commits_data:
+        commits_identifier = commit.get('name') or commit.get('login') or 'unknown'
         repo = commit.get('repo_name', 'unknown')
-        if commit.get('author', {}) and commit['author'].get('login'):
-            repo_collaborators[repo].add(commit['author']['login'])
+        if commits_identifier:
+            repo_collaborators[repo].add(commits_identifier)
     
     for event in issue_events_data:
+        events_identifier = event.get('name') or event.get('login') or 'unknown'
         repo = event.get('repo_name', 'unknown')
-        if event.get('actor', {}) and event['actor'].get('login'):
-            repo_collaborators[repo].add(event['actor']['login'])
+        if events_identifier:
+            repo_collaborators[repo].add(events_identifier)
     
 
     collaboration_edges = []
