@@ -363,7 +363,7 @@ export function CollaborationNetworkGraph({
     svg.selectAll('*').remove();
 
     const container = svg.append("g");
-
+    
     const centerX = width / 2;
     const centerY = height / 2;
     
@@ -398,7 +398,7 @@ export function CollaborationNetworkGraph({
 
     const node = container.append("g")
         .attr("stroke", "#fff")
-        .attr("stroke-width", 2)
+        .attr("stroke-width", 1.5)
       .selectAll<SVGCircleElement, any>("circle")
       .data(graphData.nodes)
       .join("circle")
@@ -504,7 +504,8 @@ export function CollaborationNetworkGraph({
       .join("text")
         .attr("text-anchor", "middle")
         .attr("dy", ".35em")
-        .attr("fill", "#1a1a1a")
+        .attr("fill", "#fff")
+        .attr("style", "text-shadow: 2px 2px 4px #333333")
         .style("font-size", "6px")
         .style("font-weight", "bold")
         .style("pointer-events", "none")
