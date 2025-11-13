@@ -126,16 +126,16 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
 
       {/* --- Estado de Sucesso (Dados Carregados) --- */}
       {pageData && mainData && selectedRepo && !loading && !error && (
-        <div>
+        <div className="h-full">
           <h1 className="text-3xl font-bold text-white mb-4">Visão Geral do Repositório</h1>
           <p className="text-slate-400 text-sm mb-8">Informações gerais e métricas chave de colaboração.</p>
 
           {/* Grid para os Cards dos Gráficos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 h-full">
 
             {/* Card: Rede de Colaboração */}
             <div
-              className="border rounded-lg flex flex-col min-h-[750px]"
+              className="border rounded-lg flex flex-col h-full"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}
             >
               {/* Header do Card*/}
@@ -146,7 +146,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
                 <h3 className="text-xl font-semibold text-white">Rede de Colaboração</h3>
               </div> 
               {/* Conteúdo do Card */}
-              <div className="flex-grow p-2 overflow-hidden">
+              <div className="flex-grow p-2 overflow-hidden h-full">
                 {filteredCollaborationData.length > 0 ? (
                   <CollaborationNetworkGraph data={filteredCollaborationData} />
                 ) : (
@@ -157,22 +157,25 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
 
             {/* Card: Heatmap de Atividade */}
             <div
-              className="border rounded-lg flex flex-col min-h-[750px]" 
+              className="border rounded-lg flex flex-col h-full overflow-hidden"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}
             >
               {/* Header do Card*/}
               <div
-                className="px-6 py-4 border-b" // 
+                className="px-6 py-4 border-b"
                 style={{ borderBottomColor: '#333333' }} 
               >
-                 
                 <h3 className="text-xl font-semibold text-white">Heatmap de Atividade</h3>
               </div> 
 
               {/* Conteúdo do Card */}
-              <div className="flex-grow p-4 flex items-center justify-center">
+              <div className="flex-grow p-6 flex items-center justify-center overflow-hidden h-full w-full">
                 {pageData?.heatmap && pageData.heatmap.length > 0 ? (
-                  <ActivityHeatmap data={pageData.heatmap} />
+                  <div className="flex items-center justify-center w-full h-full">
+                    <div className="transform scale-140 origin-center">
+                      <ActivityHeatmap data={pageData.heatmap} />
+                    </div>
+                  </div>
                 ) : (
                   <p className="text-white/50 text-center py-10">Dados de heatmap não disponíveis ou vazios.</p>
                 )}
