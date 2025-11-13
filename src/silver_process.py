@@ -25,6 +25,7 @@ def main():
         from silver.contribution_metrics import process_contribution_metrics
         from silver.collaboration_networks import process_collaboration_networks
         from silver.temporal_analysis import process_temporal_analysis
+        from silver.file_language_analysis import process_file_language_analysis
         
         # Process data in logical order
         print("\nProcessing member analytics...")
@@ -39,8 +40,11 @@ def main():
         print("\nProcessing temporal analysis...")
         temporal_files = process_temporal_analysis()
 
+        print("\nProcessing file language analysis...")
+        language_files = process_file_language_analysis()
+
         #  registry
-        all_files = member_files + contrib_files + collab_files + temporal_files
+        all_files = member_files + contrib_files + collab_files + temporal_files + language_files
         update_data_registry('silver', 'all_processed', all_files)
         
         print(f"\nSilver processing completed successfully!")
@@ -50,6 +54,8 @@ def main():
             
     except Exception as e:
         print(f"\n Error during silver processing: {str(e)}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":

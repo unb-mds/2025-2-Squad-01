@@ -5,6 +5,7 @@ import json
 import time
 import hashlib
 import requests
+import logging
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Tuple
 
@@ -250,6 +251,163 @@ class GitHubAPIClient:
 
         return commits, rate_meta
 
+    def graphql_repository_tree(
+        self,
+        owner: str,
+        repo: str,
+        branch: str = "main",
+        use_cache: bool = True,
+        max_depth: int = 100
+    ) -> Dict[str, Any]:
+        """
+        Extrai a árvore completa de arquivos e diretórios usando GraphQL.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisado (padrão: 'main')
+            use_cache: Se deve usar cache
+            max_depth: Profundidade máxima para evitar recursão infinita
+        
+        Returns:
+            Dicionário com estrutura hierárquica de arquivos e diretórios
+        """
+
+        logger = logging.getLogger(__name__)
+        
+        # Implementação iterativa usando stack para evitar limite de recursão
+        def build_tree_iterative(start_path: str = "") -> List[Dict[str, Any]]:
+            """Constrói árvore usando stack ao invés de recursão."""
+            # Stack: (path, parent_list)
+            root_tree = []
+            stack = [(start_path, root_tree)]  # ← Usar root_tree como parent_list inicial
+            processed = set()  # Evitar loops infinitos
+            
+            while stack and len(processed) < max_depth:
+                current_path, parent_list = stack.pop()
+                
+                # Evitar processar o mesmo caminho múltiplas vezes
+                if current_path in processed:
+                    logger.warning(f"Skipping already processed path: {current_path}")
+                    continue
+                processed.add(current_path)
+                
+                expression = f"{branch}:{current_path}" if current_path else f"{branch}:"
+                
+                query = """
+                query($owner: String!, $repo: String!, $expression: String!) {
+                  repository(owner: $owner, name: $repo) {
+                    object(expression: $expression) {
+                      ... on Tree {
+                        entries {
+                          name
+                          type
+                          mode
+                          path
+                          extension
+                          object {
+                            ... on Blob {
+                              byteSize
+                              isBinary
+                              oid
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                """
+                
+                variables = {
+                    "owner": owner,
+                    "repo": repo,
+                    "expression": expression
+                }
+                
+                try:
+                    result = self.graphql(query, variables, use_cache=use_cache)
+                    
+                    if not result or 'data' not in result:
+                        logger.warning(f"No data returned for path: {current_path}")
+                        continue
+                    
+                    repo_obj = result.get('data', {}).get('repository', {})
+                    if not repo_obj:
+                        logger.warning(f"Repository not found for: {owner}/{repo}")
+                        continue
+                    
+                    tree_obj = repo_obj.get('object', {})
+                    if not tree_obj:
+                        logger.debug(f"No tree object for path: {current_path}")
+                        continue
+                    
+                    entries = tree_obj.get('entries', [])
+                    
+                    for entry in entries:
+                        entry_type = entry.get('type')
+                        entry_name = entry.get('name')
+                        entry_path = entry.get('path')
+                        
+                        if entry_type == 'tree':
+                            # É um diretório
+                            logger.debug(f"Processing directory: {entry_path}")
+                            directory_node = {
+                                'name': entry_name,
+                                'path': entry_path,
+                                'type': 'directory',
+                                'children': []
+                            }
+                            parent_list.append(directory_node)
+                            # Adicionar à stack para processar depois
+                            stack.append((entry_path, directory_node['children']))
+                            
+                        elif entry_type == 'blob':
+                            # É um arquivo
+                            blob_info = entry.get('object', {})
+                            file_node = {
+                                'name': entry_name,
+                                'path': entry_path,
+                                'type': 'file',
+                                'extension': entry.get('extension', ''),
+                                'size': blob_info.get('byteSize', 0),
+                                'is_binary': blob_info.get('isBinary', False),
+                                'oid': blob_info.get('oid', '')
+                            }
+                            parent_list.append(file_node)
+                
+                except requests.exceptions.RequestException as e:
+                    logger.error(f"Network error processing path {current_path}: {str(e)}")
+                    continue
+                except Exception as e:
+                    logger.error(f"Unexpected error processing path {current_path}: {str(e)}")
+                    continue
+            
+            return root_tree
+        
+        logger.info(f"Building repository tree for {owner}/{repo} (branch: {branch})")
+        
+        try:
+            tree = build_tree_iterative("")
+            
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': tree,
+                'extracted_at': datetime.now().isoformat()
+            }
+        except Exception as e:
+            logger.error(f"Failed to build repository tree: {str(e)}")
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': [],
+                'error': str(e),
+                'extracted_at': datetime.now().isoformat()
+            }
+
     def get_paginated(
         self,
         base_url: str,
@@ -356,3 +514,4 @@ class OrganizationConfig:
         
         # Do not skip any repository to enable full extraction
         return False
+    
