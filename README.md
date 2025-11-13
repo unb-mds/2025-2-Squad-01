@@ -86,6 +86,39 @@ Assim, os usuários podem compreender melhor **produtividade, gargalos e qualida
    ```powershell
    gh act -W .github/workflows/bronze-extract.yaml -j extract-bronze-data --secret-file .secrets --bind
 
+### Testes (Camada Silver)
+
+Instalação (ambiente virtual recomendado):
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\Activate.ps1 (Windows)
+pip install -r requirements-dev.txt
+```
+
+Rodar todos os testes:
+```bash
+pytest
+```
+
+Cobertura:
+```bash
+pytest --cov=src/silver --cov-report=term-missing
+```
+
+Estrutura dos testes:
+- tests/unit/test_member_analytics*.py
+- tests/unit/test_contribution_metrics*.py
+- tests/unit/test_collaboration_networks.py
+- tests/unit/test_temporal_analysis*.py
+
+Mocks:
+- Funções `load_json_data` e `save_json_data` são simuladas com `monkeypatch` para evitar IO real e controlar cenários.
+
+Critérios de Aceite:
+- CI (GitHub Actions) executa workflow `Python tests` em cada push e PR.
+- Cobertura mínima inicial: 70% (ajustável).
+
    
    
 
