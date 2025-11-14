@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-11T20:49:45.668019",
+      "extracted_at": "2025-11-14T14:44:20.799847",
       "file_path": "data/bronze/prs_2025-2-GuiaDev.json",
       "record_count": 24
     }
@@ -76,7 +76,7 @@
         "description": "external connections"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "HugoFreitass",
@@ -152,18 +152,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 0,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2025-11-03T23:15:00Z",
-      "updated_at": "2025-11-11T00:40:55Z",
+      "updated_at": "2025-11-13T03:56:52Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2025-11-11T00:31:31Z",
-    "updated_at": "2025-11-11T00:41:29Z",
-    "closed_at": null,
+    "updated_at": "2025-11-13T03:56:51Z",
+    "closed_at": "2025-11-13T03:56:51Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -173,10 +173,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/73",
       "diff_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/73.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/73.patch",
-      "merged_at": null
+      "merged_at": "2025-11-13T03:56:51Z"
     },
     "body": "## Descrição\r\n\r\nCorrige detalhes do fluxo do usuário dentro da aplicação.\r\n\r\n## Tipo de Alteração\r\n\r\nPor favor, marque com um `x` o tipo de alteração que este PR introduz:\r\n\r\n- [ ] 🐛 **Correção de Bug** (alteração que corrige um problema)\r\n- [ ] ✨ **Nova Funcionalidade** (alteração que adiciona uma nova funcionalidade)\r\n- [ ] 💥 **Quebra de Compatibilidade** (correção ou funcionalidade que pode fazer com que funcionalidades existentes não funcionem como esperado)\r\n- [ ] 📝 **Documentação** (apenas alterações na documentação)\r\n- [x] ♻️ **Refatoração** (alteração de código que não corrige um bug nem adiciona uma funcionalidade)\r\n- [ ] ⚡ **Melhoria de Performance** (alteração de código que melhora o desempenho)\r\n- [ ] 🧪 **Testes** (adição ou refatoração de testes)\r\n- [ ] 🔧 **Ferramentas** (alterações em ferramentas de build, CI/CD, etc.)\r\n\r\n## Issue Relacionada\r\n\r\n> Este PR está relacionado a:  \r\nCloses #64 \r\n\r\n## Motivação e Contexto\r\n\r\nAlgumas páginas tinham problemas de responsividade, redirecionamento e até mesmos funcionalidades inoperantes, por isso foi necessário reservar um tempo para analisar esses problemas com calma e arrumar os pequenos detalhes.\r\n\r\n## Alterações Propostas\r\n\r\nListe as principais alterações que foram feitas neste pull request.\r\n\r\n- [x] Corrigir responsividade da página de login / cadastro\r\n- [x] Corrigir abas do site e seus redirecionamentos\r\n- [x] Criar usuários cadastrados com login social no banco de dados\r\n- [x] Salvar username do github dos usuários\r\n- [x] Implementar logout \r\n\r\n## Como Isso Foi Testado?\r\n\r\nNa prática, usando o site e testando os redirecionamentos e as funcionalidades relacionada com as tarefas descritas acima.\r\n\r\n\r\n## Prints relacionados:\r\n\r\n<img width=\"1365\" height=\"645\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7b63ed39-59f1-4442-a795-2780519347dd\" />\r\n\r\n\r\n<img width=\"224\" height=\"396\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bbceede7-083f-4561-814c-8e864031dbfd\" />\r\n\r\n\r\n<img width=\"245\" height=\"415\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fd1f6e9a-a99a-430f-b356-9a6d5da54ca9\" />\r\n\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Phill-Chill",
+      "id": 164696319,
+      "node_id": "U_kgDOCdEQ_w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/164696319?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Phill-Chill",
+      "html_url": "https://github.com/Phill-Chill",
+      "followers_url": "https://api.github.com/users/Phill-Chill/followers",
+      "following_url": "https://api.github.com/users/Phill-Chill/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Phill-Chill/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Phill-Chill/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Phill-Chill/subscriptions",
+      "organizations_url": "https://api.github.com/users/Phill-Chill/orgs",
+      "repos_url": "https://api.github.com/users/Phill-Chill/repos",
+      "events_url": "https://api.github.com/users/Phill-Chill/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Phill-Chill/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/73/reactions",
       "total_count": 0,
@@ -246,7 +266,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "BGrangeiro",
@@ -322,18 +342,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 0,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2025-11-03T23:15:00Z",
-      "updated_at": "2025-11-11T00:40:55Z",
+      "updated_at": "2025-11-13T03:56:52Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-11T00:23:04Z",
-    "updated_at": "2025-11-11T00:40:55Z",
-    "closed_at": null,
+    "updated_at": "2025-11-12T00:34:48Z",
+    "closed_at": "2025-11-12T00:34:48Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -343,10 +363,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/72",
       "diff_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/72.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/72.patch",
-      "merged_at": null
+      "merged_at": "2025-11-12T00:34:48Z"
     },
     "body": "## Descrição\r\n\r\nEste pull request implementa boas práticas específicas para diferentes arquivos de documentação dentro da **LearningPage**.  \r\n\r\n## Tipo de Alteração\r\n\r\nPor favor, marque com um `x` o tipo de alteração que este PR introduz:\r\n\r\n- [ ] 🐛 **Correção de Bug** (alteração que corrige um problema)  \r\n- [x] ✨ **Nova Funcionalidade** (alteração que adiciona uma nova funcionalidade)  \r\n- [ ] 💥 **Quebra de Compatibilidade** (correção ou funcionalidade que pode fazer com que funcionalidades existentes não funcionem como esperado)  \r\n- [ ] 📝 **Documentação** (apenas alterações na documentação)  \r\n- [ ] ♻️ **Refatoração** (alteração de código que não corrige um bug nem adiciona uma funcionalidade)  \r\n- [ ] ⚡ **Melhoria de Performance** (alteração de código que melhora o desempenho)  \r\n- [ ] 🧪 **Testes** (adição ou refatoração de testes)  \r\n- [ ] 🔧 **Ferramentas** (alterações em ferramentas de build, CI/CD, etc.)\r\n\r\n## Issue Relacionada\r\n\r\ntarefa de “Estrutura e Boas Práticas #69\r\n\r\n## Motivação e Contexto\r\n\r\nAntes desta alteração, todas as seções de “Boas práticas” exibiam apenas um texto genérico.  \r\nAgora, a **LearningPage** exibe conteúdo personalizado conforme o arquivo selecionado (ex: `CONTRIBUTING.md`, `CHANGELOG.md`, `CODE_OF_CONDUCT.md`), tornando o material mais útil e alinhado com as diretrizes do projeto.\r\n\r\n## Alterações Propostas\r\n\r\n- [x] Adicionada função `getBestPractices()` no componente `ExplainDoc` para renderizar boas práticas personalizadas.  \r\n- [x] Criadas seções específicas para os arquivos:\r\n  - `CONTRIBUTING.md`\r\n  - `CHANGELOG.md`\r\n  - `CODE_OF_CONDUCT.md`\r\n- [x] Mantido texto padrão para os demais documentos.  \r\n- [x] Preservada estrutura e estilo originais da **LearningPage**.\r\n\r\n## Como Isso Foi Testado?\r\n\r\n- [x] **Teste Manual:**\r\n  1. Iniciado o servidor com `npm run dev`.\r\n  2. Acessada a rota da página LearningPage.\r\n  3. Selecionados diferentes cards e verificada a renderização das boas práticas correspondentes.\r\n\r\n**Configuração de Teste:**\r\n* **Navegador:** Chrome 108.0  \r\n* **Dispositivo:** Desktop\r\n\r\n## Checklist do Revisor\r\n\r\n- [ ] O código segue as diretrizes de estilo do projeto.  \r\n- [ ] A documentação foi atualizada, se necessário.  \r\n- [ ] Os testes foram adicionados ou atualizados para cobrir as alterações.  \r\n- [ ] Todas as verificações da Integração Contínua (CI) estão passando.  \r\n- [ ] As alterações foram revisadas por pelo menos uma outra pessoa.\r\n\r\n## Informações Adicionais\r\n\r\nEsta atualização melhora a experiência de aprendizado, tornando as boas práticas mais relevantes e específicas para cada tipo de documento do projeto.\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "BGrangeiro",
+      "id": 197856263,
+      "node_id": "U_kgDOC8sMBw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/197856263?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BGrangeiro",
+      "html_url": "https://github.com/BGrangeiro",
+      "followers_url": "https://api.github.com/users/BGrangeiro/followers",
+      "following_url": "https://api.github.com/users/BGrangeiro/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BGrangeiro/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BGrangeiro/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BGrangeiro/subscriptions",
+      "organizations_url": "https://api.github.com/users/BGrangeiro/orgs",
+      "repos_url": "https://api.github.com/users/BGrangeiro/repos",
+      "events_url": "https://api.github.com/users/BGrangeiro/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BGrangeiro/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/72/reactions",
       "total_count": 0,
