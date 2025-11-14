@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-
+## este arquivo precisa ser alterado provavelmente
 from collections import defaultdict
 from typing import List, Dict, Any
 from pathlib import Path
 from utils.github_api import save_json_data, load_json_data
 import os
 import glob
+import json
 
 def detect_language_by_extension(extension: str) -> str:
     """
@@ -118,6 +119,83 @@ def detect_language_by_extension(extension: str) -> str:
     
     return extension_map.get(extension.lower(), 'Unknown')
 
+def convert_tree_to_hierarchy(tree: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Converte árvore flat do GraphQL em hierarquia para Circle Pack.
+    Preserva estrutura de diretórios e arquivos.
+    
+    Args:
+        tree: Lista de nós da árvore (arquivos e diretórios) do GraphQL
+    
+    Returns:
+        Dicionário com hierarquia aninhada pronta para d3.pack()
+    """
+    def build_node(node: Dict[str, Any]) -> Dict[str, Any]:
+        """Constrói um nó da hierarquia recursivamente."""
+        node_type = node.get('type', '')
+        
+        if node_type in ['file', 'blob']:
+            # Arquivo - nó folha
+            object_data = node.get('object', {})
+            name = node.get('name', '')
+            
+            # Extrair extensão
+            extension = ''
+            if '.' in name:
+                extension = '.' + name.split('.')[-1]
+            
+            # Determinar linguagem
+            language = detect_language_by_extension(extension)
+            
+            # Tamanho pode estar em 'size' ou 'object.byteSize'
+            size = node.get('size', 0) or object_data.get('byteSize', 0)
+            
+            return {
+                'name': name,
+                'type': 'file',
+                'language': language,
+                'size': size,
+                'extension': extension,
+                'path': node.get('path', '')
+            }
+        elif node_type in ['directory', 'tree']:
+            # Diretório - nó pai
+            children = node.get('children', [])
+            if not children:
+                object_data = node.get('object', {})
+                children = object_data.get('entries', [])
+            
+            # Construir filhos recursivamente
+            child_nodes = []
+            for child in children:
+                child_node = build_node(child)
+                if child_node:  # Apenas adicionar se não for None
+                    child_nodes.append(child_node)
+            
+            return {
+                'name': node.get('name', ''),
+                'type': 'directory',
+                'path': node.get('path', ''),
+                'children': child_nodes
+            }
+        
+        return None
+   
+    # Construir hierarquia recursivamente
+    root_children = []
+    for node in tree:
+        node_result = build_node(node)
+        if node_result:
+            root_children.append(node_result)
+    
+    hierarchy = {
+        'name': 'root',
+        'type': 'directory',
+        'children': root_children
+    }
+    
+    return hierarchy
+
 def calculate_language_stats(
     tree: List[Dict[str, Any]], 
     max_sample_files: int = 10,
@@ -140,22 +218,40 @@ def calculate_language_stats(
     
     def traverse_tree(nodes: List[Dict[str, Any]], parent_path: str = ""):
         for node in nodes:
-            if node.get('type') == 'file':
-                extension = node.get('extension', '')
-                language = detect_language_by_extension(extension)
-                size = node.get('size', 0)
+            node_type = node.get('type', '')
+
+            if node_type in ['file', 'blob']:
                 
+                object_data = node.get('object', {})
+                extension = node.get('extension', '')
+                if not extension and 'name' in node:
+                    name = node.get('name', '')
+                    if '.' in name:
+                        extension = '.' + name.split('.')[-1]
+            
+                language = detect_language_by_extension(extension)
+            
+                # Tamanho pode estar em 'size' ou 'object.byteSize'
+                size = node.get('size', 0) or object_data.get('byteSize', 0)
+            
                 language_stats[language]['count'] += 1
                 language_stats[language]['total_size'] += size
                 language_stats[language]['files'].append({
-                    'path': node.get('path'),
-                    'name': node.get('name'),
+                    'path': node.get('path', parent_path),
+                    'name': node.get('name', ''),
                     'size': size,
                     'extension': extension
-                })
-            
-            elif node.get('type') == 'directory' and 'children' in node:
-                traverse_tree(node['children'], node.get('path', ''))
+            })
+        
+            elif node_type in ['directory', 'tree']:  #ADICIONAR 'tree'
+                # GraphQL usa 'object.entries' para filhos
+                children = node.get('children', [])
+                if not children:
+                    object_data = node.get('object', {})
+                    children = object_data.get('entries', [])
+                
+                if children:
+                    traverse_tree(children, node.get('path', parent_path))
     
     traverse_tree(tree)
     
@@ -182,10 +278,8 @@ def calculate_language_stats(
             'file_count': stats['count'],
             'total_bytes': stats['total_size'],
             'percentage': round(percentage, 2),
-            'sample_files': sample_files,  # Amostra limitada
-            'sample_size': len(sample_files),  # Quantos arquivos na amostra
-            'has_more': len(all_files) > max_sample_files  # Indica se há mais arquivos
-        })
+            'files': sample_files,  # Amostra limitada
+        })            
     
     # Ordenar por percentual
     language_summary.sort(key=lambda x: x['percentage'], reverse=True)
@@ -199,7 +293,8 @@ def calculate_language_stats(
 def process_file_language_analysis(
     max_sample_files: int = 10,
     sample_strategy: str = 'largest',
-    save_detailed: bool = False
+    save_detailed: bool = False,
+    save_hierarchy: bool = True
 ) -> List[str]:
     """
     Processa todos os arquivos de estrutura do bronze e analisa linguagens.
@@ -208,7 +303,8 @@ def process_file_language_analysis(
         max_sample_files: Número máximo de arquivos de exemplo por linguagem
         sample_strategy: 'largest' para maiores arquivos, 'first' para primeiros
         save_detailed: Se True, salva lista completa de arquivos em arquivo separado
-    
+        save_hierarchy: Se True, gera arquivo hierarchy_*.json para Circle Pack visualization
+
     Returns:
         Lista de caminhos de arquivos gerados
     """
@@ -260,6 +356,27 @@ def process_file_language_analysis(
             f"data/silver/language_analysis_{repo_name}.json"
         )
         generated_files.append(analysis_file)
+        print(f"  ✅ Language analysis saved: {analysis_file}")
+
+
+        if save_hierarchy:
+            hierarchy = convert_tree_to_hierarchy(structure_data['tree'])
+            
+            hierarchy_data = {
+                'repository': repo_name,
+                'owner': structure_data.get('owner'),
+                'branch': structure_data.get('branch'),
+                'extracted_at': structure_data.get('extracted_at'),
+                'hierarchy': hierarchy
+            }
+            
+            hierarchy_file = save_json_data(
+                hierarchy_data,
+                f"data/silver/hierarchy_{repo_name}.json"
+            )
+            generated_files.append(hierarchy_file)
+            print(f"  ✅ Hierarchy saved: {hierarchy_file}")
+
 
                 # Opcionalmente salvar lista completa em arquivo separado
         if save_detailed:
@@ -288,6 +405,8 @@ def process_file_language_analysis(
             "data/silver/language_analysis_all.json"
         )
         generated_files.append(consolidated_file)
+        print(f"\n✅ Consolidated analysis saved: {consolidated_file}")
+
     
     print(f"\nLanguage analysis completed! Generated {len(generated_files)} files")
     print(f"Configuration: max_sample_files={max_sample_files}, strategy={sample_strategy}")

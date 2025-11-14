@@ -54,14 +54,7 @@ def main():
         print("\n" + "="*60)
         print("🐛 STEP 2: Extracting issues and pull requests")
         print("="*60)
-        issue_files = extract_issues(
-            client, 
-            config, 
-            use_cache=args.cache,
-            parallel=True,
-            max_workers=3,
-            max_events_per_repo=500
-        )
+        issue_files = extract_issues(client, config, use_cache=args.cache)
         print(f"✅ Generated {len(issue_files)} issue files")
 
         print("\n" + "="*60)
@@ -85,8 +78,15 @@ def main():
         member_files = extract_members(client, config, use_cache=args.cache)
         print(f"✅ Generated {len(member_files)} member files")
         
-        print("\n[INFO]: Extracting repository structures...")
-        structure_files = extract_repository_structure(client, config, use_cache=args.cache)
+        print("\n" + "="*60)
+        print("🌳 STEP 5: Extracting repository structures (GraphQL)")
+        print("="*60)
+        structure_files = extract_repository_structure(
+            client, 
+            config, 
+            use_cache=args.cache  # 👈 CORRIGIDO: removido method
+        )
+        print(f"✅ Generated {len(structure_files)} structure files")
 
         # Update registry
         all_files = repo_files + issue_files + commit_files + member_files + structure_files
