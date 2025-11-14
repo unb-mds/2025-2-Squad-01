@@ -21,6 +21,7 @@ const menuItems: MenuItem[] = [
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
   { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
   { id: 'structure', label: 'Structure', icon: '🏗️' },
+  { id: 'visualization', label: 'Visualization', icon: '🎨' }, 
 ];
 
 /**
