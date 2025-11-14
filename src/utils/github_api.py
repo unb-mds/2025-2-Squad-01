@@ -40,7 +40,6 @@ class GitHubAPIClient:
             json.dump(data, f, indent=2, ensure_ascii=False)
     
     def get_with_cache(self, url: str, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
-
         if use_cache:
             cached = self._cache_get(url)
             if cached is not None:
@@ -64,7 +63,6 @@ class GitHubAPIClient:
                     if "rate limit" in response.text.lower():
                         print("Rate limit exceeded. Waiting 60 seconds...")
                         time.sleep(60)
-                        # After sleep, continue loop to retry
                     else:
                         print("Access forbidden - resource might be private or require different permissions")
                         return None
@@ -92,14 +90,10 @@ class GitHubAPIClient:
         print(f"[ERROR] Exhausted retries for: {url}")
         return None
 
-    # ----------------------
-    # GraphQL support (API v4)
-    # ----------------------
     def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
         """Execute a GraphQL query against GitHub's v4 API with optional caching."""
         payload = {"query": query, "variables": variables or {}}
 
-        # Build a deterministic cache key based on query + variables
         cache_key = None
         if use_cache:
             try:
@@ -111,7 +105,6 @@ class GitHubAPIClient:
                     print("✓ Using cached GraphQL response")
                     return cached
             except Exception:
-                # Fallback to no-cache if serialization fails
                 cache_key = None
 
         headers = dict(self.headers)
@@ -120,7 +113,6 @@ class GitHubAPIClient:
         attempt = 0
         while attempt < retries:
             try:
-                # Throttle GraphQL calls to avoid secondary rate limits and API bursts
                 time.sleep(0.5)
 
                 response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=60)
@@ -128,7 +120,6 @@ class GitHubAPIClient:
                     data = response.json()
                     if "errors" in data:
                         print(f"[ERROR] GraphQL returned errors: {data['errors']}")
-                        # GraphQL 'errors' are not retriable in general; stop
                         return None
                     if use_cache and cache_key:
                         self._cache_set(cache_key, data)
@@ -169,7 +160,6 @@ class GitHubAPIClient:
         until: Optional[str] = None,
         use_cache: bool = True,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-
         commits: List[Dict[str, Any]] = []
         cursor: Optional[str] = None
         pages = 0
@@ -224,7 +214,6 @@ class GitHubAPIClient:
             repo_data = data.get("data", {}).get("repository")
             rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
             if not repo_data or not repo_data.get("defaultBranchRef"):
-                # No default branch or repo not found
                 break
 
             target = repo_data["defaultBranchRef"].get("target", {})
@@ -233,7 +222,6 @@ class GitHubAPIClient:
                 break
 
             nodes = history.get("nodes", [])
-            # Enforce optional max_commits limit across pages
             if max_commits is not None and max_commits >= 0:
                 remaining = max_commits - len(commits)
                 if remaining <= 0:
@@ -359,6 +347,141 @@ class GitHubAPIClient:
             'extracted_at': datetime.now().isoformat()
         }
 
+    # 👇 MÉTODOS REST PARA TREE (DENTRO DA CLASSE)
+    def get_repository_tree(
+        self,
+        owner: str,
+        repo: str,
+        branch: str = "main",
+        use_cache: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Obtém árvore de arquivos usando REST API Git Trees como fallback.
+        """
+        logger = logging.getLogger(__name__)
+        
+        try:
+            # Passo 1: Obter SHA do branch
+            branch_url = f"https://api.github.com/repos/{owner}/{repo}/branches/{branch}"
+            branch_data = self.get_with_cache(branch_url, use_cache=use_cache)
+            
+            if not branch_data:
+                logger.error(f"Branch {branch} not found for {owner}/{repo}")
+                return self._empty_tree_response(owner, repo, branch, error="Branch not found")
+            
+            tree_sha = branch_data['commit']['sha']
+            logger.info(f"Fetching tree for {owner}/{repo} (SHA: {tree_sha[:8]})")
+            
+            # Passo 2: Obter árvore recursiva
+            tree_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{tree_sha}"
+            tree_data = self.get_with_cache(
+                f"{tree_url}?recursive=1",
+                use_cache=use_cache
+            )
+            
+            if not tree_data:
+                logger.error(f"Failed to fetch tree for {owner}/{repo}")
+                return self._empty_tree_response(owner, repo, branch, error="Tree fetch failed")
+            
+            is_truncated = tree_data.get('truncated', False)
+            raw_tree = tree_data.get('tree', [])
+            
+            logger.info(f"  ├─ Items fetched: {len(raw_tree)}")
+            logger.info(f"  ├─ Truncated: {is_truncated}")
+            
+            # Se truncado, tentar fallback com GraphQL
+            if is_truncated:
+                logger.warning(f"  ⚠️  Tree is truncated! Falling back to GraphQL...")
+                return self.graphql_repository_tree(owner, repo, branch, use_cache)
+            
+            # Passo 3: Padronizar nós
+            standardized_tree = []
+            for item in raw_tree:
+                node = self._standardize_tree_node(item)
+                if node:
+                    standardized_tree.append(node)
+            
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'sha': tree_sha,
+                'tree': standardized_tree,
+                'truncated': is_truncated,
+                'extracted_at': datetime.now().isoformat(),
+                'method': 'rest',
+                'total_items': len(standardized_tree)
+            }
+            
+        except Exception as e:
+            logger.error(f"Error in get_repository_tree: {str(e)}")
+            return self._empty_tree_response(owner, repo, branch, error=str(e))
+
+    def _standardize_tree_node(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Padroniza formato de um nó da árvore (REST ou GraphQL)."""
+        node_type = item.get('type', '')
+        path = item.get('path', '')
+        
+        if not path:
+            return None
+        
+        name = path.split('/')[-1] if '/' in path else path
+        
+        if node_type == 'blob':
+            file_type = 'file'
+        elif node_type == 'tree':
+            file_type = 'directory'
+        else:
+            file_type = node_type
+        
+        standardized = {
+            'name': name,
+            'path': path,
+            'type': file_type,
+            'sha': item.get('sha', item.get('oid', '')),
+            'mode': item.get('mode', '')
+        }
+        
+        if file_type == 'file':
+            extension = ''
+            if '.' in name:
+                extension = '.' + name.split('.')[-1]
+            
+            standardized['extension'] = extension
+            
+            size = item.get('size')
+            if size is None and 'object' in item:
+                size = item['object'].get('byteSize', 0)
+            
+            standardized['size'] = size or 0
+            standardized['is_binary'] = item.get('is_binary', False)
+        
+        elif file_type == 'directory':
+            standardized['children'] = item.get('children', [])
+        
+        return standardized
+
+    def _empty_tree_response(
+        self,
+        owner: str,
+        repo: str,
+        branch: str,
+        error: str = ""
+    ) -> Dict[str, Any]:
+        """Retorna estrutura vazia em caso de erro."""
+        return {
+            'owner': owner,
+            'repository': repo,
+            'branch': branch,
+            'sha': '',
+            'tree': [],
+            'truncated': False,
+            'extracted_at': datetime.now().isoformat(),
+            'method': 'rest',
+            'total_items': 0,
+            'error': error
+        }
+
     def get_paginated(
         self,
         base_url: str,
@@ -369,7 +492,6 @@ class GitHubAPIClient:
     ) -> List[Any]:
         """
         Fetch all pages for list endpoints that support per_page & page params.
-        Stops when a page returns fewer than per_page results or when max_pages is reached.
         """
         results: List[Any] = []
         page = start_page
@@ -386,13 +508,11 @@ class GitHubAPIClient:
                 if len(data) < per_page:
                     break
             else:
-                # Non-list response; stop paging
                 break
             page += 1
         return results
     
     def _log_rate_limit(self, response: requests.Response) -> None:
-
         remaining = response.headers.get('X-RateLimit-Remaining', 'Unknown')
         limit = response.headers.get('X-RateLimit-Limit', 'Unknown')
         reset_time = response.headers.get('X-RateLimit-Reset', 'Unknown')
@@ -403,8 +523,9 @@ class GitHubAPIClient:
         else:
             print(f"Rate limit: {remaining}/{limit}")
 
+
+# 👇 FUNÇÕES AUXILIARES (FORA DA CLASSE)
 def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
- 
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     if timestamp:
@@ -415,7 +536,6 @@ def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
                 'file_path': filepath
             }
         elif isinstance(data, list) and len(data) > 0:
-           
             metadata = {
                 '_metadata': {
                     'extracted_at': now,
@@ -432,7 +552,6 @@ def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
     return filepath
 
 def load_json_data(filepath: str) -> Any:
-   
     if not os.path.exists(filepath):
         return None
     
@@ -440,7 +559,6 @@ def load_json_data(filepath: str) -> Any:
         return json.load(f)
 
 def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
-    
     registry_path = f"data/{layer}/registry.json"
     
     registry = load_json_data(registry_path) or {}
@@ -455,15 +573,11 @@ def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
     save_json_data(registry, registry_path, timestamp=False)
 
 class OrganizationConfig:
-    
     def __init__(self, org_name: str):
         self.org_name = org_name
-        # Allow full extraction by default (no blacklist)
         self.repo_blacklist: List[str] = []
     
     def should_skip_repo(self, repo: Dict[str, Any]) -> bool:
-        
-        # Do not skip any repository to enable full extraction
         return False
 
 
