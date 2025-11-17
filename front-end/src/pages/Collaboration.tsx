@@ -33,8 +33,8 @@ export default function CollaborationPage() {
 
         // Busca os dois arquivos em paralelo
         const [collabResponse, heatmapResponse, processedMainData] = await Promise.all([
-          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/commits_graphql/data/silver/collaboration_edges.json'),
-          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/commits_graphql/data/silver/activity_heatmap.json'), 
+          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/collaboration_edges.json'),
+          fetch('https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/activity_heatmap.json'), 
           Utils.fetchAndProcessActivityData('commit')
         ]);
 
