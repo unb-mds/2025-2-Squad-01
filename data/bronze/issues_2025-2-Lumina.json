@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-14T14:43:50.299187",
+      "extracted_at": "2025-11-17T17:28:42.653194",
       "file_path": "data/bronze/issues_2025-2-Lumina.json",
       "record_count": 86
     }
@@ -164,11 +164,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
@@ -358,11 +358,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
@@ -464,7 +464,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "TiagoUNB",
@@ -540,18 +540,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-12T14:51:36Z",
-    "updated_at": "2025-11-12T14:51:36Z",
-    "closed_at": null,
+    "updated_at": "2025-11-15T16:54:47Z",
+    "closed_at": "2025-11-15T16:54:46Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -576,7 +576,27 @@
       "total_blocking": 0
     },
     "body": "### 📝 Criar a funcionalidade de salvar artigos processados por RAG em um banco de dados vetorial\n\n---\n\n### 🏷️ Tipo de Tarefa\n*Marque com um `x` a opção que se aplica.*\n- [x] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [ ] 🔧 Melhoria/Refatoração\n- [ ] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade *Qual a urgência desta tarefa?* \n- [ ] 🔴 Alta \n- [ ] 🟡 Média \n- [ ] 🟢 Baixa\n---\n\n### 📖 Descrição da Tarefa\nImplementar a funcionalidade responsável por salvar os **artigos processados por RAG (Retrieval-Augmented Generation)** em um **banco de dados vetorial**.  \nApós o processamento dos artigos (extração, limpeza e embedding), os vetores gerados devem ser armazenados em um banco **ChromaDB** ou outro vetorstore permitindo consultas semânticas e recuperação eficiente de informações relevantes.\n\nEssa funcionalidade será um passo intermediário entre o módulo de scraping e o módulo de geração de resumos via LLM (Gemini), garantindo que o sistema possa reutilizar embeddings já processados sem reexecutar o pipeline completo.\n\n---\n\n### ✅ Critérios de Aceitação\n- [x] O sistema é capaz de gerar embeddings dos artigos processados e salvá-los em um banco vetorial.\n- [x] Cada artigo no banco vetorial mantém referência ao seu `article_id` do banco SQLite principal.\n- [x] O sistema evita duplicidade de vetores ao reprocessar o mesmo artigo.\n- [x] É possível consultar o banco vetorial e recuperar artigos semanticamente similares.\n- [x] Logs de criação e atualização dos vetores são registrados.\n\n---\n\n### 🛠️ Tarefas Técnicas \n- [x] Criar módulo `app/db/vector_db.py` responsável por inicializar e gerenciar o banco de dados vetorial.\n- [x] Implementar função `store_article_embedding(article_id: int, embedding: list[float])`.\n- [x] Integrar o pipeline RAG para gerar embeddings a partir do texto do artigo usando Gemini Embeddings API.\n- [x] Implementar verificação de duplicidade antes de inserir novos vetores.\n- [x] Adicionar testes unitários para o armazenamento e recuperação de embeddings.\n- [x] Atualizar a documentação técnica descrevendo o fluxo de embeddings e integração com RAG.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "TiagoUNB",
+      "id": 211538615,
+      "node_id": "U_kgDODJvStw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211538615?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/TiagoUNB",
+      "html_url": "https://github.com/TiagoUNB",
+      "followers_url": "https://api.github.com/users/TiagoUNB/followers",
+      "following_url": "https://api.github.com/users/TiagoUNB/following{/other_user}",
+      "gists_url": "https://api.github.com/users/TiagoUNB/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/TiagoUNB/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/TiagoUNB/subscriptions",
+      "organizations_url": "https://api.github.com/users/TiagoUNB/orgs",
+      "repos_url": "https://api.github.com/users/TiagoUNB/repos",
+      "events_url": "https://api.github.com/users/TiagoUNB/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/TiagoUNB/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/158/reactions",
       "total_count": 0,
@@ -591,7 +611,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/158/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -655,7 +675,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "TiagoUNB",
@@ -731,18 +751,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-12T14:29:01Z",
-    "updated_at": "2025-11-12T14:29:01Z",
-    "closed_at": null,
+    "updated_at": "2025-11-15T16:54:23Z",
+    "closed_at": "2025-11-15T16:54:23Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -767,7 +787,27 @@
       "total_blocking": 0
     },
     "body": "### 📝 Implementar endpoint de API para adicionar artigos ao banco de dados através de uma URL\n\n---\n\n### 🏷️ Tipo de Tarefa\n*Marque com um `x` a opção que se aplica.*\n- [x] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [ ] 🔧 Melhoria/Refatoração\n- [ ] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade\n*Qual a urgência desta tarefa?*\n- [x] 🔴 Alta\n- [ ] 🟡 Média\n- [ ] 🟢 Baixa\n\n### 📖 Descrição\n\n- Adicionar um novo endpoint `/article/add` em `main.py` para permitir que administradores enviem URLs de artigos para **scraping** e salvamento no banco de dados.\n\n---\n\n### ✅ Critérios de Aceitação\n\n- [x] O endpoint `/article/add` deve aceitar requisições **POST** com um corpo JSON contendo o campo `url`.  \n- [x] Ao receber uma URL válida, o sistema deve executar o processo de **scraping** utilizando a classe `ScrapingManager`.  \n- [x] O conteúdo do artigo (título, autor, data e corpo) deve ser extraído corretamente e persistido no banco de dados SQLite.  \n- [x] Caso o artigo já exista no banco (mesma URL), o endpoint deve retornar uma mensagem de aviso, evitando duplicações.  \n- [x] Em caso de erro (ex: URL inválida ou falha de scraping), o endpoint deve retornar um código HTTP apropriado e uma mensagem de erro clara.  \n- [x] O retorno bem-sucedido deve incluir o status da operação e os dados básicos do artigo salvo.  \n- [x] Todos os novos comportamentos devem possuir testes automatizados cobrindo os principais fluxos e erros esperados.\n\n---\n\n### 🛠️ Tarefas Técnicas\n\n- [x] Criar a rota `POST /article/add` no arquivo `main.py`.  \n- [x] Implementar a classe `ScrapingManager` em `scraping_manager.py` para gerenciar o fluxo de scraping e persistência no banco de dados.  \n- [x] Integrar o `ScrapingManager` com o módulo `app.db.articledb` para salvar os artigos extraídos.  \n- [x] Implementar tratamento de exceções e respostas HTTP padronizadas (sucesso, erro de scraping, duplicação).  \n- [x] Criar testes unitários e de integração para o novo endpoint (`tests/test_article_add.py`).  \n- [x] Validar a entrada de dados (campo `url`) utilizando **Pydantic** para garantir formato e obrigatoriedade.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "TiagoUNB",
+      "id": 211538615,
+      "node_id": "U_kgDODJvStw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211538615?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/TiagoUNB",
+      "html_url": "https://github.com/TiagoUNB",
+      "followers_url": "https://api.github.com/users/TiagoUNB/followers",
+      "following_url": "https://api.github.com/users/TiagoUNB/following{/other_user}",
+      "gists_url": "https://api.github.com/users/TiagoUNB/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/TiagoUNB/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/TiagoUNB/subscriptions",
+      "organizations_url": "https://api.github.com/users/TiagoUNB/orgs",
+      "repos_url": "https://api.github.com/users/TiagoUNB/repos",
+      "events_url": "https://api.github.com/users/TiagoUNB/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/TiagoUNB/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/156/reactions",
       "total_count": 0,
@@ -782,7 +822,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/156/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -913,11 +953,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
@@ -1028,7 +1068,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "nathanpromao",
@@ -1104,18 +1144,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 2,
     "created_at": "2025-11-12T02:27:37Z",
-    "updated_at": "2025-11-12T02:27:37Z",
-    "closed_at": null,
+    "updated_at": "2025-11-17T14:59:47Z",
+    "closed_at": "2025-11-17T14:59:47Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -1140,7 +1180,27 @@
       "total_blocking": 0
     },
     "body": "### 📝Refinar o código do frontend\n\n---\n\n### 🏷️ Tipo de Tarefa\n*Marque com um `x` a opção que se aplica.*\n- [ ] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [x] 🔧 Melhoria/Refatoração\n- [ ] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade\n*Qual a urgência desta tarefa?*\n- [ ] 🔴 Alta\n- [x] 🟡 Média\n- [ ] 🟢 Baixa\n\n### 📖 Descrição da Tarefa\nRevisar e refinar tudo o necessário para o código frontend, afim de deixar mais limpo e claro \n\n### ✅ Critérios de Aceitação\n- [ ] O código foi revisado e refinado\n- [ ] O código segue claro e funcional\n\n\n### 🛠️ Tarefas Técnicas \n- [ ] Revisar o código de todas as paginas \n- [ ] Adicionar pequenas features faltantes (como o link do pages)\n- [ ] Refatorar algumas partes do código caso necessario\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Atila05",
+      "id": 82632413,
+      "node_id": "MDQ6VXNlcjgyNjMyNDEz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82632413?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Atila05",
+      "html_url": "https://github.com/Atila05",
+      "followers_url": "https://api.github.com/users/Atila05/followers",
+      "following_url": "https://api.github.com/users/Atila05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Atila05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Atila05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Atila05/subscriptions",
+      "organizations_url": "https://api.github.com/users/Atila05/orgs",
+      "repos_url": "https://api.github.com/users/Atila05/repos",
+      "events_url": "https://api.github.com/users/Atila05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Atila05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/154/reactions",
       "total_count": 0,
@@ -1155,7 +1215,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/154/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -1286,11 +1346,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
@@ -1468,17 +1528,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-11T00:07:02Z",
-      "updated_at": "2025-11-12T17:21:03Z",
+      "updated_at": "2025-11-17T17:15:36Z",
       "due_on": "2025-11-16T08:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-11T01:10:36Z",
-    "updated_at": "2025-11-11T01:10:36Z",
+    "updated_at": "2025-11-16T03:30:10Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {

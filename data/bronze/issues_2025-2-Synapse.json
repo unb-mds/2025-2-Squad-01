@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-14T14:44:05.494305",
+      "extracted_at": "2025-11-17T17:28:56.707416",
       "file_path": "data/bronze/issues_2025-2-Synapse.json",
       "record_count": 162
     }
@@ -49,7 +49,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Dgprogramas",
@@ -125,18 +125,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-13T18:55:21Z",
-    "updated_at": "2025-11-13T18:55:21Z",
-    "closed_at": null,
+    "updated_at": "2025-11-17T15:57:33Z",
+    "closed_at": "2025-11-17T15:57:33Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -152,7 +152,27 @@
       "total_blocking": 0
     },
     "body": null,
-    "closed_by": null,
+    "closed_by": {
+      "login": "Dgprogramas",
+      "id": 212963810,
+      "node_id": "U_kgDODLGR4g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/212963810?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Dgprogramas",
+      "html_url": "https://github.com/Dgprogramas",
+      "followers_url": "https://api.github.com/users/Dgprogramas/followers",
+      "following_url": "https://api.github.com/users/Dgprogramas/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Dgprogramas/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Dgprogramas/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Dgprogramas/subscriptions",
+      "organizations_url": "https://api.github.com/users/Dgprogramas/orgs",
+      "repos_url": "https://api.github.com/users/Dgprogramas/repos",
+      "events_url": "https://api.github.com/users/Dgprogramas/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Dgprogramas/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/issues/213/reactions",
       "total_count": 0,
@@ -167,7 +187,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/issues/213/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Synapse"
   },
   {
@@ -213,7 +233,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Dgprogramas",
@@ -289,18 +309,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-13T18:50:47Z",
-    "updated_at": "2025-11-13T18:51:09Z",
-    "closed_at": null,
+    "updated_at": "2025-11-17T15:57:00Z",
+    "closed_at": "2025-11-17T15:56:59Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -324,8 +344,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### Objetivo:\n\nEsta issue visa criar a interface da aba \"Newsletter\" dentro da área de gerenciamento de conta do usuário. O objetivo é permitir que o usuário ative ou desative o recebimento da newsletter diária e visualize possíveis perguntas sobre este serviço.\n\n---\n\n###  Tarefas ✅\n\n**Refatoração e Estrutura (Sidebar)**\n\n- [ ] Criar o componente reutilizável src/components/AccountSidebar.jsx.\n\n- [ ] Implementar a prop activeTab (string: \"account\" ou \"newsletter\").\n\n- [ ] Aplicar a lógica visual no componente:\n\n- [ ] Substituir a sidebar antiga na AccountPage.jsx pelo novo componente, passando activeTab=\"account\".\n\n**Estrutura e Navegação**\n\n- [ ] Criar o componente NewsletterPage.jsx.\n\n- [ ] Configurar a rota no main.jsx ou a lógica de navegação na AccountPage.\n\n- [ ] Implementar a Sidebar lateral:\n\n**Seção \"Subscribe\"**\n\n- [ ] Criar o título \"Subscribe\" com a linha divisória horizontal abaixo.\n\n- [ ] Desenvolver o Card de Inscrição:\n\n- [ ] Implementar os checkboxes \"yes\" e \"no\".\n\n- [ ] Lógica de UI: Gerenciar o estado local (useState) para que apenas um possa ser marcado por vez (comportamento de radio button mas visual de checkbox).\n\n**Seção \"About\" (FAQ)**\n\n- [ ] Criar o título \"About\" com a linha divisória horizontal abaixo.\n\n- [ ] Desenvolver o Card de FAQ:\n\n- [ ] Implementar a lista de perguntas e respostas.\n\n- [ ] Adicionar as linhas divisórias cinzas entre cada item de pergunta/resposta.\n\n- [ ] Dica: Criar um sub-componente FAQItem para evitar repetição de código.\n\n**Responsividade**\n\n- [ ] Garantir que o layout se adapte para telas menores (no mobile, a sidebar costuma virar um menu superior ou os elementos empilham).\n",
-    "closed_by": null,
+    "body": "### Objetivo:\n\nEsta issue visa criar a interface da aba \"Newsletter\" dentro da área de gerenciamento de conta do usuário. O objetivo é permitir que o usuário ative ou desative o recebimento da newsletter diária e visualize possíveis perguntas sobre este serviço.\n\n---\n\n###  Tarefas ✅\n\n**Refatoração e Estrutura (Sidebar)**\n\n- [x] Criar o componente reutilizável src/components/AccountSidebar.jsx.\n\n- [x] Implementar a prop activeTab (string: \"account\" ou \"newsletter\").\n\n- [x] Aplicar a lógica visual no componente:\n\n- [x] Substituir a sidebar antiga na AccountPage.jsx pelo novo componente, passando activeTab=\"account\".\n\n**Estrutura e Navegação**\n\n- [x] Criar o componente NewsletterPage.jsx.\n\n- [x] Configurar a rota no main.jsx ou a lógica de navegação na AccountPage.\n\n- [x] Implementar a Sidebar lateral:\n\n**Seção \"Subscribe\"**\n\n- [x] Criar o título \"Subscribe\" com a linha divisória horizontal abaixo.\n\n- [x] Desenvolver o Card de Inscrição:\n\n- [x] Implementar os checkboxes \"yes\" e \"no\".\n\n- [x] Lógica de UI: Gerenciar o estado local (useState) para que apenas um possa ser marcado por vez (comportamento de radio button mas visual de checkbox).\n\n**Seção \"About\" (FAQ)**\n\n- [x] Criar o título \"About\" com a linha divisória horizontal abaixo.\n\n- [x] Desenvolver o Card de FAQ:\n\n- [x] Implementar a lista de perguntas e respostas.\n\n- [x] Adicionar as linhas divisórias cinzas entre cada item de pergunta/resposta.\n\n- [x] Dica: Criar um sub-componente FAQItem para evitar repetição de código.\n\n**Responsividade**\n\n- [x] Garantir que o layout se adapte para telas menores (no mobile, a sidebar costuma virar um menu superior ou os elementos empilham).\n",
+    "closed_by": {
+      "login": "Dgprogramas",
+      "id": 212963810,
+      "node_id": "U_kgDODLGR4g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/212963810?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Dgprogramas",
+      "html_url": "https://github.com/Dgprogramas",
+      "followers_url": "https://api.github.com/users/Dgprogramas/followers",
+      "following_url": "https://api.github.com/users/Dgprogramas/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Dgprogramas/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Dgprogramas/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Dgprogramas/subscriptions",
+      "organizations_url": "https://api.github.com/users/Dgprogramas/orgs",
+      "repos_url": "https://api.github.com/users/Dgprogramas/repos",
+      "events_url": "https://api.github.com/users/Dgprogramas/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Dgprogramas/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/issues/212/reactions",
       "total_count": 0,
@@ -340,7 +380,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/issues/212/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Synapse"
   },
   {
@@ -560,12 +600,54 @@
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
-    "assignees": [],
+    "assignee": {
+      "login": "g-srodrigues",
+      "id": 193100357,
+      "node_id": "U_kgDOC4J6RQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193100357?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/g-srodrigues",
+      "html_url": "https://github.com/g-srodrigues",
+      "followers_url": "https://api.github.com/users/g-srodrigues/followers",
+      "following_url": "https://api.github.com/users/g-srodrigues/following{/other_user}",
+      "gists_url": "https://api.github.com/users/g-srodrigues/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/g-srodrigues/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/g-srodrigues/subscriptions",
+      "organizations_url": "https://api.github.com/users/g-srodrigues/orgs",
+      "repos_url": "https://api.github.com/users/g-srodrigues/repos",
+      "events_url": "https://api.github.com/users/g-srodrigues/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/g-srodrigues/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "g-srodrigues",
+        "id": 193100357,
+        "node_id": "U_kgDOC4J6RQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/193100357?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/g-srodrigues",
+        "html_url": "https://github.com/g-srodrigues",
+        "followers_url": "https://api.github.com/users/g-srodrigues/followers",
+        "following_url": "https://api.github.com/users/g-srodrigues/following{/other_user}",
+        "gists_url": "https://api.github.com/users/g-srodrigues/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/g-srodrigues/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/g-srodrigues/subscriptions",
+        "organizations_url": "https://api.github.com/users/g-srodrigues/orgs",
+        "repos_url": "https://api.github.com/users/g-srodrigues/repos",
+        "events_url": "https://api.github.com/users/g-srodrigues/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/g-srodrigues/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      }
+    ],
     "milestone": null,
     "comments": 0,
     "created_at": "2025-11-08T17:44:01Z",
-    "updated_at": "2025-11-08T17:44:01Z",
+    "updated_at": "2025-11-14T21:52:35Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -763,11 +845,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
@@ -1041,11 +1123,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
@@ -7518,11 +7600,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
@@ -24032,11 +24114,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-08T13:39:02Z",
-      "updated_at": "2025-11-13T18:55:21Z",
+      "updated_at": "2025-11-17T15:57:33Z",
       "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
