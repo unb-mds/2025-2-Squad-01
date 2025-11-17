@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from typing import List
-from utils.github_api import save_json_data, load_json_data
+from utils.github_api import save_json_data, load_json_data, parse_github_date
 
 def calculate_maturity_score(member_data: dict) -> float:
   

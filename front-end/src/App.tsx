@@ -21,7 +21,7 @@ function App() {
       <Route path="/repos/collaboration" element={<CollaborationPage />} />
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
-      <Route path="/repos/issues" element={<IssuesPage />} />
+      <Route path="/repos/issues" element={<IssuesPage/>} />
       {/* Fallback route for not implemented pages */}
       <Route path="*" element={<NotFound />} />
     </Routes>
