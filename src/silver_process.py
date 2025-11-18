@@ -4,6 +4,9 @@ import argparse
 import sys
 import os
 from datetime import datetime
+import shutil
+import json
+from pathlib import Path
 
 # Add src to path 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -52,6 +55,57 @@ def main():
 
         #  registry
         all_files = member_files + contrib_files + collab_files + temporal_files + language_files
+        print("\nPublishing files to front-end and generating index...")
+    
+        # Define o diretório de ORIGEM (onde o Python salvou)
+        SILVER_DIR = Path("data/silver") 
+        # Define o diretório de DESTINO (onde o React vai ler)
+        FRONT_END_DIR = Path("front-end/public/data/silver") 
+
+        # Garante que o diretório de destino exista
+        FRONT_END_DIR.mkdir(parents=True, exist_ok=True)
+        
+        available_repos_list = []
+        
+        # Itera sobre TODOS os arquivos que acabamos de gerar em data/silver
+        for file_path_str in all_files:
+            file_path = Path(file_path_str)
+            
+            # Confirma que o arquivo realmente está no diretório Silver
+            if file_path.parent.name == 'silver':
+                
+                # Filtra apenas os arquivos que o front-end realmente precisa
+                # (Adicione outros JSONs do front-end se necessário)
+                if file_path.name.startswith("language_analysis_") or \
+                file_path.name.startswith("repo_tree_pack_") or \
+                file_path.name.startswith("collaboration_edges") or \
+                file_path.name.startswith("activity_heatmap"):
+                    
+                    try:
+                        # 1. Copia o arquivo de 'data/silver' para 'front-end/public/data/silver'
+                        shutil.copy(file_path, FRONT_END_DIR)
+                        
+                        # 2. Usa 'language_analysis' como base para o índice
+                        if file_path.name.startswith("language_analysis_"):
+                            repo_name = file_path.stem.replace("language_analysis_", "")
+                            if repo_name != "all" and repo_name not in available_repos_list:
+                                available_repos_list.append(repo_name)
+                                
+                    except Exception as e:
+                        print(f"  ERROR copying {file_path.name} to front-end: {e}")
+
+        print(f"  {len(available_repos_list)} repositórios copiados para {FRONT_END_DIR}.")
+        
+        # 3. Salva o índice 'available_repos.json' DIRETAMENTE no front-end
+        if available_repos_list:
+            # O caminho do índice é no DESTINO
+            available_repos_path = FRONT_END_DIR / "available_repos.json" 
+            try:
+                with open(available_repos_path, 'w', encoding='utf-8') as f:
+                    json.dump(available_repos_list, f, indent=2)
+                print(f"  ✅ Índice 'available_repos.json' gerado em {FRONT_END_DIR}.")
+            except Exception as e:
+                print(f"  ERROR saving available_repos.json: {e}")
         update_data_registry('silver', 'all_processed', all_files)
         
         print(f"\nSilver processing completed successfully!")
