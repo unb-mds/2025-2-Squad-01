@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Sidebar from './Sidebar';
 import RepositoryToolbar from './RepositoryToolbar';
+import { SidebarProvider, useSidebar } from '../contexts/SidebarContext';
 import type { ProcessedActivityResponse } from '../pages/Utils';
 
 interface DashboardLayoutProps {
@@ -27,7 +28,7 @@ interface DashboardLayoutProps {
  * @param data - Activity data for repository selection
  * @param onNavigate - Navigation handler callback
  */
-export default function DashboardLayout({
+function DashboardLayoutInner({
   children,
   currentPage,
   currentSubPage,
@@ -36,8 +37,10 @@ export default function DashboardLayout({
   data = null,
   onNavigate,
 }: DashboardLayoutProps) {
+  const { sidebarWidth } = useSidebar();
+
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex" style={{ marginLeft: sidebarWidth }}>
       <Sidebar currentPage={currentPage} onNavigate={onNavigate} />
       <div className="flex flex-col flex-1">
         {onRepo && (
@@ -54,5 +57,13 @@ export default function DashboardLayout({
         </main>
       </div>
     </div>
+  );
+}
+
+export default function DashboardLayout(props: DashboardLayoutProps) {
+  return (
+    <SidebarProvider>
+      <DashboardLayoutInner {...props} />
+    </SidebarProvider>
   );
 }
