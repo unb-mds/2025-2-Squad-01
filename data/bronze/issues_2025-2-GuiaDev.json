@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-17T17:29:12.070675",
+      "extracted_at": "2025-11-18T05:08:16.375814",
       "file_path": "data/bronze/issues_2025-2-GuiaDev.json",
       "record_count": 53
     }
@@ -216,22 +216,22 @@
     "state": "open",
     "locked": false,
     "assignee": {
-      "login": "JoaoGSantana10",
-      "id": 185989079,
-      "node_id": "U_kgDOCxX31w",
-      "avatar_url": "https://avatars.githubusercontent.com/u/185989079?v=4",
+      "login": "BGrangeiro",
+      "id": 197856263,
+      "node_id": "U_kgDOC8sMBw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/197856263?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/JoaoGSantana10",
-      "html_url": "https://github.com/JoaoGSantana10",
-      "followers_url": "https://api.github.com/users/JoaoGSantana10/followers",
-      "following_url": "https://api.github.com/users/JoaoGSantana10/following{/other_user}",
-      "gists_url": "https://api.github.com/users/JoaoGSantana10/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/JoaoGSantana10/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/JoaoGSantana10/subscriptions",
-      "organizations_url": "https://api.github.com/users/JoaoGSantana10/orgs",
-      "repos_url": "https://api.github.com/users/JoaoGSantana10/repos",
-      "events_url": "https://api.github.com/users/JoaoGSantana10/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/JoaoGSantana10/received_events",
+      "url": "https://api.github.com/users/BGrangeiro",
+      "html_url": "https://github.com/BGrangeiro",
+      "followers_url": "https://api.github.com/users/BGrangeiro/followers",
+      "following_url": "https://api.github.com/users/BGrangeiro/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BGrangeiro/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BGrangeiro/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BGrangeiro/subscriptions",
+      "organizations_url": "https://api.github.com/users/BGrangeiro/orgs",
+      "repos_url": "https://api.github.com/users/BGrangeiro/repos",
+      "events_url": "https://api.github.com/users/BGrangeiro/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BGrangeiro/received_events",
       "type": "User",
       "user_view_type": "public",
       "site_admin": false
@@ -254,6 +254,27 @@
         "repos_url": "https://api.github.com/users/JoaoGSantana10/repos",
         "events_url": "https://api.github.com/users/JoaoGSantana10/events{/privacy}",
         "received_events_url": "https://api.github.com/users/JoaoGSantana10/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      {
+        "login": "BGrangeiro",
+        "id": 197856263,
+        "node_id": "U_kgDOC8sMBw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/197856263?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/BGrangeiro",
+        "html_url": "https://github.com/BGrangeiro",
+        "followers_url": "https://api.github.com/users/BGrangeiro/followers",
+        "following_url": "https://api.github.com/users/BGrangeiro/following{/other_user}",
+        "gists_url": "https://api.github.com/users/BGrangeiro/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/BGrangeiro/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/BGrangeiro/subscriptions",
+        "organizations_url": "https://api.github.com/users/BGrangeiro/orgs",
+        "repos_url": "https://api.github.com/users/BGrangeiro/repos",
+        "events_url": "https://api.github.com/users/BGrangeiro/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/BGrangeiro/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
@@ -299,7 +320,7 @@
     },
     "comments": 0,
     "created_at": "2025-11-14T02:06:41Z",
-    "updated_at": "2025-11-14T15:49:31Z",
+    "updated_at": "2025-11-18T00:28:04Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -315,7 +336,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Título da Issue\nCriar testes unitários para o componente `UserCard` no frontend\n\n---\n\n## 📝 Descrição\nEsta issue tem como objetivo implementar testes utilizando **Vitest + Testing Library**, garantindo que:\n\n- As informações recebidas via props são renderizadas corretamente  \n- O fallback de avatar funciona quando a imagem não é fornecida  \n- Eventos do componente (como click, se existirem) funcionam conforme esperado  \n- A cobertura mínima de 80% é atingida\n\n---\n\n## 👥 Responsáveis\n- Autor: João Guilherme  \n- Revisor: A definir  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [ ] Criar arquivo de testes `UserCard.test.tsx`  \n- [ ] Testar renderização do nome e email  \n- [ ] Testar exibição do avatar e fallback  \n- [ ] Testar eventos do componente (se houver)  \n- [ ] Garantir cobertura ≥ 80%  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [ ] DoR 3  \n- [ ] DoR 4  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [ ] Código implementado e revisado  \n- [ ] Documentação atualizada (se aplicável)  \n- [ ] Aceito pelo PO/Cliente  \n- [ ] DoD 4  \n- [ ] DoD 5\n",
+    "body": "# 📌 Título da Issue\nCriar testes unitários para o componente `UserCard` no frontend\n\n---\n\n## 📝 Descrição\nEsta issue tem como objetivo implementar testes utilizando **Vitest + Testing Library**, garantindo que:\n\n- As informações recebidas via props são renderizadas corretamente  \n- O fallback de avatar funciona quando a imagem não é fornecida  \n- Eventos do componente (como click, se existirem) funcionam conforme esperado  \n- A cobertura mínima de 80% é atingida\n\n---\n\n## 👥 Responsáveis\n- Autor: João Guilherme  @BGrangeiro \n- Revisor: A definir  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [ ] Criar arquivo de testes `UserCard.test.tsx`  \n- [ ] Testar renderização do nome e email  \n- [ ] Testar exibição do avatar e fallback  \n- [ ] Testar eventos do componente (se houver)  \n- [ ] Garantir cobertura ≥ 80%  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [ ] DoR 3  \n- [ ] DoR 4  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [ ] Código implementado e revisado  \n- [ ] Documentação atualizada (se aplicável)  \n- [ ] Aceito pelo PO/Cliente  \n- [ ] DoD 4  \n- [ ] DoD 5\n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/76/reactions",
@@ -491,9 +512,9 @@
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-11T23:51:48Z",
-    "updated_at": "2025-11-13T18:21:43Z",
+    "updated_at": "2025-11-18T00:30:03Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -682,9 +703,9 @@
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-11T00:51:00Z",
-    "updated_at": "2025-11-11T00:51:17Z",
+    "updated_at": "2025-11-18T01:09:32Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -709,7 +730,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Documentação dos Endpoints do Backend com Swagger  \n\n---\n\n## 📝 Descrição  \nAtualmente, o backend não possui documentação centralizada e visual dos endpoints disponíveis.  \nA proposta desta issue é integrar e configurar o **Swagger (OpenAPI)** para gerar automaticamente a documentação dos endpoints, facilitando a compreensão e o uso da API pelos desenvolvedores e futuros integradores.  \n\nA documentação deve incluir:\n- Métodos HTTP  \n- Parâmetros  \n- Exemplos de requisição e resposta  \n- Códigos de status  \n\n---\n\n## 👥 Responsáveis  \n- **Autor:** Hugo Freitas Silva  \n- **Revisor:** @PedroGTG @filipeBG-07 \n\n---\n\n## 🎯 Prioridade  \n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas  \n- [ ] Instalar e configurar o Swagger no projeto backend  \n- [ ] Adicionar anotações nos controladores e DTOs para gerar a documentação automaticamente  \n- [ ] Configurar rota `/api/docs` para acesso à interface Swagger UI  \n- [ ] Garantir que todos os endpoints estejam documentados (método, rota, descrição, parâmetros e respostas)  \n- [ ] Atualizar README com instruções de acesso à documentação  \n\n---\n\n## 📌 Definition of Ready (DoR)  \n- [x] O ambiente backend está funcional e acessível  \n- [x] Todos os endpoints principais estão implementados  \n- [ ] O time concordou com o padrão de documentação (ex.: nomes, descrições, exemplos)  \n\n---\n\n## 📌 Definition of Done (DoD)  \n- [ ] Swagger configurado e acessível via `/api/docs`  \n- [ ] Todos os endpoints documentados com exemplos de entrada e saída  \n- [ ] README atualizado com informações sobre a documentação  \n- [ ] Revisão aprovada e mergeado na branch principal  \n\n---\n\n",
+    "body": "# 📌 Documentação dos Endpoints do Backend com Swagger  \n\n---\n\n## 📝 Descrição  \nAtualmente, o backend não possui documentação centralizada e visual dos endpoints disponíveis.  \nA proposta desta issue é integrar e configurar o **Swagger (OpenAPI)** para gerar automaticamente a documentação dos endpoints, facilitando a compreensão e o uso da API pelos desenvolvedores e futuros integradores.  \n\nA documentação deve incluir:\n- Métodos HTTP  \n- Parâmetros  \n- Exemplos de requisição e resposta  \n- Códigos de status  \n\n---\n\n## 👥 Responsáveis  \n- **Autor:** Hugo Freitas Silva  \n- **Revisor:** @PedroGTG @filipeBG-07 \n\n---\n\n## 🎯 Prioridade  \n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas  \n- [x] Instalar e configurar o Swagger no projeto backend  \n- [ ] Adicionar anotações nos controladores e DTOs para gerar a documentação automaticamente  \n- [x] Configurar rota `/api/docs` para acesso à interface Swagger UI  \n- [ ] Garantir que todos os endpoints estejam documentados (método, rota, descrição, parâmetros e respostas)  \n- [ ] Atualizar README com instruções de acesso à documentação  \n\n---\n\n## 📌 Definition of Ready (DoR)  \n- [x] O ambiente backend está funcional e acessível  \n- [x] Todos os endpoints principais estão implementados  \n- [ ] O time concordou com o padrão de documentação (ex.: nomes, descrições, exemplos)  \n\n---\n\n## 📌 Definition of Done (DoD)  \n- [x] Swagger configurado e acessível via `/api/docs`  \n- [ ] Todos os endpoints documentados com exemplos de entrada e saída  \n- [ ] README atualizado com informações sobre a documentação  \n- [ ] Revisão aprovada e mergeado na branch principal  \n\n---\n\n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/74/reactions",
@@ -4077,7 +4098,7 @@
     },
     "comments": 1,
     "created_at": "2025-10-06T23:37:17Z",
-    "updated_at": "2025-10-24T19:04:45Z",
+    "updated_at": "2025-11-18T00:22:54Z",
     "closed_at": "2025-10-14T23:40:10Z",
     "author_association": "COLLABORATOR",
     "type": null,
@@ -4093,7 +4114,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Projeto de Alta Fidelidade: Página de Análise\n\n---\n\n## 📝 Descrição\nO objetivo desta tarefa é desenvolver o protótipo de alta fidelidade para a nova \"Página de Análise\" da plataforma. O design deve ser baseado nos wireframes de baixa fidelidade já aprovados e seguir rigorosamente o guia de estilos (style guide) e o design system existentes.\n\n\n**Requisitos Funcionais:**\n- Visualização de gráficos interativos (ex: gráficos de linha, barra e pizza).\n- Tabela de dados com funcionalidades de filtro e ordenação.\n- Seletor de período para análise dos dados (ex: diário, semanal, mensal).\n\n---\n\n## 👥 Responsáveis\n- **Autor:** @BGrangeiro \n- **Revisor:** @Phill-Chill @HugoFreitass @filipeBG-07 @JoaoGSantana10\n---\n\n## 🎯 Prioridade\n- [ ] 🔴 Alta\n- [x] 🟡 Média\n- [ ] 🟢 Baixa\n\n---\n\n## ✅ Tarefas\n- [x] Criar o layout principal da página de análise e de aprendizado no Figma.\n- [x] Aplicar o guia de estilos (cores, tipografia, espaçamento) aos componentes.\n- [x] Desenvolver os componentes interativos (filtros, modais, tooltips).\n- [x] Montar o protótipo navegável, simulando o fluxo de usuário.\n- [x] Apresentar o protótipo para validação com o time e o Product Owner.\n\n---\n\n## 📌 Definition of Ready (DoR)\n- [ ] Wireframes de baixa/média fidelidade aprovados.\n- [ ] Histórias de usuário e critérios de aceitação definidos e claros.\n- [ ] Acesso ao guia de estilos (style guide) e à biblioteca de componentes.\n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Protótipo de alta fidelidade aprovado pelo Product Owner (PO).\n- [ ] Protótipo navegável publicado em uma plataforma de compartilhamento (Figma).\n\n\n---",
+    "body": "# 📌 Projeto de Alta Fidelidade: Página de Análise\n\n---\n\n## 📝 Descrição\nO objetivo desta tarefa é desenvolver o protótipo de alta fidelidade para a nova \"Página de Análise\" da plataforma. O design deve ser baseado nos wireframes de baixa fidelidade já aprovados e seguir rigorosamente o guia de estilos (style guide) e o design system existentes.\n\n\n**Requisitos Funcionais:**\n- Visualização de gráficos interativos (ex: gráficos de linha, barra e pizza).\n- Tabela de dados com funcionalidades de filtro e ordenação.\n- Seletor de período para análise dos dados (ex: diário, semanal, mensal).\n\n---\n\n## 👥 Responsáveis\n- **Autor:** @BGrangeiro \n- **Revisor:** @Phill-Chill @HugoFreitass @filipeBG-07 @JoaoGSantana10\n---\n\n## 🎯 Prioridade\n- [ ] 🔴 Alta\n- [x] 🟡 Média\n- [ ] 🟢 Baixa\n\n---\n\n## ✅ Tarefas\n- [x] Criar o layout principal da página de análise e de aprendizado no Figma.\n- [x] Aplicar o guia de estilos (cores, tipografia, espaçamento) aos componentes.\n- [x] Desenvolver os componentes interativos (filtros, modais, tooltips).\n- [x] Montar o protótipo navegável, simulando o fluxo de usuário.\n- [x] Apresentar o protótipo para validação com o time e o Product Owner.\n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Wireframes de baixa/média fidelidade aprovados.\n- [x] Histórias de usuário e critérios de aceitação definidos e claros.\n- [x] Acesso ao guia de estilos (style guide) e à biblioteca de componentes.\n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Protótipo de alta fidelidade aprovado pelo Product Owner (PO).\n- [x] Protótipo navegável publicado em uma plataforma de compartilhamento (Figma).\n\n\n---",
     "closed_by": {
       "login": "BGrangeiro",
       "id": 197856263,
@@ -5327,7 +5348,7 @@
     },
     "comments": 2,
     "created_at": "2025-09-30T00:22:22Z",
-    "updated_at": "2025-11-10T23:49:57Z",
+    "updated_at": "2025-11-18T00:23:13Z",
     "closed_at": "2025-10-02T21:24:47Z",
     "author_association": "COLLABORATOR",
     "type": null,
@@ -5343,7 +5364,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Revisão de Documentos - Release 1\n\n---\n\n## 📝 Descrição\nRealizar a revisão completa dos documentos relacionados à **Release 1**, garantindo clareza, consistência e conformidade com os padrões definidos do projeto.  \nA revisão deve incluir: requisitos funcionais, não funcionais, atas de reunião, atas de planejamento e demais artefatos documentais.\n\n---\n\n## 👥 Responsáveis\n- Autor: [@JoaoGSantana10 ]  \n- Revisor: [@HugoFreitass , @Phill-Chill , @filipeBG-07, @BGrangeiro , @PedroGTG ]  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [x] Revisar documentos de requisitos  \n- [x] Verificar atas e registros de reuniões  \n- [x] Garantir padronização de linguagem e formatação  \n- [x] Validar consistência com a Release 1  \n- [x] Atualizar documentos se necessário  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [x] Todos os documentos disponíveis para revisão  \n- [x] Checklist de revisão preparado  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Documentos revisados e atualizados  \n- [x] Feedback dos revisores registrado  \n- [x] Conformidade com padrões de documentação  \n- [x] Aprovação final do PO/Cliente  \n- [x] Documentos prontos para Release 1  \n\n---\n",
+    "body": "# 📌 Revisão de Documentos - Release 1\n\n---\n\n## 📝 Descrição\nRealizar a revisão completa dos documentos relacionados à **Release 1**, garantindo clareza, consistência e conformidade com os padrões definidos do projeto.  \nA revisão deve incluir: requisitos funcionais, não funcionais, atas de reunião, atas de planejamento e demais artefatos documentais.\n\n---\n\n## 👥 Responsáveis\n- Autor: [@JoaoGSantana10 ]  @BGrangeiro\n- Revisor: [@HugoFreitass , @Phill-Chill , @filipeBG-07, @BGrangeiro , @PedroGTG ]  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [x] Revisar documentos de requisitos  \n- [x] Verificar atas e registros de reuniões  \n- [x] Garantir padronização de linguagem e formatação  \n- [x] Validar consistência com a Release 1  \n- [x] Atualizar documentos se necessário  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [x] Todos os documentos disponíveis para revisão  \n- [x] Checklist de revisão preparado  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Documentos revisados e atualizados  \n- [x] Feedback dos revisores registrado  \n- [x] Conformidade com padrões de documentação  \n- [x] Aprovação final do PO/Cliente  \n- [x] Documentos prontos para Release 1  \n\n---\n",
     "closed_by": {
       "login": "JoaoGSantana10",
       "id": 185989079,
