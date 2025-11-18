@@ -54,82 +54,82 @@ def detect_language_by_extension(extension: str) -> str:
     
     return extension_map.get(extension.lower(), 'Unknown')
 
-def convert_tree_to_hierarchy(tree: List[Dict[str, Any]]) -> Dict[str, Any]:
+def _process_pack_node(node: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Converte árvore flat do GraphQL em hierarquia para Circle Pack.
-    Preserva estrutura de diretórios e arquivos.
-    
-    Args:
-        tree: Lista de nós da árvore (arquivos e diretórios) do GraphQL
-    
-    Returns:
-        Dicionário com hierarquia aninhada pronta para d3.pack()
+    Função auxiliar recursiva: Processa um único nó, calculando 'value' (tamanho)
+    de baixo para cima.
     """
-    def build_node(node: Dict[str, Any]) -> Dict[str, Any]:
-        """Constrói um nó da hierarquia recursivamente."""
-        node_type = node.get('type', '')
-        
-        if node_type in ['file', 'blob']:
-            # Arquivo - nó folha
+    node_type = node.get('type', '')
+
+    if node_type in ['file', 'blob']:
+        # É um arquivo. Calcula seu 'value'.
+        object_data = node.get('object', {})
+        name = node.get('name', '')
+        size = node.get('size', 0) or object_data.get('byteSize', 0)
+
+        if size == 0:
+            return None # Ignora arquivos vazios
+
+        extension = '.' + name.split('.')[-1] if '.' in name else ''
+        language = detect_language_by_extension(extension)
+
+        return {
+            'name': name,
+            'type': 'file',
+            'language': language,
+            'value': size, # 'value' é o tamanho do arquivo
+            'path': node.get('path', '')
+        }
+
+    elif node_type in ['directory', 'tree']:
+        # É um diretório. Processa filhos e soma seus 'value's.
+        children_data = node.get('children', [])
+        if not children_data:
             object_data = node.get('object', {})
-            name = node.get('name', '')
-            
-            # Extrair extensão
-            extension = ''
-            if '.' in name:
-                extension = '.' + name.split('.')[-1]
-            
-            # Determinar linguagem
-            language = detect_language_by_extension(extension)
-            
-            # Tamanho pode estar em 'size' ou 'object.byteSize'
-            size = node.get('size', 0) or object_data.get('byteSize', 0)
-            
-            return {
-                'name': name,
-                'type': 'file',
-                'language': language,
-                'size': size,
-                'extension': extension,
-                'path': node.get('path', '')
-            }
-        elif node_type in ['directory', 'tree']:
-            # Diretório - nó pai
-            children = node.get('children', [])
-            if not children:
-                object_data = node.get('object', {})
-                children = object_data.get('entries', [])
-            
-            # Construir filhos recursivamente
-            child_nodes = []
-            for child in children:
-                child_node = build_node(child)
-                if child_node:  # Apenas adicionar se não for None
+            children_data = object_data.get('entries', [])
+
+        child_nodes = []
+        total_size = 0
+
+        if children_data:
+            for child in children_data:
+                child_node = _process_pack_node(child) # Chamada recursiva
+                if child_node:
                     child_nodes.append(child_node)
-            
-            return {
-                'name': node.get('name', ''),
-                'type': 'directory',
-                'path': node.get('path', ''),
-                'children': child_nodes
-            }
-        
-        return None
-   
-    # Construir hierarquia recursivamente
+                    total_size += child_node.get('value', 0) # Soma o 'value' do filho
+
+        if total_size == 0 and not child_nodes:
+            return None # Ignora diretórios vazios
+
+        return {
+            'name': node.get('name', ''),
+            'type': 'directory',
+            'path': node.get('path', ''),
+            'children': child_nodes,
+            'value': total_size # 'value' é a soma de todos os filhos
+        }
+
+    return None
+
+def build_pack_hierarchy_from_tree_list(tree: List[Dict[str, Any]], repo_name: str) -> Dict[str, Any]:
+    """
+    Substitui convert_tree_to_hierarchy. Constrói a hierarquia
+    aninhada com 'value' (tamanho agregado) para D3.pack().
+    """
     root_children = []
+    total_root_size = 0
     for node in tree:
-        node_result = build_node(node)
-        if node_result:
-            root_children.append(node_result)
-    
-    hierarchy = {
-        'name': 'root',
+        child_node = _process_pack_node(node)
+        if child_node:
+            root_children.append(child_node)
+            total_root_size += child_node.get('value', 0)
+
+    return {
+        'name': repo_name, 
         'type': 'directory',
-        'children': root_children
+        'children': root_children,
+        'value': total_root_size
     }
-    
-    return hierarchy
 
 def calculate_language_stats(
     tree: List[Dict[str, Any]], 
@@ -207,6 +207,7 @@ def calculate_language_stats(
         else:  # 'first'
             # Pegar os N primeiros arquivos
             sample_files = all_files[:max_sample_files]
+        has_more = len(all_files) > max_sample_files
         
         language_summary.append({
             'language': language,
@@ -214,6 +215,7 @@ def calculate_language_stats(
             'total_bytes': stats['total_size'],
             'percentage': round(percentage, 2),
             'files': sample_files,  # Amostra limitada
+            'has_more': has_more
         })            
     
     # Ordenar por percentual
@@ -295,8 +297,7 @@ def process_file_language_analysis(
 
 
         if save_hierarchy:
-            hierarchy = convert_tree_to_hierarchy(structure_data['tree'])
-            
+            hierarchy = build_pack_hierarchy_from_tree_list(structure_data['tree'], repo_name)            
             hierarchy_data = {
                 'repository': repo_name,
                 'owner': structure_data.get('owner'),
@@ -307,10 +308,10 @@ def process_file_language_analysis(
             
             hierarchy_file = save_json_data(
                 hierarchy_data,
-                f"data/silver/hierarchy_{repo_name}.json"
+                f"data/silver/repo_tree_pack_{repo_name}.json"
             )
-            generated_files.append(hierarchy_file)
-            print(f"  ✅ Hierarchy saved: {hierarchy_file}")
+            generated_files.append(str(hierarchy_file))
+            print(f"  ✅ Repo Tree Pack saved: {hierarchy_file}")
 
 
                 # Opcionalmente salvar lista completa em arquivo separado
@@ -345,5 +346,5 @@ def process_file_language_analysis(
     
     print(f"\nLanguage analysis completed! Generated {len(generated_files)} files")
     print(f"Configuration: max_sample_files={max_sample_files}, strategy={sample_strategy}")
-    
+
     return generated_files
