@@ -249,6 +249,17 @@ class GitHubAPIClient:
     ) -> Dict[str, Any]:
         """
         Extrai a árvore completa de arquivos e diretórios usando GraphQL.
+        Usa abordagem iterativa com stack para evitar stack overflow.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisada (padrão: "main")
+            use_cache: Se deve usar cache
+            max_depth: Profundidade máxima (segurança contra loops)
+        
+        Returns:
+            Dicionário com a árvore hierárquica de arquivos
         """
         logger = logging.getLogger(__name__)
         
@@ -378,7 +389,6 @@ class GitHubAPIClient:
                 'method': 'graphql'
             }
 
-    # 👇 MÉTODOS REST PARA TREE (DENTRO DA CLASSE)
     def get_repository_tree(
         self,
         owner: str,
@@ -388,6 +398,16 @@ class GitHubAPIClient:
     ) -> Dict[str, Any]:
         """
         Obtém árvore de arquivos usando REST API Git Trees como fallback.
+        Se a árvore for truncada, automaticamente usa GraphQL.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisada
+            use_cache: Se deve usar cache
+        
+        Returns:
+            Dicionário com a árvore de arquivos
         """
         logger = logging.getLogger(__name__)
         
@@ -449,7 +469,15 @@ class GitHubAPIClient:
             return self._empty_tree_response(owner, repo, branch, error=str(e))
 
     def _standardize_tree_node(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """Padroniza formato de um nó da árvore (REST ou GraphQL)."""
+        """
+        Padroniza formato de um nó da árvore (REST ou GraphQL).
+        
+        Args:
+            item: Item bruto da API
+        
+        Returns:
+            Nó padronizado ou None se inválido
+        """
         node_type = item.get('type', '')
         path = item.get('path', '')
         
@@ -476,7 +504,7 @@ class GitHubAPIClient:
         if file_type == 'file':
             extension = ''
             if '.' in name:
-                extension = '.' + name.split('.')[-1]
+                extension = '.' + name.rsplit('.', 1)[-1]
             
             standardized['extension'] = extension
             
@@ -499,7 +527,18 @@ class GitHubAPIClient:
         branch: str,
         error: str = ""
     ) -> Dict[str, Any]:
-        """Retorna estrutura vazia em caso de erro."""
+        """
+        Retorna estrutura vazia em caso de erro.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch
+            error: Mensagem de erro
+        
+        Returns:
+            Estrutura vazia padronizada
+        """
         return {
             'owner': owner,
             'repository': repo,
@@ -523,6 +562,16 @@ class GitHubAPIClient:
     ) -> List[Any]:
         """
         Fetch all pages for list endpoints that support per_page & page params.
+        
+        Args:
+            base_url: URL base do endpoint
+            use_cache: Se deve usar cache
+            per_page: Itens por página
+            start_page: Página inicial
+            max_pages: Número máximo de páginas
+        
+        Returns:
+            Lista agregada de todos os resultados
         """
         results: List[Any] = []
         page = start_page
@@ -544,6 +593,12 @@ class GitHubAPIClient:
         return results
     
     def _log_rate_limit(self, response: requests.Response) -> None:
+        """
+        Loga informações sobre rate limit da API.
+        
+        Args:
+            response: Resposta HTTP da API
+        """
         remaining = response.headers.get('X-RateLimit-Remaining', 'Unknown')
         limit = response.headers.get('X-RateLimit-Limit', 'Unknown')
         reset_time = response.headers.get('X-RateLimit-Reset', 'Unknown')
@@ -555,8 +610,22 @@ class GitHubAPIClient:
             print(f"Rate limit: {remaining}/{limit}")
 
 
-# 👇 FUNÇÕES AUXILIARES (FORA DA CLASSE)
+# ============================================================================
+# FUNÇÕES AUXILIARES (FORA DA CLASSE)
+# ============================================================================
+
 def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
+    """
+    Salva dados em arquivo JSON com metadados opcionais.
+    
+    Args:
+        data: Dados a serem salvos
+        filepath: Caminho do arquivo
+        timestamp: Se deve adicionar timestamp
+    
+    Returns:
+        Caminho do arquivo salvo
+    """
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     if timestamp:
@@ -583,6 +652,15 @@ def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
     return filepath
 
 def load_json_data(filepath: str) -> Any:
+    """
+    Carrega dados de arquivo JSON.
+    
+    Args:
+        filepath: Caminho do arquivo
+    
+    Returns:
+        Dados carregados ou None se arquivo não existir
+    """
     if not os.path.exists(filepath):
         return None
     
@@ -590,6 +668,14 @@ def load_json_data(filepath: str) -> Any:
         return json.load(f)
 
 def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
+    """
+    Atualiza registro de arquivos gerados por camada.
+    
+    Args:
+        layer: Camada (bronze, silver, gold)
+        entity: Entidade (repositories, commits, etc.)
+        files: Lista de arquivos gerados
+    """
     registry_path = f"data/{layer}/registry.json"
     
     registry = load_json_data(registry_path) or {}
@@ -603,11 +689,65 @@ def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
     
     save_json_data(registry, registry_path, timestamp=False)
 
+def parse_github_date(date_str: str) -> Optional[datetime]:
+    """
+    Parse GitHub API date strings in various formats.
+    Handles both UTC (Z) and timezone offset formats.
+    
+    Args:
+        date_str: Date string from GitHub API
+        
+    Returns:
+        datetime object or None if parsing fails
+    """
+    if not date_str:
+        return None
+    
+    date_str = str(date_str).strip()
+    
+    # Try multiple date formats that GitHub uses
+    formats = [
+        '%Y-%m-%dT%H:%M:%SZ',  # UTC format: 2025-09-21T17:13:42Z
+        '%Y-%m-%dT%H:%M:%S',    # Without timezone
+    ]
+    
+    # Handle ISO 8601 format with timezone offset (e.g., 2025-09-21T17:13:42-03:00)
+    if '+' in date_str or (date_str.count('-') > 2):  # Check for timezone offset
+        try:
+            # Extract the base datetime part (YYYY-MM-DDTHH:MM:SS)
+            # Remove timezone suffix like -03:00 or +05:30
+            base_date_str = date_str[:19]  # First 19 chars: YYYY-MM-DDTHH:MM:SS
+            return datetime.strptime(base_date_str, '%Y-%m-%dT%H:%M:%S')
+        except (ValueError, IndexError):
+            pass
+    
+    # Try standard formats
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    
+    # If all parsing fails, return None
+    return None
+
+
 class OrganizationConfig:
+    """
+    Configuração de organização para filtragem de repositórios.
+    """
     def __init__(self, org_name: str):
         self.org_name = org_name
         self.repo_blacklist: List[str] = []
     
     def should_skip_repo(self, repo: Dict[str, Any]) -> bool:
+        """
+        Verifica se um repositório deve ser ignorado.
+        
+        Args:
+            repo: Dados do repositório
+        
+        Returns:
+            True se deve pular, False caso contrário
+        """
         return False
-    
