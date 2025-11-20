@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-19T05:09:11.006862",
+      "extracted_at": "2025-11-20T05:08:42.413383",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 64
     }
@@ -392,10 +392,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
@@ -594,10 +594,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
@@ -872,10 +872,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1104,16 +1104,16 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-12T14:33:30Z",
-    "updated_at": "2025-11-12T17:47:42Z",
+    "updated_at": "2025-11-19T18:59:37Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -1138,7 +1138,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## feat: Finalizar Página de Professor (API, UI e Correção de Bug)\n\n## Descrição\nCom base no progresso da última sprint, esta issue foca em finalizar a página de detalhe do professor, resolvendo três problemas principais:\n\n1.  **Bug Crítico de Navegação:** Atualmente, clicar em um card de professor na página de listagem (`/professores`) leva a uma página em branco (ex: `.../professores/1281464`), como visto no vídeo 2. O fluxo principal do site está quebrado.\n2.  **Dados Estáticos:** A página ainda utiliza o `mockProfessorData` (o JSON de exemplo do Caio). Precisamos substituir isso por uma chamada de API real ao backend.\n3.  **UI/UX:** O layout atual precisa de refinamentos para ficar 100% alinhado ao objetivo do nosso escopo e exibir todos os dados complexos (listas de formação, projetos, etc.) de forma elegante.\n\nEsta é uma sprint de alta prioridade com o objetivo de ter a página 100% funcional e polida até o final dessa sprint.\n\n---\n\n## Objetivo\n- [x] Corrigir o bug de navegação que resulta em uma página em branco.\n- [ ] Refatorar a página para consumir dados reais da API do backend, em vez de dados mockados.\n- [ ] Polir o layout e os componentes da página para que correspondam ao protótipo de alta fidelidade e exibam todos os dados do JSON.\n\n---\n\n## Requisitos\n- Acessar a página de listagem e clicar em um card de professor **deve** carregar a página de detalhe com os dados corretos.\n- A página de detalhe **deve** usar o `:id` da URL para buscar as informações de um professor específico na API.\n- A página **deve** exibir um estado de \"carregamento\" (ex: `<Spinner />` do Chakra) enquanto os dados da API estão sendo buscados.\n- O componente **deve** parar de usar o `mockProfessorData` e ser alimentado pelo estado da chamada de API.\n- O layout das abas (\"Visão Geral\", \"Formação\", \"Projetos\", \"Contatos\") deve ser totalmente implementado para renderizar as listas e informações do JSON da API.\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correção do Bug de Navegação (Urgente)\n- [x] **Investigar o Roteamento:** O bug da página em branco é quase certamente um *mismatch* de rotas. Os cards estão linkando para `.../professores/:id` (plural), mas nossa rota em `AppRoutes.jsx` provavelmente está definida como `/professor/:id` (singular).\n- [x] **Aplicar Correção:** Decidir e implementar a correção. **Sugestão:** Mudar a rota em `AppRoutes.jsx` de `/professor/:id` para `/professores/:id` para manter a consistência da URL.\n- [x] **Validar:** Confirmar que, após a correção, clicar em um card abre a página de detalhe (mesmo que ainda com dados mockados).\n\n### Bloco 2: Implementação da API (O \"Coração\")\n- [ ] Importar `useState`, `useEffect` (do React) e `useParams` (do `react-router-dom`) no `ProfessorDetailPage.jsx`.\n- [ ] Usar `useParams` para extrair o `:id` do professor da URL.\n- [ ] Criar uma função `fetchProfessor(id)` que usa `axios` (ou `fetch`) para chamar o endpoint da API do backend (ex: `GET /api/professores/${id}`).\n- [ ] Criar estados para `professorData`, `isLoading` e `error`.\n- [ ] Implementar o `useEffect` para chamar `fetchProfessor(id)` quando o componente carregar.\n- [ ] Renderizar um `<Spinner />` do Chakra se `isLoading` for `true`.\n- [ ] Remover a variável `mockProfessorData` e alimentar todos os componentes com o estado `professorData`.\n\n### Bloco 3: Polimento da UI/UX\n- [x] Revisar o layout atual contra o protótipo de alta fidelidade.\n- [ ] Na aba \"Formação\", implementar um loop (`.map()`) para renderizar a lista de `formacao_academica` (Graduação, Mestrado, etc.) do JSON.\n- [ ] Na aba \"Projetos\", implementar um loop (`.map()`) para renderizar a lista de `dados_lattes.projetos_pesquisa`.\n- [ ] Na aba \"Contatos\", exibir os dados de `contatos` (sala, telefone, email) do JSON.\n- [ ] Garantir que o botão \"Copiar e-mail\" esteja funcionando com o e-mail vindo da API.\n- [ ] Revisar todo o espaçamento, tipografia e responsividade da página.",
+    "body": "## feat: Finalizar Página de Professor (API, UI e Correção de Bug)\n\n## Descrição\nCom base no progresso da última sprint, esta issue foca em finalizar a página de detalhe do professor, resolvendo três problemas principais:\n\n1.  **Bug Crítico de Navegação:** Atualmente, clicar em um card de professor na página de listagem (`/professores`) leva a uma página em branco (ex: `.../professores/1281464`), como visto no vídeo 2. O fluxo principal do site está quebrado.\n2.  **Dados Estáticos:** A página ainda utiliza o `mockProfessorData` (o JSON de exemplo do Caio). Precisamos substituir isso por uma chamada de API real ao backend.\n3.  **UI/UX:** O layout atual precisa de refinamentos para ficar 100% alinhado ao objetivo do nosso escopo e exibir todos os dados complexos (listas de formação, projetos, etc.) de forma elegante.\n\nEsta é uma sprint de alta prioridade com o objetivo de ter a página 100% funcional e polida até o final dessa sprint.\n\n---\n\n## Objetivo\n- [x] Corrigir o bug de navegação que resulta em uma página em branco.\n- [ ] Refatorar a página para consumir dados reais da API do backend, em vez de dados mockados.\n- [ ] Polir o layout e os componentes da página para que correspondam ao protótipo de alta fidelidade e exibam todos os dados do JSON.\n\n---\n\n## Requisitos\n- Acessar a página de listagem e clicar em um card de professor **deve** carregar a página de detalhe com os dados corretos.\n- A página de detalhe **deve** usar o `:id` da URL para buscar as informações de um professor específico na API.\n- A página **deve** exibir um estado de \"carregamento\" (ex: `<Spinner />` do Chakra) enquanto os dados da API estão sendo buscados.\n- O componente **deve** parar de usar o `mockProfessorData` e ser alimentado pelo estado da chamada de API.\n- O layout das abas (\"Visão Geral\", \"Formação\", \"Projetos\", \"Contatos\") deve ser totalmente implementado para renderizar as listas e informações do JSON da API.\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correção do Bug de Navegação (Urgente)\n- [x] **Investigar o Roteamento:** O bug da página em branco é quase certamente um *mismatch* de rotas. Os cards estão linkando para `.../professores/:id` (plural), mas nossa rota em `AppRoutes.jsx` provavelmente está definida como `/professor/:id` (singular).\n- [x] **Aplicar Correção:** Decidir e implementar a correção. **Sugestão:** Mudar a rota em `AppRoutes.jsx` de `/professor/:id` para `/professores/:id` para manter a consistência da URL.\n- [x] **Validar:** Confirmar que, após a correção, clicar em um card abre a página de detalhe (mesmo que ainda com dados mockados).\n\n### Bloco 2: Implementação da API (O \"Coração\")\n- [x] Importar `useState`, `useEffect` (do React) e `useParams` (do `react-router-dom`) no `ProfessorDetailPage.jsx`.\n- [x] Usar `useParams` para extrair o `:id` do professor da URL.\n- [ ] Criar uma função `fetchProfessor(id)` que usa `axios` (ou `fetch`) para chamar o endpoint da API do backend (ex: `GET /api/professores/${id}`).\n- [x] Criar estados para `professorData`, `isLoading` e `error`.\n- [ ] Implementar o `useEffect` para chamar `fetchProfessor(id)` quando o componente carregar.\n- [x] Renderizar um `<Spinner />` do Chakra se `isLoading` for `true`.\n- [x] Remover a variável `mockProfessorData` e alimentar todos os componentes com o estado `professorData`.\n\n### Bloco 3: Polimento da UI/UX\n- [x] Revisar o layout atual contra o protótipo de alta fidelidade.\n- [x] Na aba \"Formação\", implementar um loop (`.map()`) para renderizar a lista de `formacao_academica` (Graduação, Mestrado, etc.) do JSON.\n- [x] Na aba \"Projetos\", implementar um loop (`.map()`) para renderizar a lista de `dados_lattes.projetos_pesquisa`.\n- [x] Na aba \"Contatos\", exibir os dados de `contatos` (sala, telefone, email) do JSON.\n- [x] Garantir que o botão \"Copiar e-mail\" esteja funcionando com o e-mail vindo da API.\n- [ ] Revisar todo o espaçamento, tipografia e responsividade da página.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/108/reactions",
@@ -1331,10 +1331,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1569,10 +1569,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1789,10 +1789,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 8,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-17T21:31:43Z",
+      "updated_at": "2025-11-19T20:56:04Z",
       "due_on": null,
       "closed_at": null
     },
