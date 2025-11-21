@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-20T05:09:39.294952",
+      "extracted_at": "2025-11-21T05:09:24.849980",
       "file_path": "data/bronze/prs_2025-2-Synapse.json",
       "record_count": 52
     }
@@ -49,7 +49,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "ItaloSamP",
@@ -96,14 +96,14 @@
       }
     ],
     "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/milestones/10",
-      "html_url": "https://github.com/unb-mds/2025-2-Synapse/milestone/10",
-      "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/milestones/10/labels",
-      "id": 14035395,
-      "node_id": "MI_kwDOPkC9fs4A1inD",
-      "number": 10,
-      "title": "Sprint 9 (02/11/2025 - 08/11/2025)",
-      "description": "**Meta da Sprint**\n\n* Refinamentos de Frontend\n\n**Prazos**\n\n02/11/2025 - 08/11/2025\n\n## Escopo da Sprint\n\n**Concluídos:**\n- [Implementar responsividade em todas as telas #200](https://github.com/unb-mds/2025-2-Synapse/issues/200)\n- [Animações de UI com Framer Motion #184](https://github.com/unb-mds/2025-2-Synapse/issues/184)\n- [problemas de scraping (links, imagens, formatação) #152](https://github.com/unb-mds/2025-2-Synapse/issues/152)\n\n**Não Concluídos:**\n\n## **Sprint retrospective**:",
+      "url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/milestones/11",
+      "html_url": "https://github.com/unb-mds/2025-2-Synapse/milestone/11",
+      "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/milestones/11/labels",
+      "id": 14080157,
+      "node_id": "MI_kwDOPkC9fs4A1tid",
+      "number": 11,
+      "title": "Sprint 10 (09/10/2025 - 15/10/2025)",
+      "description": "**Meta da Sprint**\n\n* Personalizar o recebimento newsletter\n\n**Prazos**\n\n09/10/2025 - 15/10/2025\n\n## Escopo da Sprint\n\n**Concluídos:**\n\n**Não Concluídos:**\n\n- [[SPIKE] Hospedagem/Deploy do sistema #201](https://github.com/unb-mds/2025-2-Synapse/issues/201)\n- [HU004.5: Habilitar/Desabilitar Recebimento da Newsletter #23](https://github.com/unb-mds/2025-2-Synapse/issues/23)\n- [https://github.com/unb-mds/2025-2-Synapse/issues/155](https://github.com/unb-mds/2025-2-Synapse/issues/155)\n- [https://github.com/unb-mds/2025-2-Synapse/issues/207](https://github.com/unb-mds/2025-2-Synapse/issues/207)\n\n## **Sprint retrospective**:",
       "creator": {
         "login": "gccintra",
         "id": 127162642,
@@ -125,18 +125,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
-      "created_at": "2025-11-03T11:19:54Z",
-      "updated_at": "2025-11-14T03:43:59Z",
-      "due_on": "2025-11-08T08:00:00Z",
+      "created_at": "2025-11-08T13:39:02Z",
+      "updated_at": "2025-11-20T20:25:37Z",
+      "due_on": "2025-11-15T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-14T03:43:59Z",
-    "updated_at": "2025-11-14T05:08:12Z",
-    "closed_at": null,
+    "updated_at": "2025-11-20T20:26:31Z",
+    "closed_at": "2025-11-20T20:25:37Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -146,10 +146,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Synapse/pull/214",
       "diff_url": "https://github.com/unb-mds/2025-2-Synapse/pull/214.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Synapse/pull/214.patch",
-      "merged_at": null
+      "merged_at": "2025-11-20T20:25:37Z"
     },
     "body": "---\r\n\r\n### 🚀 O que foi Feito\r\n\r\nAdicionado o arquivo de *workflow* **`.github/workflows/docker.yml`**, que configura a automação de CI/CD para Docker.\r\n\r\n* **Acionamento (Trigger):** O *workflow* é executado em eventos `push` para os branches `dev` e `main`.\r\n* **Detecção de Alterações (Path Filtering):** O *workflow* só executa o build para uma imagem específica se houver alterações no seu respectivo diretório (e.g., `backend/`, `frontend/`, `cron/`) OU se o próprio arquivo de *workflow* (`.github/workflows/docker.yml`) for modificado.\r\n    * *Isto otimiza o uso do CI/CD, evitando builds desnecessários de todos os serviços.*\r\n* **Estratégia de Matriz:** Utiliza uma estratégia de matriz (`strategy: matrix`) para gerenciar as imagens (`backend`, `frontend`, `cron`), permitindo que as ações de build e push sejam executadas de forma eficiente para cada uma.\r\n* **Login no GHCR:** Realiza o *login* no GitHub Container Registry (`ghcr.io`) usando o `GITHUB_TOKEN`.\r\n* **Metadados:** Utiliza o `docker/metadata-action` para gerar *tags* e *labels* de imagem Docker padrão (baseadas no *commit SHA*, branch, etc.).\r\n* **Build e Push:** O *step* `docker/build-push-action` constrói a imagem a partir do contexto do diretório de cada serviço e a publica no GHCR.\r\n* **Cache:** Habilitado o cache de *layers* do Docker usando GitHub Actions Caching (`type=gha`) para acelerar builds subsequentes.\r\n\r\n---",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ItaloSamP",
+      "id": 185296676,
+      "node_id": "U_kgDOCwtnJA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185296676?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ItaloSamP",
+      "html_url": "https://github.com/ItaloSamP",
+      "followers_url": "https://api.github.com/users/ItaloSamP/followers",
+      "following_url": "https://api.github.com/users/ItaloSamP/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ItaloSamP/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ItaloSamP/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ItaloSamP/subscriptions",
+      "organizations_url": "https://api.github.com/users/ItaloSamP/orgs",
+      "repos_url": "https://api.github.com/users/ItaloSamP/repos",
+      "events_url": "https://api.github.com/users/ItaloSamP/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ItaloSamP/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Synapse/issues/214/reactions",
       "total_count": 0,
@@ -259,8 +279,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-11-08T15:01:07Z",
-    "updated_at": "2025-11-08T19:01:38Z",
-    "closed_at": "2025-11-08T19:00:47Z",
+    "updated_at": "2025-11-20T20:52:59Z",
+    "closed_at": "2025-11-20T20:52:55Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -272,7 +292,7 @@
       "patch_url": "https://github.com/unb-mds/2025-2-Synapse/pull/206.patch",
       "merged_at": null
     },
-    "body": "## Descrição\r\n\r\n*Integração com smtplib e disparo de email personalizado*\r\n\r\n---\r\n## O Que Foi Feito?\r\n\r\n*Liste as principais alterações técnicas. Use checkboxes para criar um checklist.*\r\n- [ ] Integração com smtplib\r\n- [ ] Criação do conteudo personalizado do email.\r\n- [ ] Disparo de email.\r\n- [ ] Correcao no cadastro e atualização de cadastro para preencher se quer receber email\r\n---",
+    "body": "## Descrição\r\n\r\n*Integração com smtplib e disparo de email personalizado*\r\n\r\n---\r\n## O Que Foi Feito?\r\n\r\n*Liste as principais alterações técnicas. Use checkboxes para criar um checklist.*\r\n- [x] Integração com smtplib\r\n- [x] Criação do conteudo personalizado do email.\r\n- [x] Disparo de email.\r\n- [x] Correcao no cadastro e atualização de cadastro para preencher se quer receber email\r\n---",
     "closed_by": {
       "login": "ArthurDevWorks",
       "id": 185959345,
@@ -524,11 +544,11 @@
       },
       "open_issues": 0,
       "closed_issues": 13,
-      "state": "open",
+      "state": "closed",
       "created_at": "2025-10-25T13:55:56Z",
-      "updated_at": "2025-11-08T19:02:36Z",
+      "updated_at": "2025-11-20T19:10:42Z",
       "due_on": "2025-11-01T07:00:00Z",
-      "closed_at": null
+      "closed_at": "2025-11-20T19:10:42Z"
     },
     "comments": 0,
     "created_at": "2025-11-04T02:26:01Z",
