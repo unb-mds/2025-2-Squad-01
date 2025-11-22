@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-21T05:08:27.519607",
+      "extracted_at": "2025-11-22T05:06:56.108199",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 66
     }
@@ -147,10 +147,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 0,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-20T22:05:17Z",
+      "updated_at": "2025-11-21T21:22:56Z",
       "due_on": null,
       "closed_at": null
     },
@@ -359,10 +359,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 0,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-20T22:05:17Z",
+      "updated_at": "2025-11-21T21:22:56Z",
       "due_on": null,
       "closed_at": null
     },
@@ -604,10 +604,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 0,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-20T22:05:17Z",
+      "updated_at": "2025-11-21T21:22:56Z",
       "due_on": null,
       "closed_at": null
     },
@@ -797,13 +797,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-15T21:51:38Z",
@@ -923,7 +923,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "KaioAmouryUnB",
@@ -999,18 +999,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-14T15:25:49Z",
-    "updated_at": "2025-11-14T15:25:49Z",
-    "closed_at": null,
+    "updated_at": "2025-11-21T17:43:40Z",
+    "closed_at": "2025-11-21T17:43:40Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -1034,8 +1034,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📊 HomePage: Implementação de Dados de Destaque e Ajuste de Navegação\n\n## 📖 Descrição\nEsta Issue foca na integração das primeiras métricas agregadas (contagens de dados) na Home Page, utilizando a fonte de dados JSON. O objetivo é substituir os valores estáticos por dados dinâmicos do projeto, reforçando a utilidade do portal. Além disso, a navegação principal (Header) será ajustada para refletir a estrutura final das páginas.\n\nAs tarefas devem ser realizadas no componente `HomePage.jsx` e `Header.jsx`.\n\n---\n\n## 🎯 Objetivo\n- [ ] Integrar dados dinâmicos na Home Page, apresentando as métricas de produção do portal.\n- [ ] Garantir que o contador de dados esteja consumindo corretamente o JSON gerado pelo processo de *scraping*.\n- [ ] Atualizar o Header (navegação) conforme as necessidades atuais do projeto.\n\n---\n\n## ✅ Requisitos\n- Acesso ao arquivo JSON com os dados minerados (Professores, Departamentos, Publicações).\n- Implementação da lógica de contagem e agregação no frontend.\n- Uso de componentes do Chakra UI para exibição das estatísticas (`Stat` ou similar).\n\n---\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] **Alta**  \n- [ ] Crítica  \n\n---\n\n## 📋 Checklist de Tarefas (Kaio Amoury)\n### Integração de Métricas\n- [ ] Implementar a contagem total de **Professores Cadastrados**.\n- [ ] Implementar a contagem total de **Departamentos** cobertos pelo portal.\n- [ ] Implementar a contagem total de **Artigos/Publicações** indexadas.\n- [ ] Criar a seção de **Departamentos Populares** (Lista dinâmica dos departamentos com mais professores/publicações).\n\n### Ajustes de Layout e Navegação\n- [ ] **Ajustar a navegação** (mudar links e/ou estrutura no `Header.jsx`).\n- [ ] Garantir que o consumo de dados não cause *re-render* desnecessário (`useEffect` com dependência vazia).\n\n---",
-    "closed_by": null,
+    "body": "# 📊 HomePage: Implementação de Dados de Destaque e Ajuste de Navegação\n\n## 📖 Descrição\nEsta Issue foca na integração das primeiras métricas agregadas (contagens de dados) na Home Page, utilizando a fonte de dados JSON. O objetivo é substituir os valores estáticos por dados dinâmicos do projeto, reforçando a utilidade do portal. Além disso, a navegação principal (Header) será ajustada para refletir a estrutura final das páginas.\n\nAs tarefas devem ser realizadas no componente `HomePage.jsx` e `Header.jsx`.\n\n---\n\n## 🎯 Objetivo\n- [ ] Integrar dados dinâmicos na Home Page, apresentando as métricas de produção do portal.\n- [ ] Garantir que o contador de dados esteja consumindo corretamente o JSON gerado pelo processo de *scraping*.\n- [x] Atualizar o Header (navegação) conforme as necessidades atuais do projeto.\n\n---\n\n## ✅ Requisitos\n- Acesso ao arquivo JSON com os dados minerados (Professores, Departamentos, Publicações).\n- Implementação da lógica de contagem e agregação no frontend.\n- Uso de componentes do Chakra UI para exibição das estatísticas (`Stat` ou similar).\n\n---\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] **Alta**  \n- [ ] Crítica  \n\n---\n\n## 📋 Checklist de Tarefas (Kaio Amoury)\n### Integração de Métricas\n- [x] Implementar a contagem total de **Professores Cadastrados**.\n- [x] Implementar a contagem total de **Departamentos** cobertos pelo portal.\n- [x] Implementar a contagem total de **Artigos/Publicações** indexadas.\n- [x] Criar a seção de **Departamentos Populares** (Lista dinâmica dos departamentos com mais professores/publicações).\n\n### Ajustes de Layout e Navegação\n- [x] **Ajustar a navegação** (mudar links e/ou estrutura no `Header.jsx`).\n- [x] Garantir que o consumo de dados não cause *re-render* desnecessário (`useEffect` com dependência vazia).\n\n---",
+    "closed_by": {
+      "login": "ianpedersoli",
+      "id": 213890577,
+      "node_id": "U_kgDODL-2EQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213890577?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ianpedersoli",
+      "html_url": "https://github.com/ianpedersoli",
+      "followers_url": "https://api.github.com/users/ianpedersoli/followers",
+      "following_url": "https://api.github.com/users/ianpedersoli/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ianpedersoli/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ianpedersoli/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ianpedersoli/subscriptions",
+      "organizations_url": "https://api.github.com/users/ianpedersoli/orgs",
+      "repos_url": "https://api.github.com/users/ianpedersoli/repos",
+      "events_url": "https://api.github.com/users/ianpedersoli/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ianpedersoli/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/115/reactions",
       "total_count": 0,
@@ -1050,7 +1070,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/115/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -1277,13 +1297,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-14T01:53:44Z",
@@ -1412,7 +1432,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Ascartezin",
@@ -1509,18 +1529,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-12T14:33:30Z",
-    "updated_at": "2025-11-19T18:59:37Z",
-    "closed_at": null,
+    "updated_at": "2025-11-21T17:43:52Z",
+    "closed_at": "2025-11-21T17:43:52Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -1545,7 +1565,27 @@
       "total_blocking": 0
     },
     "body": "## feat: Finalizar Página de Professor (API, UI e Correção de Bug)\n\n## Descrição\nCom base no progresso da última sprint, esta issue foca em finalizar a página de detalhe do professor, resolvendo três problemas principais:\n\n1.  **Bug Crítico de Navegação:** Atualmente, clicar em um card de professor na página de listagem (`/professores`) leva a uma página em branco (ex: `.../professores/1281464`), como visto no vídeo 2. O fluxo principal do site está quebrado.\n2.  **Dados Estáticos:** A página ainda utiliza o `mockProfessorData` (o JSON de exemplo do Caio). Precisamos substituir isso por uma chamada de API real ao backend.\n3.  **UI/UX:** O layout atual precisa de refinamentos para ficar 100% alinhado ao objetivo do nosso escopo e exibir todos os dados complexos (listas de formação, projetos, etc.) de forma elegante.\n\nEsta é uma sprint de alta prioridade com o objetivo de ter a página 100% funcional e polida até o final dessa sprint.\n\n---\n\n## Objetivo\n- [x] Corrigir o bug de navegação que resulta em uma página em branco.\n- [ ] Refatorar a página para consumir dados reais da API do backend, em vez de dados mockados.\n- [ ] Polir o layout e os componentes da página para que correspondam ao protótipo de alta fidelidade e exibam todos os dados do JSON.\n\n---\n\n## Requisitos\n- Acessar a página de listagem e clicar em um card de professor **deve** carregar a página de detalhe com os dados corretos.\n- A página de detalhe **deve** usar o `:id` da URL para buscar as informações de um professor específico na API.\n- A página **deve** exibir um estado de \"carregamento\" (ex: `<Spinner />` do Chakra) enquanto os dados da API estão sendo buscados.\n- O componente **deve** parar de usar o `mockProfessorData` e ser alimentado pelo estado da chamada de API.\n- O layout das abas (\"Visão Geral\", \"Formação\", \"Projetos\", \"Contatos\") deve ser totalmente implementado para renderizar as listas e informações do JSON da API.\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correção do Bug de Navegação (Urgente)\n- [x] **Investigar o Roteamento:** O bug da página em branco é quase certamente um *mismatch* de rotas. Os cards estão linkando para `.../professores/:id` (plural), mas nossa rota em `AppRoutes.jsx` provavelmente está definida como `/professor/:id` (singular).\n- [x] **Aplicar Correção:** Decidir e implementar a correção. **Sugestão:** Mudar a rota em `AppRoutes.jsx` de `/professor/:id` para `/professores/:id` para manter a consistência da URL.\n- [x] **Validar:** Confirmar que, após a correção, clicar em um card abre a página de detalhe (mesmo que ainda com dados mockados).\n\n### Bloco 2: Implementação da API (O \"Coração\")\n- [x] Importar `useState`, `useEffect` (do React) e `useParams` (do `react-router-dom`) no `ProfessorDetailPage.jsx`.\n- [x] Usar `useParams` para extrair o `:id` do professor da URL.\n- [ ] Criar uma função `fetchProfessor(id)` que usa `axios` (ou `fetch`) para chamar o endpoint da API do backend (ex: `GET /api/professores/${id}`).\n- [x] Criar estados para `professorData`, `isLoading` e `error`.\n- [ ] Implementar o `useEffect` para chamar `fetchProfessor(id)` quando o componente carregar.\n- [x] Renderizar um `<Spinner />` do Chakra se `isLoading` for `true`.\n- [x] Remover a variável `mockProfessorData` e alimentar todos os componentes com o estado `professorData`.\n\n### Bloco 3: Polimento da UI/UX\n- [x] Revisar o layout atual contra o protótipo de alta fidelidade.\n- [x] Na aba \"Formação\", implementar um loop (`.map()`) para renderizar a lista de `formacao_academica` (Graduação, Mestrado, etc.) do JSON.\n- [x] Na aba \"Projetos\", implementar um loop (`.map()`) para renderizar a lista de `dados_lattes.projetos_pesquisa`.\n- [x] Na aba \"Contatos\", exibir os dados de `contatos` (sala, telefone, email) do JSON.\n- [x] Garantir que o botão \"Copiar e-mail\" esteja funcionando com o e-mail vindo da API.\n- [ ] Revisar todo o espaçamento, tipografia e responsividade da página.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ianpedersoli",
+      "id": 213890577,
+      "node_id": "U_kgDODL-2EQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213890577?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ianpedersoli",
+      "html_url": "https://github.com/ianpedersoli",
+      "followers_url": "https://api.github.com/users/ianpedersoli/followers",
+      "following_url": "https://api.github.com/users/ianpedersoli/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ianpedersoli/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ianpedersoli/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ianpedersoli/subscriptions",
+      "organizations_url": "https://api.github.com/users/ianpedersoli/orgs",
+      "repos_url": "https://api.github.com/users/ianpedersoli/repos",
+      "events_url": "https://api.github.com/users/ianpedersoli/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ianpedersoli/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/108/reactions",
       "total_count": 0,
@@ -1560,7 +1600,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/108/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -1736,13 +1776,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-11T20:05:46Z",
@@ -1974,13 +2014,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 0,
     "created_at": "2025-11-11T20:00:35Z",
@@ -2194,13 +2234,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 9,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 11,
+      "state": "closed",
       "created_at": "2025-11-10T21:27:21Z",
-      "updated_at": "2025-11-19T20:56:04Z",
+      "updated_at": "2025-11-21T17:46:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-11-21T17:46:12Z"
     },
     "comments": 1,
     "created_at": "2025-11-11T18:07:04Z",
