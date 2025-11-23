@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-22T05:07:26.847377",
+      "extracted_at": "2025-11-23T05:09:31.712440",
       "file_path": "data/bronze/issues_2025-2-Lumina.json",
       "record_count": 101
     }
@@ -67,7 +67,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "TiagoUNB",
@@ -143,18 +143,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-19T13:55:56Z",
-    "updated_at": "2025-11-19T13:55:56Z",
-    "closed_at": null,
+    "updated_at": "2025-11-22T18:57:03Z",
+    "closed_at": "2025-11-22T18:57:03Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -179,7 +179,27 @@
       "total_blocking": 0
     },
     "body": "### 📝 Implementar Modelo de Embedding Local para Vetorização de Artigos\n\n---\n\n### 🏷️ Tipo de Tarefa\n*Marque com um `x` a opção que se aplica.*\n- [x] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [ ] 🔧 Melhoria/Refatoração\n- [ ] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade\n*Qual a urgência desta tarefa?*\n- [ ] 🔴 Alta\n- [x] 🟡 Média\n- [ ] 🟢 Baixa\n\n### 📖 Descrição da Tarefa\nAtualmente, o processo de embedding para o RAG depende de serviços externos. Para aumentar a autonomia e melhorar a performance, esta tarefa consiste em pesquisar, escolher e implementar um modelo de embedding que rode localmente. O novo modelo será responsável por transformar o conteúdo dos artigos de notícias em vetores numéricos, que são essenciais para o sistema de recuperação de informação (RAG) do projeto Lumina.\n\n### ✅ Critérios de Aceitação\n*O que precisa estar pronto para que a tarefa seja considerada concluída?*\n- [ ] Um modelo de embedding local (ex: `sentence-transformers` ou similar) é integrado ao backend.\n- [ ] O script `vectorize_articles.py` é modificado para utilizar o novo modelo local para gerar e salvar os vetores.\n- [ ] O sistema RAG (`app/ai/rag/retriever.py`) consegue utilizar os vetores gerados localmente para buscar documentos relevantes.\n- [ ] A documentação do processo de vetorização é atualizada para refletir o uso do modelo local.\n\n### 🛠️ Tarefas Técnicas \n- [ ] Pesquisar e selecionar um modelo de embedding open-source adequado para a tarefa (considerar performance, tamanho e qualidade).\n- [ ] Criar um novo módulo em `app/ai/rag/` para gerenciar o modelo de embedding local (ex: `local_embedder.py`).\n- [ ] Implementar a lógica para carregar o modelo e gerar vetores a partir de textos.\n- [ ] Atualizar o `vectorize_articles.py` para invocar o novo `local_embedder`.\n- [ ] Adaptar o `app/ai/rag/retriever.py` se necessário para garantir a compatibilidade com os novos embeddings.\n- [ ] Adicionar testes unitários para o novo módulo de embedding.\n- [ ] Atualizar a documentação do projeto com as novas dependências e instruções de configuração.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "TiagoUNB",
+      "id": 211538615,
+      "node_id": "U_kgDODJvStw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211538615?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/TiagoUNB",
+      "html_url": "https://github.com/TiagoUNB",
+      "followers_url": "https://api.github.com/users/TiagoUNB/followers",
+      "following_url": "https://api.github.com/users/TiagoUNB/following{/other_user}",
+      "gists_url": "https://api.github.com/users/TiagoUNB/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/TiagoUNB/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/TiagoUNB/subscriptions",
+      "organizations_url": "https://api.github.com/users/TiagoUNB/orgs",
+      "repos_url": "https://api.github.com/users/TiagoUNB/repos",
+      "events_url": "https://api.github.com/users/TiagoUNB/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/TiagoUNB/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/195/reactions",
       "total_count": 0,
@@ -194,7 +214,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/195/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -334,11 +354,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -525,11 +545,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -736,11 +756,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -918,11 +938,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -1162,11 +1182,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -1365,11 +1385,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -1556,11 +1576,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -1770,11 +1790,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -1943,11 +1963,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -2137,11 +2157,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -2349,11 +2369,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
@@ -2446,7 +2466,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Atila05",
@@ -2543,18 +2563,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-18T11:33:08Z",
-    "updated_at": "2025-11-18T11:33:08Z",
-    "closed_at": null,
+    "updated_at": "2025-11-22T18:44:10Z",
+    "closed_at": "2025-11-22T18:44:10Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -2579,7 +2599,27 @@
       "total_blocking": 0
     },
     "body": "### 📝 Executar a mineração do metrópoles\n\n---\n\n### 🏷️ Tipo de Tarefa\n\n- [x] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [ ] 🔧 Melhoria/Refatoração\n- [ ] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade\n\n- [x] 🔴 Alta\n- [ ] 🟡 Média\n- [ ] 🟢 Baixa\n\n### 📖 Descrição da Tarefa\nFazer e rodar o script de mineração do metropoles\n\n### ✅ Critérios de Aceitação\n*O que precisa estar pronto para que a tarefa seja considerada concluída?*\n- [ ] *Ex: O usuário consegue preencher o formulário de cadastro.*\n- [ ] *Ex: A senha precisa ter no mínimo 8 caracteres.*\n- [ ] *Ex: Uma mensagem de sucesso é exibida após o cadastro.*\n\n### 🛠️ Tarefas Técnicas \n*Selecione os passos necessários para concluir a tarefa.*\n- [ ] Criar o componente de interface.\n- [ ] Conectar o componente à API.\n- [ ] Escrever testes de unidade.\n- [ ] Atualizar a documentação.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "TiagoUNB",
+      "id": 211538615,
+      "node_id": "U_kgDODJvStw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211538615?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/TiagoUNB",
+      "html_url": "https://github.com/TiagoUNB",
+      "followers_url": "https://api.github.com/users/TiagoUNB/followers",
+      "following_url": "https://api.github.com/users/TiagoUNB/following{/other_user}",
+      "gists_url": "https://api.github.com/users/TiagoUNB/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/TiagoUNB/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/TiagoUNB/subscriptions",
+      "organizations_url": "https://api.github.com/users/TiagoUNB/orgs",
+      "repos_url": "https://api.github.com/users/TiagoUNB/repos",
+      "events_url": "https://api.github.com/users/TiagoUNB/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/TiagoUNB/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/181/reactions",
       "total_count": 0,
@@ -2594,7 +2634,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/181/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -4072,11 +4112,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 13,
-      "closed_issues": 6,
+      "open_issues": 10,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-11-18T00:12:06Z",
-      "updated_at": "2025-11-22T03:07:55Z",
+      "updated_at": "2025-11-22T19:01:28Z",
       "due_on": "2025-11-23T08:00:00Z",
       "closed_at": null
     },
