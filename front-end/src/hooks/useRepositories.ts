@@ -11,7 +11,7 @@ export function useRepositories() {
         setLoading(true);
         
         // Adiciona barra após BASE_URL
-        const url = `${import.meta.env.BASE_URL}/data/silver/language_analysis_index.json`;
+        const url = `${import.meta.env.BASE_URL}/data/silver/available_repos.json`;
         console.log('🔍 Tentando carregar:', url);
         
         const response = await fetch(url);

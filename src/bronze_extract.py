@@ -54,7 +54,14 @@ def main():
         print("\n" + "="*60)
         print("🐛 STEP 2: Extracting issues and pull requests")
         print("="*60)
-        issue_files = extract_issues(client, config, use_cache=args.cache)
+        issue_files = extract_issues(
+            client, 
+            config, 
+            use_cache=args.cache,
+            parallel=True,
+            max_workers=3,
+            max_events_per_repo=500
+        )
         print(f"✅ Generated {len(issue_files)} issue files")
 
         print("\n" + "="*60)
