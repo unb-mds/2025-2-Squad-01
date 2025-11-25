@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-24T05:17:14.240842",
+      "extracted_at": "2025-11-25T05:07:25.821466",
       "file_path": "data/bronze/issues_2025-2-Mural-UnB.json",
       "record_count": 77
     }
@@ -1255,6 +1255,24 @@
         "color": "0075ca",
         "default": true,
         "description": "Improvements or additions to documentation"
+      },
+      {
+        "id": 9158260104,
+        "node_id": "LA_kwDOPiZxls8AAAACId_1iA",
+        "url": "https://api.github.com/repos/unb-mds/2025-2-Mural-UnB/labels/task",
+        "name": "task",
+        "color": "FFFFFF",
+        "default": false,
+        "description": "Tasks related code or requirements of the project"
+      },
+      {
+        "id": 9233314071,
+        "node_id": "LA_kwDOPiZxls8AAAACJlkxFw",
+        "url": "https://api.github.com/repos/unb-mds/2025-2-Mural-UnB/labels/figma",
+        "name": "figma",
+        "color": "e48cab",
+        "default": false,
+        "description": "Desenvolvimento utilizando Figma"
       }
     ],
     "state": "open",
@@ -1362,9 +1380,9 @@
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-19T02:07:30Z",
-    "updated_at": "2025-11-19T02:07:30Z",
+    "updated_at": "2025-11-24T18:10:34Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -1389,7 +1407,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "\n\n## 🎯 Descrição / Objetivo\nEsta tarefa visa criar, atualizar e padronizar toda a documentação do repositório para garantir que o projeto seja compreensível, organizado e fácil de manter.\n\nA documentação será dividida em duas frentes: **Gestão de Produto** (Requisitos, Histórias) e **Documentação Técnica/Comunitária** (READMEs, Guias, Dados).\n\n---\n## ✅ Tarefas\n\n### 📦 Gestão do Produto\n- [ ] **User Stories:** Definir e documentar as histórias de usuário principais (ex: aluno buscando lab, professor divulgando vaga).\n- [ ] **Requisitos:** Listar requisitos Funcionais e Não-Funcionais atualizados.\n- [ ] **Priorização:** Definir a prioridade dos requisitos (MoSCoW ou Alta/Média/Baixa).\n\n### 📖 Manuais (READMEs)\n- [ ] **README Geral (Raiz):** Atualizar com visão geral, arquitetura e links para as sub-pastas.\n- [ ] **README Scripts:** Criar/Atualizar guia em `scripts/` explicando como rodar o crawler, os testes e a geração de embeddings.\n- [ ] **README Frontend:** Criar/Atualizar guia em `site/` explicando como rodar o servidor de desenvolvimento.\n\n### 🤝 Comunidade e Segurança\n- [ ] **CONTRIBUTING.md:** Documentar o fluxo de trabalho (branches, commits, PRs, padrões de código).\n- [ ] **CODE_OF_CONDUCT.md:** Adicionar código de conduta padrão.\n- [ ] **SECURITY.md:** Adicionar política de segurança básica.\n\n### 💾 Documentação de Dados\n- [ ] **Dicionário de Dados:** Documentar a estrutura dos arquivos gerados.\n    - Explicar colunas do `labs_fga.csv`.\n    - Explicar campos do JSON de tags e embeddings.\n    - Explicar o fluxo de entrada (PDF) -> Processamento -> Saída.\n\n---\n## 📎 Contexto Adicional\n- Dividir as tarefas entre os responsáveis.\n- Utilizar Markdown para todos os arquivos.\n- Garantir que os comandos nos READMEs foram testados e funcionam.",
+    "body": "\n\n## 🎯 Descrição / Objetivo\nEsta tarefa visa criar, atualizar e padronizar toda a documentação do repositório para garantir que o projeto seja compreensível, organizado e fácil de manter.\n\nA documentação será dividida em duas frentes: **Gestão de Produto** (Requisitos, Histórias) e **Documentação Técnica/Comunitária** (READMEs, Guias, Dados).\n\n---\n## ✅ Tarefas\n\n### 📦 Gestão do Produto\n- [x] **User Stories:** Definir e documentar as histórias de usuário principais (ex: aluno buscando lab, professor divulgando vaga).\n- [x] **Requisitos:** Listar requisitos Funcionais e Não-Funcionais atualizados.\n- [x] **Priorização:** Definir a prioridade dos requisitos (MoSCoW ou Alta/Média/Baixa).\n\n### 📖 Manuais (READMEs)\n- [ ] **README Geral (Raiz):** Atualizar com visão geral, arquitetura e links para as sub-pastas.\n- [ ] **README Scripts:** Criar/Atualizar guia em `scripts/` explicando como rodar o crawler, os testes e a geração de embeddings.\n- [ ] **README Frontend:** Criar/Atualizar guia em `site/` explicando como rodar o servidor de desenvolvimento.\n\n### 🤝 Comunidade e Segurança\n- [x] **CONTRIBUTING.md:** Documentar o fluxo de trabalho (branches, commits, PRs, padrões de código).\n- [x] **CODE_OF_CONDUCT.md:** Adicionar código de conduta padrão.\n- [x] **SECURITY.md:** Adicionar política de segurança básica.\n\n### 💾 Documentação de Dados\n- [ ] **Dicionário de Dados:** Documentar a estrutura dos arquivos gerados.\n    - Explicar colunas do `labs_fga.csv`.\n    - Explicar campos do JSON de tags e embeddings.\n    - Explicar o fluxo de entrada (PDF) -> Processamento -> Saída.\n\n---\n## 📎 Contexto Adicional\n- Dividir as tarefas entre os responsáveis.\n- Utilizar Markdown para todos os arquivos.\n- Garantir que os comandos nos READMEs foram testados e funcionam.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Mural-UnB/issues/113/reactions",

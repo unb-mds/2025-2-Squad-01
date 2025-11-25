@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-24T05:17:52.058094",
+      "extracted_at": "2025-11-25T05:08:05.206045",
       "file_path": "data/bronze/issues_2025-2-GuiaDev.json",
       "record_count": 56
     }
@@ -142,9 +142,9 @@
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-22T20:19:42Z",
-    "updated_at": "2025-11-23T02:51:07Z",
+    "updated_at": "2025-11-25T01:14:41Z",
     "closed_at": "2025-11-23T02:51:07Z",
     "author_association": "COLLABORATOR",
     "type": null,
@@ -160,7 +160,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Otimização da Coleta de Dados com Cache Lazy + Endpoint de Atualização\n\n---\n\n## 🧩 User Story\nComo **usuário autenticado**,  \nquero que o sistema reutilize dados já armazenados e atualize apenas quando necessário,  \npara reduzir demora nas respostas e evitar erros por excesso de requisições externas.\n\n---\n\n## 🎯 Problema / Motivação\nA aplicação faz chamadas externas mesmo quando há dados válidos no banco.  \nIsso aumenta o tempo de resposta, gera risco de rate limit e impacta escalabilidade.\n\nA solução deve priorizar performance, simplicidade e manutenção contínua — princípios XP.\n\n---\n\n## ✅ Critérios de Aceitação (AC)\n- [x] O serviço deve buscar primeiro no banco antes de consultar a API externa\n- [x] Dados só devem ser coletados novamente quando inexistentes ou expirados\n- [x] Deve existir um endpoint para forçar atualização manual do cache\n- [x] O endpoint deve retornar status, timestamp e origem dos dados (cache x API)\n- [x] Logs devem registrar todas as atualizações forçadas e automáticas\n- [x] Swagger deve documentar o novo endpoint e comportamento do cache\n- [x] Cobertura mínima de testes para o módulo ≥ 80%\n\n---\n\n## 🛠 Tarefas Técnicas\n- [x] Implementar cache lazy no serviço de coleta\n- [x] Criar endpoint `PATCH /cache/refresh`\n- [x] Persistir `lastUpdatedAt` no banco\n- [x] Ajustar serviços dependentes para usar cache\n- [x] Adicionar testes unitários e de integração\n- [x] Atualizar documentação no README + Swagger\n- [x] Monitorar tempo médio de resposta antes/depois\n\n---\n\n## 👥 Responsáveis\n- Autor: @PedroGTG\n- Revisores: @HugoFreitass @Phill-Chill @filipeBG-07\n\n---\n\n## 🎯 Prioridade\n- [X] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Impacto e objetivo claros\n- [x] Modelo atual de coleta mapeado\n- [x] Decisão técnica alinhada com o time\n- [x] Critérios de aceitação definidos\n\n---\n\n## 📌 Definition of Done (DoD)\n- [ ] Código revisado, mergeado e funcional\n- [ ] Todos os ACs atendidos\n- [ ] Testes passando e cobertura registrada\n- [ ] Endpoint documentado e acessível\n- [ ] Logs validados em ambiente de teste\n- [ ] PO aprovou a entrega\n\n---\n\n## ✅ Benefícios Esperados\n- Redução de latência\n- Menor carga em APIs externas\n- Menos falhas por rate limiting\n- Melhor experiência do usuário\n- Arquitetura mais sustentável\n\n---\n\n## ⚠️ Riscos / Observações\n- Dados podem ficar desatualizados se não houver refresh periódico\n- Necessário monitoramento para validar ganho real\n\n---\n",
+    "body": "# 📌 Otimização da Coleta de Dados com Cache Lazy + Endpoint de Atualização\n\n---\n\n## 🧩 User Story\nComo **usuário autenticado**,  \nquero que o sistema reutilize dados já armazenados e atualize apenas quando necessário,  \npara reduzir demora nas respostas e evitar erros por excesso de requisições externas.\n\n---\n\n## 🎯 Problema / Motivação\nA aplicação faz chamadas externas mesmo quando há dados válidos no banco.  \nIsso aumenta o tempo de resposta, gera risco de rate limit e impacta escalabilidade.\n\nA solução deve priorizar performance, simplicidade e manutenção contínua — princípios XP.\n\n---\n\n## ✅ Critérios de Aceitação (AC)\n- [x] O serviço deve buscar primeiro no banco antes de consultar a API externa\n- [x] Dados só devem ser coletados novamente quando inexistentes ou expirados\n- [x] Deve existir um endpoint para forçar atualização manual do cache\n- [x] O endpoint deve retornar status, timestamp e origem dos dados (cache x API)\n- [x] Logs devem registrar todas as atualizações forçadas e automáticas\n- [x] Swagger deve documentar o novo endpoint e comportamento do cache\n- [x] Cobertura mínima de testes para o módulo ≥ 80%\n\n---\n\n## 🛠 Tarefas Técnicas\n- [x] Implementar cache lazy no serviço de coleta\n- [x] Criar endpoint `PATCH /cache/refresh`\n- [x] Persistir `lastUpdatedAt` no banco\n- [x] Ajustar serviços dependentes para usar cache\n- [x] Adicionar testes unitários e de integração\n- [x] Atualizar documentação no README + Swagger\n- [x] Monitorar tempo médio de resposta antes/depois\n\n---\n\n## 👥 Responsáveis\n- Autor: @PedroGTG\n- Revisores: @HugoFreitass @Phill-Chill @filipeBG-07\n\n---\n\n## 🎯 Prioridade\n- [X] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Impacto e objetivo claros\n- [x] Modelo atual de coleta mapeado\n- [x] Decisão técnica alinhada com o time\n- [x] Critérios de aceitação definidos\n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Código revisado, mergeado e funcional\n- [x] Todos os ACs atendidos\n- [x] Testes passando e cobertura registrada\n- [x] Endpoint documentado e acessível\n- [x] Logs validados em ambiente de teste\n- [x] PO aprovou a entrega\n\n---\n\n## ✅ Benefícios Esperados\n- Redução de latência\n- Menor carga em APIs externas\n- Menos falhas por rate limiting\n- Melhor experiência do usuário\n- Arquitetura mais sustentável\n\n---\n\n## ⚠️ Riscos / Observações\n- Dados podem ficar desatualizados se não houver refresh periódico\n- Necessário monitoramento para validar ganho real\n\n---\n",
     "closed_by": {
       "login": "PedroGTG",
       "id": 192148248,
@@ -335,9 +335,9 @@
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-21T12:24:43Z",
-    "updated_at": "2025-11-21T12:24:43Z",
+    "updated_at": "2025-11-24T22:32:27Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -1671,9 +1671,9 @@
       "due_on": null,
       "closed_at": "2025-11-14T20:54:21Z"
     },
-    "comments": 2,
+    "comments": 3,
     "created_at": "2025-11-05T22:48:53Z",
-    "updated_at": "2025-11-10T23:54:03Z",
+    "updated_at": "2025-11-24T22:43:01Z",
     "closed_at": "2025-11-10T23:54:03Z",
     "author_association": "COLLABORATOR",
     "type": {
@@ -4150,9 +4150,9 @@
       "due_on": null,
       "closed_at": "2025-11-03T23:52:01Z"
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-10-09T01:21:41Z",
-    "updated_at": "2025-10-20T23:49:15Z",
+    "updated_at": "2025-11-25T01:20:02Z",
     "closed_at": "2025-10-20T23:49:15Z",
     "author_association": "COLLABORATOR",
     "type": null,
