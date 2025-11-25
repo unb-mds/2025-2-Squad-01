@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Sidebar from './Sidebar';
 import RepositoryToolbar from './RepositoryToolbar';
+import OverviewToolbar from './OverviewToolbar';
 import { SidebarProvider, useSidebar } from '../contexts/SidebarContext';
 import type { ProcessedActivityResponse } from '../pages/Utils';
 
@@ -9,6 +10,7 @@ interface DashboardLayoutProps {
   currentPage?: string;
   currentSubPage?: string;
   onRepo?: boolean;
+  onOverview?: boolean;
   currentRepo?: string;
   data?: ProcessedActivityResponse | null;
   onNavigate?: (page: string) => void;
@@ -32,12 +34,26 @@ function DashboardLayoutInner({
   children,
   currentPage,
   currentSubPage,
-  onRepo = true,
+  onRepo,
+  onOverview,
   currentRepo = 'No Repository Selected',
   data = null,
   onNavigate,
 }: DashboardLayoutProps) {
   const { sidebarWidth } = useSidebar();
+  if (currentPage == 'repos') {
+    onRepo = true;
+    onOverview = false;
+  }
+  else if (currentPage == 'overview') {
+    onOverview = true;
+    onRepo = false;
+  }
+  else
+  {
+    onRepo = false;
+    onOverview = false;
+  }
 
   return (
     <div className="min-h-screen flex" style={{ marginLeft: sidebarWidth }}>
@@ -46,6 +62,13 @@ function DashboardLayoutInner({
         {onRepo && (
           <RepositoryToolbar
             currentRepo={currentRepo}
+            currentPage={currentSubPage}
+            data={data}
+            onNavigate={onNavigate}
+          />
+        )}
+        {onOverview && (
+          <OverviewToolbar
             currentPage={currentSubPage}
             data={data}
             onNavigate={onNavigate}
@@ -63,7 +86,7 @@ function DashboardLayoutInner({
 export default function DashboardLayout(props: DashboardLayoutProps) {
   return (
     <SidebarProvider>
-      <DashboardLayoutInner {...props} />
+      <DashboardLayoutInner {...props} />''
     </SidebarProvider>
   );
 }

@@ -3,8 +3,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { useSidebar } from '../contexts/SidebarContext';
 import type { ProcessedActivityResponse, RepoActivitySummary } from '../pages/Utils';
 
-interface RepositoryToolbarProps {
-  currentRepo?: string;
+interface OverviewToolbarProps {
   currentPage?: string;
   data?: ProcessedActivityResponse | null;
   onNavigate?: (page: string) => void;
@@ -17,9 +16,9 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'commits', label: 'Commits', icon: '💻' },
-  { id: 'issues', label: 'Issues', icon: '📊' },
-  { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
+  { id: 'timeline', label: 'Timeline', icon: '💻 ' },
+  { id: 'collaboration', label: 'Collaboration', icon: '💻 ' },
+  { id: 'heatmap', label: 'Heatmap', icon: '🌡️' },
 ];
 
 /**
@@ -33,55 +32,23 @@ const menuItems: MenuItem[] = [
  * @param data - Activity data for repository list
  * @param onNavigate - Navigation handler callback
  */
-export default function RepositoryToolbar({
-  currentRepo,
+export default function OverviewToolbar({
   currentPage,
   data,
-}: RepositoryToolbarProps) {
+}: OverviewToolbarProps) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading] = useState(false);
-  const [availableRepoNames, setAvailableRepoNames] = useState<string[]>([]);
   const { sidebarWidth } = useSidebar();
 
   // Fetch available repository names if data is not provided
-  useEffect(() => {
-    if (!data) {
-      async function fetchRepoNames() {
-        try {
-          const response = await fetch('/2025-2-Squad-01/available_repos.json');
-          if (response.ok) {
-            const repos = await response.json();
-            setAvailableRepoNames(repos);
-          }
-        } catch (err) {
-          console.warn('Could not fetch repo names:', err);
-        }
-      }
-      fetchRepoNames();
-    }
-  }, [data]);
 
-  const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 
-  const selectedParam = searchParams.get('repo');
-  
-  // If we have activity data, use numeric IDs; otherwise use repo names
-  const selectedRepoId: number | string | 'all' =
-    !selectedParam || selectedParam === 'all'
-      ? 'all'
-      : data && !Number.isNaN(Number(selectedParam))
-        ? Number(selectedParam)
-        : selectedParam;
+
+
 
   const handleItemClick = (itemId: string) => {
-    navigate(`/repos/${itemId}`);
-  };
-
-  const handleRepoChange = (value: string) => {
-    const next = new URLSearchParams(searchParams);
-    next.set('repo', value);
-    setSearchParams(next, { replace: true });
+    navigate(`/overview/${itemId}`);
   };
 
   return (
@@ -104,46 +71,15 @@ export default function RepositoryToolbar({
             <span className="text-xl">📊</span>
             <div className="min-w-0">
               <h1 className="text-lg font-semibold text-white leading-tight truncate">
-                Repository Related Metrics
+                Overview Metrics
               </h1>
               <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400 truncate">
-                Currently Viewing: {currentRepo}
+                Overview of organization-wide metrics
               </p>
             </div>
           </div>
 
-          {/* Repository Selector */}
-          <select
-            value={selectedRepoId}
-            onChange={(e) => handleRepoChange(e.target.value)}
-            className="px-4 py-2 mb-3 mr-4 border rounded text-white max-w-xs flex-shrink-0"
-            style={{ backgroundColor: '#333333', borderColor: '#444444' }}
-            disabled={loading}
-          >
-            {data ? (
-              // Activity data available - use repository objects
-              <>
-                <option value="all">
-                  All repositories ({repositories.flatMap((r) => r.activities).length})
-                </option>
-                {repositories.map((repo) => (
-                  <option key={repo.id} value={repo.id}>
-                    {repo.name} ({repo.activities.length})
-                  </option>
-                ))}
-              </>
-            ) : (
-              // No activity data - use repository names
-              <>
-                <option value="all">All repositories ({availableRepoNames.length})</option>
-                {availableRepoNames.map((repoName) => (
-                  <option key={repoName} value={repoName}>
-                    {repoName}
-                  </option>
-                ))}
-              </>
-            )}
-          </select>
+
         </div>
 
         {/* Navigation Tabs */}

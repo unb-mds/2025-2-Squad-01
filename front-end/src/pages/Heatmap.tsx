@@ -103,7 +103,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
   return (
     <DashboardLayout
       currentPage="overview"
-      currentSubPage="collaboration"
+      currentSubPage="heatmap"
       data={mainData}
       currentRepo={selectedRepo ? selectedRepo.name : 'No Repository Selected'}
     >
@@ -120,8 +120,8 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
 
       {/* --- Estado de Sucesso (Dados Carregados) --- */}
       {pageData && mainData && selectedRepo && !loading && !error && (
-        <div className="h-fit mt-4">
-          <h1 className="text-3xl font-bold text-white mb-4">Visão Geral do Repositório</h1>
+        <div className="h-fit mt-30">
+          <h1 className="text-3xl font-bold text-white mb-4">Organization Heatmap Analisys</h1>
           <p className="text-slate-400 text-sm mb-8">Informações gerais e métricas chave de colaboração.</p>
 
           {/* Grid para os Cards dos Gráficos */}

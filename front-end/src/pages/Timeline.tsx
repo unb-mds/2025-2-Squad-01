@@ -7,7 +7,8 @@ import DashboardLayout from '../components/DashboardLayout';
  */
 export default function Timeline() {
   return (
-    <DashboardLayout currentPage="organization" onRepo={false}>
+    <DashboardLayout currentPage="overview" currentSubPage="timeline">
+      
       <div className="space-y-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Timeline</h1>

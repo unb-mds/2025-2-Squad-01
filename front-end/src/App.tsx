@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import Commits from './pages/Commits';
 import NotFound from './pages/NotFound';
 import CollaborationPage from './pages/Collaboration';
+import HeatmapPage from './pages/Heatmap';
 import PullRequestsPage from './pages/PullRequests';
 import IssuesPage from './pages/Issues';
 import Timeline from './pages/Timeline';
@@ -20,7 +21,8 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/overview/timeline" element={<Timeline />} />
-      <Route path="/repos/collaboration" element={<CollaborationPage />} />
+      <Route path="/overview/collaboration" element={<CollaborationPage />} />
+      <Route path="/overview/heatmap" element={<HeatmapPage />} />
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
       <Route path="/repos/issues" element={<IssuesPage/>} />
