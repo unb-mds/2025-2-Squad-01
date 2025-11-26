@@ -144,7 +144,15 @@ def process_temporal_analysis() -> List[str]:
         'commits': 0,
         'comments': 0,
         'unique_users': set(),
-        'unique_repos': set()
+        'unique_repos': set(),
+        'authors': defaultdict(lambda: {
+            'commits': 0,
+            'issues_created': 0,
+            'issues_closed': 0,
+            'prs_created': 0,
+            'prs_closed': 0,
+            'comments': 0
+        })
     })
     
     for event in all_events:
@@ -156,24 +164,47 @@ def process_temporal_analysis() -> List[str]:
         day_data['unique_users'].add(event['user'])
         day_data['unique_repos'].add(event['repo'])
         
+        author = event['user']
+        
         if event['type'] == 'issue_created':
             day_data['issues_created'] += 1
+            day_data['authors'][author]['issues_created'] += 1
         elif event['type'] == 'issue_closed':
             day_data['issues_closed'] += 1
+            day_data['authors'][author]['issues_closed'] += 1
         elif event['type'] == 'pr_created':
             day_data['prs_created'] += 1
+            day_data['authors'][author]['prs_created'] += 1
         elif event['type'] == 'pr_closed':
             day_data['prs_closed'] += 1
+            day_data['authors'][author]['prs_closed'] += 1
         elif event['type'] == 'commit':
             day_data['commits'] += 1
+            day_data['authors'][author]['commits'] += 1
         elif 'comment' in event['type']:
             day_data['comments'] += 1
+            day_data['authors'][author]['comments'] += 1
     
 
     daily_summary = []
     for date_key, data in sorted(daily_activity.items()):
         data['unique_users'] = len(data['unique_users'])
         data['unique_repos'] = len(data['unique_repos'])
+        
+        # Convert authors dict to list for JSON serialization
+        authors_list = []
+        for author_name, stats in data['authors'].items():
+            authors_list.append({
+                'name': author_name,
+                'commits': stats['commits'],
+                'issues_created': stats['issues_created'],
+                'issues_closed': stats['issues_closed'],
+                'prs_created': stats['prs_created'],
+                'prs_closed': stats['prs_closed'],
+                'comments': stats['comments']
+            })
+        data['authors'] = authors_list
+        
         daily_summary.append(data)
     
     daily_file = save_json_data(

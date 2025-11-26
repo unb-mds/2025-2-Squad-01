@@ -75,8 +75,8 @@ function DashboardLayoutInner({
           />
         )}
         {/* Main Content */}
-        <main className="flex-1 overflow-y-auto" style={{ backgroundColor: '#181818' }}>
-          <div className="max-w-7xl mx-auto p-8">{children}</div>
+        <main className="flex-1 overflow-y-auto w-full" style={{ backgroundColor: '#181818' }}>
+          <div className="w-full p-8">{children}</div>
         </main>
       </div>
     </div>

@@ -107,54 +107,54 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
       data={mainData}
       currentRepo={selectedRepo ? selectedRepo.name : 'No Repository Selected'}
     >
-      {/* --- Estados de Carregamento e Erro --- */}
+      {/* --- Loading and Error States --- */}
       {loading && (
-        <div className="text-center text-white/70 mt-80" >Carregando dados...</div>
+        <div className="text-center text-white/70 mt-80" >Loading data...</div>
       )}
       {error && (
         <div className="bg-red-900/50 border border-red-700 text-red-300 px-4 py-3 rounded relative text-center" role="alert">
-          <strong className="font-bold">Erro ao carregar dados: </strong>
+          <strong className="font-bold">Error loading data: </strong>
           <span>{error}</span>
         </div>
       )}
 
-      {/* --- Estado de Sucesso (Dados Carregados) --- */}
+      {/* --- Success State (Data Loaded) --- */}
       {pageData && mainData && selectedRepo && !loading && !error && (
-        <div className="h-fit mt-4">
-          <h1 className="text-3xl font-bold text-white mb-4">Visão Geral do Repositório</h1>
-          <p className="text-slate-400 text-sm mb-8">Informações gerais e métricas chave de colaboração.</p>
+        <div className="h-fit mt-30">
+          <h1 className="text-3xl font-bold text-white mb-2">Repository Overview</h1>
+          <p className="text-slate-400 text-sm mb-4">General information and key collaboration metrics.</p>
 
-          {/* Grid para os Cards dos Gráficos */}
-          <div className="grid grid-cols-1 gap-6">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1">
 
-            {/* Card: Rede de Colaboração */}
+            {/* Card: Collaboration Network */}
             <div
               className="border rounded-lg flex flex-col h-full"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}
             >
-              {/* Header do Card*/}
+              {/* Header */}
               <div
                 className="px-6 py-4 border-b" 
                 style={{ borderBottomColor: '#333333' }} 
               >
-                <h3 className="text-xl font-semibold text-white">Rede de Colaboração</h3>
+                <h3 className="text-xl font-semibold text-white">Collaboration Network</h3>
               </div> 
-              {/* Conteúdo do Card */}
+              {/* Content */}
               <div className="flex-grow p-2 overflow-hidden h-full">
                 {filteredCollaborationData.length > 0 ? (
                   <CollaborationNetworkGraph data={filteredCollaborationData} />
                 ) : (
-                  <p className="text-white/50 text-center py-10">Dados de colaboração não disponíveis.</p>
+                  <p className="text-white/50 text-center py-10">Collaboration data not available.</p>
                 )}
               </div>
-              {/* Explicação com Dropdown */}
+              {/* Explanation with Dropdown */}
               <div className="border-t border-t-gray-700">
                 <button
                   onClick={() => setShowExplanation(!showExplanation)}
                   className="w-full px-4 py-3 flex items-center justify-between text-white hover:bg-gray-800/50 transition-colors"
                 >
                   <span className="font-semibold text-sm">
-                    Como interpretar este gráfico
+                    📖 How to interpret this graph
                   </span>
                   <span className="text-lg">{showExplanation ? '▼' : '▶'}</span>
                 </button>
@@ -162,52 +162,27 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
                 {showExplanation && (
                   <div className="px-4 pb-4">
                     <p className="text-white/70 py-2 text-sm">
-                      Este gráfico ilustra as conexões de colaboração entre usuários com base em suas contribuições para repositórios comuns.
-                      Cada nó representa um usuário, e as linhas indicam colaborações em repositórios compartilhados.
+                      This graph illustrates collaboration connections between users based on their contributions to shared repositories.
+                      Each node represents a user, and the lines indicate collaborations in shared repositories.
                     </p>
                     <p className="text-white/70 py-2 font-bold text-sm">
-                      O que significa colaboração neste contexto? 
+                      What does collaboration mean in this context? 
                     </p>
                     <p className="text-white/70 pb-1 text-sm">
-                      Dois desenvolvedores são considerados colaboradores quando:
+                      Two developers are considered collaborators when:
                     </p>
                     <ul className="text-white/70 text-xs space-y-1 ml-4 list-disc">
-                      <li>Fizeram commits no mesmo repositório</li>
-                      <li>Criaram ou comentaram em issues do mesmo projeto</li>
-                      <li>Participaram de pull requests (criação, review, comentários) no mesmo repositório</li>
-                      <li>Participaram de eventos relacionados ao mesmo projeto</li>
+                      <li>Made commits to the same repository</li>
+                      <li>Created or commented on issues in the same project</li>
+                      <li>Participated in pull requests (creation, review, comments) in the same repository</li>
+                      <li>Participated in events related to the same project</li>
                     </ul>
                   </div>
                 )}
               </div>
             </div> 
 
-            {/* Card: Heatmap de Atividade */}
-            <div
-              className="border rounded-lg flex flex-col min-h-[500px] overflow-hidden"
-              style={{ backgroundColor: '#222222', borderColor: '#333333' }}
-            >
-              {/* Header do Card*/}
-              <div
-                className="px-6 py-4 border-b"
-                style={{ borderBottomColor: '#333333' }} 
-              >
-                <h3 className="text-xl font-semibold text-white">Heatmap de Atividade</h3>
-              </div> 
-
-              {/* Conteúdo do Card */}
-              <div className="flex-grow p-6 flex items-center justify-center overflow-hidden">
-                {pageData?.heatmap && pageData.heatmap.length > 0 ? (
-                  <div className="flex items-center justify-center w-full">
-                    <div className="transform scale-140 origin-center">
-                      <ActivityHeatmap data={pageData.heatmap} />
-                    </div>
-                  </div>
-                ) : (
-                  <p className="text-white/50 text-center py-10">Dados de heatmap não disponíveis ou vazios.</p>
-                )}
-              </div>
-            </div> 
+            
 
           </div> 
         </div>
