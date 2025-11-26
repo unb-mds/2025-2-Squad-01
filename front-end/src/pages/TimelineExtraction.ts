@@ -16,16 +16,16 @@ export interface TimelineData {
 }
 
 export class TimelineExtraction {
-    
+
    
     static async extractTimelineData(time_filter: string, repo_filter?: string): Promise<TimelineData[]> {
         
         let url: string = '';
 
         if (time_filter === 'last_7_days') {
-            url = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/gold/timeline_last_7_days.json';
+            url = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/timeline-implementation/data/gold/timeline_last_7_days.json';
         } else if (time_filter === 'last_12_months') {
-            url = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/gold/timeline_last_12_months.json';
+            url = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/timeline-implementation/data/gold/timeline_last_12_months.json';
         } else {
             throw new Error(`Invalid time filter: ${time_filter}. Use 'last_7_days' or 'last_12_months'`);
         }
