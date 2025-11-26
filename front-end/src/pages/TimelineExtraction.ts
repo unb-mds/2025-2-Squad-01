@@ -63,14 +63,13 @@ export class TimelineExtraction {
                     }))
                     // Apply repo filter per user if provided
                     .filter((user: any) => {
-                        if (!repo_filter) return true;
+                        if (!repo_filter || repo_filter === 'all') return true;
                         return user.repositories && user.repositories.some((repo: string) => 
                             repo.toLowerCase().includes(repo_filter.toLowerCase())
                         );
                     })
-            }))
-            // Remove days with no users after filtering
-            .filter((day: TimelineData) => day.users.length > 0);
+            }));
+            // NÃO remover dias vazios - manter todos os dias mesmo sem usuários
 
         return timelineData;
     }

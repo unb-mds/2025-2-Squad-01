@@ -66,8 +66,8 @@ export default function RepositoryFilter({
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <label className="text-sm font-medium text-slate-300">Repository</label>
+    <div className="flex flex-row items-center gap-3">
+      <label className="text-sm font-medium text-slate-300 whitespace-nowrap">Repository:</label>
       <select
         value={selectedRepoId}
         onChange={(e) => handleRepoChange(e.target.value)}

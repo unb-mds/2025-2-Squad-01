@@ -13,15 +13,15 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'overview/timeline', label: 'Overview', icon: '📊' },
-  { id: 'repos/commits', label: 'Activities', icon: '💻' },
+  { id: 'organization', label: 'Overview', icon: '📊' },
+  { id: 'repos', label: 'Activities', icon: '💻' },
 ];
 
 /**
  * Sidebar Component
  *
  * Main navigation sidebar for the application.
- * Provides navigation between overview and repository views.
+ * Provides navigation between organization and repository views.
  * Can be collapsed to save screen space.
  */
 export default function Sidebar({ currentPage }: SidebarProps) {
@@ -29,9 +29,11 @@ export default function Sidebar({ currentPage }: SidebarProps) {
   const navigate = useNavigate();
 
   const handleItemClick = (itemId: string) => {
-
+    if (itemId === 'organization') {
+      navigate('/overview/timeline');
+    } else {
       navigate(`/${itemId}`);
-    
+    }
   };
 
   return (
