@@ -21,7 +21,7 @@ const menuItems: MenuItem[] = [
  * Sidebar Component
  *
  * Main navigation sidebar for the application.
- * Provides navigation between overview and repository views.
+ * Provides navigation between organization and repository views.
  * Can be collapsed to save screen space.
  */
 export default function Sidebar({ currentPage }: SidebarProps) {
