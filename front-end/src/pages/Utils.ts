@@ -315,16 +315,16 @@ export class Utils {
    */
   static applyFilters(
     activities: ProcessedActivity[],
-    selectedMember: string,
+    selectedMembers: string[],
     selectedTime: string
   ): ProcessedActivity[] {
     let filteredActivities = activities;
     
-    // Filtrar por membro
-    if (selectedMember && selectedMember !== 'All') {
+    // Filtrar por membros
+    if (selectedMembers && selectedMembers.length > 0) {
       filteredActivities = filteredActivities.filter((activity) => {
         const name = activity.user.displayName || activity.user.login || 'Unknown';
-        return name === selectedMember;
+        return selectedMembers.includes(name);
       });
     }
     
@@ -370,8 +370,7 @@ export class Utils {
    */
   static selectRepoAndFilter(
     repositories: RepoActivitySummary[],
-    repoParam: string | null,
-    selectedMember?: string
+    repoParam: string | null
   ): {
     selectedRepo: RepoActivitySummary | null;
     members: string[];
@@ -408,7 +407,7 @@ export class Utils {
       memberSet.add(name);
     }
     const membersFound = Array.from(memberSet).sort((a, b) => a.localeCompare(b));
-    const members = ['All', ...membersFound];
+    const members = membersFound;
 
     return { selectedRepo, members };
   }

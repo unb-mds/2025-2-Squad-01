@@ -1,6 +1,6 @@
 import DashboardLayout from '../components/DashboardLayout';
 import { Filter } from '../components/Filter';
-import RepositoryFilter from '../components/RepositoryFilter';
+import { MemberFilter } from '../components/MemberFilter';
 import CalendarHeatmap from '../components/CalendarHeatmap';
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -119,6 +119,7 @@ export default function Timeline() {
   const [userData, setUserData] = useState<UserActivityData[]>([]);
   const [dateLabels, setDateLabels] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedMembers, setSelectedMembers] = useState<string[]>([]);
 
   const selectedRepo = searchParams.get('repo');
     
@@ -238,6 +239,17 @@ export default function Timeline() {
     fetchData();
   }, [selectedTime, selectedRepo]);
 
+  // Extrair lista de membros únicos
+  const availableMembers = useMemo(() => {
+    return userData.map(user => user.name).sort();
+  }, [userData]);
+
+  // Filtrar userData baseado em membros selecionados
+  const filteredUserData = useMemo(() => {
+    if (selectedMembers.length === 0) return userData;
+    return userData.filter(user => selectedMembers.includes(user.name));
+  }, [userData, selectedMembers]);
+
   return (
     <DashboardLayout currentPage="overview" currentSubPage="timeline">
       <div className="w-full h-full -mx-8 -my-8 px-8 py-8">
@@ -245,7 +257,7 @@ export default function Timeline() {
           <div>
             <h1 className="text-4xl font-bold text-white mb-2">Timeline</h1>
             <p className="text-slate-400">
-              Timeline of the repository events that happened during the past week or year.
+              Timeline of <strong>general</strong> repository events that happened during the <strong>past week or year</strong>. Represents the activities that team members made in <strong>any</strong> repository inside the organization
             </p>
           </div>
           {/* Charts Grid */}
@@ -254,29 +266,41 @@ export default function Timeline() {
               className="border rounded-lg h-170 w-full overflow-hidden flex flex-col"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}
             >
-              <div className="px-3 pt-3 " style={{ borderBottomColor: '#333333' }}>
-                <h4 className="text-lg font-semibold text-white ">Filters:</h4>
-              </div>
 
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 px-3 mb-2">
-                {/* Timeline Filter */}
-                <Filter
-                  title="Date Range"
-                  content={[
-                    'Last 7 days',
-                    'Last 12 months',
-                  ]}
-                  value={selectedTime}
-                  sendSelectedValue={handleTimeChange}
-                />
-                {/* Repository Filter */}
-                <RepositoryFilter />
-              </div>
               
 
-              <div className="px-3 py-3 border-t" style={{ borderTopColor: '#333333' }}>
-                <h3 className="text-xl font-bold text-white">Timeline Analysis:</h3>
-              </div>
+                  {/* Timeline Filter */}
+                <div className="h-auto flex flex-col sm:flex-row sm:flex-wrap sm:gap-6 px-3 mb-2 mt-2">
+                    <div className="ml-5">
+
+                      <Filter
+                        title="Date Range"
+                        content={[
+                          'Last 7 days',
+                          'Last 12 months',
+                        ]}
+                        value={selectedTime}
+                        sendSelectedValue={handleTimeChange}
+                      />
+                    </div>
+                  
+                
+                  <div className="ml-3 border-l-2"
+                  style={{ backgroundColor: '#222222', borderColor: '#333333' }}
+                  >
+                    <div className="ml-5">
+                      {/* Member Filter */}
+                      <MemberFilter
+                        members={availableMembers}
+                        selectedMembers={selectedMembers}
+                        onMemberChange={setSelectedMembers}
+                      />
+                    </div>
+                  </div>
+                </div>
+              
+              
+
 
               <div 
                 style={{ 
@@ -289,12 +313,12 @@ export default function Timeline() {
               >
                 {isLoading ? (
                   <div className="text-center text-slate-400 py-8">Loading data...</div>
-                ) : userData.length === 0 ? (
+                ) : filteredUserData.length === 0 ? (
                   <div className="text-center text-slate-400 py-8">No data available</div>
                 ) : (
                   <div style={{ display: 'inline-block', minWidth: 'fit-content' }}>
                     <CalendarHeatmap
-                      userData={userData}
+                      userData={filteredUserData}
                       mode={selectedTime === 'Last 7 days' ? 'weekly' : 'monthly'}
                       dateLabels={dateLabels}
                     />

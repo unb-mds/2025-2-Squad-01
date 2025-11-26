@@ -1,9 +1,10 @@
 import { Filter } from './Filter';
+import { MemberFilter } from './MemberFilter';
 
 interface BaseFiltersProps {
   members?: string[];
-  onMemberChange?: (value: string) => void;
-  selectedMember?: string;
+  onMemberChange?: (value: string[]) => void;
+  selectedMembers?: string[];
   onTimeChange?: (value: string) => void;
   selectedTime?: string;
 }
@@ -15,8 +16,8 @@ interface BaseFiltersProps {
  * Used across multiple pages to maintain consistent filter behavior.
  *
  * @param members - Array of team member names to filter by
- * @param onMemberChange - Callback when member filter changes
- * @param selectedMember - Currently selected member filter
+ * @param onMemberChange - Callback when member filter changes (receives array of selected members)
+ * @param selectedMembers - Currently selected members filter
  * @param onTimeChange - Callback when timeline filter changes
  * @param selectedTime - Currently selected timeline filter
  */
@@ -24,10 +25,10 @@ export default function BaseFilters({
   members,
   onMemberChange,
   onTimeChange,
-  selectedMember,
+  selectedMembers,
   selectedTime,
 }: BaseFiltersProps) {
-  const handleMemberChange = (selected: string) => {
+  const handleMemberChange = (selected: string[]) => {
     if (onMemberChange) onMemberChange(selected);
   };
 
@@ -39,7 +40,7 @@ export default function BaseFilters({
     <div className="px-6 py-4" style={{ borderBottomColor: '#333333' }}>
       <h4 className="text-lg font-semibold text-white mb-3">Filters</h4>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:gap-6">
         {/* Timeline Filter */}
         <Filter
           title="Timeline"
@@ -56,12 +57,13 @@ export default function BaseFilters({
         />
 
         {/* Members Filter */}
-        <Filter
-          title="Members"
-          content={members || []}
-          value={selectedMember}
-          sendSelectedValue={handleMemberChange}
-        />
+        {members && members.length > 0 && (
+          <MemberFilter
+            members={members}
+            selectedMembers={selectedMembers || []}
+            onMemberChange={handleMemberChange}
+          />
+        )}
       </div>
     </div>
   );

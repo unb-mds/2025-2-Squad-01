@@ -23,7 +23,7 @@ export default function CommitsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
-  const [selectedMember, setSelectedMember] = useState<string>('All');
+  const [selectedMembers, setSelectedMembers] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState<string>('Last 24 hours');
   const [chartType, setChartType] = useState<'line' | 'bar'>('line');
   const [lineToggle, setLineToggle] = useState(false);
@@ -59,18 +59,18 @@ export default function CommitsPage() {
   const repoParam = searchParams.get('repo');
 
   const { selectedRepo, members } = useMemo(() => {
-    return Utils.selectRepoAndFilter(repositories, repoParam, selectedMember);
-  }, [repositories, repoParam, selectedMember]);
+    return Utils.selectRepoAndFilter(repositories, repoParam);
+  }, [repositories, repoParam]);
 
   useEffect(() => {
-    setSelectedMember('All');
+    setSelectedMembers([]);
   }, [selectedRepo?.id]);
 
   // Aplicar filtros nas atividades (membro + tempo)
   const filteredActivities = useMemo(() => {
     if (!selectedRepo) return [];
-    return Utils.applyFilters(selectedRepo.activities, selectedMember, selectedTime);
-  }, [selectedRepo, selectedMember, selectedTime]);
+    return Utils.applyFilters(selectedRepo.activities, selectedMembers, selectedTime);
+  }, [selectedRepo, selectedMembers, selectedTime]);
 
  
 
@@ -121,9 +121,9 @@ export default function CommitsPage() {
 
       <BaseFilters
         members={members}
-        selectedMember={selectedMember}
+        selectedMembers={selectedMembers}
         selectedTime={selectedTime}
-        onMemberChange={setSelectedMember}
+        onMemberChange={setSelectedMembers}
         onTimeChange={setSelectedTime}
       />
 
