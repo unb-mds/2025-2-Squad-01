@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-25T05:07:25.821466",
+      "extracted_at": "2025-11-26T05:07:52.951805",
       "file_path": "data/bronze/issues_2025-2-Mural-UnB.json",
       "record_count": 77
     }
@@ -1140,11 +1140,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1275,7 +1275,7 @@
         "description": "Desenvolvimento utilizando Figma"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "apptrx",
@@ -1372,18 +1372,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2025-11-19T02:07:30Z",
-    "updated_at": "2025-11-24T18:10:34Z",
-    "closed_at": null,
+    "updated_at": "2025-11-26T01:04:35Z",
+    "closed_at": "2025-11-26T01:04:35Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -1408,7 +1408,27 @@
       "total_blocking": 0
     },
     "body": "\n\n## 🎯 Descrição / Objetivo\nEsta tarefa visa criar, atualizar e padronizar toda a documentação do repositório para garantir que o projeto seja compreensível, organizado e fácil de manter.\n\nA documentação será dividida em duas frentes: **Gestão de Produto** (Requisitos, Histórias) e **Documentação Técnica/Comunitária** (READMEs, Guias, Dados).\n\n---\n## ✅ Tarefas\n\n### 📦 Gestão do Produto\n- [x] **User Stories:** Definir e documentar as histórias de usuário principais (ex: aluno buscando lab, professor divulgando vaga).\n- [x] **Requisitos:** Listar requisitos Funcionais e Não-Funcionais atualizados.\n- [x] **Priorização:** Definir a prioridade dos requisitos (MoSCoW ou Alta/Média/Baixa).\n\n### 📖 Manuais (READMEs)\n- [ ] **README Geral (Raiz):** Atualizar com visão geral, arquitetura e links para as sub-pastas.\n- [ ] **README Scripts:** Criar/Atualizar guia em `scripts/` explicando como rodar o crawler, os testes e a geração de embeddings.\n- [ ] **README Frontend:** Criar/Atualizar guia em `site/` explicando como rodar o servidor de desenvolvimento.\n\n### 🤝 Comunidade e Segurança\n- [x] **CONTRIBUTING.md:** Documentar o fluxo de trabalho (branches, commits, PRs, padrões de código).\n- [x] **CODE_OF_CONDUCT.md:** Adicionar código de conduta padrão.\n- [x] **SECURITY.md:** Adicionar política de segurança básica.\n\n### 💾 Documentação de Dados\n- [ ] **Dicionário de Dados:** Documentar a estrutura dos arquivos gerados.\n    - Explicar colunas do `labs_fga.csv`.\n    - Explicar campos do JSON de tags e embeddings.\n    - Explicar o fluxo de entrada (PDF) -> Processamento -> Saída.\n\n---\n## 📎 Contexto Adicional\n- Dividir as tarefas entre os responsáveis.\n- Utilizar Markdown para todos os arquivos.\n- Garantir que os comandos nos READMEs foram testados e funcionam.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "apptrx",
+      "id": 128329654,
+      "node_id": "U_kgDOB6Yntg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128329654?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/apptrx",
+      "html_url": "https://github.com/apptrx",
+      "followers_url": "https://api.github.com/users/apptrx/followers",
+      "following_url": "https://api.github.com/users/apptrx/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apptrx/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apptrx/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apptrx/subscriptions",
+      "organizations_url": "https://api.github.com/users/apptrx/orgs",
+      "repos_url": "https://api.github.com/users/apptrx/repos",
+      "events_url": "https://api.github.com/users/apptrx/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apptrx/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Mural-UnB/issues/113/reactions",
       "total_count": 0,
@@ -1423,7 +1443,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Mural-UnB/issues/113/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Mural-UnB"
   },
   {
@@ -1563,11 +1583,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1765,11 +1785,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1967,11 +1987,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2380,11 +2400,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-16T11:49:10Z",
-      "updated_at": "2025-11-23T20:39:25Z",
+      "updated_at": "2025-11-26T01:04:35Z",
       "due_on": null,
       "closed_at": null
     },
