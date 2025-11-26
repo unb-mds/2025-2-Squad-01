@@ -255,8 +255,8 @@ export default function Timeline() {
       <div className="w-full h-full -mx-8 -my-8 px-8 py-8">
         <div className="space-y-4 mt-30">
           <div>
-            <h1 className="text-4xl font-bold text-white mb-2">Timeline</h1>
-            <p className="text-slate-400">
+            <h1 className="text-3xl font-bold text-white mb-2">Activity Timeline</h1>
+            <p className="text-slate-400 text-sm">
               Timeline of <strong>general</strong> repository events that happened during the <strong>past week or year</strong>. Represents the activities that team members made in <strong>any</strong> repository inside the organization
             </p>
           </div>

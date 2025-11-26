@@ -13,7 +13,7 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'organization', label: 'Overview', icon: '📊' },
+  { id: 'overview', label: 'Overview', icon: '📊' },
   { id: 'repos', label: 'Activities', icon: '💻' },
 ];
 
@@ -29,10 +29,12 @@ export default function Sidebar({ currentPage }: SidebarProps) {
   const navigate = useNavigate();
 
   const handleItemClick = (itemId: string) => {
-    if (itemId === 'organization') {
+    if (itemId === 'overview') {
       navigate('/overview/timeline');
-    } else {
-      navigate(`/${itemId}`);
+    } else if (itemId === 'repos') {
+      navigate(`/repos/commits`);
+    } else if (itemId === 'home') {
+      navigate('/');
     }
   };
 

@@ -121,8 +121,8 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
       {/* --- Success State (Data Loaded) --- */}
       {pageData && mainData && selectedRepo && !loading && !error && (
         <div className="h-fit mt-30">
-          <h1 className="text-3xl font-bold text-white mb-2">Repository Overview</h1>
-          <p className="text-slate-400 text-sm mb-4">General information and key collaboration metrics.</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Collaboration Map</h1>
+          <p className="text-slate-400 text-sm mb-4">Represents the collaboration connections between users based on their contributions to shared repositories.</p>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1">
