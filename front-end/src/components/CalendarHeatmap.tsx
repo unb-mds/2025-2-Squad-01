@@ -36,7 +36,7 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
   userData,
   mode = 'weekly',
   cellSize = 160,
-  margin = { top: 20, right: 20, bottom: 20, left: 100 },
+  margin = { top: 20, right: 30, bottom: 20, left: 125 },
   colorScheme = 'Blues',
   dateLabels = [],
 }) => {
@@ -100,6 +100,23 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
       .attr('dy', 2)
       .attr('stdDeviation', 3)
       .attr('flood-opacity', 0.3);
+
+    // Criar filtro de sombra para texto
+    const textShadowFilter = defs
+      .append('filter')
+      .attr('id', 'textShadow')
+      .attr('x', '-50%')
+      .attr('y', '-50%')
+      .attr('width', '200%')
+      .attr('height', '200%');
+
+    textShadowFilter
+      .append('feDropShadow')
+      .attr('dx', 2)
+      .attr('dy', 3)
+      .attr('stdDeviation', 2)
+      .attr('flood-color', '#000000')
+      .attr('flood-opacity', 0.7);
 
     // Grupo principal
     const g = svg
@@ -193,13 +210,33 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
         .text(labelsToUse[col] || '');
     }
 
+    // Adicionar título "Authors" alinhado com os nomes dos usuários
+    g.append('text')
+      .attr('x', -20)
+      .attr('y', -20)
+      .attr('text-anchor', 'end')
+      .attr('font-size', '12px')
+      .attr('font-weight', 'bold')
+      .attr('fill', 'rgba(200, 200, 200, 0.9)')
+      .text('Authors:');
+
+    // Adicionar título "Weekly Total" no mesmo nível das datas, acima do primeiro placeholder
+    g.append('text')
+      .attr('x', labelWidth - 150 + (cellSize - 4) / 2)
+      .attr('y', -20)
+      .attr('text-anchor', 'middle')
+      .attr('font-size', '12px')
+      .attr('font-weight', 'bold')
+      .attr('fill', 'rgba(200, 200, 200, 0.9)')
+      .text('Total Activities:');
+
     // Criar grid de retângulos
     for (let row = 0; row < rows; row++) {
       const user = userData[row];
       
       // Adicionar label da fileira com nome do usuário
       g.append('text')
-        .attr('x', -10)
+        .attr('x', -8)
         .attr('y', row * (cellHeight + 10) + (cellHeight - 4) / 2)
         .attr('text-anchor', 'end')
         .attr('dy', '0.35em')
@@ -232,8 +269,8 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
             .attr('y1', cellY + section * sectionHeight)
             .attr('x2', cellX + cellSize - 4)
             .attr('y2', cellY + section * sectionHeight)
-            .attr('stroke', 'rgba(100, 100, 100, 0.4)')
-            .attr('stroke-width', 0.5);
+            .attr('stroke', 'rgba(100, 100, 100, 0.6)')
+            .attr('stroke-width', 0.8);
         }
 
         // Adicionar texto no primeiro placeholder de cada fileira
@@ -326,8 +363,8 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
             .attr('y1', cellY + section * sectionHeight)
             .attr('x2', cellX + cellSize - 4)
             .attr('y2', cellY + section * sectionHeight)
-            .attr('stroke', 'rgba(150, 180, 220, 0.3)')
-            .attr('stroke-width', 0.5);
+            .attr('stroke', 'rgba(150, 180, 220, 0.5)')
+            .attr('stroke-width', 0.7);
         }
 
         // Adicionar valores individuais em cada seção com cores
@@ -365,6 +402,7 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
                 .attr('font-size', '12px')
                 .attr('font-weight', 'bold')
                 .attr('fill', metricColors[colorKey])
+                .attr('filter', 'url(#textShadow)')
                 .style('pointer-events', 'none')
                 .text(`${metricValue} ${metricColorKeys[sectionIdx].replace('_', ' ').replace('s ', '(s) ')}`);
             }
