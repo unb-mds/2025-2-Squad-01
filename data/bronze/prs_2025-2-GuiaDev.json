@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-26T05:08:37.457842",
+      "extracted_at": "2025-11-26T17:59:07.562555",
       "file_path": "data/bronze/prs_2025-2-GuiaDev.json",
       "record_count": 28
     }
@@ -220,7 +220,7 @@
         "description": "unit test"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "PedroGTG",
@@ -296,18 +296,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-18T00:21:50Z",
-      "updated_at": "2025-11-23T02:51:07Z",
+      "updated_at": "2025-11-26T12:57:34Z",
       "due_on": null,
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-22T21:08:59Z",
-    "updated_at": "2025-11-25T00:57:45Z",
-    "closed_at": null,
+    "updated_at": "2025-11-26T12:57:34Z",
+    "closed_at": "2025-11-26T12:57:34Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -317,10 +317,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/83",
       "diff_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/83.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/83.patch",
-      "merged_at": null
+      "merged_at": "2025-11-26T12:57:34Z"
     },
-    "body": "#  Otimização da Coleta de Dados via Cache e Ajuste do Endpoint `/analyze`\r\n\r\n## 📝 Descrição\r\nEste PR implementa uma estratégia de **cache lazy** para reduzir chamadas desnecessárias ao GitHub e melhorar o tempo de resposta do Back-End.  \r\nO endpoint existente (`/analyze`) foi ajustado para permitir atualização controlada dos dados presentes no banco, mantendo compatibilidade com o fluxo atual.  \r\n\r\nAlém disso, foram adicionados novos testes automatizados, resultando em aumento significativo da cobertura nos módulos `chat` e `github_api`, fortalecendo a estabilidade e segurança das entregas.\r\n\r\n---\r\n\r\n## Tipo de Alteração\r\n\r\n- [ ] 🐛 **Correção de Bug**\r\n- [ ] ✨ **Nova Funcionalidade**\r\n- [ ] 💥 **Quebra de Compatibilidade**\r\n- [ ] 📝 **Documentação**\r\n- [x] ♻️ **Refatoração**\r\n- [x] ⚡ **Melhoria de Performance**\r\n- [x] 🧪 **Testes**\r\n- [ ] 🔧 **Ferramentas**\r\n\r\n---\r\n\r\n## Issue Relacionada\r\nOtimização da Coleta de Dados com Cache Lazy + Endpoint de Atualização :https://github.com/unb-mds/2025-2-GuiaDev/issues/82\r\n\r\nCriação de Testes Automatizados para Todo o Backend: https://github.com/unb-mds/2025-2-GuiaDev/issues/75\r\n\r\n---\r\n\r\n## Motivação e Contexto\r\nAntes desta implementação, chamadas completas ao GitHub eram executadas mesmo quando dados já existiam no banco, afetando desempenho e aproximando o sistema do rate limit.  \r\nO cache lazy reduz esse impacto, tornando o fluxo mais eficiente e previsível.\r\n\r\nA ampliação da cobertura de testes dos módulos `chat` e `github_api` garante maior confiabilidade, reduz riscos de regressão e apoia práticas de desenvolvimento orientadas a qualidade (XP).\r\n\r\n---\r\n\r\n## Alterações Propostas\r\n- Implementação de cache lazy para dados coletados do GitHub.\r\n- Ajuste do endpoint `/analyze` para permitir atualização opcional do cache.\r\n- Redução de requisições externas redundantes.\r\n- Melhorias de legibilidade e separação de responsabilidades no fluxo de coleta.\r\n- Criação e atualização de testes unitários e de integração nos módulos `chat` e `github_api`.\r\n- Aumento da cobertura de testes desses módulos e validação de comportamentos críticos.\r\n\r\n---\r\n\r\n## Como Isso Foi Testado?\r\n\r\n**Testes Manuais**\r\n1. Solicitar `/analyze` com cache existente e confirmar retorno imediato.\r\n2. Solicitar `/analyze` com atualização forçada e validar refresh no banco.\r\n3. Verificar tempos de resposta antes e após a implementação.\r\n4. Confirmar persistência correta e ausência de duplicações.\r\n5. Uso do Jester para testes\r\n\r\n**Testes Automatizados**\r\n- Novos testes unitários cobrindo serviços, cenários de cache e atualização.\r\n- Testes de integração para validar comunicação entre módulos.\r\n- Expansão da cobertura nos módulos `chat` e `github_api`.\r\n\r\n-Ambiente: Docker (NestJS + PostgreSQL + Redis)\r\n- Navegador: Firefox\r\n- Dispositivo: Desktop\r\n\r\n\r\n---\r\n#Screenshots\r\n\r\n<img width=\"1878\" height=\"918\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c4cc3a4b-8607-4ded-8af5-c1d0244d54ef\" />\r\nCache lazy em ação\r\n\r\n<img width=\"1868\" height=\"840\" alt=\"image\" src=\"https://github.com/user-attachments/assets/76a2a238-5aaa-4945-b4a1-5f58b0709b42\" />\r\nagora tambem consigo o numero de contribuidores , forks, estrelas...\r\n\r\n![PI1](https://github.com/user-attachments/assets/bfdf6604-5248-4de5-a192-8c8c178c031e)\r\ntestando latencia com o front\r\n\r\n<img width=\"1119\" height=\"337\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fceb68b5-679e-416a-a1bf-aaa20d19917a\" />\r\nresultado do teste usando o jest e mocks para simular tokens\r\n\r\n---\r\n\r\n## Checklist do Revisor\r\n- [ ] O código segue o padrão do projeto\r\n- [ ] Cobertura de testes ampliada e validada\r\n- [ ] Não há regressões ou impactos colaterais\r\n- [ ] Logs e tratamento de erro adequados\r\n- [ ] CI/CD está passando\r\n- [ ] Impacto positivo comprovado em performance\r\n\r\n---\r\n\r\n## Informações Adicionais\r\n- Nenhuma dependência externa adicionada\r\n- Estrutura do banco permanece compatível\r\n- Endpoint mantém retrocompatibilidade funcional\r\n",
-    "closed_by": null,
+    "body": "#  Otimização da Coleta de Dados via Cache e Ajuste do Endpoint `/analyze`\r\n\r\n## 📝 Descrição\r\nEste PR implementa uma estratégia de **cache lazy** para reduzir chamadas desnecessárias ao GitHub e melhorar o tempo de resposta do Back-End.  \r\nO endpoint existente (`/analyze`) foi ajustado para permitir atualização controlada dos dados presentes no banco, mantendo compatibilidade com o fluxo atual.  \r\n\r\nAlém disso, foram adicionados novos testes automatizados, resultando em aumento significativo da cobertura nos módulos `chat` e `github_api`, fortalecendo a estabilidade e segurança das entregas.\r\n\r\n---\r\n\r\n## Tipo de Alteração\r\n\r\n- [ ] 🐛 **Correção de Bug**\r\n- [ ] ✨ **Nova Funcionalidade**\r\n- [ ] 💥 **Quebra de Compatibilidade**\r\n- [ ] 📝 **Documentação**\r\n- [x] ♻️ **Refatoração**\r\n- [x] ⚡ **Melhoria de Performance**\r\n- [x] 🧪 **Testes**\r\n- [ ] 🔧 **Ferramentas**\r\n\r\n---\r\n\r\n## Issue Relacionada\r\nOtimização da Coleta de Dados com Cache Lazy + Endpoint de Atualização :https://github.com/unb-mds/2025-2-GuiaDev/issues/82\r\n\r\nCriação de Testes Automatizados para Todo o Backend: https://github.com/unb-mds/2025-2-GuiaDev/issues/75\r\n\r\n---\r\n\r\n## Motivação e Contexto\r\nAntes desta implementação, chamadas completas ao GitHub eram executadas mesmo quando dados já existiam no banco, afetando desempenho e aproximando o sistema do rate limit.  \r\nO cache lazy reduz esse impacto, tornando o fluxo mais eficiente e previsível.\r\n\r\nA ampliação da cobertura de testes dos módulos `chat` e `github_api` garante maior confiabilidade, reduz riscos de regressão e apoia práticas de desenvolvimento orientadas a qualidade (XP).\r\n\r\n---\r\n\r\n## Alterações Propostas\r\n- Implementação de cache lazy para dados coletados do GitHub.\r\n- Ajuste do endpoint `/analyze` para permitir atualização opcional do cache.\r\n- Redução de requisições externas redundantes.\r\n- Melhorias de legibilidade e separação de responsabilidades no fluxo de coleta.\r\n- Criação e atualização de testes unitários e de integração nos módulos `chat` e `github_api`.\r\n- Aumento da cobertura de testes desses módulos e validação de comportamentos críticos.\r\n\r\n---\r\n\r\n## Como Isso Foi Testado?\r\n\r\n**Testes Manuais**\r\n1. Solicitar `/analyze` com cache existente e confirmar retorno imediato.\r\n2. Solicitar `/analyze` com atualização forçada e validar refresh no banco.\r\n3. Verificar tempos de resposta antes e após a implementação.\r\n4. Confirmar persistência correta e ausência de duplicações.\r\n5. Uso do Jester para testes\r\n\r\n**Testes Automatizados**\r\n- Novos testes unitários cobrindo serviços, cenários de cache e atualização.\r\n- Testes de integração para validar comunicação entre módulos.\r\n- Expansão da cobertura nos módulos `chat` e `github_api`.\r\n\r\n-Ambiente: Docker (NestJS + PostgreSQL + Redis)\r\n- Navegador: Firefox\r\n- Dispositivo: Desktop\r\n\r\n\r\n---\r\n#Screenshots\r\n\r\n<img width=\"1878\" height=\"918\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c4cc3a4b-8607-4ded-8af5-c1d0244d54ef\" />\r\nCache lazy em ação\r\n\r\n<img width=\"1868\" height=\"840\" alt=\"image\" src=\"https://github.com/user-attachments/assets/76a2a238-5aaa-4945-b4a1-5f58b0709b42\" />\r\nagora tambem consigo o numero de contribuidores , forks, estrelas...\r\n\r\n![PI1](https://github.com/user-attachments/assets/bfdf6604-5248-4de5-a192-8c8c178c031e)\r\ntestando latencia com o front\r\n\r\n<img width=\"1119\" height=\"337\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fceb68b5-679e-416a-a1bf-aaa20d19917a\" />\r\nresultado do teste usando o jest e mocks para simular tokens\r\n\r\n---\r\n\r\n## Checklist do Revisor\r\n- [x] O código segue o padrão do projeto\r\n- [ ] Cobertura de testes ampliada e validada\r\n- [ ] Não há regressões ou impactos colaterais\r\n- [ ] Logs e tratamento de erro adequados\r\n- [x] CI/CD está passando\r\n- [x] Impacto positivo comprovado em performance\r\n\r\n---\r\n\r\n## Informações Adicionais\r\n- Nenhuma dependência externa adicionada\r\n- Estrutura do banco permanece compatível\r\n- Endpoint mantém retrocompatibilidade funcional\r\n",
+    "closed_by": {
+      "login": "HugoFreitass",
+      "id": 130880914,
+      "node_id": "U_kgDOB80Vkg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130880914?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/HugoFreitass",
+      "html_url": "https://github.com/HugoFreitass",
+      "followers_url": "https://api.github.com/users/HugoFreitass/followers",
+      "following_url": "https://api.github.com/users/HugoFreitass/following{/other_user}",
+      "gists_url": "https://api.github.com/users/HugoFreitass/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/HugoFreitass/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/HugoFreitass/subscriptions",
+      "organizations_url": "https://api.github.com/users/HugoFreitass/orgs",
+      "repos_url": "https://api.github.com/users/HugoFreitass/repos",
+      "events_url": "https://api.github.com/users/HugoFreitass/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/HugoFreitass/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/83/reactions",
       "total_count": 0,

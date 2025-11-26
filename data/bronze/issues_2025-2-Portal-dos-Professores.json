@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-26T05:07:24.297392",
+      "extracted_at": "2025-11-26T17:57:51.709736",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 69
     }
@@ -144,16 +144,16 @@
         "site_admin": false
       },
       "open_issues": 1,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-11-25T16:55:10Z",
+      "updated_at": "2025-11-26T14:14:01Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-25T16:55:10Z",
-    "updated_at": "2025-11-25T17:23:02Z",
+    "updated_at": "2025-11-26T14:49:44Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -178,7 +178,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\nCom a página de detalhe estabilizada e responsiva, esta issue final se concentra em integrar os dados acadêmicos mais ricos (LAtuação profissional, Publicações Scholar e Métricas Scholar) que o backend fornece. O objetivo é transformar a página de um simples perfil em um dashboard completo de produção acadêmica do docente.\n\nAlém disso, faremos a correção estética da foto de perfil, garantindo que o visual do protótipo \"Lovable\" seja mantido em 100%.\n\n---\n\n## Objetivo\n- [ ] Corrigir a forma da foto de perfil, garantindo que seja **circular** (e não oval).\n- [ ] Criar a aba **\"Atuação Profissional\"** para exibir a história de trabalho do professor.\n- [ ] Criar a aba **\"Google Scholar\"** para exibir as publicações e métricas de citação.\n- [ ] Garantir o encerramento completo da funcionalidade da Página Detalhada do Professor.\n\n---\n\n## Requisitos\n- A foto de perfil deve usar o estilo `borderRadius=\"full\"` do Chakra.\n- A página deve ser estendida para um total de **cinco abas** (Visão Geral, Formação, Projetos, Atuação Profissional, Google Scholar).\n- O mapeamento dos novos dados deve usar as estruturas aninhadas do JSON:\n    - **Atuação Profissional:** `professor.dados_lattes.atuacao_profissional`\n    - **Métricas e Publicações:** `professor.dados_scholar`\n- Todos os novos blocos de dados devem incluir `null` checks (`?`) e fallbacks (`|| 'Não informado'`) para não quebrar em caso de dados faltantes (como no caso do Professor Adail).\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correções de UI/Estrutura\n- [ ] Aplicar `borderRadius=\"full\"` e garantir que o componente da foto (`<Image>` ou `<Avatar>`) tenha altura e largura iguais para o formato circular.\n- [ ] Atualizar a lista de imports para incluir `Stat`, `StatNumber`, `SimpleGrid` (Chakra UI) para as métricas.\n\n### Bloco 2: Integração de Novos Dados\n- [ ] **Atualizar TabList:** Adicionar as novas abas (\"Atuação Profissional\" e \"Google Scholar\") com contagem de itens.\n- [ ] **Criar TabPanel \"Atuação Profissional\":** Mapear e renderizar a lista de experiências de trabalho (`professor.dados_lattes.atuacao_profissional`), incluindo período e detalhes.\n- [ ] **Criar TabPanel \"Google Scholar\":**\n    - Implementar a seção de **Métricas** (`h-index`, `total_citacoes`) usando o componente `Stat` e `SimpleGrid`.\n    - Implementar a seção de **Publicações** (`publicacoes`) com `map()` para listar título, autores e contagem de citações.\n\n### Bloco 3: Verificação Final\n- [ ] Testar a página com professores que têm dados vazios (ex: Prof. Adail) para garantir que as novas abas exibam a mensagem de `null` em vez de quebrar.\n- [ ] Testar a página com professores com dados ricos (ex: Prof. Yoko) para garantir que as novas abas se preencham corretamente.",
+    "body": "## Descrição\nCom a página de detalhe estabilizada e responsiva, esta issue final se concentra em integrar os dados acadêmicos mais ricos (LAtuação profissional, Publicações Scholar e Métricas Scholar) que o backend fornece. O objetivo é transformar a página de um simples perfil em um dashboard completo de produção acadêmica do docente.\n\nAlém disso, faremos a correção estética da foto de perfil, garantindo que o visual do protótipo \"Lovable\" seja mantido em 100%.\n\n---\n\n## Objetivo\n- [x] Corrigir a forma da foto de perfil, garantindo que seja **circular** (e não oval).\n- [x] Criar a aba **\"Atuação Profissional\"** para exibir a história de trabalho do professor.\n- [x] Criar a aba **\"Google Scholar\"** para exibir as publicações e métricas de citação.\n- [x] Garantir o encerramento completo da funcionalidade da Página Detalhada do Professor.\n\n---\n\n## Requisitos\n- A foto de perfil deve usar o estilo `borderRadius=\"full\"` do Chakra.\n- A página deve ser estendida para um total de **cinco abas** (Visão Geral, Formação, Projetos, Atuação Profissional, Google Scholar).\n- O mapeamento dos novos dados deve usar as estruturas aninhadas do JSON:\n    - **Atuação Profissional:** `professor.dados_lattes.atuacao_profissional`\n    - **Métricas e Publicações:** `professor.dados_scholar`\n- Todos os novos blocos de dados devem incluir `null` checks (`?`) e fallbacks (`|| 'Não informado'`) para não quebrar em caso de dados faltantes (como no caso do Professor Adail).\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correções de UI/Estrutura\n- [x] Aplicar `borderRadius=\"full\"` e garantir que o componente da foto (`<Image>` ou `<Avatar>`) tenha altura e largura iguais para o formato circular.\n- [x] Atualizar a lista de imports para incluir `Stat`, `StatNumber`, `SimpleGrid` (Chakra UI) para as métricas.\n\n### Bloco 2: Integração de Novos Dados\n- [x] **Atualizar TabList:** Adicionar as novas abas (\"Atuação Profissional\" e \"Google Scholar\") com contagem de itens.\n- [x] **Criar TabPanel \"Atuação Profissional\":** Mapear e renderizar a lista de experiências de trabalho (`professor.dados_lattes.atuacao_profissional`), incluindo período e detalhes.\n- [x] **Criar TabPanel \"Google Scholar\":**\n    - Implementar a seção de **Métricas** (`h-index`, `total_citacoes`) usando o componente `Stat` e `SimpleGrid`.\n    - Implementar a seção de **Publicações** (`publicacoes`) com `map()` para listar título, autores e contagem de citações.\n\n### Bloco 3: Verificação Final\n- [x] Testar a página com professores que têm dados vazios (ex: Prof. Adail) para garantir que as novas abas exibam a mensagem de `null` em vez de quebrar.\n- [x] Testar a página com professores com dados ricos (ex: Prof.  Sergio Andrade) para garantir que as novas abas se preencham corretamente.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/141/reactions",
