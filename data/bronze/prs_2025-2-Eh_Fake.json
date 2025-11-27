@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-26T17:57:58.756126",
+      "extracted_at": "2025-11-27T05:07:58.881086",
       "file_path": "data/bronze/prs_2025-2-Eh_Fake.json",
       "record_count": 13
     }
@@ -67,7 +67,7 @@
         "description": "Alterações visuais ou de UX/UI"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Mateus0xC",
@@ -144,17 +144,17 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 2,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-23T18:06:23Z",
-      "updated_at": "2025-11-26T03:00:53Z",
+      "updated_at": "2025-11-26T21:18:34Z",
       "due_on": "2025-11-30T08:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-11-26T02:58:17Z",
-    "updated_at": "2025-11-26T03:02:38Z",
-    "closed_at": null,
+    "updated_at": "2025-11-26T21:14:34Z",
+    "closed_at": "2025-11-26T21:14:33Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -164,10 +164,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Eh_Fake/pull/88",
       "diff_url": "https://github.com/unb-mds/2025-2-Eh_Fake/pull/88.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Eh_Fake/pull/88.patch",
-      "merged_at": null
+      "merged_at": "2025-11-26T21:14:33Z"
     },
     "body": "## Descrição\r\n\r\n- **O que foi alterado/implementado?**\r\n  - Implementado um novo componente `FilterBar` na página inicial.\r\n  - Atualizada a API `/api/noticias` para suportar filtragem por status (`Real`, `Fake`).\r\n  - Integrada a lógica de filtragem no componente `LoadCards`.\r\n  - Adicionada animação de \"pílula deslizante\" e cores dinâmicas no filtro.\r\n  - Ajustada a responsividade e o suporte a Dark Mode do filtro.\r\n\r\n- **Por que esta mudança é necessária / qual problema resolve?**\r\n  - Permite que os usuários visualizem apenas notícias \"Verdadeiras\" ou \"Falsas\", facilitando a navegação e a verificação de conteúdo. Antes, todas as notícias eram misturadas sem opção de separação rápida.\r\n\r\n- **Como foi feita a implementação?**\r\n  - **Frontend:** Criado `FilterBar.tsx` usando Tailwind CSS para estilização e animações. O estado do filtro é gerenciado em `LoadCards.tsx` e passado para a função de fetch.\r\n  - **Backend:** O endpoint da API agora lê o query param `status` e aplica um `where` condition no Prisma.\r\n  - **UI/UX:** Design moderno com feedback visual imediato (cores Verde/Vermelho) e transições suaves.\r\n\r\n- **Quais Issues são fechadas ou vinculadas?**\r\n  - Closes #87\r\n\r\n---\r\n\r\n## Tipo de mudança\r\n\r\n- [ ] [Fix] Correção de bug\r\n- [x] [Feat] Nova funcionalidade\r\n- [x] [UI/UX] Alteração do design da página\r\n- [ ] [Style] Mudança no formato do código sem mudança no funcionamento\r\n\r\n---\r\n\r\n## Checklist\r\n\r\n- [x] Li as ''Normas de envio'' do projeto\r\n- [x] Código segue os padrões de estilo do projeto\r\n- [x] Adicionei / atualizei os testes necessários\r\n- [x] Testes existentes passam localmente\r\n- [x] Não há erros que impeçam o funcionamento do código\r\n- [x] Atualizei documentação caso necessário\r\n- [x] Usei o rebuild para garantir que não há incompatibilidade com a versão\r\n- [x] **O código não quebrou**\r\n\r\n---\r\n\r\n## Como testar / reproduzir\r\n\r\n1. Acesse a página inicial da aplicação.\r\n2. Localize a barra de filtros abaixo da barra de pesquisa.\r\n3. Clique em **\"Verdadeiras\"**:\r\n   - A pílula deve deslizar para o meio e ficar **Verde**.\r\n   - A lista deve exibir apenas notícias com badge \"É REAL\".\r\n4. Clique em **\"Falsas\"**:\r\n   - A pílula deve deslizar para a direita e ficar **Vermelha**.\r\n   - A lista deve exibir apenas notícias com badge \"É FAKE\".\r\n5. Clique em **\"Todas\"**:\r\n   - A pílula volta ao início (cor neutra) e todas as notícias são exibidas.\r\n6. Teste em conjunto com a busca por texto (ex: digite algo e filtre).\r\n7. Teste alternar entre **Light Mode** e **Dark Mode** para verificar as cores.\r\n\r\n---\r\n\r\n## Áreas impactadas\r\n\r\n- **Home Page**: Exibição e listagem de cards.\r\n- **API**: Endpoint de listagem de notícias.\r\n- **Componentes**: `LoadCards`, `FilterBar`, `SearchBar` (ajuste de margem).\r\n\r\n---\r\n\r\n## Observações extras\r\nA animação do filtro foi feita inteiramente com CSS/Tailwind, sem bibliotecas externas pesadas, garantindo alta performance.\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Romm-0",
+      "id": 164571475,
+      "node_id": "U_kgDOCc8pUw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/164571475?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Romm-0",
+      "html_url": "https://github.com/Romm-0",
+      "followers_url": "https://api.github.com/users/Romm-0/followers",
+      "following_url": "https://api.github.com/users/Romm-0/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Romm-0/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Romm-0/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Romm-0/subscriptions",
+      "organizations_url": "https://api.github.com/users/Romm-0/orgs",
+      "repos_url": "https://api.github.com/users/Romm-0/repos",
+      "events_url": "https://api.github.com/users/Romm-0/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Romm-0/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Eh_Fake/issues/88/reactions",
       "total_count": 0,
@@ -402,10 +422,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 2,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-23T18:06:23Z",
-      "updated_at": "2025-11-26T03:00:53Z",
+      "updated_at": "2025-11-26T21:18:34Z",
       "due_on": "2025-11-30T08:00:00Z",
       "closed_at": null
     },
