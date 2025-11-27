@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-27T05:07:37.959773",
+      "extracted_at": "2025-11-27T22:19:08.191092",
       "file_path": "data/bronze/prs_2025-2-Squad-01.json",
       "record_count": 34
     }
@@ -58,15 +58,15 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2025-11-26T17:56:19Z",
-    "updated_at": "2025-11-26T17:57:00Z",
-    "closed_at": null,
+    "updated_at": "2025-11-27T22:10:32Z",
+    "closed_at": "2025-11-27T22:10:21Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -76,10 +76,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/99",
       "diff_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/99.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/99.patch",
-      "merged_at": null
+      "merged_at": "2025-11-27T22:10:21Z"
     },
     "body": "This pull request updates two data files: `activity_heatmap.json` and `cross_repository_hubs.json`. The main changes involve updating activity counts for specific days and hours in the activity heatmap, as well as adding, removing, or modifying user entries and their associated repositories and collaborator counts in the cross-repository hubs data.\r\n\r\n**Key changes:**\r\n\r\n**Activity Heatmap Data Updates (`data/silver/activity_heatmap.json`):**\r\n- Adjusted `activity_count` values for multiple (day_of_week, hour) combinations, reflecting new or corrected activity data throughout the week. [[1]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R4-R29) [[2]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R74-R78) [[3]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R128-R141) [[4]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R151-R155) [[5]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R190-R203) [[6]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R233-R246) [[7]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R286-R290) [[8]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R355-R359) [[9]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R414-R427) [[10]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R502-R506) [[11]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R531-R535) [[12]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R575-R579) [[13]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R624-R656) [[14]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R707-R720) [[15]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R740-R744) [[16]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R784-R788) [[17]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R803-R807) [[18]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R817-R830) [[19]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R840-R844) [[20]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R854-R858) [[21]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R868-R872) [[22]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R887-R891) [[23]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R931-R962) [[24]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R972-R1021) [[25]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R1036-R1040)\r\n\r\n**Cross-Repository Hubs Data Updates (`data/silver/cross_repository_hubs.json`):**\r\n- Added new user entries with their associated repositories and collaborator counts (e.g., `rafgpereira`, `ana-pfeilsticker`, `MariaCHelena`, `mat054`, `BrunoBReis`, `luccameds`, `Mateushqms`, `Paxxaglia`, `M4RINH0`). [[1]](diffhunk://#diff-f2bebc06229456e02e4a8380404a2a539e2e46ccd8f4122074381ab6728d82c9R237-R259) [[2]](diffhunk://#diff-f2bebc06229456e02e4a8380404a2a539e2e46ccd8f4122074381ab6728d82c9R354-R364) [[3]](diffhunk://#diff-f2bebc06229456e02e4a8380404a2a539e2e46ccd8f4122074381ab6728d82c9R374-R430) [[4]](diffhunk://#diff-f2bebc06229456e02e4a8380404a2a539e2e46ccd8f4122074381ab6728d82c9R440-R453)\r\n- Updated existing user entries, including changes to the number of collaborators for users such as `zlimaz`.\r\n- Adjusted metadata timestamps to reflect the latest data extraction. [[1]](diffhunk://#diff-928906c2c378d215ada567706b7051e48071e7d5538b536d03050d18c742d158R4-R29) [[2]](diffhunk://#diff-f2bebc06229456e02e4a8380404a2a539e2e46ccd8f4122074381ab6728d82c9R4-R8)\r\n\r\nThese updates ensure that both the activity heatmap and the cross-repository collaboration data reflect the most recent and accurate information available.\r\n\r\nCloses #98",
-    "closed_by": null,
+    "closed_by": {
+      "login": "pedruck",
+      "id": 68859909,
+      "node_id": "MDQ6VXNlcjY4ODU5OTA5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68859909?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pedruck",
+      "html_url": "https://github.com/pedruck",
+      "followers_url": "https://api.github.com/users/pedruck/followers",
+      "following_url": "https://api.github.com/users/pedruck/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pedruck/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pedruck/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pedruck/subscriptions",
+      "organizations_url": "https://api.github.com/users/pedruck/orgs",
+      "repos_url": "https://api.github.com/users/pedruck/repos",
+      "events_url": "https://api.github.com/users/pedruck/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pedruck/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Squad-01/issues/99/reactions",
       "total_count": 0,
@@ -732,7 +752,7 @@
       "state": "open",
       "created_at": "2025-11-10T13:18:09Z",
       "updated_at": "2025-11-17T17:01:58Z",
-      "due_on": "2025-11-17T08:00:00Z",
+      "due_on": "2025-11-17T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
@@ -1014,7 +1034,7 @@
       "state": "open",
       "created_at": "2025-11-10T13:18:09Z",
       "updated_at": "2025-11-17T17:01:58Z",
-      "due_on": "2025-11-17T08:00:00Z",
+      "due_on": "2025-11-17T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
@@ -1432,7 +1452,7 @@
       "state": "open",
       "created_at": "2025-11-10T13:18:09Z",
       "updated_at": "2025-11-17T17:01:58Z",
-      "due_on": "2025-11-17T08:00:00Z",
+      "due_on": "2025-11-17T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
@@ -2194,12 +2214,12 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-10-13T13:14:53Z",
-      "updated_at": "2025-11-10T14:26:35Z",
-      "due_on": "2025-10-20T07:00:00Z",
+      "updated_at": "2025-11-27T17:46:02Z",
+      "due_on": "2025-10-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
@@ -2375,12 +2395,12 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-10-13T13:14:53Z",
-      "updated_at": "2025-11-10T14:26:35Z",
-      "due_on": "2025-10-20T07:00:00Z",
+      "updated_at": "2025-11-27T17:46:02Z",
+      "due_on": "2025-10-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 2,
@@ -2657,12 +2677,12 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-10-13T13:14:53Z",
-      "updated_at": "2025-11-10T14:26:35Z",
-      "due_on": "2025-10-20T07:00:00Z",
+      "updated_at": "2025-11-27T17:46:02Z",
+      "due_on": "2025-10-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
@@ -2796,12 +2816,12 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-10-13T13:14:53Z",
-      "updated_at": "2025-11-10T14:26:35Z",
-      "due_on": "2025-10-20T07:00:00Z",
+      "updated_at": "2025-11-27T17:46:02Z",
+      "due_on": "2025-10-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
@@ -2925,12 +2945,12 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2025-10-13T13:14:53Z",
-      "updated_at": "2025-11-10T14:26:35Z",
-      "due_on": "2025-10-20T07:00:00Z",
+      "updated_at": "2025-11-27T17:46:02Z",
+      "due_on": "2025-10-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
@@ -3069,7 +3089,7 @@
       "state": "closed",
       "created_at": "2025-10-06T14:12:01Z",
       "updated_at": "2025-11-10T13:19:06Z",
-      "due_on": "2025-10-13T07:00:00Z",
+      "due_on": "2025-10-13T00:00:00Z",
       "closed_at": "2025-11-10T13:19:06Z"
     },
     "comments": 1,
@@ -3208,7 +3228,7 @@
       "state": "closed",
       "created_at": "2025-10-06T14:12:01Z",
       "updated_at": "2025-11-10T13:19:06Z",
-      "due_on": "2025-10-13T07:00:00Z",
+      "due_on": "2025-10-13T00:00:00Z",
       "closed_at": "2025-11-10T13:19:06Z"
     },
     "comments": 1,
@@ -3511,7 +3531,7 @@
       "state": "closed",
       "created_at": "2025-09-22T15:43:02Z",
       "updated_at": "2025-10-13T13:12:51Z",
-      "due_on": "2025-10-01T07:00:00Z",
+      "due_on": "2025-10-01T00:00:00Z",
       "closed_at": "2025-10-06T13:48:23Z"
     },
     "comments": 0,
@@ -3701,7 +3721,7 @@
       "state": "closed",
       "created_at": "2025-10-06T14:12:01Z",
       "updated_at": "2025-11-10T13:19:06Z",
-      "due_on": "2025-10-13T07:00:00Z",
+      "due_on": "2025-10-13T00:00:00Z",
       "closed_at": "2025-11-10T13:19:06Z"
     },
     "comments": 0,
@@ -3882,7 +3902,7 @@
       "state": "closed",
       "created_at": "2025-09-22T15:43:02Z",
       "updated_at": "2025-10-13T13:12:51Z",
-      "due_on": "2025-10-01T07:00:00Z",
+      "due_on": "2025-10-01T00:00:00Z",
       "closed_at": "2025-10-06T13:48:23Z"
     },
     "comments": 0,
@@ -4063,7 +4083,7 @@
       "state": "closed",
       "created_at": "2025-09-22T15:43:02Z",
       "updated_at": "2025-10-13T13:12:51Z",
-      "due_on": "2025-10-01T07:00:00Z",
+      "due_on": "2025-10-01T00:00:00Z",
       "closed_at": "2025-10-06T13:48:23Z"
     },
     "comments": 0,
@@ -4244,7 +4264,7 @@
       "state": "closed",
       "created_at": "2025-09-15T18:28:17Z",
       "updated_at": "2025-10-06T13:48:26Z",
-      "due_on": "2025-09-23T07:00:00Z",
+      "due_on": "2025-09-23T00:00:00Z",
       "closed_at": "2025-10-06T13:48:26Z"
     },
     "comments": 0,
@@ -4425,7 +4445,7 @@
       "state": "closed",
       "created_at": "2025-09-15T18:28:17Z",
       "updated_at": "2025-10-06T13:48:26Z",
-      "due_on": "2025-09-23T07:00:00Z",
+      "due_on": "2025-09-23T00:00:00Z",
       "closed_at": "2025-10-06T13:48:26Z"
     },
     "comments": 0,
@@ -4615,7 +4635,7 @@
       "state": "closed",
       "created_at": "2025-09-15T18:28:17Z",
       "updated_at": "2025-10-06T13:48:26Z",
-      "due_on": "2025-09-23T07:00:00Z",
+      "due_on": "2025-09-23T00:00:00Z",
       "closed_at": "2025-10-06T13:48:26Z"
     },
     "comments": 0,
@@ -4817,7 +4837,7 @@
       "state": "closed",
       "created_at": "2025-09-05T14:20:20Z",
       "updated_at": "2025-10-06T13:48:24Z",
-      "due_on": "2025-09-16T07:00:00Z",
+      "due_on": "2025-09-16T00:00:00Z",
       "closed_at": "2025-10-06T13:48:24Z"
     },
     "comments": 0,
