@@ -1,0 +1,1240 @@
+{
+  "repository": "2023-2-JuizVirtual",
+  "owner": "unb-mds",
+  "branch": "main",
+  "extracted_at": "2025-11-28T18:11:09.882733",
+  "hierarchy": {
+    "name": "2023-2-JuizVirtual",
+    "type": "directory",
+    "children": [
+      {
+        "name": ".codeclimate.yml",
+        "type": "file",
+        "language": "YAML",
+        "value": 236,
+        "path": ".codeclimate.yml"
+      },
+      {
+        "name": ".github",
+        "type": "directory",
+        "path": ".github",
+        "children": [
+          {
+            "name": "CODE_OF_CONDUCT.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 4771,
+            "path": ".github/CODE_OF_CONDUCT.md"
+          },
+          {
+            "name": "CONTRIBUTING.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 2054,
+            "path": ".github/CONTRIBUTING.md"
+          },
+          {
+            "name": "ISSUE_TEMPLATE",
+            "type": "directory",
+            "path": ".github/ISSUE_TEMPLATE",
+            "children": [
+              {
+                "name": "bug_report.yml",
+                "type": "file",
+                "language": "YAML",
+                "value": 1037,
+                "path": ".github/ISSUE_TEMPLATE/bug_report.yml"
+              },
+              {
+                "name": "feature_request.yml",
+                "type": "file",
+                "language": "YAML",
+                "value": 596,
+                "path": ".github/ISSUE_TEMPLATE/feature_request.yml"
+              }
+            ],
+            "value": 1633
+          },
+          {
+            "name": "PULL_REQUEST_TEMPLATE.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 1039,
+            "path": ".github/PULL_REQUEST_TEMPLATE.md"
+          },
+          {
+            "name": "workflows",
+            "type": "directory",
+            "path": ".github/workflows",
+            "children": [
+              {
+                "name": "ci.yml",
+                "type": "file",
+                "language": "YAML",
+                "value": 2322,
+                "path": ".github/workflows/ci.yml"
+              },
+              {
+                "name": "test.yml",
+                "type": "file",
+                "language": "YAML",
+                "value": 1798,
+                "path": ".github/workflows/test.yml"
+              }
+            ],
+            "value": 4120
+          }
+        ],
+        "value": 13617
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Unknown",
+        "value": 3078,
+        "path": ".gitignore"
+      },
+      {
+        "name": ".pre-commit-config.yaml",
+        "type": "file",
+        "language": "YAML",
+        "value": 1194,
+        "path": ".pre-commit-config.yaml"
+      },
+      {
+        "name": ".readthedocs.yaml",
+        "type": "file",
+        "language": "YAML",
+        "value": 175,
+        "path": ".readthedocs.yaml"
+      },
+      {
+        "name": ".tool-versions",
+        "type": "file",
+        "language": "Unknown",
+        "value": 27,
+        "path": ".tool-versions"
+      },
+      {
+        "name": "LICENSE",
+        "type": "file",
+        "language": "No Extension",
+        "value": 1060,
+        "path": "LICENSE"
+      },
+      {
+        "name": "Procfile",
+        "type": "file",
+        "language": "No Extension",
+        "value": 100,
+        "path": "Procfile"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "value": 4255,
+        "path": "README.md"
+      },
+      {
+        "name": "app.json",
+        "type": "file",
+        "language": "JSON",
+        "value": 547,
+        "path": "app.json"
+      },
+      {
+        "name": "apps",
+        "type": "directory",
+        "path": "apps",
+        "children": [
+          {
+            "name": "contests",
+            "type": "directory",
+            "path": "apps/contests",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 206,
+                "path": "apps/contests/__init__.py"
+              },
+              {
+                "name": "admin.py",
+                "type": "file",
+                "language": "Python",
+                "value": 979,
+                "path": "apps/contests/admin.py"
+              },
+              {
+                "name": "enums.py",
+                "type": "file",
+                "language": "Python",
+                "value": 159,
+                "path": "apps/contests/enums.py"
+              },
+              {
+                "name": "migrations",
+                "type": "directory",
+                "path": "apps/contests/migrations",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1375,
+                    "path": "apps/contests/migrations/0001_initial.py"
+                  },
+                  {
+                    "name": "0002_contest_cancelled.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 380,
+                    "path": "apps/contests/migrations/0002_contest_cancelled.py"
+                  }
+                ],
+                "value": 1755
+              },
+              {
+                "name": "models.py",
+                "type": "file",
+                "language": "Python",
+                "value": 2291,
+                "path": "apps/contests/models.py"
+              },
+              {
+                "name": "tests.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5454,
+                "path": "apps/contests/tests.py"
+              },
+              {
+                "name": "urls.py",
+                "type": "file",
+                "language": "Python",
+                "value": 175,
+                "path": "apps/contests/urls.py"
+              },
+              {
+                "name": "views.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1212,
+                "path": "apps/contests/views.py"
+              }
+            ],
+            "value": 12231
+          },
+          {
+            "name": "submissions",
+            "type": "directory",
+            "path": "apps/submissions",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 218,
+                "path": "apps/submissions/__init__.py"
+              },
+              {
+                "name": "admin.py",
+                "type": "file",
+                "language": "Python",
+                "value": 943,
+                "path": "apps/submissions/admin.py"
+              },
+              {
+                "name": "forms.py",
+                "type": "file",
+                "language": "Python",
+                "value": 244,
+                "path": "apps/submissions/forms.py"
+              },
+              {
+                "name": "migrations",
+                "type": "directory",
+                "path": "apps/submissions/migrations",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1668,
+                    "path": "apps/submissions/migrations/0001_initial.py"
+                  },
+                  {
+                    "name": "0002_alter_submission_code.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 485,
+                    "path": "apps/submissions/migrations/0002_alter_submission_code.py"
+                  },
+                  {
+                    "name": "0003_submission_status.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1056,
+                    "path": "apps/submissions/migrations/0003_submission_status.py"
+                  }
+                ],
+                "value": 3209
+              },
+              {
+                "name": "models.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1647,
+                "path": "apps/submissions/models.py"
+              },
+              {
+                "name": "tests.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4292,
+                "path": "apps/submissions/tests.py"
+              },
+              {
+                "name": "urls.py",
+                "type": "file",
+                "language": "Python",
+                "value": 179,
+                "path": "apps/submissions/urls.py"
+              },
+              {
+                "name": "views.py",
+                "type": "file",
+                "language": "Python",
+                "value": 569,
+                "path": "apps/submissions/views.py"
+              }
+            ],
+            "value": 11301
+          },
+          {
+            "name": "tasks",
+            "type": "directory",
+            "path": "apps/tasks",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 194,
+                "path": "apps/tasks/__init__.py"
+              },
+              {
+                "name": "admin.py",
+                "type": "file",
+                "language": "Python",
+                "value": 2622,
+                "path": "apps/tasks/admin.py"
+              },
+              {
+                "name": "migrations",
+                "type": "directory",
+                "path": "apps/tasks/migrations",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1380,
+                    "path": "apps/tasks/migrations/0001_initial.py"
+                  },
+                  {
+                    "name": "0002_alter_task_options_alter_task_table.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 408,
+                    "path": "apps/tasks/migrations/0002_alter_task_options_alter_task_table.py"
+                  },
+                  {
+                    "name": "0003_task_memory_limit_task_score_and_more.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 700,
+                    "path": "apps/tasks/migrations/0003_task_memory_limit_task_score_and_more.py"
+                  },
+                  {
+                    "name": "0004_task_input_file_task_output_file.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 550,
+                    "path": "apps/tasks/migrations/0004_task_input_file_task_output_file.py"
+                  },
+                  {
+                    "name": "0005_task_constraints.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 579,
+                    "path": "apps/tasks/migrations/0005_task_constraints.py"
+                  }
+                ],
+                "value": 3617
+              },
+              {
+                "name": "models.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1072,
+                "path": "apps/tasks/models.py"
+              },
+              {
+                "name": "tests.py",
+                "type": "file",
+                "language": "Python",
+                "value": 18963,
+                "path": "apps/tasks/tests.py"
+              },
+              {
+                "name": "urls.py",
+                "type": "file",
+                "language": "Python",
+                "value": 169,
+                "path": "apps/tasks/urls.py"
+              },
+              {
+                "name": "views.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4260,
+                "path": "apps/tasks/views.py"
+              }
+            ],
+            "value": 30897
+          },
+          {
+            "name": "users",
+            "type": "directory",
+            "path": "apps/users",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 194,
+                "path": "apps/users/__init__.py"
+              },
+              {
+                "name": "admin.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1108,
+                "path": "apps/users/admin.py"
+              },
+              {
+                "name": "forms.py",
+                "type": "file",
+                "language": "Python",
+                "value": 392,
+                "path": "apps/users/forms.py"
+              },
+              {
+                "name": "managers.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1077,
+                "path": "apps/users/managers.py"
+              },
+              {
+                "name": "migrations",
+                "type": "directory",
+                "path": "apps/users/migrations",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 3060,
+                    "path": "apps/users/migrations/0001_initial.py"
+                  },
+                  {
+                    "name": "0002_user_score.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 366,
+                    "path": "apps/users/migrations/0002_user_score.py"
+                  }
+                ],
+                "value": 3426
+              },
+              {
+                "name": "models.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1503,
+                "path": "apps/users/models.py"
+              },
+              {
+                "name": "tests.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5800,
+                "path": "apps/users/tests.py"
+              },
+              {
+                "name": "urls.py",
+                "type": "file",
+                "language": "Python",
+                "value": 338,
+                "path": "apps/users/urls.py"
+              },
+              {
+                "name": "views.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1801,
+                "path": "apps/users/views.py"
+              }
+            ],
+            "value": 15639
+          }
+        ],
+        "value": 70068
+      },
+      {
+        "name": "bin",
+        "type": "directory",
+        "path": "bin",
+        "children": [
+          {
+            "name": "create-env",
+            "type": "file",
+            "language": "No Extension",
+            "value": 417,
+            "path": "bin/create-env"
+          }
+        ],
+        "value": 417
+      },
+      {
+        "name": "config",
+        "type": "directory",
+        "path": "config",
+        "children": [
+          {
+            "name": ".env.example",
+            "type": "file",
+            "language": "Unknown",
+            "value": 473,
+            "path": "config/.env.example"
+          }
+        ],
+        "value": 473
+      },
+      {
+        "name": "core",
+        "type": "directory",
+        "path": "core",
+        "children": [
+          {
+            "name": "models.py",
+            "type": "file",
+            "language": "Python",
+            "value": 694,
+            "path": "core/models.py"
+          }
+        ],
+        "value": 694
+      },
+      {
+        "name": "docker-compose.yml",
+        "type": "file",
+        "language": "YAML",
+        "value": 1570,
+        "path": "docker-compose.yml"
+      },
+      {
+        "name": "docker",
+        "type": "directory",
+        "path": "docker",
+        "children": [
+          {
+            "name": "django",
+            "type": "directory",
+            "path": "docker/django",
+            "children": [
+              {
+                "name": "Dockerfile",
+                "type": "file",
+                "language": "No Extension",
+                "value": 3095,
+                "path": "docker/django/Dockerfile"
+              },
+              {
+                "name": "entrypoint.sh",
+                "type": "file",
+                "language": "Shell",
+                "value": 743,
+                "path": "docker/django/entrypoint.sh"
+              }
+            ],
+            "value": 3838
+          }
+        ],
+        "value": 3838
+      },
+      {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs",
+        "children": [
+          {
+            "name": "Makefile",
+            "type": "file",
+            "language": "No Extension",
+            "value": 638,
+            "path": "docs/Makefile"
+          },
+          {
+            "name": "_static",
+            "type": "directory",
+            "path": "docs/_static",
+            "children": [
+              {
+                "name": "arch.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 42641,
+                "path": "docs/_static/arch.png"
+              },
+              {
+                "name": "epic.jpeg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 120641,
+                "path": "docs/_static/epic.jpeg"
+              },
+              {
+                "name": "initial_screen.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 68996,
+                "path": "docs/_static/initial_screen.png"
+              },
+              {
+                "name": "prototipo_mds-01.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 120912,
+                "path": "docs/_static/prototipo_mds-01.png"
+              },
+              {
+                "name": "prototipo_mds-02.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 248514,
+                "path": "docs/_static/prototipo_mds-02.png"
+              },
+              {
+                "name": "prototipo_mds-03.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 210911,
+                "path": "docs/_static/prototipo_mds-03.png"
+              },
+              {
+                "name": "prototipo_mds-04.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 71799,
+                "path": "docs/_static/prototipo_mds-04.png"
+              },
+              {
+                "name": "prototipo_mds-05.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 53499,
+                "path": "docs/_static/prototipo_mds-05.png"
+              },
+              {
+                "name": "prototipo_mds-06.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 47939,
+                "path": "docs/_static/prototipo_mds-06.png"
+              },
+              {
+                "name": "prototipo_mds-07.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 251960,
+                "path": "docs/_static/prototipo_mds-07.png"
+              },
+              {
+                "name": "prototipo_mds-08.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 123152,
+                "path": "docs/_static/prototipo_mds-08.png"
+              },
+              {
+                "name": "prototipo_mds-09.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 112748,
+                "path": "docs/_static/prototipo_mds-09.png"
+              },
+              {
+                "name": "prototipo_mds-10.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 124534,
+                "path": "docs/_static/prototipo_mds-10.png"
+              },
+              {
+                "name": "prototipo_mds-11.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 204970,
+                "path": "docs/_static/prototipo_mds-11.png"
+              },
+              {
+                "name": "prototipo_mds-12.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 63795,
+                "path": "docs/_static/prototipo_mds-12.png"
+              },
+              {
+                "name": "prototipo_mds-13.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 65677,
+                "path": "docs/_static/prototipo_mds-13.png"
+              },
+              {
+                "name": "prototipo_mds-14.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 160794,
+                "path": "docs/_static/prototipo_mds-14.png"
+              },
+              {
+                "name": "prototipo_mds-15.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 202494,
+                "path": "docs/_static/prototipo_mds-15.png"
+              },
+              {
+                "name": "prototipo_mds-16.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 80553,
+                "path": "docs/_static/prototipo_mds-16.png"
+              },
+              {
+                "name": "prototipo_mds-17.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 168804,
+                "path": "docs/_static/prototipo_mds-17.png"
+              },
+              {
+                "name": "prototipo_mds-18.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 160545,
+                "path": "docs/_static/prototipo_mds-18.png"
+              },
+              {
+                "name": "prototipo_mds-19.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 137686,
+                "path": "docs/_static/prototipo_mds-19.png"
+              },
+              {
+                "name": "prototipo_mds-20.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 65668,
+                "path": "docs/_static/prototipo_mds-20.png"
+              },
+              {
+                "name": "prototipo_mds-21.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 127356,
+                "path": "docs/_static/prototipo_mds-21.png"
+              },
+              {
+                "name": "user_story.jpeg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 82200,
+                "path": "docs/_static/user_story.jpeg"
+              }
+            ],
+            "value": 3118788
+          },
+          {
+            "name": "make.bat",
+            "type": "file",
+            "language": "Unknown",
+            "value": 804,
+            "path": "docs/make.bat"
+          },
+          {
+            "name": "requirements.txt",
+            "type": "file",
+            "language": "Text",
+            "value": 74,
+            "path": "docs/requirements.txt"
+          },
+          {
+            "name": "source",
+            "type": "directory",
+            "path": "docs/source",
+            "children": [
+              {
+                "name": "architecture.rst",
+                "type": "file",
+                "language": "Unknown",
+                "value": 3173,
+                "path": "docs/source/architecture.rst"
+              },
+              {
+                "name": "conf.py",
+                "type": "file",
+                "language": "Python",
+                "value": 2408,
+                "path": "docs/source/conf.py"
+              },
+              {
+                "name": "index.rst",
+                "type": "file",
+                "language": "Unknown",
+                "value": 1833,
+                "path": "docs/source/index.rst"
+              },
+              {
+                "name": "installation.rst",
+                "type": "file",
+                "language": "Unknown",
+                "value": 7389,
+                "path": "docs/source/installation.rst"
+              },
+              {
+                "name": "reunioes",
+                "type": "directory",
+                "path": "docs/source/reunioes",
+                "children": [
+                  {
+                    "name": "atas",
+                    "type": "directory",
+                    "path": "docs/source/reunioes/atas",
+                    "children": [
+                      {
+                        "name": "reuniao-01.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 1219,
+                        "path": "docs/source/reunioes/atas/reuniao-01.rst"
+                      },
+                      {
+                        "name": "reuniao-02.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 365,
+                        "path": "docs/source/reunioes/atas/reuniao-02.rst"
+                      },
+                      {
+                        "name": "reuniao-03.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 308,
+                        "path": "docs/source/reunioes/atas/reuniao-03.rst"
+                      },
+                      {
+                        "name": "reuniao-04.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 334,
+                        "path": "docs/source/reunioes/atas/reuniao-04.rst"
+                      },
+                      {
+                        "name": "reuniao-05.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 360,
+                        "path": "docs/source/reunioes/atas/reuniao-05.rst"
+                      },
+                      {
+                        "name": "reuniao-06.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 368,
+                        "path": "docs/source/reunioes/atas/reuniao-06.rst"
+                      },
+                      {
+                        "name": "reuniao-07.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 325,
+                        "path": "docs/source/reunioes/atas/reuniao-07.rst"
+                      },
+                      {
+                        "name": "reuniao-08.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 340,
+                        "path": "docs/source/reunioes/atas/reuniao-08.rst"
+                      },
+                      {
+                        "name": "reuniao-09.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 362,
+                        "path": "docs/source/reunioes/atas/reuniao-09.rst"
+                      },
+                      {
+                        "name": "reuniao-10.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 504,
+                        "path": "docs/source/reunioes/atas/reuniao-10.rst"
+                      }
+                    ],
+                    "value": 4485
+                  },
+                  {
+                    "name": "intro.rst",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 808,
+                    "path": "docs/source/reunioes/intro.rst"
+                  }
+                ],
+                "value": 5293
+              },
+              {
+                "name": "scrum",
+                "type": "directory",
+                "path": "docs/source/scrum",
+                "children": [
+                  {
+                    "name": "intro.rst",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 593,
+                    "path": "docs/source/scrum/intro.rst"
+                  },
+                  {
+                    "name": "sprints",
+                    "type": "directory",
+                    "path": "docs/source/scrum/sprints",
+                    "children": [
+                      {
+                        "name": "sprint-0.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 1753,
+                        "path": "docs/source/scrum/sprints/sprint-0.rst"
+                      },
+                      {
+                        "name": "sprint-1.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 2697,
+                        "path": "docs/source/scrum/sprints/sprint-1.rst"
+                      },
+                      {
+                        "name": "sprint-2.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 1346,
+                        "path": "docs/source/scrum/sprints/sprint-2.rst"
+                      },
+                      {
+                        "name": "sprint-3.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 952,
+                        "path": "docs/source/scrum/sprints/sprint-3.rst"
+                      },
+                      {
+                        "name": "sprint-4.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 2176,
+                        "path": "docs/source/scrum/sprints/sprint-4.rst"
+                      },
+                      {
+                        "name": "sprint-5.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 1862,
+                        "path": "docs/source/scrum/sprints/sprint-5.rst"
+                      },
+                      {
+                        "name": "sprint-6.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 2250,
+                        "path": "docs/source/scrum/sprints/sprint-6.rst"
+                      },
+                      {
+                        "name": "sprint-7.rst",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 1199,
+                        "path": "docs/source/scrum/sprints/sprint-7.rst"
+                      }
+                    ],
+                    "value": 14235
+                  }
+                ],
+                "value": 14828
+              }
+            ],
+            "value": 34924
+          }
+        ],
+        "value": 3155228
+      },
+      {
+        "name": "manage.py",
+        "type": "file",
+        "language": "Python",
+        "value": 574,
+        "path": "manage.py"
+      },
+      {
+        "name": "out.txt",
+        "type": "file",
+        "language": "Text",
+        "value": 14,
+        "path": "out.txt"
+      },
+      {
+        "name": "poetry.lock",
+        "type": "file",
+        "language": "Unknown",
+        "value": 92997,
+        "path": "poetry.lock"
+      },
+      {
+        "name": "pyproject.toml",
+        "type": "file",
+        "language": "Unknown",
+        "value": 1135,
+        "path": "pyproject.toml"
+      },
+      {
+        "name": "server",
+        "type": "directory",
+        "path": "server",
+        "children": [
+          {
+            "name": "__init__.py",
+            "type": "file",
+            "language": "Python",
+            "value": 63,
+            "path": "server/__init__.py"
+          },
+          {
+            "name": "asgi.py",
+            "type": "file",
+            "language": "Python",
+            "value": 189,
+            "path": "server/asgi.py"
+          },
+          {
+            "name": "celery.py",
+            "type": "file",
+            "language": "Python",
+            "value": 885,
+            "path": "server/celery.py"
+          },
+          {
+            "name": "settings",
+            "type": "directory",
+            "path": "server/settings",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 343,
+                "path": "server/settings/__init__.py"
+              },
+              {
+                "name": "base.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4090,
+                "path": "server/settings/base.py"
+              },
+              {
+                "name": "development.py",
+                "type": "file",
+                "language": "Python",
+                "value": 469,
+                "path": "server/settings/development.py"
+              },
+              {
+                "name": "production.py",
+                "type": "file",
+                "language": "Python",
+                "value": 366,
+                "path": "server/settings/production.py"
+              }
+            ],
+            "value": 5268
+          },
+          {
+            "name": "urls.py",
+            "type": "file",
+            "language": "Python",
+            "value": 527,
+            "path": "server/urls.py"
+          },
+          {
+            "name": "wsgi.py",
+            "type": "file",
+            "language": "Python",
+            "value": 189,
+            "path": "server/wsgi.py"
+          }
+        ],
+        "value": 7121
+      },
+      {
+        "name": "setup.cfg",
+        "type": "file",
+        "language": "Unknown",
+        "value": 1559,
+        "path": "setup.cfg"
+      },
+      {
+        "name": "templates",
+        "type": "directory",
+        "path": "templates",
+        "children": [
+          {
+            "name": "base.html",
+            "type": "file",
+            "language": "HTML",
+            "value": 3930,
+            "path": "templates/base.html"
+          },
+          {
+            "name": "contests",
+            "type": "directory",
+            "path": "templates/contests",
+            "children": [
+              {
+                "name": "detail.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 1514,
+                "path": "templates/contests/detail.html"
+              },
+              {
+                "name": "index.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 3632,
+                "path": "templates/contests/index.html"
+              }
+            ],
+            "value": 5146
+          },
+          {
+            "name": "ranking",
+            "type": "directory",
+            "path": "templates/ranking",
+            "children": [
+              {
+                "name": "list.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 2552,
+                "path": "templates/ranking/list.html"
+              }
+            ],
+            "value": 2552
+          },
+          {
+            "name": "registration",
+            "type": "directory",
+            "path": "templates/registration",
+            "children": [
+              {
+                "name": "login.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 948,
+                "path": "templates/registration/login.html"
+              },
+              {
+                "name": "register.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 950,
+                "path": "templates/registration/register.html"
+              }
+            ],
+            "value": 1898
+          },
+          {
+            "name": "submissions",
+            "type": "directory",
+            "path": "templates/submissions",
+            "children": [
+              {
+                "name": "list.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 3154,
+                "path": "templates/submissions/list.html"
+              }
+            ],
+            "value": 3154
+          },
+          {
+            "name": "tasks",
+            "type": "directory",
+            "path": "templates/tasks",
+            "children": [
+              {
+                "name": "detail.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 3219,
+                "path": "templates/tasks/detail.html"
+              }
+            ],
+            "value": 3219
+          },
+          {
+            "name": "users",
+            "type": "directory",
+            "path": "templates/users",
+            "children": [
+              {
+                "name": "profile.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 716,
+                "path": "templates/users/profile.html"
+              }
+            ],
+            "value": 716
+          }
+        ],
+        "value": 20615
+      }
+    ],
+    "value": 3380592
+  },
+  "_metadata": {
+    "extracted_at": "2025-11-28T18:15:26.306185",
+    "file_path": "data/silver/repo_tree_pack_2023-2-JuizVirtual.json"
+  }
+}

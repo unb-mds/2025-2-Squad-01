@@ -1,0 +1,528 @@
+{
+  "repository": "2025-2-Squad-01",
+  "owner": "unb-mds",
+  "branch": "main",
+  "analyzed_at": "2025-11-28T18:13:11.771517",
+  "sample_config": {
+    "max_files_per_language": 10,
+    "strategy": "largest"
+  },
+  "total_files": 675,
+  "total_bytes": 335503923,
+  "languages": [
+    {
+      "language": "JSON",
+      "file_count": 534,
+      "total_bytes": 333137762,
+      "percentage": 99.29,
+      "files": [
+        {
+          "path": "data/bronze/issues_all.json",
+          "name": "issues_all.json",
+          "size": 38795279,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_2025-2-Squad-01_with_stats.json",
+          "name": "commits_2025-2-Squad-01_with_stats.json",
+          "size": 36543872,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/prs_all.json",
+          "name": "prs_all.json",
+          "size": 22370961,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_all.json",
+          "name": "commits_all.json",
+          "size": 16540317,
+          "extension": ".json"
+        },
+        {
+          "path": "data/silver/temporal_events.json",
+          "name": "temporal_events.json",
+          "size": 13184626,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/issue_events_all.json",
+          "name": "issue_events_all.json",
+          "size": 12973198,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_FixIt_with_stats.json",
+          "name": "commits_FixIt_with_stats.json",
+          "size": 8778426,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_LicitaBSB-24.1_with_stats.json",
+          "name": "commits_LicitaBSB-24.1_with_stats.json",
+          "size": 6184302,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_2024-2-AcheiUnB_with_stats.json",
+          "name": "commits_2024-2-AcheiUnB_with_stats.json",
+          "size": 4396183,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_2024-1-forUnB_with_stats.json",
+          "name": "commits_2024-1-forUnB_with_stats.json",
+          "size": 3954396,
+          "extension": ".json"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "Unknown",
+      "file_count": 15,
+      "total_bytes": 1504020,
+      "percentage": 0.45,
+      "files": [
+        {
+          "path": "docs/arquitetura/Level2-Container-Diagram.drawio.svg",
+          "name": "Level2-Container-Diagram.drawio.svg",
+          "size": 539714,
+          "extension": ".svg"
+        },
+        {
+          "path": "docs/arquitetura/Level3- ETL-Scripts-component-diagram.svg",
+          "name": "Level3- ETL-Scripts-component-diagram.svg",
+          "size": 529804,
+          "extension": ".svg"
+        },
+        {
+          "path": "docs/arquitetura/fluxos/FluxoPrincipal.png",
+          "name": "FluxoPrincipal.png",
+          "size": 298979,
+          "extension": ".png"
+        },
+        {
+          "path": "front-end/tsconfig.app.tsbuildinfo",
+          "name": "tsconfig.app.tsbuildinfo",
+          "size": 44807,
+          "extension": ".tsbuildinfo"
+        },
+        {
+          "path": "docs/arquitetura/Level-3-Frontend-Component-Diagram.svg",
+          "name": "Level-3-Frontend-Component-Diagram.svg",
+          "size": 42184,
+          "extension": ".svg"
+        },
+        {
+          "path": "docs/arquitetura/Level1-System_Context_Diagram.svg",
+          "name": "Level1-System_Context_Diagram.svg",
+          "size": 33020,
+          "extension": ".svg"
+        },
+        {
+          "path": "front-end/src/assets/react.svg",
+          "name": "react.svg",
+          "size": 4126,
+          "extension": ".svg"
+        },
+        {
+          "path": "docs/arquitetura/mmd/dag-medallion.mmd",
+          "name": "dag-medallion.mmd",
+          "size": 3828,
+          "extension": ".mmd"
+        },
+        {
+          "path": "docs/arquitetura/mmd/sequential-etl.mmd",
+          "name": "sequential-etl.mmd",
+          "size": 2864,
+          "extension": ".mmd"
+        },
+        {
+          "path": "docs/arquitetura/mmd/topologia-dashboard.mmd",
+          "name": "topologia-dashboard.mmd",
+          "size": 2116,
+          "extension": ".mmd"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 42,
+      "total_bytes": 226039,
+      "percentage": 0.07,
+      "files": [
+        {
+          "path": "front-end/src/components/Graphs.tsx",
+          "name": "Graphs.tsx",
+          "size": 40454,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/components/CalendarHeatmap.tsx",
+          "name": "CalendarHeatmap.tsx",
+          "size": 15123,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/pages/Utils.ts",
+          "name": "Utils.ts",
+          "size": 15042,
+          "extension": ".ts"
+        },
+        {
+          "path": "front-end/src/pages/Timeline.tsx",
+          "name": "Timeline.tsx",
+          "size": 12557,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/pages/HomePage.tsx",
+          "name": "HomePage.tsx",
+          "size": 12449,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/pages/Documentacao.tsx",
+          "name": "Documentacao.tsx",
+          "size": 11831,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/components/RepoFingerprint.tsx",
+          "name": "RepoFingerprint.tsx",
+          "size": 9527,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/pages/Heatmap.tsx",
+          "name": "Heatmap.tsx",
+          "size": 9437,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/pages/Commits.tsx",
+          "name": "Commits.tsx",
+          "size": 8585,
+          "extension": ".tsx"
+        },
+        {
+          "path": "front-end/src/components/RepoTreemap.tsx",
+          "name": "RepoTreemap.tsx",
+          "size": 8070,
+          "extension": ".tsx"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "Markdown",
+      "file_count": 36,
+      "total_bytes": 155057,
+      "percentage": 0.05,
+      "files": [
+        {
+          "path": "docs/backend/Documentacao-Backend.md",
+          "name": "Documentacao-Backend.md",
+          "size": 17530,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/frontend/AplicaçãoGitPageFront.md",
+          "name": "AplicaçãoGitPageFront.md",
+          "size": 13980,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/gestao/Estudo-Completo-sobre-GitHub-Actions.md",
+          "name": "Estudo-Completo-sobre-GitHub-Actions.md",
+          "size": 9201,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/gestao/GIT_GIThub.md",
+          "name": "GIT_GIThub.md",
+          "size": 8161,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/gestao/SCRUM-e-Metodos-Agile.md",
+          "name": "SCRUM-e-Metodos-Agile.md",
+          "size": 7180,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/graphql-commits-extraction.md",
+          "name": "graphql-commits-extraction.md",
+          "size": 7172,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/benchmarking/Benchmarking-LinearB.md",
+          "name": "Benchmarking-LinearB.md",
+          "size": 7153,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/graphql-queries-examples.md",
+          "name": "graphql-queries-examples.md",
+          "size": 6420,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/benchmarking/BENCHMARK_CADU.md",
+          "name": "BENCHMARK_CADU.md",
+          "size": 6130,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/benchmarking/Benchmarking-Swarmia-e-SonarCloud.md",
+          "name": "Benchmarking-Swarmia-e-SonarCloud.md",
+          "size": 5511,
+          "extension": ".md"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "Python",
+      "file_count": 25,
+      "total_bytes": 166389,
+      "percentage": 0.05,
+      "files": [
+        {
+          "path": "src/utils/github_api.py",
+          "name": "github_api.py",
+          "size": 41132,
+          "extension": ".py"
+        },
+        {
+          "path": "src/bronze/commits.py",
+          "name": "commits.py",
+          "size": 14883,
+          "extension": ".py"
+        },
+        {
+          "path": "src/silver/file_language_analysis.py",
+          "name": "file_language_analysis.py",
+          "size": 12226,
+          "extension": ".py"
+        },
+        {
+          "path": "src/silver/temporal_analysis.py",
+          "name": "temporal_analysis.py",
+          "size": 12052,
+          "extension": ".py"
+        },
+        {
+          "path": "src/bronze/issues.py",
+          "name": "issues.py",
+          "size": 11212,
+          "extension": ".py"
+        },
+        {
+          "path": "src/bronze/repository_structure.py",
+          "name": "repository_structure.py",
+          "size": 9414,
+          "extension": ".py"
+        },
+        {
+          "path": "src/gold/timeline_aggregation.py",
+          "name": "timeline_aggregation.py",
+          "size": 7320,
+          "extension": ".py"
+        },
+        {
+          "path": "src/silver/collaboration_networks.py",
+          "name": "collaboration_networks.py",
+          "size": 7064,
+          "extension": ".py"
+        },
+        {
+          "path": "src/bronze/members.py",
+          "name": "members.py",
+          "size": 5810,
+          "extension": ".py"
+        },
+        {
+          "path": "src/silver_process.py",
+          "name": "silver_process.py",
+          "size": 5208,
+          "extension": ".py"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "HTML",
+      "file_count": 13,
+      "total_bytes": 176506,
+      "percentage": 0.05,
+      "files": [
+        {
+          "path": "docs/backend/backend.html",
+          "name": "backend.html",
+          "size": 26852,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/benchmarking/benchmarking.html",
+          "name": "benchmarking.html",
+          "size": 21113,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/gestao/scrum.html",
+          "name": "scrum.html",
+          "size": 19056,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/api/api.html",
+          "name": "api.html",
+          "size": 18967,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/atas/atas.html",
+          "name": "atas.html",
+          "size": 16853,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/benchmarking/levantamento-inicial.html",
+          "name": "levantamento-inicial.html",
+          "size": 16670,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/frontend/frontend.html",
+          "name": "frontend.html",
+          "size": 14152,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/arquitetura/arquitetura.html",
+          "name": "arquitetura.html",
+          "size": 11197,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/gestao/requisitos.html",
+          "name": "requisitos.html",
+          "size": 10475,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/gestao/old_index2.html",
+          "name": "old_index2.html",
+          "size": 8732,
+          "extension": ".html"
+        }
+      ],
+      "has_more": true
+    },
+    {
+      "language": "YAML",
+      "file_count": 4,
+      "total_bytes": 119788,
+      "percentage": 0.04,
+      "files": [
+        {
+          "path": "front-end/pnpm-lock.yaml",
+          "name": "pnpm-lock.yaml",
+          "size": 108704,
+          "extension": ".yaml"
+        },
+        {
+          "path": ".github/workflows/silver-process.yaml",
+          "name": "silver-process.yaml",
+          "size": 5678,
+          "extension": ".yaml"
+        },
+        {
+          "path": ".github/workflows/bronze-extract.yaml",
+          "name": "bronze-extract.yaml",
+          "size": 4240,
+          "extension": ".yaml"
+        },
+        {
+          "path": ".github/workflows/save-issues.yaml",
+          "name": "save-issues.yaml",
+          "size": 1166,
+          "extension": ".yaml"
+        }
+      ],
+      "has_more": false
+    },
+    {
+      "language": "No Extension",
+      "file_count": 1,
+      "total_bytes": 1060,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
+        }
+      ],
+      "has_more": false
+    },
+    {
+      "language": "JavaScript",
+      "file_count": 4,
+      "total_bytes": 6789,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "front-end/src/pages/TimelineExtraction.validation.js",
+          "name": "TimelineExtraction.validation.js",
+          "size": 5778,
+          "extension": ".js"
+        },
+        {
+          "path": "front-end/eslint.config.js",
+          "name": "eslint.config.js",
+          "size": 621,
+          "extension": ".js"
+        },
+        {
+          "path": "front-end/tailwind.config.js",
+          "name": "tailwind.config.js",
+          "size": 300,
+          "extension": ".js"
+        },
+        {
+          "path": "front-end/postcss.config.js",
+          "name": "postcss.config.js",
+          "size": 90,
+          "extension": ".js"
+        }
+      ],
+      "has_more": false
+    },
+    {
+      "language": "CSS",
+      "file_count": 1,
+      "total_bytes": 10513,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "front-end/src/index.css",
+          "name": "index.css",
+          "size": 10513,
+          "extension": ".css"
+        }
+      ],
+      "has_more": false
+    }
+  ],
+  "_metadata": {
+    "extracted_at": "2025-11-28T18:15:26.333543",
+    "file_path": "data/silver/language_analysis_2025-2-Squad-01.json"
+  }
+}

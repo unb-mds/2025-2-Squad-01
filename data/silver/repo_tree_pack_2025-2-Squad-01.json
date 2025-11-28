@@ -1,0 +1,5015 @@
+{
+  "repository": "2025-2-Squad-01",
+  "owner": "unb-mds",
+  "branch": "main",
+  "extracted_at": "2025-11-28T18:13:11.771517",
+  "hierarchy": {
+    "name": "2025-2-Squad-01",
+    "type": "directory",
+    "children": [
+      {
+        "name": ".github",
+        "type": "directory",
+        "path": ".github",
+        "children": [
+          {
+            "name": "workflows",
+            "type": "directory",
+            "path": ".github/workflows",
+            "children": [
+              {
+                "name": "bronze-extract.yaml",
+                "type": "file",
+                "language": "YAML",
+                "value": 4240,
+                "path": ".github/workflows/bronze-extract.yaml"
+              },
+              {
+                "name": "save-issues.yaml",
+                "type": "file",
+                "language": "YAML",
+                "value": 1166,
+                "path": ".github/workflows/save-issues.yaml"
+              },
+              {
+                "name": "silver-process.yaml",
+                "type": "file",
+                "language": "YAML",
+                "value": 5678,
+                "path": ".github/workflows/silver-process.yaml"
+              }
+            ],
+            "value": 11084
+          }
+        ],
+        "value": 11084
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Unknown",
+        "value": 413,
+        "path": ".gitignore"
+      },
+      {
+        "name": "BATCH_PROCESSING.md",
+        "type": "file",
+        "language": "Markdown",
+        "value": 4717,
+        "path": "BATCH_PROCESSING.md"
+      },
+      {
+        "name": "EXAMPLE.secrets",
+        "type": "file",
+        "language": "Unknown",
+        "value": 377,
+        "path": "EXAMPLE.secrets"
+      },
+      {
+        "name": "LICENSE",
+        "type": "file",
+        "language": "No Extension",
+        "value": 1060,
+        "path": "LICENSE"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "value": 3909,
+        "path": "README.md"
+      },
+      {
+        "name": "check_unknown.py",
+        "type": "file",
+        "language": "Python",
+        "value": 1622,
+        "path": "check_unknown.py"
+      },
+      {
+        "name": "data",
+        "type": "directory",
+        "path": "data",
+        "children": [
+          {
+            "name": "bronze",
+            "type": "directory",
+            "path": "data/bronze",
+            "children": [
+              {
+                "name": "commits_.github.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2762,
+                "path": "data/bronze/commits_.github.json"
+              },
+              {
+                "name": "commits_.github_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 20016,
+                "path": "data/bronze/commits_.github_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 337690,
+                "path": "data/bronze/commits_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "commits_2023-2-JuizVirtual_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2254310,
+                "path": "data/bronze/commits_2023-2-JuizVirtual_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10534,
+                "path": "data/bronze/commits_2023-2-Squad01.json"
+              },
+              {
+                "name": "commits_2023-2-Squad01_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 68869,
+                "path": "data/bronze/commits_2023-2-Squad01_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 165267,
+                "path": "data/bronze/commits_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "commits_2023-2-Squad02-Desmatazonia_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1010190,
+                "path": "data/bronze/commits_2023-2-Squad02-Desmatazonia_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 57763,
+                "path": "data/bronze/commits_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "commits_2023-2-Squad03-LicitAL_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 347263,
+                "path": "data/bronze/commits_2023-2-Squad03-LicitAL_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 467171,
+                "path": "data/bronze/commits_2023-2-Squad04.json"
+              },
+              {
+                "name": "commits_2023-2-Squad04_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2656135,
+                "path": "data/bronze/commits_2023-2-Squad04_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 166350,
+                "path": "data/bronze/commits_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "commits_2023-2-Squad05-TesouroMineiro_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1157967,
+                "path": "data/bronze/commits_2023-2-Squad05-TesouroMineiro_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 181489,
+                "path": "data/bronze/commits_2023-2-Squad07.json"
+              },
+              {
+                "name": "commits_2023-2-Squad07_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1110055,
+                "path": "data/bronze/commits_2023-2-Squad07_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 194596,
+                "path": "data/bronze/commits_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "commits_2023-2-Squad09-Gotinha_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1254644,
+                "path": "data/bronze/commits_2023-2-Squad09-Gotinha_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 127310,
+                "path": "data/bronze/commits_2023-2-Squad10.json"
+              },
+              {
+                "name": "commits_2023-2-Squad10_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 834391,
+                "path": "data/bronze/commits_2023-2-Squad10_with_stats.json"
+              },
+              {
+                "name": "commits_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 370422,
+                "path": "data/bronze/commits_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "commits_2023-2-SuaGradeUnB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2420154,
+                "path": "data/bronze/commits_2023-2-SuaGradeUnB_with_stats.json"
+              },
+              {
+                "name": "commits_2023.2-LicitaX.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 25886,
+                "path": "data/bronze/commits_2023.2-LicitaX.json"
+              },
+              {
+                "name": "commits_2023.2-LicitaX_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 169372,
+                "path": "data/bronze/commits_2023.2-LicitaX_with_stats.json"
+              },
+              {
+                "name": "commits_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 36604,
+                "path": "data/bronze/commits_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "commits_2023.2_DeOlhoRS_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1243295,
+                "path": "data/bronze/commits_2023.2_DeOlhoRS_with_stats.json"
+              },
+              {
+                "name": "commits_2023.2_Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 35881,
+                "path": "data/bronze/commits_2023.2_Gotinha.json"
+              },
+              {
+                "name": "commits_2023.2_Gotinha_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 216823,
+                "path": "data/bronze/commits_2023.2_Gotinha_with_stats.json"
+              },
+              {
+                "name": "commits_2023.2_Licitaiba.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 66007,
+                "path": "data/bronze/commits_2023.2_Licitaiba.json"
+              },
+              {
+                "name": "commits_2023.2_Licitaiba_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 407955,
+                "path": "data/bronze/commits_2023.2_Licitaiba_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 140955,
+                "path": "data/bronze/commits_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "commits_2024-1-EducaMinas-backend_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 893699,
+                "path": "data/bronze/commits_2024-1-EducaMinas-backend_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 280898,
+                "path": "data/bronze/commits_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "commits_2024-1-EducaMinas-frontend_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1768765,
+                "path": "data/bronze/commits_2024-1-EducaMinas-frontend_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-Gastos-DF-Doc-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 23205,
+                "path": "data/bronze/commits_2024-1-Gastos-DF-Doc-Squad12.json"
+              },
+              {
+                "name": "commits_2024-1-Gastos-DF-Doc-Squad12_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 159153,
+                "path": "data/bronze/commits_2024-1-Gastos-DF-Doc-Squad12_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 380532,
+                "path": "data/bronze/commits_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "commits_2024-1-MinasDeCultura_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2236849,
+                "path": "data/bronze/commits_2024-1-MinasDeCultura_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 218427,
+                "path": "data/bronze/commits_2024-1-Squad-10.json"
+              },
+              {
+                "name": "commits_2024-1-Squad-10_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1183736,
+                "path": "data/bronze/commits_2024-1-Squad-10_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 75928,
+                "path": "data/bronze/commits_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "commits_2024-1-Squad02-CulturaTransparente_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1201760,
+                "path": "data/bronze/commits_2024-1-Squad02-CulturaTransparente_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 61624,
+                "path": "data/bronze/commits_2024-1-Squad08.json"
+              },
+              {
+                "name": "commits_2024-1-Squad08_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 408046,
+                "path": "data/bronze/commits_2024-1-Squad08_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 642299,
+                "path": "data/bronze/commits_2024-1-forUnB.json"
+              },
+              {
+                "name": "commits_2024-1-forUnB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3954396,
+                "path": "data/bronze/commits_2024-1-forUnB_with_stats.json"
+              },
+              {
+                "name": "commits_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 246358,
+                "path": "data/bronze/commits_2024-1-squad04.json"
+              },
+              {
+                "name": "commits_2024-1-squad04_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1454191,
+                "path": "data/bronze/commits_2024-1-squad04_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 689260,
+                "path": "data/bronze/commits_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "commits_2024-2-AcheiUnB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 4396183,
+                "path": "data/bronze/commits_2024-2-AcheiUnB_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 124490,
+                "path": "data/bronze/commits_2024-2-Agio.json"
+              },
+              {
+                "name": "commits_2024-2-Agio_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 783125,
+                "path": "data/bronze/commits_2024-2-Agio_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 266990,
+                "path": "data/bronze/commits_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "commits_2024-2-ChamaControl_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1684691,
+                "path": "data/bronze/commits_2024-2-ChamaControl_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 104407,
+                "path": "data/bronze/commits_2024-2-Datazonia.json"
+              },
+              {
+                "name": "commits_2024-2-Datazonia_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 633386,
+                "path": "data/bronze/commits_2024-2-Datazonia_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 188759,
+                "path": "data/bronze/commits_2024-2-Lumina.json"
+              },
+              {
+                "name": "commits_2024-2-Lumina_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1157409,
+                "path": "data/bronze/commits_2024-2-Lumina_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 145898,
+                "path": "data/bronze/commits_2024-2-Squad01.json"
+              },
+              {
+                "name": "commits_2024-2-Squad01_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 857252,
+                "path": "data/bronze/commits_2024-2-Squad01_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 181277,
+                "path": "data/bronze/commits_2024-2-Squad06.json"
+              },
+              {
+                "name": "commits_2024-2-Squad06_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1152069,
+                "path": "data/bronze/commits_2024-2-Squad06_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 84936,
+                "path": "data/bronze/commits_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "commits_2024-2-SuaFinanca_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 628411,
+                "path": "data/bronze/commits_2024-2-SuaFinanca_with_stats.json"
+              },
+              {
+                "name": "commits_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 169099,
+                "path": "data/bronze/commits_2024-2-Urbanize.json"
+              },
+              {
+                "name": "commits_2024-2-Urbanize_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1069138,
+                "path": "data/bronze/commits_2024-2-Urbanize_with_stats.json"
+              },
+              {
+                "name": "commits_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 177630,
+                "path": "data/bronze/commits_2025-1-Eletta.json"
+              },
+              {
+                "name": "commits_2025-1-Eletta_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1212140,
+                "path": "data/bronze/commits_2025-1-Eletta_with_stats.json"
+              },
+              {
+                "name": "commits_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 208553,
+                "path": "data/bronze/commits_2025-1-GovInsights.json"
+              },
+              {
+                "name": "commits_2025-1-GovInsights_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1459844,
+                "path": "data/bronze/commits_2025-1-GovInsights_with_stats.json"
+              },
+              {
+                "name": "commits_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 515119,
+                "path": "data/bronze/commits_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "commits_2025-1-NoFluxoUNB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3255446,
+                "path": "data/bronze/commits_2025-1-NoFluxoUNB_with_stats.json"
+              },
+              {
+                "name": "commits_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 135321,
+                "path": "data/bronze/commits_2025-1-RelatAI.json"
+              },
+              {
+                "name": "commits_2025-1-RelatAI_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 709513,
+                "path": "data/bronze/commits_2025-1-RelatAI_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 101652,
+                "path": "data/bronze/commits_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "commits_2025-2-Eh_Fake_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 483338,
+                "path": "data/bronze/commits_2025-2-Eh_Fake_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 246037,
+                "path": "data/bronze/commits_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "commits_2025-2-GuiaDev_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1007285,
+                "path": "data/bronze/commits_2025-2-GuiaDev_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 262276,
+                "path": "data/bronze/commits_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "commits_2025-2-InfoSchool_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1420871,
+                "path": "data/bronze/commits_2025-2-InfoSchool_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 209310,
+                "path": "data/bronze/commits_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "commits_2025-2-Integralizei_UnB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 979328,
+                "path": "data/bronze/commits_2025-2-Integralizei_UnB_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 279941,
+                "path": "data/bronze/commits_2025-2-Lumina.json"
+              },
+              {
+                "name": "commits_2025-2-Lumina_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1019088,
+                "path": "data/bronze/commits_2025-2-Lumina_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 279657,
+                "path": "data/bronze/commits_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "commits_2025-2-Mural-UnB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 972230,
+                "path": "data/bronze/commits_2025-2-Mural-UnB_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 251768,
+                "path": "data/bronze/commits_2025-2-OncoMap.json"
+              },
+              {
+                "name": "commits_2025-2-OncoMap_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1480798,
+                "path": "data/bronze/commits_2025-2-OncoMap_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 327424,
+                "path": "data/bronze/commits_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "commits_2025-2-Portal-dos-Professores_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1349726,
+                "path": "data/bronze/commits_2025-2-Portal-dos-Professores_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 104565,
+                "path": "data/bronze/commits_2025-2-SeLiga.json"
+              },
+              {
+                "name": "commits_2025-2-SeLiga_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 545074,
+                "path": "data/bronze/commits_2025-2-SeLiga_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2290395,
+                "path": "data/bronze/commits_2025-2-Squad-01.json"
+              },
+              {
+                "name": "commits_2025-2-Squad-01_graphql.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 216,
+                "path": "data/bronze/commits_2025-2-Squad-01_graphql.json"
+              },
+              {
+                "name": "commits_2025-2-Squad-01_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 36543872,
+                "path": "data/bronze/commits_2025-2-Squad-01_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 84901,
+                "path": "data/bronze/commits_2025-2-Squad12.json"
+              },
+              {
+                "name": "commits_2025-2-Squad12_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 245166,
+                "path": "data/bronze/commits_2025-2-Squad12_with_stats.json"
+              },
+              {
+                "name": "commits_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 120391,
+                "path": "data/bronze/commits_2025-2-Synapse.json"
+              },
+              {
+                "name": "commits_2025-2-Synapse_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 731886,
+                "path": "data/bronze/commits_2025-2-Synapse_with_stats.json"
+              },
+              {
+                "name": "commits_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 96659,
+                "path": "data/bronze/commits_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "commits_2025.1-RelatoriosInteligentesBCB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 631976,
+                "path": "data/bronze/commits_2025.1-RelatoriosInteligentesBCB_with_stats.json"
+              },
+              {
+                "name": "commits_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 133570,
+                "path": "data/bronze/commits_2025_1-Jakebot.json"
+              },
+              {
+                "name": "commits_2025_1-Jakebot_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 896347,
+                "path": "data/bronze/commits_2025_1-Jakebot_with_stats.json"
+              },
+              {
+                "name": "commits_Avalia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1469,
+                "path": "data/bronze/commits_Avalia.json"
+              },
+              {
+                "name": "commits_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 227990,
+                "path": "data/bronze/commits_DFemObras-2025.1.json"
+              },
+              {
+                "name": "commits_DFemObras-2025.1_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1362317,
+                "path": "data/bronze/commits_DFemObras-2025.1_with_stats.json"
+              },
+              {
+                "name": "commits_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 409694,
+                "path": "data/bronze/commits_DFemObras.json"
+              },
+              {
+                "name": "commits_DFemObras_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2391911,
+                "path": "data/bronze/commits_DFemObras_with_stats.json"
+              },
+              {
+                "name": "commits_FixIt.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1370116,
+                "path": "data/bronze/commits_FixIt.json"
+              },
+              {
+                "name": "commits_FixIt_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8778426,
+                "path": "data/bronze/commits_FixIt_with_stats.json"
+              },
+              {
+                "name": "commits_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 330382,
+                "path": "data/bronze/commits_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "commits_Gastos-DF-2024-02_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2114498,
+                "path": "data/bronze/commits_Gastos-DF-2024-02_with_stats.json"
+              },
+              {
+                "name": "commits_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 174854,
+                "path": "data/bronze/commits_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "commits_Gastos-DF-Squad12_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1197755,
+                "path": "data/bronze/commits_Gastos-DF-Squad12_with_stats.json"
+              },
+              {
+                "name": "commits_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 177665,
+                "path": "data/bronze/commits_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "commits_LicitaBSB-24.1_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6184302,
+                "path": "data/bronze/commits_LicitaBSB-24.1_with_stats.json"
+              },
+              {
+                "name": "commits_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 175448,
+                "path": "data/bronze/commits_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "commits_MDS-MonitoraBSB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1065273,
+                "path": "data/bronze/commits_MDS-MonitoraBSB_with_stats.json"
+              },
+              {
+                "name": "commits_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 103161,
+                "path": "data/bronze/commits_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "commits_Mds-ArenaPesadelo_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 644339,
+                "path": "data/bronze/commits_Mds-ArenaPesadelo_with_stats.json"
+              },
+              {
+                "name": "commits_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 199323,
+                "path": "data/bronze/commits_ParticipeMais.json"
+              },
+              {
+                "name": "commits_ParticipeMais_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1278474,
+                "path": "data/bronze/commits_ParticipeMais_with_stats.json"
+              },
+              {
+                "name": "commits_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 80930,
+                "path": "data/bronze/commits_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "commits_Projeto-P.I.T.E.R_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 272114,
+                "path": "data/bronze/commits_Projeto-P.I.T.E.R_with_stats.json"
+              },
+              {
+                "name": "commits_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 125389,
+                "path": "data/bronze/commits_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "commits_Qualifying-Software-Engineers-Undergraduates-in-DevOps_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 515679,
+                "path": "data/bronze/commits_Qualifying-Software-Engineers-Undergraduates-in-DevOps_with_stats.json"
+              },
+              {
+                "name": "commits_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 184432,
+                "path": "data/bronze/commits_Sonorus-2025.1.json"
+              },
+              {
+                "name": "commits_Sonorus-2025.1_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1207307,
+                "path": "data/bronze/commits_Sonorus-2025.1_with_stats.json"
+              },
+              {
+                "name": "commits_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 420006,
+                "path": "data/bronze/commits_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "commits_Squad09-UnBHUB_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2563155,
+                "path": "data/bronze/commits_Squad09-UnBHUB_with_stats.json"
+              },
+              {
+                "name": "commits_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 76151,
+                "path": "data/bronze/commits_VIDAProject.json"
+              },
+              {
+                "name": "commits_VIDAProject_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 528891,
+                "path": "data/bronze/commits_VIDAProject_with_stats.json"
+              },
+              {
+                "name": "commits_all.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 16540317,
+                "path": "data/bronze/commits_all.json"
+              },
+              {
+                "name": "commits_carlarocha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 42972,
+                "path": "data/bronze/commits_carlarocha.json"
+              },
+              {
+                "name": "commits_exemplogitpage.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 836,
+                "path": "data/bronze/commits_exemplogitpage.json"
+              },
+              {
+                "name": "commits_exemplogitpage_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 4916,
+                "path": "data/bronze/commits_exemplogitpage_with_stats.json"
+              },
+              {
+                "name": "commits_hugoplate.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 183351,
+                "path": "data/bronze/commits_hugoplate.json"
+              },
+              {
+                "name": "commits_hugoplate_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1131940,
+                "path": "data/bronze/commits_hugoplate_with_stats.json"
+              },
+              {
+                "name": "commits_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 107481,
+                "path": "data/bronze/commits_mapadaacessibilidade.json"
+              },
+              {
+                "name": "commits_mapadaacessibilidade_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 926162,
+                "path": "data/bronze/commits_mapadaacessibilidade_with_stats.json"
+              },
+              {
+                "name": "commits_portfolio-MDS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1484,
+                "path": "data/bronze/commits_portfolio-MDS.json"
+              },
+              {
+                "name": "commits_portfolio-MDS_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3559,
+                "path": "data/bronze/commits_portfolio-MDS_with_stats.json"
+              },
+              {
+                "name": "commits_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 61044,
+                "path": "data/bronze/commits_squad03-r2.json"
+              },
+              {
+                "name": "commits_squad03-r2_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 364032,
+                "path": "data/bronze/commits_squad03-r2_with_stats.json"
+              },
+              {
+                "name": "commits_teste.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2742,
+                "path": "data/bronze/commits_teste.json"
+              },
+              {
+                "name": "commits_teste_with_stats.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 9866,
+                "path": "data/bronze/commits_teste_with_stats.json"
+              },
+              {
+                "name": "issue_events_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 341903,
+                "path": "data/bronze/issue_events_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11688,
+                "path": "data/bronze/issue_events_2023-2-Squad01.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 142499,
+                "path": "data/bronze/issue_events_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 147418,
+                "path": "data/bronze/issue_events_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 291548,
+                "path": "data/bronze/issue_events_2023-2-Squad04.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 258944,
+                "path": "data/bronze/issue_events_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 110799,
+                "path": "data/bronze/issue_events_2023-2-Squad07.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 191741,
+                "path": "data/bronze/issue_events_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "issue_events_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 94735,
+                "path": "data/bronze/issue_events_2023-2-Squad10.json"
+              },
+              {
+                "name": "issue_events_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 630051,
+                "path": "data/bronze/issue_events_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "issue_events_2023.2-LicitaX.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 27698,
+                "path": "data/bronze/issue_events_2023.2-LicitaX.json"
+              },
+              {
+                "name": "issue_events_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 244542,
+                "path": "data/bronze/issue_events_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "issue_events_2023.2_Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 4818,
+                "path": "data/bronze/issue_events_2023.2_Gotinha.json"
+              },
+              {
+                "name": "issue_events_2023.2_Licitaiba.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11251,
+                "path": "data/bronze/issue_events_2023.2_Licitaiba.json"
+              },
+              {
+                "name": "issue_events_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 184851,
+                "path": "data/bronze/issue_events_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "issue_events_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 423831,
+                "path": "data/bronze/issue_events_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "issue_events_2024-1-Gastos-DF-Doc-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 4878,
+                "path": "data/bronze/issue_events_2024-1-Gastos-DF-Doc-Squad12.json"
+              },
+              {
+                "name": "issue_events_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 231134,
+                "path": "data/bronze/issue_events_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "issue_events_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 175489,
+                "path": "data/bronze/issue_events_2024-1-Squad-10.json"
+              },
+              {
+                "name": "issue_events_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 274199,
+                "path": "data/bronze/issue_events_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "issue_events_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 16648,
+                "path": "data/bronze/issue_events_2024-1-Squad08.json"
+              },
+              {
+                "name": "issue_events_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 481800,
+                "path": "data/bronze/issue_events_2024-1-forUnB.json"
+              },
+              {
+                "name": "issue_events_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 220332,
+                "path": "data/bronze/issue_events_2024-1-squad04.json"
+              },
+              {
+                "name": "issue_events_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 849944,
+                "path": "data/bronze/issue_events_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "issue_events_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 40444,
+                "path": "data/bronze/issue_events_2024-2-Agio.json"
+              },
+              {
+                "name": "issue_events_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 114274,
+                "path": "data/bronze/issue_events_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "issue_events_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 30319,
+                "path": "data/bronze/issue_events_2024-2-Datazonia.json"
+              },
+              {
+                "name": "issue_events_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 83832,
+                "path": "data/bronze/issue_events_2024-2-Lumina.json"
+              },
+              {
+                "name": "issue_events_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10644,
+                "path": "data/bronze/issue_events_2024-2-Squad01.json"
+              },
+              {
+                "name": "issue_events_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 205989,
+                "path": "data/bronze/issue_events_2024-2-Squad06.json"
+              },
+              {
+                "name": "issue_events_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 291724,
+                "path": "data/bronze/issue_events_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "issue_events_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 127067,
+                "path": "data/bronze/issue_events_2024-2-Urbanize.json"
+              },
+              {
+                "name": "issue_events_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 458539,
+                "path": "data/bronze/issue_events_2025-1-Eletta.json"
+              },
+              {
+                "name": "issue_events_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 420202,
+                "path": "data/bronze/issue_events_2025-1-GovInsights.json"
+              },
+              {
+                "name": "issue_events_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 212958,
+                "path": "data/bronze/issue_events_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "issue_events_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 15632,
+                "path": "data/bronze/issue_events_2025-1-RelatAI.json"
+              },
+              {
+                "name": "issue_events_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 167059,
+                "path": "data/bronze/issue_events_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "issue_events_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 210775,
+                "path": "data/bronze/issue_events_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "issue_events_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 136263,
+                "path": "data/bronze/issue_events_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "issue_events_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 139796,
+                "path": "data/bronze/issue_events_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "issue_events_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 492242,
+                "path": "data/bronze/issue_events_2025-2-Lumina.json"
+              },
+              {
+                "name": "issue_events_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 240309,
+                "path": "data/bronze/issue_events_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "issue_events_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 155515,
+                "path": "data/bronze/issue_events_2025-2-OncoMap.json"
+              },
+              {
+                "name": "issue_events_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 249869,
+                "path": "data/bronze/issue_events_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "issue_events_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 127980,
+                "path": "data/bronze/issue_events_2025-2-SeLiga.json"
+              },
+              {
+                "name": "issue_events_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 189183,
+                "path": "data/bronze/issue_events_2025-2-Squad-01.json"
+              },
+              {
+                "name": "issue_events_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11902,
+                "path": "data/bronze/issue_events_2025-2-Squad12.json"
+              },
+              {
+                "name": "issue_events_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 588984,
+                "path": "data/bronze/issue_events_2025-2-Synapse.json"
+              },
+              {
+                "name": "issue_events_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 124682,
+                "path": "data/bronze/issue_events_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "issue_events_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 50270,
+                "path": "data/bronze/issue_events_2025_1-Jakebot.json"
+              },
+              {
+                "name": "issue_events_Avalia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 111694,
+                "path": "data/bronze/issue_events_Avalia.json"
+              },
+              {
+                "name": "issue_events_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 156101,
+                "path": "data/bronze/issue_events_DFemObras-2025.1.json"
+              },
+              {
+                "name": "issue_events_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 91526,
+                "path": "data/bronze/issue_events_DFemObras.json"
+              },
+              {
+                "name": "issue_events_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 336736,
+                "path": "data/bronze/issue_events_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "issue_events_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 100977,
+                "path": "data/bronze/issue_events_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "issue_events_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 279163,
+                "path": "data/bronze/issue_events_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "issue_events_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 122558,
+                "path": "data/bronze/issue_events_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "issue_events_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 122949,
+                "path": "data/bronze/issue_events_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "issue_events_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 159434,
+                "path": "data/bronze/issue_events_ParticipeMais.json"
+              },
+              {
+                "name": "issue_events_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 184635,
+                "path": "data/bronze/issue_events_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "issue_events_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8064,
+                "path": "data/bronze/issue_events_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "issue_events_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 180704,
+                "path": "data/bronze/issue_events_Sonorus-2025.1.json"
+              },
+              {
+                "name": "issue_events_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 311173,
+                "path": "data/bronze/issue_events_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "issue_events_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 153448,
+                "path": "data/bronze/issue_events_VIDAProject.json"
+              },
+              {
+                "name": "issue_events_all.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12973198,
+                "path": "data/bronze/issue_events_all.json"
+              },
+              {
+                "name": "issue_events_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 392750,
+                "path": "data/bronze/issue_events_mapadaacessibilidade.json"
+              },
+              {
+                "name": "issue_events_portfolio-MDS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 616,
+                "path": "data/bronze/issue_events_portfolio-MDS.json"
+              },
+              {
+                "name": "issue_events_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3437,
+                "path": "data/bronze/issue_events_squad03-r2.json"
+              },
+              {
+                "name": "issues_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 542872,
+                "path": "data/bronze/issues_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "issues_2023-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 81263,
+                "path": "data/bronze/issues_2023-2-Squad01.json"
+              },
+              {
+                "name": "issues_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 549924,
+                "path": "data/bronze/issues_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "issues_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 626668,
+                "path": "data/bronze/issues_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "issues_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 863309,
+                "path": "data/bronze/issues_2023-2-Squad04.json"
+              },
+              {
+                "name": "issues_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 725039,
+                "path": "data/bronze/issues_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "issues_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 931363,
+                "path": "data/bronze/issues_2023-2-Squad07.json"
+              },
+              {
+                "name": "issues_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 766321,
+                "path": "data/bronze/issues_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "issues_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 403597,
+                "path": "data/bronze/issues_2023-2-Squad10.json"
+              },
+              {
+                "name": "issues_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 876874,
+                "path": "data/bronze/issues_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "issues_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 769202,
+                "path": "data/bronze/issues_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "issues_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 293553,
+                "path": "data/bronze/issues_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "issues_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 653446,
+                "path": "data/bronze/issues_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "issues_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1012528,
+                "path": "data/bronze/issues_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "issues_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 600136,
+                "path": "data/bronze/issues_2024-1-Squad-10.json"
+              },
+              {
+                "name": "issues_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 767549,
+                "path": "data/bronze/issues_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "issues_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 82160,
+                "path": "data/bronze/issues_2024-1-Squad08.json"
+              },
+              {
+                "name": "issues_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1341518,
+                "path": "data/bronze/issues_2024-1-forUnB.json"
+              },
+              {
+                "name": "issues_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 823961,
+                "path": "data/bronze/issues_2024-1-squad04.json"
+              },
+              {
+                "name": "issues_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1709193,
+                "path": "data/bronze/issues_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "issues_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 126381,
+                "path": "data/bronze/issues_2024-2-Agio.json"
+              },
+              {
+                "name": "issues_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 360562,
+                "path": "data/bronze/issues_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "issues_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 217017,
+                "path": "data/bronze/issues_2024-2-Datazonia.json"
+              },
+              {
+                "name": "issues_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 363929,
+                "path": "data/bronze/issues_2024-2-Lumina.json"
+              },
+              {
+                "name": "issues_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 135357,
+                "path": "data/bronze/issues_2024-2-Squad01.json"
+              },
+              {
+                "name": "issues_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 626260,
+                "path": "data/bronze/issues_2024-2-Squad06.json"
+              },
+              {
+                "name": "issues_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 731260,
+                "path": "data/bronze/issues_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "issues_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 378690,
+                "path": "data/bronze/issues_2024-2-Urbanize.json"
+              },
+              {
+                "name": "issues_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 912804,
+                "path": "data/bronze/issues_2025-1-Eletta.json"
+              },
+              {
+                "name": "issues_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 762272,
+                "path": "data/bronze/issues_2025-1-GovInsights.json"
+              },
+              {
+                "name": "issues_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 783381,
+                "path": "data/bronze/issues_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "issues_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 152259,
+                "path": "data/bronze/issues_2025-1-RelatAI.json"
+              },
+              {
+                "name": "issues_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 751766,
+                "path": "data/bronze/issues_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "issues_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 591511,
+                "path": "data/bronze/issues_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "issues_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 633017,
+                "path": "data/bronze/issues_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "issues_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 517408,
+                "path": "data/bronze/issues_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "issues_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1181717,
+                "path": "data/bronze/issues_2025-2-Lumina.json"
+              },
+              {
+                "name": "issues_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 835983,
+                "path": "data/bronze/issues_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "issues_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 759853,
+                "path": "data/bronze/issues_2025-2-OncoMap.json"
+              },
+              {
+                "name": "issues_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 923975,
+                "path": "data/bronze/issues_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "issues_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 628472,
+                "path": "data/bronze/issues_2025-2-SeLiga.json"
+              },
+              {
+                "name": "issues_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 659202,
+                "path": "data/bronze/issues_2025-2-Squad-01.json"
+              },
+              {
+                "name": "issues_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 111234,
+                "path": "data/bronze/issues_2025-2-Squad12.json"
+              },
+              {
+                "name": "issues_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1595412,
+                "path": "data/bronze/issues_2025-2-Synapse.json"
+              },
+              {
+                "name": "issues_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 402780,
+                "path": "data/bronze/issues_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "issues_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 160294,
+                "path": "data/bronze/issues_2025_1-Jakebot.json"
+              },
+              {
+                "name": "issues_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 647909,
+                "path": "data/bronze/issues_DFemObras-2025.1.json"
+              },
+              {
+                "name": "issues_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 488625,
+                "path": "data/bronze/issues_DFemObras.json"
+              },
+              {
+                "name": "issues_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 839920,
+                "path": "data/bronze/issues_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "issues_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 402033,
+                "path": "data/bronze/issues_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "issues_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 973575,
+                "path": "data/bronze/issues_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "issues_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 878475,
+                "path": "data/bronze/issues_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "issues_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 549968,
+                "path": "data/bronze/issues_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "issues_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 782439,
+                "path": "data/bronze/issues_ParticipeMais.json"
+              },
+              {
+                "name": "issues_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 886527,
+                "path": "data/bronze/issues_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "issues_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 69728,
+                "path": "data/bronze/issues_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "issues_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 509859,
+                "path": "data/bronze/issues_Sonorus-2025.1.json"
+              },
+              {
+                "name": "issues_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 883465,
+                "path": "data/bronze/issues_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "issues_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 443946,
+                "path": "data/bronze/issues_VIDAProject.json"
+              },
+              {
+                "name": "issues_all.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 38795279,
+                "path": "data/bronze/issues_all.json"
+              },
+              {
+                "name": "issues_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 712254,
+                "path": "data/bronze/issues_mapadaacessibilidade.json"
+              },
+              {
+                "name": "issues_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13947,
+                "path": "data/bronze/issues_squad03-r2.json"
+              },
+              {
+                "name": "members_basic.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 126640,
+                "path": "data/bronze/members_basic.json"
+              },
+              {
+                "name": "members_detailed.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2,
+                "path": "data/bronze/members_detailed.json"
+              },
+              {
+                "name": "prs_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 594931,
+                "path": "data/bronze/prs_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "prs_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 134137,
+                "path": "data/bronze/prs_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "prs_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13200,
+                "path": "data/bronze/prs_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "prs_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 342642,
+                "path": "data/bronze/prs_2023-2-Squad04.json"
+              },
+              {
+                "name": "prs_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 249476,
+                "path": "data/bronze/prs_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "prs_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 35741,
+                "path": "data/bronze/prs_2023-2-Squad07.json"
+              },
+              {
+                "name": "prs_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10949,
+                "path": "data/bronze/prs_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "prs_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 80295,
+                "path": "data/bronze/prs_2023-2-Squad10.json"
+              },
+              {
+                "name": "prs_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1782266,
+                "path": "data/bronze/prs_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "prs_2023.2-LicitaX.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 154775,
+                "path": "data/bronze/prs_2023.2-LicitaX.json"
+              },
+              {
+                "name": "prs_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 272900,
+                "path": "data/bronze/prs_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "prs_2023.2_Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 25681,
+                "path": "data/bronze/prs_2023.2_Gotinha.json"
+              },
+              {
+                "name": "prs_2023.2_Licitaiba.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 74495,
+                "path": "data/bronze/prs_2023.2_Licitaiba.json"
+              },
+              {
+                "name": "prs_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 364853,
+                "path": "data/bronze/prs_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "prs_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 776382,
+                "path": "data/bronze/prs_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "prs_2024-1-Gastos-DF-Doc-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 25761,
+                "path": "data/bronze/prs_2024-1-Gastos-DF-Doc-Squad12.json"
+              },
+              {
+                "name": "prs_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 497232,
+                "path": "data/bronze/prs_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "prs_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 268263,
+                "path": "data/bronze/prs_2024-1-Squad-10.json"
+              },
+              {
+                "name": "prs_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 635057,
+                "path": "data/bronze/prs_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "prs_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 37443,
+                "path": "data/bronze/prs_2024-1-Squad08.json"
+              },
+              {
+                "name": "prs_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1142034,
+                "path": "data/bronze/prs_2024-1-forUnB.json"
+              },
+              {
+                "name": "prs_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 420154,
+                "path": "data/bronze/prs_2024-1-squad04.json"
+              },
+              {
+                "name": "prs_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1676776,
+                "path": "data/bronze/prs_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "prs_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 128170,
+                "path": "data/bronze/prs_2024-2-Agio.json"
+              },
+              {
+                "name": "prs_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 455189,
+                "path": "data/bronze/prs_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "prs_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 20835,
+                "path": "data/bronze/prs_2024-2-Datazonia.json"
+              },
+              {
+                "name": "prs_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 57318,
+                "path": "data/bronze/prs_2024-2-Lumina.json"
+              },
+              {
+                "name": "prs_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12379,
+                "path": "data/bronze/prs_2024-2-Squad01.json"
+              },
+              {
+                "name": "prs_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 415919,
+                "path": "data/bronze/prs_2024-2-Squad06.json"
+              },
+              {
+                "name": "prs_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 650911,
+                "path": "data/bronze/prs_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "prs_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 216255,
+                "path": "data/bronze/prs_2024-2-Urbanize.json"
+              },
+              {
+                "name": "prs_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 320838,
+                "path": "data/bronze/prs_2025-1-Eletta.json"
+              },
+              {
+                "name": "prs_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1193161,
+                "path": "data/bronze/prs_2025-1-GovInsights.json"
+              },
+              {
+                "name": "prs_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 146070,
+                "path": "data/bronze/prs_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "prs_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 15885,
+                "path": "data/bronze/prs_2025-1-RelatAI.json"
+              },
+              {
+                "name": "prs_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 143922,
+                "path": "data/bronze/prs_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "prs_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 231554,
+                "path": "data/bronze/prs_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "prs_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 354707,
+                "path": "data/bronze/prs_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "prs_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 492791,
+                "path": "data/bronze/prs_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "prs_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 931899,
+                "path": "data/bronze/prs_2025-2-Lumina.json"
+              },
+              {
+                "name": "prs_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 466581,
+                "path": "data/bronze/prs_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "prs_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 244194,
+                "path": "data/bronze/prs_2025-2-OncoMap.json"
+              },
+              {
+                "name": "prs_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 512947,
+                "path": "data/bronze/prs_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "prs_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 126890,
+                "path": "data/bronze/prs_2025-2-SeLiga.json"
+              },
+              {
+                "name": "prs_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 283078,
+                "path": "data/bronze/prs_2025-2-Squad-01.json"
+              },
+              {
+                "name": "prs_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8427,
+                "path": "data/bronze/prs_2025-2-Squad12.json"
+              },
+              {
+                "name": "prs_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 562143,
+                "path": "data/bronze/prs_2025-2-Synapse.json"
+              },
+              {
+                "name": "prs_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 133752,
+                "path": "data/bronze/prs_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "prs_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 66642,
+                "path": "data/bronze/prs_2025_1-Jakebot.json"
+              },
+              {
+                "name": "prs_Avalia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 48085,
+                "path": "data/bronze/prs_Avalia.json"
+              },
+              {
+                "name": "prs_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 62802,
+                "path": "data/bronze/prs_DFemObras-2025.1.json"
+              },
+              {
+                "name": "prs_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 218149,
+                "path": "data/bronze/prs_DFemObras.json"
+              },
+              {
+                "name": "prs_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 877091,
+                "path": "data/bronze/prs_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "prs_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 217774,
+                "path": "data/bronze/prs_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "prs_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 504151,
+                "path": "data/bronze/prs_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "prs_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 255353,
+                "path": "data/bronze/prs_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "prs_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 160340,
+                "path": "data/bronze/prs_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "prs_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 169108,
+                "path": "data/bronze/prs_ParticipeMais.json"
+              },
+              {
+                "name": "prs_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 89829,
+                "path": "data/bronze/prs_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "prs_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 18181,
+                "path": "data/bronze/prs_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "prs_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 377455,
+                "path": "data/bronze/prs_Sonorus-2025.1.json"
+              },
+              {
+                "name": "prs_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 601012,
+                "path": "data/bronze/prs_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "prs_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 346526,
+                "path": "data/bronze/prs_VIDAProject.json"
+              },
+              {
+                "name": "prs_all.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 22370961,
+                "path": "data/bronze/prs_all.json"
+              },
+              {
+                "name": "prs_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 600752,
+                "path": "data/bronze/prs_mapadaacessibilidade.json"
+              },
+              {
+                "name": "prs_portfolio-MDS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 19373,
+                "path": "data/bronze/prs_portfolio-MDS.json"
+              },
+              {
+                "name": "prs_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8189,
+                "path": "data/bronze/prs_squad03-r2.json"
+              },
+              {
+                "name": "registry.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 17961,
+                "path": "data/bronze/registry.json"
+              },
+              {
+                "name": "repo_.github.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6582,
+                "path": "data/bronze/repo_.github.json"
+              },
+              {
+                "name": "repo_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7404,
+                "path": "data/bronze/repo_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "repo_2023-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7172,
+                "path": "data/bronze/repo_2023-2-Squad01.json"
+              },
+              {
+                "name": "repo_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7728,
+                "path": "data/bronze/repo_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "repo_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7707,
+                "path": "data/bronze/repo_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "repo_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7275,
+                "path": "data/bronze/repo_2023-2-Squad04.json"
+              },
+              {
+                "name": "repo_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7870,
+                "path": "data/bronze/repo_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "repo_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7202,
+                "path": "data/bronze/repo_2023-2-Squad07.json"
+              },
+              {
+                "name": "repo_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7673,
+                "path": "data/bronze/repo_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "repo_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6903,
+                "path": "data/bronze/repo_2023-2-Squad10.json"
+              },
+              {
+                "name": "repo_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7395,
+                "path": "data/bronze/repo_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "repo_2023.2-LicitaX.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7187,
+                "path": "data/bronze/repo_2023.2-LicitaX.json"
+              },
+              {
+                "name": "repo_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7212,
+                "path": "data/bronze/repo_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "repo_2023.2_Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6946,
+                "path": "data/bronze/repo_2023.2_Gotinha.json"
+              },
+              {
+                "name": "repo_2023.2_Licitaiba.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7393,
+                "path": "data/bronze/repo_2023.2_Licitaiba.json"
+              },
+              {
+                "name": "repo_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7832,
+                "path": "data/bronze/repo_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "repo_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7869,
+                "path": "data/bronze/repo_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "repo_2024-1-Gastos-DF-Doc-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7785,
+                "path": "data/bronze/repo_2024-1-Gastos-DF-Doc-Squad12.json"
+              },
+              {
+                "name": "repo_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7684,
+                "path": "data/bronze/repo_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "repo_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7351,
+                "path": "data/bronze/repo_2024-1-Squad-10.json"
+              },
+              {
+                "name": "repo_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8099,
+                "path": "data/bronze/repo_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "repo_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7033,
+                "path": "data/bronze/repo_2024-1-Squad08.json"
+              },
+              {
+                "name": "repo_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7165,
+                "path": "data/bronze/repo_2024-1-forUnB.json"
+              },
+              {
+                "name": "repo_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7143,
+                "path": "data/bronze/repo_2024-1-squad04.json"
+              },
+              {
+                "name": "repo_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7284,
+                "path": "data/bronze/repo_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "repo_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7162,
+                "path": "data/bronze/repo_2024-2-Agio.json"
+              },
+              {
+                "name": "repo_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7580,
+                "path": "data/bronze/repo_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "repo_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7367,
+                "path": "data/bronze/repo_2024-2-Datazonia.json"
+              },
+              {
+                "name": "repo_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7332,
+                "path": "data/bronze/repo_2024-2-Lumina.json"
+              },
+              {
+                "name": "repo_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7054,
+                "path": "data/bronze/repo_2024-2-Squad01.json"
+              },
+              {
+                "name": "repo_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7373,
+                "path": "data/bronze/repo_2024-2-Squad06.json"
+              },
+              {
+                "name": "repo_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7497,
+                "path": "data/bronze/repo_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "repo_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7381,
+                "path": "data/bronze/repo_2024-2-Urbanize.json"
+              },
+              {
+                "name": "repo_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7128,
+                "path": "data/bronze/repo_2025-1-Eletta.json"
+              },
+              {
+                "name": "repo_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7576,
+                "path": "data/bronze/repo_2025-1-GovInsights.json"
+              },
+              {
+                "name": "repo_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7539,
+                "path": "data/bronze/repo_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "repo_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7318,
+                "path": "data/bronze/repo_2025-1-RelatAI.json"
+              },
+              {
+                "name": "repo_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7060,
+                "path": "data/bronze/repo_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "repo_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7393,
+                "path": "data/bronze/repo_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "repo_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7327,
+                "path": "data/bronze/repo_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "repo_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7663,
+                "path": "data/bronze/repo_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "repo_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7167,
+                "path": "data/bronze/repo_2025-2-Lumina.json"
+              },
+              {
+                "name": "repo_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7348,
+                "path": "data/bronze/repo_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "repo_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7425,
+                "path": "data/bronze/repo_2025-2-OncoMap.json"
+              },
+              {
+                "name": "repo_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7789,
+                "path": "data/bronze/repo_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "repo_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7012,
+                "path": "data/bronze/repo_2025-2-SeLiga.json"
+              },
+              {
+                "name": "repo_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7672,
+                "path": "data/bronze/repo_2025-2-Squad-01.json"
+              },
+              {
+                "name": "repo_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7056,
+                "path": "data/bronze/repo_2025-2-Squad12.json"
+              },
+              {
+                "name": "repo_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7098,
+                "path": "data/bronze/repo_2025-2-Synapse.json"
+              },
+              {
+                "name": "repo_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7997,
+                "path": "data/bronze/repo_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "repo_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7171,
+                "path": "data/bronze/repo_2025_1-Jakebot.json"
+              },
+              {
+                "name": "repo_Avalia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6700,
+                "path": "data/bronze/repo_Avalia.json"
+              },
+              {
+                "name": "repo_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7542,
+                "path": "data/bronze/repo_DFemObras-2025.1.json"
+              },
+              {
+                "name": "repo_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7086,
+                "path": "data/bronze/repo_DFemObras.json"
+              },
+              {
+                "name": "repo_FixIt.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 18668,
+                "path": "data/bronze/repo_FixIt.json"
+              },
+              {
+                "name": "repo_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7432,
+                "path": "data/bronze/repo_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "repo_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7377,
+                "path": "data/bronze/repo_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "repo_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7194,
+                "path": "data/bronze/repo_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "repo_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7507,
+                "path": "data/bronze/repo_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "repo_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7346,
+                "path": "data/bronze/repo_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "repo_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7325,
+                "path": "data/bronze/repo_ParticipeMais.json"
+              },
+              {
+                "name": "repo_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7196,
+                "path": "data/bronze/repo_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "repo_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 25348,
+                "path": "data/bronze/repo_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "repo_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7189,
+                "path": "data/bronze/repo_Sonorus-2025.1.json"
+              },
+              {
+                "name": "repo_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7162,
+                "path": "data/bronze/repo_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "repo_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7026,
+                "path": "data/bronze/repo_VIDAProject.json"
+              },
+              {
+                "name": "repo_carlarocha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 19106,
+                "path": "data/bronze/repo_carlarocha.json"
+              },
+              {
+                "name": "repo_exemplogitpage.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7050,
+                "path": "data/bronze/repo_exemplogitpage.json"
+              },
+              {
+                "name": "repo_hugoplate.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 19784,
+                "path": "data/bronze/repo_hugoplate.json"
+              },
+              {
+                "name": "repo_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7817,
+                "path": "data/bronze/repo_mapadaacessibilidade.json"
+              },
+              {
+                "name": "repo_portfolio-MDS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7008,
+                "path": "data/bronze/repo_portfolio-MDS.json"
+              },
+              {
+                "name": "repo_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6791,
+                "path": "data/bronze/repo_squad03-r2.json"
+              },
+              {
+                "name": "repo_teste.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 6491,
+                "path": "data/bronze/repo_teste.json"
+              },
+              {
+                "name": "repositories_detailed.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 611597,
+                "path": "data/bronze/repositories_detailed.json"
+              },
+              {
+                "name": "repositories_filtered.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 459682,
+                "path": "data/bronze/repositories_filtered.json"
+              },
+              {
+                "name": "repositories_raw.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 459677,
+                "path": "data/bronze/repositories_raw.json"
+              }
+            ],
+            "value": 311952930
+          },
+          {
+            "name": "data_catalog.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 1155,
+            "path": "data/data_catalog.json"
+          },
+          {
+            "name": "gold",
+            "type": "directory",
+            "path": "data/gold",
+            "children": [
+              {
+                "name": "registry.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 210,
+                "path": "data/gold/registry.json"
+              },
+              {
+                "name": "timeline_last_12_months.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 448571,
+                "path": "data/gold/timeline_last_12_months.json"
+              },
+              {
+                "name": "timeline_last_7_days.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 39282,
+                "path": "data/gold/timeline_last_7_days.json"
+              }
+            ],
+            "value": 488063
+          },
+          {
+            "name": "master_registry.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 100152,
+            "path": "data/master_registry.json"
+          },
+          {
+            "name": "silver",
+            "type": "directory",
+            "path": "data/silver",
+            "children": [
+              {
+                "name": "activity_heatmap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 14088,
+                "path": "data/silver/activity_heatmap.json"
+              },
+              {
+                "name": "collaboration_edges.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 612599,
+                "path": "data/silver/collaboration_edges.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11728,
+                "path": "data/silver/commits_by_author_2025-2-Squad-01.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Squad-01_graphql.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 299,
+                "path": "data/silver/commits_by_author_2025-2-Squad-01_graphql.json"
+              },
+              {
+                "name": "commits_metrics_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2448,
+                "path": "data/silver/commits_metrics_2025-2-Squad-01.json"
+              },
+              {
+                "name": "contribution_distribution.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 327,
+                "path": "data/silver/contribution_distribution.json"
+              },
+              {
+                "name": "contribution_metrics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2,
+                "path": "data/silver/contribution_metrics.json"
+              },
+              {
+                "name": "cross_repository_hubs.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 16484,
+                "path": "data/silver/cross_repository_hubs.json"
+              },
+              {
+                "name": "cycle_times.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1298794,
+                "path": "data/silver/cycle_times.json"
+              },
+              {
+                "name": "daily_activity_summary.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2758203,
+                "path": "data/silver/daily_activity_summary.json"
+              },
+              {
+                "name": "maturity_bands.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 168,
+                "path": "data/silver/maturity_bands.json"
+              },
+              {
+                "name": "member_status_distribution.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 171,
+                "path": "data/silver/member_status_distribution.json"
+              },
+              {
+                "name": "members_analytics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 63694,
+                "path": "data/silver/members_analytics.json"
+              },
+              {
+                "name": "network_statistics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 346,
+                "path": "data/silver/network_statistics.json"
+              },
+              {
+                "name": "registry.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 681,
+                "path": "data/silver/registry.json"
+              },
+              {
+                "name": "repository_collaboration_analysis.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 29424,
+                "path": "data/silver/repository_collaboration_analysis.json"
+              },
+              {
+                "name": "repository_metrics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10425,
+                "path": "data/silver/repository_metrics.json"
+              },
+              {
+                "name": "temporal_events.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13184626,
+                "path": "data/silver/temporal_events.json"
+              },
+              {
+                "name": "temporal_statistics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2232,
+                "path": "data/silver/temporal_statistics.json"
+              },
+              {
+                "name": "user_collaboration_metrics.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 237905,
+                "path": "data/silver/user_collaboration_metrics.json"
+              }
+            ],
+            "value": 18244644
+          }
+        ],
+        "value": 330786944
+      },
+      {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs",
+        "children": [
+          {
+            "name": "api",
+            "type": "directory",
+            "path": "docs/api",
+            "children": [
+              {
+                "name": "OqueEAPI.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2897,
+                "path": "docs/api/OqueEAPI.md"
+              },
+              {
+                "name": "Testar-API.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2569,
+                "path": "docs/api/Testar-API.md"
+              },
+              {
+                "name": "api.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 18967,
+                "path": "docs/api/api.html"
+              }
+            ],
+            "value": 24433
+          },
+          {
+            "name": "arquitetura",
+            "type": "directory",
+            "path": "docs/arquitetura",
+            "children": [
+              {
+                "name": "Level-3-Frontend-Component-Diagram.svg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 42184,
+                "path": "docs/arquitetura/Level-3-Frontend-Component-Diagram.svg"
+              },
+              {
+                "name": "Level1-System_Context_Diagram.svg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 33020,
+                "path": "docs/arquitetura/Level1-System_Context_Diagram.svg"
+              },
+              {
+                "name": "Level2-Container-Diagram.drawio.svg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 539714,
+                "path": "docs/arquitetura/Level2-Container-Diagram.drawio.svg"
+              },
+              {
+                "name": "Level3- ETL-Scripts-component-diagram.svg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 529804,
+                "path": "docs/arquitetura/Level3- ETL-Scripts-component-diagram.svg"
+              },
+              {
+                "name": "arquitetura.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 11197,
+                "path": "docs/arquitetura/arquitetura.html"
+              },
+              {
+                "name": "docs_adr",
+                "type": "directory",
+                "path": "docs/arquitetura/docs_adr",
+                "children": [
+                  {
+                    "name": "adr_001.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1670,
+                    "path": "docs/arquitetura/docs_adr/adr_001.md"
+                  }
+                ],
+                "value": 1670
+              },
+              {
+                "name": "fluxos",
+                "type": "directory",
+                "path": "docs/arquitetura/fluxos",
+                "children": [
+                  {
+                    "name": "FluxoPrincipal.png",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 298979,
+                    "path": "docs/arquitetura/fluxos/FluxoPrincipal.png"
+                  },
+                  {
+                    "name": "fluxo_usuario_metricas_github.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 2385,
+                    "path": "docs/arquitetura/fluxos/fluxo_usuario_metricas_github.md"
+                  }
+                ],
+                "value": 301364
+              },
+              {
+                "name": "mmd",
+                "type": "directory",
+                "path": "docs/arquitetura/mmd",
+                "children": [
+                  {
+                    "name": "dag-medallion.mmd",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 3828,
+                    "path": "docs/arquitetura/mmd/dag-medallion.mmd"
+                  },
+                  {
+                    "name": "sequential-etl.mmd",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 2864,
+                    "path": "docs/arquitetura/mmd/sequential-etl.mmd"
+                  },
+                  {
+                    "name": "topologia-dashboard.mmd",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 2116,
+                    "path": "docs/arquitetura/mmd/topologia-dashboard.mmd"
+                  }
+                ],
+                "value": 8808
+              }
+            ],
+            "value": 1467761
+          },
+          {
+            "name": "atas",
+            "type": "directory",
+            "path": "docs/atas",
+            "children": [
+              {
+                "name": "2025-08-26.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2784,
+                "path": "docs/atas/2025-08-26.md"
+              },
+              {
+                "name": "2025-08-28.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1804,
+                "path": "docs/atas/2025-08-28.md"
+              },
+              {
+                "name": "2025-09-01.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3186,
+                "path": "docs/atas/2025-09-01.md"
+              },
+              {
+                "name": "2025-09-08.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3083,
+                "path": "docs/atas/2025-09-08.md"
+              },
+              {
+                "name": "2025-09-09.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1562,
+                "path": "docs/atas/2025-09-09.md"
+              },
+              {
+                "name": "2025-09-15.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2294,
+                "path": "docs/atas/2025-09-15.md"
+              },
+              {
+                "name": "atas.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 16853,
+                "path": "docs/atas/atas.html"
+              }
+            ],
+            "value": 31566
+          },
+          {
+            "name": "backend",
+            "type": "directory",
+            "path": "docs/backend",
+            "children": [
+              {
+                "name": "Documentacao-Backend.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 17530,
+                "path": "docs/backend/Documentacao-Backend.md"
+              },
+              {
+                "name": "backend.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 26852,
+                "path": "docs/backend/backend.html"
+              },
+              {
+                "name": "structure-visualization.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 598,
+                "path": "docs/backend/structure-visualization.md"
+              }
+            ],
+            "value": 44980
+          },
+          {
+            "name": "benchmarking",
+            "type": "directory",
+            "path": "docs/benchmarking",
+            "children": [
+              {
+                "name": "BENCHMARK_CADU.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 6130,
+                "path": "docs/benchmarking/BENCHMARK_CADU.md"
+              },
+              {
+                "name": "Benchmarking-Keypup.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4698,
+                "path": "docs/benchmarking/Benchmarking-Keypup.md"
+              },
+              {
+                "name": "Benchmarking-LinearB.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7153,
+                "path": "docs/benchmarking/Benchmarking-LinearB.md"
+              },
+              {
+                "name": "Benchmarking-Swarmia-e-SonarCloud.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 5511,
+                "path": "docs/benchmarking/Benchmarking-Swarmia-e-SonarCloud.md"
+              },
+              {
+                "name": "Levantamento-Inicial-do-Produto.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4776,
+                "path": "docs/benchmarking/Levantamento-Inicial-do-Produto.md"
+              },
+              {
+                "name": "benchmarking.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 21113,
+                "path": "docs/benchmarking/benchmarking.html"
+              },
+              {
+                "name": "levantamento-inicial.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 16670,
+                "path": "docs/benchmarking/levantamento-inicial.html"
+              }
+            ],
+            "value": 66051
+          },
+          {
+            "name": "frontend",
+            "type": "directory",
+            "path": "docs/frontend",
+            "children": [
+              {
+                "name": "AplicaçãoGitPageFront.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 13980,
+                "path": "docs/frontend/AplicaçãoGitPageFront.md"
+              },
+              {
+                "name": "Decisao-Frontend.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1884,
+                "path": "docs/frontend/Decisao-Frontend.md"
+              },
+              {
+                "name": "Documentacao-Frontend.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2947,
+                "path": "docs/frontend/Documentacao-Frontend.md"
+              },
+              {
+                "name": "FIGMA.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3591,
+                "path": "docs/frontend/FIGMA.md"
+              },
+              {
+                "name": "HTML.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1461,
+                "path": "docs/frontend/HTML.md"
+              },
+              {
+                "name": "frontend.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 14152,
+                "path": "docs/frontend/frontend.html"
+              },
+              {
+                "name": "prototipo_alta_fidelidade.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 478,
+                "path": "docs/frontend/prototipo_alta_fidelidade.md"
+              },
+              {
+                "name": "prototipo_baixa_fidelidade.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 916,
+                "path": "docs/frontend/prototipo_baixa_fidelidade.md"
+              }
+            ],
+            "value": 39409
+          },
+          {
+            "name": "gestao",
+            "type": "directory",
+            "path": "docs/gestao",
+            "children": [
+              {
+                "name": "Estudo-Completo-sobre-GitHub-Actions.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 9201,
+                "path": "docs/gestao/Estudo-Completo-sobre-GitHub-Actions.md"
+              },
+              {
+                "name": "GIT_GIThub.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 8161,
+                "path": "docs/gestao/GIT_GIThub.md"
+              },
+              {
+                "name": "PO.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3366,
+                "path": "docs/gestao/PO.md"
+              },
+              {
+                "name": "Requisitos.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3702,
+                "path": "docs/gestao/Requisitos.md"
+              },
+              {
+                "name": "SCRUM-e-Metodos-Agile.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7180,
+                "path": "docs/gestao/SCRUM-e-Metodos-Agile.md"
+              },
+              {
+                "name": "equipe.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 6333,
+                "path": "docs/gestao/equipe.html"
+              },
+              {
+                "name": "old_index.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1458,
+                "path": "docs/gestao/old_index.md"
+              },
+              {
+                "name": "old_index2.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 8732,
+                "path": "docs/gestao/old_index2.html"
+              },
+              {
+                "name": "requisitos.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 10475,
+                "path": "docs/gestao/requisitos.html"
+              },
+              {
+                "name": "scrum.html",
+                "type": "file",
+                "language": "HTML",
+                "value": 19056,
+                "path": "docs/gestao/scrum.html"
+              }
+            ],
+            "value": 77664
+          },
+          {
+            "name": "graphql-commits-extraction.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 7172,
+            "path": "docs/graphql-commits-extraction.md"
+          },
+          {
+            "name": "graphql-queries-examples.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 6420,
+            "path": "docs/graphql-queries-examples.md"
+          },
+          {
+            "name": "index.html",
+            "type": "file",
+            "language": "HTML",
+            "value": 5609,
+            "path": "docs/index.html"
+          },
+          {
+            "name": "index.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 1329,
+            "path": "docs/index.md"
+          }
+        ],
+        "value": 1772394
+      },
+      {
+        "name": "front-end",
+        "type": "directory",
+        "path": "front-end",
+        "children": [
+          {
+            "name": ".prettierignore",
+            "type": "file",
+            "language": "Unknown",
+            "value": 116,
+            "path": "front-end/.prettierignore"
+          },
+          {
+            "name": ".prettierrc",
+            "type": "file",
+            "language": "Unknown",
+            "value": 175,
+            "path": "front-end/.prettierrc"
+          },
+          {
+            "name": "README.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 2555,
+            "path": "front-end/README.md"
+          },
+          {
+            "name": "eslint.config.js",
+            "type": "file",
+            "language": "JavaScript",
+            "value": 621,
+            "path": "front-end/eslint.config.js"
+          },
+          {
+            "name": "index.html",
+            "type": "file",
+            "language": "HTML",
+            "value": 497,
+            "path": "front-end/index.html"
+          },
+          {
+            "name": "next-env.d.ts",
+            "type": "file",
+            "language": "TypeScript",
+            "value": 262,
+            "path": "front-end/next-env.d.ts"
+          },
+          {
+            "name": "package-lock.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 183919,
+            "path": "front-end/package-lock.json"
+          },
+          {
+            "name": "package.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 1307,
+            "path": "front-end/package.json"
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "type": "file",
+            "language": "YAML",
+            "value": 108704,
+            "path": "front-end/pnpm-lock.yaml"
+          },
+          {
+            "name": "postcss.config.js",
+            "type": "file",
+            "language": "JavaScript",
+            "value": 90,
+            "path": "front-end/postcss.config.js"
+          },
+          {
+            "name": "public",
+            "type": "directory",
+            "path": "front-end/public",
+            "children": [
+              {
+                "name": "available_repos.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 1764,
+                "path": "front-end/public/available_repos.json"
+              },
+              {
+                "name": "commits_by_author_.github.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 679,
+                "path": "front-end/public/commits_by_author_.github.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-JuizVirtual.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11015,
+                "path": "front-end/public/commits_by_author_2023-2-JuizVirtual.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2413,
+                "path": "front-end/public/commits_by_author_2023-2-Squad01.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad02-Desmatazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11188,
+                "path": "front-end/public/commits_by_author_2023-2-Squad02-Desmatazonia.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad03-LicitAL.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7219,
+                "path": "front-end/public/commits_by_author_2023-2-Squad03-LicitAL.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 24535,
+                "path": "front-end/public/commits_by_author_2023-2-Squad04.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad05-TesouroMineiro.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12290,
+                "path": "front-end/public/commits_by_author_2023-2-Squad05-TesouroMineiro.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad07.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10303,
+                "path": "front-end/public/commits_by_author_2023-2-Squad07.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad09-Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 14395,
+                "path": "front-end/public/commits_by_author_2023-2-Squad09-Gotinha.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-Squad10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 9745,
+                "path": "front-end/public/commits_by_author_2023-2-Squad10.json"
+              },
+              {
+                "name": "commits_by_author_2023-2-SuaGradeUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 21125,
+                "path": "front-end/public/commits_by_author_2023-2-SuaGradeUnB.json"
+              },
+              {
+                "name": "commits_by_author_2023.2-LicitaX.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3049,
+                "path": "front-end/public/commits_by_author_2023.2-LicitaX.json"
+              },
+              {
+                "name": "commits_by_author_2023.2_DeOlhoRS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 18942,
+                "path": "front-end/public/commits_by_author_2023.2_DeOlhoRS.json"
+              },
+              {
+                "name": "commits_by_author_2023.2_Gotinha.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3213,
+                "path": "front-end/public/commits_by_author_2023.2_Gotinha.json"
+              },
+              {
+                "name": "commits_by_author_2023.2_Licitaiba.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 5056,
+                "path": "front-end/public/commits_by_author_2023.2_Licitaiba.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-EducaMinas-backend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8669,
+                "path": "front-end/public/commits_by_author_2024-1-EducaMinas-backend.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-EducaMinas-frontend.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 16315,
+                "path": "front-end/public/commits_by_author_2024-1-EducaMinas-frontend.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-Gastos-DF-Doc-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3569,
+                "path": "front-end/public/commits_by_author_2024-1-Gastos-DF-Doc-Squad12.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-MinasDeCultura.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 22094,
+                "path": "front-end/public/commits_by_author_2024-1-MinasDeCultura.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-Squad-10.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 21823,
+                "path": "front-end/public/commits_by_author_2024-1-Squad-10.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-Squad02-CulturaTransparente.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 18488,
+                "path": "front-end/public/commits_by_author_2024-1-Squad02-CulturaTransparente.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-Squad08.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8349,
+                "path": "front-end/public/commits_by_author_2024-1-Squad08.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-forUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 24817,
+                "path": "front-end/public/commits_by_author_2024-1-forUnB.json"
+              },
+              {
+                "name": "commits_by_author_2024-1-squad04.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12159,
+                "path": "front-end/public/commits_by_author_2024-1-squad04.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-AcheiUnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 35350,
+                "path": "front-end/public/commits_by_author_2024-2-AcheiUnB.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Agio.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13637,
+                "path": "front-end/public/commits_by_author_2024-2-Agio.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-ChamaControl.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 16580,
+                "path": "front-end/public/commits_by_author_2024-2-ChamaControl.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Datazonia.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 9116,
+                "path": "front-end/public/commits_by_author_2024-2-Datazonia.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13056,
+                "path": "front-end/public/commits_by_author_2024-2-Lumina.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Squad01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7726,
+                "path": "front-end/public/commits_by_author_2024-2-Squad01.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Squad06.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13876,
+                "path": "front-end/public/commits_by_author_2024-2-Squad06.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-SuaFinanca.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 9864,
+                "path": "front-end/public/commits_by_author_2024-2-SuaFinanca.json"
+              },
+              {
+                "name": "commits_by_author_2024-2-Urbanize.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11750,
+                "path": "front-end/public/commits_by_author_2024-2-Urbanize.json"
+              },
+              {
+                "name": "commits_by_author_2025-1-Eletta.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13804,
+                "path": "front-end/public/commits_by_author_2025-1-Eletta.json"
+              },
+              {
+                "name": "commits_by_author_2025-1-GovInsights.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 20117,
+                "path": "front-end/public/commits_by_author_2025-1-GovInsights.json"
+              },
+              {
+                "name": "commits_by_author_2025-1-NoFluxoUNB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 27157,
+                "path": "front-end/public/commits_by_author_2025-1-NoFluxoUNB.json"
+              },
+              {
+                "name": "commits_by_author_2025-1-RelatAI.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12167,
+                "path": "front-end/public/commits_by_author_2025-1-RelatAI.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Eh_Fake.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8583,
+                "path": "front-end/public/commits_by_author_2025-2-Eh_Fake.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-GuiaDev.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11929,
+                "path": "front-end/public/commits_by_author_2025-2-GuiaDev.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-InfoSchool.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11920,
+                "path": "front-end/public/commits_by_author_2025-2-InfoSchool.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Integralizei_UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7500,
+                "path": "front-end/public/commits_by_author_2025-2-Integralizei_UnB.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Lumina.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11492,
+                "path": "front-end/public/commits_by_author_2025-2-Lumina.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Mural-UnB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 13862,
+                "path": "front-end/public/commits_by_author_2025-2-Mural-UnB.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-OncoMap.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 15246,
+                "path": "front-end/public/commits_by_author_2025-2-OncoMap.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Portal-dos-Professores.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11178,
+                "path": "front-end/public/commits_by_author_2025-2-Portal-dos-Professores.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-SeLiga.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11585,
+                "path": "front-end/public/commits_by_author_2025-2-SeLiga.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12383,
+                "path": "front-end/public/commits_by_author_2025-2-Squad-01.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Squad-01_graphql.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 299,
+                "path": "front-end/public/commits_by_author_2025-2-Squad-01_graphql.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 4368,
+                "path": "front-end/public/commits_by_author_2025-2-Squad12.json"
+              },
+              {
+                "name": "commits_by_author_2025-2-Synapse.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8030,
+                "path": "front-end/public/commits_by_author_2025-2-Synapse.json"
+              },
+              {
+                "name": "commits_by_author_2025.1-RelatoriosInteligentesBCB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8939,
+                "path": "front-end/public/commits_by_author_2025.1-RelatoriosInteligentesBCB.json"
+              },
+              {
+                "name": "commits_by_author_2025_1-Jakebot.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 9476,
+                "path": "front-end/public/commits_by_author_2025_1-Jakebot.json"
+              },
+              {
+                "name": "commits_by_author_DFemObras-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 20655,
+                "path": "front-end/public/commits_by_author_DFemObras-2025.1.json"
+              },
+              {
+                "name": "commits_by_author_DFemObras.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 26353,
+                "path": "front-end/public/commits_by_author_DFemObras.json"
+              },
+              {
+                "name": "commits_by_author_FixIt.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 65228,
+                "path": "front-end/public/commits_by_author_FixIt.json"
+              },
+              {
+                "name": "commits_by_author_Gastos-DF-2024-02.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 28934,
+                "path": "front-end/public/commits_by_author_Gastos-DF-2024-02.json"
+              },
+              {
+                "name": "commits_by_author_Gastos-DF-Squad12.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11280,
+                "path": "front-end/public/commits_by_author_Gastos-DF-Squad12.json"
+              },
+              {
+                "name": "commits_by_author_LicitaBSB-24.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 41246,
+                "path": "front-end/public/commits_by_author_LicitaBSB-24.1.json"
+              },
+              {
+                "name": "commits_by_author_MDS-MonitoraBSB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11644,
+                "path": "front-end/public/commits_by_author_MDS-MonitoraBSB.json"
+              },
+              {
+                "name": "commits_by_author_Mds-ArenaPesadelo.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 8734,
+                "path": "front-end/public/commits_by_author_Mds-ArenaPesadelo.json"
+              },
+              {
+                "name": "commits_by_author_ParticipeMais.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 15526,
+                "path": "front-end/public/commits_by_author_ParticipeMais.json"
+              },
+              {
+                "name": "commits_by_author_Projeto-P.I.T.E.R.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 7781,
+                "path": "front-end/public/commits_by_author_Projeto-P.I.T.E.R.json"
+              },
+              {
+                "name": "commits_by_author_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 11106,
+                "path": "front-end/public/commits_by_author_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
+              },
+              {
+                "name": "commits_by_author_Sonorus-2025.1.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 18550,
+                "path": "front-end/public/commits_by_author_Sonorus-2025.1.json"
+              },
+              {
+                "name": "commits_by_author_Squad09-UnBHUB.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 21244,
+                "path": "front-end/public/commits_by_author_Squad09-UnBHUB.json"
+              },
+              {
+                "name": "commits_by_author_VIDAProject.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10799,
+                "path": "front-end/public/commits_by_author_VIDAProject.json"
+              },
+              {
+                "name": "commits_by_author_exemplogitpage.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 676,
+                "path": "front-end/public/commits_by_author_exemplogitpage.json"
+              },
+              {
+                "name": "commits_by_author_hugoplate.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 24818,
+                "path": "front-end/public/commits_by_author_hugoplate.json"
+              },
+              {
+                "name": "commits_by_author_mapadaacessibilidade.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 10339,
+                "path": "front-end/public/commits_by_author_mapadaacessibilidade.json"
+              },
+              {
+                "name": "commits_by_author_portfolio-MDS.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 692,
+                "path": "front-end/public/commits_by_author_portfolio-MDS.json"
+              },
+              {
+                "name": "commits_by_author_squad03-r2.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 3772,
+                "path": "front-end/public/commits_by_author_squad03-r2.json"
+              },
+              {
+                "name": "commits_by_author_teste.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 676,
+                "path": "front-end/public/commits_by_author_teste.json"
+              },
+              {
+                "name": "commits_metrics_2025-2-Squad-01.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2448,
+                "path": "front-end/public/commits_metrics_2025-2-Squad-01.json"
+              },
+              {
+                "name": "commits_metrics_2025-2-Squad-01_mock.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 2679,
+                "path": "front-end/public/commits_metrics_2025-2-Squad-01_mock.json"
+              },
+              {
+                "name": "data",
+                "type": "directory",
+                "path": "front-end/public/data",
+                "children": [
+                  {
+                    "name": "gold",
+                    "type": "directory",
+                    "path": "front-end/public/data/gold",
+                    "children": [
+                      {
+                        "name": "timeline_last_7_days.json",
+                        "type": "file",
+                        "language": "JSON",
+                        "value": 39282,
+                        "path": "front-end/public/data/gold/timeline_last_7_days.json"
+                      }
+                    ],
+                    "value": 39282
+                  },
+                  {
+                    "name": "silver",
+                    "type": "directory",
+                    "path": "front-end/public/data/silver",
+                    "children": [
+                      {
+                        "name": "activity_heatmap.json",
+                        "type": "file",
+                        "language": "JSON",
+                        "value": 12325,
+                        "path": "front-end/public/data/silver/activity_heatmap.json"
+                      },
+                      {
+                        "name": "available_repos.json",
+                        "type": "file",
+                        "language": "JSON",
+                        "value": 1442,
+                        "path": "front-end/public/data/silver/available_repos.json"
+                      },
+                      {
+                        "name": "language_analysis_all.json",
+                        "type": "file",
+                        "language": "JSON",
+                        "value": 772966,
+                        "path": "front-end/public/data/silver/language_analysis_all.json"
+                      }
+                    ],
+                    "value": 786733
+                  }
+                ],
+                "value": 826015
+              },
+              {
+                "name": "temporal_events.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 210206,
+                "path": "front-end/public/temporal_events.json"
+              },
+              {
+                "name": "vite.svg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 1497,
+                "path": "front-end/public/vite.svg"
+              }
+            ],
+            "value": 2027102
+          },
+          {
+            "name": "src",
+            "type": "directory",
+            "path": "front-end/src",
+            "children": [
+              {
+                "name": "App.tsx",
+                "type": "file",
+                "language": "TypeScript",
+                "value": 1383,
+                "path": "front-end/src/App.tsx"
+              },
+              {
+                "name": "assets",
+                "type": "directory",
+                "path": "front-end/src/assets",
+                "children": [
+                  {
+                    "name": "react.svg",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 4126,
+                    "path": "front-end/src/assets/react.svg"
+                  }
+                ],
+                "value": 4126
+              },
+              {
+                "name": "components",
+                "type": "directory",
+                "path": "front-end/src/components",
+                "children": [
+                  {
+                    "name": "BaseFilters.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 2054,
+                    "path": "front-end/src/components/BaseFilters.tsx"
+                  },
+                  {
+                    "name": "CalendarHeatmap.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 15123,
+                    "path": "front-end/src/components/CalendarHeatmap.tsx"
+                  },
+                  {
+                    "name": "DashboardLayout.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 2632,
+                    "path": "front-end/src/components/DashboardLayout.tsx"
+                  },
+                  {
+                    "name": "Filter.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1463,
+                    "path": "front-end/src/components/Filter.tsx"
+                  },
+                  {
+                    "name": "Graphs.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 40454,
+                    "path": "front-end/src/components/Graphs.tsx"
+                  },
+                  {
+                    "name": "Histogram.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 3210,
+                    "path": "front-end/src/components/Histogram.tsx"
+                  },
+                  {
+                    "name": "LanguageLegend.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1639,
+                    "path": "front-end/src/components/LanguageLegend.tsx"
+                  },
+                  {
+                    "name": "MemberFilter.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 5844,
+                    "path": "front-end/src/components/MemberFilter.tsx"
+                  },
+                  {
+                    "name": "OverviewToolbar.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 3993,
+                    "path": "front-end/src/components/OverviewToolbar.tsx"
+                  },
+                  {
+                    "name": "PieChart.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1951,
+                    "path": "front-end/src/components/PieChart.tsx"
+                  },
+                  {
+                    "name": "RepoFingerprint.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 9527,
+                    "path": "front-end/src/components/RepoFingerprint.tsx"
+                  },
+                  {
+                    "name": "RepoTreemap.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 8070,
+                    "path": "front-end/src/components/RepoTreemap.tsx"
+                  },
+                  {
+                    "name": "RepositoryFilter.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 3482,
+                    "path": "front-end/src/components/RepositoryFilter.tsx"
+                  },
+                  {
+                    "name": "RepositoryToolbar.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 6457,
+                    "path": "front-end/src/components/RepositoryToolbar.tsx"
+                  },
+                  {
+                    "name": "Sidebar.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 4984,
+                    "path": "front-end/src/components/Sidebar.tsx"
+                  },
+                  {
+                    "name": "VisualizationTabs.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1098,
+                    "path": "front-end/src/components/VisualizationTabs.tsx"
+                  }
+                ],
+                "value": 111981
+              },
+              {
+                "name": "contexts",
+                "type": "directory",
+                "path": "front-end/src/contexts",
+                "children": [
+                  {
+                    "name": "SidebarContext.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 948,
+                    "path": "front-end/src/contexts/SidebarContext.tsx"
+                  }
+                ],
+                "value": 948
+              },
+              {
+                "name": "hooks",
+                "type": "directory",
+                "path": "front-end/src/hooks",
+                "children": [
+                  {
+                    "name": "useRepoData.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 2207,
+                    "path": "front-end/src/hooks/useRepoData.ts"
+                  },
+                  {
+                    "name": "useRepositories.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1197,
+                    "path": "front-end/src/hooks/useRepositories.ts"
+                  }
+                ],
+                "value": 3404
+              },
+              {
+                "name": "index.css",
+                "type": "file",
+                "language": "CSS",
+                "value": 10513,
+                "path": "front-end/src/index.css"
+              },
+              {
+                "name": "main.tsx",
+                "type": "file",
+                "language": "TypeScript",
+                "value": 511,
+                "path": "front-end/src/main.tsx"
+              },
+              {
+                "name": "pages",
+                "type": "directory",
+                "path": "front-end/src/pages",
+                "children": [
+                  {
+                    "name": "Collaboration.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 7853,
+                    "path": "front-end/src/pages/Collaboration.tsx"
+                  },
+                  {
+                    "name": "Commits.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 8585,
+                    "path": "front-end/src/pages/Commits.tsx"
+                  },
+                  {
+                    "name": "Documentacao.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 11831,
+                    "path": "front-end/src/pages/Documentacao.tsx"
+                  },
+                  {
+                    "name": "Heatmap.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 9437,
+                    "path": "front-end/src/pages/Heatmap.tsx"
+                  },
+                  {
+                    "name": "HomePage.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 12449,
+                    "path": "front-end/src/pages/HomePage.tsx"
+                  },
+                  {
+                    "name": "Issues.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 6866,
+                    "path": "front-end/src/pages/Issues.tsx"
+                  },
+                  {
+                    "name": "NotFound.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 1652,
+                    "path": "front-end/src/pages/NotFound.tsx"
+                  },
+                  {
+                    "name": "PullRequests.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 6911,
+                    "path": "front-end/src/pages/PullRequests.tsx"
+                  },
+                  {
+                    "name": "Timeline.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 12557,
+                    "path": "front-end/src/pages/Timeline.tsx"
+                  },
+                  {
+                    "name": "TimelineExtraction.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 4266,
+                    "path": "front-end/src/pages/TimelineExtraction.ts"
+                  },
+                  {
+                    "name": "TimelineExtraction.validation.js",
+                    "type": "file",
+                    "language": "JavaScript",
+                    "value": 5778,
+                    "path": "front-end/src/pages/TimelineExtraction.validation.js"
+                  },
+                  {
+                    "name": "Utils.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 15042,
+                    "path": "front-end/src/pages/Utils.ts"
+                  },
+                  {
+                    "name": "Visualization.tsx",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 5608,
+                    "path": "front-end/src/pages/Visualization.tsx"
+                  }
+                ],
+                "value": 108835
+              },
+              {
+                "name": "types",
+                "type": "directory",
+                "path": "front-end/src/types",
+                "children": [
+                  {
+                    "name": "charts.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 588,
+                    "path": "front-end/src/types/charts.ts"
+                  },
+                  {
+                    "name": "github.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 500,
+                    "path": "front-end/src/types/github.ts"
+                  },
+                  {
+                    "name": "index.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 260,
+                    "path": "front-end/src/types/index.ts"
+                  },
+                  {
+                    "name": "repoVisualization.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 408,
+                    "path": "front-end/src/types/repoVisualization.ts"
+                  }
+                ],
+                "value": 1756
+              },
+              {
+                "name": "utils",
+                "type": "directory",
+                "path": "front-end/src/utils",
+                "children": [
+                  {
+                    "name": "dataAdapter.ts",
+                    "type": "file",
+                    "language": "TypeScript",
+                    "value": 2253,
+                    "path": "front-end/src/utils/dataAdapter.ts"
+                  }
+                ],
+                "value": 2253
+              },
+              {
+                "name": "vite-env.d.ts",
+                "type": "file",
+                "language": "TypeScript",
+                "value": 214,
+                "path": "front-end/src/vite-env.d.ts"
+              }
+            ],
+            "value": 245924
+          },
+          {
+            "name": "tailwind.config.js",
+            "type": "file",
+            "language": "JavaScript",
+            "value": 300,
+            "path": "front-end/tailwind.config.js"
+          },
+          {
+            "name": "tsconfig.app.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 462,
+            "path": "front-end/tsconfig.app.json"
+          },
+          {
+            "name": "tsconfig.app.tsbuildinfo",
+            "type": "file",
+            "language": "Unknown",
+            "value": 44807,
+            "path": "front-end/tsconfig.app.tsbuildinfo"
+          },
+          {
+            "name": "tsconfig.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 119,
+            "path": "front-end/tsconfig.json"
+          },
+          {
+            "name": "tsconfig.node.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 653,
+            "path": "front-end/tsconfig.node.json"
+          },
+          {
+            "name": "vite.config.ts",
+            "type": "file",
+            "language": "TypeScript",
+            "value": 270,
+            "path": "front-end/vite.config.ts"
+          }
+        ],
+        "value": 2617883
+      },
+      {
+        "name": "generate_mock_data.py",
+        "type": "file",
+        "language": "Python",
+        "value": 3043,
+        "path": "generate_mock_data.py"
+      },
+      {
+        "name": "package-lock.json",
+        "type": "file",
+        "language": "JSON",
+        "value": 138536,
+        "path": "package-lock.json"
+      },
+      {
+        "name": "package.json",
+        "type": "file",
+        "language": "JSON",
+        "value": 217,
+        "path": "package.json"
+      },
+      {
+        "name": "process_all_repos.py",
+        "type": "file",
+        "language": "Python",
+        "value": 3364,
+        "path": "process_all_repos.py"
+      },
+      {
+        "name": "process_real_data.py",
+        "type": "file",
+        "language": "Python",
+        "value": 3096,
+        "path": "process_real_data.py"
+      },
+      {
+        "name": "src",
+        "type": "directory",
+        "path": "src",
+        "children": [
+          {
+            "name": "bronze",
+            "type": "directory",
+            "path": "src/bronze",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 366,
+                "path": "src/bronze/__init__.py"
+              },
+              {
+                "name": "commits.py",
+                "type": "file",
+                "language": "Python",
+                "value": 14883,
+                "path": "src/bronze/commits.py"
+              },
+              {
+                "name": "issues.py",
+                "type": "file",
+                "language": "Python",
+                "value": 11212,
+                "path": "src/bronze/issues.py"
+              },
+              {
+                "name": "members.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5810,
+                "path": "src/bronze/members.py"
+              },
+              {
+                "name": "repositories.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1958,
+                "path": "src/bronze/repositories.py"
+              },
+              {
+                "name": "repository_structure.py",
+                "type": "file",
+                "language": "Python",
+                "value": 9414,
+                "path": "src/bronze/repository_structure.py"
+              }
+            ],
+            "value": 43643
+          },
+          {
+            "name": "bronze_extract.py",
+            "type": "file",
+            "language": "Python",
+            "value": 5192,
+            "path": "src/bronze_extract.py"
+          },
+          {
+            "name": "fetch_issues.py",
+            "type": "file",
+            "language": "Python",
+            "value": 1876,
+            "path": "src/fetch_issues.py"
+          },
+          {
+            "name": "gold",
+            "type": "directory",
+            "path": "src/gold",
+            "children": [
+              {
+                "name": "timeline_aggregation.py",
+                "type": "file",
+                "language": "Python",
+                "value": 7320,
+                "path": "src/gold/timeline_aggregation.py"
+              }
+            ],
+            "value": 7320
+          },
+          {
+            "name": "gold_process.py",
+            "type": "file",
+            "language": "Python",
+            "value": 1305,
+            "path": "src/gold_process.py"
+          },
+          {
+            "name": "registry_manager.py",
+            "type": "file",
+            "language": "Python",
+            "value": 4894,
+            "path": "src/registry_manager.py"
+          },
+          {
+            "name": "silver",
+            "type": "directory",
+            "path": "src/silver",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 501,
+                "path": "src/silver/__init__.py"
+              },
+              {
+                "name": "collaboration_networks.py",
+                "type": "file",
+                "language": "Python",
+                "value": 7064,
+                "path": "src/silver/collaboration_networks.py"
+              },
+              {
+                "name": "contribution_metrics.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4426,
+                "path": "src/silver/contribution_metrics.py"
+              },
+              {
+                "name": "file_language_analysis.py",
+                "type": "file",
+                "language": "Python",
+                "value": 12226,
+                "path": "src/silver/file_language_analysis.py"
+              },
+              {
+                "name": "member_analytics.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4295,
+                "path": "src/silver/member_analytics.py"
+              },
+              {
+                "name": "temporal_analysis.py",
+                "type": "file",
+                "language": "Python",
+                "value": 12052,
+                "path": "src/silver/temporal_analysis.py"
+              }
+            ],
+            "value": 40564
+          },
+          {
+            "name": "silver_process.py",
+            "type": "file",
+            "language": "Python",
+            "value": 5208,
+            "path": "src/silver_process.py"
+          },
+          {
+            "name": "utils",
+            "type": "directory",
+            "path": "src/utils",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 297,
+                "path": "src/utils/__init__.py"
+              },
+              {
+                "name": "cleanup_event_data.py",
+                "type": "file",
+                "language": "Python",
+                "value": 3833,
+                "path": "src/utils/cleanup_event_data.py"
+              },
+              {
+                "name": "github_api.py",
+                "type": "file",
+                "language": "Python",
+                "value": 41132,
+                "path": "src/utils/github_api.py"
+              }
+            ],
+            "value": 45262
+          }
+        ],
+        "value": 155264
+      }
+    ],
+    "value": 335503923
+  },
+  "_metadata": {
+    "extracted_at": "2025-11-28T18:15:26.335836",
+    "file_path": "data/silver/repo_tree_pack_2025-2-Squad-01.json"
+  }
+}

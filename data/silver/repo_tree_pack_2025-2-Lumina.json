@@ -1,0 +1,1476 @@
+{
+  "repository": "2025-2-Lumina",
+  "owner": "unb-mds",
+  "branch": "main",
+  "extracted_at": "2025-11-28T18:13:17.781337",
+  "hierarchy": {
+    "name": "2025-2-Lumina",
+    "type": "directory",
+    "children": [
+      {
+        "name": ".gitattributes",
+        "type": "file",
+        "language": "Unknown",
+        "value": 46,
+        "path": ".gitattributes"
+      },
+      {
+        "name": ".github",
+        "type": "directory",
+        "path": ".github",
+        "children": [
+          {
+            "name": "ISSUE_TEMPLATE.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 1121,
+            "path": ".github/ISSUE_TEMPLATE.md"
+          },
+          {
+            "name": "ISSUE_TEMPLATE",
+            "type": "directory",
+            "path": ".github/ISSUE_TEMPLATE",
+            "children": [
+              {
+                "name": "template-issue.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1239,
+                "path": ".github/ISSUE_TEMPLATE/template-issue.md"
+              }
+            ],
+            "value": 1239
+          },
+          {
+            "name": "PULL_REQUEST_TEMPLATE.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 954,
+            "path": ".github/PULL_REQUEST_TEMPLATE.md"
+          },
+          {
+            "name": "workflows",
+            "type": "directory",
+            "path": ".github/workflows",
+            "children": [
+              {
+                "name": "backend-ci.yml",
+                "type": "file",
+                "language": "YAML",
+                "value": 982,
+                "path": ".github/workflows/backend-ci.yml"
+              },
+              {
+                "name": "deploy_workflow.yaml",
+                "type": "file",
+                "language": "YAML",
+                "value": 2848,
+                "path": ".github/workflows/deploy_workflow.yaml"
+              }
+            ],
+            "value": 3830
+          }
+        ],
+        "value": 7144
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Unknown",
+        "value": 132,
+        "path": ".gitignore"
+      },
+      {
+        "name": "CONTRIBUTING.md",
+        "type": "file",
+        "language": "Markdown",
+        "value": 2077,
+        "path": "CONTRIBUTING.md"
+      },
+      {
+        "name": "LICENSE",
+        "type": "file",
+        "language": "No Extension",
+        "value": 1060,
+        "path": "LICENSE"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "value": 3706,
+        "path": "README.md"
+      },
+      {
+        "name": "backend",
+        "type": "directory",
+        "path": "backend",
+        "children": [
+          {
+            "name": ".coverage",
+            "type": "file",
+            "language": "Unknown",
+            "value": 53248,
+            "path": "backend/.coverage"
+          },
+          {
+            "name": "ProjectContext.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 5253,
+            "path": "backend/ProjectContext.md"
+          },
+          {
+            "name": "README.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 3784,
+            "path": "backend/README.md"
+          },
+          {
+            "name": "app",
+            "type": "directory",
+            "path": "backend/app",
+            "children": [
+              {
+                "name": "__init__.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1,
+                "path": "backend/app/__init__.py"
+              },
+              {
+                "name": "ai",
+                "type": "directory",
+                "path": "backend/app/ai",
+                "children": [
+                  {
+                    "name": "ai_models",
+                    "type": "directory",
+                    "path": "backend/app/ai/ai_models",
+                    "children": [
+                      {
+                        "name": "AIPlatform.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 335,
+                        "path": "backend/app/ai/ai_models/AIPlatform.py"
+                      },
+                      {
+                        "name": "EmbeddingPlatform.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 943,
+                        "path": "backend/app/ai/ai_models/EmbeddingPlatform.py"
+                      }
+                    ],
+                    "value": 1278
+                  },
+                  {
+                    "name": "gemini.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 811,
+                    "path": "backend/app/ai/gemini.py"
+                  },
+                  {
+                    "name": "rag",
+                    "type": "directory",
+                    "path": "backend/app/ai/rag",
+                    "children": [
+                      {
+                        "name": "google_embedder.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 2410,
+                        "path": "backend/app/ai/rag/google_embedder.py"
+                      },
+                      {
+                        "name": "ollama_embedder.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 2933,
+                        "path": "backend/app/ai/rag/ollama_embedder.py"
+                      },
+                      {
+                        "name": "retriever.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 628,
+                        "path": "backend/app/ai/rag/retriever.py"
+                      },
+                      {
+                        "name": "text_splitter.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 3347,
+                        "path": "backend/app/ai/rag/text_splitter.py"
+                      }
+                    ],
+                    "value": 9318
+                  },
+                  {
+                    "name": "system_prompts",
+                    "type": "directory",
+                    "path": "backend/app/ai/system_prompts",
+                    "children": [
+                      {
+                        "name": "system_prompt.md",
+                        "type": "file",
+                        "language": "Markdown",
+                        "value": 56,
+                        "path": "backend/app/ai/system_prompts/system_prompt.md"
+                      }
+                    ],
+                    "value": 56
+                  }
+                ],
+                "value": 11463
+              },
+              {
+                "name": "db",
+                "type": "directory",
+                "path": "backend/app/db",
+                "children": [
+                  {
+                    "name": "articledb.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 8559,
+                    "path": "backend/app/db/articledb.py"
+                  },
+                  {
+                    "name": "articles.db",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 33853440,
+                    "path": "backend/app/db/articles.db"
+                  },
+                  {
+                    "name": "chroma_db",
+                    "type": "directory",
+                    "path": "backend/app/db/chroma_db",
+                    "children": [
+                      {
+                        "name": "20fdd848-56ff-4f18-a36d-f199ee52f981",
+                        "type": "directory",
+                        "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981",
+                        "children": [
+                          {
+                            "name": "data_level0.bin",
+                            "type": "file",
+                            "language": "Unknown",
+                            "value": 68354000,
+                            "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981/data_level0.bin"
+                          },
+                          {
+                            "name": "header.bin",
+                            "type": "file",
+                            "language": "Unknown",
+                            "value": 100,
+                            "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981/header.bin"
+                          },
+                          {
+                            "name": "index_metadata.pickle",
+                            "type": "file",
+                            "language": "Unknown",
+                            "value": 151934,
+                            "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981/index_metadata.pickle"
+                          },
+                          {
+                            "name": "length.bin",
+                            "type": "file",
+                            "language": "Unknown",
+                            "value": 22000,
+                            "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981/length.bin"
+                          },
+                          {
+                            "name": "link_lists.bin",
+                            "type": "file",
+                            "language": "Unknown",
+                            "value": 49268,
+                            "path": "backend/app/db/chroma_db/20fdd848-56ff-4f18-a36d-f199ee52f981/link_lists.bin"
+                          }
+                        ],
+                        "value": 68577302
+                      },
+                      {
+                        "name": "chroma.sqlite3",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 134,
+                        "path": "backend/app/db/chroma_db/chroma.sqlite3"
+                      }
+                    ],
+                    "value": 68577436
+                  },
+                  {
+                    "name": "metroarticles.db",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 23273472,
+                    "path": "backend/app/db/metroarticles.db"
+                  },
+                  {
+                    "name": "vectordb.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 8774,
+                    "path": "backend/app/db/vectordb.py"
+                  }
+                ],
+                "value": 125721681
+              },
+              {
+                "name": "models",
+                "type": "directory",
+                "path": "backend/app/models",
+                "children": [
+                  {
+                    "name": "article.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 823,
+                    "path": "backend/app/models/article.py"
+                  },
+                  {
+                    "name": "linkextractor.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 917,
+                    "path": "backend/app/models/linkextractor.py"
+                  },
+                  {
+                    "name": "pagescraper.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 296,
+                    "path": "backend/app/models/pagescraper.py"
+                  }
+                ],
+                "value": 2036
+              },
+              {
+                "name": "services",
+                "type": "directory",
+                "path": "backend/app/services",
+                "children": [
+                  {
+                    "name": "chat_service.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1810,
+                    "path": "backend/app/services/chat_service.py"
+                  },
+                  {
+                    "name": "scraping_manager.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 2521,
+                    "path": "backend/app/services/scraping_manager.py"
+                  },
+                  {
+                    "name": "search_service.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 2533,
+                    "path": "backend/app/services/search_service.py"
+                  }
+                ],
+                "value": 6864
+              },
+              {
+                "name": "webcrawler",
+                "type": "directory",
+                "path": "backend/app/webcrawler",
+                "children": [
+                  {
+                    "name": "G1",
+                    "type": "directory",
+                    "path": "backend/app/webcrawler/G1",
+                    "children": [
+                      {
+                        "name": "g1linkextractor.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 2280,
+                        "path": "backend/app/webcrawler/G1/g1linkextractor.py"
+                      },
+                      {
+                        "name": "g1scraper.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 2537,
+                        "path": "backend/app/webcrawler/G1/g1scraper.py"
+                      },
+                      {
+                        "name": "g1webcrawler.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 9098,
+                        "path": "backend/app/webcrawler/G1/g1webcrawler.py"
+                      }
+                    ],
+                    "value": 13915
+                  },
+                  {
+                    "name": "Metropoles",
+                    "type": "directory",
+                    "path": "backend/app/webcrawler/Metropoles",
+                    "children": [
+                      {
+                        "name": "metrolinkextractor.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 3964,
+                        "path": "backend/app/webcrawler/Metropoles/metrolinkextractor.py"
+                      },
+                      {
+                        "name": "metroscraper.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 10317,
+                        "path": "backend/app/webcrawler/Metropoles/metroscraper.py"
+                      },
+                      {
+                        "name": "metrowebcrawler.py",
+                        "type": "file",
+                        "language": "Python",
+                        "value": 6690,
+                        "path": "backend/app/webcrawler/Metropoles/metrowebcrawler.py"
+                      }
+                    ],
+                    "value": 20971
+                  },
+                  {
+                    "name": "dowloader.py",
+                    "type": "file",
+                    "language": "Python",
+                    "value": 1768,
+                    "path": "backend/app/webcrawler/dowloader.py"
+                  }
+                ],
+                "value": 36654
+              }
+            ],
+            "value": 125778699
+          },
+          {
+            "name": "crawler_state.json",
+            "type": "file",
+            "language": "JSON",
+            "value": 4362453,
+            "path": "backend/crawler_state.json"
+          },
+          {
+            "name": "main.py",
+            "type": "file",
+            "language": "Python",
+            "value": 8869,
+            "path": "backend/main.py"
+          },
+          {
+            "name": "pytest.ini",
+            "type": "file",
+            "language": "Unknown",
+            "value": 225,
+            "path": "backend/pytest.ini"
+          },
+          {
+            "name": "requirements.txt",
+            "type": "file",
+            "language": "Text",
+            "value": 545,
+            "path": "backend/requirements.txt"
+          },
+          {
+            "name": "scripts",
+            "type": "directory",
+            "path": "backend/scripts",
+            "children": [
+              {
+                "name": "dbstatus.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1860,
+                "path": "backend/scripts/dbstatus.py"
+              },
+              {
+                "name": "quickscript.py",
+                "type": "file",
+                "language": "Python",
+                "value": 442,
+                "path": "backend/scripts/quickscript.py"
+              },
+              {
+                "name": "run_crawler.py",
+                "type": "file",
+                "language": "Python",
+                "value": 397,
+                "path": "backend/scripts/run_crawler.py"
+              },
+              {
+                "name": "run_metropoles_crawler.py",
+                "type": "file",
+                "language": "Python",
+                "value": 858,
+                "path": "backend/scripts/run_metropoles_crawler.py"
+              },
+              {
+                "name": "vectorize_articles.py",
+                "type": "file",
+                "language": "Python",
+                "value": 2536,
+                "path": "backend/scripts/vectorize_articles.py"
+              }
+            ],
+            "value": 6093
+          },
+          {
+            "name": "tests",
+            "type": "directory",
+            "path": "backend/tests",
+            "children": [
+              {
+                "name": "test_article.py",
+                "type": "file",
+                "language": "Python",
+                "value": 941,
+                "path": "backend/tests/test_article.py"
+              },
+              {
+                "name": "test_articledb.py",
+                "type": "file",
+                "language": "Python",
+                "value": 6533,
+                "path": "backend/tests/test_articledb.py"
+              },
+              {
+                "name": "test_chat_service.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4929,
+                "path": "backend/tests/test_chat_service.py"
+              },
+              {
+                "name": "test_dowloader.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5886,
+                "path": "backend/tests/test_dowloader.py"
+              },
+              {
+                "name": "test_g1linkextractor.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4239,
+                "path": "backend/tests/test_g1linkextractor.py"
+              },
+              {
+                "name": "test_g1scraper.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5178,
+                "path": "backend/tests/test_g1scraper.py"
+              },
+              {
+                "name": "test_g1webcrawler.py",
+                "type": "file",
+                "language": "Python",
+                "value": 9325,
+                "path": "backend/tests/test_g1webcrawler.py"
+              },
+              {
+                "name": "test_google_embedder.py",
+                "type": "file",
+                "language": "Python",
+                "value": 4115,
+                "path": "backend/tests/test_google_embedder.py"
+              },
+              {
+                "name": "test_linkextractor.py",
+                "type": "file",
+                "language": "Python",
+                "value": 2349,
+                "path": "backend/tests/test_linkextractor.py"
+              },
+              {
+                "name": "test_main_crud.py",
+                "type": "file",
+                "language": "Python",
+                "value": 9311,
+                "path": "backend/tests/test_main_crud.py"
+              },
+              {
+                "name": "test_metrolinkextractor.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5529,
+                "path": "backend/tests/test_metrolinkextractor.py"
+              },
+              {
+                "name": "test_metroscraper.py",
+                "type": "file",
+                "language": "Python",
+                "value": 10757,
+                "path": "backend/tests/test_metroscraper.py"
+              },
+              {
+                "name": "test_metrowebcrawler.py",
+                "type": "file",
+                "language": "Python",
+                "value": 6495,
+                "path": "backend/tests/test_metrowebcrawler.py"
+              },
+              {
+                "name": "test_pagescraper.py",
+                "type": "file",
+                "language": "Python",
+                "value": 1537,
+                "path": "backend/tests/test_pagescraper.py"
+              },
+              {
+                "name": "test_sanity.py",
+                "type": "file",
+                "language": "Python",
+                "value": 109,
+                "path": "backend/tests/test_sanity.py"
+              },
+              {
+                "name": "test_scraping_manager.py",
+                "type": "file",
+                "language": "Python",
+                "value": 5101,
+                "path": "backend/tests/test_scraping_manager.py"
+              },
+              {
+                "name": "test_text_splitter.py",
+                "type": "file",
+                "language": "Python",
+                "value": 6919,
+                "path": "backend/tests/test_text_splitter.py"
+              },
+              {
+                "name": "test_vectorization.py",
+                "type": "file",
+                "language": "Python",
+                "value": 9280,
+                "path": "backend/tests/test_vectorization.py"
+              }
+            ],
+            "value": 98533
+          }
+        ],
+        "value": 130317702
+      },
+      {
+        "name": "crawler_metro_state.json",
+        "type": "file",
+        "language": "JSON",
+        "value": 1936425,
+        "path": "crawler_metro_state.json"
+      },
+      {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs",
+        "children": [
+          {
+            "name": "documentações",
+            "type": "directory",
+            "path": "docs/documentações",
+            "children": [
+              {
+                "name": ".gitkeep",
+                "type": "file",
+                "language": "Unknown",
+                "value": 2,
+                "path": "docs/documentações/.gitkeep"
+              },
+              {
+                "name": "Documentação back-end.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 345,
+                "path": "docs/documentações/Documentação back-end.md"
+              },
+              {
+                "name": "Documentação front-end.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 1685,
+                "path": "docs/documentações/Documentação front-end.md"
+              },
+              {
+                "name": "Prototipo-de-baixa-fidelidade.jpg",
+                "type": "file",
+                "language": "Unknown",
+                "value": 125081,
+                "path": "docs/documentações/Prototipo-de-baixa-fidelidade.jpg"
+              },
+              {
+                "name": "Prototipo-de-baixa-fidelidade.png",
+                "type": "file",
+                "language": "Unknown",
+                "value": 684332,
+                "path": "docs/documentações/Prototipo-de-baixa-fidelidade.png"
+              },
+              {
+                "name": "Requisitos.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 14224,
+                "path": "docs/documentações/Requisitos.md"
+              },
+              {
+                "name": "StoryMap.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3962,
+                "path": "docs/documentações/StoryMap.md"
+              },
+              {
+                "name": "arquitetura",
+                "type": "directory",
+                "path": "docs/documentações/arquitetura",
+                "children": [
+                  {
+                    "name": "Diagrama de Classes.png",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 478066,
+                    "path": "docs/documentações/arquitetura/Diagrama de Classes.png"
+                  },
+                  {
+                    "name": "arquitetura.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 8896,
+                    "path": "docs/documentações/arquitetura/arquitetura.md"
+                  },
+                  {
+                    "name": "diagrama de componentes.png",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 118805,
+                    "path": "docs/documentações/arquitetura/diagrama de componentes.png"
+                  },
+                  {
+                    "name": "diagrama de conteiners.png",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 139645,
+                    "path": "docs/documentações/arquitetura/diagrama de conteiners.png"
+                  },
+                  {
+                    "name": "diagrama de contexto.png",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 69363,
+                    "path": "docs/documentações/arquitetura/diagrama de contexto.png"
+                  },
+                  {
+                    "name": "diagrama-de-classes.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 2087,
+                    "path": "docs/documentações/arquitetura/diagrama-de-classes.md"
+                  }
+                ],
+                "value": 816862
+              }
+            ],
+            "value": 1646493
+          },
+          {
+            "name": "estudos",
+            "type": "directory",
+            "path": "docs/estudos",
+            "children": [
+              {
+                "name": "ArquiteturaDeSistemas.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 14180,
+                "path": "docs/estudos/ArquiteturaDeSistemas.md"
+              },
+              {
+                "name": "BoasPraticasDeDocumentacao.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 5728,
+                "path": "docs/estudos/BoasPraticasDeDocumentacao.md"
+              },
+              {
+                "name": "Definição_de_Produto.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2908,
+                "path": "docs/estudos/Definição_de_Produto.md"
+              },
+              {
+                "name": "Estudo sobre Arquitetura de Agentes de IA.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 6914,
+                "path": "docs/estudos/Estudo sobre Arquitetura de Agentes de IA.md"
+              },
+              {
+                "name": "Estudo sobre como hospedar um app na Play Store.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7050,
+                "path": "docs/estudos/Estudo sobre como hospedar um app na Play Store.md"
+              },
+              {
+                "name": "EstudoRAG_e _Aplicações.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 22356,
+                "path": "docs/estudos/EstudoRAG_e _Aplicações.md"
+              },
+              {
+                "name": "Estudo_APIsEWebCrawlers.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 9811,
+                "path": "docs/estudos/Estudo_APIsEWebCrawlers.md"
+              },
+              {
+                "name": "Estudo_Docker.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4964,
+                "path": "docs/estudos/Estudo_Docker.md"
+              },
+              {
+                "name": "Estudo_Figma.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4246,
+                "path": "docs/estudos/Estudo_Figma.md"
+              },
+              {
+                "name": "Estudo_SitesEstaticos.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4767,
+                "path": "docs/estudos/Estudo_SitesEstaticos.md"
+              },
+              {
+                "name": "Estudo_Testes.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4168,
+                "path": "docs/estudos/Estudo_Testes.md"
+              },
+              {
+                "name": "Ferramentas_Desempenho.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7323,
+                "path": "docs/estudos/Ferramentas_Desempenho.md"
+              },
+              {
+                "name": "Flutter e Dart.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2642,
+                "path": "docs/estudos/Flutter e Dart.md"
+              },
+              {
+                "name": "GitHubInsights.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 17198,
+                "path": "docs/estudos/GitHubInsights.md"
+              },
+              {
+                "name": "Git_e_GitHub.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 11667,
+                "path": "docs/estudos/Git_e_GitHub.md"
+              },
+              {
+                "name": "MetricasdeOpenSouce.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 5490,
+                "path": "docs/estudos/MetricasdeOpenSouce.md"
+              },
+              {
+                "name": "Persistencia de dados (flutter).md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3229,
+                "path": "docs/estudos/Persistencia de dados (flutter).md"
+              },
+              {
+                "name": "Requisitos.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7552,
+                "path": "docs/estudos/Requisitos.md"
+              },
+              {
+                "name": "Tecnologias_Backend.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 3361,
+                "path": "docs/estudos/Tecnologias_Backend.md"
+              },
+              {
+                "name": "Tecnologias_Frontend.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 7803,
+                "path": "docs/estudos/Tecnologias_Frontend.md"
+              },
+              {
+                "name": "Teste unitário em flutter.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 2024,
+                "path": "docs/estudos/Teste unitário em flutter.md"
+              }
+            ],
+            "value": 155381
+          },
+          {
+            "name": "planejamentos",
+            "type": "directory",
+            "path": "docs/planejamentos",
+            "children": [
+              {
+                "name": "atas",
+                "type": "directory",
+                "path": "docs/planejamentos/atas",
+                "children": [
+                  {
+                    "name": "ata_Sprint00.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1781,
+                    "path": "docs/planejamentos/atas/ata_Sprint00.md"
+                  },
+                  {
+                    "name": "ata_Sprint01.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3439,
+                    "path": "docs/planejamentos/atas/ata_Sprint01.md"
+                  },
+                  {
+                    "name": "ata_Sprint02.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 4065,
+                    "path": "docs/planejamentos/atas/ata_Sprint02.md"
+                  },
+                  {
+                    "name": "ata_Sprint03.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1588,
+                    "path": "docs/planejamentos/atas/ata_Sprint03.md"
+                  },
+                  {
+                    "name": "ata_Sprint08.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 2062,
+                    "path": "docs/planejamentos/atas/ata_Sprint08.md"
+                  },
+                  {
+                    "name": "ata_sprint04.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1709,
+                    "path": "docs/planejamentos/atas/ata_sprint04.md"
+                  },
+                  {
+                    "name": "ata_sprint05.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1413,
+                    "path": "docs/planejamentos/atas/ata_sprint05.md"
+                  },
+                  {
+                    "name": "ata_sprint06.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1702,
+                    "path": "docs/planejamentos/atas/ata_sprint06.md"
+                  },
+                  {
+                    "name": "ata_sprint07.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3000,
+                    "path": "docs/planejamentos/atas/ata_sprint07.md"
+                  },
+                  {
+                    "name": "ata_sprint09.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1823,
+                    "path": "docs/planejamentos/atas/ata_sprint09.md"
+                  },
+                  {
+                    "name": "ata_sprint10.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1944,
+                    "path": "docs/planejamentos/atas/ata_sprint10.md"
+                  },
+                  {
+                    "name": "ata_sprint11.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1984,
+                    "path": "docs/planejamentos/atas/ata_sprint11.md"
+                  },
+                  {
+                    "name": "ata_sprint12.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3006,
+                    "path": "docs/planejamentos/atas/ata_sprint12.md"
+                  },
+                  {
+                    "name": "modelo_ata.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 958,
+                    "path": "docs/planejamentos/atas/modelo_ata.md"
+                  }
+                ],
+                "value": 30474
+              },
+              {
+                "name": "backlog.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 5187,
+                "path": "docs/planejamentos/backlog.md"
+              },
+              {
+                "name": "cronograma.md",
+                "type": "file",
+                "language": "Markdown",
+                "value": 4739,
+                "path": "docs/planejamentos/cronograma.md"
+              },
+              {
+                "name": "sprints",
+                "type": "directory",
+                "path": "docs/planejamentos/sprints",
+                "children": [
+                  {
+                    "name": "sprint_00.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3861,
+                    "path": "docs/planejamentos/sprints/sprint_00.md"
+                  },
+                  {
+                    "name": "sprint_01.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 4160,
+                    "path": "docs/planejamentos/sprints/sprint_01.md"
+                  },
+                  {
+                    "name": "sprint_02.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 4836,
+                    "path": "docs/planejamentos/sprints/sprint_02.md"
+                  },
+                  {
+                    "name": "sprint_03.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 4019,
+                    "path": "docs/planejamentos/sprints/sprint_03.md"
+                  },
+                  {
+                    "name": "sprint_04.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3950,
+                    "path": "docs/planejamentos/sprints/sprint_04.md"
+                  },
+                  {
+                    "name": "sprint_05.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3820,
+                    "path": "docs/planejamentos/sprints/sprint_05.md"
+                  },
+                  {
+                    "name": "sprint_06.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 4304,
+                    "path": "docs/planejamentos/sprints/sprint_06.md"
+                  },
+                  {
+                    "name": "sprint_07.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3504,
+                    "path": "docs/planejamentos/sprints/sprint_07.md"
+                  },
+                  {
+                    "name": "sprint_08.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3303,
+                    "path": "docs/planejamentos/sprints/sprint_08.md"
+                  },
+                  {
+                    "name": "sprint_09.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 2910,
+                    "path": "docs/planejamentos/sprints/sprint_09.md"
+                  },
+                  {
+                    "name": "sprint_10.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3741,
+                    "path": "docs/planejamentos/sprints/sprint_10.md"
+                  },
+                  {
+                    "name": "sprint_11.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3276,
+                    "path": "docs/planejamentos/sprints/sprint_11.md"
+                  },
+                  {
+                    "name": "sprint_12.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 3698,
+                    "path": "docs/planejamentos/sprints/sprint_12.md"
+                  },
+                  {
+                    "name": "template_sprint.md",
+                    "type": "file",
+                    "language": "Markdown",
+                    "value": 1862,
+                    "path": "docs/planejamentos/sprints/template_sprint.md"
+                  }
+                ],
+                "value": 51244
+              }
+            ],
+            "value": 91644
+          }
+        ],
+        "value": 1893518
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "frontend",
+        "children": [
+          {
+            "name": ".dart_tool",
+            "type": "directory",
+            "path": "frontend/.dart_tool",
+            "children": [
+              {
+                "name": "package_config.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 15583,
+                "path": "frontend/.dart_tool/package_config.json"
+              },
+              {
+                "name": "package_graph.json",
+                "type": "file",
+                "language": "JSON",
+                "value": 12646,
+                "path": "frontend/.dart_tool/package_graph.json"
+              },
+              {
+                "name": "version",
+                "type": "file",
+                "language": "No Extension",
+                "value": 6,
+                "path": "frontend/.dart_tool/version"
+              }
+            ],
+            "value": 28235
+          },
+          {
+            "name": ".gitignore",
+            "type": "file",
+            "language": "Unknown",
+            "value": 748,
+            "path": "frontend/.gitignore"
+          },
+          {
+            "name": ".metadata",
+            "type": "file",
+            "language": "Unknown",
+            "value": 968,
+            "path": "frontend/.metadata"
+          },
+          {
+            "name": "README.md",
+            "type": "file",
+            "language": "Markdown",
+            "value": 905,
+            "path": "frontend/README.md"
+          },
+          {
+            "name": "analysis_options.yaml",
+            "type": "file",
+            "language": "YAML",
+            "value": 45,
+            "path": "frontend/analysis_options.yaml"
+          },
+          {
+            "name": "android",
+            "type": "directory",
+            "path": "frontend/android",
+            "children": [
+              {
+                "name": ".gitignore",
+                "type": "file",
+                "language": "Unknown",
+                "value": 267,
+                "path": "frontend/android/.gitignore"
+              },
+              {
+                "name": "app",
+                "type": "directory",
+                "path": "frontend/android/app",
+                "children": [
+                  {
+                    "name": "build.gradle.kts",
+                    "type": "file",
+                    "language": "Unknown",
+                    "value": 1432,
+                    "path": "frontend/android/app/build.gradle.kts"
+                  },
+                  {
+                    "name": "src",
+                    "type": "directory",
+                    "path": "frontend/android/app/src",
+                    "children": [
+                      {
+                        "name": "debug",
+                        "type": "directory",
+                        "path": "frontend/android/app/src/debug",
+                        "children": [
+                          {
+                            "name": "AndroidManifest.xml",
+                            "type": "file",
+                            "language": "XML",
+                            "value": 385,
+                            "path": "frontend/android/app/src/debug/AndroidManifest.xml"
+                          }
+                        ],
+                        "value": 385
+                      },
+                      {
+                        "name": "main",
+                        "type": "directory",
+                        "path": "frontend/android/app/src/main",
+                        "children": [
+                          {
+                            "name": "AndroidManifest.xml",
+                            "type": "file",
+                            "language": "XML",
+                            "value": 2481,
+                            "path": "frontend/android/app/src/main/AndroidManifest.xml"
+                          }
+                        ],
+                        "value": 2481
+                      },
+                      {
+                        "name": "profile",
+                        "type": "directory",
+                        "path": "frontend/android/app/src/profile",
+                        "children": [
+                          {
+                            "name": "AndroidManifest.xml",
+                            "type": "file",
+                            "language": "XML",
+                            "value": 385,
+                            "path": "frontend/android/app/src/profile/AndroidManifest.xml"
+                          }
+                        ],
+                        "value": 385
+                      }
+                    ],
+                    "value": 3251
+                  }
+                ],
+                "value": 4683
+              },
+              {
+                "name": "build.gradle.kts",
+                "type": "file",
+                "language": "Unknown",
+                "value": 561,
+                "path": "frontend/android/build.gradle.kts"
+              },
+              {
+                "name": "gradle.properties",
+                "type": "file",
+                "language": "Unknown",
+                "value": 169,
+                "path": "frontend/android/gradle.properties"
+              },
+              {
+                "name": "gradle",
+                "type": "directory",
+                "path": "frontend/android/gradle",
+                "children": [
+                  {
+                    "name": "wrapper",
+                    "type": "directory",
+                    "path": "frontend/android/gradle/wrapper",
+                    "children": [
+                      {
+                        "name": "gradle-wrapper.properties",
+                        "type": "file",
+                        "language": "Unknown",
+                        "value": 206,
+                        "path": "frontend/android/gradle/wrapper/gradle-wrapper.properties"
+                      }
+                    ],
+                    "value": 206
+                  }
+                ],
+                "value": 206
+              },
+              {
+                "name": "local.properties",
+                "type": "file",
+                "language": "Unknown",
+                "value": 164,
+                "path": "frontend/android/local.properties"
+              },
+              {
+                "name": "settings.gradle.kts",
+                "type": "file",
+                "language": "Unknown",
+                "value": 796,
+                "path": "frontend/android/settings.gradle.kts"
+              }
+            ],
+            "value": 6846
+          },
+          {
+            "name": "lib",
+            "type": "directory",
+            "path": "frontend/lib",
+            "children": [
+              {
+                "name": "Settings.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 21375,
+                "path": "frontend/lib/Settings.dart"
+              },
+              {
+                "name": "chat_screen.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 16053,
+                "path": "frontend/lib/chat_screen.dart"
+              },
+              {
+                "name": "landing_page.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 6434,
+                "path": "frontend/lib/landing_page.dart"
+              },
+              {
+                "name": "main.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 6208,
+                "path": "frontend/lib/main.dart"
+              }
+            ],
+            "value": 50070
+          },
+          {
+            "name": "pubspec.lock",
+            "type": "file",
+            "language": "Unknown",
+            "value": 17170,
+            "path": "frontend/pubspec.lock"
+          },
+          {
+            "name": "pubspec.yaml",
+            "type": "file",
+            "language": "YAML",
+            "value": 436,
+            "path": "frontend/pubspec.yaml"
+          },
+          {
+            "name": "test",
+            "type": "directory",
+            "path": "frontend/test",
+            "children": [
+              {
+                "name": "chat_screen_test.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 12664,
+                "path": "frontend/test/chat_screen_test.dart"
+              },
+              {
+                "name": "landing_page_test.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 11876,
+                "path": "frontend/test/landing_page_test.dart"
+              },
+              {
+                "name": "settings_test.dart",
+                "type": "file",
+                "language": "Unknown",
+                "value": 17446,
+                "path": "frontend/test/settings_test.dart"
+              }
+            ],
+            "value": 41986
+          }
+        ],
+        "value": 147409
+      },
+      {
+        "name": "metropoles_crawler_state.json",
+        "type": "file",
+        "language": "JSON",
+        "value": 383,
+        "path": "metropoles_crawler_state.json"
+      },
+      {
+        "name": "pytest.ini",
+        "type": "file",
+        "language": "Unknown",
+        "value": 75,
+        "path": "pytest.ini"
+      }
+    ],
+    "value": 134309677
+  },
+  "_metadata": {
+    "extracted_at": "2025-11-28T18:15:26.353098",
+    "file_path": "data/silver/repo_tree_pack_2025-2-Lumina.json"
+  }
+}
