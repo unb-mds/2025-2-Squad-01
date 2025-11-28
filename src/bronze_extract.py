@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# CODIGO PRINCIPAL PARA EXTRAÇÃO DE DADOS DO GITHUB PARA A CAMADA BRONZE
 
 import argparse
 import sys
@@ -12,61 +13,38 @@ from utils.github_api import GitHubAPIClient, OrganizationConfig, update_data_re
 def main():
     parser = argparse.ArgumentParser(description='Extract GitHub organization data to Bronze layer')
     parser.add_argument('--token', required=True, help='GitHub Personal Access Token')
-    parser.add_argument('--org', default='unb-mds', help='GitHub organization name')
+    parser.add_argument('--org', default='coops-org', help='GitHub organization name')
     parser.add_argument('--cache', action='store_true', help='Use cached data when available')
-    parser.add_argument('--commits-method', choices=['rest', 'graphql'], default='rest', 
-                        help='Extraction method for commits (REST v3 or GraphQL v4)')
+    parser.add_argument('--commits-method', choices=['rest', 'graphql'], default='rest', help='Extraction method for commits (REST v3 or GraphQL v4)')
     parser.add_argument('--since', help='ISO-8601 timestamp (e.g., 2024-01-01T00:00:00Z) to limit commit extraction start')
     parser.add_argument('--until', help='ISO-8601 timestamp (e.g., 2024-12-31T23:59:59Z) to limit commit extraction end')
-    parser.add_argument('--max-commits-per-repo', type=int, 
-                        help='Optional hard cap of commits per repo to fetch (GraphQL only)')
-    parser.add_argument('--commits-page-size', type=int, default=50, 
-                        help='Commits page size for pagination (REST & GraphQL). Default: 50')
+    parser.add_argument('--max-commits-per-repo', type=int, help='Optional hard cap of commits per repo to fetch (GraphQL only)')
+    parser.add_argument('--commits-page-size', type=int, default=50, help='Commits page size for pagination (REST & GraphQL). Default: 50')
     
     args = parser.parse_args()
     
-    print(f"🚀 Starting Bronze layer extraction for organization: {args.org}")
-    print(f"⏰ Started at: {datetime.now().isoformat()}")
-    print(f"📋 Configuration:")
-    print(f"   - Commits method: {args.commits_method}")
-    print(f"   - Structure method: graphql (fixed)")  # 👈 CORRIGIDO
-    print(f"   - Cache enabled: {args.cache}")
+    print(f"Starting Bronze layer extraction for organization: {args.org}")
+    print(f"Started at: {datetime.now().isoformat()}")
     
     # Initialize API client and configuration
     client = GitHubAPIClient(args.token)
     config = OrganizationConfig(args.org)
     
     try:
-        # Import individual extractors
+        # Import and run individual extractors
         from bronze.repositories import extract_repositories
         from bronze.issues import extract_issues
         from bronze.commits import extract_commits
         from bronze.members import extract_members
-        from bronze.repository_structure import extract_repository_structure
         
         # Extract data in dependency order
-        print("\n" + "="*60)
-        print("📦 STEP 1: Extracting repositories")
-        print("="*60)
+        print("\n[INFO]: Extracting repositories...")
         repo_files = extract_repositories(client, config, use_cache=args.cache)
-        print(f"✅ Generated {len(repo_files)} repository files")
 
-        print("\n" + "="*60)
-        print("🐛 STEP 2: Extracting issues and pull requests")
-        print("="*60)
-        issue_files = extract_issues(
-            client, 
-            config, 
-            use_cache=args.cache,
-            parallel=True,
-            max_workers=3,
-            max_events_per_repo=500
-        )
-        print(f"✅ Generated {len(issue_files)} issue files")
+        print("\n[INFO]: Extracting issues and pull requests...")
+        issue_files = extract_issues(client, config, use_cache=args.cache)
 
-        print("\n" + "="*60)
-        print("💾 STEP 3: Extracting commits")
-        print("="*60)
+        print("\n[INFO]: Extracting commits...")
         commit_files = extract_commits(
             client,
             config,
@@ -77,49 +55,22 @@ def main():
             max_commits_per_repo=args.max_commits_per_repo,
             page_size=args.commits_page_size,
         )
-        print(f"✅ Generated {len(commit_files)} commit files")
 
-        print("\n" + "="*60)
-        print("👥 STEP 4: Extracting organization members")
-        print("="*60)
+        print("\n[INFO]: Extracting organization members...")
         member_files = extract_members(client, config, use_cache=args.cache)
-        print(f"✅ Generated {len(member_files)} member files")
         
-        print("\n" + "="*60)
-        print("🌳 STEP 5: Extracting repository structures (GraphQL)")
-        print("="*60)
-        structure_files = extract_repository_structure(
-            client, 
-            config, 
-            use_cache=args.cache  # 👈 CORRIGIDO: removido method
-        )
-        print(f"✅ Generated {len(structure_files)} structure files")
 
         # Update registry
-        all_files = repo_files + issue_files + commit_files + member_files + structure_files
+        all_files = repo_files + issue_files + commit_files + member_files
         update_data_registry('bronze', 'all_extractions', all_files)
 
-        # Resumo final
-        print("\n" + "="*60)
-        print("🎉 BRONZE EXTRACTION COMPLETED SUCCESSFULLY!")
-        print("="*60)
-        print(f"📊 Summary:")
-        print(f"   - Repositories: {len(repo_files)} files")
-        print(f"   - Issues: {len(issue_files)} files")
-        print(f"   - Commits: {len(commit_files)} files")
-        print(f"   - Members: {len(member_files)} files")
-        print(f"   - Structures: {len(structure_files)} files")
-        print(f"   - TOTAL: {len(all_files)} files")
-        print(f"\n⏰ Completed at: {datetime.now().isoformat()}")
-        print("="*60)
+        print(f"\n[SUCCESS] Bronze extraction completed successfully!")
+        print(f"Generated {len(all_files)} files:")
+        for file_path in all_files:
+            print(f"   - {file_path}")
             
-    except KeyboardInterrupt:
-        print("\n\n⚠️  Extraction interrupted by user")
-        sys.exit(130)
     except Exception as e:
-        print(f"\n❌ Error during bronze extraction: {str(e)}")
-        import traceback
-        traceback.print_exc()
+        print(f"\n[ERROR] Error during bronze extraction: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
