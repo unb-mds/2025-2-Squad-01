@@ -1,4 +1,4 @@
-name: Silver Layer - Data Processing
+name: Gold Layer - Data Aggregation
 
 on:
   workflow_call:
@@ -8,11 +8,11 @@ permissions:
   contents: write
 
 jobs:
-  process-silver-data:
+  process-gold-data:
     runs-on: ubuntu-latest
     
     outputs:
-      silver-completed: ${{ steps.processing.outputs.completed }}
+      gold-completed: ${{ steps.processing.outputs.completed }}
     
     steps:
       - name: Checkout repository
@@ -41,27 +41,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas numpy requests
 
-      - name: Verify Bronze data exists
+      - name: Verify Silver data exists
         run: |
-          if [ ! -d "data/bronze" ] || [ "$(find data/bronze -name '*.json' | wc -l)" -eq 0 ]; then
-            echo "No Bronze layer data found. Run bronze extraction first."
+          if [ ! -d "data/silver" ] || [ "$(find data/silver -name '*.json' | wc -l)" -eq 0 ]; then
+            echo "No Silver layer data found. Run silver processing first."
             exit 1
           fi
           
-          echo "Bronze data verified: $(find data/bronze -name '*.json' | wc -l) files found"
+          echo "Silver data verified: $(find data/silver -name '*.json' | wc -l) files found"
 
-      - name: Process Silver layer data
+      - name: Process Gold layer data
         id: processing
         run: |
-          echo "Starting Silver layer processing..."
-          python src/silver_process.py --org "${GITHUB_REPOSITORY_OWNER}"
+          echo "Starting Gold layer processing..."
+          python src/gold_process.py --org "${GITHUB_REPOSITORY_OWNER}"
           
           # Check if files were generated
-          if [ "$(find data/silver -name '*.json' | wc -l)" -gt 0 ]; then
-            echo "Silver processing completed successfully"
+          if [ "$(find data/gold -name '*.json' 2>/dev/null | wc -l)" -gt 0 ]; then
+            echo "Gold processing completed successfully"
             echo "completed=true" >> $GITHUB_OUTPUT
           else
-            echo "No files generated in silver layer"
+            echo "No files generated in gold layer"
             echo "completed=false" >> $GITHUB_OUTPUT
             exit 1
           fi
@@ -69,20 +69,20 @@ jobs:
       - name: Update data registry
         if: steps.processing.outputs.completed == 'true'
         run: |
-          echo "Updating data registry with Silver layer files..."
+          echo "Updating data registry with Gold layer files..."
           python src/registry_manager.py
 
       - name: List generated files
         if: steps.processing.outputs.completed == 'true'
         run: |
-          echo "Silver layer files generated:"
-          find data/silver -name '*.json' -type f | sort | while read file; do
+          echo "Gold layer files generated:"
+          find data/gold -name '*.json' -type f | sort | while read file; do
             size=$(du -h "$file" | cut -f1)
             records=$(jq 'if type == "array" then length elif type == "object" and has("_metadata") then (.record_count // "N/A") else "1" end' "$file" 2>/dev/null || echo "N/A")
             echo "  - $file ($size, $records records)"
           done
 
-      - name: Commit and push Silver data
+      - name: Commit and push Gold data
         if: steps.processing.outputs.completed == 'true' && !env.ACT
         run: |
           git config --global user.name "github-actions[bot]"
@@ -95,7 +95,7 @@ jobs:
           git config pull.rebase false
           
           # Add files before attempting merge
-          git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist yet"
+          git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist yet"
           
           # Get current branch for pull/push operations
           CURRENT_BRANCH=$(git branch --show-current)
@@ -105,26 +105,26 @@ jobs:
           if ! git pull origin "$CURRENT_BRANCH" --no-edit; then
             echo "Merge conflicts detected, auto-resolving..."
             
-            # For add/add conflicts, prefer our version (silver data)
+            # For add/add conflicts, prefer our version (gold data)
             git status --porcelain | grep "AA" | awk '{print $2}' | xargs -r git checkout --ours
             git status --porcelain | grep "DU" | awk '{print $2}' | xargs -r git add
             git status --porcelain | grep "UD" | awk '{print $2}' | xargs -r git rm
             
-            # Re-add our silver files
-            git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
+            # Re-add our gold files
+            git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
             
             # Complete the merge
-            git commit --no-edit -m "[Silver] Auto-resolve merge conflicts and update analytics data"
+            git commit --no-edit -m "[Gold] Auto-resolve merge conflicts and update aggregated data"
           fi
           
-          # Add silver files again and commit if there are changes
-          git add data/silver/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
+          # Add gold files again and commit if there are changes
+          git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
           
           if ! git diff --cached --quiet; then
-            git commit -m "[Silver] Update processed analytics data
+            git commit -m "[Gold] Update aggregated analytics data
             
-            - Processed Bronze data into analytics-ready formats
-            - Generated $(find data/silver -name '*.json' | wc -l) silver layer files
+            - Processed Silver data into final aggregated formats
+            - Generated $(find data/gold -name '*.json' | wc -l) gold layer files
             - Updated data registry and catalog"
           fi
           
@@ -141,9 +141,3 @@ jobs:
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  trigger-gold-processing:
-    needs: process-silver-data
-    if: needs.process-silver-data.outputs.silver-completed == 'true'
-    uses: ./.github/workflows/gold-process.yaml
-    secrets: inherit
