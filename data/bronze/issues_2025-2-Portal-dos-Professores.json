@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-27T22:19:18.821565",
+      "extracted_at": "2025-11-28T05:15:25.066678",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 72
     }
@@ -134,11 +134,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-11-27T16:25:55Z",
+      "updated_at": "2025-11-27T22:37:46Z",
       "due_on": null,
       "closed_at": null
     },
@@ -316,11 +316,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-11-27T16:25:55Z",
+      "updated_at": "2025-11-27T22:37:46Z",
       "due_on": null,
       "closed_at": null
     },
@@ -543,11 +543,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-11-27T16:25:55Z",
+      "updated_at": "2025-11-27T22:37:46Z",
       "due_on": null,
       "closed_at": null
     },
@@ -658,7 +658,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Ascartezin",
@@ -734,18 +734,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-11-27T16:25:55Z",
+      "updated_at": "2025-11-27T22:37:46Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-25T16:55:10Z",
-    "updated_at": "2025-11-26T14:49:44Z",
-    "closed_at": null,
+    "updated_at": "2025-11-27T22:37:46Z",
+    "closed_at": "2025-11-27T22:37:46Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -770,7 +770,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nCom a página de detalhe estabilizada e responsiva, esta issue final se concentra em integrar os dados acadêmicos mais ricos (LAtuação profissional, Publicações Scholar e Métricas Scholar) que o backend fornece. O objetivo é transformar a página de um simples perfil em um dashboard completo de produção acadêmica do docente.\n\nAlém disso, faremos a correção estética da foto de perfil, garantindo que o visual do protótipo \"Lovable\" seja mantido em 100%.\n\n---\n\n## Objetivo\n- [x] Corrigir a forma da foto de perfil, garantindo que seja **circular** (e não oval).\n- [x] Criar a aba **\"Atuação Profissional\"** para exibir a história de trabalho do professor.\n- [x] Criar a aba **\"Google Scholar\"** para exibir as publicações e métricas de citação.\n- [x] Garantir o encerramento completo da funcionalidade da Página Detalhada do Professor.\n\n---\n\n## Requisitos\n- A foto de perfil deve usar o estilo `borderRadius=\"full\"` do Chakra.\n- A página deve ser estendida para um total de **cinco abas** (Visão Geral, Formação, Projetos, Atuação Profissional, Google Scholar).\n- O mapeamento dos novos dados deve usar as estruturas aninhadas do JSON:\n    - **Atuação Profissional:** `professor.dados_lattes.atuacao_profissional`\n    - **Métricas e Publicações:** `professor.dados_scholar`\n- Todos os novos blocos de dados devem incluir `null` checks (`?`) e fallbacks (`|| 'Não informado'`) para não quebrar em caso de dados faltantes (como no caso do Professor Adail).\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [ ] Média\n- [ ] Alta\n- [x] Crítica\n\n---\n\n## Checklist de Tarefas\n\n### Bloco 1: Correções de UI/Estrutura\n- [x] Aplicar `borderRadius=\"full\"` e garantir que o componente da foto (`<Image>` ou `<Avatar>`) tenha altura e largura iguais para o formato circular.\n- [x] Atualizar a lista de imports para incluir `Stat`, `StatNumber`, `SimpleGrid` (Chakra UI) para as métricas.\n\n### Bloco 2: Integração de Novos Dados\n- [x] **Atualizar TabList:** Adicionar as novas abas (\"Atuação Profissional\" e \"Google Scholar\") com contagem de itens.\n- [x] **Criar TabPanel \"Atuação Profissional\":** Mapear e renderizar a lista de experiências de trabalho (`professor.dados_lattes.atuacao_profissional`), incluindo período e detalhes.\n- [x] **Criar TabPanel \"Google Scholar\":**\n    - Implementar a seção de **Métricas** (`h-index`, `total_citacoes`) usando o componente `Stat` e `SimpleGrid`.\n    - Implementar a seção de **Publicações** (`publicacoes`) com `map()` para listar título, autores e contagem de citações.\n\n### Bloco 3: Verificação Final\n- [x] Testar a página com professores que têm dados vazios (ex: Prof. Adail) para garantir que as novas abas exibam a mensagem de `null` em vez de quebrar.\n- [x] Testar a página com professores com dados ricos (ex: Prof.  Sergio Andrade) para garantir que as novas abas se preencham corretamente.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Ascartezin",
+      "id": 193710276,
+      "node_id": "U_kgDOC4vIxA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193710276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Ascartezin",
+      "html_url": "https://github.com/Ascartezin",
+      "followers_url": "https://api.github.com/users/Ascartezin/followers",
+      "following_url": "https://api.github.com/users/Ascartezin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Ascartezin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Ascartezin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Ascartezin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Ascartezin/orgs",
+      "repos_url": "https://api.github.com/users/Ascartezin/repos",
+      "events_url": "https://api.github.com/users/Ascartezin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Ascartezin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/141/reactions",
       "total_count": 0,
@@ -785,7 +805,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/141/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
