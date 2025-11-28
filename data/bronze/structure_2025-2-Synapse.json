@@ -1,0 +1,1213 @@
+{
+  "owner": "unb-mds",
+  "repository": "2025-2-Synapse",
+  "branch": "main",
+  "tree": [
+    {
+      "name": ".env.example",
+      "path": ".env.example",
+      "type": "file",
+      "extension": ".example",
+      "size": 1229,
+      "is_binary": false,
+      "oid": "7773c339e2a0404d7d38d9e5204f5ae1d297a7de",
+      "depth": 0
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "extension": "",
+      "size": 171,
+      "is_binary": false,
+      "oid": "a7507019a873d6f52875fc0088a84db06e67a203",
+      "depth": 0
+    },
+    {
+      "name": "CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 1432,
+      "is_binary": false,
+      "oid": "3f0e74d4f3f7a69e33c2ae025768b67e0f729be6",
+      "depth": 0
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 3005,
+      "is_binary": false,
+      "oid": "4b377933cfbf066e22b85eb5c19b6d647c8ce673",
+      "depth": 0
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 3524,
+      "is_binary": false,
+      "oid": "1947b4f880335ca52fc0d95185949c6b217b3ff0",
+      "depth": 0
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false,
+      "oid": "b1e060f9fe83ea63a267414cd52825cc3b794284",
+      "depth": 0
+    },
+    {
+      "name": "PULL_REQUEST_TEMPLATE.md",
+      "path": "PULL_REQUEST_TEMPLATE.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 934,
+      "is_binary": false,
+      "oid": "b79bac84e9f9903e277fe89e1374eb0cdc0b9386",
+      "depth": 0
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 5308,
+      "is_binary": false,
+      "oid": "aba9be5df23e11ddafa4dbdba059b8e8be5bfc55",
+      "depth": 0
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "children": [
+        {
+          "name": ".coverage",
+          "path": "backend/.coverage",
+          "type": "file",
+          "extension": "",
+          "size": 53248,
+          "is_binary": true,
+          "oid": "3a1c18a04dbe74843148033c021cd0879f013e8c",
+          "depth": 1
+        },
+        {
+          "name": ".dockerignore",
+          "path": "backend/.dockerignore",
+          "type": "file",
+          "extension": "",
+          "size": 284,
+          "is_binary": false,
+          "oid": "efafb8350b16e651ac5ae8059d2ed4b9cf527316",
+          "depth": 1
+        },
+        {
+          "name": "app",
+          "path": "backend/app",
+          "type": "directory",
+          "children": [
+            {
+              "name": "__init__.py",
+              "path": "backend/app/__init__.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 1761,
+              "is_binary": false,
+              "oid": "d1dca961a480bdd3f9bd9a6ab9937336ef3264ec",
+              "depth": 2
+            },
+            {
+              "name": "controllers",
+              "path": "backend/app/controllers",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "news_source_controller.py",
+                  "path": "backend/app/controllers/news_source_controller.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 5953,
+                  "is_binary": false,
+                  "oid": "9460b049d4f699f0bfe5d7d474328594bca2cd5f",
+                  "depth": 3
+                },
+                {
+                  "name": "topic_controller.py",
+                  "path": "backend/app/controllers/topic_controller.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 3395,
+                  "is_binary": false,
+                  "oid": "8baa10dcfe159bc16e5ca34704e63123698a58f2",
+                  "depth": 3
+                },
+                {
+                  "name": "user_controller.py",
+                  "path": "backend/app/controllers/user_controller.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 9911,
+                  "is_binary": false,
+                  "oid": "37f3d60841748f5fdf718f8208ebab1669cec35a",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "entities",
+              "path": "backend/app/entities",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "news_entity.py",
+                  "path": "backend/app/entities/news_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 921,
+                  "is_binary": false,
+                  "oid": "11eb11fee03418dbc315405ee6060221badab653",
+                  "depth": 3
+                },
+                {
+                  "name": "news_source_entity.py",
+                  "path": "backend/app/entities/news_source_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 518,
+                  "is_binary": false,
+                  "oid": "639500edd1f17cb49f1f8f2069cfaeca45e16fed",
+                  "depth": 3
+                },
+                {
+                  "name": "news_topic_entity.py",
+                  "path": "backend/app/entities/news_topic_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 649,
+                  "is_binary": false,
+                  "oid": "fb2e601d92ce60608fb89aca8c9a4729af082dce",
+                  "depth": 3
+                },
+                {
+                  "name": "topic_entity.py",
+                  "path": "backend/app/entities/topic_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 640,
+                  "is_binary": false,
+                  "oid": "8484a85fbd1ac9f056488b94743a42af69f59d62",
+                  "depth": 3
+                },
+                {
+                  "name": "user_entity.py",
+                  "path": "backend/app/entities/user_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 581,
+                  "is_binary": false,
+                  "oid": "e17daa19bb890ebbe600ba1248a432c7d1548ab5",
+                  "depth": 3
+                },
+                {
+                  "name": "user_news_sources_entity.py",
+                  "path": "backend/app/entities/user_news_sources_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 726,
+                  "is_binary": false,
+                  "oid": "dbf3affffbf3d865fd9ed7f26d345df2ecde634c",
+                  "depth": 3
+                },
+                {
+                  "name": "user_topic_entity.py",
+                  "path": "backend/app/entities/user_topic_entity.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 667,
+                  "is_binary": false,
+                  "oid": "b17c8115cc3a51bf6e841a147189987f1e83c594",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "extensions.py",
+              "path": "backend/app/extensions.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 60,
+              "is_binary": false,
+              "oid": "3291920b1ce6c31fc183434f556d884ac6ec96a3",
+              "depth": 2
+            },
+            {
+              "name": "jobs",
+              "path": "backend/app/jobs",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "__init__.py",
+                  "path": "backend/app/jobs/__init__.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 0,
+                  "is_binary": false,
+                  "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "depth": 3
+                },
+                {
+                  "name": "collect_news.py",
+                  "path": "backend/app/jobs/collect_news.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1514,
+                  "is_binary": false,
+                  "oid": "b44fbb53801eba948c035268863778071dad5a63",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "main.py",
+              "path": "backend/app/main.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 98,
+              "is_binary": false,
+              "oid": "5b0a89d20746c2abc32c77c0af428b3b64f66028",
+              "depth": 2
+            },
+            {
+              "name": "models",
+              "path": "backend/app/models",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "exceptions.py",
+                  "path": "backend/app/models/exceptions.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1566,
+                  "is_binary": false,
+                  "oid": "29562005dd56ec0c53b6b0ec89d2bb3b8cbd2daf",
+                  "depth": 3
+                },
+                {
+                  "name": "news.py",
+                  "path": "backend/app/models/news.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 4042,
+                  "is_binary": false,
+                  "oid": "2b95a4b0c89feb8c4bf1a8f00f4036813eedd09e",
+                  "depth": 3
+                },
+                {
+                  "name": "news_source.py",
+                  "path": "backend/app/models/news_source.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1887,
+                  "is_binary": false,
+                  "oid": "61e04f5b039a8043c06b3540348f453d8dddaf06",
+                  "depth": 3
+                },
+                {
+                  "name": "topic.py",
+                  "path": "backend/app/models/topic.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1535,
+                  "is_binary": false,
+                  "oid": "1e6333ccd913912e7459abb0176a0a2b668c8497",
+                  "depth": 3
+                },
+                {
+                  "name": "user.py",
+                  "path": "backend/app/models/user.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 3557,
+                  "is_binary": false,
+                  "oid": "9cde56ee8f707079676a4f84b60fa1e5b5654887",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "repositories",
+              "path": "backend/app/repositories",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "news_repository.py",
+                  "path": "backend/app/repositories/news_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 2035,
+                  "is_binary": false,
+                  "oid": "9a78070ff52fa5f80ca7e75d45daa9ced953747e",
+                  "depth": 3
+                },
+                {
+                  "name": "news_source_repository.py",
+                  "path": "backend/app/repositories/news_source_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 3867,
+                  "is_binary": false,
+                  "oid": "9ea22027a806f41136958392ec53ae7f2105be22",
+                  "depth": 3
+                },
+                {
+                  "name": "topic_repository.py",
+                  "path": "backend/app/repositories/topic_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1429,
+                  "is_binary": false,
+                  "oid": "4915d8c969e4373b86db156e901783820e7d772d",
+                  "depth": 3
+                },
+                {
+                  "name": "user_news_source_repository.py",
+                  "path": "backend/app/repositories/user_news_source_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 2317,
+                  "is_binary": false,
+                  "oid": "24d11c15f74cfbb634abc6cc9fc774d7cc612ea9",
+                  "depth": 3
+                },
+                {
+                  "name": "user_repository.py",
+                  "path": "backend/app/repositories/user_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 2140,
+                  "is_binary": false,
+                  "oid": "5fd2f137497cb2f356c8116d24d0027b37a9acc8",
+                  "depth": 3
+                },
+                {
+                  "name": "users_topics_repository.py",
+                  "path": "backend/app/repositories/users_topics_repository.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1441,
+                  "is_binary": false,
+                  "oid": "9fa1b4d96470b22d670976781ad287c03e83758d",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "requests",
+              "path": "backend/app/requests",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "topic_request.py",
+                  "path": "backend/app/requests/topic_request.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 0,
+                  "is_binary": false,
+                  "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "depth": 3
+                },
+                {
+                  "name": "user_request.py",
+                  "path": "backend/app/requests/user_request.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 47,
+                  "is_binary": false,
+                  "oid": "54ce861626c9554482b0598639a27e101a6df662",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "routes",
+              "path": "backend/app/routes",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "news_source_routes.py",
+                  "path": "backend/app/routes/news_source_routes.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1776,
+                  "is_binary": false,
+                  "oid": "d441a40ba43d177a86cf9e31606cfdf2c1d902cf",
+                  "depth": 3
+                },
+                {
+                  "name": "topic_routes.py",
+                  "path": "backend/app/routes/topic_routes.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1280,
+                  "is_binary": false,
+                  "oid": "e97eefa91c391d74c9d0a0fa13d97af6015e460d",
+                  "depth": 3
+                },
+                {
+                  "name": "user_routes.py",
+                  "path": "backend/app/routes/user_routes.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1888,
+                  "is_binary": false,
+                  "oid": "4aef25777fc9680776f8329c0d0bbac7f34cde31",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "services",
+              "path": "backend/app/services",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "news_service.py",
+                  "path": "backend/app/services/news_service.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 7205,
+                  "is_binary": false,
+                  "oid": "e6398e121822116790bcb0ff51b465933de25a6a",
+                  "depth": 3
+                },
+                {
+                  "name": "news_source_service.py",
+                  "path": "backend/app/services/news_source_service.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 1746,
+                  "is_binary": false,
+                  "oid": "2b5dec539fcb3dd4339a54bfa70c5d6482e9440e",
+                  "depth": 3
+                },
+                {
+                  "name": "topic_service.py",
+                  "path": "backend/app/services/topic_service.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 2001,
+                  "is_binary": false,
+                  "oid": "49c7654379c661f22d07e6d117c649d460a0d002",
+                  "depth": 3
+                },
+                {
+                  "name": "user_service.py",
+                  "path": "backend/app/services/user_service.py",
+                  "type": "file",
+                  "extension": ".py",
+                  "size": 3400,
+                  "is_binary": false,
+                  "oid": "c5db705eeb43d8e7d4fd934a49c60fdc1b8caae7",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "static",
+              "path": "backend/app/static",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "openapi.yaml",
+                  "path": "backend/app/static/openapi.yaml",
+                  "type": "file",
+                  "extension": ".yaml",
+                  "size": 21788,
+                  "is_binary": false,
+                  "oid": "8fac91c8f545471f852d2bdd03cf158138dd840a",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            }
+          ],
+          "depth": 1
+        },
+        {
+          "name": "crontab",
+          "path": "backend/crontab",
+          "type": "file",
+          "extension": "",
+          "size": 181,
+          "is_binary": false,
+          "oid": "93fda630302b7038a439b185da8a0f80670549e3",
+          "depth": 1
+        },
+        {
+          "name": "dockerfile",
+          "path": "backend/dockerfile",
+          "type": "file",
+          "extension": "",
+          "size": 235,
+          "is_binary": false,
+          "oid": "1fab82f2fb7a97a44747c5cd3251b60d7d9b1c50",
+          "depth": 1
+        },
+        {
+          "name": "dockerfile.cron",
+          "path": "backend/dockerfile.cron",
+          "type": "file",
+          "extension": ".cron",
+          "size": 536,
+          "is_binary": false,
+          "oid": "6d9633a97fbf8a03a5aaa924896cda0aa3600c0d",
+          "depth": 1
+        },
+        {
+          "name": "requirements.txt",
+          "path": "backend/requirements.txt",
+          "type": "file",
+          "extension": ".txt",
+          "size": 367,
+          "is_binary": false,
+          "oid": "88b4fdec21d255ead2dac3f7cb35383d01461bfa",
+          "depth": 1
+        },
+        {
+          "name": "tests",
+          "path": "backend/tests",
+          "type": "directory",
+          "children": [
+            {
+              "name": "__init__.py",
+              "path": "backend/tests/__init__.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 0,
+              "is_binary": false,
+              "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+              "depth": 2
+            },
+            {
+              "name": "conftest.py",
+              "path": "backend/tests/conftest.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 689,
+              "is_binary": false,
+              "oid": "1b1c292f847370db43e135abb56033cbce782801",
+              "depth": 2
+            },
+            {
+              "name": "test_collect_news.py",
+              "path": "backend/tests/test_collect_news.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 2209,
+              "is_binary": false,
+              "oid": "f63eb1116baf13ec64bc3dfa2c801f03e5e8c3c3",
+              "depth": 2
+            },
+            {
+              "name": "test_main.py",
+              "path": "backend/tests/test_main.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 410,
+              "is_binary": false,
+              "oid": "2fe7f383306afea951df412b28e4f4b5964d8785",
+              "depth": 2
+            },
+            {
+              "name": "test_news_source_controller.py",
+              "path": "backend/tests/test_news_source_controller.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 6260,
+              "is_binary": false,
+              "oid": "a5b4fa549bb2531520df22d9db85f492e981f17e",
+              "depth": 2
+            },
+            {
+              "name": "test_news_source_integration.py",
+              "path": "backend/tests/test_news_source_integration.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 5711,
+              "is_binary": false,
+              "oid": "52ce0ca7eb81288b8d891e869378dd8807af604c",
+              "depth": 2
+            },
+            {
+              "name": "test_news_source_repository.py",
+              "path": "backend/tests/test_news_source_repository.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 3543,
+              "is_binary": false,
+              "oid": "e0ea973db022ed5a6773836b391ce167b186656e",
+              "depth": 2
+            },
+            {
+              "name": "test_news_source_unit.py",
+              "path": "backend/tests/test_news_source_unit.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 5501,
+              "is_binary": false,
+              "oid": "4832ae6cba02b59268d8aed290e2f164eb81e11e",
+              "depth": 2
+            },
+            {
+              "name": "test_topic_controller.py",
+              "path": "backend/tests/test_topic_controller.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 8737,
+              "is_binary": false,
+              "oid": "8ce8b32366436b4b694279fb58eefef12c97f5bf",
+              "depth": 2
+            },
+            {
+              "name": "test_topic_repository.py",
+              "path": "backend/tests/test_topic_repository.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 1410,
+              "is_binary": false,
+              "oid": "ef6a9ba6638c2b909173c607b32c5f2f68bf8a5d",
+              "depth": 2
+            },
+            {
+              "name": "test_topic_routes.py",
+              "path": "backend/tests/test_topic_routes.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 4993,
+              "is_binary": false,
+              "oid": "c069f62c16c393e3ba58aef115d3e57e50bffbd2",
+              "depth": 2
+            },
+            {
+              "name": "test_topic_service.py",
+              "path": "backend/tests/test_topic_service.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 6153,
+              "is_binary": false,
+              "oid": "7ffef62979be2d174ac74cc852a49295f9c99734",
+              "depth": 2
+            },
+            {
+              "name": "test_user_controller.py",
+              "path": "backend/tests/test_user_controller.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 6830,
+              "is_binary": false,
+              "oid": "7412a44777e76b375fda75feb288a4e3ced2fd97",
+              "depth": 2
+            },
+            {
+              "name": "test_user_news_source_repository.py",
+              "path": "backend/tests/test_user_news_source_repository.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 2883,
+              "is_binary": false,
+              "oid": "d0ef8bbdf63c2aa626cd4864f91b0f84126be932",
+              "depth": 2
+            },
+            {
+              "name": "test_user_repository.py",
+              "path": "backend/tests/test_user_repository.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 4231,
+              "is_binary": false,
+              "oid": "71807875e337d51df79506c833851d62eba6bd47",
+              "depth": 2
+            },
+            {
+              "name": "test_user_routes.py",
+              "path": "backend/tests/test_user_routes.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 7859,
+              "is_binary": false,
+              "oid": "c54c38a09cd6ad10f5692b7ec0334f97ef3f3f71",
+              "depth": 2
+            },
+            {
+              "name": "test_user_service.py",
+              "path": "backend/tests/test_user_service.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 12379,
+              "is_binary": false,
+              "oid": "f486da0a5f464a381ed53c93dd0d1f1a94223696",
+              "depth": 2
+            },
+            {
+              "name": "test_users_topics_repository.py",
+              "path": "backend/tests/test_users_topics_repository.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 3403,
+              "is_binary": false,
+              "oid": "b43c0877a2dac3fd1281b590a2e93024e74239b6",
+              "depth": 2
+            }
+          ],
+          "depth": 1
+        }
+      ],
+      "depth": 0
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "extension": ".yml",
+      "size": 1412,
+      "is_binary": false,
+      "oid": "cfbe44e7c82cf4ecbb1fe3c3808c45c96a7175b1",
+      "depth": 0
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "children": [
+        {
+          "name": ".dockerignore",
+          "path": "frontend/.dockerignore",
+          "type": "file",
+          "extension": "",
+          "size": 68,
+          "is_binary": false,
+          "oid": "9f5d1df70ec1bfff08a23c3699a77072e1c05cba",
+          "depth": 1
+        },
+        {
+          "name": "dockerfile",
+          "path": "frontend/dockerfile",
+          "type": "file",
+          "extension": "",
+          "size": 189,
+          "is_binary": false,
+          "oid": "af65366cfdcc2219ee819d191308b6c71290e71d",
+          "depth": 1
+        },
+        {
+          "name": "index.html",
+          "path": "frontend/index.html",
+          "type": "file",
+          "extension": ".html",
+          "size": 220,
+          "is_binary": false,
+          "oid": "cab772e8820aec70fae38985236911b03506652c",
+          "depth": 1
+        },
+        {
+          "name": "package-lock.json",
+          "path": "frontend/package-lock.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 95386,
+          "is_binary": false,
+          "oid": "6a1c2d96f6022a67a3e9b9918e642be36fe6bfdc",
+          "depth": 1
+        },
+        {
+          "name": "package.json",
+          "path": "frontend/package.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 666,
+          "is_binary": false,
+          "oid": "406609a54312d41e86387be60031a494e032dbb1",
+          "depth": 1
+        },
+        {
+          "name": "postcss.config.js",
+          "path": "frontend/postcss.config.js",
+          "type": "file",
+          "extension": ".js",
+          "size": 81,
+          "is_binary": false,
+          "oid": "2aa7205d4b402a1bdfbe07110c61df920b370066",
+          "depth": 1
+        },
+        {
+          "name": "src",
+          "path": "frontend/src",
+          "type": "directory",
+          "children": [
+            {
+              "name": "components",
+              "path": "frontend/src/components",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "HeaderEditAccount.jsx",
+                  "path": "frontend/src/components/HeaderEditAccount.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 2595,
+                  "is_binary": false,
+                  "oid": "c51b8f75216583e57fb4c49bce78851d013dc247",
+                  "depth": 3
+                },
+                {
+                  "name": "PreferredTopics.jsx",
+                  "path": "frontend/src/components/PreferredTopics.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 2668,
+                  "is_binary": false,
+                  "oid": "188b73271b1fb5f5d1ceaa9d8a0c646b06e12042",
+                  "depth": 3
+                },
+                {
+                  "name": "PrivateRoute.jsx",
+                  "path": "frontend/src/components/PrivateRoute.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 420,
+                  "is_binary": false,
+                  "oid": "0e4f80707dbba23c1e70a4fe0b0a5bfd4c9d669f",
+                  "depth": 3
+                },
+                {
+                  "name": "ProfileCard.jsx",
+                  "path": "frontend/src/components/ProfileCard.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 1922,
+                  "is_binary": false,
+                  "oid": "43bd0c85b937707dd8254511d5e78a8f6ca98e7c",
+                  "depth": 3
+                },
+                {
+                  "name": "PublicRoute.jsx",
+                  "path": "frontend/src/components/PublicRoute.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 328,
+                  "is_binary": false,
+                  "oid": "cb21ef2b27a4a3f1d3c0e0b77c2f6300876520dc",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "hooks",
+              "path": "frontend/src/hooks",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "useAuth.js",
+                  "path": "frontend/src/hooks/useAuth.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 694,
+                  "is_binary": false,
+                  "oid": "6008a3a611d443ebf523c6e85a029ddea544892c",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "icons",
+              "path": "frontend/src/icons",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "arrow-down.svg",
+                  "path": "frontend/src/icons/arrow-down.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 624,
+                  "is_binary": false,
+                  "oid": "9ea4f08cba199f36ae5d4cb9f438f2bf1ef4084b",
+                  "depth": 3
+                },
+                {
+                  "name": "back-svgrepo-com.svg",
+                  "path": "frontend/src/icons/back-svgrepo-com.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 455,
+                  "is_binary": false,
+                  "oid": "b13a9e425ddaa4aecffb88c46e4035da5c17cd53",
+                  "depth": 3
+                },
+                {
+                  "name": "calendar-regular-full.svg",
+                  "path": "frontend/src/icons/calendar-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 727,
+                  "is_binary": false,
+                  "oid": "cc53e673093abe447a01db6c153ffa7eab63d134",
+                  "depth": 3
+                },
+                {
+                  "name": "envelope-regular-full.svg",
+                  "path": "frontend/src/icons/envelope-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 808,
+                  "is_binary": false,
+                  "oid": "086c28d8d144050238dbb995976a7d91b9bb8dbf",
+                  "depth": 3
+                },
+                {
+                  "name": "eye-regular-full.svg",
+                  "path": "frontend/src/icons/eye-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 1464,
+                  "is_binary": false,
+                  "oid": "5a566c8a8251b3d57b93afb444338a2ab8f8479e",
+                  "depth": 3
+                },
+                {
+                  "name": "eye-slash-regular-full.svg",
+                  "path": "frontend/src/icons/eye-slash-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 1331,
+                  "is_binary": false,
+                  "oid": "966073bd632463ae7db9171317d054d3c9c1768e",
+                  "depth": 3
+                },
+                {
+                  "name": "lock-regular-full.svg",
+                  "path": "frontend/src/icons/lock-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 730,
+                  "is_binary": false,
+                  "oid": "cf5022600a73967e32062b7363416b304b57545b",
+                  "depth": 3
+                },
+                {
+                  "name": "user-regular-full.svg",
+                  "path": "frontend/src/icons/user-regular-full.svg",
+                  "type": "file",
+                  "extension": ".svg",
+                  "size": 747,
+                  "is_binary": false,
+                  "oid": "4116bea0721f80b84c9915de15f9f0ebc0ed9ace",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            },
+            {
+              "name": "index.css",
+              "path": "frontend/src/index.css",
+              "type": "file",
+              "extension": ".css",
+              "size": 246,
+              "is_binary": false,
+              "oid": "ae29fffe2ead84879947df52ead6db851c873780",
+              "depth": 2
+            },
+            {
+              "name": "main.jsx",
+              "path": "frontend/src/main.jsx",
+              "type": "file",
+              "extension": ".jsx",
+              "size": 1885,
+              "is_binary": false,
+              "oid": "e5b1d3ed3dd4f50b86bc668e1292022b0ceda4bb",
+              "depth": 2
+            },
+            {
+              "name": "pages",
+              "path": "frontend/src/pages",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "AboutPage.jsx",
+                  "path": "frontend/src/pages/AboutPage.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 884,
+                  "is_binary": false,
+                  "oid": "6a3b612be2a73338b26991e7ddbba02fc8e53f97",
+                  "depth": 3
+                },
+                {
+                  "name": "AccountPage.jsx",
+                  "path": "frontend/src/pages/AccountPage.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 14335,
+                  "is_binary": false,
+                  "oid": "84b2a83a2994bc6f53b633d3ffa05f81d31ab492",
+                  "depth": 3
+                },
+                {
+                  "name": "AddSource.jsx",
+                  "path": "frontend/src/pages/AddSource.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 7800,
+                  "is_binary": false,
+                  "oid": "8eaadd501e49fd7adf6b259df51b967d2babe88f",
+                  "depth": 3
+                },
+                {
+                  "name": "ChangePassword.jsx",
+                  "path": "frontend/src/pages/ChangePassword.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 8555,
+                  "is_binary": false,
+                  "oid": "ab00a408e788bb417e0827fdc1f5eeb1e2b546d9",
+                  "depth": 3
+                },
+                {
+                  "name": "EditAccount.jsx",
+                  "path": "frontend/src/pages/EditAccount.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 10266,
+                  "is_binary": false,
+                  "oid": "2872f5353747286f5c4b7134dd2f673b7b055988",
+                  "depth": 3
+                },
+                {
+                  "name": "LoginPage.jsx",
+                  "path": "frontend/src/pages/LoginPage.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 7578,
+                  "is_binary": false,
+                  "oid": "b43b95163f81670e08a88b86499f2e0119eb0b1c",
+                  "depth": 3
+                },
+                {
+                  "name": "RegisterPage.jsx",
+                  "path": "frontend/src/pages/RegisterPage.jsx",
+                  "type": "file",
+                  "extension": ".jsx",
+                  "size": 11493,
+                  "is_binary": false,
+                  "oid": "0411846bcda25513ed67d768f57f047815b39172",
+                  "depth": 3
+                }
+              ],
+              "depth": 2
+            }
+          ],
+          "depth": 1
+        },
+        {
+          "name": "tailwind.config.js",
+          "path": "frontend/tailwind.config.js",
+          "type": "file",
+          "extension": ".js",
+          "size": 439,
+          "is_binary": false,
+          "oid": "798279bf0e3c8ed5b7dbe140a9c8be97d4185107",
+          "depth": 1
+        }
+      ],
+      "depth": 0
+    },
+    {
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "type": "file",
+      "extension": ".json",
+      "size": 798141,
+      "is_binary": false,
+      "oid": "c69c4c71ea03cc52b6721eb798a533b97d8cb679",
+      "depth": 0
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "type": "file",
+      "extension": ".json",
+      "size": 180,
+      "is_binary": false,
+      "oid": "07da276004ddce9c66d977ea36792264215df405",
+      "depth": 0
+    },
+    {
+      "name": "spikes",
+      "path": "spikes",
+      "type": "directory",
+      "children": [
+        {
+          "name": "poc_news_api",
+          "path": "spikes/poc_news_api",
+          "type": "directory",
+          "children": [
+            {
+              "name": "README.md",
+              "path": "spikes/poc_news_api/README.md",
+              "type": "file",
+              "extension": ".md",
+              "size": 2088,
+              "is_binary": false,
+              "oid": "23350c49588e1c99bf0035733e351fdfa7052a7d",
+              "depth": 2
+            },
+            {
+              "name": "main.py",
+              "path": "spikes/poc_news_api/main.py",
+              "type": "file",
+              "extension": ".py",
+              "size": 2670,
+              "is_binary": false,
+              "oid": "833a9e93ee07567a02661caabc1c1cf89122e493",
+              "depth": 2
+            }
+          ],
+          "depth": 1
+        }
+      ],
+      "depth": 0
+    }
+  ],
+  "extracted_at": "2025-11-28T18:13:22.441661",
+  "method": "graphql_optimized",
+  "total_items": 123,
+  "extraction_time_seconds": 2.06123948097229,
+  "repository_metadata": {
+    "id": 1044430206,
+    "full_name": "unb-mds/2025-2-Synapse",
+    "description": null,
+    "created_at": "2025-08-25T17:09:47Z",
+    "updated_at": "2025-10-01T02:52:49Z",
+    "language": "Python",
+    "size": 13868,
+    "stars": 4,
+    "forks": 1,
+    "open_issues": 28
+  }
+}
