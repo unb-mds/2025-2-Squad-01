@@ -26,6 +26,7 @@ function App() {
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
       <Route path="/repos/issues" element={<IssuesPage/>} />
+      <Route path="/repos/visualization" element={<VisualizationPage />} />
       {/* Fallback route for not implemented pages */}
       <Route path="*" element={<NotFound />} />
     </Routes>
