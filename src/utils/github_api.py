@@ -21,6 +21,12 @@ class GitHubAPIClient:
             os.makedirs(cache_dir)
         # GraphQL endpoint
         self.graphql_url = "https://api.github.com/graphql"
+        
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
     
     def _get_cache_key(self, key: str) -> str:
         """Create a stable cache key from an arbitrary string."""
@@ -38,6 +44,35 @@ class GitHubAPIClient:
         cache_file = os.path.join(self.cache_dir, self._get_cache_key(cache_key))
         with open(cache_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+    
+    def _check_rate_limit_proactive(self) -> Optional[str]:
+        """Verifica rate limit ANTES de fazer requisições pesadas."""
+        try:
+            response = requests.get(
+                "https://api.github.com/rate_limit",
+                headers=self.headers,
+                timeout=10
+            )
+            if response.status_code == 200:
+                data = response.json()
+                graphql_limit = data.get('resources', {}).get('graphql', {})
+                remaining = graphql_limit.get('remaining', 0)
+                limit = graphql_limit.get('limit', 0)
+                reset_time = graphql_limit.get('reset', 0)
+                
+                if remaining < 10:  # Menos de 10 requests restantes
+                    reset_dt = datetime.fromtimestamp(reset_time)
+                    wait_seconds = (reset_dt - datetime.now()).total_seconds()
+                    if wait_seconds > 0:
+                        print(f"[WARN] Low rate limit: {remaining}/{limit} - waiting {wait_seconds:.0f}s")
+                        time.sleep(wait_seconds + 5)  # +5s de margem
+                        return f"Waited for rate limit reset"
+                
+                return f"{remaining}/{limit} requests remaining"
+        except Exception as e:
+            # Não falhar se verificação falhar
+            return None
+        return None
     
     def get_with_cache(self, url: str, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
 
@@ -120,8 +155,13 @@ class GitHubAPIClient:
         attempt = 0
         while attempt < retries:
             try:
-                # Throttle GraphQL calls to avoid secondary rate limits and API bursts
-                time.sleep(0.5)
+                # Verificação proativa de rate limit ANTES de fazer request
+                rate_check = self._check_rate_limit_proactive()
+                if rate_check:
+                    print(f"[INFO] Rate limit check: {rate_check}")
+                
+                # Throttle GraphQL calls - 1s para balancear velocidade e rate limits
+                time.sleep(1.0)
 
                 response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=60)
                 if response.status_code == 200:
@@ -135,8 +175,20 @@ class GitHubAPIClient:
                     self._log_rate_limit(response)
                     return data
                 elif response.status_code == 403:
-                    print(f"[ERROR] GraphQL forbidden (403): {response.text}")
-                    return None
+                    # Secondary rate limit - aguardar antes de retry
+                    attempt += 1
+                    if "secondary rate limit" in response.text.lower():
+                        wait = 60  # 1 minuto para secondary rate limit
+                        print(f"[WARN] Secondary rate limit hit - waiting {wait}s (attempt {attempt}/{retries})")
+                        print(f"       Response: {response.text[:200]}")
+                    else:
+                        wait = 30  # 30s para outros 403
+                        print(f"[ERROR] GraphQL forbidden (403) - waiting {wait}s (attempt {attempt}/{retries})")
+                    time.sleep(wait)
+                    if attempt >= retries:
+                        print(f"[ERROR] Exhausted retries after 403 errors")
+                        return None
+                    continue
                 elif 500 <= response.status_code < 600:
                     attempt += 1
                     wait = backoff_base * (2 ** (attempt - 1))
@@ -282,6 +334,7 @@ class GitHubAPIClient:
             root_tree = []
             stack = [(start_path, root_tree)]  # ← Usar root_tree como parent_list inicial
             processed = set()  # Evitar loops infinitos
+            request_count = 0  # Contador de requisições
             
             while stack and len(processed) < max_depth:
                 current_path, parent_list = stack.pop()
@@ -291,6 +344,15 @@ class GitHubAPIClient:
                     logger.warning(f"Skipping already processed path: {current_path}")
                     continue
                 processed.add(current_path)
+                
+                # Delay entre requisições dentro do mesmo repositório
+                if request_count > 0:
+                    time.sleep(0.8)  # 0.8s entre cada requisição de diretório
+                request_count += 1
+                
+                # Log de progresso
+                if request_count % 10 == 0:
+                    logger.info(f"  Processed {request_count} directories, {len(stack)} remaining in queue")
                 
                 expression = f"{branch}:{current_path}" if current_path else f"{branch}:"
                 
@@ -383,6 +445,7 @@ class GitHubAPIClient:
                     logger.error(f"Unexpected error processing path {current_path}: {str(e)}")
                     continue
             
+            logger.info(f"  Tree building completed: {request_count} GraphQL requests, {len(processed)} paths processed")
             return root_tree
         
         logger.info(f"Building repository tree for {owner}/{repo} (branch: {branch})")
@@ -441,14 +504,23 @@ class GitHubAPIClient:
         return results
     
     def _log_rate_limit(self, response: requests.Response) -> None:
-
+        """Log rate limit info and warn if getting low."""
         remaining = response.headers.get('X-RateLimit-Remaining', 'Unknown')
         limit = response.headers.get('X-RateLimit-Limit', 'Unknown')
         reset_time = response.headers.get('X-RateLimit-Reset', 'Unknown')
         
         if reset_time != 'Unknown':
             reset_datetime = datetime.fromtimestamp(int(reset_time))
-            print(f"Rate limit: {remaining}/{limit}, resets at {reset_datetime}")
+            
+            # Warning se rate limit está baixo
+            if remaining != 'Unknown':
+                remaining_int = int(remaining)
+                if remaining_int < 100:
+                    print(f"⚠️  LOW RATE LIMIT: {remaining}/{limit}, resets at {reset_datetime}")
+                elif remaining_int < 500:
+                    print(f"Rate limit: {remaining}/{limit}, resets at {reset_datetime}")
+            else:
+                print(f"Rate limit: {remaining}/{limit}, resets at {reset_datetime}")
         else:
             print(f"Rate limit: {remaining}/{limit}")
 

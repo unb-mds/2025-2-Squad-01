@@ -22,8 +22,9 @@ def extract_repository_structure(
     if isinstance(filtered_repos, list) and len(filtered_repos) > 0 and isinstance(filtered_repos[0], dict) and '_metadata' in filtered_repos[0]:
         filtered_repos = filtered_repos[1:]
     
-    # Processar cada repositório
-    for repo in filtered_repos:
+    # Processar cada repositório SEQUENCIALMENTE (sem paralelização)
+    # para evitar secondary rate limits
+    for idx, repo in enumerate(filtered_repos, 1):
         if not repo or not isinstance(repo, dict):
             print(f"Skipping invalid repo entry: {repo}")
             continue
@@ -38,7 +39,13 @@ def extract_repository_structure(
             print(f"Skipping {full_name}: cannot determine owner")
             continue
         
-        print(f"Processing repository structure for: {repo_name}")
+        print(f"\n[{idx}/{len(filtered_repos)}] Processing repository structure for: {repo_name}")
+        
+        # Delay entre repositórios para evitar secondary rate limits
+        if idx > 1:  # Não esperar no primeiro
+            print("  Waiting 3s between repositories...")
+            import time
+            time.sleep(3)
         
         # Extract structure using GraphQL
         structure = client.graphql_repository_tree(
