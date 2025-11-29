@@ -349,7 +349,7 @@ class GitHubAPIClient:
         self,
         owner: str,
         repo: str,
-        page_size: int = 50,
+        page_size: int = 30,  # Reduced from 50 to 30 to avoid 502 on large repos
         max_pages: Optional[int] = None,
         max_commits: Optional[int] = None,
         since: Optional[str] = None,
@@ -373,6 +373,8 @@ class GitHubAPIClient:
         """
         commits_by_sha: Dict[str, Dict[str, Any]] = {}  # Deduplicate by SHA
         rate_meta: Dict[str, Any] = {}
+        consecutive_502_errors = 0  # Track consecutive 502 errors
+        max_502_before_cooldown = 3  # Circuit breaker threshold
         
         # Always include default branch, optionally add others
         branches_to_process = [None]  # None = default branch
@@ -410,10 +412,8 @@ class GitHubAPIClient:
                                   oid
                                   messageHeadline
                                   committedDate
-                                  pushedDate
-                                  url
-                                  author { name email date user { login } }
-                                  committer { name email date user { login } }
+                                  author { name user { login } }
+                                  committer { user { login } }
                                   additions
                                   deletions
                                 }
@@ -440,10 +440,8 @@ class GitHubAPIClient:
                                   oid
                                   messageHeadline
                                   committedDate
-                                  pushedDate
-                                  url
-                                  author { name email date user { login } }
-                                  committer { name email date user { login } }
+                                  author { name user { login } }
+                                  committer { user { login } }
                                   additions
                                   deletions
                                 }
@@ -476,13 +474,24 @@ class GitHubAPIClient:
                     }
                     if branch:
                         variables["branch"] = f"refs/heads/{branch}"
+                    
+                    # Circuit breaker: if too many 502s, take a long break
+                    if consecutive_502_errors >= max_502_before_cooldown:
+                        cooldown = 60 + (consecutive_502_errors * 10)  # 60s, 70s, 80s...
+                        print(f"        [CIRCUIT BREAKER] Too many 502 errors. Cooling down {cooldown}s...")
+                        time.sleep(cooldown)
+                        consecutive_502_errors = 0  # Reset after cooldown
                         
                     data = self.graphql(query, variables, use_cache=use_cache)
                     if not data:
+                        consecutive_502_errors += 1
                         break
 
                     repo_data = data.get("data", {}).get("repository")
                     rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
+                    
+                    # Success! Reset 502 counter
+                    consecutive_502_errors = 0
                     
                     # Check rate limit and pause if needed
                     if rate_meta:
@@ -525,9 +534,10 @@ class GitHubAPIClient:
                     cursor = page_info.get("endCursor")
                     pages += 1
                     
-                    # Delay between pages to avoid overwhelming API
+                    # Adaptive delay between pages: longer for large repos
                     if has_next:
-                        time.sleep(1.5)  # Increased delay for pagination stability
+                        delay = 2.5 + (consecutive_502_errors * 0.5)  # 2.5s base, +0.5s per recent error
+                        time.sleep(delay)
                     
                     if not has_next:
                         break
