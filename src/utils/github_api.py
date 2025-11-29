@@ -94,8 +94,8 @@ class GitHubAPIClient:
     # ----------------------
     # GraphQL support (API v4)
     # ----------------------
-    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
-        """Execute a GraphQL query against GitHub's v4 API with optional caching."""
+    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 5, backoff_base: float = 2.0) -> Any:
+        """Execute a GraphQL query against GitHub's v4 API with enhanced error handling and resilience."""
         payload = {"query": query, "variables": variables or {}}
 
         # Build a deterministic cache key based on query + variables
@@ -119,10 +119,11 @@ class GitHubAPIClient:
         attempt = 0
         while attempt < retries:
             try:
-                # Throttle GraphQL calls to avoid secondary rate limits and API bursts
-                time.sleep(0.5)
+                # Adaptive throttling: increase delay after failures
+                delay = 1.0 if attempt == 0 else backoff_base * (2 ** (attempt - 1))
+                time.sleep(delay)
 
-                response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=60)
+                response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=90)
                 if response.status_code == 200:
                     data = response.json()
                     if "errors" in data:
@@ -134,8 +135,22 @@ class GitHubAPIClient:
                     self._log_rate_limit(response)
                     return data
                 elif response.status_code == 403:
-                    print(f"[ERROR] GraphQL forbidden (403): {response.text}")
-                    return None
+                    # Check if it's rate limit or permission issue
+                    if "rate limit" in response.text.lower():
+                        print(f"[WARN] GraphQL rate limit exceeded. Waiting 60s...")
+                        time.sleep(60)
+                        attempt += 1
+                        continue
+                    else:
+                        print(f"[ERROR] GraphQL forbidden (403): {response.text}")
+                        return None
+                elif response.status_code == 502:
+                    # Bad Gateway - GitHub server overload, needs longer backoff
+                    attempt += 1
+                    wait = backoff_base * (2 ** attempt)  # More aggressive for 502
+                    print(f"[WARN] GraphQL 502 (server overload) - waiting {wait:.1f}s (attempt {attempt}/{retries})")
+                    time.sleep(wait)
+                    continue
                 elif 500 <= response.status_code < 600:
                     attempt += 1
                     wait = backoff_base * (2 ** (attempt - 1))
@@ -147,14 +162,14 @@ class GitHubAPIClient:
                     return None
             except requests.exceptions.Timeout:
                 attempt += 1
-                wait = backoff_base * (2 ** (attempt - 1))
-                print(f"[ERROR] GraphQL request timeout - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
+                wait = backoff_base * (2 ** attempt)
+                print(f"[ERROR] GraphQL timeout (90s) - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
                 time.sleep(wait)
                 continue
             except requests.exceptions.RequestException as e:
                 print(f"[ERROR] GraphQL request error: {str(e)}")
                 return None
-        print("[ERROR] Exhausted GraphQL retries")
+        print(f"[ERROR] Exhausted GraphQL retries after {retries} attempts")
         return None
 
     def _split_time_range(
@@ -469,6 +484,13 @@ class GitHubAPIClient:
                     repo_data = data.get("data", {}).get("repository")
                     rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
                     
+                    # Check rate limit and pause if needed
+                    if rate_meta:
+                        remaining = rate_meta.get("remaining", 0)
+                        if remaining < 100:
+                            print(f"        [WARN] Rate limit low ({remaining}). Pausing 30s...")
+                            time.sleep(30)
+                    
                     if not repo_data:
                         break
                     
@@ -502,6 +524,11 @@ class GitHubAPIClient:
                     has_next = page_info.get("hasNextPage")
                     cursor = page_info.get("endCursor")
                     pages += 1
+                    
+                    # Delay between pages to avoid overwhelming API
+                    if has_next:
+                        time.sleep(1.5)  # Increased delay for pagination stability
+                    
                     if not has_next:
                         break
                 
