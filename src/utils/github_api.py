@@ -157,6 +157,179 @@ class GitHubAPIClient:
         print("[ERROR] Exhausted GraphQL retries")
         return None
 
+    def _split_time_range(
+        self,
+        since: Optional[str],
+        until: Optional[str],
+        chunks: int = 3,
+    ) -> List[Tuple[Optional[str], Optional[str]]]:
+        """
+        Split a time range into smaller chunks for efficient extraction.
+        
+        Args:
+            since: Start date (ISO format) or None
+            until: End date (ISO format) or None
+            chunks: Number of chunks to split into (default: 3)
+        
+        Returns:
+            List of (since, until) tuples representing time ranges
+        """
+        from datetime import datetime, timedelta, timezone
+        
+        # If no date range specified, return single range
+        if not since and not until:
+            return [(None, None)]
+        
+        # Parse dates
+        try:
+            if since:
+                start_dt = datetime.fromisoformat(since.replace('Z', '+00:00'))
+            else:
+                # Default to 1 year ago if not specified
+                start_dt = datetime.now(timezone.utc) - timedelta(days=365)
+            
+            if until:
+                end_dt = datetime.fromisoformat(until.replace('Z', '+00:00'))
+            else:
+                end_dt = datetime.now(timezone.utc)
+        except (ValueError, AttributeError):
+            # If parsing fails, return single range
+            return [(since, until)]
+        
+        # Calculate chunk duration
+        total_duration = end_dt - start_dt
+        chunk_duration = total_duration / chunks
+        
+        # Generate time ranges
+        ranges = []
+        for i in range(chunks):
+            chunk_start = start_dt + (chunk_duration * i)
+            chunk_end = start_dt + (chunk_duration * (i + 1))
+            
+            # Format as ISO strings
+            ranges.append((
+                chunk_start.isoformat().replace('+00:00', 'Z'),
+                chunk_end.isoformat().replace('+00:00', 'Z')
+            ))
+        
+        return ranges
+
+    def get_active_unmerged_branches(
+        self,
+        owner: str,
+        repo: str,
+        days: int = 30,
+        use_cache: bool = True,
+    ) -> List[str]:
+        """
+        Get branches that were updated recently and have unmerged commits.
+        Uses a single efficient query combining branch listing and comparison.
+        
+        Args:
+            days: Consider branches updated in last N days
+        
+        Returns:
+            List of branch names with unmerged commits
+        """
+        from datetime import datetime, timedelta, timezone
+        
+        # Get default branch first
+        repo_info = self.get_with_cache(
+            f"https://api.github.com/repos/{owner}/{repo}",
+            use_cache=use_cache
+        )
+        default_branch = repo_info.get("default_branch", "main") if repo_info else "main"
+        
+        cutoff_date = datetime.now(timezone.utc) - timedelta(days=days)
+        cutoff_iso = cutoff_date.isoformat()
+        
+        # Single GraphQL query to get branches with commit info
+        query = """
+        query($owner: String!, $name: String!, $cursor: String) {
+          repository(owner: $owner, name: $name) {
+            refs(refPrefix: "refs/heads/", first: 100, after: $cursor, orderBy: {field: TAG_COMMIT_DATE, direction: DESC}) {
+              pageInfo { hasNextPage endCursor }
+              nodes {
+                name
+                target {
+                  ... on Commit {
+                    oid
+                    committedDate
+                  }
+                }
+              }
+            }
+          }
+          rateLimit { remaining resetAt limit cost }
+        }
+        """
+        
+        active_branches = []
+        cursor = None
+        
+        while True:
+            variables = {"owner": owner, "name": repo, "cursor": cursor}
+            data = self.graphql(query, variables, use_cache=use_cache)
+            if not data:
+                break
+                
+            repo_data = data.get("data", {}).get("repository")
+            if not repo_data:
+                break
+                
+            refs = repo_data.get("refs", {})
+            nodes = refs.get("nodes", [])
+            
+            # Filter by date and exclude default branch
+            for node in nodes:
+                branch_name = node.get("name")
+                if branch_name == default_branch:
+                    continue
+                
+                # Skip gh-pages and similar branches
+                if branch_name and branch_name.startswith("gh-pages"):
+                    continue
+                    
+                target = node.get("target", {})
+                commit_date = target.get("committedDate")
+                
+                if commit_date:
+                    commit_dt = datetime.fromisoformat(commit_date.replace('Z', '+00:00'))
+                    if commit_dt >= cutoff_date:
+                        active_branches.append(branch_name)
+            
+            page_info = refs.get("pageInfo", {})
+            if not page_info.get("hasNextPage"):
+                break
+            cursor = page_info.get("endCursor")
+        
+        if not active_branches:
+            return []
+        
+        # Batch check which branches have unmerged commits (max 10 at a time to avoid rate limits)
+        print(f"  Found {len(active_branches)} active branches (gh-pages excluded), checking merge status...")
+        unmerged_branches = []
+        batch_size = 10
+        
+        for i in range(0, len(active_branches), batch_size):
+            batch = active_branches[i:i+batch_size]
+            for branch in batch:
+                # Use REST API compare endpoint (more efficient than GraphQL for this)
+                compare_url = f"https://api.github.com/repos/{owner}/{repo}/compare/{default_branch}...{branch}"
+                compare_data = self.get_with_cache(compare_url, use_cache=use_cache)
+                
+                if compare_data and isinstance(compare_data, dict):
+                    ahead_by = compare_data.get("ahead_by", 0)
+                    if ahead_by > 0:
+                        unmerged_branches.append(branch)
+                        print(f"    ✓ {branch}: {ahead_by} commits ahead")
+            
+            # Small delay between batches to respect rate limits
+            if i + batch_size < len(active_branches):
+                time.sleep(1)
+        
+        return unmerged_branches
+
     def graphql_commit_history(
         self,
         owner: str,
@@ -167,87 +340,177 @@ class GitHubAPIClient:
         since: Optional[str] = None,
         until: Optional[str] = None,
         use_cache: bool = True,
+        branches: Optional[List[str]] = None,
+        split_large_extractions: bool = True,
+        time_chunks: int = 3,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-
-        commits: List[Dict[str, Any]] = []
-        cursor: Optional[str] = None
-        pages = 0
-        rate_meta: Dict[str, Any] = {}
-
-        query = """
-        query($owner: String!, $name: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
-          repository(owner: $owner, name: $name) {
-            name
-            defaultBranchRef {
-              name
-              target {
-                ... on Commit {
-                  history(first: $pageSize, after: $cursor, since: $since, until: $until) {
-                    pageInfo { hasNextPage endCursor }
-                    nodes {
-                      oid
-                      messageHeadline
-                      committedDate
-                      pushedDate
-                      url
-                      author { name email date user { login } }
-                      committer { name email date user { login } }
-                      additions
-                      deletions
-                    }
-                  }
-                }
-              }
-            }
-          }
-          rateLimit { remaining resetAt limit cost }
-        }
         """
+        Fetch commit history from repository with automatic time-based splitting.
+        
+        Args:
+            branches: List of branch names to extract from. If None, uses default branch.
+                     If provided, includes default branch + specified branches.
+            split_large_extractions: If True, splits extraction into time chunks for large branches
+            time_chunks: Number of time periods to split extraction into (default: 3)
+        
+        Returns:
+            Tuple of (commits list, rate limit metadata)
+        """
+        commits_by_sha: Dict[str, Dict[str, Any]] = {}  # Deduplicate by SHA
+        rate_meta: Dict[str, Any] = {}
+        
+        # Always include default branch, optionally add others
+        branches_to_process = [None]  # None = default branch
+        if branches:
+            branches_to_process.extend(branches)
+            print(f"  Processing {len(branches_to_process)} branches (main + {len(branches)} active)")
+        
+        # Determine if we should split by time
+        time_ranges = [(since, until)]  # Default: single time range
+        
+        if split_large_extractions and (since or until):
+            time_ranges = self._split_time_range(since, until, chunks=time_chunks)
+            print(f"  Splitting extraction into {len(time_ranges)} time periods to avoid API overload")
+        
+        for branch in branches_to_process:
+            branch_name = branch if branch else "default branch"
+            print(f"    Extracting from: {branch_name}")
+            
+            # Process each time range for this branch
+            for time_idx, (range_since, range_until) in enumerate(time_ranges):
+                if len(time_ranges) > 1:
+                    print(f"      Time period {time_idx + 1}/{len(time_ranges)}: {range_since} to {range_until}")
+                
+                if branch:
+                    print(f"    Extracting from branch: {branch}")
+                    query = """
+                    query($owner: String!, $name: String!, $branch: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
+                      repository(owner: $owner, name: $name) {
+                        ref(qualifiedName: $branch) {
+                          target {
+                            ... on Commit {
+                              history(first: $pageSize, after: $cursor, since: $since, until: $until) {
+                                pageInfo { hasNextPage endCursor }
+                                nodes {
+                                  oid
+                                  messageHeadline
+                                  committedDate
+                                  pushedDate
+                                  url
+                                  author { name email date user { login } }
+                                  committer { name email date user { login } }
+                                  additions
+                                  deletions
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      rateLimit { remaining resetAt limit cost }
+                    }
+                    """
+                else:
+                    print(f"    Extracting from main branch")
+                    query = """
+                    query($owner: String!, $name: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
+                      repository(owner: $owner, name: $name) {
+                        defaultBranchRef {
+                          name
+                          target {
+                            ... on Commit {
+                              history(first: $pageSize, after: $cursor, since: $since, until: $until) {
+                                pageInfo { hasNextPage endCursor }
+                                nodes {
+                                  oid
+                                  messageHeadline
+                                  committedDate
+                                  pushedDate
+                                  url
+                                  author { name email date user { login } }
+                                  committer { name email date user { login } }
+                                  additions
+                                  deletions
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      rateLimit { remaining resetAt limit cost }
+                    }
+                    """
+                
+                cursor: Optional[str] = None
+                pages = 0
+                period_commits = 0
+                
+                while True:
+                    if max_pages is not None and pages >= max_pages:
+                        break
+                    if max_commits is not None and len(commits_by_sha) >= max_commits:
+                        break
 
-        while True:
-            if max_pages is not None and pages >= max_pages:
-                break
+                    variables = {
+                        "owner": owner,
+                        "name": repo,
+                        "pageSize": page_size,
+                        "cursor": cursor,
+                        "since": range_since,
+                        "until": range_until,
+                    }
+                    if branch:
+                        variables["branch"] = f"refs/heads/{branch}"
+                        
+                    data = self.graphql(query, variables, use_cache=use_cache)
+                    if not data:
+                        break
 
-            variables = {
-                "owner": owner,
-                "name": repo,
-                "pageSize": page_size,
-                "cursor": cursor,
-                "since": since,
-                "until": until,
-            }
-            data = self.graphql(query, variables, use_cache=use_cache)
-            if not data:
-                break
+                    repo_data = data.get("data", {}).get("repository")
+                    rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
+                    
+                    if not repo_data:
+                        break
+                    
+                    # Extract history based on query type
+                    if branch:
+                        ref_data = repo_data.get("ref")
+                        if not ref_data:
+                            print(f"        Branch '{branch}' not found")
+                            break
+                        target = ref_data.get("target", {})
+                    else:
+                        default_ref = repo_data.get("defaultBranchRef")
+                        if not default_ref:
+                            break
+                        target = default_ref.get("target", {})
+                    
+                    history = target.get("history") if isinstance(target, dict) else None
+                    if not history:
+                        break
 
-            repo_data = data.get("data", {}).get("repository")
-            rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
-            if not repo_data or not repo_data.get("defaultBranchRef"):
-                # No default branch or repo not found
-                break
+                    nodes = history.get("nodes", [])
+                    
+                    # Add commits to dict (auto-deduplicates by SHA)
+                    for node in nodes:
+                        sha = node.get('oid')
+                        if sha and sha not in commits_by_sha:
+                            commits_by_sha[sha] = node
+                            period_commits += 1
 
-            target = repo_data["defaultBranchRef"].get("target", {})
-            history = target.get("history") if isinstance(target, dict) else None
-            if not history:
-                break
-
-            nodes = history.get("nodes", [])
-            # Enforce optional max_commits limit across pages
-            if max_commits is not None and max_commits >= 0:
-                remaining = max_commits - len(commits)
-                if remaining <= 0:
-                    break
-                commits.extend(nodes[:remaining])
-            else:
-                commits.extend(nodes)
-
-            page_info = history.get("pageInfo", {})
-            has_next = page_info.get("hasNextPage")
-            cursor = page_info.get("endCursor")
-            pages += 1
-            if not has_next:
-                break
-
+                    page_info = history.get("pageInfo", {})
+                    has_next = page_info.get("hasNextPage")
+                    cursor = page_info.get("endCursor")
+                    pages += 1
+                    if not has_next:
+                        break
+                
+                if len(time_ranges) > 1 and period_commits > 0:
+                    print(f"        Extracted {period_commits} unique commits from this period")
+        
+        commits = list(commits_by_sha.values())
+        if branches:
+            print(f"  Total unique commits across all branches: {len(commits)}")
         return commits, rate_meta
 
     def get_paginated(

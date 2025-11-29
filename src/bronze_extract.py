@@ -20,6 +20,9 @@ def main():
     parser.add_argument('--until', help='ISO-8601 timestamp (e.g., 2024-12-31T23:59:59Z) to limit commit extraction end')
     parser.add_argument('--max-commits-per-repo', type=int, help='Optional hard cap of commits per repo to fetch (GraphQL only)')
     parser.add_argument('--commits-page-size', type=int, default=50, help='Commits page size for pagination (REST & GraphQL). Default: 50')
+    parser.add_argument('--include-active-branches', action='store_true', help='Include commits from recently active branches not merged to main (GraphQL only)')
+    parser.add_argument('--active-days', type=int, default=30, help='Consider branches active if updated in last N days (default: 30)')
+    parser.add_argument('--time-chunks', type=int, default=3, help='Split large extractions into N time periods to avoid API overload (default: 3)')
     
     args = parser.parse_args()
     
@@ -54,6 +57,9 @@ def main():
             until=args.until,
             max_commits_per_repo=args.max_commits_per_repo,
             page_size=args.commits_page_size,
+            include_active_branches=args.include_active_branches,
+            active_days=args.active_days,
+            time_chunks=args.time_chunks,
         )
 
         print("\n[INFO]: Extracting organization members...")

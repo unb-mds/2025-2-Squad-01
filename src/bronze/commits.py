@@ -11,6 +11,9 @@ def extract_commits(
     until: Optional[str] = None,
     max_commits_per_repo: Optional[int] = None,
     page_size: int = 50,
+    include_active_branches: bool = False,
+    active_days: int = 30,
+    time_chunks: int = 3,
 ) -> List[str]:
     
     # Load filtered repositories
@@ -39,6 +42,21 @@ def extract_commits(
         
         print(f"Processing commits for: {repo_name}")
         
+        # Determine which branches to extract
+        branches_to_extract = None
+        if include_active_branches and method.lower() == "graphql":
+            print(f"  Finding active unmerged branches (last {active_days} days)...")
+            branches_to_extract = client.get_active_unmerged_branches(
+                owner=owner,
+                repo=name_only,
+                days=active_days,
+                use_cache=use_cache,
+            )
+            if branches_to_extract:
+                print(f"  Found {len(branches_to_extract)} unmerged branches to extract")
+            else:
+                print(f"  No active unmerged branches found")
+        
         # Choose extraction method
         data_commits: List[Dict[str, Any]] = []
         if method.lower() == "graphql":
@@ -48,6 +66,9 @@ def extract_commits(
             nodes, meta = client.graphql_commit_history(
                 owner=owner,
                 repo=name_only,
+                branches=branches_to_extract,
+                split_large_extractions=True,  # Enable time-based splitting
+                time_chunks=3,  # Split into 3 time periods
                 page_size=page_size,
                 max_commits=max_commits_per_repo,
                 since=since,
