@@ -43,12 +43,13 @@ def extract_repository_structure(
         
         # Delay entre repositórios para evitar secondary rate limits
         if idx > 1:  # Não esperar no primeiro
-            print("  Waiting 3s between repositories...")
+            print("  Waiting 2s between repositories...")
             import time
-            time.sleep(3)
+            time.sleep(2)
         
-        # Extract structure using GraphQL
-        structure = client.graphql_repository_tree(
+        # Extract structure using REST API (MUITO mais eficiente que GraphQL!)
+        # 1 requisição vs centenas, 30s vs 3h
+        structure = client.rest_repository_tree(
             owner=owner,
             repo=name_only,
             branch=default_branch,

@@ -130,7 +130,7 @@ class GitHubAPIClient:
     # ----------------------
     # GraphQL support (API v4)
     # ----------------------
-    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
+    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 2, backoff_base: float = 1.0) -> Any:
         """Execute a GraphQL query against GitHub's v4 API with optional caching."""
         payload = {"query": query, "variables": variables or {}}
 
@@ -155,13 +155,8 @@ class GitHubAPIClient:
         attempt = 0
         while attempt < retries:
             try:
-                # Verificação proativa de rate limit ANTES de fazer request
-                rate_check = self._check_rate_limit_proactive()
-                if rate_check:
-                    print(f"[INFO] Rate limit check: {rate_check}")
-                
-                # Throttle GraphQL calls - 1s para balancear velocidade e rate limits
-                time.sleep(1.0)
+                # Throttle GraphQL calls - 0.6s balanceado para performance
+                time.sleep(0.6)
 
                 response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=60)
                 if response.status_code == 200:
@@ -347,7 +342,7 @@ class GitHubAPIClient:
                 
                 # Delay entre requisições dentro do mesmo repositório
                 if request_count > 0:
-                    time.sleep(0.8)  # 0.8s entre cada requisição de diretório
+                    time.sleep(0.5)  # 0.5s entre cada requisição de diretório
                 request_count += 1
                 
                 # Log de progresso
@@ -462,6 +457,158 @@ class GitHubAPIClient:
             }
         except Exception as e:
             logger.error(f"Failed to build repository tree: {str(e)}")
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': [],
+                'error': str(e),
+                'extracted_at': datetime.now().isoformat()
+            }
+
+    def rest_repository_tree(
+        self,
+        owner: str,
+        repo: str,
+        branch: str = "main",
+        use_cache: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Extrai a árvore completa de arquivos usando REST API git/trees.
+        
+        MUITO MAIS EFICIENTE que GraphQL!
+        - 1 requisição vs centenas
+        - 30 segundos vs 3 horas
+        - Sem secondary rate limits
+        
+        Baseado em: https://github.com/githubocto/repo-visualizer
+        API Docs: https://docs.github.com/en/rest/git/trees
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisado (padrão: 'main')
+            use_cache: Se deve usar cache
+        
+        Returns:
+            Dicionário com estrutura hierárquica de arquivos e diretórios
+        """
+        logger = logging.getLogger(__name__)
+        logger.info(f"Fetching repository tree for {owner}/{repo} (branch: {branch}) using REST API")
+        
+        # Primeiro, obter SHA do branch
+        branch_url = f"https://api.github.com/repos/{owner}/{repo}/branches/{branch}"
+        branch_data = self.get_with_cache(branch_url, use_cache=use_cache)
+        
+        if not branch_data or 'commit' not in branch_data:
+            logger.error(f"Failed to get branch info for {owner}/{repo}:{branch}")
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': [],
+                'error': 'Failed to get branch information',
+                'extracted_at': datetime.now().isoformat()
+            }
+        
+        tree_sha = branch_data['commit']['commit']['tree']['sha']
+        
+        # Buscar árvore recursivamente - A MÁGICA ESTÁ AQUI!
+        tree_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{tree_sha}?recursive=1"
+        tree_data = self.get_with_cache(tree_url, use_cache=use_cache)
+        
+        if not tree_data or 'tree' not in tree_data:
+            logger.error(f"Failed to get tree data for {owner}/{repo}")
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': [],
+                'error': 'Failed to get tree data',
+                'extracted_at': datetime.now().isoformat()
+            }
+        
+        # Converter formato REST para nosso formato hierárquico
+        def build_hierarchy(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+            """
+            Converte lista flat da API REST em estrutura hierárquica.
+            
+            REST retorna:
+            [{"path": "src/main.py", "type": "blob", ...}, ...]
+            
+            Precisamos transformar em:
+            [{"name": "src", "type": "directory", "children": [...]}]
+            """
+            root: List[Dict[str, Any]] = []
+            path_map: Dict[str, Dict[str, Any]] = {}
+            
+            # Primeiro, criar todos os nós
+            for item in items:
+                path = item.get('path', '')
+                item_type = item.get('type', '')
+                size = item.get('size', 0)
+                
+                # Extrair nome do arquivo/diretório
+                parts = path.split('/')
+                name = parts[-1]
+                
+                # Detectar extensão
+                extension = ''
+                if item_type == 'blob' and '.' in name:
+                    extension = '.' + name.split('.')[-1]
+                
+                node = {
+                    'name': name,
+                    'path': path,
+                    'type': 'file' if item_type == 'blob' else 'directory',
+                }
+                
+                if item_type == 'blob':
+                    node['extension'] = extension
+                    node['size'] = size
+                    node['is_binary'] = False  # REST não retorna isso, assumir False
+                else:
+                    node['children'] = []
+                
+                path_map[path] = node
+            
+            # Depois, construir hierarquia
+            for path, node in path_map.items():
+                parts = path.split('/')
+                
+                if len(parts) == 1:
+                    # Item raiz
+                    root.append(node)
+                else:
+                    # Item aninhado - encontrar pai
+                    parent_path = '/'.join(parts[:-1])
+                    parent = path_map.get(parent_path)
+                    
+                    if parent and 'children' in parent:
+                        parent['children'].append(node)
+                    else:
+                        # Pai não existe (não deveria acontecer), adicionar à raiz
+                        root.append(node)
+            
+            return root
+        
+        try:
+            tree = build_hierarchy(tree_data['tree'])
+            
+            logger.info(f"Successfully built tree with {len(tree_data['tree'])} items")
+            
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': tree,
+                'total_items': len(tree_data['tree']),
+                'truncated': tree_data.get('truncated', False),
+                'extracted_at': datetime.now().isoformat(),
+                'method': 'rest_git_trees'  # Identificar método usado
+            }
+        except Exception as e:
+            logger.error(f"Failed to build hierarchy: {str(e)}")
             return {
                 'owner': owner,
                 'repository': repo,
