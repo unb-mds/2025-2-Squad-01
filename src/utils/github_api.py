@@ -50,7 +50,7 @@ class GitHubAPIClient:
         attempt = 0
         while attempt < retries:
             try:
-                response = requests.get(url, headers=self.headers, timeout=30)
+                response = requests.get(url, headers=self.headers, timeout=10)
 
                 if response.status_code == 200:
                     data = response.json()
@@ -94,7 +94,7 @@ class GitHubAPIClient:
     # ----------------------
     # GraphQL support (API v4)
     # ----------------------
-    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 5, backoff_base: float = 2.0) -> Any:
+    def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None, use_cache: bool = True, retries: int = 0, backoff_base: float = 2.0) -> Any:
         """Execute a GraphQL query against GitHub's v4 API with enhanced error handling and resilience."""
         payload = {"query": query, "variables": variables or {}}
 
@@ -123,13 +123,27 @@ class GitHubAPIClient:
                 delay = 1.0 if attempt == 0 else backoff_base * (2 ** (attempt - 1))
                 time.sleep(delay)
 
-                response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=90)
+                response = requests.post(self.graphql_url, headers=headers, json=payload, timeout=10)
                 if response.status_code == 200:
                     data = response.json()
                     if "errors" in data:
-                        print(f"[ERROR] GraphQL returned errors: {data['errors']}")
-                        # GraphQL 'errors' are not retriable in general; stop
-                        return None
+                        # Check if errors are SERVICE_UNAVAILABLE (commit stats unavailable)
+                        errors = data.get('errors', [])
+                        has_stats_unavailable = any(
+                            err.get('type') == 'SERVICE_UNAVAILABLE' and 
+                            ('additions' in str(err.get('path', [])) or 'deletions' in str(err.get('path', [])))
+                            for err in errors
+                        )
+                        
+                        if has_stats_unavailable:
+                            # Stats unavailable - treat as failure to trigger REST fallback
+                            print(f"[WARN] Commit stats unavailable in GraphQL (SERVICE_UNAVAILABLE)")
+                            print(f"[INFO] Will use REST API for reliable stats extraction")
+                            return None  # Trigger REST fallback
+                        else:
+                            # Other critical errors
+                            print(f"[ERROR] GraphQL returned errors: {data['errors']}")
+                            return None
                     if use_cache and cache_key:
                         self._cache_set(cache_key, data)
                     self._log_rate_limit(response)
@@ -137,35 +151,25 @@ class GitHubAPIClient:
                 elif response.status_code == 403:
                     # Check if it's rate limit or permission issue
                     if "rate limit" in response.text.lower():
-                        print(f"[WARN] GraphQL rate limit exceeded. Waiting 60s...")
-                        time.sleep(60)
-                        attempt += 1
-                        continue
+                        print(f"[WARN] GraphQL rate limit exceeded.")
+                        return None  # Let circuit breaker or caller handle
                     else:
                         print(f"[ERROR] GraphQL forbidden (403): {response.text}")
                         return None
                 elif response.status_code == 502:
-                    # Bad Gateway - GitHub server overload, needs longer backoff
-                    attempt += 1
-                    wait = backoff_base * (2 ** attempt)  # More aggressive for 502
-                    print(f"[WARN] GraphQL 502 (server overload) - waiting {wait:.1f}s (attempt {attempt}/{retries})")
-                    time.sleep(wait)
-                    continue
+                    # Bad Gateway - GitHub server overload, let circuit breaker handle retry
+                    print(f"[WARN] GraphQL 502 (server overload) - will retry via circuit breaker")
+                    return None  # Let circuit breaker handle retry
                 elif 500 <= response.status_code < 600:
-                    attempt += 1
-                    wait = backoff_base * (2 ** (attempt - 1))
-                    print(f"[WARN] GraphQL {response.status_code} - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
-                    time.sleep(wait)
-                    continue
+                    # Server error - let circuit breaker handle retry
+                    print(f"[WARN] GraphQL {response.status_code} - will retry via circuit breaker")
+                    return None  # Let circuit breaker handle retry
                 else:
                     print(f"[ERROR] GraphQL request failed: {response.status_code} - {response.text}")
                     return None
             except requests.exceptions.Timeout:
-                attempt += 1
-                wait = backoff_base * (2 ** attempt)
-                print(f"[ERROR] GraphQL timeout (90s) - retrying in {wait:.1f}s (attempt {attempt}/{retries})")
-                time.sleep(wait)
-                continue
+                print(f"[ERROR] GraphQL timeout (10s) - will retry via circuit breaker")
+                return None  # Let circuit breaker handle retry
             except requests.exceptions.RequestException as e:
                 print(f"[ERROR] GraphQL request error: {str(e)}")
                 return None
@@ -349,7 +353,7 @@ class GitHubAPIClient:
         self,
         owner: str,
         repo: str,
-        page_size: int = 30,  # Reduced from 50 to 30 to avoid 502 on large repos
+        page_size: int,  
         max_pages: Optional[int] = None,
         max_commits: Optional[int] = None,
         since: Optional[str] = None,
@@ -360,12 +364,16 @@ class GitHubAPIClient:
         time_chunks: int = 3,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         """
-        Fetch commit history from repository with automatic time-based splitting.
+        Fetch commit history with automatic REST fallback on GraphQL failures.
+        
+        Features:
+        - Switches to REST after 16s timeout (2 failed attempts)
+        - REST fallback extracts 50 commits, then retries GraphQL
+        - Circuit breaker for repeated failures
         
         Args:
             branches: List of branch names to extract from. If None, uses default branch.
-                     If provided, includes default branch + specified branches.
-            split_large_extractions: If True, splits extraction into time chunks for large branches
+            split_large_extractions: If True, splits extraction into time chunks
             time_chunks: Number of time periods to split extraction into (default: 3)
         
         Returns:
@@ -374,7 +382,10 @@ class GitHubAPIClient:
         commits_by_sha: Dict[str, Dict[str, Any]] = {}  # Deduplicate by SHA
         rate_meta: Dict[str, Any] = {}
         consecutive_502_errors = 0  # Track consecutive 502 errors
-        max_502_before_cooldown = 3  # Circuit breaker threshold
+        max_502_before_rest_fallback = 2  # Fallback to REST after 16s (2×8s waits)
+        rest_commits_before_retry = 50  # Try GraphQL again after 50 REST commits
+        using_rest_fallback = False
+        rest_commit_count = 0
         
         # Always include default branch, optionally add others
         branches_to_process = [None]  # None = default branch
@@ -399,7 +410,6 @@ class GitHubAPIClient:
                     print(f"      Time period {time_idx + 1}/{len(time_ranges)}: {range_since} to {range_until}")
                 
                 if branch:
-                    print(f"    Extracting from branch: {branch}")
                     query = """
                     query($owner: String!, $name: String!, $branch: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
                       repository(owner: $owner, name: $name) {
@@ -412,8 +422,7 @@ class GitHubAPIClient:
                                   oid
                                   messageHeadline
                                   committedDate
-                                  author { name user { login } }
-                                  committer { user { login } }
+                                  author { user { login } }
                                   additions
                                   deletions
                                 }
@@ -426,7 +435,6 @@ class GitHubAPIClient:
                     }
                     """
                 else:
-                    print(f"    Extracting from main branch")
                     query = """
                     query($owner: String!, $name: String!, $pageSize: Int!, $cursor: String, $since: GitTimestamp, $until: GitTimestamp) {
                       repository(owner: $owner, name: $name) {
@@ -440,8 +448,7 @@ class GitHubAPIClient:
                                   oid
                                   messageHeadline
                                   committedDate
-                                  author { name user { login } }
-                                  committer { user { login } }
+                                  author { user { login } }
                                   additions
                                   deletions
                                 }
@@ -457,6 +464,8 @@ class GitHubAPIClient:
                 cursor: Optional[str] = None
                 pages = 0
                 period_commits = 0
+                rest_page = 1
+                last_rest_commit_sha = None  # Track último commit processado via REST
                 
                 while True:
                     if max_pages is not None and pages >= max_pages:
@@ -464,6 +473,97 @@ class GitHubAPIClient:
                     if max_commits is not None and len(commits_by_sha) >= max_commits:
                         break
 
+                    # 🔥 CIRCUIT BREAKER: Switch to REST API after timeout threshold
+                    if consecutive_502_errors >= max_502_before_rest_fallback and not using_rest_fallback:
+                        print(f"        [CIRCUIT BREAKER] GraphQL unstable after {consecutive_502_errors} failures (>16s timeout).")
+                        print(f"        Switching to REST API fallback...")
+                        using_rest_fallback = True
+                        rest_commit_count = 0
+                        consecutive_502_errors = 0  # Reset counter
+                    
+                    # 🔄 REST FALLBACK MODE
+                    if using_rest_fallback:
+                        # Build REST API URL
+                        rest_url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+                        params = []
+                        if branch:
+                            params.append(f"sha={branch}")
+                        if range_since:
+                            params.append(f"since={range_since}")
+                        if range_until:
+                            params.append(f"until={range_until}")
+                        params.append(f"per_page=100")
+                        params.append(f"page={rest_page}")
+                        
+                        rest_url = f"{rest_url}?{'&'.join(params)}"
+                        
+                        print(f"        [REST] Fetching page {rest_page} via REST API...")
+                        rest_data = self.get_with_cache(rest_url, use_cache=use_cache)
+                        
+                        if not rest_data or not isinstance(rest_data, list):
+                            print(f"        [REST] No more commits available")
+                            break
+                        
+                        # Convert REST commits to GraphQL-like format
+                        for rest_commit in rest_data:
+                            sha = rest_commit.get('sha')
+                            if sha and sha not in commits_by_sha:
+                                # Get detailed stats for this commit
+                                commit_detail_url = f"https://api.github.com/repos/{owner}/{repo}/commits/{sha}"
+                                commit_details = self.get_with_cache(commit_detail_url, use_cache=use_cache)
+                                
+                                stats = commit_details.get('stats', {}) if commit_details else {}
+                                additions = stats.get('additions', 0)
+                                deletions = stats.get('deletions', 0)
+                                
+                                # Extract author login
+                                author_login = None
+                                if rest_commit.get('author') and rest_commit['author'].get('login'):
+                                    author_login = rest_commit['author']['login']
+                                elif rest_commit.get('commit', {}).get('author', {}).get('name'):
+                                    author_login = rest_commit['commit']['author']['name']
+                                
+                                commits_by_sha[sha] = {
+                                    'oid': sha,
+                                    'messageHeadline': rest_commit.get('commit', {}).get('message', '').split('\n')[0],
+                                    'committedDate': rest_commit.get('commit', {}).get('author', {}).get('date'),
+                                    'author': {
+                                        'user': {
+                                            'login': author_login
+                                        }
+                                    },
+                                    'additions': additions,
+                                    'deletions': deletions,
+                                }
+                                rest_commit_count += 1
+                                period_commits += 1
+                                last_rest_commit_sha = sha  # Salvar último SHA processado
+                        
+                        rest_page += 1
+                        
+                        # Check if we should retry GraphQL
+                        if rest_commit_count >= rest_commits_before_retry:
+                            if last_rest_commit_sha:
+                                print(f"        [REST→GraphQL] Extracted {rest_commit_count} commits via REST (last: {last_rest_commit_sha[:8]}...)")
+                                print(f"        GraphQL will continue from cursor position (deduplication prevents reprocessing)")
+                            else:
+                                print(f"        [REST→GraphQL] Extracted {rest_commit_count} commits via REST. Retrying GraphQL...")
+                            using_rest_fallback = False
+                            rest_commit_count = 0
+                            consecutive_502_errors = 0
+                            # cursor mantém sua posição - GraphQL continuará de onde parou
+                            time.sleep(1)  # Cooldown before switching back
+                            continue
+                        
+                        # If REST returned less than 100 commits, we're done
+                        if len(rest_data) < 100:
+                            print(f"        [REST] Reached end of commits")
+                            break
+                        
+                        time.sleep(1)  # Rate limit protection for REST
+                        continue
+                    
+                    # 🔵 GRAPHQL MODE (default)
                     variables = {
                         "owner": owner,
                         "name": repo,
@@ -474,18 +574,12 @@ class GitHubAPIClient:
                     }
                     if branch:
                         variables["branch"] = f"refs/heads/{branch}"
-                    
-                    # Circuit breaker: if too many 502s, take a long break
-                    if consecutive_502_errors >= max_502_before_cooldown:
-                        cooldown = 60 + (consecutive_502_errors * 10)  # 60s, 70s, 80s...
-                        print(f"        [CIRCUIT BREAKER] Too many 502 errors. Cooling down {cooldown}s...")
-                        time.sleep(cooldown)
-                        consecutive_502_errors = 0  # Reset after cooldown
                         
                     data = self.graphql(query, variables, use_cache=use_cache)
                     if not data:
                         consecutive_502_errors += 1
-                        break
+                        # Don't retry here - let circuit breaker at top of loop handle it
+                        continue  # Circuit breaker will activate REST fallback if threshold reached
 
                     repo_data = data.get("data", {}).get("repository")
                     rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
@@ -526,6 +620,12 @@ class GitHubAPIClient:
                     for node in nodes:
                         sha = node.get('oid')
                         if sha and sha not in commits_by_sha:
+                            # Set additions/deletions to 0 if unavailable (SERVICE_UNAVAILABLE errors)
+                            if node.get('additions') is None:
+                                node['additions'] = 0
+                            if node.get('deletions') is None:
+                                node['deletions'] = 0
+                            
                             commits_by_sha[sha] = node
                             period_commits += 1
 
@@ -536,7 +636,7 @@ class GitHubAPIClient:
                     
                     # Adaptive delay between pages: longer for large repos
                     if has_next:
-                        delay = 2.5 + (consecutive_502_errors * 0.5)  # 2.5s base, +0.5s per recent error
+                        delay = 1 + (consecutive_502_errors * 0.2)  # 1s base, +0.2s per recent error
                         time.sleep(delay)
                     
                     if not has_next:
@@ -554,7 +654,7 @@ class GitHubAPIClient:
         self,
         base_url: str,
         use_cache: bool = True,
-        per_page: int = 100,
+        per_page: int = 200,
         start_page: int = 1,
         max_pages: Optional[int] = None,
     ) -> List[Any]:

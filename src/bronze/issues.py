@@ -43,7 +43,7 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
         
         # Get issues (includes PRs)
         issues_base = f"https://api.github.com/repos/{full_name}/issues?state=all"
-        issues = client.get_paginated(issues_base, use_cache=use_cache, per_page=100)
+        issues = client.get_paginated(issues_base, use_cache=use_cache, per_page=300)
         
         if issues:
             # Separate issues from PRs
@@ -76,7 +76,7 @@ def extract_issues(client: GitHubAPIClient, config: OrganizationConfig, use_cach
         
         # Get issue events (filter to keep only essential fields to reduce file size)
         events_base = f"https://api.github.com/repos/{full_name}/issues/events"
-        events = client.get_paginated(events_base, use_cache=use_cache, per_page=100)
+        events = client.get_paginated(events_base, use_cache=use_cache, per_page=300)
         
         if events:
             # Extract only essential fields to drastically reduce file size
