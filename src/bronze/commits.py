@@ -80,12 +80,10 @@ def extract_commits(
                 # Map GraphQL fields to a REST-like structure to preserve downstream compatibility
                 sha = n.get('oid')
                 author = n.get('author') or {}
-                committer = n.get('committer') or {}
                 committed_date = n.get('committedDate')
                 message = n.get('messageHeadline')
                 additions = n.get('additions')
                 deletions = n.get('deletions')
-                changed_files = n.get('changedFiles')
                 total_changes = (additions or 0) + (deletions or 0) if (additions is not None and deletions is not None) else None
 
                 data_commits.append({
@@ -97,12 +95,6 @@ def extract_commits(
                             'email': author.get('email'),
                             'date': author.get('date') or committed_date,
                             'login': (author.get('user') or {}).get('login') if isinstance(author.get('user'), dict) else None,
-                        },
-                        'committer': {
-                            'name': committer.get('name'),
-                            'email': committer.get('email'),
-                            'date': committer.get('date') or committed_date,
-                            'login': (committer.get('user') or {}).get('login') if isinstance(committer.get('user'), dict) else None,
                         },
                         'message': message,
                     },
