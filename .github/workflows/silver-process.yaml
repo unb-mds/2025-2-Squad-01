@@ -141,3 +141,9 @@ jobs:
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  trigger-gold-processing:
+    needs: process-silver-data
+    if: needs.process-silver-data.outputs.silver-completed == 'true'
+    uses: ./.github/workflows/gold-process.yaml
+    secrets: inherit

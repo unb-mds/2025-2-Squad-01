@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-27T22:20:03.055419",
+      "extracted_at": "2025-11-30T05:16:09.567991",
       "file_path": "data/bronze/issues_2025-2-SeLiga.json",
       "record_count": 58
     }
@@ -185,11 +185,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-11-25T16:49:29Z",
+      "updated_at": "2025-11-29T23:55:27Z",
       "due_on": null,
       "closed_at": null
     },
@@ -367,11 +367,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-11-25T16:49:29Z",
+      "updated_at": "2025-11-29T23:55:27Z",
       "due_on": null,
       "closed_at": null
     },
@@ -570,11 +570,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-11-25T16:49:29Z",
+      "updated_at": "2025-11-29T23:55:27Z",
       "due_on": null,
       "closed_at": null
     },
@@ -676,7 +676,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "arthurvbl",
@@ -773,18 +773,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-11-25T16:49:29Z",
+      "updated_at": "2025-11-29T23:55:27Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2025-11-20T12:24:29Z",
-    "updated_at": "2025-11-26T04:15:14Z",
-    "closed_at": null,
+    "updated_at": "2025-11-29T23:56:02Z",
+    "closed_at": "2025-11-29T23:55:27Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -808,8 +808,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### Descrição\nO objetivo desta atividade é expandir o número de spiders responsáveis por coletar notícias em diferentes portais. Isso ampliará a cobertura do sistema, garantindo uma base de dados maior, mais variada e mais confiável. As novas spiders devem seguir o padrão definido no projeto e estar preparadas para futura automatização do processo de coleta.\n\n### Prioridade\n\n- [x] Muito alta\n- [ ] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [x] Selecionar novos portais de notícias confiáveis para implementação de spiders.\n- [x] Criar novas spiders seguindo a estrutura e boas práticas do Scrapy já adotadas no projeto.\n- [x] Implementar extração de título, data, fonte, categoria e conteúdo principal da notícia.\n- [x] Garantir que cada spider lide corretamente com paginação, links internos e seções relevantes.\n- [x] Tratar possíveis inconsistências no HTML dos portais (ex: tags diferentes, conteúdo dinâmico).\n- [x] Testar manualmente cada spider antes da integração com a automação.\n\n### Critérios de aceitação\n\n- [ ] Pelo menos **duas** novas spiders foram implementadas e testadas com sucesso.\n- [x] As spiders coletam dados limpos e estruturados no formato definido pelo projeto.",
-    "closed_by": null,
+    "body": "### Descrição\nO objetivo desta atividade é expandir o número de spiders responsáveis por coletar notícias em diferentes portais. Isso ampliará a cobertura do sistema, garantindo uma base de dados maior, mais variada e mais confiável. As novas spiders devem seguir o padrão definido no projeto e estar preparadas para futura automatização do processo de coleta.\n\n### Prioridade\n\n- [x] Muito alta\n- [ ] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [x] Selecionar novos portais de notícias confiáveis para implementação de spiders.\n- [x] Criar novas spiders seguindo a estrutura e boas práticas do Scrapy já adotadas no projeto.\n- [x] Implementar extração de título, data, fonte, categoria e conteúdo principal da notícia.\n- [x] Garantir que cada spider lide corretamente com paginação, links internos e seções relevantes.\n- [x] Tratar possíveis inconsistências no HTML dos portais (ex: tags diferentes, conteúdo dinâmico).\n- [x] Testar manualmente cada spider antes da integração com a automação.\n\n### Critérios de aceitação\n\n- [x] Pelo menos **uma** nova spider foi implementada e testada com sucesso.\n- [x] As spiders coletam dados limpos e estruturados no formato definido pelo projeto.",
+    "closed_by": {
+      "login": "arthurvbl",
+      "id": 186127003,
+      "node_id": "U_kgDOCxgSmw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186127003?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/arthurvbl",
+      "html_url": "https://github.com/arthurvbl",
+      "followers_url": "https://api.github.com/users/arthurvbl/followers",
+      "following_url": "https://api.github.com/users/arthurvbl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arthurvbl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arthurvbl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arthurvbl/subscriptions",
+      "organizations_url": "https://api.github.com/users/arthurvbl/orgs",
+      "repos_url": "https://api.github.com/users/arthurvbl/repos",
+      "events_url": "https://api.github.com/users/arthurvbl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arthurvbl/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/68/reactions",
       "total_count": 0,
@@ -824,7 +844,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/68/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-SeLiga"
   },
   {
@@ -1006,11 +1026,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 4,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-11-25T16:49:29Z",
+      "updated_at": "2025-11-29T23:55:27Z",
       "due_on": null,
       "closed_at": null
     },
