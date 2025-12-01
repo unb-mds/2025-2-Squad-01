@@ -25,9 +25,9 @@ for repo in repos:
     issues_url = repo.get("issues_url")
     if issues_url:
         # Remove template '{/number}' se existir
-        issues_url = issues_url.replace("{/number}", "?state=all&per_page=100")
+        issues_url = issues_url.replace("{/number}", "?state=all&per_page=300")
     else:
-        issues_url = f"{GITHUB_API}/repos/{repo_full}/issues?state=all&per_page=100"
+        issues_url = f"{GITHUB_API}/repos/{repo_full}/issues?state=all&per_page=300"
 
     resp = requests.get(issues_url, headers=headers)
     if resp.status_code == 200:
