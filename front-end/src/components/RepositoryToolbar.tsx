@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
+import { useSidebar } from '../contexts/SidebarContext';
 import type { ProcessedActivityResponse, RepoActivitySummary } from '../pages/Utils';
 
 interface RepositoryToolbarProps {
@@ -19,8 +20,6 @@ const menuItems: MenuItem[] = [
   { id: 'commits', label: 'Commits', icon: '💻' },
   { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
-  { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
-  { id: 'structure', label: 'Structure', icon: '🏗️' },
 ];
 
 /**
@@ -42,16 +41,38 @@ export default function RepositoryToolbar({
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading] = useState(false);
+  const [availableRepoNames, setAvailableRepoNames] = useState<string[]>([]);
+  const { sidebarWidth } = useSidebar();
+
+  // Fetch available repository names if data is not provided
+  useEffect(() => {
+    if (!data) {
+      async function fetchRepoNames() {
+        try {
+          const response = await fetch('/2025-2-Squad-01/available_repos.json');
+          if (response.ok) {
+            const repos = await response.json();
+            setAvailableRepoNames(repos);
+          }
+        } catch (err) {
+          console.warn('Could not fetch repo names:', err);
+        }
+      }
+      fetchRepoNames();
+    }
+  }, [data]);
 
   const repositories = useMemo<RepoActivitySummary[]>(() => data?.repositories ?? [], [data]);
 
   const selectedParam = searchParams.get('repo');
-  const selectedRepoId: number | 'all' =
+  
+  // If we have activity data, use numeric IDs; otherwise use repo names
+  const selectedRepoId: number | string | 'all' =
     !selectedParam || selectedParam === 'all'
       ? 'all'
-      : Number.isNaN(Number(selectedParam))
-        ? 'all'
-        : Number(selectedParam);
+      : data && !Number.isNaN(Number(selectedParam))
+        ? Number(selectedParam)
+        : selectedParam;
 
   const handleItemClick = (itemId: string) => {
     navigate(`/repos/${itemId}`);
@@ -65,41 +86,63 @@ export default function RepositoryToolbar({
 
   return (
     <aside
-      className="h-34.5 w-full flex-shrink-0 transition-all duration-300 ease-in-out"
-      style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
+      className="h-34.5 right-0 flex-shrink-0 transition-all duration-300 ease-in-out fixed top-0 hidden md:block z-10"
+      style={{ 
+        backgroundColor: '#222222', 
+        borderRightColor: '#333333', 
+        left: sidebarWidth,
+        width: `calc(100vw - ${sidebarWidth})`
+      }}
     >
       <div className="h-32 flex flex-col">
         {/* Header with Repository Info */}
         <div
-          className="pt-4 pl-5 pb-1 border-b-1 flex items-center gap-3"
+          className="pt-4 pl-5 pb-1 border-b-1 flex items-center justify-between gap-3"
           style={{ borderBottomColor: '#333333' }}
         >
-          <span className="text-xl">📊</span>
-          <div>
-            <h1 className="text-lg font-semibold text-white leading-tight">
-              Repository Related Metrics
-            </h1>
-            <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400">
-              Currently Viewing: {currentRepo}
-            </p>
+          <div className="flex items-center gap-3 min-w-0 flex-1">
+            <span className="text-xl">📊</span>
+            <div className="min-w-0">
+              <h1 className="text-lg font-semibold text-white leading-tight truncate">
+                Repository Related Metrics
+              </h1>
+              <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400 truncate">
+                Currently Viewing: {currentRepo}
+              </p>
+            </div>
           </div>
 
           {/* Repository Selector */}
           <select
             value={selectedRepoId}
             onChange={(e) => handleRepoChange(e.target.value)}
-            className="ml-auto mr-3 mb-2 px-4 py-2 border rounded text-white"
+            className="px-4 py-2 mb-3 mr-4 border rounded text-white max-w-xs flex-shrink-0"
             style={{ backgroundColor: '#333333', borderColor: '#444444' }}
             disabled={loading}
           >
-            <option value="all">
-              All repositories ({repositories.flatMap((r) => r.activities).length})
-            </option>
-            {repositories.map((repo) => (
-              <option key={repo.id} value={repo.id}>
-                {repo.name} ({repo.activities.length})
-              </option>
-            ))}
+            {data ? (
+              // Activity data available - use repository objects
+              <>
+                <option value="all">
+                  All repositories ({repositories.flatMap((r) => r.activities).length})
+                </option>
+                {repositories.map((repo) => (
+                  <option key={repo.id} value={repo.id}>
+                    {repo.name} ({repo.activities.length})
+                  </option>
+                ))}
+              </>
+            ) : (
+              // No activity data - use repository names
+              <>
+                <option value="all">All repositories ({availableRepoNames.length})</option>
+                {availableRepoNames.map((repoName) => (
+                  <option key={repoName} value={repoName}>
+                    {repoName}
+                  </option>
+                ))}
+              </>
+            )}
           </select>
         </div>
 

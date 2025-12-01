@@ -75,7 +75,6 @@ class GitHubAPIClient:
         return None
     
     def get_with_cache(self, url: str, use_cache: bool = True, retries: int = 3, backoff_base: float = 1.0) -> Any:
-
         if use_cache:
             cached = self._cache_get(url)
             if cached is not None:
@@ -99,7 +98,6 @@ class GitHubAPIClient:
                     if "rate limit" in response.text.lower():
                         print("Rate limit exceeded. Waiting 60 seconds...")
                         time.sleep(60)
-                        # After sleep, continue loop to retry
                     else:
                         print("Access forbidden - resource might be private or require different permissions")
                         return None
@@ -134,7 +132,6 @@ class GitHubAPIClient:
         """Execute a GraphQL query against GitHub's v4 API with optional caching."""
         payload = {"query": query, "variables": variables or {}}
 
-        # Build a deterministic cache key based on query + variables
         cache_key = None
         if use_cache:
             try:
@@ -146,7 +143,6 @@ class GitHubAPIClient:
                     print("✓ Using cached GraphQL response")
                     return cached
             except Exception:
-                # Fallback to no-cache if serialization fails
                 cache_key = None
 
         headers = dict(self.headers)
@@ -163,7 +159,6 @@ class GitHubAPIClient:
                     data = response.json()
                     if "errors" in data:
                         print(f"[ERROR] GraphQL returned errors: {data['errors']}")
-                        # GraphQL 'errors' are not retriable in general; stop
                         return None
                     if use_cache and cache_key:
                         self._cache_set(cache_key, data)
@@ -216,7 +211,6 @@ class GitHubAPIClient:
         until: Optional[str] = None,
         use_cache: bool = True,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-
         commits: List[Dict[str, Any]] = []
         cursor: Optional[str] = None
         pages = 0
@@ -271,7 +265,6 @@ class GitHubAPIClient:
             repo_data = data.get("data", {}).get("repository")
             rate_meta = data.get("data", {}).get("rateLimit", {}) or {}
             if not repo_data or not repo_data.get("defaultBranchRef"):
-                # No default branch or repo not found
                 break
 
             target = repo_data["defaultBranchRef"].get("target", {})
@@ -280,7 +273,6 @@ class GitHubAPIClient:
                 break
 
             nodes = history.get("nodes", [])
-            # Enforce optional max_commits limit across pages
             if max_commits is not None and max_commits >= 0:
                 remaining = max_commits - len(commits)
                 if remaining <= 0:
@@ -460,7 +452,16 @@ class GitHubAPIClient:
     ) -> List[Any]:
         """
         Fetch all pages for list endpoints that support per_page & page params.
-        Stops when a page returns fewer than per_page results or when max_pages is reached.
+        
+        Args:
+            base_url: URL base do endpoint
+            use_cache: Se deve usar cache
+            per_page: Itens por página
+            start_page: Página inicial
+            max_pages: Número máximo de páginas
+        
+        Returns:
+            Lista agregada de todos os resultados
         """
         results: List[Any] = []
         page = start_page
@@ -477,7 +478,6 @@ class GitHubAPIClient:
                 if len(data) < per_page:
                     break
             else:
-                # Non-list response; stop paging
                 break
             page += 1
         return results
@@ -503,8 +503,23 @@ class GitHubAPIClient:
         else:
             print(f"Rate limit: {remaining}/{limit}")
 
+
+# ============================================================================
+# FUNÇÕES AUXILIARES (FORA DA CLASSE)
+# ============================================================================
+
 def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
- 
+    """
+    Salva dados em arquivo JSON com metadados opcionais.
+    
+    Args:
+        data: Dados a serem salvos
+        filepath: Caminho do arquivo
+        timestamp: Se deve adicionar timestamp
+    
+    Returns:
+        Caminho do arquivo salvo
+    """
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     if timestamp:
@@ -515,7 +530,6 @@ def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
                 'file_path': filepath
             }
         elif isinstance(data, list) and len(data) > 0:
-           
             metadata = {
                 '_metadata': {
                     'extracted_at': now,
@@ -532,7 +546,15 @@ def save_json_data(data: Any, filepath: str, timestamp: bool = True) -> str:
     return filepath
 
 def load_json_data(filepath: str) -> Any:
-   
+    """
+    Carrega dados de arquivo JSON.
+    
+    Args:
+        filepath: Caminho do arquivo
+    
+    Returns:
+        Dados carregados ou None se arquivo não existir
+    """
     if not os.path.exists(filepath):
         return None
     
@@ -540,7 +562,14 @@ def load_json_data(filepath: str) -> Any:
         return json.load(f)
 
 def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
+    """
+    Atualiza registro de arquivos gerados por camada.
     
+    Args:
+        layer: Camada (bronze, silver, gold)
+        entity: Entidade (repositories, commits, etc.)
+        files: Lista de arquivos gerados
+    """
     registry_path = f"data/{layer}/registry.json"
     
     registry = load_json_data(registry_path) or {}
@@ -554,14 +583,60 @@ def update_data_registry(layer: str, entity: str, files: List[str]) -> None:
     
     save_json_data(registry, registry_path, timestamp=False)
 
-class OrganizationConfig:
+def parse_github_date(date_str: str) -> Optional[datetime]:
+    """
+    Parse GitHub API date strings in various formats.
+    Handles both UTC (Z) and timezone offset formats.
     
+    Args:
+        date_str: Date string from GitHub API
+        
+    Returns:
+        datetime object or None if parsing fails
+    """
+    if not date_str:
+        return None
+    
+    date_str = str(date_str).strip()
+    
+    # Try multiple date formats that GitHub uses
+    formats = [
+        '%Y-%m-%dT%H:%M:%SZ',  # UTC format: 2025-09-21T17:13:42Z
+        '%Y-%m-%dT%H:%M:%S',    # Without timezone
+    ]
+    
+    # Handle ISO 8601 format with timezone offset (e.g., 2025-09-21T17:13:42-03:00)
+    if '+' in date_str or (date_str.count('-') > 2):  # Check for timezone offset
+        try:
+            # Extract the base datetime part (YYYY-MM-DDTHH:MM:SS)
+            # Remove timezone suffix like -03:00 or +05:30
+            base_date_str = date_str[:19]  # First 19 chars: YYYY-MM-DDTHH:MM:SS
+            return datetime.strptime(base_date_str, '%Y-%m-%dT%H:%M:%S')
+        except (ValueError, IndexError):
+            pass
+    
+    # Try standard formats
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    
+    # If all parsing fails, return None
+    return None
+
+
+class OrganizationConfig:
+    """
+    Configuração de organização para filtragem de repositórios.
+    """
     def __init__(self, org_name: str):
         self.org_name = org_name
-        # Allow full extraction by default (no blacklist)
         self.repo_blacklist: List[str] = []
     
     def should_skip_repo(self, repo: Dict[str, Any]) -> bool:
+        """
+        Verifica se um repositório deve ser ignorado.
         
         # Do not skip any repository to enable full extraction
         return False

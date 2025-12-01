@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSidebar } from '../contexts/SidebarContext';
 
 interface SidebarProps {
   currentPage?: string;
@@ -13,8 +13,8 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: 'organization', label: 'Organization', icon: '📊' },
-  { id: 'repos', label: 'Repositories', icon: '💻' },
+  { id: 'overview', label: 'Overview', icon: '📊' },
+  { id: 'repos', label: 'Activities', icon: '💻' },
 ];
 
 /**
@@ -25,20 +25,22 @@ const menuItems: MenuItem[] = [
  * Can be collapsed to save screen space.
  */
 export default function Sidebar({ currentPage }: SidebarProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const { isSidebarOpen, toggleSidebar } = useSidebar();
   const navigate = useNavigate();
 
   const handleItemClick = (itemId: string) => {
-    navigate(`/${itemId}`);
-  };
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    if (itemId === 'overview') {
+      navigate('/overview/timeline');
+    } else if (itemId === 'repos') {
+      navigate(`/repos/commits`);
+    } else if (itemId === 'home') {
+      navigate('/');
+    }
   };
 
   return (
     <aside
-      className={`h-auto border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out ${
+      className={`h-screen border-r-4 flex-shrink-0 transition-all duration-300 ease-in-out fixed left-0 top-0 ${
         isSidebarOpen ? 'w-46' : 'w-16'
       }`}
       style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}

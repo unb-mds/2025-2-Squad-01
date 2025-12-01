@@ -29,36 +29,7 @@ def process_contribution_metrics() -> List[str]:
         'total_contributions': 0
     })
     
-   
-    for issue in issues_data:
-        if issue.get('user', {}).get('login'):
-            creator = issue['user']['login']
-            contributions[creator]['issues_created'] += 1
-            
-        if issue.get('assignee', {}) and issue['assignee'].get('login'):
-            assignee = issue['assignee']['login']
-            contributions[assignee]['issues_assigned'] += 1
 
-    for pr in prs_data:
-        if pr.get('user', {}).get('login'):
-            author = pr['user']['login']
-            contributions[author]['prs_authored'] += 1
-
-    for commit in commits_data:
-        if commit.get('author', {}) and commit['author'].get('login'):
-            author = commit['author']['login']
-            contributions[author]['commits'] += 1
-
-    for event in issue_events_data:
-        if event.get('actor', {}) and event['actor'].get('login'):
-            actor = event['actor']['login']
-            event_type = event.get('event', '')
-            
-            if event_type == 'reviewed':
-                contributions[actor]['prs_reviewed'] += 1
-            elif event_type in ['commented', 'issue_comment']:
-                contributions[actor]['comments'] += 1
-    
 
     contribution_list = []
     for user, contrib in contributions.items():

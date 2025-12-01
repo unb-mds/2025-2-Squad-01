@@ -32,16 +32,37 @@ def process_collaboration_networks() -> List[str]:
         repo = pr.get('repo_name', 'unknown')
         if pr.get('user', {}).get('login'):
             repo_collaborators[repo].add(pr['user']['login'])
+
     
     for commit in commits_data:
+        commits_identifier = None
+        
+        # Tenta primeiro o campo 'author' (usuário GitHub)
+        commit_author = commit.get('author', {})
+        if isinstance(commit_author, dict) and commit_author.get('login'):
+            commits_identifier = commit_author.get('login')
+        
+        # Se não encontrou, tenta em 'commit.author.login'
+        if not commits_identifier:
+            commit_info = commit.get('commit', {})
+            if isinstance(commit_info, dict):
+                commit_author_info = commit_info.get('author', {})
+                if isinstance(commit_author_info, dict) and commit_author_info.get('login'):
+                    commits_identifier = commit_author_info.get('login')
+        
         repo = commit.get('repo_name', 'unknown')
-        if commit.get('author', {}) and commit['author'].get('login'):
-            repo_collaborators[repo].add(commit['author']['login'])
+        if commits_identifier:
+            repo_collaborators[repo].add(commits_identifier)
     
     for event in issue_events_data:
+        event_actor = event.get('actor', {})
+        if isinstance(event_actor, dict) and event_actor.get('login'):
+            events_identifier = event_actor.get('login')
+        else:
+            events_identifier = None
         repo = event.get('repo_name', 'unknown')
-        if event.get('actor', {}) and event['actor'].get('login'):
-            repo_collaborators[repo].add(event['actor']['login'])
+        if events_identifier:
+            repo_collaborators[repo].add(events_identifier)
     
 
     collaboration_edges = []
