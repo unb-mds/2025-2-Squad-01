@@ -12,6 +12,7 @@ def detect_language_by_extension(extension: str) -> str:
     Map archive extensios for programming language.
     """
     extension_map = {
+        # Programming Languages
         '.py': 'Python',
         '.js': 'JavaScript',
         '.ts': 'TypeScript',
@@ -32,22 +33,86 @@ def detect_language_by_extension(extension: str) -> str:
         '.scala': 'Scala',
         '.r': 'R',
         '.m': 'Objective-C',
+        
+        # Web Technologies
         '.html': 'HTML',
+        '.htm': 'HTML',
         '.css': 'CSS',
         '.scss': 'SCSS',
         '.sass': 'Sass',
         '.less': 'Less',
         '.vue': 'Vue',
+        
+        # Data & Config
         '.sql': 'SQL',
-        '.sh': 'Shell',
-        '.bash': 'Bash',
-        '.zsh': 'Zsh',
         '.json': 'JSON',
         '.xml': 'XML',
         '.yaml': 'YAML',
         '.yml': 'YAML',
+        '.toml': 'TOML',
+        '.ini': 'INI',
+        '.env': 'Environment',
+        '.conf': 'Config',
+        '.cfg': 'Config',
+        
+        # Shell Scripts
+        '.sh': 'Shell',
+        '.bash': 'Bash',
+        '.zsh': 'Zsh',
+        '.fish': 'Fish',
+        '.ps1': 'PowerShell',
+        '.bat': 'Batch',
+        '.cmd': 'Batch',
+        
+        # Documentation
         '.md': 'Markdown',
+        '.markdown': 'Markdown',
+        '.rst': 'reStructuredText',
         '.txt': 'Text',
+        '.tex': 'LaTeX',
+        '.pdf': 'PDF',
+        
+        # Images
+        '.png': 'PNG Image',
+        '.jpg': 'JPEG Image',
+        '.jpeg': 'JPEG Image',
+        '.gif': 'GIF Image',
+        '.svg': 'SVG Image',
+        '.webp': 'WebP Image',
+        '.ico': 'Icon',
+        '.bmp': 'Bitmap Image',
+        '.tiff': 'TIFF Image',
+        '.tif': 'TIFF Image',
+        
+        # Fonts
+        '.ttf': 'TrueType Font',
+        '.otf': 'OpenType Font',
+        '.woff': 'WOFF Font',
+        '.woff2': 'WOFF2 Font',
+        '.eot': 'EOT Font',
+        
+        # Media
+        '.mp4': 'MP4 Video',
+        '.webm': 'WebM Video',
+        '.mov': 'QuickTime Video',
+        '.avi': 'AVI Video',
+        '.mp3': 'MP3 Audio',
+        '.wav': 'WAV Audio',
+        '.ogg': 'OGG Audio',
+        
+        # Archives
+        '.zip': 'ZIP Archive',
+        '.tar': 'TAR Archive',
+        '.gz': 'GZIP Archive',
+        '.rar': 'RAR Archive',
+        '.7z': '7-Zip Archive',
+        
+        # Build & Package
+        '.lock': 'Lock File',
+        '.log': 'Log File',
+        '.gitignore': 'Git Ignore',
+        '.dockerignore': 'Docker Ignore',
+        
         '': 'No Extension'
     }
     
