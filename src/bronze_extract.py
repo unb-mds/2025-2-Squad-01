@@ -29,7 +29,7 @@ def main():
     print(f"Starting Bronze layer extraction for organization: {args.org}")
     print(f"Started at: {datetime.now().isoformat()}")
     
-    # Initialize API client and configuration
+    # Initialize API client
     client = GitHubAPIClient(args.token)
     config = OrganizationConfig(args.org)
     
@@ -41,6 +41,7 @@ def main():
         from bronze.members import extract_members
         
         # Extract data in dependency order
+
         print("\n[INFO]: Extracting repositories...")
         repo_files = extract_repositories(client, config, use_cache=args.cache)
 
@@ -64,6 +65,8 @@ def main():
 
         print("\n[INFO]: Extracting organization members...")
         member_files = extract_members(client, config, use_cache=args.cache)
+
+        
         
 
         # Update registry
