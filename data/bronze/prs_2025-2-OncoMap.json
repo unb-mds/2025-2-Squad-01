@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-11-30T05:15:37.857850",
+      "extracted_at": "2025-12-01T02:45:02.546778",
       "file_path": "data/bronze/prs_2025-2-OncoMap.json",
       "record_count": 27
     }
@@ -16,7 +16,7 @@
     "id": 3677263448,
     "node_id": "PR_kwDOPiZsc862Jvor",
     "number": 105,
-    "title": "Concertando o docker",
+    "title": "Consertando o docker",
     "user": {
       "login": "Luizz97",
       "id": 212640680,
@@ -143,17 +143,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-28T13:41:55Z",
-      "updated_at": "2025-11-30T01:30:02Z",
+      "updated_at": "2025-11-30T16:28:28Z",
       "due_on": "2025-12-08T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-30T01:30:02Z",
-    "updated_at": "2025-11-30T01:30:26Z",
+    "updated_at": "2025-12-01T00:16:51Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -166,7 +166,7 @@
       "patch_url": "https://github.com/unb-mds/2025-2-OncoMap/pull/105.patch",
       "merged_at": null
     },
-    "body": "Com base em todo o trabalho que fizemos para colocar o OncoMap rodando no Docker, corrigir a conexão com o Supabase e consertar a geração de PDF, aqui está o texto pronto para a sua PR.\r\n\r\nVocê pode copiar e colar diretamente no GitHub/GitLab:\r\n\r\n📌 Descrição\r\nRealizada a \"Dockerização\" completa do projeto (Frontend e Backend) para garantir ambiente de desenvolvimento consistente. Além da infraestrutura, foram corrigidos bugs críticos de conexão com o banco de dados (Supabase) e erros na geração de relatórios PDF causados pela falta de bibliotecas no ambiente Linux.\r\n\r\nPrincipais alterações:\r\n\r\nCriação de Dockerfile otimizado (Node 22 Alpine) para Backend e Frontend.\r\n\r\nCriação do docker-compose.yml para orquestração dos serviços.\r\n\r\nInstalação manual do Chromium e bibliotecas gráficas no container do Backend para suportar o puppeteer (PDF).\r\n\r\nAjuste de portas e hosts no Vite (--host) e na API (host.docker.internal).\r\n\r\nConfiguração robusta de conexão SSL com o Supabase no database.js.\r\n\r\n🔗 Issue Relacionada\r\nCloses # [104]\r\n\r\n✅ Tipo de Mudança\r\n[x] Correção de bug (Correção do erro 500 na geração de PDF e erro de conexão ECONNREFUSED)\r\n\r\n[x] Nova funcionalidade (Ambiente Docker configurado)\r\n\r\n[x] Refatoração (Melhoria na configuração do database.js e api.ts para suportar variáveis de ambiente)\r\n\r\n[ ] Documentação\r\n\r\n🔍 Checklist\r\n[x] Testes criados/atualizados (Testado manualmente o fluxo de visualização do mapa e download de PDF)\r\n\r\n[ ] Documentação atualizada\r\n\r\n[x] PR revisada e pronta para merge\r\n\r\n📝 Notas Adicionais\r\nPara testar esta PR:\r\n\r\nCertifique-se de ter o arquivo .env na pasta backend com a DATABASE_URL do Supabase e as chaves de API.\r\n\r\nNa raiz do projeto, execute:\r\n\r\nBash\r\n\r\ndocker-compose up --build\r\nAcesse o Frontend em http://localhost:3001.\r\n\r\nTeste a geração de um relatório PDF (Regional, Estadual ou Municipal) para confirmar que o Chromium está rodando corretamente no container.",
+    "body": "📌 Descrição\r\nRealizada a \"Dockerização\" completa do projeto (Frontend e Backend) para garantir ambiente de desenvolvimento consistente. Além da infraestrutura, foram corrigidos bugs críticos de conexão com o banco de dados (Supabase) e erros na geração de relatórios PDF causados pela falta de bibliotecas no ambiente Linux.\r\n\r\nPrincipais alterações:\r\n\r\nCriação de Dockerfile otimizado (Node 22 Alpine) para Backend e Frontend.\r\n\r\nCriação do docker-compose.yml para orquestração dos serviços.\r\n\r\nInstalação manual do Chromium e bibliotecas gráficas no container do Backend para suportar o puppeteer (PDF).\r\n\r\nAjuste de portas e hosts no Vite (--host) e na API (host.docker.internal).\r\n\r\nConfiguração robusta de conexão SSL com o Supabase no database.js.\r\n\r\n🔗 Issue Relacionada\r\nCloses # [104]\r\n\r\n✅ Tipo de Mudança\r\n[x] Correção de bug (Correção do erro 500 na geração de PDF e erro de conexão ECONNREFUSED)\r\n\r\n[x] Nova funcionalidade (Ambiente Docker configurado)\r\n\r\n[x] Refatoração (Melhoria na configuração do database.js e api.ts para suportar variáveis de ambiente)\r\n\r\n[ ] Documentação\r\n\r\n🔍 Checklist\r\n[x] Testes criados/atualizados (Testado manualmente o fluxo de visualização do mapa e download de PDF)\r\n\r\n[ ] Documentação atualizada\r\n\r\n[x] PR revisada e pronta para merge\r\n\r\n📝 Notas Adicionais\r\nPara testar esta PR:\r\n\r\nCertifique-se de ter o arquivo .env na pasta backend com a DATABASE_URL do Supabase e as chaves de API.\r\n\r\nNa raiz do projeto, execute:\r\n\r\nBash\r\n\r\ndocker-compose up --build\r\nAcesse o Frontend em http://localhost:3001.\r\n\r\nTeste a geração de um relatório PDF (Regional, Estadual ou Municipal) para confirmar que o Chromium está rodando corretamente no container.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/105/reactions",
@@ -343,11 +343,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-28T13:41:55Z",
-      "updated_at": "2025-11-30T01:30:02Z",
+      "updated_at": "2025-11-30T16:28:28Z",
       "due_on": "2025-12-08T00:00:00Z",
       "closed_at": null
     },
@@ -563,11 +563,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-28T13:41:55Z",
-      "updated_at": "2025-11-30T01:30:02Z",
+      "updated_at": "2025-11-30T16:28:28Z",
       "due_on": "2025-12-08T00:00:00Z",
       "closed_at": null
     },
@@ -762,11 +762,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 9,
       "state": "open",
       "created_at": "2025-11-28T13:41:55Z",
-      "updated_at": "2025-11-30T01:30:02Z",
+      "updated_at": "2025-11-30T16:28:28Z",
       "due_on": "2025-12-08T00:00:00Z",
       "closed_at": null
     },
