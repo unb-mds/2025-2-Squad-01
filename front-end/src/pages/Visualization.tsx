@@ -1,18 +1,62 @@
-import { useState } from 'react';
-import { useRepositories } from '../hooks/useRepositories';
-import { useRepoData } from '../hooks/useRepoData';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { RepoFingerprint } from '../components/RepoFingerprint';
 import { RepoTreemap } from '../components/RepoTreemap';
 import { VisualizationTabs } from '../components/VisualizationTabs';
 import { LanguageLegend } from '../components/LanguageLegend';
 import DashboardLayout from '../components/DashboardLayout';
+import { VisualizationUtils, type LanguageAnalysis } from './VisualizationUtils';
 
 export default function VisualizationPage() {
-  const [selectedRepo, setSelectedRepo] = useState<string | null>(null);
   const [visualizationMode, setVisualizationMode] = useState<'treemap' | 'circlepack'>('treemap');
+  const [searchParams] = useSearchParams();
+  const [languageData, setLanguageData] = useState<LanguageAnalysis | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
-  const { repositories, loading: reposLoading, error: reposError } = useRepositories();
-  const { languageData, loading: dataLoading, error: dataError } = useRepoData(selectedRepo);
+  // Pega o repositório selecionado da URL (vem da toolbar)
+  const repoParam = searchParams.get('repo');
+
+  // Carrega dados quando o repositório muda
+  useEffect(() => {
+    if (!repoParam || repoParam === 'all') {
+      setLanguageData(null);
+      return;
+    }
+
+    let cancelled = false;
+
+    async function loadData() {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const data = await VisualizationUtils.fetchLanguageData(repoParam);
+        
+        if (!cancelled) {
+          if (data) {
+            setLanguageData(data);
+          } else {
+            setError('No data available for this repository');
+          }
+        }
+      } catch (err) {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Unknown error');
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    loadData();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [repoParam]);
 
   const colorMap = {
     'Python': '#3572A5',
@@ -41,14 +85,14 @@ export default function VisualizationPage() {
       currentSubPage="visualization"
       currentPage="repos"
       data={null}
-      currentRepo={selectedRepo || 'No repository selected'}
+      currentRepo={repoParam || 'No repository selected'}
     >
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-3xl font-bold text-white">Repository Visualization</h2>
-            {selectedRepo && languageData && (
+            {repoParam && languageData && (
               <p className="text-slate-400 text-sm mt-2">
                 {languageData.repository} • {languageData.total_files} files • {languageData.languages.length} languages
               </p>
@@ -57,34 +101,8 @@ export default function VisualizationPage() {
         </div>
       </div>
 
-      {/* Seletor de repositório */}
-      <div className="mb-6">
-        <label htmlFor="repo-selector" className="block text-sm font-medium text-slate-300 mb-2">
-          Select Repository
-        </label>
-        <select
-          id="repo-selector"
-          value={selectedRepo || ''}
-          onChange={(e) => setSelectedRepo(e.target.value || null)}
-          className="w-full px-4 py-2 bg-slate-800 text-white rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500"
-          disabled={reposLoading}
-          aria-label="Select a repository to visualize"
-          aria-describedby={reposError ? "repo-error" : undefined}
-        >
-          <option value="">-- Select a repository --</option>
-          {repositories.map((repo) => (
-            <option key={repo} value={repo}>
-              {repo}
-            </option>
-          ))}
-        </select>
-        
-        {reposLoading && <p className="text-slate-400 mt-2 text-sm">Loading repositories...</p>}
-        {reposError && <p id="repo-error" className="text-red-400 mt-2 text-sm" role="alert">Error: {reposError}</p>}
-      </div>
-
       {/* Alternância de modo */}
-      {selectedRepo && !dataLoading && !dataError && languageData && (
+      {repoParam && !loading && !error && languageData && (
         <div className="mb-6">
           <VisualizationTabs
             activeMode={visualizationMode}
@@ -94,7 +112,7 @@ export default function VisualizationPage() {
       )}
 
       {/* Área de visualização */}
-      {selectedRepo && (
+      {repoParam && repoParam !== 'all' ? (
         <div className="border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
             <h3 className="text-xl font-bold text-white">
@@ -103,19 +121,19 @@ export default function VisualizationPage() {
           </div>
           
           <div className="p-6">
-            {dataLoading && (
+            {loading && (
               <div className="flex items-center justify-center h-96">
-                <div className="text-slate-400">Loading data for {selectedRepo}...</div>
+                <div className="text-slate-400">Loading data for {repoParam}...</div>
               </div>
             )}
             
-            {dataError && (
+            {error && (
               <div className="flex items-center justify-center h-96">
-                <div className="text-red-400">Error: {dataError}</div>
+                <div className="text-red-400">Error: {error}</div>
               </div>
             )}
             
-            {!dataLoading && !dataError && languageData && (
+            {!loading && !error && languageData && (
               <div className="flex justify-center w-full">
                 {visualizationMode === 'treemap' ? (
                   <div className="w-full max-w-full">
@@ -138,10 +156,14 @@ export default function VisualizationPage() {
             )}
           </div>
         </div>
+      ) : (
+        <div className="flex items-center justify-center h-96 border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
+          <p className="text-slate-400">Please select a repository from the toolbar above</p>
+        </div>
       )}
 
       {/* Legenda */}
-      {selectedRepo && !dataLoading && !dataError && languageData && (
+      {repoParam && !loading && !error && languageData && (
         <LanguageLegend 
           languages={languageData.languages}
           colorMap={colorMap}
