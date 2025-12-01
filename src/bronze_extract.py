@@ -85,15 +85,8 @@ def main():
         member_files = extract_members(client, config, use_cache=args.cache)
         print(f"✅ Generated {len(member_files)} member files")
         
-        print("\n" + "="*60)
-        print("🌳 STEP 5: Extracting repository structures (GraphQL)")
-        print("="*60)
-        structure_files = extract_repository_structure(
-            client, 
-            config, 
-            use_cache=args.cache  # 👈 CORRIGIDO: removido method
-        )
-        print(f"✅ Generated {len(structure_files)} structure files")
+        print("\n[INFO]: Extracting repository structures...")
+        structure_files = extract_repository_structure(client, config, use_cache=args.cache)
 
         # Update registry
         all_files = repo_files + issue_files + commit_files + member_files + structure_files
