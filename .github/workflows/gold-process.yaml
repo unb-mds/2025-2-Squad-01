@@ -142,20 +142,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  trigger-ai-analysis:
-    needs: process-gold-data
-    if: needs.process-gold-data.outputs.gold-completed == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger AI Analysis workflow
-        uses: actions/github-script@v7
-        with:
-          script: |
-            console.log('Triggering AI Analysis workflow...');
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'ai-analysis.yml',
-              ref: context.ref
-            });
-            console.log('AI Analysis workflow triggered successfully');
+      - name: AI Analysis will run next
+        if: steps.processing.outputs.completed == 'true'
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "    Gold Layer processing completed successfully"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "ℹ   AI Analysis workflow will start automatically"
+          echo "         (if GEMINI_API_KEY is configured)"
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
