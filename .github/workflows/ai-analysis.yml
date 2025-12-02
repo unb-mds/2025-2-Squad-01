@@ -1,0 +1,157 @@
+name: AI Analysis (Optional)
+
+on:
+  workflow_run:
+    workflows: ["Gold Layer Processing"]
+    types:
+      - completed
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  check-api-key:
+    name: Check if AI Analysis is enabled
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.check.outputs.enabled }}
+    steps:
+      - name: Check for GEMINI_API_KEY
+        id: check
+        run: |
+          if [ -n "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "enabled=true" >> $GITHUB_OUTPUT
+            echo "GEMINI_API_KEY found - AI Analysis will run"
+          else
+            echo "enabled=false" >> $GITHUB_OUTPUT
+            echo "ℹGEMINI_API_KEY not configured - AI Analysis disabled"
+          fi
+
+  generate-members-statistics:
+    name: Generate Member Statistics
+    needs: check-api-key
+    if: needs.check-api-key.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Generate members statistics
+        run: |
+          python src/silver/members_statistics.py
+      
+      - name: Upload statistics artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/members_statistics.json
+          retention-days: 1
+
+  ai-analysis:
+    name: Generate AI Analysis
+    needs: [check-api-key, generate-members-statistics]
+    if: needs.check-api-key.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Download statistics artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/
+      
+      - name: Generate AI analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -m src.ai_analysis.generate_members_ai
+      
+      - name: Upload AI analysis artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-analysis
+          path: data/silver/ai/members_ai.json
+          retention-days: 7
+
+  commit-results:
+    name: Commit AI Analysis Results
+    needs: [check-api-key, ai-analysis]
+    if: needs.check-api-key.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Download statistics artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/
+      
+      - name: Download AI analysis artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ai-analysis
+          path: data/silver/ai/
+      
+      - name: Commit and push results
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/silver/members_statistics.json
+          git add data/silver/ai/members_ai.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update AI analysis results"
+            git push
+            echo "AI analysis results committed successfully"
+          fi
+
+  ai-disabled-notice:
+    name: AI Analysis Disabled
+    needs: check-api-key
+    if: needs.check-api-key.outputs.enabled == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log disabled status
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "             AI Analysis is disabled"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "To enable AI Analysis, add GEMINI_API_KEY to repository secrets:"
+          echo "1. Go to Settings → Secrets and variables → Actions"
+          echo "2. Click 'New repository secret'"
+          echo "3. Name: GEMINI_API_KEY"
+          echo "4. Value: Your Gemini API key"
+          echo ""
+          echo "Workflow completed successfully (AI Analysis skipped)"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
