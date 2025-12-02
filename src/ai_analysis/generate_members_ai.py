@@ -290,21 +290,38 @@ DADOS DOS MEMBROS:
     
     prompt += """
 
+REFERÊNCIAS PARA ANÁLISE DE ATOMICIDADE:
+
+Considere as seguintes faixas para avaliar o tamanho médio de mudanças por commit:
+- BAIXO NÍVEL (commits atômicos/ideais): Até 60 linhas alteradas (adições + remoções)
+  → Commits pequenos, com poucas mudanças
+- BOM NÍVEL (commits moderados): 60 a 300 linhas alteradas
+  → Commits razoáveis, são gerenciáveis em code review
+- ALTO NÍVEL (commits grandes/monolíticos): Acima de 300 linhas alteradas
+  → Commits muito grandes, difíceis de revisar, não atômicos
+
+  OBSERVAÇÃO: Commits absurdamente grandes (ex: milhares de linhas) devem ser apontados como possíveis manipulações com arquivos de dados como jsons por exemplo.
+
+Use a "Média total de alterações por commit" fornecida para classificar a atomicidade.
+
+REFERÊNCIAS PARA ANÁLISE DE ENGAJAMENTO EM PRs E ISSUES:
+Use a "Média semanal de PRs" e "Total de PRs" e "Média semanal de Issues" e "Total de Issues" para avaliar o engajamento do membro.
+
 INSTRUÇÕES DE FORMATAÇÃO (SIGA RIGOROSAMENTE):
 
 Para CADA membro listado acima, você DEVE retornar EXATAMENTE neste formato:
 
 ---MEMBER_START:{nome_exato_do_membro}
 COMMITS_ANALYSIS:
-{analise sobre quantidade de commits e frequência},
+{analise sobre quantidade de commits e média semanal de commits, explicitando o envolvimento do membro no projeto com base no numero de commits, sua regularidade e o conteudo adicionado/removido médio},
 {analise se os commits possuem grandes mudanças com muito conteudo adicionado/removido ou pequenas mudanças com pouco conteudo adicionado/removido},
 {analise baseada nos títulos dos commits com mais mudanças: indicam tipo de mudança? o que dizem sobre o conteudo mais atomico dos commits?}
 
 PRS_ANALYSIS:
-{1-2 frases sobre participação em code review, padrão de abertura de PRs e práticas ágeis}
+{analises sobre participação e engajamento em prs e code review (através da média semanal de PRs e total de PRs), padrão de abertura de PRs e práticas ágeis}
 
 ISSUES_ANALYSIS:
-{1-2 frases sobre engajamento em issues, tipos de issues criadas/comentadas e práticas ágeis}
+{analises sobre engajamento e envolvimento em issues (através da média semanal de Issues e total de Issues), tipos de issues criadas/comentadas e práticas ágeis}
 ---MEMBER_END
 
 REGRAS CRÍTICAS:

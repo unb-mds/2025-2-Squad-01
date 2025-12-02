@@ -25,6 +25,7 @@ def main():
         from silver.contribution_metrics import process_contribution_metrics
         from silver.collaboration_networks import process_collaboration_networks
         from silver.temporal_analysis import process_temporal_analysis
+        from silver.members_statistics import process_members_statistics
         
         # Process data in logical order
         print("\nProcessing member analytics...")
@@ -39,8 +40,11 @@ def main():
         print("\nProcessing temporal analysis...")
         temporal_files = process_temporal_analysis()
 
+        print("\nProcessing members statistics...")
+        members_stats_files = process_members_statistics()
+
         #  registry
-        all_files = member_files + contrib_files + collab_files + temporal_files
+        all_files = member_files + contrib_files + collab_files + temporal_files + members_stats_files
         update_data_registry('silver', 'all_processed', all_files)
         
         print(f"\nSilver processing completed successfully!")
