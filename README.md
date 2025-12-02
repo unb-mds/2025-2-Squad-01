@@ -82,50 +82,61 @@ Com o CoOps, os usuários podem:
 - Docker Desktop (instalado e rodando)
 - Token do GitHub com permissões de leitura
 
-### Instalação
+## 📦 Instalação e Execução
 
-1. **Clone o repositório:**
-   ```powershell
-   git clone https://github.com/unb-mds/2025-2-Squad-01.git
-   cd 2025-2-Squad-01
-   ```
+1. Clone o repositório:
+```bash
+git clone https://github.com/unb-mds/2025-2-Squad-01.git
+cd 2025-2-Squad-01
+```
 
-2. **Configure o ambiente Python:**
-   ```powershell
-   python -m venv .venv
-   .venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   ```
+2. Configure o ambiente Python:
+```bash
+python -m venv .venv
+# Windows:
+.venv\Scripts\Activate.ps1
+# Linux/Mac:
+source .venv/bin/activate
 
-3. **Configure as variáveis de ambiente:**
-   ```powershell
-   # Crie o arquivo .secrets com seu token
-   echo "GITHUB_TOKEN=ghp_seu_token_aqui" > .secrets
-   ```
+pip install -r requirements.txt
+```
 
-4. **Execute a extração de dados (Bronze):**
-   ```powershell
-   gh act -W .github/workflows/bronze-extract.yaml -j extract-bronze-data --secret-file .secrets --bind
-   ```
+3. Configure as variáveis de ambiente:
+```bash
+# Crie o arquivo .secrets com seu token
+echo "GITHUB_TOKEN=ghp_seu_token_aqui" > .secrets
+```
 
-5. **Execute o processamento (Silver):**
-   ```powershell
-   python src/silver/temporal_analysis.py
-   python src/silver/file_language_analysis.py
-   python src/silver/collaboration_analysis.py
-   ```
+4. Execute a extração de dados (Bronze):
+```bash
+python src/bronze_extract.py --token SEU_TOKEN_AQUI --cache
+```
 
-6. **Instale e rode o frontend:**
-   ```powershell
-   cd front-end
-   npm install
-   npm run dev
-   ```
+5. Execute o processamento (Silver):
+```bash
+python src/silver_process.py
+```
 
-7. **Acesse a aplicação:**
-   ```
-   http://localhost:5173
-   ```
+6. Copie os dados para o frontend:
+```bash
+# Windows:
+xcopy data\silver\language_analysis_*.json front-end\public\data\silver\ /Y
+
+# Linux/Mac:
+cp data/silver/language_analysis_*.json front-end/public/data/silver/
+```
+
+7. Instale e rode o frontend:
+```bash
+cd front-end
+npm install
+npm run dev
+```
+
+8. Acesse a aplicação:
+```
+http://localhost:5173/2025-2-Squad-01
+```
 
 Para mais detalhes, consulte o [guia de contribuição](./CONTRIBUTING.md) e a [documentação de extração](./docs/EXTRACAO_DADOS.md).
 
