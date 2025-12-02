@@ -6,6 +6,7 @@ import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
 import { Histogram, PieChart} from '../components/Graphs';
 import { Utils } from './Utils';
+import { AISummary } from '../components/AI.summary';
 
 export default function IssuesPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
@@ -186,6 +187,28 @@ export default function IssuesPage() {
               </>
             )}
           </div>
+        </div>
+      </div>
+
+      {/* AI Analysis Section */}
+      <div className="mt-8">
+        <div
+          className="border rounded-lg p-6"
+          style={{ backgroundColor: '#222222', borderColor: '#333333' }}
+        >
+          <div className="mb-4">
+            <h3 className="text-xl font-bold text-white">Análise de IA - Issues</h3>
+            <p className="text-slate-400 text-sm mt-1">
+              Análise gerada por IA sobre as issues dos membros
+            </p>
+          </div>
+          <AISummary
+            title="Selecionar Membro"
+            defaultAnalysisType="issues_analysis"
+            showRepoFilter={false}
+            syncWithUrlRepo={true}
+            repositoryData={repositories}
+          />
         </div>
       </div>
     </DashboardLayout>

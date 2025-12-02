@@ -7,6 +7,7 @@ import HeatmapPage from './pages/Heatmap';
 import PullRequestsPage from './pages/PullRequests';
 import IssuesPage from './pages/Issues';
 import Timeline from './pages/Timeline';
+import AIAnalysisTest from './pages/AIAnalysisTest';
 
 /**
  * App Component
@@ -26,6 +27,7 @@ function App() {
       <Route path="/repos/commits" element={<Commits />} />
       <Route path="/repos/pullrequests" element={<PullRequestsPage />} />
       <Route path="/repos/issues" element={<IssuesPage/>} />
+      <Route path="/test/ai-analysis" element={<AIAnalysisTest />} />
       {/* Fallback route for not implemented pages */}
       <Route path="*" element={<NotFound />} />
     </Routes>
