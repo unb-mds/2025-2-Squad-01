@@ -46,7 +46,12 @@ def main():
         temporal_files = process_temporal_analysis()
 
         print("\nProcessing file language analysis...")
-        language_files = process_file_language_analysis()
+        language_files = process_file_language_analysis(
+            max_sample_files=10,
+            sample_strategy='largest',
+            save_detailed=False,
+            save_hierarchy=True 
+        )
 
         #  registry
         all_files = member_files + contrib_files + collab_files + temporal_files + language_files

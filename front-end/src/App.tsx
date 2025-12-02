@@ -7,7 +7,7 @@ import HeatmapPage from './pages/Heatmap';
 import PullRequestsPage from './pages/PullRequests';
 import IssuesPage from './pages/Issues';
 import Timeline from './pages/Timeline';
-
+import VisualizationPage from './pages/Visualization';
 /**
  * App Component
  *
@@ -32,5 +32,4 @@ function App() {
     </Routes>
   );
 }
-
 export default App;
