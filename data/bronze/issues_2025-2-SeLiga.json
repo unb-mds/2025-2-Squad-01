@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-01T05:27:46.806959",
+      "extracted_at": "2025-12-02T05:19:02.398500",
       "file_path": "data/bronze/issues_2025-2-SeLiga.json",
       "record_count": 58
     }
@@ -163,7 +163,7 @@
       "node_id": "MI_kwDOPkC70s4A2OFK",
       "number": 14,
       "title": "Sprint 13",
-      "description": "",
+      "description": "Objetivos:\n* Na nossa sprint final para a **Release 2**, focamos em refinar as features já implementadas no projeto.\n* Dentre as melhorias realizadas, foi resolvido um bug em relação à página de notícias, em que a ordem de disposição das notícias estava invertida, assim como alguns erros de comunicação com o backend.\n* Foram implementadas, também, a spider da **Jovem pan** para coleta de notícias pelo web scraper.\n* A rota de `/painel` foi desenvolvida, em que é apresentado estatísticas sobre as notícias coletadas.\n* Houve, também, a implementação de Dockers para facilitar o deploy do projeto.\n* Foi desenvolvido um verificador de notícias duplicadas utilizando a LLM.\n* Adicionalmente, foram melhorados as rotinas de CI/CD com workflows e a implementação de linters para verificação e teste de pushs e pull-requests.",
       "creator": {
         "login": "arthurvbl",
         "id": 186127003,
@@ -185,13 +185,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 5,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 9,
+      "state": "closed",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-12-01T04:27:53Z",
+      "updated_at": "2025-12-02T01:01:08Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-12-02T00:45:47Z"
     },
     "comments": 0,
     "created_at": "2025-11-25T16:49:29Z",
@@ -311,7 +311,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "lopes061",
@@ -365,7 +365,7 @@
       "node_id": "MI_kwDOPkC70s4A2OFK",
       "number": 14,
       "title": "Sprint 13",
-      "description": "",
+      "description": "Objetivos:\n* Na nossa sprint final para a **Release 2**, focamos em refinar as features já implementadas no projeto.\n* Dentre as melhorias realizadas, foi resolvido um bug em relação à página de notícias, em que a ordem de disposição das notícias estava invertida, assim como alguns erros de comunicação com o backend.\n* Foram implementadas, também, a spider da **Jovem pan** para coleta de notícias pelo web scraper.\n* A rota de `/painel` foi desenvolvida, em que é apresentado estatísticas sobre as notícias coletadas.\n* Houve, também, a implementação de Dockers para facilitar o deploy do projeto.\n* Foi desenvolvido um verificador de notícias duplicadas utilizando a LLM.\n* Adicionalmente, foram melhorados as rotinas de CI/CD com workflows e a implementação de linters para verificação e teste de pushs e pull-requests.",
       "creator": {
         "login": "arthurvbl",
         "id": 186127003,
@@ -387,18 +387,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 5,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 9,
+      "state": "closed",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-12-01T04:27:53Z",
+      "updated_at": "2025-12-02T01:01:08Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-12-02T00:45:47Z"
     },
     "comments": 0,
     "created_at": "2025-11-21T16:40:30Z",
-    "updated_at": "2025-11-25T01:36:44Z",
-    "closed_at": null,
+    "updated_at": "2025-12-01T18:52:27Z",
+    "closed_at": "2025-12-01T18:52:26Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -422,8 +422,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### Descrição\nO objetivo desta atividade é implementar um mecanismo que utilize a LLM para detectar notícias duplicadas ou extremamente semelhantes no banco de dados. Essa verificação é essencial para evitar redundância, manter o banco de dados limpo e aumentar a confiabilidade do sistema de análise.\n\n### Prioridade\n\n- [ ] Muito alta\n- [x] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [ ] Criar função interna no backend para enviar textos à LLM.\n- [ ] Implementar lógica de comparação baseada em similaridade semântica.\n- [ ] Definir limiar (score) para considerar duas notícias como duplicadas.\n- [ ] Integrar o verificador com o fluxo de ingestão de notícias (durante ou após inserção no banco).\n- [ ] Criar rotina para marcar ou remover notícias duplicadas identificadas.\n\n### Critérios de aceitação\n\n- [ ] O sistema é capaz de identificar notícias duplicadas ou muito similares com boa precisão.\n- [ ] O processo de verificação funciona automaticamente no fluxo de coleta.\n- [ ] Notícias duplicadas são corretamente marcadas, bloqueadas ou removidas.",
-    "closed_by": null,
+    "body": "### Descrição\nO objetivo desta atividade é implementar um mecanismo que utilize a LLM para detectar notícias duplicadas ou extremamente semelhantes no banco de dados. Essa verificação é essencial para evitar redundância, manter o banco de dados limpo e aumentar a confiabilidade do sistema de análise.\n\n### Prioridade\n\n- [ ] Muito alta\n- [x] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [x] Criar função interna no backend para enviar textos à LLM.\n- [x] Implementar lógica de comparação baseada em similaridade semântica.\n- [x] Definir limiar (score) para considerar duas notícias como duplicadas.\n- [x] Integrar o verificador com o fluxo de ingestão de notícias (durante ou após inserção no banco).\n- [x] Criar rotina para marcar ou remover notícias duplicadas identificadas.\n\n### Critérios de aceitação\n\n- [x] O sistema é capaz de identificar notícias duplicadas ou muito similares com boa precisão.\n- [x] O processo de verificação funciona automaticamente no fluxo de coleta.\n- [x] Notícias duplicadas são corretamente marcadas, bloqueadas ou removidas.",
+    "closed_by": {
+      "login": "arthurvbl",
+      "id": 186127003,
+      "node_id": "U_kgDOCxgSmw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186127003?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/arthurvbl",
+      "html_url": "https://github.com/arthurvbl",
+      "followers_url": "https://api.github.com/users/arthurvbl/followers",
+      "following_url": "https://api.github.com/users/arthurvbl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arthurvbl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arthurvbl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arthurvbl/subscriptions",
+      "organizations_url": "https://api.github.com/users/arthurvbl/orgs",
+      "repos_url": "https://api.github.com/users/arthurvbl/repos",
+      "events_url": "https://api.github.com/users/arthurvbl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arthurvbl/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/70/reactions",
       "total_count": 0,
@@ -438,7 +458,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/70/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-SeLiga"
   },
   {
@@ -493,25 +513,25 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
-      "login": "lopes061",
-      "id": 72364634,
-      "node_id": "MDQ6VXNlcjcyMzY0NjM0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/72364634?v=4",
+      "login": "MarcusVRezende",
+      "id": 133279001,
+      "node_id": "U_kgDOB_GtGQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/133279001?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/lopes061",
-      "html_url": "https://github.com/lopes061",
-      "followers_url": "https://api.github.com/users/lopes061/followers",
-      "following_url": "https://api.github.com/users/lopes061/following{/other_user}",
-      "gists_url": "https://api.github.com/users/lopes061/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/lopes061/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/lopes061/subscriptions",
-      "organizations_url": "https://api.github.com/users/lopes061/orgs",
-      "repos_url": "https://api.github.com/users/lopes061/repos",
-      "events_url": "https://api.github.com/users/lopes061/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/lopes061/received_events",
+      "url": "https://api.github.com/users/MarcusVRezende",
+      "html_url": "https://github.com/MarcusVRezende",
+      "followers_url": "https://api.github.com/users/MarcusVRezende/followers",
+      "following_url": "https://api.github.com/users/MarcusVRezende/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MarcusVRezende/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MarcusVRezende/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MarcusVRezende/subscriptions",
+      "organizations_url": "https://api.github.com/users/MarcusVRezende/orgs",
+      "repos_url": "https://api.github.com/users/MarcusVRezende/repos",
+      "events_url": "https://api.github.com/users/MarcusVRezende/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MarcusVRezende/received_events",
       "type": "User",
       "user_view_type": "public",
       "site_admin": false
@@ -534,6 +554,27 @@
         "repos_url": "https://api.github.com/users/lopes061/repos",
         "events_url": "https://api.github.com/users/lopes061/events{/privacy}",
         "received_events_url": "https://api.github.com/users/lopes061/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      {
+        "login": "MarcusVRezende",
+        "id": 133279001,
+        "node_id": "U_kgDOB_GtGQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133279001?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MarcusVRezende",
+        "html_url": "https://github.com/MarcusVRezende",
+        "followers_url": "https://api.github.com/users/MarcusVRezende/followers",
+        "following_url": "https://api.github.com/users/MarcusVRezende/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MarcusVRezende/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MarcusVRezende/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MarcusVRezende/subscriptions",
+        "organizations_url": "https://api.github.com/users/MarcusVRezende/orgs",
+        "repos_url": "https://api.github.com/users/MarcusVRezende/repos",
+        "events_url": "https://api.github.com/users/MarcusVRezende/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MarcusVRezende/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
@@ -568,7 +609,7 @@
       "node_id": "MI_kwDOPkC70s4A2OFK",
       "number": 14,
       "title": "Sprint 13",
-      "description": "",
+      "description": "Objetivos:\n* Na nossa sprint final para a **Release 2**, focamos em refinar as features já implementadas no projeto.\n* Dentre as melhorias realizadas, foi resolvido um bug em relação à página de notícias, em que a ordem de disposição das notícias estava invertida, assim como alguns erros de comunicação com o backend.\n* Foram implementadas, também, a spider da **Jovem pan** para coleta de notícias pelo web scraper.\n* A rota de `/painel` foi desenvolvida, em que é apresentado estatísticas sobre as notícias coletadas.\n* Houve, também, a implementação de Dockers para facilitar o deploy do projeto.\n* Foi desenvolvido um verificador de notícias duplicadas utilizando a LLM.\n* Adicionalmente, foram melhorados as rotinas de CI/CD com workflows e a implementação de linters para verificação e teste de pushs e pull-requests.",
       "creator": {
         "login": "arthurvbl",
         "id": 186127003,
@@ -590,18 +631,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 5,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 9,
+      "state": "closed",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-12-01T04:27:53Z",
+      "updated_at": "2025-12-02T01:01:08Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-12-02T00:45:47Z"
     },
     "comments": 0,
     "created_at": "2025-11-20T12:30:27Z",
-    "updated_at": "2025-11-25T01:36:37Z",
-    "closed_at": null,
+    "updated_at": "2025-12-01T23:07:42Z",
+    "closed_at": "2025-12-01T23:07:41Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -625,8 +666,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### Descrição\nO objetivo desta atividade é containerizar o projeto utilizando Docker, permitindo que toda a aplicação (backend, frontend e banco de dados) seja executada em ambientes isolados, consistentes e fáceis de implantar. A implementação deve facilitar o desenvolvimento, testes, deploy e manutenção do sistema.\n\n### Prioridade\n\n- [x] Muito alta\n- [ ] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [ ] Criar o `Dockerfile` para o backend.\n- [ ] Criar o `Dockerfile` para o frontend.\n- [ ] Criar o arquivo `docker-compose.yml` para orquestrar backend, frontend e MongoDB.\n- [ ] Configurar variáveis de ambiente no `docker-compose` (ex: portas, URLs, credenciais do MongoDB).\n- [ ] Garantir que o backend consiga se comunicar com o MongoDB via container.\n- [ ] Expor portas necessárias para acesso externo.\n\n### Critérios de aceitação\n\n- [ ] O projeto roda completamente via Docker utilizando apenas docker-compose up.\n- [ ] O backend, frontend e banco de dados se comunicam corretamente dentro dos containers.\n- [ ] A aplicação funciona de forma idêntica ao ambiente de desenvolvimento local.",
-    "closed_by": null,
+    "body": "### Descrição\nO objetivo desta atividade é containerizar o projeto utilizando Docker, permitindo que toda a aplicação (backend, frontend e banco de dados) seja executada em ambientes isolados, consistentes e fáceis de implantar. A implementação deve facilitar o desenvolvimento, testes, deploy e manutenção do sistema.\n\n### Prioridade\n\n- [x] Muito alta\n- [ ] Alta\n- [ ] Média\n- [ ] Baixa\n\n### Tarefas\n\n- [x] Criar o `Dockerfile` para o backend.\n- [x] Criar o `Dockerfile` para o frontend.\n- [x] Criar o arquivo `docker-compose.yml` para orquestrar backend, frontend e MongoDB.\n- [x] Configurar variáveis de ambiente no `docker-compose` (ex: portas, URLs, credenciais do MongoDB).\n- [x] Garantir que o backend consiga se comunicar com o MongoDB via container.\n- [x] Expor portas necessárias para acesso externo.\n\n### Critérios de aceitação\n\n- [x] O projeto roda completamente via Docker utilizando apenas docker-compose up.\n- [x] O backend, frontend e banco de dados se comunicam corretamente dentro dos containers.\n- [x] A aplicação funciona de forma idêntica ao ambiente de desenvolvimento local.",
+    "closed_by": {
+      "login": "arthurvbl",
+      "id": 186127003,
+      "node_id": "U_kgDOCxgSmw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186127003?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/arthurvbl",
+      "html_url": "https://github.com/arthurvbl",
+      "followers_url": "https://api.github.com/users/arthurvbl/followers",
+      "following_url": "https://api.github.com/users/arthurvbl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arthurvbl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arthurvbl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arthurvbl/subscriptions",
+      "organizations_url": "https://api.github.com/users/arthurvbl/orgs",
+      "repos_url": "https://api.github.com/users/arthurvbl/repos",
+      "events_url": "https://api.github.com/users/arthurvbl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arthurvbl/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/69/reactions",
       "total_count": 0,
@@ -641,7 +702,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-SeLiga/issues/69/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-SeLiga"
   },
   {
@@ -771,7 +832,7 @@
       "node_id": "MI_kwDOPkC70s4A2OFK",
       "number": 14,
       "title": "Sprint 13",
-      "description": "",
+      "description": "Objetivos:\n* Na nossa sprint final para a **Release 2**, focamos em refinar as features já implementadas no projeto.\n* Dentre as melhorias realizadas, foi resolvido um bug em relação à página de notícias, em que a ordem de disposição das notícias estava invertida, assim como alguns erros de comunicação com o backend.\n* Foram implementadas, também, a spider da **Jovem pan** para coleta de notícias pelo web scraper.\n* A rota de `/painel` foi desenvolvida, em que é apresentado estatísticas sobre as notícias coletadas.\n* Houve, também, a implementação de Dockers para facilitar o deploy do projeto.\n* Foi desenvolvido um verificador de notícias duplicadas utilizando a LLM.\n* Adicionalmente, foram melhorados as rotinas de CI/CD com workflows e a implementação de linters para verificação e teste de pushs e pull-requests.",
       "creator": {
         "login": "arthurvbl",
         "id": 186127003,
@@ -793,13 +854,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 5,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 9,
+      "state": "closed",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-12-01T04:27:53Z",
+      "updated_at": "2025-12-02T01:01:08Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-12-02T00:45:47Z"
     },
     "comments": 1,
     "created_at": "2025-11-20T12:24:29Z",
@@ -1024,7 +1085,7 @@
       "node_id": "MI_kwDOPkC70s4A2OFK",
       "number": 14,
       "title": "Sprint 13",
-      "description": "",
+      "description": "Objetivos:\n* Na nossa sprint final para a **Release 2**, focamos em refinar as features já implementadas no projeto.\n* Dentre as melhorias realizadas, foi resolvido um bug em relação à página de notícias, em que a ordem de disposição das notícias estava invertida, assim como alguns erros de comunicação com o backend.\n* Foram implementadas, também, a spider da **Jovem pan** para coleta de notícias pelo web scraper.\n* A rota de `/painel` foi desenvolvida, em que é apresentado estatísticas sobre as notícias coletadas.\n* Houve, também, a implementação de Dockers para facilitar o deploy do projeto.\n* Foi desenvolvido um verificador de notícias duplicadas utilizando a LLM.\n* Adicionalmente, foram melhorados as rotinas de CI/CD com workflows e a implementação de linters para verificação e teste de pushs e pull-requests.",
       "creator": {
         "login": "arthurvbl",
         "id": 186127003,
@@ -1046,13 +1107,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 5,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 9,
+      "state": "closed",
       "created_at": "2025-11-25T01:33:35Z",
-      "updated_at": "2025-12-01T04:27:53Z",
+      "updated_at": "2025-12-02T01:01:08Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2025-12-02T00:45:47Z"
     },
     "comments": 0,
     "created_at": "2025-11-20T12:20:31Z",

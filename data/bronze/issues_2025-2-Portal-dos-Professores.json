@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-01T05:26:42.167698",
+      "extracted_at": "2025-12-02T05:17:50.667950",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 75
     }
@@ -240,7 +240,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "ianpedersoli",
@@ -316,18 +316,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-29T17:25:54Z",
-    "updated_at": "2025-11-29T17:25:54Z",
-    "closed_at": null,
+    "updated_at": "2025-12-02T02:29:36Z",
+    "closed_at": "2025-12-02T02:29:36Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -351,8 +351,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📖 Descrição\nRealizar a conexão com a API do Agente de IA (já existente) para processar a resposta, localizar o professor sugerido na base de dados e renderizar o card correspondente na interface.\n\n---\n\n## 🎯 Objetivo\n- [ ] Consolidar a comunicação com a API do Agente\n- [ ] Implementar lógica de busca do professor baseada na resposta\n- [ ] Renderizar dinamicamente o card do professor encontrado\n\n---\n\n## ✅ Requisitos\n- Endpoint da API do Agente funcional\n- Método para extrair ID ou nome do professor da resposta do agente\n- Componente de Card de professor pronto para receber dados dinâmicos\n\n---\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica  \n\n---\n\n## 📋 Checklist de Tarefas\n- [ ] Integrar chamada à API do Agente na página  \n- [ ] Desenvolver lógica para interpretar a resposta (JSON/Texto)  \n- [ ] Buscar dados do professor correspondente no banco/lista  \n- [ ] Montar e exibir o card do professor na tela  \n- [ ] Tratar casos onde o professor não é encontrado",
-    "closed_by": null,
+    "body": "## 📖 Descrição\nRealizar a conexão com a API do Agente de IA (já existente) para processar a resposta, localizar o professor sugerido na base de dados e renderizar o card correspondente na interface.\n\n---\n\n## 🎯 Objetivo\n- [x] Consolidar a comunicação com a API do Agente\n- [x] Implementar lógica de busca do professor baseada na resposta\n- [x] Renderizar dinamicamente o card do professor encontrado\n\n---\n\n## ✅ Requisitos\n- Endpoint da API do Agente funcional\n- Método para extrair ID ou nome do professor da resposta do agente\n- Componente de Card de professor pronto para receber dados dinâmicos\n\n---\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica  \n\n---\n\n## 📋 Checklist de Tarefas\n- [x] Integrar chamada à API do Agente na página  \n- [x] Desenvolver lógica para interpretar a resposta (JSON/Texto)  \n- [x] Buscar dados do professor correspondente no banco/lista  \n- [x] Montar e exibir o card do professor na tela  \n- [x] Tratar casos onde o professor não é encontrado",
+    "closed_by": {
+      "login": "ianpedersoli",
+      "id": 213890577,
+      "node_id": "U_kgDODL-2EQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213890577?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ianpedersoli",
+      "html_url": "https://github.com/ianpedersoli",
+      "followers_url": "https://api.github.com/users/ianpedersoli/followers",
+      "following_url": "https://api.github.com/users/ianpedersoli/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ianpedersoli/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ianpedersoli/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ianpedersoli/subscriptions",
+      "organizations_url": "https://api.github.com/users/ianpedersoli/orgs",
+      "repos_url": "https://api.github.com/users/ianpedersoli/repos",
+      "events_url": "https://api.github.com/users/ianpedersoli/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ianpedersoli/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/150/reactions",
       "total_count": 0,
@@ -367,7 +387,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/150/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -489,11 +509,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -691,11 +711,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -873,11 +893,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1100,11 +1120,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1291,11 +1311,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 6,
+      "open_issues": 3,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-01T01:42:19Z",
+      "updated_at": "2025-12-02T02:29:36Z",
       "due_on": null,
       "closed_at": null
     },

@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-01T05:28:14.766806",
+      "extracted_at": "2025-12-02T05:19:32.209226",
       "file_path": "data/bronze/issues_2025-2-GuiaDev.json",
       "record_count": 57
     }
@@ -901,11 +901,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-11T00:40:08Z",
-      "updated_at": "2025-11-28T22:08:05Z",
+      "updated_at": "2025-12-01T14:48:45Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1009,7 +1009,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "BGrangeiro",
@@ -1106,18 +1106,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-11T00:40:08Z",
-      "updated_at": "2025-11-28T22:08:05Z",
+      "updated_at": "2025-12-01T14:48:45Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-14T02:06:41Z",
-    "updated_at": "2025-11-28T21:37:42Z",
-    "closed_at": null,
+    "updated_at": "2025-12-01T14:48:53Z",
+    "closed_at": "2025-12-01T14:48:44Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -1132,8 +1132,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 📌 Título da Issue\nCriar testes unitários para o componente `UserCard` no frontend\n\n---\n\n## 📝 Descrição\nEsta issue tem como objetivo implementar testes utilizando **Vitest + Testing Library**, garantindo que:\n\n- As informações recebidas via props são renderizadas corretamente  \n- O fallback de avatar funciona quando a imagem não é fornecida  \n- Eventos do componente (como click, se existirem) funcionam conforme esperado  \n- A cobertura mínima de 50% é atingida\n\n---\n\n## 👥 Responsáveis\n- Autor: João Guilherme  @BGrangeiro \n- Revisor: A definir  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [x] Criar arquivo de testes `UserCard.test.tsx`  \n- [x] Testar renderização do nome e email  \n- [x] Testar exibição do avatar e fallback  \n- [x] Testar eventos do componente (se houver)  \n- [ ] Garantir cobertura ≥ 50%  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [x] DoR 3  \n- [x] DoR 4  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Código implementado e revisado  \n- [x] Documentação atualizada (se aplicável)  \n- [ ] Aceito pelo PO/Cliente  \n- [x] DoD 4  \n- [x] DoD 5\n",
-    "closed_by": null,
+    "body": "# 📌 Título da Issue\nCriar testes unitários para o componente `UserCard` no frontend\n\n---\n\n## 📝 Descrição\nEsta issue tem como objetivo implementar testes utilizando **Vitest + Testing Library**, garantindo que:\n\n- As informações recebidas via props são renderizadas corretamente  \n- O fallback de avatar funciona quando a imagem não é fornecida  \n- Eventos do componente (como click, se existirem) funcionam conforme esperado  \n- A cobertura mínima de 50% é atingida\n\n---\n\n## 👥 Responsáveis\n- Autor: João Guilherme  @BGrangeiro \n- Revisor: A definir  \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [x] Criar arquivo de testes `UserCard.test.tsx`  \n- [x] Testar renderização do nome e email  \n- [x] Testar exibição do avatar e fallback  \n- [x] Testar eventos do componente (se houver)  \n- [x] Garantir cobertura ≥ 50%  \n\n---\n\n## 📌 Definition of Ready (DoR)\n- [x] Critérios de aceitação definidos  \n- [x] Estimativa inicial atribuída  \n- [x] DoR 3  \n- [x] DoR 4  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [x] Código implementado e revisado  \n- [x] Documentação atualizada (se aplicável)  \n- [ ] Aceito pelo PO/Cliente  \n- [x] DoD 4  \n- [x] DoD 5\n",
+    "closed_by": {
+      "login": "JoaoGSantana10",
+      "id": 185989079,
+      "node_id": "U_kgDOCxX31w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185989079?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JoaoGSantana10",
+      "html_url": "https://github.com/JoaoGSantana10",
+      "followers_url": "https://api.github.com/users/JoaoGSantana10/followers",
+      "following_url": "https://api.github.com/users/JoaoGSantana10/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JoaoGSantana10/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JoaoGSantana10/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JoaoGSantana10/subscriptions",
+      "organizations_url": "https://api.github.com/users/JoaoGSantana10/orgs",
+      "repos_url": "https://api.github.com/users/JoaoGSantana10/repos",
+      "events_url": "https://api.github.com/users/JoaoGSantana10/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JoaoGSantana10/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/76/reactions",
       "total_count": 0,
@@ -1148,7 +1168,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/76/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-GuiaDev"
   },
   {
@@ -1300,11 +1320,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-11T00:40:08Z",
-      "updated_at": "2025-11-28T22:08:05Z",
+      "updated_at": "2025-12-01T14:48:45Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1491,11 +1511,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2025-11-11T00:40:08Z",
-      "updated_at": "2025-11-28T22:08:05Z",
+      "updated_at": "2025-12-01T14:48:45Z",
       "due_on": null,
       "closed_at": null
     },
