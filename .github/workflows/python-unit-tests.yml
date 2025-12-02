@@ -1,14 +1,16 @@
 name: Python Unit Tests
 
 on:
+  push:
+    branches: [ main, testes_unitarios ]
   pull_request:
+    branches: [ main ]
     paths:
       - "src/**/*.py"
       - "tests/**/*.py"
       - "requirements*.txt"
       - "pytest.ini"
-  push:
-    branches: [ main ]
+  workflow_dispatch: {}  # ← PERMITE EXECUTAR MANUALMENTE
 
 jobs:
   unit-tests:
@@ -18,7 +20,8 @@ jobs:
         python-version: [ "3.10", "3.11" ]
     
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -26,7 +29,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       
       - name: Cache pip dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
