@@ -1,6 +1,6 @@
 # 🤝 Guia de Contribuição - Squad 01
 
-Bem-vindo ao projeto de Análise de Métricas de Repositórios GitHub! Este guia explica como contribuir com o projeto.
+Bem-vindo ao projeto de Análise de Métricas de Repositórios GitHub! Este guia fornece diretrizes completas e boas práticas para contribuir efetivamente com o projeto.
 
 ---
 

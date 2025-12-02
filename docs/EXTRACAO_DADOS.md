@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este documento descreve o fluxo completo de extração, transformação e visualização de dados do projeto, desde a coleta bruta (Bronze) até a apresentação no frontend, incluindo todas as otimizações implementadas.
+Este documento descreve detalhadamente o fluxo completo de extração, transformação e visualização de dados do projeto, desde a coleta bruta (Bronze) até a apresentação no frontend, incluindo todas as otimizações de performance implementadas (GraphQL/REST híbrido, rate limiting, caching).
 
 ---
 
