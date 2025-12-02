@@ -7,29 +7,25 @@ from utils.github_api import save_json_data, load_json_data, parse_github_date
 
 def process_temporal_analysis() -> List[str]:
 
-    
-
     issues_data = load_json_data("data/bronze/issues_all.json") or []
     prs_data = load_json_data("data/bronze/prs_all.json") or []
     commits_data = load_json_data("data/bronze/commits_all.json") or []
     issue_events_data = load_json_data("data/bronze/issue_events_all.json") or []
     
-
     for data_list in [issues_data, prs_data, commits_data, issue_events_data]:
         if isinstance(data_list, list) and len(data_list) > 0 and '_metadata' in data_list[0]:
             data_list = data_list[1:]
     
     generated_files = []
     
-
     all_events = []
     
-
+    # Process issues
     for issue in issues_data:
         created_at = parse_github_date(issue.get('created_at'))
         if created_at:
-            # Use login as primary identifier (unique on GitHub)
-            user = issue.get('user') or {}
+            # Priority: login > name (login is more reliable for GitHub users)
+            user = issue.get('user', {})
             user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
@@ -41,7 +37,7 @@ def process_temporal_analysis() -> List[str]:
         
         updated_at = parse_github_date(issue.get('updated_at'))
         if updated_at and issue.get('state') == 'closed':
-            user = issue.get('user') or {}
+            user = issue.get('user', {})
             user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
@@ -51,12 +47,11 @@ def process_temporal_analysis() -> List[str]:
                 'user': user_identifier
             })
     
-
+    # Process pull requests
     for pr in prs_data:
         created_at = parse_github_date(pr.get('created_at'))
         if created_at:
-            # Use login as primary identifier (unique on GitHub)
-            user = pr.get('user') or {}
+            user = pr.get('user', {})
             user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
@@ -68,7 +63,7 @@ def process_temporal_analysis() -> List[str]:
         
         updated_at = parse_github_date(pr.get('updated_at'))
         if updated_at and pr.get('state') == 'closed':
-            user = pr.get('user') or {}
+            user = pr.get('user', {})
             user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
@@ -78,7 +73,7 @@ def process_temporal_analysis() -> List[str]:
                 'user': user_identifier
             })
     
-
+    # Process commits with correct prioritization
     for commit in commits_data:
         commit_date = None
         commit_obj = commit.get('commit') or {}
@@ -87,19 +82,18 @@ def process_temporal_analysis() -> List[str]:
             commit_date = parse_github_date(author_obj['date'])
         
         if commit_date:
-            # Try to get user identifier from multiple possible locations
-            # Priority: login (unique GitHub ID) > name (can vary per commit config)
+            # Correct prioritization for commit user identification
             user_identifier = 'unknown'
             
-            # First try: commit.commit.author.login (from GraphQL or enriched REST)
-            if author_obj.get('login'):
-                user_identifier = author_obj['login']
-            # Second try: commit.author.login (from REST API root level)
-            elif commit.get('author', {}) and commit['author'].get('login'):
+            # Priority 1: commit.commit.author.login (authenticated GitHub user)
+            if commit.get('commit', {}).get('author', {}).get('login'):
+                user_identifier = commit['commit']['author']['login']
+            # Priority 2: commit.author.login (root level from REST API)
+            elif commit.get('author', {}).get('login'):
                 user_identifier = commit['author']['login']
-            # Third try: commit.commit.author.name (fallback, less reliable)
-            elif author_obj.get('name'):
-                user_identifier = author_obj['name']
+            # Priority 3: commit.commit.author.name (fallback, less reliable)
+            elif commit.get('commit', {}).get('author', {}).get('name'):
+                user_identifier = commit['commit']['author']['name']
             
             all_events.append({
                 'date': commit_date,
@@ -111,13 +105,14 @@ def process_temporal_analysis() -> List[str]:
                 'total_changes': commit.get('total_changes')
             })
     
-
+    # Process issue events
     for event in issue_events_data:
         event_date = parse_github_date(event.get('created_at'))
         if event_date:
-            # Use login as primary identifier (unique on GitHub)
-            actor = event.get('actor') or {}
-            user_identifier = actor.get('login') or actor.get('name') or 'unknown'
+            actor = event.get('actor', {})
+            user_identifier = 'unknown'
+            if actor:
+                user_identifier = actor.get('login') or actor.get('name') or 'unknown'
             
             all_events.append({
                 'date': event_date,
@@ -183,9 +178,7 @@ def process_temporal_analysis() -> List[str]:
             day_data['authors'][author]['commits'] += 1
         elif 'comment' in event['type']:
             day_data['comments'] += 1
-            day_data['authors'][author]['comments'] += 1
     
-
     daily_summary = []
     for date_key, data in sorted(daily_activity.items()):
         data['unique_users'] = len(data['unique_users'])
@@ -213,7 +206,6 @@ def process_temporal_analysis() -> List[str]:
     )
     generated_files.append(daily_file)
     
-
     weekly_heatmap = defaultdict(lambda: defaultdict(int))
     
     for event in all_events:
@@ -221,7 +213,6 @@ def process_temporal_analysis() -> List[str]:
         hour = event['date'].hour
         weekly_heatmap[day_of_week][hour] += 1
     
-
     heatmap_data = []
     for day in range(7):  # Monday to Sunday
         for hour in range(24):
@@ -237,10 +228,8 @@ def process_temporal_analysis() -> List[str]:
     )
     generated_files.append(heatmap_file)
     
- 
     cycle_times = []
     
-
     for issue in issues_data:
         if issue.get('state') == 'closed':
             created = parse_github_date(issue.get('created_at'))
@@ -257,7 +246,6 @@ def process_temporal_analysis() -> List[str]:
                     'cycle_time_days': cycle_time_days
                 })
     
-
     for pr in prs_data:
         if pr.get('state') == 'closed':
             created = parse_github_date(pr.get('created_at'))
@@ -281,7 +269,6 @@ def process_temporal_analysis() -> List[str]:
         )
         generated_files.append(cycle_times_file)
     
-
     if all_events:
         min_date = min(event['date'] for event in all_events)
         max_date = max(event['date'] for event in all_events)
@@ -298,12 +285,10 @@ def process_temporal_analysis() -> List[str]:
             'cycle_time_stats': {}
         }
         
-     
         for event in all_events:
             event_type = event['type']
             temporal_stats['events_by_type'][event_type] = temporal_stats['events_by_type'].get(event_type, 0) + 1
         
-       
         if cycle_times:
             cycle_time_values = [ct['cycle_time_days'] for ct in cycle_times]
             temporal_stats['cycle_time_stats'] = {
