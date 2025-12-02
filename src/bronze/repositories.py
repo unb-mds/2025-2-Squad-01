@@ -6,7 +6,7 @@ from utils.github_api import GitHubAPIClient, OrganizationConfig, save_json_data
 def extract_repositories(client: GitHubAPIClient, config: OrganizationConfig, use_cache: bool = True) -> List[str]:  
     
     repos_url = f"https://api.github.com/orgs/{config.org_name}/repos"
-    raw_repos = client.get_paginated(repos_url, use_cache=use_cache, per_page=100)
+    raw_repos = client.get_paginated(repos_url, use_cache=use_cache, per_page=300)
     
     if not raw_repos:
         print("ERROR: Failed to fetch repositories")

@@ -11,6 +11,9 @@ def extract_commits(
     until: Optional[str] = None,
     max_commits_per_repo: Optional[int] = None,
     page_size: int = 50,
+    include_active_branches: bool = False,
+    active_days: int = 30,
+    time_chunks: int = 3,
 ) -> List[str]:
     
     # Load filtered repositories
@@ -39,6 +42,21 @@ def extract_commits(
         
         print(f"Processing commits for: {repo_name}")
         
+        # Determine which branches to extract
+        branches_to_extract = None
+        if include_active_branches and method.lower() == "graphql":
+            print(f"  Finding active unmerged branches (last {active_days} days)...")
+            branches_to_extract = client.get_active_unmerged_branches(
+                owner=owner,
+                repo=name_only,
+                days=active_days,
+                use_cache=use_cache,
+            )
+            if branches_to_extract:
+                print(f"  Found {len(branches_to_extract)} unmerged branches to extract")
+            else:
+                print(f"  No active unmerged branches found")
+        
         # Choose extraction method
         data_commits: List[Dict[str, Any]] = []
         if method.lower() == "graphql":
@@ -48,6 +66,9 @@ def extract_commits(
             nodes, meta = client.graphql_commit_history(
                 owner=owner,
                 repo=name_only,
+                branches=branches_to_extract,
+                split_large_extractions=True,  # Enable time-based splitting
+                time_chunks=3,  # Split into 3 time periods
                 page_size=page_size,
                 max_commits=max_commits_per_repo,
                 since=since,
@@ -59,12 +80,10 @@ def extract_commits(
                 # Map GraphQL fields to a REST-like structure to preserve downstream compatibility
                 sha = n.get('oid')
                 author = n.get('author') or {}
-                committer = n.get('committer') or {}
                 committed_date = n.get('committedDate')
                 message = n.get('messageHeadline')
                 additions = n.get('additions')
                 deletions = n.get('deletions')
-                changed_files = n.get('changedFiles')
                 total_changes = (additions or 0) + (deletions or 0) if (additions is not None and deletions is not None) else None
 
                 data_commits.append({
@@ -76,12 +95,6 @@ def extract_commits(
                             'email': author.get('email'),
                             'date': author.get('date') or committed_date,
                             'login': (author.get('user') or {}).get('login') if isinstance(author.get('user'), dict) else None,
-                        },
-                        'committer': {
-                            'name': committer.get('name'),
-                            'email': committer.get('email'),
-                            'date': committer.get('date') or committed_date,
-                            'login': (committer.get('user') or {}).get('login') if isinstance(committer.get('user'), dict) else None,
                         },
                         'message': message,
                     },
