@@ -577,5 +577,16 @@ python src/silver/collaboration_analysis.py
 
 ---
 
+## Como rodar localmente:
+
+1. Clone o repositório
+2. Instale as dependências do front-end: npm install
+3. *Gere os dados necessários:*
+bash
+   python3 data/pipeline/bronze/extractor.py
+   python3 data/pipeline/silver/repository_structure_analyzer.py
+
+4. Rode o dev server: npm run dev
+
 **Última atualização:** 02/12/2025  
 **Versão:** 2.0 (Pós-otimizações PR #101 e #104)

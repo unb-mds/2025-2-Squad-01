@@ -23,11 +23,11 @@ Projeto desenvolvido na disciplina **Métodos de Desenvolvimento de Software (MD
 O **CoOps** é uma ferramenta que permite visualizar e interpretar métricas de colaboração no **GitHub**, evoluindo de repositórios individuais para **organizações**, com auxílio de **agentes de IA** para explicar o significado das métricas coletadas.
 
 ### 🚀 Propósito
-O produto busca apoiar **desenvolvedores, mantenedores e organizações** na análise da colaboração dentro de projetos GitHub, fornecendo **métricas claras, visuais e interpretadas por IA** para tomada de decisões baseada em dados.
+O produto busca apoiar **desenvolvedores, mantenedores e organizações** na análise da colaboração dentro de projetos GitHub, fornecendo **métricas claras, visuais e interpretadas por IA**.  
 
 Com o CoOps, os usuários podem:
-- 📊 **Visualizar métricas de colaboração** através de dashboards interativos e responsivos
-- 🎯 **Analisar repositórios e organizações** com visualizações D3.js profissionais e intuitivas
+- 📊 **Visualizar métricas de colaboração** através de dashboards interativos
+- 🎯 **Analisar repositórios e organizações** com visualizações D3.js profissionais
 - 🤖 **Obter insights com IA** para interpretar métricas complexas
 - 📈 **Acompanhar produtividade, gargalos e qualidade** de projetos
 
@@ -201,4 +201,3 @@ Squad 01 – MDS 2025/2 – FGA/UnB
 - [GitHub Repo Visualization](https://githubnext.com/projects/repo-visualization/#explore-for-yourself)
 - SonarQube (benchmark de qualidade de código)
 - GitHub Insights
-

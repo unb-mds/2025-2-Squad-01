@@ -3,10 +3,10 @@
 ## 📋 Planejamento da Sprint
 
 ### Objetivos da Sprint
-- **🚀 Otimizar extração de estrutura (100x mais rápido)**
-- Expandir suporte a 90+ extensões de arquivo
-- Resolver problemas de rate limit
-- Otimizar performance crítica
+- **🚀 Otimizar extração de estrutura (100x mais rápido)** - Otimização crítica de performance
+- Expandir suporte de detecção para 90+ extensões de arquivo diferentes
+- Resolver problemas persistentes de rate limit da API do GitHub
+- Otimizar performance crítica do pipeline de extração
 
 ### Issues/PRs Planejados
 - #101: REST API para extração de estrutura

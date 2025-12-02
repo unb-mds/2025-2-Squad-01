@@ -3,10 +3,10 @@
 ## 📋 Planejamento da Sprint
 
 ### Objetivos da Sprint
-- Iniciar desenvolvimento da camada Silver
-- Implementar scripts de processamento de métricas
-- Melhorar workflow Silver com suporte multi-branch
-- Adicionar métricas de contribuição e análise de membros
+- Iniciar desenvolvimento da camada Silver de processamento de dados
+- Implementar scripts robustos de processamento de métricas e análises
+- Melhorar workflow Silver com suporte multi-branch e recuperação de erros
+- Adicionar métricas detalhadas de contribuição e análise de membros da organização
 
 ### Issues/PRs Planejados
 - #56: Organizar estrutura do projeto
