@@ -7,6 +7,7 @@ import BaseFilters from '../components/BaseFilters';
 import { Histogram, PieChart, CommitMetricsChart} from '../components/Graphs';
 import { Utils } from './Utils';
 import { line } from 'd3';
+import { AISummary } from '../components/AI.summary';
 
 /**
  * CommitsPage Component
@@ -213,7 +214,7 @@ export default function CommitsPage() {
           </div>
          <div className="flex items-center justify-center mb-2">
                   <CommitMetricsChart data={BasicData} line_toggle={lineToggle} />
-          </div>
+           </div>
           <div className="flex items-center justify-center mb-2">
             <button
               onClick={() => setLineToggle((prev) => !prev)}
@@ -228,6 +229,28 @@ export default function CommitsPage() {
               {lineToggle ? 'Hide Line Graph' : 'Show Line Graph'}
             </button>
            </div>
+        </div>
+      </div>
+
+      {/* AI Analysis Section */}
+      <div className="mt-8">
+        <div
+          className="border rounded-lg p-6"
+          style={{ backgroundColor: '#222222', borderColor: '#333333' }}
+        >
+          <div className="mb-4">
+            <h3 className="text-xl font-bold text-white">Análise de IA - Commits</h3>
+            <p className="text-slate-400 text-sm mt-1">
+              Análise gerada por IA sobre os commits dos membros
+            </p>
+          </div>
+          <AISummary
+            title="Selecionar Membro"
+            defaultAnalysisType="commits_analysis"
+            showRepoFilter={false}
+            syncWithUrlRepo={true}
+            repositoryData={repositories}
+          />
         </div>
       </div>
     </DashboardLayout>

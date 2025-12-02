@@ -6,6 +6,7 @@ import DashboardLayout from '../components/DashboardLayout';
 import BaseFilters from '../components/BaseFilters';
 import { Histogram, PieChart} from '../components/Graphs';
 import { Utils } from './Utils';
+import { AISummary } from '../components/AI.summary';
 
 export default function PullRequestsPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
@@ -185,6 +186,28 @@ export default function PullRequestsPage() {
               </>
             )}
           </div>
+        </div>
+      </div>
+
+      {/* AI Analysis Section */}
+      <div className="mt-8">
+        <div
+          className="border rounded-lg p-6"
+          style={{ backgroundColor: '#222222', borderColor: '#333333' }}
+        >
+          <div className="mb-4">
+            <h3 className="text-xl font-bold text-white">Análise de IA - Pull Requests</h3>
+            <p className="text-slate-400 text-sm mt-1">
+              Análise gerada por IA sobre os pull requests dos membros
+            </p>
+          </div>
+          <AISummary
+            title="Selecionar Membro"
+            defaultAnalysisType="prs_analysis"
+            showRepoFilter={false}
+            syncWithUrlRepo={true}
+            repositoryData={repositories}
+          />
         </div>
       </div>
     </DashboardLayout>
