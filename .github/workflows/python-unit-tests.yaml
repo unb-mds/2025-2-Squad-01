@@ -10,7 +10,7 @@ on:
       - "tests/**/*.py"
       - "requirements*.txt"
       - "pytest.ini"
-  workflow_dispatch: {}  # ← PERMITE EXECUTAR MANUALMENTE
+  workflow_dispatch:  # ← SEM chaves vazias, igual aos outros
 
 jobs:
   unit-tests:
