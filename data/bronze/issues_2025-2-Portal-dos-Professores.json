@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-02T16:39:40.721490",
+      "extracted_at": "2025-12-02T20:35:19.648776",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
-      "record_count": 37
+      "record_count": 36
     }
   },
   {
@@ -49,7 +49,7 @@
         "description": "Something isn't working"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "brunodantas9",
@@ -125,18 +125,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-30T13:31:08Z",
-    "updated_at": "2025-11-30T13:31:08Z",
-    "closed_at": null,
+    "updated_at": "2025-12-02T20:07:58Z",
+    "closed_at": "2025-12-02T20:07:57Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193713,
@@ -161,7 +161,27 @@
       "total_blocking": 0
     },
     "body": "# 🛠️ Correções de Navegação e Comportamento da Página\n\n## 📖 Descrição\nEsta tarefa tem como objetivo corrigir comportamentos indesejados na navegação do portal, garantindo uma experiência mais consistente e profissional para o usuário. As correções envolvem manutenção de rota, posição de scroll e identificação visual no navegador.\n\n## 🎯 Objetivo\n- [ ] Impedir que a aplicação volte para a Home ao atualizar páginas internas.\n- [ ] Garantir que, ao entrar em qualquer página, o scroll seja automaticamente movido para o topo.\n- [ ] Atualizar o nome exibido na aba do navegador.\n- [ ] Atualizar o ícone (favicon) exibido no navegador.\n\n## ✅ Requisitos\n- Manter a rota atual após refresh (configuração adequada do React Router / Vite / servidor).\n- Implementar comportamento global de scroll-to-top nas transições de rota.\n- Definir título padrão da aplicação e títulos dinâmicos por página (opcional).\n- Substituir o favicon e garantir compatibilidade com diferentes navegadores.\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica  \n\n## 📋 Checklist de Tarefas\n- [ ] Investigar e corrigir o motivo da Home ser carregada após refresh.\n- [ ] Criar componente global de ScrollToTop.\n- [ ] Aplicar ScrollToTop em todas as rotas.\n- [ ] Alterar o nome da aplicação exibido na aba do navegador.\n- [ ] Atualizar o favicon no projeto.\n- [ ] Realizar Pull Request com as correções.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "brunodantas9",
+      "id": 188685704,
+      "node_id": "U_kgDOCz8diA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/188685704?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/brunodantas9",
+      "html_url": "https://github.com/brunodantas9",
+      "followers_url": "https://api.github.com/users/brunodantas9/followers",
+      "following_url": "https://api.github.com/users/brunodantas9/following{/other_user}",
+      "gists_url": "https://api.github.com/users/brunodantas9/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/brunodantas9/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/brunodantas9/subscriptions",
+      "organizations_url": "https://api.github.com/users/brunodantas9/orgs",
+      "repos_url": "https://api.github.com/users/brunodantas9/repos",
+      "events_url": "https://api.github.com/users/brunodantas9/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/brunodantas9/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/151/reactions",
       "total_count": 0,
@@ -176,7 +196,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/151/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -1522,11 +1542,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1742,11 +1762,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1859,7 +1879,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "brunodantas9",
@@ -1956,18 +1976,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-20T22:00:17Z",
-    "updated_at": "2025-12-01T01:42:53Z",
-    "closed_at": null,
+    "updated_at": "2025-12-02T20:07:41Z",
+    "closed_at": "2025-12-02T20:07:41Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -1992,7 +2012,27 @@
       "total_blocking": 0
     },
     "body": "# 🤖 Implementação de Chat de IA no Front-end\n\n## 📖 Descrição\nEsta tarefa tem como objetivo desenvolver e integrar a interface de usuário (UI) para o assistente virtual inteligente do portal. A meta é permitir que os usuários interajam com a IA para realizar consultas sobre professores, linhas de pesquisa e disciplinas de forma conversacional.\n\n## 🎯 Objetivo\n- [x] Criar a interface visual do chat (janela flutuante ou dedicada).\n- [x] Implementar a lógica de envio e recebimento de mensagens no front-end.\n- [x] Garantir uma experiência de usuário fluida, incluindo:\n  - Feedback de carregamento\n  - Tratamento de erros\n  - Suporte a Markdown nas respostas da IA\n\n## ✅ Requisitos\n- Desenvolvimento de componentes reutilizáveis:\n  - Input de mensagem\n  - Balões de mensagem\n  - Container do chat\n- Gerenciamento local do estado da conversa (histórico).\n- Integração com o endpoint de inferência do backend.\n- Renderização de Markdown para listas, links e formatação.\n\n## 🚦 Prioridade\n- [ ] Baixa\n- [ ] Média\n- [x] Alta\n- [ ] Crítica\n\n## 📋 Checklist de Tarefas\n- [x] Criar o componente visual do botão flutuante (FAB) para abrir/fechar o chat.\n- [x] Desenvolver a interface da janela do chat (área de mensagens + input).\n- [x] Implementar o gerenciamento de estado para o histórico da conversa.\n- [x] Adicionar animação de “Digitando...” enquanto a IA processa a resposta.\n- [ ] Integrar o front-end com o endpoint da API da IA.\n- [ ] Estilizar as mensagens para diferenciar visualmente Usuário e IA.\n- [ ] Criar Pull Request com todas as implementações concluídas.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "brunodantas9",
+      "id": 188685704,
+      "node_id": "U_kgDOCz8diA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/188685704?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/brunodantas9",
+      "html_url": "https://github.com/brunodantas9",
+      "followers_url": "https://api.github.com/users/brunodantas9/followers",
+      "following_url": "https://api.github.com/users/brunodantas9/following{/other_user}",
+      "gists_url": "https://api.github.com/users/brunodantas9/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/brunodantas9/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/brunodantas9/subscriptions",
+      "organizations_url": "https://api.github.com/users/brunodantas9/orgs",
+      "repos_url": "https://api.github.com/users/brunodantas9/repos",
+      "events_url": "https://api.github.com/users/brunodantas9/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/brunodantas9/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/126/reactions",
       "total_count": 0,
@@ -2007,7 +2047,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/126/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -2168,11 +2208,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2433,11 +2473,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 10,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-18T02:12:24Z",
-      "updated_at": "2025-11-30T13:31:08Z",
+      "updated_at": "2025-12-02T20:07:58Z",
       "due_on": null,
       "closed_at": null
     },
@@ -7891,217 +7931,6 @@
       "eyes": 0
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/62/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "repo_name": "2025-2-Portal-dos-Professores"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61",
-    "repository_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores",
-    "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61/events",
-    "html_url": "https://github.com/unb-mds/2025-2-Portal-dos-Professores/issues/61",
-    "id": 3530498896,
-    "node_id": "I_kwDOPiXDiM7SbyNQ",
-    "number": 61,
-    "title": "Seções da Home Page",
-    "user": {
-      "login": "KaioAmouryUnB",
-      "id": 227636246,
-      "node_id": "U_kgDODZF0Fg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227636246?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/KaioAmouryUnB",
-      "html_url": "https://github.com/KaioAmouryUnB",
-      "followers_url": "https://api.github.com/users/KaioAmouryUnB/followers",
-      "following_url": "https://api.github.com/users/KaioAmouryUnB/following{/other_user}",
-      "gists_url": "https://api.github.com/users/KaioAmouryUnB/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/KaioAmouryUnB/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/KaioAmouryUnB/subscriptions",
-      "organizations_url": "https://api.github.com/users/KaioAmouryUnB/orgs",
-      "repos_url": "https://api.github.com/users/KaioAmouryUnB/repos",
-      "events_url": "https://api.github.com/users/KaioAmouryUnB/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/KaioAmouryUnB/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 9242369387,
-        "node_id": "LA_kwDOPiXDiM8AAAACJuNdaw",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/figma",
-        "name": "figma",
-        "color": "82b744",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9289824920,
-        "node_id": "LA_kwDOPiXDiM8AAAACKbd6mA",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/front-end",
-        "name": "front-end",
-        "color": "a5f6a8",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9338920644,
-        "node_id": "LA_kwDOPiXDiM8AAAACLKSexA",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/dados",
-        "name": "dados",
-        "color": "a39f3d",
-        "default": false,
-        "description": ""
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignee": {
-      "login": "KaioAmouryUnB",
-      "id": 227636246,
-      "node_id": "U_kgDODZF0Fg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227636246?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/KaioAmouryUnB",
-      "html_url": "https://github.com/KaioAmouryUnB",
-      "followers_url": "https://api.github.com/users/KaioAmouryUnB/followers",
-      "following_url": "https://api.github.com/users/KaioAmouryUnB/following{/other_user}",
-      "gists_url": "https://api.github.com/users/KaioAmouryUnB/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/KaioAmouryUnB/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/KaioAmouryUnB/subscriptions",
-      "organizations_url": "https://api.github.com/users/KaioAmouryUnB/orgs",
-      "repos_url": "https://api.github.com/users/KaioAmouryUnB/repos",
-      "events_url": "https://api.github.com/users/KaioAmouryUnB/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/KaioAmouryUnB/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "assignees": [
-      {
-        "login": "KaioAmouryUnB",
-        "id": 227636246,
-        "node_id": "U_kgDODZF0Fg",
-        "avatar_url": "https://avatars.githubusercontent.com/u/227636246?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/KaioAmouryUnB",
-        "html_url": "https://github.com/KaioAmouryUnB",
-        "followers_url": "https://api.github.com/users/KaioAmouryUnB/followers",
-        "following_url": "https://api.github.com/users/KaioAmouryUnB/following{/other_user}",
-        "gists_url": "https://api.github.com/users/KaioAmouryUnB/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/KaioAmouryUnB/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/KaioAmouryUnB/subscriptions",
-        "organizations_url": "https://api.github.com/users/KaioAmouryUnB/orgs",
-        "repos_url": "https://api.github.com/users/KaioAmouryUnB/repos",
-        "events_url": "https://api.github.com/users/KaioAmouryUnB/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/KaioAmouryUnB/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/milestones/9",
-      "html_url": "https://github.com/unb-mds/2025-2-Portal-dos-Professores/milestone/9",
-      "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/milestones/9/labels",
-      "id": 13892341,
-      "node_id": "MI_kwDOPiXDiM4A0_r1",
-      "number": 9,
-      "title": "Sprint 07",
-      "description": "",
-      "creator": {
-        "login": "Ascartezin",
-        "id": 193710276,
-        "node_id": "U_kgDOC4vIxA",
-        "avatar_url": "https://avatars.githubusercontent.com/u/193710276?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Ascartezin",
-        "html_url": "https://github.com/Ascartezin",
-        "followers_url": "https://api.github.com/users/Ascartezin/followers",
-        "following_url": "https://api.github.com/users/Ascartezin/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Ascartezin/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Ascartezin/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Ascartezin/subscriptions",
-        "organizations_url": "https://api.github.com/users/Ascartezin/orgs",
-        "repos_url": "https://api.github.com/users/Ascartezin/repos",
-        "events_url": "https://api.github.com/users/Ascartezin/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Ascartezin/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 5,
-      "state": "closed",
-      "created_at": "2025-10-14T21:34:21Z",
-      "updated_at": "2025-10-27T21:26:14Z",
-      "due_on": null,
-      "closed_at": "2025-10-27T21:26:14Z"
-    },
-    "comments": 1,
-    "created_at": "2025-10-19T22:13:18Z",
-    "updated_at": "2025-10-27T21:24:03Z",
-    "closed_at": "2025-10-20T19:50:27Z",
-    "author_association": "COLLABORATOR",
-    "type": {
-      "id": 20193710,
-      "node_id": "IT_kwDOCH8E_c4BNCGu",
-      "name": "Task",
-      "description": "A specific piece of work",
-      "color": "yellow",
-      "created_at": "2024-02-18T04:46:03Z",
-      "updated_at": "2024-07-26T15:22:11Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "# 🧠 Ideias para Novas Seções na Home Page – Portal dos Professores\n\n## 📖 Descrição\nNesta issue, o foco é **propor novas seções** para enriquecer a Home Page do Portal dos Professores da UnB, deixando-a mais dinâmica, informativa e interativa.  \nA ideia é pensar em **uma ou duas seções adicionais** que complementem a experiência do usuário, sem perder o foco principal do portal — fornecer uma visão clara e acessível sobre o trabalho dos professores, suas áreas de atuação e produções acadêmicas.\n\nEssas novas seções devem manter a identidade visual já definida no Figma e respeitar as restrições arquiteturais do projeto:  \n➡️ **Frontend** hospedado no GitHub Pages  \n➡️ **Banco de dados** em arquivos JSON  \n➡️ **Mineração e análise** realizadas via GitHub Actions  \n\n---\n\n## 🎯 Objetivo\n- [x] Analisar a Home Page atual e identificar possíveis lacunas de informação.  \n- [x] Criar ideias para uma ou duas novas seções que agreguem valor ao usuário.  \n- [x] Garantir que as novas seções sejam viáveis com a arquitetura existente (somente front + JSON).  \n- [x] Registrar e prototipar as ideias no Figma para futura implementação.  \n\n---\n\n## ✅ Requisitos\n- As novas seções devem **melhorar a experiência do usuário**, sem sobrecarregar o layout.  \n- Devem **utilizar dados já disponíveis no JSON** (como professores, áreas, publicações).  \n- Devem ser **responsivas**, funcionais e integradas à identidade visual da UnB.  \n- Propor **no mínimo 1 e no máximo 2 novas seções** para a Home Page.  \n\n---\n\n## 🚦 Prioridade\n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica  \n\n---\n\n## 💡 Ideias Iniciais de Seções\n\n### 🧩 1. “Pesquisa Rápida por Interesse”\nUma seção simples e funcional com **botões de acesso rápido** para áreas de interesse, como “Inteligência Artificial”, “Sustentabilidade”, “Educação”, “Engenharia” e outras categorias obtidas dos dados minerados.  \n**Motivo:** Facilita a navegação e permite que o aluno explore professores sem precisar digitar nada.  \n**Dados utilizados:** Campos de área de pesquisa e disciplinas do JSON.  \n**Layout sugerido:**  \n- Blocos interativos (cards ou chips) com ícones temáticos.  \n- Ao clicar, o usuário é redirecionado para uma página filtrada com professores daquela área.  \n- Pode incluir uma pequena animação ao hover ou seleção.  \n\n---\n\n### 🧬 2. “Áreas em Crescimento”\nUma visualização mostrando **as áreas acadêmicas com mais publicações recentes ou novos docentes**.  \n**Motivo:** Ajuda alunos e pesquisadores a entenderem quais campos estão mais ativos na universidade.  \n**Dados utilizados:** contagem de publicações ou perfis recentes.  \n**Layout sugerido:**  \n- Gráfico ou lista de áreas (Ex: Inteligência Artificial, Sustentabilidade, Redes).  \n- Link para explorar professores de cada área.  \n\n---\n\n### 💭 Ideias Extras (para versões futuras)\n- **Seção de Notícias Acadêmicas:** integração leve com feed de eventos ou simpósios da UnB.  \n- **Seção “Descubra Pesquisas”**: resumos automáticos das últimas publicações via IA.  \n\n---\n\n## 📋 Checklist de Tarefas\n- [x] Analisar a versão atual da Home Page.  \n- [x] Definir 1–2 novas seções viáveis com base nos dados e no layout.  \n- [x] Criar wireframe simples das novas seções no Figma.  \n- [x] Validar ideias com a equipe no próximo encontro.  \n- [x] Documentar as propostas finais na pasta `/docs/homepage_ideas`.  \n\n---\n\n## 🔗 Referências e Inspirações\n- [ResearchGate](https://www.researchgate.net/) — para seções de destaques de pesquisadores.  \n- [Google Scholar](https://scholar.google.com/) — estrutura simples e objetiva.  \n\n---\n\n## ✍️ Observação Final\nEssas novas seções buscam **deixar a Home Page mais interativa e acessível**, reforçando o caráter acadêmico e de descoberta do portal.  \nCom uma navegação fluida e foco na experiência do usuário, o portal se torna uma ferramenta prática tanto para alunos quanto para pesquisadores.\n",
-    "closed_by": {
-      "login": "KaioAmouryUnB",
-      "id": 227636246,
-      "node_id": "U_kgDODZF0Fg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227636246?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/KaioAmouryUnB",
-      "html_url": "https://github.com/KaioAmouryUnB",
-      "followers_url": "https://api.github.com/users/KaioAmouryUnB/followers",
-      "following_url": "https://api.github.com/users/KaioAmouryUnB/following{/other_user}",
-      "gists_url": "https://api.github.com/users/KaioAmouryUnB/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/KaioAmouryUnB/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/KaioAmouryUnB/subscriptions",
-      "organizations_url": "https://api.github.com/users/KaioAmouryUnB/orgs",
-      "repos_url": "https://api.github.com/users/KaioAmouryUnB/repos",
-      "events_url": "https://api.github.com/users/KaioAmouryUnB/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/KaioAmouryUnB/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/61/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"

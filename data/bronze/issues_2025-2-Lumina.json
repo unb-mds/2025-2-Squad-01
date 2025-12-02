@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-02T16:39:50.544815",
+      "extracted_at": "2025-12-02T20:35:27.710306",
       "file_path": "data/bronze/issues_2025-2-Lumina.json",
       "record_count": 39
     }
@@ -125,11 +125,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -298,11 +298,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -395,7 +395,7 @@
         "description": "Improvements or additions to documentation"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "CeciliaCunha",
@@ -471,18 +471,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-12-02T03:57:24Z",
-    "updated_at": "2025-12-02T03:57:24Z",
-    "closed_at": null,
+    "updated_at": "2025-12-02T19:46:54Z",
+    "closed_at": "2025-12-02T19:46:54Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -507,7 +507,27 @@
       "total_blocking": 0
     },
     "body": "### 📝 Criar Documentação do Processo de Deploy e Integração Contínua (CI/CD)\n\n---\n\n### 🏷️ Tipo de Tarefa\n*Marque com um `x` a opção que se aplica.*\n- [ ] ✨ Nova Funcionalidade (Feature)\n- [ ] 🐞 Correção de Bug\n- [ ] 🔧 Melhoria/Refatoração\n- [x] 📚 Documentação\n- [ ] ❓ Outros\n\n### 🚦 Prioridade\n*Qual a urgência desta tarefa?*\n- [ ] 🔴 Alta\n- [x] 🟡 Média\n- [ ] 🟢 Baixa\n\n### 📖 Descrição da Tarefa\nO objetivo desta tarefa é criar um documento claro e acessível explicando como funciona o nosso fluxo de Integração Contínua (CI) e Entrega Contínua (CD). Precisamos desmistificar o pipeline para todo o time, detalhando o que acontece desde o momento em que um Pull Request é aberto até a aplicação estar rodando em produção (ou nas lojas de aplicativos).\n\n### ✅ Critérios de Aceitação\n*O que precisa estar pronto para que a tarefa seja considerada concluída?*\n- [ ] O fluxo de trabalho (workflow) do GitHub Actions está explicado passo a passo (Build, Testes, Lint, Deploy).\n- [ ] Os gatilhos (triggers) de cada pipeline estão documentados (ex: \"roda a cada push na main\" ou \"apenas quando uma tag é criada\").\n- [ ] As variáveis de ambiente e \"Secrets\" necessárias para o deploy funcionar estão listadas (sem expor os valores reais, apenas os nomes).\n- [ ] Instruções sobre como realizar um rollback (reverter uma versão) em caso de falha crítica foram adicionadas.\n- [ ] O documento inclui diagramas simples ou prints para facilitar o entendimento visual do fluxo.\n\n### 🛠️ Tarefas Técnicas\n*Selecione os passos necessários para concluir a tarefa.*\n- [ ] Mapear o arquivo `.yml` atual do workflow para traduzir os passos técnicos para linguagem humana.\n- [ ] Criar um arquivo Markdown (ex: `docs/DEVOPS.md` ou `DEPLOY.md`) dedicado a esse tema.\n- [ ] Documentar o processo de versionamento (como usamos tags/releases).\n- [ ] Descrever os ambientes de execução (Desenvolvimento, Homologação/Staging e Produção).\n- [ ] Adicionar links para as ferramentas externas utilizadas (ex: Docker Hub, AWS, Play Store Console).",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CeciliaCunha",
+      "id": 200821472,
+      "node_id": "U_kgDOC_hK4A",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200821472?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CeciliaCunha",
+      "html_url": "https://github.com/CeciliaCunha",
+      "followers_url": "https://api.github.com/users/CeciliaCunha/followers",
+      "following_url": "https://api.github.com/users/CeciliaCunha/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CeciliaCunha/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CeciliaCunha/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CeciliaCunha/subscriptions",
+      "organizations_url": "https://api.github.com/users/CeciliaCunha/orgs",
+      "repos_url": "https://api.github.com/users/CeciliaCunha/repos",
+      "events_url": "https://api.github.com/users/CeciliaCunha/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CeciliaCunha/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/236/reactions",
       "total_count": 0,
@@ -522,7 +542,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Lumina/issues/236/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Lumina"
   },
   {
@@ -644,11 +664,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -867,11 +887,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -1040,11 +1060,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -1213,11 +1233,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },
@@ -4946,11 +4966,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 2,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2025-12-02T00:50:21Z",
-      "updated_at": "2025-12-02T05:15:52Z",
+      "updated_at": "2025-12-02T19:46:54Z",
       "due_on": "2025-12-03T00:00:00Z",
       "closed_at": null
     },

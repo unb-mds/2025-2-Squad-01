@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-02T16:39:04.524457",
+      "extracted_at": "2025-12-02T20:34:44.612455",
       "file_path": "data/bronze/prs_2024-2-AcheiUnB.json",
       "record_count": 50
     }
@@ -283,7 +283,7 @@
         "description": "Pull requests that update Python code"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Potatoyz908",
@@ -332,8 +332,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-11-16T23:53:55Z",
-    "updated_at": "2025-11-25T11:57:43Z",
-    "closed_at": null,
+    "updated_at": "2025-12-02T17:32:13Z",
+    "closed_at": "2025-12-02T17:32:13Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -343,10 +343,30 @@
       "html_url": "https://github.com/unb-mds/2024-2-AcheiUnB/pull/307",
       "diff_url": "https://github.com/unb-mds/2024-2-AcheiUnB/pull/307.diff",
       "patch_url": "https://github.com/unb-mds/2024-2-AcheiUnB/pull/307.patch",
-      "merged_at": null
+      "merged_at": "2025-12-02T17:32:13Z"
     },
     "body": "# Descrição do Pull Request\r\n<!-- Descreva de forma clara e concisa o que foi feito neste PR. -->\r\n\r\n## O que foi feito?\r\n\r\n- Corrigida a inconsistência do limite de caracteres do chat (issue #304).\r\n- Unificada a validação de limite de **80 caracteres** para qualquer mensagem (texto, emojis ou mistura) no backend.\r\n- Adicionados testes de API cobrindo:\r\n  - texto puro acima/abaixo do limite;\r\n  - mensagens só com emojis;\r\n  - mensagens mistas (texto + emojis);\r\n  - criação (`POST`) e edição (`PATCH`) de mensagens.\r\n- Extraída função auxiliar para contagem de “caracteres visuais” (graphemes), evitando duplicação da lógica de validação.\r\n\r\n## Checklist\r\n\r\n- [x] Meu código segue as diretrizes do projeto.\r\n- [x] Adicionei testes para cobrir as mudanças.\r\n- [ ] Atualizei a documentação, se necessário.\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Potatoyz908",
+      "id": 125329742,
+      "node_id": "U_kgDOB3hhTg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125329742?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Potatoyz908",
+      "html_url": "https://github.com/Potatoyz908",
+      "followers_url": "https://api.github.com/users/Potatoyz908/followers",
+      "following_url": "https://api.github.com/users/Potatoyz908/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Potatoyz908/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Potatoyz908/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Potatoyz908/subscriptions",
+      "organizations_url": "https://api.github.com/users/Potatoyz908/orgs",
+      "repos_url": "https://api.github.com/users/Potatoyz908/repos",
+      "events_url": "https://api.github.com/users/Potatoyz908/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Potatoyz908/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2024-2-AcheiUnB/issues/307/reactions",
       "total_count": 0,
