@@ -1,4 +1,4 @@
-name: Python Unit Tests
+name: Unit Tests (Python + Frontend)
 
 on:
   push:
@@ -10,10 +10,17 @@ on:
       - "tests/**/*.py"
       - "requirements*.txt"
       - "pytest.ini"
-  workflow_dispatch:  # ← SEM chaves vazias, igual aos outros
+      - "front-end/src/**/*.{ts,tsx}"
+      - "front-end/src/**/*.test.{ts,tsx}"
+      - "front-end/package.json"
+      - "front-end/vite.config.ts"
+      - "front-end/vitest.config.ts"
+  workflow_dispatch:
 
 jobs:
-  unit-tests:
+  # ==================== PYTHON TESTS ====================
+  python-unit-tests:
+    name: Python Tests (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -57,20 +64,94 @@ jobs:
             --cov-fail-under=60 \
             -v
       
-      - name: Upload coverage reports
+      - name: Upload Python coverage reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report-${{ matrix.python-version }}
+          name: python-coverage-${{ matrix.python-version }}
           path: |
             coverage.xml
             htmlcov/
           retention-days: 30
       
-      - name: Comment coverage on PR
-        if: github.event_name == 'pull_request'
+      - name: Comment Python coverage on PR
+        if: github.event_name == 'pull_request' && matrix.python-version == '3.11'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
           MINIMUM_GREEN: 70
           MINIMUM_ORANGE: 60
+
+  # ==================== FRONTEND TESTS ====================
+  frontend-unit-tests:
+    name: Frontend Tests (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ "18", "20" ]
+    
+    defaults:
+      run:
+        working-directory: ./front-end
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: front-end/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run unit tests with coverage
+        run: npm run test:coverage
+      
+      - name: Upload Frontend coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-coverage-node-${{ matrix.node-version }}
+          path: |
+            front-end/coverage/
+          retention-days: 30
+      
+      - name: Check coverage threshold
+        run: |
+          echo "Checking coverage thresholds..."
+          npm run test:coverage -- --reporter=json --reporter=text
+      
+      - name: Comment Frontend coverage on PR
+        if: github.event_name == 'pull_request' && matrix.node-version == '20'
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          working-directory: ./front-end
+          json-summary-path: ./coverage/coverage-summary.json
+          json-final-path: ./coverage/coverage-final.json
+
+  # ==================== SUMMARY ====================
+  test-summary:
+    name: Test Summary
+    runs-on: ubuntu-latest
+    needs: [python-unit-tests, frontend-unit-tests]
+    if: always()
+    
+    steps:
+      - name: Check test results
+        run: |
+          echo "## Test Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Python tests: ${{ needs.python-unit-tests.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Frontend tests: ${{ needs.frontend-unit-tests.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ needs.python-unit-tests.result }}" != "success" ] || [ "${{ needs.frontend-unit-tests.result }}" != "success" ]; then
+            echo "❌ Some tests failed!" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "✅ All tests passed!" >> $GITHUB_STEP_SUMMARY
+          fi
