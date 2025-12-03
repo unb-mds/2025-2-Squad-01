@@ -3,11 +3,11 @@
 ## 📋 Planejamento da Sprint
 
 ### Objetivos da Sprint
-- **🎯 RELEASE 1 (01/10/2025)**
-- Consolidar extração de dados Bronze
-- Melhorar documentação do projeto (README)
-- Finalizar diagramas de arquitetura C4
-- Manter pipeline de atualização automática de métricas
+- **🎯 RELEASE 1 (01/10/2025)** - Marco importante do projeto
+- Consolidar e estabilizar extração de dados da camada Bronze
+- Melhorar documentação do projeto (README) com informações completas
+- Finalizar diagramas de arquitetura C4 para visualização clara do sistema
+- Manter pipeline de atualização automática de métricas via GitHub Actions
 
 ### Issues Planejadas
 - #52: Bronze extraction consolidation

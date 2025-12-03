@@ -1,6 +1,6 @@
 # 📚 Documentação de Sprints - Squad 01
 
-Este diretório contém a documentação completa de todas as sprints do projeto, cobrindo o período de **22/08/2025 a 07/12/2025** (15 semanas).
+Este diretório contém a documentação completa e retrospectivas de todas as sprints do projeto, cobrindo o período de **22/08/2025 a 07/12/2025** (15 semanas de desenvolvimento ágil).
 
 ---
 

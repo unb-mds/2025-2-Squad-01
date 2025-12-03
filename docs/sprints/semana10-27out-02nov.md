@@ -3,10 +3,10 @@
 ## 📋 Planejamento da Sprint
 
 ### Objetivos da Sprint
-- Implementar padronização de código com Prettier
-- Criar páginas de análise de Pull Requests e Issues
-- Adicionar protótipo de alta fidelidade
-- Refatorar componentes para reutilização
+- Implementar padronização de código com Prettier para manter consistência
+- Criar páginas dedicadas de análise de Pull Requests e Issues com visualizações
+- Adicionar protótipo de alta fidelidade no Figma para guiar desenvolvimento
+- Refatorar componentes para maior reutilização e manutenibilidade do código
 
 ### Issues/PRs Planejados
 - #69: Integração do Prettier + refatorações

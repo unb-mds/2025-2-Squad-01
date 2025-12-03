@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este documento descreve o fluxo completo de extração, transformação e visualização de dados do projeto, desde a coleta bruta (Bronze) até a apresentação no frontend, incluindo todas as otimizações implementadas.
+Este documento descreve detalhadamente o fluxo completo de extração, transformação e visualização de dados do projeto, desde a coleta bruta (Bronze) até a apresentação no frontend, incluindo todas as otimizações de performance implementadas (GraphQL/REST híbrido, rate limiting, caching).
 
 ---
 
@@ -576,6 +576,17 @@ python src/silver/collaboration_analysis.py
 - [GitHub GraphQL API Documentation](https://docs.github.com/en/graphql)
 
 ---
+
+## Como rodar localmente:
+
+1. Clone o repositório
+2. Instale as dependências do front-end: npm install
+3. *Gere os dados necessários:*
+bash
+   python3 data/pipeline/bronze/extractor.py
+   python3 data/pipeline/silver/repository_structure_analyzer.py
+
+4. Rode o dev server: npm run dev
 
 **Última atualização:** 02/12/2025  
 **Versão:** 2.0 (Pós-otimizações PR #101 e #104)

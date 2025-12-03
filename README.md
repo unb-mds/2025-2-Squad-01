@@ -212,4 +212,3 @@ Squad 01 – MDS 2025/2 – FGA/UnB
 - [GitHub Repo Visualization](https://githubnext.com/projects/repo-visualization/#explore-for-yourself)
 - SonarQube (benchmark de qualidade de código)
 - GitHub Insights
-

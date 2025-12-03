@@ -3,10 +3,10 @@
 ## 📋 Planejamento da Sprint
 
 ### Objetivos da Sprint
-- Migrar extração de commits para GraphQL
-- Reduzir consumo de rate limit significativamente
-- Adicionar métricas de linhas adicionadas/removidas
-- Corrigir bugs na página de colaboração
+- Migrar extração de commits para GraphQL para otimização de performance
+- Reduzir consumo de rate limit significativamente (economia de requisições)
+- Adicionar métricas detalhadas de linhas adicionadas/removidas por commit
+- Corrigir bugs identificados na página de colaboração
 
 ### Issues/PRs Planejados
 - #78: Implementação de GraphQL para extração de commits
