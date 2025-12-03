@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benchmarking - CoOps Documentação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Benchmarking - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,127 +12,150 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
         }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
         header {
-            background: #1e40af;
-            padding: 1rem 0;
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+            backdrop-filter: blur(10px);
         }
 
         nav a {
-            color: white;
+            color: var(--text);
             text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
         nav a:hover {
-            color: #bfdbfe;
+            color: var(--primary);
         }
 
-        main {
+        /* Container */
+        .container {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 2rem;
         }
 
-        .content {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #1e40af;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #1e40af;
-            padding-bottom: 0.5rem;
-        }
-
-        h2 {
-            color: #1e40af;
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            color: #1e40af;
-            font-size: 1.4rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        h4 {
-            color: #1e40af;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        strong {
-            color: #1e40af;
-        }
-
+        /* Overview */
         .overview {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1f35, #0d1117);
+            border: 1px solid var(--border);
             padding: 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
         }
 
         .overview h2 {
-            color: white;
+            color: var(--primary);
             margin-top: 0;
+            font-size: 1.6rem;
         }
 
+        /* Generic text */
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 0.8rem;
+        }
+
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Competitors */
         .competitor-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -141,16 +164,18 @@
         }
 
         .competitor-card {
-            background: white;
+            background: var(--bg-card);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
             overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            border: 1px solid var(--border);
         }
 
         .competitor-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            border-color: var(--primary);
         }
 
         .competitor-header {
@@ -171,6 +196,12 @@
             background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
         }
 
+        .competitor-header p {
+            margin: 0.25rem 0 0;
+            color: #f9fafb;
+            font-weight: 400;
+        }
+
         .competitor-body {
             padding: 1.5rem;
         }
@@ -182,14 +213,14 @@
 
         .feature-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border);
             position: relative;
             padding-left: 1.5rem;
         }
 
         .feature-list li:before {
             content: '✓';
-            color: #16a34a;
+            color: var(--success);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -199,92 +230,113 @@
             border-bottom: none;
         }
 
+        /* Highlight Boxes */
         .ai-section {
-            background: #fef3c7;
+            background: linear-gradient(135deg, #d2992222, #d2992211);
             padding: 1rem;
             border-radius: 8px;
-            border-left: 4px solid #f59e0b;
+            border-left: 4px solid var(--warning);
             margin: 1rem 0;
+            border: 1px solid var(--border);
         }
 
         .ai-section h4 {
-            color: #f59e0b;
+            color: var(--warning);
             margin-bottom: 0.5rem;
         }
 
         .pricing {
-            background: #f0fdf4;
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
             padding: 1rem;
             border-radius: 8px;
-            border-left: 4px solid #16a34a;
+            border-left: 4px solid var(--success);
             margin: 1rem 0;
+            border: 1px solid var(--border);
         }
 
         .pricing h4 {
-            color: #16a34a;
+            color: var(--success);
             margin-bottom: 0.5rem;
         }
 
         .limitations {
-            background: #fef2f2;
+            background: #f8514933;
             padding: 1rem;
             border-radius: 8px;
-            border-left: 4px solid #dc2626;
+            border-left: 4px solid #f85149;
             margin: 1rem 0;
+            border: 1px solid var(--border);
         }
 
         .limitations h4 {
-            color: #dc2626;
+            color: #fca5a5;
             margin-bottom: 0.5rem;
         }
 
+        /* Comparison Table */
         .comparison-table {
             overflow-x: auto;
             margin: 2rem 0;
         }
 
+        .comparison-table h2 {
+            margin-bottom: 1rem;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
+            background: var(--bg-card);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
         }
 
         th, td {
             padding: 1rem;
             text-align: left;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
         }
 
         th {
-            background: #1e40af;
-            color: white;
+            background: var(--bg-hover);
+            color: var(--text);
             font-weight: 600;
         }
 
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         .check {
-            color: #16a34a;
+            color: var(--success);
             font-weight: bold;
         }
 
         .partial {
-            color: #f59e0b;
+            color: var(--warning);
             font-weight: bold;
         }
 
         .cross {
-            color: #dc2626;
+            color: var(--accent);
             font-weight: bold;
         }
 
+        /* Summary Sections */
         .summary-section {
-            background: #f8fafc;
+            background: var(--bg-card);
             padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid #1e40af;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
             margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .summary-section h2 {
+            margin-top: 0;
         }
 
         .differentiator-grid {
@@ -295,320 +347,322 @@
         }
 
         .differentiator {
-            background: #e0f2fe;
+            background: var(--bg-hover);
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid #0284c7;
+            border-left: 4px solid var(--primary);
+            border: 1px solid var(--border);
         }
 
         .differentiator h4 {
-            color: #0284c7;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
 
-        footer {
-            background: #1e40af;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        /* Links */
+        a {
+            color: var(--primary);
         }
 
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .overview,
+        .competitor-card,
+        .summary-section,
+        .comparison-table {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            main {
-                margin: 1rem;
-                padding: 0;
-            }
-
-            .content {
-                padding: 2rem 1.5rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .competitor-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .differentiator-grid {
-                grid-template-columns: 1fr;
-            }
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+            .competitor-grid { grid-template-columns: 1fr; }
+            .differentiator-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="logo">CoOps - Documentação</a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="index.html">Documentação</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
-            </ul>
-        </nav>
+        <h1>📊 Análise de Benchmarking</h1>
+        <p>Comparação estratégica de Keypup, LinearB, Swarmia e o posicionamento do CoOps</p>
     </header>
 
-    <main>
-        <div class="content">
-            <h1>📊 Análise de Benchmarking</h1>
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#benchmark">Visão Geral</a>
+        <a href="#competidores">Competidores</a>
+        <a href="#comparacao">Comparação</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#insights">Insights</a>
+    </nav>
 
-            <div class="overview">
-                <h2>Análise Competitiva de Mercado</h2>
-                <p>Estudo comparativo das principais soluções existentes no mercado para análise de métricas de colaboração e produtividade em desenvolvimento de software. Esta análise fundamenta as decisões de produto e posicionamento do projeto CoOps.</p>
-            </div>
+    <div class="container">
+        <div class="overview" id="benchmark">
+            <h2>Análise Competitiva de Mercado</h2>
+            <p>Estudo comparativo das principais soluções existentes no mercado para análise de métricas de colaboração e produtividade em desenvolvimento de software. Esta análise fundamenta as decisões de produto e posicionamento do projeto CoOps.</p>
+        </div>
 
-            <div class="competitor-grid">
-                <div class="competitor-card">
-                    <div class="competitor-header keypup-header">
-                        <h3>Keypup</h3>
-                        <p>Plataforma de Gestão de Desenvolvimento</p>
-                    </div>
-                    <div class="competitor-body">
-                        <p>Plataforma que centraliza dados de diferentes ferramentas (GitHub, GitLab, Jira, Trello) para facilitar o acompanhamento de projetos e colaboração entre equipes técnicas.</p>
-                        
-                        <h4>Principais Funcionalidades:</h4>
-                        <ul class="feature-list">
-                            <li>Dashboard centralizado de métricas de engenharia</li>
-                            <li>Relatórios automáticos de produtividade</li>
-                            <li>Integração com múltiplas ferramentas</li>
-                            <li>Alertas e notificações inteligentes</li>
-                            <li>Visualização de PRs e Issues em tempo real</li>
-                            <li>Filtros avançados para análise de dados</li>
+        <div class="competitor-grid" id="competidores">
+            <div class="competitor-card">
+                <div class="competitor-header keypup-header">
+                    <h3>Keypup</h3>
+                    <p>Plataforma de Gestão de Desenvolvimento</p>
+                </div>
+                <div class="competitor-body">
+                    <p>Plataforma que centraliza dados de diferentes ferramentas (GitHub, GitLab, Jira, Trello) para facilitar o acompanhamento de projetos e colaboração entre equipes técnicas.</p>
+                    
+                    <h4>Principais Funcionalidades:</h4>
+                    <ul class="feature-list">
+                        <li>Dashboard centralizado de métricas de engenharia</li>
+                        <li>Relatórios automáticos de produtividade</li>
+                        <li>Integração com múltiplas ferramentas</li>
+                        <li>Alertas e notificações inteligentes</li>
+                        <li>Visualização de PRs e Issues em tempo real</li>
+                        <li>Filtros avançados para análise de dados</li>
+                    </ul>
+
+                    <div class="ai-section">
+                        <h4>Uso de IA</h4>
+                        <ul>
+                            <li>Insights automáticos sobre gargalos</li>
+                            <li>Priorização inteligente de tarefas</li>
+                            <li>Recomendações para otimização</li>
                         </ul>
+                    </div>
 
-                        <div class="ai-section">
-                            <h4>Uso de IA</h4>
-                            <ul>
-                                <li>Insights automáticos sobre gargalos</li>
-                                <li>Priorização inteligente de tarefas</li>
-                                <li>Recomendações para otimização</li>
-                            </ul>
-                        </div>
-
-                        <div class="pricing">
-                            <h4>Modelo de Negócio</h4>
-                            <p>SaaS com planos escalonáveis baseados no número de usuários e integrações.</p>
-                        </div>
+                    <div class="pricing">
+                        <h4>Modelo de Negócio</h4>
+                        <p>SaaS com planos escalonáveis baseados no número de usuários e integrações.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="competitor-card">
-                    <div class="competitor-header linearb-header">
-                        <h3>LinearB</h3>
-                        <p>Plataforma de Produtividade de Engenharia</p>
-                    </div>
-                    <div class="competitor-body">
-                        <p>Plataforma focada em acelerar a produtividade do desenvolvedor através de visibilidade e controle sobre IA, dados e fluxos de trabalho.</p>
-                        
-                        <h4>Principais Funcionalidades:</h4>
-                        <ul class="feature-list">
-                            <li>Métricas DORA completas</li>
-                            <li>Métricas de DevEx (Developer Experience)</li>
-                            <li>Relatórios de produtividade</li>
-                            <li>Automação de fluxo de trabalho</li>
-                            <li>Governança de IA integrada</li>
-                            <li>Revisões de código automatizadas</li>
+            <div class="competitor-card">
+                <div class="competitor-header linearb-header">
+                    <h3>LinearB</h3>
+                    <p>Plataforma de Produtividade de Engenharia</p>
+                </div>
+                <div class="competitor-body">
+                    <p>Plataforma focada em acelerar a produtividade do desenvolvedor através de visibilidade e controle sobre IA, dados e fluxos de trabalho.</p>
+                    
+                    <h4>Principais Funcionalidades:</h4>
+                    <ul class="feature-list">
+                        <li>Métricas DORA completas</li>
+                        <li>Métricas de DevEx (Developer Experience)</li>
+                        <li>Relatórios de produtividade</li>
+                        <li>Automação de fluxo de trabalho</li>
+                        <li>Governança de IA integrada</li>
+                        <li>Revisões de código automatizadas</li>
+                    </ul>
+
+                    <div class="ai-section">
+                        <h4>Uso de IA</h4>
+                        <ul>
+                            <li>Revisões de código automatizadas por IA</li>
+                            <li>Automação de aprovações seguras</li>
+                            <li>Roteamento inteligente de PRs</li>
+                            <li>Assistentes de bot para monitoramento</li>
                         </ul>
+                    </div>
 
-                        <div class="ai-section">
-                            <h4>Uso de IA</h4>
-                            <ul>
-                                <li>Revisões de código automatizadas por IA</li>
-                                <li>Automação de aprovações seguras</li>
-                                <li>Roteamento inteligente de PRs</li>
-                                <li>Assistentes de bot para monitoramento</li>
-                            </ul>
-                        </div>
-
-                        <div class="pricing">
-                            <h4>Público-Alvo</h4>
-                            <p>Empresas de todos os portes, líderes de engenharia, equipes que buscam otimizar DevEx.</p>
-                        </div>
+                    <div class="pricing">
+                        <h4>Público-Alvo</h4>
+                        <p>Empresas de todos os portes, líderes de engenharia, equipes que buscam otimizar DevEx.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="competitor-card">
-                    <div class="competitor-header swarmia-header">
-                        <h3>Swarmia</h3>
-                        <p>Métricas de Engenharia Team-Centric</p>
-                    </div>
-                    <div class="competitor-body">
-                        <p>Plataforma de métricas orientada a times, com foco em DORA e integrações profundas com GitHub e Slack, promovendo melhoria sem surveillance individual.</p>
-                        
-                        <h4>Principais Funcionalidades:</h4>
-                        <ul class="feature-list">
-                            <li>Integração nativa GitHub Marketplace</li>
-                            <li>Métricas DORA e cycle time</li>
-                            <li>Integração Slack com inbox de PRs</li>
-                            <li>Relatórios por equipe</li>
-                            <li>Onboarding rápido (15 minutos)</li>
-                            <li>Acordos configuráveis para equipes</li>
+            <div class="competitor-card">
+                <div class="competitor-header swarmia-header">
+                    <h3>Swarmia</h3>
+                    <p>Métricas de Engenharia Team-Centric</p>
+                </div>
+                <div class="competitor-body">
+                    <p>Plataforma de métricas orientada a times, com foco em DORA e integrações profundas com GitHub e Slack, promovendo melhoria sem surveillance individual.</p>
+                    
+                    <h4>Principais Funcionalidades:</h4>
+                    <ul class="feature-list">
+                        <li>Integração nativa GitHub Marketplace</li>
+                        <li>Métricas DORA e cycle time</li>
+                        <li>Integração Slack com inbox de PRs</li>
+                        <li>Relatórios por equipe</li>
+                        <li>Onboarding rápido (15 minutos)</li>
+                        <li>Acordos configuráveis para equipes</li>
+                    </ul>
+
+                    <div class="ai-section">
+                        <h4>Automação</h4>
+                        <ul>
+                            <li>Lembretes automáticos</li>
+                            <li>Roteamento inteligente</li>
+                            <li>Notificações Slack/PR</li>
+                            <li>Insights guiados por métricas</li>
                         </ul>
+                    </div>
 
-                        <div class="ai-section">
-                            <h4>Automação</h4>
-                            <ul>
-                                <li>Lembretes automáticos</li>
-                                <li>Roteamento inteligente</li>
-                                <li>Notificações Slack/PR</li>
-                                <li>Insights guiados por métricas</li>
-                            </ul>
-                        </div>
+                    <div class="pricing">
+                        <h4>Preços</h4>
+                        <p>US$ 39 por desenvolvedor/mês (anual). Gratuito para startups até 9 devs.</p>
+                    </div>
 
-                        <div class="pricing">
-                            <h4>Preços</h4>
-                            <p>US$ 39 por desenvolvedor/mês (anual). Gratuito para startups até 9 devs.</p>
-                        </div>
-
-                        <div class="limitations">
-                            <h4>Limitações</h4>
-                            <ul>
-                                <li>Requer configuração de deploys para DORA</li>
-                                <li>Não cobre qualidade estática de código</li>
-                                <li>Sem narrativas de IA explicativas</li>
-                            </ul>
-                        </div>
+                    <div class="limitations">
+                        <h4>Limitações</h4>
+                        <ul>
+                            <li>Requer configuração de deploys para DORA</li>
+                            <li>Não cobre qualidade estática de código</li>
+                            <li>Sem narrativas de IA explicativas</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <div class="comparison-table">
-                <h2>Comparação de Funcionalidades</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Funcionalidade</th>
-                            <th>Keypup</th>
-                            <th>LinearB</th>
-                            <th>Swarmia</th>
-                            <th>CoOps</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Métricas DORA</td>
-                            <td class="partial">Parcial</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                        </tr>
-                        <tr>
-                            <td>Integração GitHub</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                        </tr>
-                        <tr>
-                            <td>IA Explicativa</td>
-                            <td class="partial">Básica</td>
-                            <td class="check">✓</td>
-                            <td class="cross">✗</td>
-                            <td class="check">✓ (RAG)</td>
-                        </tr>
-                        <tr>
-                            <td>Dashboards Personalizáveis</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                            <td class="partial">Limitado</td>
-                            <td class="check">✓</td>
-                        </tr>
-                        <tr>
-                            <td>Análise de Colaboração</td>
-                            <td class="partial">Básica</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓</td>
-                            <td class="check">✓ (Foco)</td>
-                        </tr>
-                        <tr>
-                            <td>Relatórios de Qualidade</td>
-                            <td class="cross">✗</td>
-                            <td class="check">✓</td>
-                            <td class="cross">✗</td>
-                            <td class="check">✓ (IA)</td>
-                        </tr>
-                        <tr>
-                            <td>Gratuito/Open Source</td>
-                            <td class="cross">✗</td>
-                            <td class="cross">✗</td>
-                            <td class="partial">Limited</td>
-                            <td class="check">✓</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="summary-section">
-                <h2>Oportunidades de Diferenciação para o CoOps</h2>
-                
-                <div class="differentiator-grid">
-                    <div class="differentiator">
-                        <h4>🤖 IA Contextual</h4>
-                        <p>Sistema RAG que não apenas apresenta métricas, mas explica seu significado e sugere ações específicas.</p>
-                    </div>
-                    
-                    <div class="differentiator">
-                        <h4>🎯 Foco Acadêmico</h4>
-                        <p>Solução otimizada para projetos acadêmicos e equipes de estudantes, com métricas relevantes para esse contexto.</p>
-                    </div>
-                    
-                    <div class="differentiator">
-                        <h4>💰 Acessibilidade</h4>
-                        <p>Plataforma gratuita e open source, removendo barreiras financeiras para pequenas equipes e estudantes.</p>
-                    </div>
-                    
-                    <div class="differentiator">
-                        <h4>🔍 Simplicidade</h4>
-                        <p>Interface focada e simples, sem complexity desnecessária, ideal para equipes que estão aprendendo sobre métricas.</p>
-                    </div>
-                    
-                    <div class="differentiator">
-                        <h4>📚 Educacional</h4>
-                        <p>Componente educativo que ensina sobre métricas de software e boas práticas de desenvolvimento.</p>
-                    </div>
-                    
-                    <div class="differentiator">
-                        <h4>🚀 Setup Rápido</h4>
-                        <p>Configuração simplificada que pode ser feita localmente ou via fork, sem necessidade de configurações complexas.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="summary-section">
-                <h2>Insights para o Desenvolvimento</h2>
-                <ul>
-                    <li><strong>Integração GitHub:</strong> Todas as soluções priorizam integração profunda com GitHub - essencial para o CoOps</li>
-                    <li><strong>Métricas DORA:</strong> Padrão do mercado que deve ser implementado no CoOps</li>
-                    <li><strong>IA como Diferencial:</strong> Oportunidade de criar valor através de IA explicativa e contextual</li>
-                    <li><strong>Foco em Equipes:</strong> Abordagem team-centric é preferível a individual surveillance</li>
-                    <li><strong>Simplicidade vs Complexidade:</strong> Mercado saturado de soluções complexas - oportunidade para simplicidade</li>
-                    <li><strong>Modelo de Negócio:</strong> Custo por desenvolvedor é padrão - modelo gratuito é diferencial significativo</li>
-                </ul>
             </div>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 CoOps - Documentação. Desenvolvido com ❤️ pelo Squad 01.</p>
-    </footer>
+        <div class="comparison-table" id="comparacao">
+            <h2>Comparação de Funcionalidades</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Funcionalidade</th>
+                        <th>Keypup</th>
+                        <th>LinearB</th>
+                        <th>Swarmia</th>
+                        <th>CoOps</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Métricas DORA</td>
+                        <td class="partial">Parcial</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Integração GitHub</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>IA Explicativa</td>
+                        <td class="partial">Básica</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓ (RAG)</td>
+                    </tr>
+                    <tr>
+                        <td>Dashboards Personalizáveis</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="partial">Limitado</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Análise de Colaboração</td>
+                        <td class="partial">Básica</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓ (Foco)</td>
+                    </tr>
+                    <tr>
+                        <td>Relatórios de Qualidade</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓ (IA)</td>
+                    </tr>
+                    <tr>
+                        <td>Gratuito/Open Source</td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                        <td class="partial">Limited</td>
+                        <td class="check">✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary-section" id="diferenciais">
+            <h2>Oportunidades de Diferenciação para o CoOps</h2>
+            
+            <div class="differentiator-grid">
+                <div class="differentiator">
+                    <h4>🤖 IA Contextual</h4>
+                    <p>Sistema RAG que não apenas apresenta métricas, mas explica seu significado e sugere ações específicas.</p>
+                </div>
+                
+                <div class="differentiator">
+                    <h4>🎯 Foco Acadêmico</h4>
+                    <p>Solução otimizada para projetos acadêmicos e equipes de estudantes, com métricas relevantes para esse contexto.</p>
+                </div>
+                
+                <div class="differentiator">
+                    <h4>💰 Acessibilidade</h4>
+                    <p>Plataforma gratuita e open source, removendo barreiras financeiras para pequenas equipes e estudantes.</p>
+                </div>
+                
+                <div class="differentiator">
+                    <h4>🔍 Simplicidade</h4>
+                    <p>Interface focada e simples, sem complexidade desnecessária, ideal para equipes que estão aprendendo sobre métricas.</p>
+                </div>
+                
+                <div class="differentiator">
+                    <h4>📚 Educacional</h4>
+                    <p>Componente educativo que ensina sobre métricas de software e boas práticas de desenvolvimento.</p>
+                </div>
+                
+                <div class="differentiator">
+                    <h4>🚀 Setup Rápido</h4>
+                    <p>Configuração simplificada que pode ser feita localmente ou via fork, sem necessidade de configurações complexas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-section" id="insights">
+            <h2>Insights para o Desenvolvimento</h2>
+            <ul>
+                <li><strong>Integração GitHub:</strong> Todas as soluções priorizam integração profunda com GitHub - essencial para o CoOps</li>
+                <li><strong>Métricas DORA:</strong> Padrão do mercado que deve ser implementado no CoOps</li>
+                <li><strong>IA como Diferencial:</strong> Oportunidade de criar valor através de IA explicativa e contextual</li>
+                <li><strong>Foco em Equipes:</strong> Abordagem team-centric é preferível a individual surveillance</li>
+                <li><strong>Simplicidade vs Complexidade:</strong> Mercado saturado de soluções complexas - oportunidade para simplicidade</li>
+                <li><strong>Modelo de Negócio:</strong> Custo por desenvolvedor é padrão - modelo gratuito é diferencial significativo</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
 </body>
 </html>
