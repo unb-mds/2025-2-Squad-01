@@ -51,13 +51,14 @@ class TestSilverProcess:
                 with patch('silver.contribution_metrics.process_contribution_metrics', return_value=['contrib.json']):
                     with patch('silver.collaboration_networks.process_collaboration_networks', return_value=['collab.json']):
                         with patch('silver.temporal_analysis.process_temporal_analysis', return_value=['temporal.json']):
-                            with patch('utils.github_api.update_data_registry'):
-                                from src import silver_process
-                                
-                                silver_process.main()
+                            with patch('silver.members_statistics.process_members_statistics', return_value=['members_stats.json']):
+                                with patch('utils.github_api.update_data_registry'):
+                                    from src import silver_process
+                                    
+                                    silver_process.main()
         
         captured = capsys.readouterr()
-        assert "Generated 5 files" in captured.out
+        assert "Generated 6 files" in captured.out
         assert "member1.json" in captured.out
         assert "member2.json" in captured.out
         assert "contrib.json" in captured.out
