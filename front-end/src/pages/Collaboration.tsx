@@ -127,7 +127,7 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
           {/* Cards Grid */}
           <div className="grid grid-cols-1">
 
-            {/* Card: Collaboration Network */}
+            {/* Card: Collaboration-Network */}
             <div
               className="border rounded-lg flex flex-col h-full"
               style={{ backgroundColor: '#222222', borderColor: '#333333' }}

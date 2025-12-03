@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import logging
 from typing import List, Dict, Any
-from utils.github_api import GitHubAPIClient, OrganizationConfig, save_json_data, load_json_data
+from pathlib import Path
 
-# Configurar logger
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+from src.utils.github_api import GitHubAPIClient, OrganizationConfig, save_json_data, load_json_data
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -13,10 +17,13 @@ def extract_repository_structure(
     client: GitHubAPIClient, 
     config: OrganizationConfig, 
     use_cache: bool = True
-    
 ) -> List[str]:
     """
-    Extrai estrutura de arquivos de todos os repositórios filtrados usando GraphQL.
+    Extrai estrutura de arquivos de todos os repositórios filtrados.
+    
+    Ordem de tentativa:
+    1. REST API com recursive=1 (mais rápido)
+    2. GraphQL (fallback se REST truncar)
     
     Args:
         client: Cliente da API do GitHub
@@ -27,7 +34,7 @@ def extract_repository_structure(
         Lista de caminhos dos arquivos structure_{repo}.json gerados
     """
     logger.info("="*60)
-    logger.info("🌳 EXTRACTING REPOSITORY STRUCTURES (GraphQL)")
+    logger.info("🌳 EXTRACTING REPOSITORY STRUCTURES")
     logger.info("="*60)
     
     # Carregar repositórios filtrados
@@ -67,16 +74,26 @@ def extract_repository_structure(
         logger.info(f"\n📂 Processing: {repo_name}")
         logger.info(f"   Owner: {owner}")
         logger.info(f"   Branch: {default_branch}")
-        logger.info(f"   Method: GraphQL (fixed)")
         
         try:
-            # 👇 SEMPRE USAR GRAPHQL
-            structure = client.graphql_repository_tree(
+            # 🚀 TRY REST FIRST (100x faster)
+            logger.info(f"   Method: REST API (recursive=1)")
+            structure = client.get_repository_tree(
                 owner=owner,
                 repo=name_only,
                 branch=default_branch,
                 use_cache=use_cache
             )
+            
+            # Check if truncated (fallback to GraphQL)
+            if structure.get('truncated', False):
+                logger.warning(f"   ⚠️  REST tree truncated, falling back to GraphQL...")
+                structure = client.graphql_repository_tree(
+                    owner=owner,
+                    repo=name_only,
+                    branch=default_branch,
+                    use_cache=use_cache
+                )
             
             # Validar dados mínimos
             if not structure or not structure.get('tree'):
@@ -109,14 +126,15 @@ def extract_repository_structure(
             output_file = save_json_data(
                 structure,
                 f"data/bronze/structure_{repo_name}.json",
-                timestamp=False  # Nome fixo para facilitar lookup
+                timestamp=False
             )
             
             generated_files.append(output_file)
             successful += 1
             
+            method = structure.get('method', 'unknown')
             logger.info(f"   ✅ Saved: {output_file}")
-            logger.info(f"   📊 Files: {total_items}")
+            logger.info(f"   📊 Files: {total_items} (method: {method})")
             
         except Exception as e:
             logger.error(f"   ❌ Error extracting {repo_name}: {str(e)}")

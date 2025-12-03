@@ -4,20 +4,15 @@ import argparse
 import sys
 import os
 from datetime import datetime
-import shutil
-import json
-from pathlib import Path
 
 # Add src to path 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from utils.github_api import update_data_registry
-from silver.file_language_analysis import process_file_language_analysis
-# Import other silver processing modules as needed
 
 def main():
     parser = argparse.ArgumentParser(description='Process Bronze data to Silver layer')
-    parser.add_argument('--org', default='unb-mds', help='GitHub organization name')
+    parser.add_argument('--org', default='coops-org', help='GitHub organization name')
     
     args = parser.parse_args()
     
@@ -25,12 +20,13 @@ def main():
     print(f"Started at: {datetime.now().isoformat()}")
     
     try:
-        #individual processors
+        # Individual processors
         from silver.member_analytics import process_member_analytics
         from silver.contribution_metrics import process_contribution_metrics
         from silver.collaboration_networks import process_collaboration_networks
         from silver.temporal_analysis import process_temporal_analysis
-        from silver.file_language_analysis import process_file_language_analysis
+        from silver.members_statistics import process_members_statistics
+        from silver.file_language_analysis import process_file_language_analysis  # ADICIONAR
         
         # Process data in logical order
         print("\nProcessing member analytics...")
@@ -45,16 +41,18 @@ def main():
         print("\nProcessing temporal analysis...")
         temporal_files = process_temporal_analysis()
 
-        print("\nProcessing file language analysis...")
+        print("\nProcessing members statistics...")
+        members_stats_files = process_members_statistics()
+
+        print("\nProcessing language analysis...")  # ADICIONAR
         language_files = process_file_language_analysis(
             max_sample_files=10,
             sample_strategy='largest',
-            save_detailed=False,
-            save_hierarchy=True 
+            save_hierarchy=True
         )
 
-        #  registry
-        all_files = member_files + contrib_files + collab_files + temporal_files + language_files
+        # Update registry
+        all_files = member_files + contrib_files + collab_files + temporal_files + members_stats_files + language_files
         update_data_registry('silver', 'all_processed', all_files)
         
         print(f"\nSilver processing completed successfully!")
@@ -63,7 +61,7 @@ def main():
             print(f"   - {file_path}")
             
     except Exception as e:
-        print(f"\n Error during silver processing: {str(e)}")
+        print(f"\nError during silver processing: {str(e)}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

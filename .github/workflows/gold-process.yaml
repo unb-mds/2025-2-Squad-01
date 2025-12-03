@@ -1,0 +1,312 @@
+name: Gold Layer - Data Aggregation
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  process-gold-data:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      gold-completed: ${{ steps.processing.outputs.completed }}
+    
+    steps:
+      - name: Checkout repository
+        if: ${{ !env.ACT }}
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history to ensure we have all data files
+          fetch-depth: 0
+
+      - name: Pull latest data files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Get current branch name
+          CURRENT_BRANCH=$(git branch --show-current)
+          echo "Current branch: $CURRENT_BRANCH"
+          git pull origin "$CURRENT_BRANCH" --no-edit || echo "Already up to date"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy requests
+
+      - name: Verify Silver data exists
+        run: |
+          if [ ! -d "data/silver" ] || [ "$(find data/silver -name '*.json' | wc -l)" -eq 0 ]; then
+            echo "No Silver layer data found. Run silver processing first."
+            exit 1
+          fi
+          
+          echo "Silver data verified: $(find data/silver -name '*.json' | wc -l) files found"
+
+      - name: Process Gold layer data
+        id: processing
+        run: |
+          echo "Starting Gold layer processing..."
+          python src/gold_process.py --org "${GITHUB_REPOSITORY_OWNER}"
+          
+          # Check if files were generated
+          if [ "$(find data/gold -name '*.json' 2>/dev/null | wc -l)" -gt 0 ]; then
+            echo "Gold processing completed successfully"
+            echo "completed=true" >> $GITHUB_OUTPUT
+          else
+            echo "No files generated in gold layer"
+            echo "completed=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Update data registry
+        if: steps.processing.outputs.completed == 'true'
+        run: |
+          echo "Updating data registry with Gold layer files..."
+          python src/registry_manager.py
+
+      - name: List generated files
+        if: steps.processing.outputs.completed == 'true'
+        run: |
+          echo "Gold layer files generated:"
+          find data/gold -name '*.json' -type f | sort | while read file; do
+            size=$(du -h "$file" | cut -f1)
+            records=$(jq 'if type == "array" then length elif type == "object" and has("_metadata") then (.record_count // "N/A") else "1" end' "$file" 2>/dev/null || echo "N/A")
+            echo "  - $file ($size, $records records)"
+          done
+
+      - name: Commit and push Gold data
+        if: steps.processing.outputs.completed == 'true' && !env.ACT
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Configure remote with token
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
+          # Try merge strategy instead of rebase to avoid conflicts
+          git config pull.rebase false
+          
+          # Add files before attempting merge
+          git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist yet"
+          
+          # Get current branch for pull/push operations
+          CURRENT_BRANCH=$(git branch --show-current)
+          echo "Working on branch: $CURRENT_BRANCH"
+          
+          # Pull with merge strategy and auto-resolve conflicts
+          if ! git pull origin "$CURRENT_BRANCH" --no-edit; then
+            echo "Merge conflicts detected, auto-resolving..."
+            
+            # For add/add conflicts, prefer our version (gold data)
+            git status --porcelain | grep "AA" | awk '{print $2}' | xargs -r git checkout --ours
+            git status --porcelain | grep "DU" | awk '{print $2}' | xargs -r git add
+            git status --porcelain | grep "UD" | awk '{print $2}' | xargs -r git rm
+            
+            # Re-add our gold files
+            git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
+            
+            # Complete the merge
+            git commit --no-edit -m "[Gold] Auto-resolve merge conflicts and update aggregated data"
+          fi
+          
+          # Add gold files again and commit if there are changes
+          git add data/gold/ data/master_registry.json data/data_catalog.json || echo "Some files may not exist"
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "[Gold] Update aggregated analytics data
+            
+            - Processed Silver data into final aggregated formats
+            - Generated $(find data/gold -name '*.json' | wc -l) gold layer files
+            - Updated data registry and catalog"
+          fi
+          
+          # Push with retry logic
+          for i in {1..3}; do
+            if git push origin "$CURRENT_BRANCH"; then
+              echo "Push successful on attempt $i"
+              break
+            else
+              echo "Push failed on attempt $i, retrying..."
+              git pull --no-edit origin "$CURRENT_BRANCH"
+              sleep 2
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  check-ai-enabled:
+    name: Check if AI Analysis is enabled
+    needs: process-gold-data
+    if: needs.process-gold-data.outputs.gold-completed == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.check.outputs.enabled }}
+    steps:
+      - name: Check for GEMINI_API_KEY
+        id: check
+        run: |
+          if [ -n "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "enabled=true" >> $GITHUB_OUTPUT
+            echo "✅ GEMINI_API_KEY found - AI Analysis will run"
+          else
+            echo "enabled=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ GEMINI_API_KEY not configured - AI Analysis disabled"
+          fi
+
+  generate-members-statistics:
+    name: Generate Member Statistics
+    needs: [process-gold-data, check-ai-enabled]
+    if: needs.check-ai-enabled.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Generate members statistics
+        run: |
+          python src/silver/members_statistics.py
+      
+      - name: Upload statistics artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/members_statistics.json
+          retention-days: 1
+
+  ai-analysis:
+    name: Generate AI Analysis
+    needs: [check-ai-enabled, generate-members-statistics]
+    if: needs.check-ai-enabled.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Download statistics artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/
+      
+      - name: Generate AI analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -m src.ai_analysis.generate_members_ai
+      
+      - name: Upload AI analysis artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-analysis
+          path: data/silver/ai/members_ai.json
+          retention-days: 7
+
+  commit-ai-results:
+    name: Commit AI Analysis Results
+    needs: [check-ai-enabled, ai-analysis]
+    if: needs.check-ai-enabled.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Pull latest changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          CURRENT_BRANCH=$(git branch --show-current)
+          git pull origin "$CURRENT_BRANCH" --no-edit || echo "Already up to date"
+      
+      - name: Download statistics artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: members-statistics
+          path: data/silver/
+      
+      - name: Download AI analysis artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ai-analysis
+          path: data/silver/ai/
+      
+      - name: Commit and push results
+        run: |
+          git add data/silver/members_statistics.json
+          git add data/silver/ai/members_ai.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            CURRENT_BRANCH=$(git branch --show-current)
+            git commit -m "[AI] Update AI analysis results
+            
+            - Generated member statistics
+            - Processed AI analysis with Gemini
+            - Updated members_ai.json"
+            
+            for i in {1..3}; do
+              if git push origin "$CURRENT_BRANCH"; then
+                echo "✅ AI analysis results committed successfully"
+                break
+              else
+                echo "Push failed on attempt $i, retrying..."
+                git pull --no-edit origin "$CURRENT_BRANCH"
+                sleep 2
+              fi
+            done
+          fi
+
+  ai-disabled-notice:
+    name: AI Analysis Disabled
+    needs: [process-gold-data, check-ai-enabled]
+    if: needs.process-gold-data.outputs.gold-completed == 'true' && needs.check-ai-enabled.outputs.enabled == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log disabled status
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "ℹ️  AI Analysis is disabled"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "To enable AI Analysis, add GEMINI_API_KEY to repository secrets:"
+          echo "1. Go to Settings → Secrets and variables → Actions"
+          echo "2. Click 'New repository secret'"
+          echo "3. Name: GEMINI_API_KEY"
+          echo "4. Value: Your Gemini API key"
+          echo ""
+          echo "Workflow completed successfully (AI Analysis skipped)"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

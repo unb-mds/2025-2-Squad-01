@@ -28,9 +28,9 @@ def process_temporal_analysis() -> List[str]:
     for issue in issues_data:
         created_at = parse_github_date(issue.get('created_at'))
         if created_at:
-            # Use name as primary identifier, fallback to login if name not available
-            user = issue.get('user', {})
-            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            # Use login as primary identifier (unique on GitHub)
+            user = issue.get('user') or {}
+            user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
                 'date': created_at,
@@ -41,8 +41,8 @@ def process_temporal_analysis() -> List[str]:
         
         updated_at = parse_github_date(issue.get('updated_at'))
         if updated_at and issue.get('state') == 'closed':
-            user = issue.get('user', {})
-            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            user = issue.get('user') or {}
+            user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
                 'date': updated_at,
@@ -55,9 +55,9 @@ def process_temporal_analysis() -> List[str]:
     for pr in prs_data:
         created_at = parse_github_date(pr.get('created_at'))
         if created_at:
-            # Use name as primary identifier, fallback to login if name not available
-            user = pr.get('user', {})
-            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            # Use login as primary identifier (unique on GitHub)
+            user = pr.get('user') or {}
+            user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
                 'date': created_at,
@@ -68,8 +68,8 @@ def process_temporal_analysis() -> List[str]:
         
         updated_at = parse_github_date(pr.get('updated_at'))
         if updated_at and pr.get('state') == 'closed':
-            user = pr.get('user', {})
-            user_identifier = user.get('name') or user.get('login') or 'unknown'
+            user = pr.get('user') or {}
+            user_identifier = user.get('login') or user.get('name') or 'unknown'
             
             all_events.append({
                 'date': updated_at,
@@ -81,23 +81,25 @@ def process_temporal_analysis() -> List[str]:
 
     for commit in commits_data:
         commit_date = None
-        if commit.get('commit', {}).get('author', {}).get('date'):
-            commit_date = parse_github_date(commit['commit']['author']['date'])
+        commit_obj = commit.get('commit') or {}
+        author_obj = commit_obj.get('author') or {}
+        if author_obj.get('date'):
+            commit_date = parse_github_date(author_obj['date'])
         
         if commit_date:
             # Try to get user identifier from multiple possible locations
-            # Priority: name (more reliable) > login (can be null) > 'unknown'
+            # Priority: login (unique GitHub ID) > name (can vary per commit config)
             user_identifier = 'unknown'
             
-            # First try: commit.commit.author.name (most reliable, always present)
-            if commit.get('commit', {}).get('author', {}).get('name'):
-                user_identifier = commit['commit']['author']['name']
-            # Second try: commit.commit.author.login (from GraphQL or enriched REST)
-            elif commit.get('commit', {}).get('author', {}).get('login'):
-                user_identifier = commit['commit']['author']['login']
-            # Third try: commit.author.login (from REST API root level)
-            elif commit.get('author', {}).get('login'):
+            # First try: commit.commit.author.login (from GraphQL or enriched REST)
+            if author_obj.get('login'):
+                user_identifier = author_obj['login']
+            # Second try: commit.author.login (from REST API root level)
+            elif commit.get('author', {}) and commit['author'].get('login'):
                 user_identifier = commit['author']['login']
+            # Third try: commit.commit.author.name (fallback, less reliable)
+            elif author_obj.get('name'):
+                user_identifier = author_obj['name']
             
             all_events.append({
                 'date': commit_date,
@@ -113,11 +115,9 @@ def process_temporal_analysis() -> List[str]:
     for event in issue_events_data:
         event_date = parse_github_date(event.get('created_at'))
         if event_date:
-            # Use name as primary identifier, fallback to login if name not available
-            actor = event.get('actor', {})
-            user_identifier = 'unknown'
-            if actor:
-                user_identifier = actor.get('name') or actor.get('login') or 'unknown'
+            # Use login as primary identifier (unique on GitHub)
+            actor = event.get('actor') or {}
+            user_identifier = actor.get('login') or actor.get('name') or 'unknown'
             
             all_events.append({
                 'date': event_date,

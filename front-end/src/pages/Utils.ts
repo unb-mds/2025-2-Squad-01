@@ -137,7 +137,7 @@ export class Utils {
    */
   static async fetchAndProcessActivityData(type?: string): Promise<ProcessedActivityResponse> {
     const response = await fetch(
-      'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/temporal_events.json'
+      'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/extraction-overhall/data/silver/temporal_events.json'
     );
 
     if (!response.ok) {

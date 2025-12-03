@@ -19,8 +19,6 @@ const menuItems: MenuItem[] = [
   { id: 'commits', label: 'Commits', icon: '💻' },
   { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
-  { id: 'collaboration', label: 'Collaboration', icon: '🤝' },
-  { id: 'structure', label: 'Structure', icon: '🏗️' },
   { id: 'visualization', label: 'Visualization', icon: '🎨' }, 
 ];
 
@@ -50,7 +48,7 @@ export default function RepositoryToolbar({
     if (!data) {
       async function fetchRepoNames() {
         try {
-          const response = await fetch('/2025-2-Squad-01/available_repos.json');
+          const response = await fetch(`${import.meta.env.BASE_URL}available_repos.json`);
           if (response.ok) {
             const repos = await response.json();
             setAvailableRepoNames(repos);
