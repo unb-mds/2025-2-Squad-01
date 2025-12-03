@@ -1,10 +1,121 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T01:47:38.573931",
+      "extracted_at": "2025-12-03T05:00:50.824715",
       "file_path": "data/bronze/prs_2025-2-OncoMap.json",
-      "record_count": 37
+      "record_count": 38
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128",
+    "repository_url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap",
+    "labels_url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128/events",
+    "html_url": "https://github.com/unb-mds/2025-2-OncoMap/pull/128",
+    "id": 3688163530,
+    "node_id": "PR_kwDOPiZsc862uYXU",
+    "number": 128,
+    "title": "build(deps): bump validator from 13.15.20 to 13.15.23 in /Oncomap/backend",
+    "user": {
+      "login": "dependabot[bot]",
+      "id": 49699333,
+      "node_id": "MDM6Qm90NDk2OTkzMzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dependabot%5Bbot%5D",
+      "html_url": "https://github.com/apps/dependabot",
+      "followers_url": "https://api.github.com/users/dependabot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dependabot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dependabot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dependabot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dependabot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dependabot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dependabot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dependabot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 9759696029,
+        "node_id": "LA_kwDOPiZsc88AAAACRbkknQ",
+        "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/labels/dependencies",
+        "name": "dependencies",
+        "color": "0366d6",
+        "default": false,
+        "description": "Pull requests that update a dependency file"
+      },
+      {
+        "id": 9759696032,
+        "node_id": "LA_kwDOPiZsc88AAAACRbkkoA",
+        "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/labels/javascript",
+        "name": "javascript",
+        "color": "168700",
+        "default": false,
+        "description": "Pull requests that update javascript code"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2025-12-03T02:01:59Z",
+    "updated_at": "2025-12-03T03:31:44Z",
+    "closed_at": "2025-12-03T03:31:37Z",
+    "author_association": "CONTRIBUTOR",
+    "type": null,
+    "active_lock_reason": null,
+    "draft": false,
+    "pull_request": {
+      "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/pulls/128",
+      "html_url": "https://github.com/unb-mds/2025-2-OncoMap/pull/128",
+      "diff_url": "https://github.com/unb-mds/2025-2-OncoMap/pull/128.diff",
+      "patch_url": "https://github.com/unb-mds/2025-2-OncoMap/pull/128.patch",
+      "merged_at": "2025-12-03T03:31:37Z"
+    },
+    "body": "Bumps [validator](https://github.com/validatorjs/validator.js) from 13.15.20 to 13.15.23.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/validatorjs/validator.js/releases\">validator's releases</a>.</em></p>\n<blockquote>\n<h2>13.15.23</h2>\n<h3>Fixes, New Locales and Enhancements</h3>\n<ul>\n<li><strong>Doc fixes and others:</strong>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2631\">#2631</a> <a href=\"https://github.com/WikiRik\"><code>@​WikiRik</code></a></li>\n</ul>\n</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/validatorjs/validator.js/compare/13.15.22...13.15.23\">https://github.com/validatorjs/validator.js/compare/13.15.22...13.15.23</a></p>\n<h2>13.15.22</h2>\n<h3>Fixes, New Locales and Enhancements</h3>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2622\">#2622</a> <code>isURL</code>: fix regression with hostnames with ports <a href=\"https://github.com/mbtools\"><code>@​mbtools</code></a></li>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2616\">#2616</a> <code>isLength</code>: improve handling Unicode variation selectors <a href=\"https://github.com/koral\"><code>@​koral</code></a>--</li>\n<li><strong>Doc fixes and others:</strong>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2621\">#2621</a> <a href=\"https://github.com/mbtools\"><code>@​mbtools</code></a></li>\n</ul>\n</li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/mbtools\"><code>@​mbtools</code></a> made their first contribution in <a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2622\">validatorjs/validator.js#2622</a></li>\n<li><a href=\"https://github.com/koral\"><code>@​koral</code></a>-- made their first contribution in <a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2616\">validatorjs/validator.js#2616</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/validatorjs/validator.js/compare/13.15.20...13.15.22\">https://github.com/validatorjs/validator.js/compare/13.15.20...13.15.22</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/validatorjs/validator.js/blob/master/CHANGELOG.md\">validator's changelog</a>.</em></p>\n<blockquote>\n<h1>13.15.23</h1>\n<h3>Fixes, New Locales and Enhancements</h3>\n<ul>\n<li><strong>Doc fixes and others:</strong>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2631\">#2631</a> <a href=\"https://github.com/WikiRik\"><code>@​WikiRik</code></a></li>\n</ul>\n</li>\n</ul>\n<h1>13.15.22</h1>\n<h3>Fixes, New Locales and Enhancements</h3>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2622\">#2622</a> <code>isURL</code>: fix regression with hostnames with ports <a href=\"https://github.com/mbtools\"><code>@​mbtools</code></a></li>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2616\">#2616</a> <code>isLength</code>: improve handling Unicode variation selectors <a href=\"https://github.com/koral\"><code>@​koral</code></a>--</li>\n<li><strong>Doc fixes and others:</strong>\n<ul>\n<li><a href=\"https://redirect.github.com/validatorjs/validator.js/pull/2621\">#2621</a> <a href=\"https://github.com/mbtools\"><code>@​mbtools</code></a></li>\n</ul>\n</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/9113304819ae2627c1b7e9c5994a76f60efbe0b6\"><code>9113304</code></a> fix(build): move to trusted publishing (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2631\">#2631</a>)</li>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/f2b5c17dbe03f2ca9ad9122c597f81e86ce1a9a1\"><code>f2b5c17</code></a> maintenance: 2511 release (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2627\">#2627</a>)</li>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/d457ecaf55b0f3d8bd379d82757425d0d13dd382\"><code>d457eca</code></a> fix(isLength): correctly handle Unicode variation selectors (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2616\">#2616</a>)</li>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/f2e3633f22fd3016656789d100bc451d857e7488\"><code>f2e3633</code></a> docs: add install instructions to contibution guide (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2621\">#2621</a>)</li>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/cf401458b8733d981a3724d634c795a9d612b516\"><code>cf40145</code></a> fix: URL validation for hostnames with ports (no protocol) (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2622\">#2622</a>)</li>\n<li><a href=\"https://github.com/validatorjs/validator.js/commit/4af61243ba0ae93f29e7689040e188b5849ff1b0\"><code>4af6124</code></a> maintenance: 2510 release (<a href=\"https://redirect.github.com/validatorjs/validator.js/issues/2585\">#2585</a>)</li>\n<li>See full diff in <a href=\"https://github.com/validatorjs/validator.js/compare/13.15.20...13.15.23\">compare view</a></li>\n</ul>\n</details>\n<details>\n<summary>Maintainer changes</summary>\n<p>This version was pushed to npm by [GitHub Actions](<a href=\"https://www.npmjs.com/~GitHub\">https://www.npmjs.com/~GitHub</a> Actions), a new releaser for validator since your current version.</p>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=validator&package-manager=npm_and_yarn&previous-version=13.15.20&new-version=13.15.23)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\nYou can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/unb-mds/2025-2-OncoMap/network/alerts).\n\n</details>",
+    "closed_by": {
+      "login": "ArturFGaldino",
+      "id": 187340217,
+      "node_id": "U_kgDOCyqVuQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/187340217?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ArturFGaldino",
+      "html_url": "https://github.com/ArturFGaldino",
+      "followers_url": "https://api.github.com/users/ArturFGaldino/followers",
+      "following_url": "https://api.github.com/users/ArturFGaldino/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ArturFGaldino/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ArturFGaldino/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ArturFGaldino/subscriptions",
+      "organizations_url": "https://api.github.com/users/ArturFGaldino/orgs",
+      "repos_url": "https://api.github.com/users/ArturFGaldino/repos",
+      "events_url": "https://api.github.com/users/ArturFGaldino/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ArturFGaldino/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/128/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "repo_name": "2025-2-OncoMap"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2025-2-OncoMap/issues/127",

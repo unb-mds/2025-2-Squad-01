@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T01:47:33.410497",
+      "extracted_at": "2025-12-03T05:00:46.137566",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
-      "record_count": 35
+      "record_count": 34
     }
   },
   {
@@ -337,10 +337,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
@@ -530,10 +530,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
@@ -732,16 +732,16 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-27T16:25:55Z",
-    "updated_at": "2025-11-27T16:25:55Z",
+    "updated_at": "2025-12-03T03:28:20Z",
     "closed_at": null,
     "author_association": "COLLABORATOR",
     "type": {
@@ -766,7 +766,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 🏠 Refinamentos da Home Page \n\n## 📖 Descrição\nEsta issue reúne as melhorias e ajustes que precisam ser feitos na **Home Page do Portal dos Professores**.  \nO objetivo é deixar a página mais consistente com a identidade visual definida, melhorar a navegação e ajustar textos/elementos para refletir o estado atual do projeto.\n\nTodas as mudanças foram discutidas pela equipe durante a reunião da semana e serão aplicadas nesta sprint de forma incremental.\n\n---\n\n## 🎯 Objetivos\n- [x] Aprimorar a navegação da Home Page  \n- [x] Ajustar textos e seções para refletir a proposta atual do portal  \n- [x] Melhorar a organização visual e a clareza das informações apresentadas  \n\n---\n\n## 🛠️ Tarefas a serem realizadas\n\n### 🔹 Navegação (Navbar)\n- [ ] Adicionar o botão **\"Orientador\"** na barra de navegação (mesmo estilo do Lovable)  \n- [ ] Alterar o subtítulo do portal conforme nova definição da equipe  \n- [ ] Trocar “Hub Docente” por **“Portal dos Professores”**  \n  - (ou manter apenas a logo, conforme decidido no review)\n\n---\n\n### 🔹 Conteúdo da Home\n- [ ] Remover informações que não estão disponíveis (ex: campos vazios no rodapé)  \n- [ ] Ajustar a seção **\"Perfis completos\"**  \n  - Remover disciplinas exibidas (não usadas na R1)\n- [ ] Trocar o título da seção atual para **“Orientador Inteligente”**  \n- [ ] Exibir **apenas os 5 departamentos com mais professores**  \n  - Dados devem ser puxados do JSON  \n  - Ordenar pela contagem de docentes  \n\n---\n\n## 📌 Critérios de Aceite\n- A navbar deve conter o botão “Orientador” funcionando com navegação correta.  \n- O subtítulo da página deve estar atualizado.  \n- O nome do portal deve estar padronizado como **Portal dos Professores** (ou somente com a logo, se aprovado).  \n- O rodapé deve mostrar apenas informações reais e confirmadas.  \n- A seção de perfis não deve exibir disciplinas.  \n- A Home deve indicar corretamente **“Orientador Inteligente”**.  \n- A listagem dos departamentos deve mostrar apenas os **5 com maior número de docentes**.  \n\n---\n\n## 🚦 Prioridade\n**Alta** — ajustes essenciais para a Release 1 e consistência visual da Home Page.\n\n---\n\n## 👤 Responsável\n**Kaio Amoury Sasaki Acacio**\n\n---\n\n## 📎 Observações\nEssas melhorias fazem parte do refinamento visual antes da Release 1.  \nConforme discutido na reunião, outras seções da Home podem ser revisadas na Sprint seguinte, quando iniciarmos a integração com os dados do Lattes.\n\n---\n\nSe quiser, eu também posso montar uma **issue complementar** só para o “Orientador Inteligente” ou para o **ranking de departamentos**, é só pedir.\n",
+    "body": "# 🏠 Refinamentos da Home Page \n\n## 📖 Descrição\nEsta issue reúne as melhorias e ajustes que precisam ser feitos na **Home Page do Portal dos Professores**.  \nO objetivo é deixar a página mais consistente com a identidade visual definida, melhorar a navegação e ajustar textos/elementos para refletir o estado atual do projeto.\n\nTodas as mudanças foram discutidas pela equipe durante a reunião da semana e serão aplicadas nesta sprint de forma incremental.\n\n---\n\n## 🎯 Objetivos\n- [x] Aprimorar a navegação da Home Page  \n- [x] Ajustar textos e seções para refletir a proposta atual do portal  \n- [x] Melhorar a organização visual e a clareza das informações apresentadas  \n\n---\n\n## 🛠️ Tarefas a serem realizadas\n\n### 🔹 Navegação (Navbar)\n- [ ] Adicionar o botão **\"Orientador\"** na barra de navegação (mesmo estilo do Lovable)  \n- [ ] Alterar o subtítulo do portal conforme nova definição da equipe  \n- [ ] Trocar “Hub Docente” por **“Portal dos Professores”**  \n  - (ou manter apenas a logo, conforme decidido no review)\n\n---\n\n### 🔹 Conteúdo da Home\n- [ ] Remover informações que não estão disponíveis (ex: campos vazios no rodapé)  \n- [ ] Ajustar a seção **\"Perfis completos\"**  \n  - Remover disciplinas exibidas (não usadas na R1)\n- [ ] Trocar o título da seção atual para **“Orientador Inteligente”**  \n- [ ] Exibir **apenas os 5 departamentos com mais professores**  \n  - Dados devem ser puxados do JSON  \n  - Ordenar pela contagem de docentes  \n\n---\n\n## 📌 Critérios de Aceite\n- A navbar deve conter o botão “Orientador” funcionando com navegação correta.  \n- O subtítulo da página deve estar atualizado.  \n- O nome do portal deve estar padronizado como **Portal dos Professores** (ou somente com a logo, se aprovado).  \n- O rodapé deve mostrar apenas informações reais e confirmadas.  \n- A seção de perfis não deve exibir disciplinas.  \n- A Home deve indicar corretamente **“Orientador Inteligente”**.  \n- A listagem dos departamentos deve mostrar apenas os **5 com maior número de docentes**.  \n\n---\n\n## 🚦 Prioridade\n**Alta** — ajustes essenciais para a Release 1 e consistência visual da Home Page.\n\n---\n\n## 👤 Responsável\n**Kaio Amoury Sasaki Acacio**\n\n---\n\n## 📎 Observações\nEssas melhorias fazem parte do refinamento visual antes da Release 1.  \nConforme discutido na reunião, outras seções da Home podem ser revisadas na Sprint seguinte, quando iniciarmos a integração com os dados do Lattes.\n\n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/147/reactions",
@@ -914,10 +914,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1141,10 +1141,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1332,10 +1332,10 @@
         "site_admin": false
       },
       "open_issues": 3,
-      "closed_issues": 11,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T01:29:18Z",
+      "updated_at": "2025-12-03T04:35:29Z",
       "due_on": null,
       "closed_at": null
     },
@@ -7482,253 +7482,6 @@
       "eyes": 0
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/64/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "repo_name": "2025-2-Portal-dos-Professores"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63",
-    "repository_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores",
-    "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63/events",
-    "html_url": "https://github.com/unb-mds/2025-2-Portal-dos-Professores/issues/63",
-    "id": 3534464574,
-    "node_id": "I_kwDOPiXDiM7Sq6Y-",
-    "number": 63,
-    "title": "Scraping dos Dados do Lattes",
-    "user": {
-      "login": "caiolacerdamt",
-      "id": 122616615,
-      "node_id": "U_kgDOB077Jw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/122616615?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caiolacerdamt",
-      "html_url": "https://github.com/caiolacerdamt",
-      "followers_url": "https://api.github.com/users/caiolacerdamt/followers",
-      "following_url": "https://api.github.com/users/caiolacerdamt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caiolacerdamt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caiolacerdamt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caiolacerdamt/subscriptions",
-      "organizations_url": "https://api.github.com/users/caiolacerdamt/orgs",
-      "repos_url": "https://api.github.com/users/caiolacerdamt/repos",
-      "events_url": "https://api.github.com/users/caiolacerdamt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caiolacerdamt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 9242326627,
-        "node_id": "LA_kwDOPiXDiM8AAAACJuK2Yw",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/arquitetura",
-        "name": "arquitetura",
-        "color": "27ad9e",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9289824379,
-        "node_id": "LA_kwDOPiXDiM8AAAACKbd4ew",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/docker",
-        "name": "docker",
-        "color": "4f41cd",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9289824715,
-        "node_id": "LA_kwDOPiXDiM8AAAACKbd5yw",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/back-end",
-        "name": "back-end",
-        "color": "b66129",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9338920644,
-        "node_id": "LA_kwDOPiXDiM8AAAACLKSexA",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/dados",
-        "name": "dados",
-        "color": "a39f3d",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9338921270,
-        "node_id": "LA_kwDOPiXDiM8AAAACLKShNg",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/python",
-        "name": "python",
-        "color": "fb3d2c",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9338921484,
-        "node_id": "LA_kwDOPiXDiM8AAAACLKSiDA",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/webscraping",
-        "name": "webscraping",
-        "color": "785442",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 9344176811,
-        "node_id": "LA_kwDOPiXDiM8AAAACLPTSqw",
-        "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/labels/json",
-        "name": "json",
-        "color": "d9321e",
-        "default": false,
-        "description": ""
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignee": {
-      "login": "caiolacerdamt",
-      "id": 122616615,
-      "node_id": "U_kgDOB077Jw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/122616615?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caiolacerdamt",
-      "html_url": "https://github.com/caiolacerdamt",
-      "followers_url": "https://api.github.com/users/caiolacerdamt/followers",
-      "following_url": "https://api.github.com/users/caiolacerdamt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caiolacerdamt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caiolacerdamt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caiolacerdamt/subscriptions",
-      "organizations_url": "https://api.github.com/users/caiolacerdamt/orgs",
-      "repos_url": "https://api.github.com/users/caiolacerdamt/repos",
-      "events_url": "https://api.github.com/users/caiolacerdamt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caiolacerdamt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "assignees": [
-      {
-        "login": "caiolacerdamt",
-        "id": 122616615,
-        "node_id": "U_kgDOB077Jw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/122616615?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/caiolacerdamt",
-        "html_url": "https://github.com/caiolacerdamt",
-        "followers_url": "https://api.github.com/users/caiolacerdamt/followers",
-        "following_url": "https://api.github.com/users/caiolacerdamt/following{/other_user}",
-        "gists_url": "https://api.github.com/users/caiolacerdamt/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/caiolacerdamt/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/caiolacerdamt/subscriptions",
-        "organizations_url": "https://api.github.com/users/caiolacerdamt/orgs",
-        "repos_url": "https://api.github.com/users/caiolacerdamt/repos",
-        "events_url": "https://api.github.com/users/caiolacerdamt/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/caiolacerdamt/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/milestones/10",
-      "html_url": "https://github.com/unb-mds/2025-2-Portal-dos-Professores/milestone/10",
-      "labels_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/milestones/10/labels",
-      "id": 13989695,
-      "node_id": "MI_kwDOPiXDiM4A1Xc_",
-      "number": 10,
-      "title": "Sprint 08",
-      "description": "",
-      "creator": {
-        "login": "caiolacerdamt",
-        "id": 122616615,
-        "node_id": "U_kgDOB077Jw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/122616615?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/caiolacerdamt",
-        "html_url": "https://github.com/caiolacerdamt",
-        "followers_url": "https://api.github.com/users/caiolacerdamt/followers",
-        "following_url": "https://api.github.com/users/caiolacerdamt/following{/other_user}",
-        "gists_url": "https://api.github.com/users/caiolacerdamt/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/caiolacerdamt/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/caiolacerdamt/subscriptions",
-        "organizations_url": "https://api.github.com/users/caiolacerdamt/orgs",
-        "repos_url": "https://api.github.com/users/caiolacerdamt/repos",
-        "events_url": "https://api.github.com/users/caiolacerdamt/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/caiolacerdamt/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 6,
-      "state": "closed",
-      "created_at": "2025-10-27T21:22:22Z",
-      "updated_at": "2025-10-27T21:25:28Z",
-      "due_on": null,
-      "closed_at": "2025-10-27T21:23:52Z"
-    },
-    "comments": 0,
-    "created_at": "2025-10-21T01:12:02Z",
-    "updated_at": "2025-10-27T21:25:03Z",
-    "closed_at": "2025-10-27T21:21:21Z",
-    "author_association": "COLLABORATOR",
-    "type": {
-      "id": 20193716,
-      "node_id": "IT_kwDOCH8E_c4BNCG0",
-      "name": "Feature",
-      "description": "A request, idea, or new functionality",
-      "color": "blue",
-      "created_at": "2024-02-18T04:46:04Z",
-      "updated_at": "2024-10-08T22:02:57Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## Descrição  \nApós superar a etapa do captcha na plataforma Lattes, é necessário implementar a funcionalidade que **extrai os dados do currículo Lattes** e **salva as informações em um arquivo JSON**.  \nEssa etapa permitirá integrar os dados capturados ao backend/frontend, garantindo persistência estruturada e padronizada das informações dos docentes.\n\n---\n\n## Objetivo  \n- [ ] Extrair os dados do currículo Lattes de forma automatizada após a validação do captcha.  \n- [ ] Estruturar e salvar os dados extraídos em um arquivo JSON padronizado.  \n- [ ] Garantir que as informações essenciais (ex: nome, formação, experiências, publicações, áreas de atuação) estejam presentes.  \n- [ ] Preparar a base para futura integração com o banco de dados do **Hub Docente UnB**.\n\n---\n\n## Requisitos  \n- O script deve receber como entrada o identificador do currículo Lattes (ou URL completa).  \n- O captcha já será resolvido.  \n- O código deve ser modular para facilitar manutenção e evolução futura.  \n- Tratar erros de scraping e estruturar logs básicos para depuração.\n\n---\n\n## Prioridade  \n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica\n\n---\n\n## Checklist de Tarefas  \n- [x] Analisar a estrutura HTML da página do Lattes para mapear campos de interesse.  \n- [x] Desenvolver função de scraping/parsing para extrair os dados após o captcha.  \n- [x] Implementar tratamento de erros e logs básicos.  \n- [x] Validar a extração com 3 currículos diferentes para garantir consistência.  \n- [x] Commitar código e documentação no repositório.\n",
-    "closed_by": {
-      "login": "caiolacerdamt",
-      "id": 122616615,
-      "node_id": "U_kgDOB077Jw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/122616615?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caiolacerdamt",
-      "html_url": "https://github.com/caiolacerdamt",
-      "followers_url": "https://api.github.com/users/caiolacerdamt/followers",
-      "following_url": "https://api.github.com/users/caiolacerdamt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caiolacerdamt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caiolacerdamt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caiolacerdamt/subscriptions",
-      "organizations_url": "https://api.github.com/users/caiolacerdamt/orgs",
-      "repos_url": "https://api.github.com/users/caiolacerdamt/repos",
-      "events_url": "https://api.github.com/users/caiolacerdamt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caiolacerdamt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/63/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
