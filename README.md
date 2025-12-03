@@ -1,96 +1,214 @@
-# CoOps
+# 📊 CoOps
 
-# 📊 Sobre
+![License](https://img.shields.io/github/license/unb-mds/2025-2-Squad-01)
+![Issues](https://img.shields.io/github/issues/unb-mds/2025-2-Squad-01)
+![Contributors](https://img.shields.io/github/contributors/unb-mds/2025-2-Squad-01)
+![Stars](https://img.shields.io/github/stars/unb-mds/2025-2-Squad-01?style=social)
+![Forks](https://img.shields.io/github/forks/unb-mds/2025-2-Squad-01?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/unb-mds/2025-2-Squad-01)
 
-Projeto desenvolvido na disciplina **Métodos de Desenvolvimento de Software (MDS)** – Engenharia de Software (UnB).
-
-Nosso objetivo é criar uma ferramenta que permita visualizar e interpretar métricas de colaboração no **GitHub**, evoluindo de repositórios individuais para **organizações**, com auxílio de **agentes de IA** para explicar o significado das métricas coletadas.
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![React](https://img.shields.io/badge/react-18.3.1-61dafb)
+![TypeScript](https://img.shields.io/badge/typescript-5.6.2-blue)
+![Vite](https://img.shields.io/badge/vite-6.0.1-646CFF)
+![D3.js](https://img.shields.io/badge/d3.js-7.9.0-F9A03C)
+![GitHub Actions](https://img.shields.io/badge/github_actions-automated-2088FF)
 
 ---
 
-## 🚀 Propósito
+## 1. 📌 Visão Geral
+
+Projeto desenvolvido na disciplina **Métodos de Desenvolvimento de Software (MDS - 2025/2)** – Engenharia de Software (UnB).
+
+O **CoOps** é uma ferramenta que permite visualizar e interpretar métricas de colaboração no **GitHub**, evoluindo de repositórios individuais para **organizações**, com auxílio de **agentes de IA** para explicar o significado das métricas coletadas.
+
+### 🚀 Propósito
 O produto busca apoiar **desenvolvedores, mantenedores e organizações** na análise da colaboração dentro de projetos GitHub, fornecendo **métricas claras, visuais e interpretadas por IA**.  
-Assim, os usuários podem compreender melhor **produtividade, gargalos e qualidade** de seus projetos.
+
+Com o CoOps, os usuários podem:
+- 📊 **Visualizar métricas de colaboração** através de dashboards interativos
+- 🎯 **Analisar repositórios e organizações** com visualizações D3.js profissionais
+- 🤖 **Obter insights com IA** para interpretar métricas complexas
+- 📈 **Acompanhar produtividade, gargalos e qualidade** de projetos
 
 ---
 
-## 📌 Escopo do Produto
+## 2. 🧩 Links Importantes
 
-### Funcionalidades Inclusas (Escopo Principal)
-- **Dashboard de Métricas**: painel central para visualização de dados.
-- **Análise em Repositório e Organização**: alternar entre visão de um único projeto ou performance consolidada.
-- **Métricas a serem coletadas**:
-  - Issues → abertas/fechadas, tempo médio de resolução.
-  - Commits → frequência, volume por contribuidor.
-  - Pull Requests → quantidade, tempo de vida, taxa de aprovação, tamanho médio.
-  - Tecnologias → linguagens e frameworks usados.
-  - Qualidade de Código → métricas simples (ex.: tamanho médio de commits).
-- **Agente de IA Explicativo**: assistente virtual que interpreta gráficos e explica métricas.
+- 🗺️ [Story Map](https://www.figma.com/board/fuD1KRb6yGlJuFWPZSOWXx/CoOps?node-id=40000167-1737&t=udDroKh4FZePSKUv-0)
+- 🎨 [Protótipo de Alta Fidelidade](https://www.figma.com/proto/oCBp6kKarswmGbJAiIToyt/Prot%C3%B3tipo-Alta-Fidelidade?node-id=17-460&p=f&t=JcFBYqvzn89t0xPV-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1080&show-proto-sidebar=1)
+- 📋 [Board do Projeto no GitHub](https://github.com/orgs/unb-mds/projects/18)
+- 🏗️ [Arquitetura Medallion](./docs/ARQUITETURA.md)
+- 📊 [Extração de Dados](./docs/EXTRACAO_DADOS.md)
+- 📚 [Documentação de Sprints](./docs/sprints/)
+- 🔄 [Retrospectivas](./docs/sprints/README.md)
+
+---
+
+## 3. 📌 Escopo do Produto
+
+### Funcionalidades Implementadas
+- **Dashboard de Métricas**: painel central para visualização de dados
+- **Análise de Repositórios**: visualização individual de projetos GitHub
+- **Visualizações Interativas**:
+  - Treemap e CirclePack (estrutura de repositórios)
+  - Grafo de rede de colaboração
+  - Heatmap de atividades temporais
+  - Timeline de commits
+- **Métricas Coletadas**:
+  - Issues → abertas/fechadas, tempo médio de resolução
+  - Commits → frequência, volume por contribuidor, linhas adicionadas/removidas
+  - Pull Requests → quantidade, tempo de vida, taxa de aprovação
+  - Estrutura → 90+ linguagens de programação suportadas
+- **Pipeline de Dados**: Arquitetura Medallion (Bronze → Silver → Gold)
+- **Otimizações**: Extração 100x mais rápida (4h → 30s)
+- **Agente de IA**: Integração OpenAI para explicação de métricas
 
 ### Fora do Escopo (Versões Futuras)
-- Outras plataformas além do GitHub (ex.: GitLab, Bitbucket).
-- Ações de gerenciamento direto (ex.: fechar issue, aprovar PR).
-- Métricas de CI/CD (tempo de build, taxa de falha).
-- Predição de tendências com ML avançado.
+- Outras plataformas além do GitHub (ex.: GitLab, Bitbucket)
+- Ações de gerenciamento direto (ex.: fechar issue, aprovar PR)
+- Métricas de CI/CD (tempo de build, taxa de falha)
+- Predição de tendências com ML avançado
 
 ---
 
-## 🗂️ Backlog Inicial
+## 4. 🚀 Como Rodar o Projeto
 
-### Épicos
-1. Visualização de métricas
-2. Análise em nível de repositório e organização
-3. Explicação inteligente com IA
-4. Qualidade de código (básica)
-5. Integração com API GitHub
+### Pré-requisitos
+- Python 3.11+
+- Node.js v20+
+- GitHub CLI (`gh`)
+- GitHub Act (CLI extension)
+- Docker Desktop (instalado e rodando)
+- Token do GitHub com permissões de leitura
 
-### Exemplos de Histórias de Usuário
-- Como **mantenedor**, quero ver issues abertas e fechadas, para entender o andamento do projeto.
-- Como **desenvolvedor**, quero ver quantos commits fiz no mês, para acompanhar minha contribuição.
-- Como **líder de equipe**, quero ver o tempo médio para revisar PRs, para identificar gargalos.
-- Como **gestor de organização**, quero métricas consolidadas de todos os repositórios, para avaliar performance geral.
-- Como **usuário iniciante**, quero que a IA explique métricas, para interpretar melhor os gráficos.
+## 📦 Instalação e Execução
 
----
-
-## 🎨 Story Map (Figma)
-👉 [Link do TEMPLATE FIGMA](https://www.figma.com/board/fuD1KRb6yGlJuFWPZSOWXx/Template-MDS?node-id=0-1&t=jP65B3v7rqapejoa-1)
-
-## 🎨 Protótipo (Figma)
-👉 [Link do TEMPLATE FIGMA](https://www.figma.com/proto/oCBp6kKarswmGbJAiIToyt/Prot%C3%B3tipo-Alta-Fidelidade?node-id=17-460&p=f&t=JcFBYqvzn89t0xPV-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1080&show-proto-sidebar=1)
-
----
-
-## 👥 Equipe
-- **Scrum Master**: Pedro Druck
-- **Product Owner (PO)**: Marcos Antonio
-- **Time de Desenvolvimento**: Carlos Eduardo, Gustavo Xavier, Heitor Macedo, Pedro Rocha
-
----
-## Passos para rodar as funcionalidades do projeto
-
-# Pré-requisitos:
-- npm (v20) (Somente caso for rodar o front-end localmente)
-- python
-- github cli (gh)
-- github act (cli extension)
-- docker desktop (instalado e rodando)
-  
-# Instalação
 1. Clone o repositório:
-   ```powershell
-   git clone https://github.com/unb-mds/2025-2-Squad-01.git
-   cd 2025-2-Squad-01
+```bash
+git clone https://github.com/unb-mds/2025-2-Squad-01.git
+cd 2025-2-Squad-01
+```
 
-2. Inicie o Workflow usando o act:
-   ```powershell
-   gh act -W .github/workflows/bronze-extract.yaml -j extract-bronze-data --secret-file .secrets --bind
+2. Configure o ambiente Python:
+```bash
+python -m venv .venv
+# Windows:
+.venv\Scripts\Activate.ps1
+# Linux/Mac:
+source .venv/bin/activate
 
-   
-   
+pip install -r requirements.txt
+```
 
-## 📚 Referências
+3. Configure as variáveis de ambiente:
+```bash
+# Crie o arquivo .secrets com seu token
+echo "GITHUB_TOKEN=ghp_seu_token_aqui" > .secrets
+```
+
+4. Execute a extração de dados (Bronze):
+```bash
+python src/bronze_extract.py --token SEU_TOKEN_AQUI --cache
+```
+
+5. Execute o processamento (Silver):
+```bash
+python src/silver_process.py
+```
+
+6. Copie os dados para o frontend:
+```bash
+# Windows:
+xcopy data\silver\language_analysis_*.json front-end\public\data\silver\ /Y
+
+# Linux/Mac:
+cp data/silver/language_analysis_*.json front-end/public/data/silver/
+```
+
+7. Instale e rode o frontend:
+```bash
+cd front-end
+npm install
+npm run dev
+```
+
+8. Acesse a aplicação:
+```
+http://localhost:5173/2025-2-Squad-01
+```
+
+Para mais detalhes, consulte o [guia de contribuição](./CONTRIBUTING.md) e a [documentação de extração](./docs/EXTRACAO_DADOS.md).
+
+---
+
+## 5. 🏗️ Arquitetura
+
+O projeto utiliza a **Arquitetura Medallion** com três camadas:
+
+```
+GitHub API → Bronze (Raw) → Silver (Enriched) → Gold (Aggregated) → Frontend
+```
+
+- **🥉 Bronze**: Dados brutos extraídos da API do GitHub
+- **🥈 Silver**: Dados processados e enriquecidos com análises
+- **🥇 Gold**: Dados agregados prontos para visualização
+- **🎨 Frontend**: React + TypeScript + Vite + D3.js
+
+**Principais Otimizações:**
+- ⚡ 100x mais rápido: Extração de estrutura (4h → 30s)
+- 🔄 GraphQL/REST híbrido com processamento paralelo
+- 🎯 90+ linguagens de programação suportadas
+- 📊 Visualizações D3.js profissionais
+
+Para mais detalhes, consulte a [documentação de arquitetura](./docs/ARQUITETURA.md).
+
+---
+
+## 6. 👥 Equipe
+
+Squad 01 – MDS 2025/2 – FGA/UnB
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/pedruck.png" width="100px;" style="border-radius: 10px;" alt="Pedro Druck"/><br />
+      <sub><b>Pedro Druck</b></sub><br />
+      <sub>Scrum Master</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/cadumotta.png" width="100px;" style="border-radius: 10px;" alt="Carlos Eduardo"/><br />
+      <sub><b>Carlos Eduardo</b></sub><br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/guxvr.png" width="100px;" style="border-radius: 10px;" alt="Gustavo Xavier"/><br />
+      <sub><b>Gustavo Xavier</b></sub><br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/HeitorM50.png" width="100px;" style="border-radius: 10px;" alt="Heitor Macedo"/><br />
+      <sub><b>Heitor Macedo</b></sub><br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/pedrogrocha13.png" width="100px;" style="border-radius: 10px;" alt="Pedro Rocha"/><br />
+      <sub><b>Pedro Rocha</b></sub><br />
+      <sub>Developer</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 7. 📊 Entregas
+
+- ✅ **Release 1** (01/10/2025): Pipeline Bronze/Silver, Frontend básico
+- ✅ **Release 2** (07/12/2025): Visualizações D3.js, OpenAI, Testes completos
+
+**Documentação completa:** [Sprints e Retrospectivas](./docs/sprints/README.md)
+
+---
 - [GitHub Repo Visualization](https://githubnext.com/projects/repo-visualization/#explore-for-yourself)
 - SonarQube (benchmark de qualidade de código)
 - GitHub Insights
-
