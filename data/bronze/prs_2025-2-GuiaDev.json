@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T01:07:50.008384",
+      "extracted_at": "2025-12-03T01:47:48.160631",
       "file_path": "data/bronze/prs_2025-2-GuiaDev.json",
       "record_count": 33
     }
@@ -94,7 +94,7 @@
         "description": "external connections"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "Phill-Chill",
@@ -164,8 +164,8 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2025-12-03T00:12:54Z",
-    "updated_at": "2025-12-03T00:17:26Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T01:38:43Z",
+    "closed_at": "2025-12-03T01:38:42Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -175,10 +175,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/90",
       "diff_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/90.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-GuiaDev/pull/90.patch",
-      "merged_at": null
+      "merged_at": "2025-12-03T01:38:42Z"
     },
-    "body": "## Descrição\r\n\r\n Este PR remove o código de sincronização manual no frontend (Boxrepo.jsx), limpando estados locais e refs desnecessários. No backend, o endpoint POST /github/analyze foi eliminado. A aplicação passa a depender exclusivamente do cache de contexto e das rotas GET de análise automática, garantindo consistência entre a UI e o servidor e reduzindo chamadas redundantes e simplificando a estrutura do site.\r\n\r\n## Tipo de Alteração\r\n\r\n    - [x] 🐛 Correção de Bug\r\n    - [x] ✨ Nova Funcionalidade\r\n    - [ ] 💥 Quebra de Compatibilidade\r\n    - [ ] 📝 Documentação\r\n    - [x] ♻️ Refatoração\r\n    - [ ] ⚡ Melhoria de Performance\r\n    - [ ] 🧪 Testes\r\n    - [ ] 🔧 Ferramentas\r\n\r\n## Issue Relacionada\r\nCloses \r\n\r\n## Motivação e Contexto\r\n\r\nO objetivo deste PR é ajustar algumas funcionalidades faltantes no PR \r\n\r\n## Alterações Propostas\r\n\r\n-Botão de sync removido\r\n-Cache das analises\r\n-Preenchimento da box da Home\r\n-Preenchimento da box do Analisys\r\n-Otimização da requisição de análise de IA\r\n-Atualização dos teste unitário\r\n\r\n\r\n## Como Isso Foi Testado?\r\n\r\n-Execução do contêiner do frontend para validar a inicialização.\r\n-Teste manual da busca de repositórios na Home.\r\n-Verificação do deploy para garantir que os caminhos dos arquivos e a pasta docs estão sendo reconhecidos corretamente.\r\n\r\n\r\n**Configuração de Teste:**\r\n- **Navegador:** Chrome  \r\n- **Dispositivo:** Desktop\r\n\r\n\r\n## Checklist do Revisor\r\n\r\n- [ ] O código segue as diretrizes do projeto.\r\n- [ ] A documentação foi atualizada.\r\n- [ ] Os testes foram ajustados, se necessário.\r\n- [ ] A CI está passando.\r\n- [ ] Revisado por outra pessoa.\r\n\r\n\r\n",
-    "closed_by": null,
+    "body": "## Descrição\r\n\r\n Este PR remove o código de sincronização manual no frontend (Boxrepo.jsx), limpando estados locais e refs desnecessários. No backend, o endpoint POST /github/analyze foi eliminado. A aplicação passa a depender exclusivamente do cache de contexto e das rotas GET de análise automática, garantindo consistência entre a UI e o servidor e reduzindo chamadas redundantes e simplificando a estrutura do site.\r\n\r\n## Tipo de Alteração\r\n\r\n    - [x] 🐛 Correção de Bug\r\n    - [x] ✨ Nova Funcionalidade\r\n    - [ ] 💥 Quebra de Compatibilidade\r\n    - [ ] 📝 Documentação\r\n    - [x] ♻️ Refatoração\r\n    - [ ] ⚡ Melhoria de Performance\r\n    - [ ] 🧪 Testes\r\n    - [ ] 🔧 Ferramentas\r\n\r\n## Issue Relacionada\r\nCloses \r\n\r\n## Motivação e Contexto\r\n\r\nO objetivo deste PR é ajustar algumas funcionalidades faltantes no PR \r\n\r\n## Alterações Propostas\r\n\r\n-Botão de sync removido\r\n-Cache das analises\r\n-Preenchimento da box da Home\r\n-Preenchimento da box do Analisys\r\n-Otimização da requisição de análise de IA\r\n-Atualização dos teste unitário\r\n\r\n\r\n## Como Isso Foi Testado?\r\n\r\n-Execução do contêiner do frontend para validar a inicialização.\r\n-Teste manual da busca de repositórios na Home.\r\n-Verificação do deploy para garantir que os caminhos dos arquivos e a pasta docs estão sendo reconhecidos corretamente.\r\n\r\n\r\n**Configuração de Teste:**\r\n- **Navegador:** Chrome  \r\n- **Dispositivo:** Desktop\r\n\r\n\r\n## Checklist do Revisor\r\n\r\n- [x] O código segue as diretrizes do projeto.\r\n- [x] A documentação foi atualizada.\r\n- [x] Os testes foram ajustados, se necessário.\r\n- [x] A CI está passando.\r\n- [x] Revisado por outra pessoa.\r\n\r\n\r\n",
+    "closed_by": {
+      "login": "HugoFreitass",
+      "id": 130880914,
+      "node_id": "U_kgDOB80Vkg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130880914?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/HugoFreitass",
+      "html_url": "https://github.com/HugoFreitass",
+      "followers_url": "https://api.github.com/users/HugoFreitass/followers",
+      "following_url": "https://api.github.com/users/HugoFreitass/following{/other_user}",
+      "gists_url": "https://api.github.com/users/HugoFreitass/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/HugoFreitass/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/HugoFreitass/subscriptions",
+      "organizations_url": "https://api.github.com/users/HugoFreitass/orgs",
+      "repos_url": "https://api.github.com/users/HugoFreitass/repos",
+      "events_url": "https://api.github.com/users/HugoFreitass/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/HugoFreitass/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/90/reactions",
       "total_count": 0,

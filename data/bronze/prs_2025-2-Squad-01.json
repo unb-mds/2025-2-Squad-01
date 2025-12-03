@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T01:07:30.959087",
+      "extracted_at": "2025-12-03T01:47:30.300646",
       "file_path": "data/bronze/prs_2025-2-Squad-01.json",
       "record_count": 43
     }
@@ -39,15 +39,15 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2025-12-03T00:59:34Z",
-    "updated_at": "2025-12-03T01:03:12Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T01:45:21Z",
+    "closed_at": "2025-12-03T01:45:21Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -57,10 +57,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/114",
       "diff_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/114.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/114.patch",
-      "merged_at": null
+      "merged_at": "2025-12-03T01:45:21Z"
     },
     "body": "# 🤖 Adiciona Análises de IA sobre Métricas de Atividades dos Membros\r\n\r\n## 📋 Descrição\r\n\r\nEste PR implementa um sistema completo de análise de atividades dos membros usando IA (Gemini 2.0 Flash Lite), incluindo:\r\n\r\n1. **Backend**: Script Python para extrair e analisar dados de commits, PRs e issues\r\n2. **Frontend**: Componente React para visualização interativa das análises de IA\r\n\r\n## 🎯 Funcionalidades Implementadas\r\n\r\n### Backend (`generate_members_ai.py`)\r\n\r\n- **Extração de Dados Bronze**: Carrega dados de commits, PRs e issues de todos os repositórios\r\n- **Agregação por Membro**: Organiza dados por desenvolvedor e repositório\r\n- **Análise com IA**: Utiliza Gemini 2.0 Flash Lite para gerar análises detalhadas sobre:\r\n  - 📊 **Commits**: Quantidade, atomicidade (tamanho das mudanças), regularidade e conteúdo\r\n  - 🔀 **Pull Requests**: Engajamento, padrões de abertura, práticas de code review\r\n  - 🐛 **Issues**: Participação, tipos de issues, envolvimento no projeto\r\n- **Otimização de API**: Sistema de batching inteligente para minimizar requisições (máx. 10-25)\r\n- **Rate Limiting**: Gerenciamento de quotas com retry automático e backoff exponencial\r\n- **Modo de Teste**: Flag `--test` para processar apenas 3 membros durante desenvolvimento\r\n- **Geração de JSON**: Salva análises estruturadas em `data/silver/ai/members_ai.json`\r\n\r\n### Frontend (`AI.summary.tsx`)\r\n\r\n- **Seleção Múltipla**: Clique em membros para adicionar/remover suas análises\r\n- **Visualização Horizontal**: Análises exibidas lado a lado em cards deslizantes\r\n- **Filtros Avançados**:\r\n  - 🔍 Busca por nome do membro\r\n  - 📁 Filtro por repositório\r\n  - 📊 Filtro por tipo de análise (commits/PRs/issues)\r\n- **UI Responsiva**:\r\n  - Cards de 384px (24rem) de largura com scroll horizontal\r\n  - Scroll vertical interno (máx. 600px) para análises longas\r\n  - Indicadores visuais de seleção (checkboxes)\r\n  - Botão \"Limpar Todas\" para resetar seleções\r\n  - Contador de seleções ativas\r\n- **Integração com Dados**:\r\n  - Carregamento automático de `members_ai.json` do GitHub (branch `AI-Implementation`)\r\n  - Estados de loading, erro e dados vazios\r\n  - Sincronização opcional com filtros de URL\r\n  \r\nCloses #110\r\nCloses #115",
-    "closed_by": null,
+    "closed_by": {
+      "login": "guxvr",
+      "id": 172512835,
+      "node_id": "U_kgDOCkhWQw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/172512835?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/guxvr",
+      "html_url": "https://github.com/guxvr",
+      "followers_url": "https://api.github.com/users/guxvr/followers",
+      "following_url": "https://api.github.com/users/guxvr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/guxvr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/guxvr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/guxvr/subscriptions",
+      "organizations_url": "https://api.github.com/users/guxvr/orgs",
+      "repos_url": "https://api.github.com/users/guxvr/repos",
+      "events_url": "https://api.github.com/users/guxvr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/guxvr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Squad-01/issues/114/reactions",
       "total_count": 0,
@@ -130,7 +150,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "guxvr",
@@ -179,8 +199,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-12-03T00:41:58Z",
-    "updated_at": "2025-12-03T00:52:02Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T01:12:28Z",
+    "closed_at": "2025-12-03T01:12:28Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -190,10 +210,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/112",
       "diff_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/112.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Squad-01/pull/112.patch",
-      "merged_at": null
+      "merged_at": "2025-12-03T01:12:28Z"
     },
     "body": "## 🧪 Adiciona Suite Completa de Testes + CI/CD\r\n\r\n### Resumo\r\nImplementa cobertura abrangente de testes unitários e de integração, além de workflow GitHub Actions para CI/CD.\r\n\r\n### 📊 Melhorias de Cobertura\r\n- **Antes**: 89.74%\r\n- **Depois**: ~91-92%\r\n- **+76 novos testes** criados\r\n\r\n### 📦 Arquivos Adicionados\r\n\r\n#### Testes Unitários (12 arquivos)\r\n- `test_bronze_extract.py` - Orquestração bronze\r\n- `test_bronze_repositories.py` - Extração de repositórios\r\n- `test_bronze_issues.py` - Extração de issues/PRs\r\n- `test_bronze_members.py` - Extração de membros\r\n- `test_bronze_commits.py` - Extração de commits\r\n- `test_github_api_*.py` (4 arquivos) - Cobertura abrangente da API\r\n- `test_registry_manager.py` - Gestão de registros\r\n- `test_contribution_metrics_additional.py` - Métricas adicionais\r\n- `test_cleanup_event_data.py` - Limpeza de dados\r\n- `test_fetch_issues.py` - Script de fetch\r\n- `test_gold_process.py` - Orquestração gold\r\n- `test_silver_process.py` - Orquestração silver\r\n\r\n#### Testes de Integração (6 arquivos)\r\n- `test_bronze_extractors_integration.py` - Extratores bronze\r\n- `test_bronze_to_silver_integration.py` - Pipeline bronze→silver\r\n- `test_silver_to_gold_integration.py` - Pipeline silver→gold\r\n- `test_complete_etl_pipeline.py` - Pipeline completo\r\n- `test_registry_manager_integration.py` - Gestão de registros\r\n- `test_process_scripts_integration.py` - Scripts de processo\r\n\r\n#### Infraestrutura\r\n- `tests/conftest.py` - Fixtures compartilhadas (`fake_io`)\r\n- `.github/workflows/python-integration-tests.yaml` - CI/CD\r\n\r\n### 🎯 Cobertura por Módulo\r\n- `registry_manager.py`: 63% → 88%\r\n- `github_api.py`: 78% → 84-85%\r\n- `contribution_metrics.py`: 85% (limite arquitetural)\r\n\r\n### ✅ Checklist\r\n- [x] Testes unitários passando\r\n- [x] Testes de integração passando\r\n- [x] GitHub Actions workflow configurado\r\n- [x] Fixtures reutilizáveis criadas\r\n- [x] Cobertura >91% alcançada\r\n\r\nCloses #113 ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "HeitorM50",
+      "id": 172512774,
+      "node_id": "U_kgDOCkhWBg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/172512774?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/HeitorM50",
+      "html_url": "https://github.com/HeitorM50",
+      "followers_url": "https://api.github.com/users/HeitorM50/followers",
+      "following_url": "https://api.github.com/users/HeitorM50/following{/other_user}",
+      "gists_url": "https://api.github.com/users/HeitorM50/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/HeitorM50/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/HeitorM50/subscriptions",
+      "organizations_url": "https://api.github.com/users/HeitorM50/orgs",
+      "repos_url": "https://api.github.com/users/HeitorM50/repos",
+      "events_url": "https://api.github.com/users/HeitorM50/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/HeitorM50/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Squad-01/issues/112/reactions",
       "total_count": 0,
