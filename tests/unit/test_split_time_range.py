@@ -18,4 +18,5 @@ def test_split_time_range_single_year():
 def test_split_time_range_invalid_format():
     client = GitHubAPIClient(token="x")
     ranges = client._split_time_range("invalid", "also-invalid", chunks=2)
-    assert ranges == [("invalid", "also-invalid")]
+    # Retorna (None, None) para indicar datas inválidas
+    assert ranges == [(None, None)]
