@@ -3,295 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requisitos - CoOps Documentação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Requisitos - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
         }
-
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
         header {
-            background: #1e40af;
-            padding: 1rem 0;
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
+        
         nav a {
-            color: white;
+            color: var(--text);
             text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
         }
-
+        
         nav a:hover {
-            color: #bfdbfe;
+            color: var(--primary);
         }
-
-        main {
+        
+        /* Container */
+        .container {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 2rem;
         }
-
-        .content {
-            background: white;
-            padding: 3rem;
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
         }
-
-        h1 {
-            color: #1e40af;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #1e40af;
-            padding-bottom: 0.5rem;
+        
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
         }
-
+        
+        /* Headings */
         h2 {
-            color: #1e40af;
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
         }
-
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
         p {
             margin-bottom: 1rem;
-            text-align: justify;
+            color: var(--text-muted);
         }
-
+        
+        /* Lists */
         ul, ol {
             margin-left: 2rem;
             margin-bottom: 1rem;
         }
-
+        
         li {
-            margin-bottom: 0.5rem;
+            margin: 0.5rem 0;
+            color: var(--text-muted);
         }
-
+        
         strong {
-            color: #1e40af;
+            color: var(--primary);
+            font-weight: 600;
         }
-
+        
+        /* Section */
         .section {
-            margin-bottom: 2rem;
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
             padding: 1.5rem;
-            background: #f8fafc;
+            margin: 1.5rem 0;
             border-radius: 8px;
-            border-left: 4px solid #1e40af;
         }
-
+        
+        /* Requirement Types */
         .requirement-type {
-            background: #e0f2fe;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
         }
-
+        
         .functional {
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid var(--primary);
         }
-
+        
         .non-functional {
-            border-left: 4px solid #dc2626;
+            border-left: 4px solid var(--accent);
         }
-
+        
+        .requirement-type h2 {
+            margin-top: 0;
+        }
+        
+        /* References */
         .references {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: var(--bg-hover);
+            padding: 2rem;
+            border-radius: 12px;
             margin-top: 2rem;
         }
-
-        .references a {
-            color: #1e40af;
-            text-decoration: none;
+        
+        .references h2 {
+            margin-top: 0;
         }
-
+        
+        .references a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
         .references a:hover {
+            color: var(--text);
             text-decoration: underline;
         }
-
-        footer {
-            background: #1e40af;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
         }
-
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card, .requirement-type {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            main {
-                margin: 1rem;
-                padding: 0;
-            }
-
-            .content {
-                padding: 2rem 1.5rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="logo">CoOps - Documentação</a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="index.html">Documentação</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="https://github.com/unb-mds/2025-2-Squad-01">GitHub</a></li>
-            </ul>
-        </nav>
+        <h1>📋 Requisitos do Sistema</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">Projeto CoOps - Squad 01</p>
     </header>
 
-    <main>
-        <div class="content">
-            <h1>Requisitos</h1>
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#conceitos">Conceitos</a>
+        <a href="#funcionais">Funcionais</a>
+        <a href="#nao-funcionais">Não Funcionais</a>
+    </nav>
 
-            <div class="section">
-                <h2>O que são Requisitos?</h2>
-                <p>Requisitos são as definições sobre o que um sistema deve fazer e como. São a parte do projeto responsável por transmitir o problema real e as necessidades do usuário para um software implementado e funcionando.</p>
-                
-                <ul>
-                    <li><strong>Requisitos funcionais</strong> → definem <strong>o que</strong> o sistema deve fazer (funcionalidades).</li>
-                    <li><strong>Requisitos não-funcionais</strong> → definem <strong>como</strong> essas funcionalidades devem ser executadas (condições, restrições, desempenho, etc.).</li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="card" id="conceitos">
+            <h2>O que são Requisitos?</h2>
+            <p>Requisitos são as definições sobre o que um sistema deve fazer e como. São a parte do projeto responsável por transmitir o problema real e as necessidades do usuário para um software implementado e funcionando.</p>
 
-            <div class="section">
-                <h2>Levantamento de Requisitos</h2>
-                <p>Esta é a fase em que será feito o estudo do problema a ser resolvido, a fim de determinar quais funcionalidades o sistema deve ter.</p>
-                
-                <p>Para isto é preciso:</p>
-                <ul>
-                    <li>Realizar uma profunda pesquisa e observação sobre o problema e o ambiente em seu entorno.</li>
-                    <li>Identificar os <strong>stakeholders</strong>.</li>
-                    <li>Realizar entrevistas para descobrir quais são suas necessidades.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Documentação dos Requisitos</h2>
-                <p>Na metodologia <strong>ágil</strong>, a documentação dos requisitos prioriza:</p>
-                <ul>
-                    <li>Redução de papel.</li>
-                    <li>Clareza e transparência da mensagem.</li>
-                </ul>
-
-                <p>Uma vez identificadas as principais necessidades do usuário, o time realiza o levantamento das principais funcionalidades que o produto deve ter.</p>
-
-                <p>Essas funcionalidades são representadas por <strong>histórias de usuário</strong>, que:</p>
-                <ul>
-                    <li>São curtas e simples.</li>
-                    <li>Devem ser implementadas em cerca de uma semana.</li>
-                    <li>Necessitam de <strong>critérios de aceitação</strong> para validar a entrega.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Observações</h2>
-                <ul>
-                    <li>Os requisitos são <strong>dinâmicos</strong> e mudam ao longo do tempo.</li>
-                    <li>Devem ser levantados o quanto antes no projeto e <strong>validados e refinados constantemente</strong>.</li>
-                    <li>As principais funcionalidades do produto formam o <strong>MVP (Minimum Viable Product)</strong>:
-                        <ul>
-                            <li>Uma versão simples do produto.</li>
-                            <li>Entrega algo de valor ao usuário rapidamente.</li>
-                            <li>Serve como base para incrementos futuros, sempre priorizando o que gera mais valor.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="requirement-type functional">
-                <h2>Requisitos Funcionais do Projeto</h2>
-                <ul>
-                    <li>O sistema deve ter instruções claras para permitir que o usuário realize o fork do projeto e execute na sua máquina local.</li>
-                    <li>O sistema, ao ser executado na máquina do usuário, deve receber os dados do repositório ou organização.</li>
-                    <li>O sistema deve analisar os dados relacionados às issues e gerar uma análise gráfica com base nas datas de abertura e fechamento das issues e na sua descrição.</li>
-                    <li>O sistema deve analisar os dados relacionados a pull requests (datas de abertura e fechamento, quantidade criadas e aprovadas ao longo do tempo) e gerar análise gráfica da métrica.</li>
-                    <li>O sistema deve analisar dados relacionados a commits e gerar análise gráfica da métrica, considerando a frequência de commits e o tamanho dos commits.</li>
-                    <li>O sistema deve gerar mapas de colaboração entre os membros do repositório ou organização.</li>
-                    <li>O sistema deve possuir um RAG que contextualize as métricas.</li>
-                    <li>O sistema deve gerar um relatório de qualidade de código, produzido por IA.</li>
-                </ul>
-            </div>
-
-            <div class="requirement-type non-functional">
-                <h2>Requisitos Não Funcionais do Projeto</h2>
-                <ul>
-                    <li><strong>Segurança:</strong> o sistema deve manter seguras as chaves GitHub Token dos usuários.</li>
-                    <li><strong>Usabilidade:</strong> o sistema deve facilitar a navegação e o uso das funcionalidades. A interface deve ser intuitiva e amigável, com elementos organizados logicamente.</li>
-                </ul>
-            </div>
-
-            <div class="references">
-                <h2>Referências</h2>
-                <ul>
-                    <li><a href="https://mds.lappis.rocks/static_files/presentations/RequisitosAgeis.pdf" target="_blank">Requisitos Ágeis - Lappis</a></li>
-                    <li><a href="https://engsoftmoderna.info/cap3.html" target="_blank">Engenharia de Software Moderna - Cap. 3</a></li>
-                    <li><a href="https://www.cedrotech.com/blog/levantamento-de-requisitos-e-desenvolvimento-de-softwares/" target="_blank">CedroTech - Levantamento de Requisitos</a></li>
-                </ul>
-            </div>
+            <ul>
+                <li><strong>Requisitos funcionais</strong> → definem <strong>o que</strong> o sistema deve fazer (funcionalidades).</li>
+                <li><strong>Requisitos não-funcionais</strong> → definem <strong>como</strong> essas funcionalidades devem ser executadas (condições, restrições, desempenho, etc.).</li>
+            </ul>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 CoOps - Documentação. Desenvolvido com ❤️ pelo Squad 01.</p>
-    </footer>
+        <div class="section">
+            <h3>Levantamento de Requisitos</h3>
+            <p>Esta é a fase em que será feito o estudo do problema a ser resolvido, a fim de determinar quais funcionalidades o sistema deve ter.</p>
+
+            <p>Para isto é preciso:</p>
+            <ul>
+                <li>Realizar uma profunda pesquisa e observação sobre o problema e o ambiente em seu entorno.</li>
+                <li>Identificar os <strong>stakeholders</strong>.</li>
+                <li>Realizar entrevistas para descobrir quais são suas necessidades.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Documentação dos Requisitos</h3>
+            <p>Na metodologia <strong>ágil</strong>, a documentação dos requisitos prioriza:</p>
+            <ul>
+                <li>Redução de papel.</li>
+                <li>Clareza e transparência da mensagem.</li>
+            </ul>
+
+            <p>Uma vez identificadas as principais necessidades do usuário, o time realiza o levantamento das principais funcionalidades que o produto deve ter.</p>
+
+            <p>Essas funcionalidades são representadas por <strong>histórias de usuário</strong>, que:</p>
+            <ul>
+                <li>São curtas e simples.</li>
+                <li>Devem ser implementadas em cerca de uma semana.</li>
+                <li>Necessitam de <strong>critérios de aceitação</strong> para validar a entrega.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Observações</h3>
+            <ul>
+                <li>Os requisitos são <strong>dinâmicos</strong> e mudam ao longo do tempo.</li>
+                <li>Devem ser levantados o quanto antes no projeto e <strong>validados e refinados constantemente</strong>.</li>      
+                <li>As principais funcionalidades do produto formam o <strong>MVP (Minimum Viable Product)</strong>:
+                    <ul>
+                        <li>Uma versão simples do produto.</li>
+                        <li>Entrega algo de valor ao usuário rapidamente.</li>
+                        <li>Serve como base para incrementos futuros, sempre priorizando o que gera mais valor.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="requirement-type functional" id="funcionais">
+            <h2>✅ Requisitos Funcionais do Projeto</h2>
+            <ul>
+                <li>O sistema deve ter instruções claras para permitir que o usuário realize o fork do projeto e execute na sua máquina local.</li>
+                <li>O sistema, ao ser executado na máquina do usuário, deve receber os dados do repositório ou organização.</li>      
+                <li>O sistema deve analisar os dados relacionados às issues e gerar uma análise gráfica com base nas datas de abertura e fechamento das issues e na sua descrição.</li>
+                <li>O sistema deve analisar os dados relacionados a pull requests (datas de abertura e fechamento, quantidade criadas e aprovadas ao longo do tempo) e gerar análise gráfica da métrica.</li>
+                <li>O sistema deve analisar dados relacionados a commits e gerar análise gráfica da métrica, considerando a frequência de commits e o tamanho dos commits.</li>
+                <li>O sistema deve gerar mapas de colaboração entre os membros do repositório ou organização.</li>
+                <li>O sistema deve possuir um RAG que contextualize as métricas.</li>
+                <li>O sistema deve gerar um relatório de qualidade de código, produzido por IA.</li>
+            </ul>
+        </div>
+
+        <div class="requirement-type non-functional" id="nao-funcionais">
+            <h2>⚙️ Requisitos Não Funcionais do Projeto</h2>
+            <ul>
+                <li><strong>Segurança:</strong> o sistema deve manter seguras as chaves GitHub Token dos usuários.</li>
+                <li><strong>Usabilidade:</strong> o sistema deve facilitar a navegação e o uso das funcionalidades. A interface deve ser intuitiva e amigável, com elementos organizados logicamente.</li>
+            </ul>
+        </div>
+
+        <div class="references">
+            <h2>📚 Referências</h2>
+            <ul>
+                <li><a href="https://mds.lappis.rocks/static_files/presentations/RequisitosAgeis.pdf" target="_blank">Requisitos Ágeis - Lappis</a></li>
+                <li><a href="https://engsoftmoderna.info/cap3.html" target="_blank">Engenharia de Software Moderna - Cap. 3</a></li>  
+                <li><a href="https://www.cedrotech.com/blog/levantamento-de-requisitos-e-desenvolvimento-de-softwares/" target="_blank">CedroTech - Levantamento de Requisitos</a></li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
 </body>
 </html>
