@@ -417,5 +417,5 @@ def test_split_time_range_invalid_format():
     """Testa split com formato inválido"""
     client = GitHubAPIClient(token="test")
     ranges = client._split_time_range("invalid", "also-invalid", chunks=3)
-    # Deve retornar range único quando parsing falha
-    assert ranges == [("invalid", "also-invalid")]
+    # Deve retornar (None, None) quando parsing falha para indicar datas inválidas
+    assert ranges == [(None, None)]
