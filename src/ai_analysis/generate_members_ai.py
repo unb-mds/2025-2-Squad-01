@@ -313,9 +313,9 @@ Para CADA membro listado acima, você DEVE retornar EXATAMENTE neste formato:
 
 ---MEMBER_START:{nome_exato_do_membro}
 COMMITS_ANALYSIS:
-{analise sobre quantidade de commits e média semanal de commits, explicitando o envolvimento do membro no projeto com base no numero de commits, sua regularidade e o conteudo adicionado/removido médio},
-{analise se os commits possuem grandes mudanças com muito conteudo adicionado/removido ou pequenas mudanças com pouco conteudo adicionado/removido},
-{analise baseada nos títulos dos commits com mais mudanças: indicam tipo de mudança? o que dizem sobre o conteudo mais atomico dos commits?}
+{analise sobre quantidade de commits e média semanal de commits, explicitando o envolvimento do membro no projeto com base no numero de commits, sua regularidade e o conteudo adicionado/removido médio,
+analise se os commits possuem grandes mudanças com muito conteudo adicionado/removido ou pequenas mudanças com pouco conteudo adicionado/removido,
+analise baseada nos títulos dos commits com mais mudanças: indicam tipo de mudança? o que dizem sobre o conteudo mais atomico dos commits?}
 
 PRS_ANALYSIS:
 {analises sobre participação e engajamento em prs e code review (através da média semanal de PRs e total de PRs), padrão de abertura de PRs e práticas ágeis}
