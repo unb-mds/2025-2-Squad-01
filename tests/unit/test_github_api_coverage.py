@@ -311,8 +311,8 @@ class TestLogRateLimitEdgeCases:
         client._log_rate_limit(mock_response)
         
         captured = capsys.readouterr()
-        # Should handle missing header gracefully
-        assert "Rate Limit" in captured.out or captured.out == ""
+        # Should handle missing header gracefully - check for lowercase "Rate limit"
+        assert "Rate limit" in captured.out or captured.out == ""
     
     def test_log_rate_limit_all_headers_present(self, tmp_path, capsys):
         """Test log_rate_limit with all headers present"""
