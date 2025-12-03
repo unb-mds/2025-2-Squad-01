@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T05:00:49.205039",
+      "extracted_at": "2025-12-03T11:35:30.123616",
       "file_path": "data/bronze/prs_2025-2-Integralizei_UnB.json",
       "record_count": 59
     }
@@ -49,7 +49,7 @@
         "description": "Pull requests that update a dependency file"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "gpaulovit",
@@ -98,8 +98,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-12-03T04:57:21Z",
-    "updated_at": "2025-12-03T04:57:38Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T05:12:34Z",
+    "closed_at": "2025-12-03T05:12:34Z",
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
@@ -109,10 +109,30 @@
       "html_url": "https://github.com/unb-mds/2025-2-Integralizei_UnB/pull/117",
       "diff_url": "https://github.com/unb-mds/2025-2-Integralizei_UnB/pull/117.diff",
       "patch_url": "https://github.com/unb-mds/2025-2-Integralizei_UnB/pull/117.patch",
-      "merged_at": null
+      "merged_at": "2025-12-03T05:12:34Z"
     },
     "body": "## 🎯 Qual o objetivo deste Pull Request?\r\n\r\nResolve flags de segurança críticas apontadas pelo CodeQL e corrige o build do frontend no Docker.\r\n\r\nAs vulnerabilidades abordadas foram:\r\n* `js/missing-rate-limiting`: Falta de limitação de taxa em rotas sensíveis.\r\n* `js/user-controlled-bypass`: Possibilidade de burlar validações enviando tipos de dados inesperados (ex: objetos em vez de strings).\r\n* `js/clear-text-cookie`: Cookies de sessão trafegando sem flags de segurança.\r\n\r\n## 🧐 O que foi alterado?\r\n\r\n**Backend (`server.js`):**\r\n- **Rate Limiting:** Implementado `express-rate-limit` na rota `/api/reset-password` para prevenir ataques de força bruta (limite de 5 tentativas a cada 15 min).\r\n- **Input Validation:** Adicionada verificação estrita de tipos (`typeof !== 'string'`) nas rotas de `/api/login` e `/api/register` para evitar NoSQL Injection/Type Confusion.\r\n- **Secure Cookies:** Configuração da sessão atualizada para usar `httpOnly: true` (proteção contra XSS) e `secure: true` (apenas em produção, via variável de ambiente).\r\n- **Docker Proxy:** Adicionado `app.set('trust proxy', 1)` para que o rate limit identifique corretamente o IP real dos usuários através do Docker.\r\n\r\n**Frontend (`Dockerfile`):**\r\n- Alterado o comando de instalação de `RUN npm ci` para `RUN npm install` para corrigir falhas de build relacionadas a inconsistências no `package-lock.json` entre ambientes (Windows/Linux).\r\n\r\n## ✅ Como posso testar as alterações?\r\n\r\n1.  **Teste de Build:**\r\n    - Rode `docker-compose up --build`. O container `frontend` deve subir sem erros e o sistema deve estar acessível.\r\n\r\n2.  **Teste de Rate Limit (Segurança):**\r\n    - Tente disparar mais de 5 requisições seguidas para `POST /api/reset-password`.\r\n    - Resultado esperado: A partir da 6ª tentativa, receber status **429 Too Many Requests**.\r\n\r\n3.  **Teste de Input Validation:**\r\n    - Tente enviar um payload JSON onde a senha é um objeto (ex: `{\"password\": {}}`) para `/api/register`.\r\n    - Resultado esperado: Receber status **400 Bad Request** com mensagem de erro de validação.\r\n\r\n4.  **Teste de Cookies:**\r\n    - Faça login na aplicação e inspecione os cookies no navegador (DevTools > Application).\r\n    - O cookie `connect.sid` deve estar marcado como **HttpOnly**.\r\n\r\n\r\n### Checklist do Contribuidor\r\n\r\n- [x] Eu li o guia de [CONTRIBUTING.md](https://github.com/unb-mds/2025-2-Integralizei_UnB/blob/133c648a0e1b7208117f4a43a6df6bfcf679c82a/CONTRIBUTING.md).\r\n- [x] Meu código segue o estilo de código deste projeto.\r\n- [x] Eu adicionei testes que provam que minha correção é eficaz ou que minha feature funciona.\r\n- [x] Todos os testes novos e existentes passaram localmente.\r\n- [x] A documentação relevante foi atualizada (se necessário).",
-    "closed_by": null,
+    "closed_by": {
+      "login": "menali17",
+      "id": 208729354,
+      "node_id": "U_kgDODHD1Cg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/208729354?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/menali17",
+      "html_url": "https://github.com/menali17",
+      "followers_url": "https://api.github.com/users/menali17/followers",
+      "following_url": "https://api.github.com/users/menali17/following{/other_user}",
+      "gists_url": "https://api.github.com/users/menali17/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/menali17/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/menali17/subscriptions",
+      "organizations_url": "https://api.github.com/users/menali17/orgs",
+      "repos_url": "https://api.github.com/users/menali17/repos",
+      "events_url": "https://api.github.com/users/menali17/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/menali17/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Integralizei_UnB/issues/117/reactions",
       "total_count": 0,
@@ -365,7 +385,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-12-02T01:17:36Z",
-    "updated_at": "2025-12-02T01:17:37Z",
+    "updated_at": "2025-12-03T05:14:30Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "type": null,
@@ -638,7 +658,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2025-12-02T01:05:53Z",
-    "updated_at": "2025-12-02T16:01:40Z",
+    "updated_at": "2025-12-03T05:15:19Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "type": null,

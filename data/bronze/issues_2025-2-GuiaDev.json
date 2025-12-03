@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T05:01:00.177526",
+      "extracted_at": "2025-12-03T11:35:40.897862",
       "file_path": "data/bronze/issues_2025-2-GuiaDev.json",
       "record_count": 58
     }
@@ -240,10 +240,10 @@
         "site_admin": false
       },
       "open_issues": 1,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2025-12-03T04:11:56Z",
-      "updated_at": "2025-12-03T04:27:20Z",
+      "updated_at": "2025-12-03T07:52:34Z",
       "due_on": null,
       "closed_at": null
     },
@@ -402,11 +402,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-18T00:21:50Z",
-      "updated_at": "2025-12-02T16:05:15Z",
+      "updated_at": "2025-12-03T07:52:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -604,11 +604,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-18T00:21:50Z",
-      "updated_at": "2025-12-02T16:05:15Z",
+      "updated_at": "2025-12-03T07:52:36Z",
       "due_on": null,
       "closed_at": null
     },
@@ -721,7 +721,7 @@
         "description": "CI/CD, Docker, deploy"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "HugoFreitass",
@@ -797,18 +797,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-18T00:21:50Z",
-      "updated_at": "2025-12-02T16:05:15Z",
+      "updated_at": "2025-12-03T07:52:36Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 2,
     "created_at": "2025-11-21T12:24:43Z",
-    "updated_at": "2025-12-03T00:47:19Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T07:52:36Z",
+    "closed_at": "2025-12-03T07:52:35Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -833,7 +833,27 @@
       "total_blocking": 0
     },
     "body": "# 📌 Configurar Pipeline de Deploy para Frontend e Backend \n\n---\n\n## 📝 Descrição\nAtualmente o projeto possui um frontend em React e um backend em NestJS, mas ainda não existe um pipeline de deploy automatizado configurado.  \nO objetivo desta issue é criar e configurar o processo de deploy contínuo (CI/CD) para ambos os serviços, garantindo que:\n\n- O **frontend React** seja construído e disponibilizado em ambiente de produção.  \n- O **backend NestJS** seja empacotado e publicado corretamente.  \n- O deploy seja acionado automaticamente a cada push na branch principal (`main`).  \n- Variáveis de ambiente sejam configuradas para funcionamento em produção.  \n- Documentação de como o deploy funciona seja incluída no repositório.\n\n---\n\n## 👥 Responsáveis\n- Autor: @HugoFreitass  \n- Revisor: @PedroGTG @filipeBG-07  @BGrangeiro \n\n---\n\n## 🎯 Prioridade\n- [x] 🔴 Alta  \n- [ ] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n---\n\n## ✅ Tarefas\n- [ ] Realizar deploy do frontend\n- [ ] Realizar deploy do backend\n- [ ] Criar pipeline CI/CD para o frontend (React)  \n- [ ] Criar pipeline CI/CD para o backend (NestJS)  \n- [ ] Configurar variáveis de ambiente de produção  \n- [ ] Gerar builds de produção para ambos os serviços  \n- [ ] Automatizar deploy a cada push na branch principal  \n- [ ] Testar funcionamento em produção (API + UI)  \n- [ ] Escrever documentação explicando o fluxo de deploy\n\n---\n\n## 📌 Definition of Ready (DoR)\n- [ ] Repositório organizado com pastas separadas (`frontend/` e `backend/`)  \n- [ ] Serviços definidos (onde o frontend e backend serão hospedados)  \n- [ ] Credenciais de deploy disponíveis  \n- [ ] Variáveis de ambiente mapeadas  \n\n---\n\n## 📌 Definition of Done (DoD)\n- [ ] Deploy funcionando automaticamente para frontend e backend  \n- [ ] Builds estáveis e sem erros  \n- [ ] API acessível pelo frontend em produção  \n- [ ] Documentação adicionada ao README  \n- [ ] Revisão aprovada e merge concluído  \n\n---\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Phill-Chill",
+      "id": 164696319,
+      "node_id": "U_kgDOCdEQ_w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/164696319?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Phill-Chill",
+      "html_url": "https://github.com/Phill-Chill",
+      "followers_url": "https://api.github.com/users/Phill-Chill/followers",
+      "following_url": "https://api.github.com/users/Phill-Chill/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Phill-Chill/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Phill-Chill/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Phill-Chill/subscriptions",
+      "organizations_url": "https://api.github.com/users/Phill-Chill/orgs",
+      "repos_url": "https://api.github.com/users/Phill-Chill/repos",
+      "events_url": "https://api.github.com/users/Phill-Chill/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Phill-Chill/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/81/reactions",
       "total_count": 0,
@@ -848,7 +868,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-GuiaDev/issues/81/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-GuiaDev"
   },
   {
@@ -1015,11 +1035,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 5,
+      "open_issues": 0,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2025-11-18T00:21:50Z",
-      "updated_at": "2025-12-02T16:05:15Z",
+      "updated_at": "2025-12-03T07:52:36Z",
       "due_on": null,
       "closed_at": null
     },
