@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2025-12-03T13:21:18.572595",
+      "extracted_at": "2025-12-03T16:01:47.827386",
       "file_path": "data/bronze/issues_2025-2-Portal-dos-Professores.json",
       "record_count": 34
     }
@@ -336,11 +336,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
@@ -529,11 +529,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
@@ -655,7 +655,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "KaioAmouryUnB",
@@ -731,18 +731,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-27T16:25:55Z",
-    "updated_at": "2025-12-03T03:28:20Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T14:06:45Z",
+    "closed_at": "2025-12-03T14:06:45Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -767,7 +767,27 @@
       "total_blocking": 0
     },
     "body": "# 🏠 Refinamentos da Home Page \n\n## 📖 Descrição\nEsta issue reúne as melhorias e ajustes que precisam ser feitos na **Home Page do Portal dos Professores**.  \nO objetivo é deixar a página mais consistente com a identidade visual definida, melhorar a navegação e ajustar textos/elementos para refletir o estado atual do projeto.\n\nTodas as mudanças foram discutidas pela equipe durante a reunião da semana e serão aplicadas nesta sprint de forma incremental.\n\n---\n\n## 🎯 Objetivos\n- [x] Aprimorar a navegação da Home Page  \n- [x] Ajustar textos e seções para refletir a proposta atual do portal  \n- [x] Melhorar a organização visual e a clareza das informações apresentadas  \n\n---\n\n## 🛠️ Tarefas a serem realizadas\n\n### 🔹 Navegação (Navbar)\n- [ ] Adicionar o botão **\"Orientador\"** na barra de navegação (mesmo estilo do Lovable)  \n- [ ] Alterar o subtítulo do portal conforme nova definição da equipe  \n- [ ] Trocar “Hub Docente” por **“Portal dos Professores”**  \n  - (ou manter apenas a logo, conforme decidido no review)\n\n---\n\n### 🔹 Conteúdo da Home\n- [ ] Remover informações que não estão disponíveis (ex: campos vazios no rodapé)  \n- [ ] Ajustar a seção **\"Perfis completos\"**  \n  - Remover disciplinas exibidas (não usadas na R1)\n- [ ] Trocar o título da seção atual para **“Orientador Inteligente”**  \n- [ ] Exibir **apenas os 5 departamentos com mais professores**  \n  - Dados devem ser puxados do JSON  \n  - Ordenar pela contagem de docentes  \n\n---\n\n## 📌 Critérios de Aceite\n- A navbar deve conter o botão “Orientador” funcionando com navegação correta.  \n- O subtítulo da página deve estar atualizado.  \n- O nome do portal deve estar padronizado como **Portal dos Professores** (ou somente com a logo, se aprovado).  \n- O rodapé deve mostrar apenas informações reais e confirmadas.  \n- A seção de perfis não deve exibir disciplinas.  \n- A Home deve indicar corretamente **“Orientador Inteligente”**.  \n- A listagem dos departamentos deve mostrar apenas os **5 com maior número de docentes**.  \n\n---\n\n## 🚦 Prioridade\n**Alta** — ajustes essenciais para a Release 1 e consistência visual da Home Page.\n\n---\n\n## 👤 Responsável\n**Kaio Amoury Sasaki Acacio**\n\n---\n\n## 📎 Observações\nEssas melhorias fazem parte do refinamento visual antes da Release 1.  \nConforme discutido na reunião, outras seções da Home podem ser revisadas na Sprint seguinte, quando iniciarmos a integração com os dados do Lattes.\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Ascartezin",
+      "id": 193710276,
+      "node_id": "U_kgDOC4vIxA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193710276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Ascartezin",
+      "html_url": "https://github.com/Ascartezin",
+      "followers_url": "https://api.github.com/users/Ascartezin/followers",
+      "following_url": "https://api.github.com/users/Ascartezin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Ascartezin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Ascartezin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Ascartezin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Ascartezin/orgs",
+      "repos_url": "https://api.github.com/users/Ascartezin/repos",
+      "events_url": "https://api.github.com/users/Ascartezin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Ascartezin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/147/reactions",
       "total_count": 0,
@@ -782,7 +802,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/147/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -837,7 +857,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "caiolacerdamt",
@@ -913,18 +933,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-26T20:37:38Z",
-    "updated_at": "2025-11-26T20:37:38Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T14:07:07Z",
+    "closed_at": "2025-12-03T14:07:06Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193710,
@@ -949,7 +969,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nCom o avanço significativo do desenvolvimento (backend, scrapers, testes e deploy), é crucial garantir que a documentação do projeto acompanhe esse progresso. O objetivo desta tarefa é realizar uma **limpeza e atualização geral** nos documentos do repositório, criar guias claros para os novos recursos e documentar os processos de gestão do projeto.\n\nIsso garantirá que o projeto seja sustentável, fácil de entender para novos membros e que cumpra os requisitos formais de entrega.\n\n---\n\n## Objetivo\n- [ ] Revisar a documentação existente para garantir que ela reflita o estado atual do projeto.\n- [ ] Criar um **Guia de Uso** claro e prático para rodar o projeto (localmente e via Docker).\n- [ ] Organizar e arquivar as **Atas de Reunião** da equipe.\n- [ ] Consolidar as **Retrospectivas** das sprints.\n- [ ] Verificar se todos os requisitos iniciais do projeto estão cobertos e documentados.\n\n---\n\n## Requisitos\n- A documentação deve ser escrita em **Markdown** no diretório `/docs` (ou na raiz, se for o README).\n- O **Guia de Uso** deve cobrir:\n    - Instalação de dependências (`requirements.txt`).\n    - Configuração de variáveis de ambiente (`.env`).\n    - Execução via Docker (`docker-compose`).\n    - Execução manual dos scrapers (`scraper_runner.py` com os novos comandos).\n    - Execução dos testes (`pytest`).\n- As **Atas de Reunião** devem estar em uma pasta dedicada (ex: `docs/atas/`) e seguir um padrão de data.\n- As **Retrospectivas** devem destacar o que funcionou, o que não funcionou e as ações de melhoria.\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [x] Média\n- [ ] Alta\n- [ ] Crítica\n\n*(Sugestão: \"Média\", pois é fundamental para a manutenibilidade e avaliação do projeto, embora não bloqueie o código.)*\n\n---\n\n## Checklist de Tarefas\n- [ ] **Limpeza da Documentação:**\n    - [ ] Revisar o `README.md` principal (atualizar badges, link da API, instruções de deploy).\n    - [ ] Remover ou atualizar documentos obsoletos na pasta `docs/`.\n    - [ ] Verificar alinhamento com os requisitos da disciplina/projeto.\n- [ ] **Página de Guia de Uso:**\n    - [ ] Criar/Atualizar `docs/guia_de_uso.md` (ou seção no README).\n    - [ ] Documentar os comandos do scraper: `--sigaa`, `--lattes-missing`, `--scholar-missing`, `--sigaa-dept`.\n    - [ ] Documentar como rodar o frontend e backend integrados.\n- [ ] **Gestão:**\n    - [ ] Compilar e subir as atas das reuniões semanais para `docs/atas/`.\n    - [ ] Preencher e subir o documento de retrospectivas (sprints passadas e atual) para `docs/retrospectivas/`.\n- [ ] **Revisão Final:** Ler tudo como se fosse um usuário novo para garantir clareza.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Ascartezin",
+      "id": 193710276,
+      "node_id": "U_kgDOC4vIxA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193710276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Ascartezin",
+      "html_url": "https://github.com/Ascartezin",
+      "followers_url": "https://api.github.com/users/Ascartezin/followers",
+      "following_url": "https://api.github.com/users/Ascartezin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Ascartezin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Ascartezin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Ascartezin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Ascartezin/orgs",
+      "repos_url": "https://api.github.com/users/Ascartezin/repos",
+      "events_url": "https://api.github.com/users/Ascartezin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Ascartezin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/145/reactions",
       "total_count": 0,
@@ -964,7 +1004,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/145/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -1064,7 +1104,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "caiolacerdamt",
@@ -1140,18 +1180,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2025-11-26T20:34:22Z",
-    "updated_at": "2025-11-26T20:34:22Z",
-    "closed_at": null,
+    "updated_at": "2025-12-03T14:07:27Z",
+    "closed_at": "2025-12-03T14:07:26Z",
     "author_association": "COLLABORATOR",
     "type": {
       "id": 20193716,
@@ -1176,7 +1216,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nAtualmente, o scraper do SIGAA (o nosso \"radar\" de novos professores) roda obrigatoriamente para **todos** os departamentos configurados no projeto. Isso torna o processo lento e ineficiente quando queremos apenas verificar se há novos professores em um departamento específico ou corrigir dados de uma única unidade.\n\nO objetivo desta tarefa é implementar a capacidade de rodar o scraper do SIGAA filtrado por departamento (`--sigaa-dept`), permitindo uma busca ágil e direcionada por novos docentes sem precisar escanear a universidade inteira.\n\n---\n\n## Objetivo\n- [ ] Permitir a execução do scraper SIGAA para um ou mais departamentos específicos.\n- [ ] Facilitar a adição rápida de novos professores ao banco de dados (`professors.json`).\n- [ ] Manter a integridade dos dados já coletados (Lattes e Scholar) durante essa atualização parcial.\n\n---\n\n## Requisitos\n- Criar um novo argumento `--sigaa-dept` no `scraper_runner.py`.\n- O comando deve aceitar o nome do departamento (ex: `\"ENGENHARIA DE SOFTWARE\"`) e normalizá-lo usando a lista do `config.py`.\n- A lógica de *merge* deve ser idêntica à do scan completo:\n    - Se o professor já existe: atualizar dados básicos (foto, url) e preservar `dados_lattes`/`dados_scholar`.\n    - Se o professor é novo: criar o registro com `dados_lattes: null` e `dados_scholar: null`.\n\n---\n\n## Prioridade\n- [ ] Baixa\n- [x] Média\n- [ ] Alta\n- [ ] Crítica\n\n*(Sugestão: \"Média\", pois aumenta muito a eficiência da manutenção dos dados.)*\n\n---\n\n## Checklist de Tarefas\n- [ ] Refatorar `backend/modes/sigaa_update.py`: Extrair a lógica principal de scraping e merge para uma função interna reutilizável (ex: `_run_sigaa_update_core`).\n- [ ] Criar a função pública `update_sigaa_data_for_departments(target_departments)` no `sigaa_update.py`.\n- [ ] Atualizar `backend/scraper_runner.py`: Adicionar o argumento `--sigaa-dept` ao `argparse`.\n- [ ] Conectar o novo argumento à nova função de update.\n- [ ] Testar manualmente: Rodar `python backend/scraper_runner.py --sigaa-dept \"NOME DO DEPTO\"` e verificar se apenas os professores daquele departamento foram processados/adicionados.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Ascartezin",
+      "id": 193710276,
+      "node_id": "U_kgDOC4vIxA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193710276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Ascartezin",
+      "html_url": "https://github.com/Ascartezin",
+      "followers_url": "https://api.github.com/users/Ascartezin/followers",
+      "following_url": "https://api.github.com/users/Ascartezin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Ascartezin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Ascartezin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Ascartezin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Ascartezin/orgs",
+      "repos_url": "https://api.github.com/users/Ascartezin/repos",
+      "events_url": "https://api.github.com/users/Ascartezin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Ascartezin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/144/reactions",
       "total_count": 0,
@@ -1191,7 +1251,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-Portal-dos-Professores/issues/144/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "repo_name": "2025-2-Portal-dos-Professores"
   },
   {
@@ -1331,11 +1391,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2025-11-25T16:40:49Z",
-      "updated_at": "2025-12-03T04:35:29Z",
+      "updated_at": "2025-12-03T14:07:27Z",
       "due_on": null,
       "closed_at": null
     },
