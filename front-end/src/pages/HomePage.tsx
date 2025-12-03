@@ -35,6 +35,28 @@ export default function HomePage() {
                     Ver Métricas
                   </Link>
                 </div>
+                <div className="hover:scale-105 transition-transform duration-200">
+                  <a 
+                    href="/2025-2-Squad-01/docs/index.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="botao-principal"
+                    style={{
+                      display: 'inline-block',
+                      padding: '0.75rem 2rem',
+                      backgroundColor: '#667eea',
+                      color: 'white',
+                      borderRadius: '0.5rem',
+                      textDecoration: 'none',
+                      fontWeight: '600',
+                      transition: 'all 0.2s'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5568d3'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#667eea'}
+                  >
+                    Documentação
+                  </a>
+                </div>
               </div>
 
               <p className="text-white/60 text-sm">

@@ -1,0 +1,100 @@
+graph LR
+    %% DAG - Arquitetura Medalhão: Bronze → Silver → Gold
+    %% Fluxo de transformação de dados para Dashboard Acadêmico
+    
+    subgraph Sources ["📡 Fontes de Dados"]
+        A1[GitHub API<br/>Organization]
+        A2[GitHub API<br/>Repositories]  
+        A3[GitHub API<br/>Issues]
+        A4[GitHub API<br/>Pull Requests]
+        A5[GitHub API<br/>Commits]
+        A6[GitHub API<br/>Reviews/Comments]
+        A7[GitHub API<br/>Traffic/Clones]
+    end
+    
+    subgraph Bronze ["🥉 Bronze Layer (Raw)"]
+        B1[org_data.json<br/>timestamp: 2025-01-15]
+        B2[repos_data.json<br/>timestamp: 2025-01-15]
+        B3[issues_data.json<br/>timestamp: 2025-01-15] 
+        B4[prs_data.json<br/>timestamp: 2025-01-15]
+        B5[commits_data.json<br/>timestamp: 2025-01-15]
+        B6[reviews_data.json<br/>timestamp: 2025-01-15]
+        B7[traffic_data.json<br/>timestamp: 2025-01-15]
+    end
+    
+    subgraph Silver ["🥈 Silver Layer (Normalized)"]
+        S1[dim_organization<br/>🔑 org_id, name, type]
+        S2[dim_repositories<br/>🔑 repo_id, name, language]
+        S3[dim_users<br/>🔑 user_id, login, type]
+        S4[fact_issues<br/>🔑 issue_id, 🔗 repo_id, user_id]
+        S5[fact_pull_requests<br/>🔑 pr_id, 🔗 repo_id, author_id]
+        S6[fact_commits<br/>🔑 commit_sha, 🔗 repo_id, author_id]
+        S7[fact_reviews<br/>🔑 review_id, 🔗 pr_id, reviewer_id]
+        S8[fact_relationships<br/>🔑 author_id, reviewer_id, type]
+        S9[fact_traffic<br/>🔑 repo_id, date, clones, views]
+    end
+    
+    subgraph Gold ["🥇 Gold Layer (KPIs & Analytics)"]
+        G1[📈 Throughput Metrics<br/>• Commits/semana<br/>• PRs/Issues por período<br/>• Code churn]
+        G2[⏱️ Lead Time Metrics<br/>• Issue resolution time<br/>• PR merge time<br/>• First response time]
+        G3[🤝 Collaboration Metrics<br/>• Review participation<br/>• Cross-repo collaboration<br/>• Network centrality]
+        G4[📊 Distribution Analysis<br/>• Gini coefficient<br/>• Contribution concentration<br/>• Activity regularidade]
+        G5[🎯 Behavioral Insights<br/>• Activity heatmaps<br/>• Maturity scoring<br/>• Member profiles]
+        G6[🔮 Predictive KPIs<br/>• Slope 8w Initial ramp<br/>• Clone intentions<br/>• Success predictors]
+    end
+    
+    subgraph Dashboard ["📊 Dashboard Views"]
+        D1[Project Overview<br/>📈 High-level KPIs]
+        D2[Team Analytics<br/>👥 Collaboration patterns]  
+        D3[Individual Profiles<br/>👤 Member insights]
+        D4[Temporal Analysis<br/>📅 Time-based trends]
+    end
+    
+    %% Bronze ingestion flows
+    A1 --> B1
+    A2 --> B2  
+    A3 --> B3
+    A4 --> B4
+    A5 --> B5
+    A6 --> B6
+    A7 --> B7
+    
+    %% Silver transformation flows
+    B1 --> S1
+    B2 --> S2
+    B1 & B2 --> S3
+    B3 --> S4
+    B4 --> S5  
+    B5 --> S6
+    B6 --> S7
+    B6 & B4 --> S8
+    B7 --> S9
+    
+    %% Gold aggregation flows  
+    S4 & S5 & S6 --> G1
+    S4 & S5 & S7 --> G2
+    S7 & S8 --> G3
+    S6 & S4 & S5 --> G4
+    S3 & S6 & S9 --> G5
+    S9 & S6 --> G6
+    
+    %% Dashboard consumption
+    G1 --> D1
+    G2 --> D1
+    G3 --> D2
+    G4 --> D2
+    G5 --> D3
+    G6 --> D4
+    
+    %% Styling
+    classDef sourceClass fill:#ffebee,stroke:#c62828,stroke-width:2px;
+    classDef bronzeClass fill:#fff8e1,stroke:#ff8f00,stroke-width:2px;
+    classDef silverClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;  
+    classDef goldClass fill:#f1f8e9,stroke:#33691e,stroke-width:2px;
+    classDef dashClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    
+    class A1,A2,A3,A4,A5,A6,A7 sourceClass;
+    class B1,B2,B3,B4,B5,B6,B7 bronzeClass;
+    class S1,S2,S3,S4,S5,S6,S7,S8,S9 silverClass;
+    class G1,G2,G3,G4,G5,G6 goldClass;  
+    class D1,D2,D3,D4 dashClass;
