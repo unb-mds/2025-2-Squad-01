@@ -89,10 +89,11 @@ class TestSilverProcess:
                 with patch('silver.contribution_metrics.process_contribution_metrics', return_value=[test_files[1]]):
                     with patch('silver.collaboration_networks.process_collaboration_networks', return_value=[test_files[2]]):
                         with patch('silver.temporal_analysis.process_temporal_analysis', return_value=[]):
-                            with patch('utils.github_api.update_data_registry'):
-                                from src import silver_process
-                                
-                                silver_process.main()
+                            with patch('silver.members_statistics.process_members_statistics', return_value=[]):
+                                with patch('utils.github_api.update_data_registry'):
+                                    from src import silver_process
+                                    
+                                    silver_process.main()
         
         captured = capsys.readouterr()
         assert "Generated 3 files" in captured.out
