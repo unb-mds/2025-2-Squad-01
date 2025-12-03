@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia Scrum - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Overview */
+        .overview {
+            background: linear-gradient(135deg, #1a1f35, #0d1117);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .overview h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        /* Section */
+        .section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        /* Headings */
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Methodology Grid */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .methodology-card {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            border: 1px solid var(--border);
+        }
+
+        .methodology-card h4 {
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+
+        /* Pillars */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .pillar {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .pillar h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Roles */
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, #d2992222, #d2992211);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--warning);
+            border: 1px solid var(--border);
+        }
+
+        .role-card h4 {
+            color: var(--warning);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Steps */
+        .step-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--warning);
+            border: 1px solid var(--border);
+        }
+
+        .step-number {
+            background: var(--warning);
+            color: var(--bg-dark);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .step-title {
+            color: var(--warning);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Cycle Flow */
+        .cycle-flow {
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            margin: 2rem 0 0;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: var(--success);
+            margin: 0 0.5rem;
+        }
+
+        /* Daily Questions */
+        .daily-questions {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin: 1rem 0 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .daily-questions h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .daily-questions ul {
+            margin-left: 1.2rem;
+        }
+
+        /* Benefits */
+        .benefits {
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            margin: 1.5rem 0 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .benefits h4 {
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+
+        .benefits ul {
+            margin-left: 1.2rem;
+        }
+
+        .benefits li::before {
+            content: '✅ ';
+        }
+
+        /* Links */
+        a {
+            color: var(--primary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .overview, .section, .step-card, .benefits {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+            .methodology-grid { grid-template-columns: 1fr; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .roles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏃‍♂️ Guia de Metodologias Ágeis com Foco em Scrum</h1>
+        <p>Scrum, Kanban, XP e o fluxo ágil aplicado ao projeto CoOps</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#visao-geral">Visão Geral</a>
+        <a href="#metodologias">Metodologias</a>
+        <a href="#pilares">Pilares</a>
+        <a href="#papeis">Papéis</a>
+        <a href="#passos">Passo a Passo</a>
+        <a href="#coops">CoOps</a>
+    </nav>
+
+    <div class="container">
+        <div class="overview" id="visao-geral">
+            <h2>Visão Geral das Metodologias Ágeis</h2>
+            <p>Metodologias ágeis são abordagens para o gerenciamento de projetos que priorizam a flexibilidade, a colaboração e a entrega de valor de forma contínua. Elas contrastam com o modelo tradicional "Cascata" (Waterfall), que exige um planejamento extensivo no início e tem pouca abertura para mudanças.</p>
+        </div>
+
+        <div class="section" id="metodologias">
+            <h2>Principais Metodologias Ágeis</h2>
+            
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <h4>Kanban</h4>
+                    <p><strong>Conceito Central:</strong> Foco no fluxo de trabalho contínuo e na visualização das tarefas. O Kanban não utiliza iterações de tempo fixo como o Scrum.</p>
+                    <p><strong>Como Funciona:</strong> As tarefas são representadas por cartões em um quadro dividido em colunas que representam as etapas do processo. A principal regra é limitar o número de tarefas em andamento (WIP).</p>
+                    <p><strong>Ideal para:</strong> Equipes que recebem demandas contínuas e de prioridades variáveis, como equipes de suporte, manutenção ou infraestrutura.</p>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4>Extreme Programming (XP)</h4>
+                    <p><strong>Conceito Central:</strong> Foco extremo na qualidade técnica do software e na colaboração intensa entre desenvolvedores e o cliente.</p>
+                    <p><strong>Como Funciona:</strong> O XP promove práticas como Programação em Par, TDD (Test-Driven Development), Integração Contínua e Cliente Presente.</p>
+                    <p><strong>Ideal para:</strong> Projetos com requisitos vagos ou que mudam rapidamente, onde a excelência técnica é um fator crítico de sucesso.</p>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4>Scrum</h4>
+                    <p><strong>Conceito Central:</strong> Framework que fornece estrutura clara de papéis, eventos e artefatos para tornar equipes ágeis.</p>
+                    <p><strong>Como Funciona:</strong> Trabalho organizado em Sprints com rituais bem definidos: Planning, Daily, Review e Retrospectiva.</p>
+                    <p><strong>Ideal para:</strong> Projetos complexos que requerem adaptabilidade, transparência e entrega incremental de valor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="pilares">
+            <h2>Os Pilares do Scrum</h2>
+            <p>O Scrum é baseado no empirismo, que afirma que o conhecimento vem da experiência. Seus três pilares são:</p>
+            
+            <div class="pillars-grid">
+                <div class="pillar">
+                    <h4>Transparência</h4>
+                    <p>O trabalho e o progresso devem ser visíveis para todos os envolvidos no projeto.</p>
+                </div>
+                <div class="pillar">
+                    <h4>Inspeção</h4>
+                    <p>Os artefatos e o progresso devem ser inspecionados frequentemente para detectar variações indesejadas.</p>
+                </div>
+                <div class="pillar">
+                    <h4>Adaptação</h4>
+                    <p>Se a inspeção revelar problemas, o processo ou o produto deve ser ajustado rapidamente.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="papeis">
+            <h2>Papéis no Scrum</h2>
+            
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h4>Product Owner (PO)</h4>
+                    <p>Pessoa que tem a visão do produto e autoridade para tomar decisões. Responsável por criar e priorizar o Product Backlog.</p>
+                </div>
+                <div class="role-card">
+                    <h4>Equipe de Desenvolvimento</h4>
+                    <p>Equipe multifuncional (desenvolvedores, QAs, designers) que constrói o produto. Tamanho ideal entre 3 e 9 pessoas.</p>
+                </div>
+                <div class="role-card">
+                    <h4>Scrum Master</h4>
+                    <p>Garante que o time entenda e siga o Scrum, remove impedimentos e protege a equipe de interrupções.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="passos">
+            <h2>Como Utilizar o Scrum Passo a Passo</h2>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">0</div>
+            <div class="step-title">Passo 0: A Preparação (Antes da Primeira Sprint)</div>
+            <ol>
+                <li><strong>Defina os Papéis:</strong> Identifique o Product Owner, a Equipe de Desenvolvimento e o Scrum Master.</li>
+                <li><strong>Crie o Product Backlog Inicial:</strong> Liste todas as funcionalidades, requisitos e melhorias desejadas para o produto.</li>
+                <li><strong>Defina a "Definição de Pronto":</strong> Crie um checklist compartilhado do que significa um trabalho estar "Pronto".</li>
+            </ol>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Passo 1: Sprint Planning (O Início do Ciclo)</div>
+            <ol>
+                <li><strong>O "Quê?":</strong> O PO apresenta os itens do topo do Product Backlog. A equipe seleciona o que pode concluir na Sprint.</li>
+                <li><strong>O "Como?":</strong> A equipe quebra os itens selecionados em tarefas menores e cria um plano de execução.</li>
+                <li><strong>A Saída:</strong> Sprint Backlog (lista de itens e tarefas) e Meta da Sprint (objetivo único da Sprint).</li>
+            </ol>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Passo 2: O Trabalho na Sprint (O Dia a Dia)</div>
+            
+            <div class="daily-questions">
+                <h4>Daily Scrum - Reunião diária de 15 minutos</h4>
+                <p>Cada membro responde:</p>
+                <ul>
+                    <li>O que fiz ontem?</li>
+                    <li>O que farei hoje?</li>
+                    <li>Há algum impedimento?</li>
+                </ul>
+            </div>
+            
+            <ul>
+                <li>A equipe trabalha nas tarefas do Sprint Backlog</li>
+                <li>O quadro de tarefas torna o progresso visível</li>
+                <li>O Scrum Master remove impedimentos</li>
+                <li>O PO está disponível para esclarecer requisitos</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Passo 3: Sprint Review (Inspeção do Produto)</div>
+            <ol>
+                <li><strong>Apresentação:</strong> A equipe demonstra o incremento funcional para o PO e stakeholders.</li>
+                <li><strong>Feedback:</strong> Coletar feedback sobre o produto. O que funcionou? O que pode melhorar?</li>
+                <li><strong>Adaptação:</strong> O PO pode ajustar o Product Backlog baseado no feedback recebido.</li>
+            </ol>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title">Passo 4: Sprint Retrospective (Inspeção do Processo)</div>
+            <ol>
+                <li><strong>Reflexão:</strong> A equipe reflete sobre a Sprint que acabou de terminar.</li>
+                <li><strong>Discussão:</strong> O que correu bem? O que não correu tão bem? O que pode ser melhorado?</li>
+                <li><strong>Plano de Ação:</strong> Definir itens de melhoria concretos para a próxima Sprint.</li>
+            </ol>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title">Passo 5: Repetir o Ciclo</div>
+            <p>Imediatamente após a Retrospectiva, o ciclo recomeça com a Sprint Planning da próxima Sprint.</p>
+            
+            <div class="cycle-flow">
+                <strong>Planejar</strong> 
+                <span class="flow-arrow">→</span> 
+                <strong>Executar</strong> 
+                <span class="flow-arrow">→</span> 
+                <strong>Inspecionar</strong> 
+                <span class="flow-arrow">→</span> 
+                <strong>Adaptar</strong>
+                <span class="flow-arrow">→</span> 
+                <strong>Repetir</strong>
+            </div>
+        </div>
+
+        <div class="benefits">
+            <h4>Benefícios do Scrum no Projeto CoOps</h4>
+            <ul>
+                <li>Entrega de valor incremental e contínua</li>
+                <li>Adaptação rápida a mudanças de requisitos</li>
+                <li>Transparência total do progresso do projeto</li>
+                <li>Melhoria contínua dos processos da equipe</li>
+                <li>Engajamento e colaboração da equipe</li>
+                <li>Redução de riscos através de feedback frequente</li>
+            </ul>
+        </div>
+
+        <div class="section" id="coops">
+            <h2>Aplicação no Projeto CoOps</h2>
+            <p>No projeto CoOps, aplicamos o framework Scrum com as seguintes adaptações:</p>
+            <ul>
+                <li><strong>Sprints de 1-2 semanas:</strong> Ciclos curtos para adaptação rápida</li>
+                <li><strong>Daily Standups:</strong> Reuniões diárias para sincronização da equipe</li>
+                <li><strong>Product Backlog:</strong> Lista priorizada de funcionalidades para análise de métricas</li>
+                <li><strong>Definition of Done:</strong> Critérios claros de qualidade para cada entrega</li>
+                <li><strong>Retrospectivas:</strong> Melhoria contínua dos processos de desenvolvimento</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>

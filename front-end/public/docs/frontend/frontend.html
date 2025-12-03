@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Overview */
+        .overview {
+            background: linear-gradient(135deg, #1a1f35, #0d1117);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .overview h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        /* Phase Cards */
+        .phase-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .phase-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .phase-card.completed {
+            border-left: 4px solid var(--success);
+        }
+        
+        .phase-card.in-progress {
+            border-left: 4px solid var(--warning);
+        }
+        
+        .phase-card.planned {
+            border-left: 4px solid var(--secondary);
+        }
+        
+        /* Headings */
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        h5 {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Lists */
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+        }
+        
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Code */
+        code {
+            background: var(--bg-hover);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+        
+        .status-completed {
+            background: var(--success);
+            color: var(--bg-dark);
+        }
+        
+        .status-in-progress {
+            background: var(--warning);
+            color: var(--bg-dark);
+        }
+        
+        .status-planned {
+            background: var(--secondary);
+            color: var(--text);
+        }
+        
+        /* Concepts Grid */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .concept-item {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            transition: border-color 0.2s;
+        }
+        
+        .concept-item:hover {
+            border-color: var(--success);
+        }
+        
+        .concept-item h5 {
+            margin-top: 0;
+        }
+        
+        /* Resources List */
+        .resources-list {
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        /* Next Steps */
+        .next-steps {
+            background: linear-gradient(135deg, #d2992222, #d2992211);
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .next-steps h2 {
+            color: var(--warning);
+            margin-top: 0;
+        }
+        
+        /* Section */
+        .section {
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        /* Links */
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .link:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .phase-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+            .concepts-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💻 Desenvolvimento Frontend</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">React + D3.js + JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#fase1">Fase 1</a>
+        <a href="#fase2">Fase 2</a>
+        <a href="#tecnologias">Tecnologias</a>
+    </nav>
+
+    <div class="container">
+        <div class="overview">
+            <h2>Resumo do Objetivo</h2>
+            <p>Este documento registra o progresso nos estudos de desenvolvimento frontend, partindo de um conhecimento nulo em HTML, CSS e JavaScript, com o objetivo final de construir aplicações interativas utilizando React.</p>
+        </div>
+
+        <div class="phase-card completed" id="fase1">
+            <h2>Fase 1: Fundamentos de HTML <span class="status-badge status-completed">✅ Concluída</span></h2>
+            <p>Esta fase inicial focou em construir a base estrutural do desenvolvimento web.</p>
+
+            <h3>Conceitos Aprendidos:</h3>
+            <div class="concepts-grid">
+                <div class="concept-item">
+                    <h5>Sintaxe Básica</h5>
+                    <p>Entendimento de tags, atributos e a estrutura fundamental de um documento HTML.</p>
+                </div>
+                <div class="concept-item">
+                    <h5>Tags Essenciais</h5>
+                    <p>Utilização de tags para títulos (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>), parágrafos (<code>&lt;p&gt;</code>), links (<code>&lt;a&gt;</code>), imagens (<code>&lt;img&gt;</code>), listas (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>).</p>
+                </div>
+                <div class="concept-item">
+                    <h5>HTML Semântico</h5>
+                    <p>Compreensão da importância e aplicação de tags semânticas como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;nav&gt;</code>.</p>
+                </div>
+                <div class="concept-item">
+                    <h5>Formulários</h5>
+                    <p>Estruturação de formulários básicos com <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code> e <code>&lt;button&gt;</code>.</p>
+                </div>
+            </div>
+
+            <div class="resources-list">
+                <h4>Recursos Utilizados:</h4>
+                <ul>
+                    <li>Análise de vídeos-resumo no YouTube para uma introdução rápida e focada</li>
+                    <li>Documentação de referência para consulta de tags específicas</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4>Resultado:</h4>
+                <p>Capacidade de criar a estrutura de uma página web estática, compreendendo a função de cada bloco de conteúdo. Esta base se mostrou essencial para entender a sintaxe JSX no React.</p>
+            </div>
+        </div>
+
+        <div class="phase-card in-progress" id="fase2">
+            <h2>Fase 2: Introdução ao React e Ecossistema <span class="status-badge status-in-progress">🔄 Em Progresso</span></h2>   
+            <p>Após a base de HTML, a jornada se voltou para a biblioteca React. Foi identificado que um conhecimento prévio de CSS e JavaScript é fundamental para a total compreensão.</p>
+
+            <h3>Projeto de Referência Analisado:</h3>
+            <div class="section">
+                <p><strong>Tutorial:</strong> Aplicativo de Lista de Tarefas (To-Do List) em React</p>
+                <p><strong>Fonte:</strong> <a href="https://www.youtube.com/watch?v=9wiWzu_tRB0" target="_blank" class="link">YouTube - React To-Do List</a></p>
+            </div>
+
+            <h3>Conceitos de React Identificados no Projeto:</h3>
+            <div class="concepts-grid">
+                <div class="concept-item">
+                    <h5>Componentes</h5>
+                    <p>Estruturação da aplicação em um componente funcional (TodoList.jsx).</p>
+                </div>
+                <div class="concept-item">
+                    <h5>JSX</h5>
+                    <p>Utilização de uma sintaxe similar a HTML para descrever a interface do usuário.</p>
+                </div>
+                <div class="concept-item">
+                    <h5>Estado (State)</h5>
+                    <p>Gerenciamento de dados que mudam ao longo do tempo com o hook <code>useState</code> para armazenar a lista de tarefas.</p>
+                </div>
+                <div class="concept-item">
+                    <h5>Eventos</h5>
+                    <p>Captura de interações do usuário (cliques em botões, digitação em campos de texto) para acionar funções JavaScript.</p>
+                </div>
+                <div class="concept-item">
+                    <h5>Renderização de Listas</h5>
+                    <p>Uso do método <code>.map()</code> para transformar um array de dados em uma lista de elementos na tela.</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h2>⚡ Próximos Passos Imediatos</h2>
+            <ul>
+                <li><strong>Pausar temporariamente o estudo aprofundado de React</strong> para focar nos pré-requisitos</li>
+                <li><strong>Estudo de CSS:</strong> Foco em Flexbox para entender como alinhar e organizar componentes visualmente</li>
+                <li><strong>Estudo de JavaScript:</strong> Foco nos conceitos essenciais para React:
+                    <ul>
+                        <li>Arrow Functions</li>
+                        <li>Desestruturação</li>
+                        <li>Métodos de Array (principalmente <code>.map()</code> e <code>.filter()</code>)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>✨ Conclusão Parcial</h2>
+            <p>O progresso até aqui estabeleceu uma base sólida em HTML e proporcionou uma visão clara do funcionamento de uma aplicação React. O estudo direcionado de CSS e JavaScript é a próxima etapa crítica para destravar a capacidade de construir e customizar projetos de forma autônoma.</p>
+        </div>
+
+        <div class="phase-card" id="tecnologias">
+            <h2>🛠️ Tecnologias do Projeto CoOps</h2>
+            <p>Para o desenvolvimento do frontend do projeto CoOps, serão utilizadas as seguintes tecnologias:</p>
+            <ul>
+                <li><strong>React:</strong> Biblioteca principal para construção da interface de usuário</li>
+                <li><strong>D3.js:</strong> Biblioteca para visualização de dados e criação de gráficos interativos</li>
+                <li><strong>JavaScript (ES6+):</strong> Linguagem de programação para interatividade</li>
+                <li><strong>CSS:</strong> Estilização e layout responsivo</li>
+                <li><strong>HTML:</strong> Estrutura semântica das páginas</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>
