@@ -42,7 +42,7 @@ interface LinkData extends SimulationLinkDatum<NodeData> { source: NodeData; tar
  */
 export function Histogram({ data, type }: { data: BasicDatum[], type: string }) {
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const [showLineGraph, setShowLineGraph] = useState(false);
+  const [showLineGraph, setShowLineGraph] = useState(true);
 
 
   useEffect(() => {
@@ -62,9 +62,9 @@ export function Histogram({ data, type }: { data: BasicDatum[], type: string }) 
       return;
     }
 
-    const width = 700;
-    const height = 400;
-    const margin = { top: 20, right: 20, bottom: 40, left: 58 };
+    const width = 1000;
+    const height = 450;
+    const margin = { top: 20, right: 20, bottom: 60, left: 58 };
 
     const x = scaleBand<string>()
       .domain(data.map((d) => d.date))
@@ -211,10 +211,10 @@ export function Histogram({ data, type }: { data: BasicDatum[], type: string }) 
 
   return (
     <>
-      <svg ref={svgRef} className="w-full h-[520px]" role="img" aria-label="Histogram" />
+      <svg ref={svgRef} className="w-full h-[480px]" role="img" aria-label="Histogram" style={{ overflow: 'visible' }} />
       <button 
         onClick={() => setShowLineGraph((prev) => !prev)}
-        className=" px-4 py-2 ml-8 mt-5 border-1 border-gray-500 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 flex items-center gap-2"
+        className=" px-4 py-2 mt-10 border-1 border-gray-500 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 flex items-center gap-2"
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 

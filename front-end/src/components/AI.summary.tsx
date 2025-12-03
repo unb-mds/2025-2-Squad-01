@@ -64,7 +64,7 @@ interface AISummaryProps {
  * - Dark theme styling matching project conventions
  */
 export function AISummary({
-  jsonUrl = '/2025-2-Squad-01/ai_analysis.json',
+  jsonUrl = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/AI-Implementation/data/silver/ai/members_ai.json' ,
   title = 'Análise de IA',
   onSelectMember,
   defaultAnalysisType,
@@ -95,8 +95,8 @@ export function AISummary({
   // State for available repos (extracted from data)
   const [availableRepos, setAvailableRepos] = useState<string[]>([]);
   
-  // State for selected member
-  const [selectedMember, setSelectedMember] = useState<MemberAnalysis | null>(null);
+  // State for selected members (multiple selection)
+  const [selectedMembers, setSelectedMembers] = useState<MemberAnalysis[]>([]);
   
   // Ref for click-outside detection
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -118,18 +118,26 @@ export function AISummary({
           }
           const data = await response.json();
           
-          // Convert object to array of members
-          const members = Object.values(data) as MemberAnalysis[];
+          // Handle nested structure - extract members from the data object
+          // The JSON structure is: { "_metadata": {...}, "members": { "member1": {...}, "member2": {...} } }
+          const membersObject = data.members || data;
+          const members = Object.values(membersObject) as MemberAnalysis[];
           
-          if (members.length === 0) {
+          // Validate and ensure repos is always an array
+          const validMembers = members.map(member => ({
+            ...member,
+            repos: Array.isArray(member.repos) ? member.repos : []
+          }));
+          
+          if (validMembers.length === 0) {
             throw new Error('NO_MEMBERS');
           }
           
-          setMembersData(members);
-          setFilteredMembers(members);
+          setMembersData(validMembers);
+          setFilteredMembers(validMembers);
           
           // Extract unique repos
-          const repos = [...new Set(members.flatMap(m => m.repos))];
+          const repos = [...new Set(validMembers.flatMap(m => m.repos || []))];
           setAvailableRepos(repos);
         } else {
           throw new Error('No URL provided');
@@ -162,6 +170,7 @@ export function AISummary({
     // Filter by repository
     if (selectedRepo !== 'all') {
       filtered = filtered.filter(member =>
+        (member.repos && Array.isArray(member.repos) && member.repos.length > 0) &&
         member.repos.some(repo => 
           repo === selectedRepo ||
           repo.toLowerCase() === selectedRepo.toLowerCase() ||
@@ -212,10 +221,24 @@ export function AISummary({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Handle member selection
+  // Handle member selection (toggle)
   const handleSelectMember = (member: MemberAnalysis) => {
-    setSelectedMember(member);
+    setSelectedMembers(prev => {
+      const isAlreadySelected = prev.some(m => m.name === member.name);
+      if (isAlreadySelected) {
+        // Remove member if already selected
+        return prev.filter(m => m.name !== member.name);
+      } else {
+        // Add member to selection
+        return [...prev, member];
+      }
+    });
     onSelectMember?.(member);
+  };
+  
+  // Remove a specific member from selection
+  const handleRemoveMember = (memberName: string) => {
+    setSelectedMembers(prev => prev.filter(m => m.name !== memberName));
   };
 
   // Clear all filters
@@ -223,6 +246,11 @@ export function AISummary({
     setSearchName('');
     setSelectedRepo('all');
     setSelectedAnalysisType('all');
+  };
+  
+  // Clear all selected members
+  const clearAllSelections = () => {
+    setSelectedMembers([]);
   };
 
   // Get the analysis content based on selected type
@@ -241,11 +269,11 @@ export function AISummary({
   };
 
   return (
-    <div ref={dropdownRef} className="relative w-full max-w-md">
+    <div ref={dropdownRef} className="relative w-full ">
       {/* Dropdown Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-3 text-left text-sm font-medium rounded-lg border transition-all duration-200 flex items-center justify-between hover:opacity-90"
+        className="w-full max-w-md px-4 py-3 text-left text-sm font-medium rounded-lg border transition-all duration-200 flex items-center justify-between hover:opacity-90"
         style={{
           backgroundColor: '#333333',
           borderColor: '#444444',
@@ -281,7 +309,7 @@ export function AISummary({
       {/* Dropdown Content */}
       {isOpen && (
         <div
-          className="absolute z-50 w-full mt-2 rounded-lg border shadow-xl overflow-hidden"
+          className="absolute z-50 w-full max-w-md mt-2 rounded-lg border shadow-xl overflow-hidden"
           style={{
             backgroundColor: '#222222',
             borderColor: '#444444',
@@ -487,28 +515,43 @@ export function AISummary({
                   <li key={member.name}>
                     <button
                       onClick={() => handleSelectMember(member)}
-                      className="w-full px-4 py-3 text-left transition-colors"
+                      className="w-full px-4 py-3 text-left transition-colors flex items-center gap-2"
                       style={{
                         backgroundColor:
-                          selectedMember?.name === member.name ? 'rgba(59, 130, 246, 0.2)' : 'transparent',
+                          selectedMembers.some(m => m.name === member.name) ? 'rgba(59, 130, 246, 0.2)' : 'transparent',
                       }}
                       onMouseEnter={(e) => {
-                        if (selectedMember?.name !== member.name) {
+                        if (!selectedMembers.some(m => m.name === member.name)) {
                           e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (selectedMember?.name !== member.name) {
+                        if (!selectedMembers.some(m => m.name === member.name)) {
                           e.currentTarget.style.backgroundColor = 'transparent';
                         }
                       }}
                     >
-                      <h4 className="text-sm font-medium text-white truncate">
-                        {member.name}
-                      </h4>
-                      <p className="text-xs text-slate-400 mt-1">
-                        {member.repos.join(', ')}
-                      </p>
+                      <div className="flex-shrink-0">
+                        <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                          selectedMembers.some(m => m.name === member.name)
+                            ? 'bg-blue-500 border-blue-500'
+                            : 'border-slate-500'
+                        }`}>
+                          {selectedMembers.some(m => m.name === member.name) && (
+                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-medium text-white truncate">
+                          {member.name}
+                        </h4>
+                        <p className="text-xs text-slate-400 mt-1">
+                          {member.repos && member.repos.length > 0 ? member.repos.join(', ') : 'Sem repositórios'}
+                        </p>
+                      </div>
                     </button>
                   </li>
                 ))}
@@ -519,62 +562,93 @@ export function AISummary({
           {/* Footer with count */}
           {!isLoading && !error && filteredMembers.length > 0 && (
             <div
-              className="px-4 py-2 text-xs text-slate-400 border-t"
+              className="px-4 py-2 text-xs border-t flex items-center justify-between"
               style={{ borderColor: '#444444' }}
             >
-              {filteredMembers.length} membro{filteredMembers.length !== 1 ? 's' : ''} encontrado
-              {filteredMembers.length !== 1 ? 's' : ''}
+              <span className="text-slate-400">
+                {filteredMembers.length} membro{filteredMembers.length !== 1 ? 's' : ''} encontrado{filteredMembers.length !== 1 ? 's' : ''}
+              </span>
+              {selectedMembers.length > 0 && (
+                <span className="text-blue-400 font-medium">
+                  {selectedMembers.length} selecionado{selectedMembers.length !== 1 ? 's' : ''}
+                </span>
+              )}
             </div>
           )}
         </div>
       )}
 
-      {/* Selected Member Analysis Display */}
-      {selectedMember && (
-        <div
-          className="mt-4 p-4 rounded-lg border"
-          style={{
-            backgroundColor: '#222222',
-            borderColor: '#444444',
-          }}
-        >
-          <div className="flex items-center justify-between mb-3">
+      {/* Selected Members Analysis Display - Horizontal Layout */}
+      {selectedMembers.length > 0 && (
+        <div className="mt-4">
+          {/* Header with clear all button */}
+          <div className="flex items-center gap-3 mb-3">
             <h3 className="text-lg font-semibold text-white">
-              {selectedMember.name}
+              Análises Selecionadas ({selectedMembers.length})
             </h3>
             <button
-              onClick={() => setSelectedMember(null)}
-              className="text-slate-400 hover:text-white transition-colors"
+              onClick={clearAllSelections}
+              className="px-3 py-1.5 text-xs rounded-md bg-slate-700 text-slate-300 hover:bg-slate-600 transition-colors"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              Limpar Todas
             </button>
           </div>
           
-          {/* Repos badges */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {selectedMember.repos.map((repo) => (
-              <span
-                key={repo}
-                className="px-2 py-0.5 text-xs rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50"
+          {/* Horizontal scrollable container for multiple analyses */}
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory h-[300px]" style={{ scrollbarWidth: 'thin' }}>
+            {selectedMembers.map((member) => (
+              <div
+                key={member.name}
+                className="flex-shrink-0 w-96 p-4 rounded-lg border snap-start h-[300px] overflow-y-auto"
+                style={{
+                  backgroundColor: '#222222',
+                  borderColor: '#444444',
+                }}
               >
-                {repo}
-              </span>
-            ))}
-          </div>
+                {/* Member header */}
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-lg font-semibold text-white truncate">
+                    {member.name}
+                  </h3>
+                  <button
+                    onClick={() => handleRemoveMember(member.name)}
+                    className="text-slate-400 hover:text-white transition-colors flex-shrink-0"
+                    title="Remover"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                
+                {/* Repos badges */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {member.repos && member.repos.length > 0 ? member.repos.map((repo, index) => (
+                    <span
+                      key={`${repo}-${index}`}
+                      className="px-2 py-0.5 text-xs rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50"
+                    >
+                      {repo}
+                    </span>
+                  )) : (
+                    <span className="text-xs text-slate-400">Sem repositórios</span>
+                  )}
+                </div>
 
-          {/* Analysis content */}
-          <div className="space-y-4">
-            {getAnalysisContent(selectedMember).map(({ type, content }) => (
-              <div key={type}>
-                <h4 className="text-sm font-semibold text-blue-400 mb-1">{type}</h4>
-                <p className="text-sm text-slate-300 whitespace-pre-wrap">{content}</p>
+                {/* Analysis content */}
+                <div className="space-y-4 max-h-[600px] overflow-y-auto">
+                  {getAnalysisContent(member).map(({ type, content }) => (
+                    <div key={type}>
+                      <h4 className="text-sm font-semibold text-blue-400 mb-1">{type}</h4>
+                      <p className="text-sm text-slate-300 whitespace-pre-wrap">{content}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

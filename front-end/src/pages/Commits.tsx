@@ -130,17 +130,17 @@ export default function CommitsPage() {
 
 
       {/* Charts Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-90">
+      <div className="flex gap-6">
         {/* Commits Timeline */}
         <div
-          className="border rounded-lg h-170 w-170"
+          className="border rounded-lg flex-1"
           style={{ backgroundColor: '#222222', borderColor: '#333333' }}
         >
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
             <h3 className="text-xl font-bold text-white">Timeline</h3>
           </div>
 
-          <div className="pt-3 h-auto w-auto">
+          <div className="p-6 min-h-[550px]">
             {loading ? (
               <div className="h-[420px] flex items-center justify-center">
                 <div className="text-slate-400">Loading...</div>
@@ -157,20 +157,20 @@ export default function CommitsPage() {
 
         {/* Contributors */}
         <div
-          className="border rounded-lg"
+          className="border rounded-lg w-96 flex-shrink-0"
           style={{ backgroundColor: '#222222', borderColor: '#333333' }}
         >
           <div className="px-6 py-4 border-b" style={{ borderBottomColor: '#333333' }}>
             <h3 className="text-xl font-bold text-white">Contributors</h3>
           </div>
 
-          <div className="p-6">
+          <div className="p-6 h-[550px] overflow-y-auto">
             {loading ? (
-              <div className="h-[140px] flex items-center justify-center">
+              <div className="h-full flex items-center justify-center">
                 <div className="text-slate-400">Loading...</div>
               </div>
             ) : error ? (
-              <div className="h-[140px] flex items-center justify-center">
+              <div className="h-full flex items-center justify-center">
                 <p className="text-red-400">{error}</p>
               </div>
             ) : (
