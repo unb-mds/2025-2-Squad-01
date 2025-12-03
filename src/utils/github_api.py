@@ -203,8 +203,8 @@ class GitHubAPIClient:
             else:
                 end_dt = datetime.now(timezone.utc)
         except (ValueError, AttributeError):
-            # If parsing fails, return single range
-            return [(since, until)]
+            # If parsing fails, return None range to indicate invalid dates
+            return [(None, None)]
         
         # Calculate chunk duration
         total_duration = end_dt - start_dt
