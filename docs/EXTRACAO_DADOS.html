@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extração de Dados - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+        
+        /* Headings */
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: var(--text);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+        }
+        
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-bronze { background: #cd7f3244; color: #cd7f32; border: 1px solid #cd7f32; }
+        .badge-silver { background: #c0c0c044; color: #e1e4e8; border: 1px solid #c0c0c0; }
+        .badge-gold { background: #ffd70044; color: #ffd700; border: 1px solid #ffd700; }
+        .badge-success { background: #3fb95044; color: #3fb950; border: 1px solid #3fb950; }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        /* Optimization Box */
+        .optimization-box {
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .optimization-box h4 {
+            color: var(--success);
+            margin-top: 0;
+        }
+        
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        
+        .grid-item:hover {
+            border-color: var(--primary);
+        }
+        
+        .grid-item h4 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        /* Code */
+        code {
+            background: var(--bg-hover);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--bg-hover);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: var(--bg-hover);
+        }
+        
+        /* Flow Diagram */
+        .flow-diagram {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            white-space: pre;
+            color: var(--text-muted);
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Extração e Processamento de Dados</h1>
+        <p>Pipeline ETL Completo - Bronze → Silver → Gold</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Última Atualização: 02/12/2025 | Versão 2.0</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Documentação</a>
+        <a href="#visao-geral">Visão Geral</a>
+        <a href="#bronze">Bronze</a>
+        <a href="#silver">Silver</a>
+        <a href="#frontend">Frontend</a>
+        <a href="#otimizacoes">Otimizações</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2 id="visao-geral">🏗️ Arquitetura Medallion</h2>
+            <p>O projeto utiliza a <strong>Arquitetura Medallion</strong> com três camadas de processamento progressivo:</p>
+
+            <div class="flow-diagram">GitHub API → Bronze (Raw) → Silver (Enriched) → Gold (Aggregated) → Frontend</div>
+
+            <h3>Camadas</h3>
+            <div class="grid">
+                <div class="grid-item">
+                    <h4><span class="badge badge-bronze">🥉 Bronze</span></h4>
+                    <p>Dados brutos extraídos diretamente da API do GitHub</p>
+                </div>
+                <div class="grid-item">
+                    <h4><span class="badge badge-silver">🥈 Silver</span></h4>
+                    <p>Dados processados, limpos e enriquecidos com análises</p>
+                </div>
+                <div class="grid-item">
+                    <h4><span class="badge badge-gold">🥇 Gold</span></h4>
+                    <p>Dados agregados e prontos para consumo pelo frontend</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="bronze">📥 Camada Bronze - Extração de Dados Brutos</h2>
+            <span class="badge badge-bronze">Bronze Layer</span>
+
+            <h3>GitHubAPIClient</h3>
+            <p><strong>Localização:</strong> <code>src/utils/github_api.py</code></p>
+            
+            <div class="info-box">
+                <h4>Funcionalidades:</h4>
+                <ul>
+                    <li>✅ <strong>Rate limit handling</strong> - Controle automático de limites</li>
+                    <li>✅ <strong>Cache</strong> - Sistema de cache para evitar requisições duplicadas</li>
+                    <li>✅ <strong>Retry logic</strong> - Tentativas automáticas com backoff exponencial</li>
+                    <li>✅ <strong>Circuit breaker</strong> - Proteção contra falhas consecutivas</li>
+                </ul>
+            </div>
+
+            <h3>Scripts de Extração Bronze</h3>
+
+            <h4>1. repository_structure.py</h4>
+            <p>Extrai a estrutura completa de arquivos do repositório.</p>
+
+            <div class="optimization-box">
+                <h4>✅ Otimização Implementada (PR #101):</h4>
+                <ul>
+                    <li>⚡ <strong>100x mais rápido:</strong> 3-4 horas → 30-40 segundos</li>
+                    <li>📉 Redução de 1.500 requisições → 73 requisições (1 por repo)</li>
+                    <li>🎯 Zero erros de secondary rate limit</li>
+                    <li>🔄 Migração de GraphQL iterativo para REST <code>recursive=1</code></li>
+                </ul>
+            </div>
+
+            <p><strong>Processo:</strong></p>
+            <ol>
+                <li>Conecta ao GitHub via REST API</li>
+                <li>Busca árvore completa com <code>recursive=1</code></li>
+                <li>Extrai caminho, tipo e tamanho de cada arquivo</li>
+                <li>Salva JSON bruto em <code>data/bronze/repository_structure/</code></li>
+            </ol>
+
+            <p><strong>Exemplo de saída:</strong></p>
+            <pre><code>{
+  "owner": "unb-mds",
+  "repository": "2025-2-Squad-01",
+  "branch": "main",
+  "tree": [
+    {
+      "path": "src/bronze/commits.py",
+      "type": "blob",
+      "size": 5432
+    }
+  ],
+  "extracted_at": "2025-12-02T10:30:00Z"
+}</code></pre>
+
+            <h4>2. commits.py</h4>
+            <p>Extrai histórico completo de commits do repositório.</p>
+
+            <div class="optimization-box">
+                <h4>✅ Otimização GraphQL/REST Híbrido (PR #78 e #104):</h4>
+                <ul>
+                    <li>🎯 GraphQL como método padrão</li>
+                    <li>⚡ Circuit breaker otimizado (1 falha → REST fallback)</li>
+                    <li>⏱️ Timeout único de 30 segundos (fail-fast)</li>
+                    <li>🔀 Processamento paralelo REST com 5 workers</li>
+                    <li>📦 Batches de 10 commits com delay de 0.3s</li>
+                </ul>
+            </div>
+
+            <p><strong>Fluxo Híbrido:</strong></p>
+            <div class="flow-diagram">┌─────────────────────┐
+│  Tentar GraphQL     │
+│  (timeout: 30s)     │
+└──────────┬──────────┘
+           │
+           ├─ Sucesso ──────────────────┐
+           │                            │
+           └─ Falha (502/timeout) ──────┤
+                                        │
+                                        ▼
+                            ┌────────────────────┐
+                            │  Fallback REST     │
+                            │  (5 workers)       │
+                            └────────────────────┘</div>
+
+            <h4>3. issues.py & pull_requests.py</h4>
+            <p>Extrai issues e pull requests com todos os detalhes.</p>
+            <ul>
+                <li>📋 Título, estado, labels, assignees</li>
+                <li>👥 Reviewers e mergeable status</li>
+                <li>📅 Datas de criação, atualização e merge</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 id="silver">🔄 Camada Silver - Enriquecimento e Análise</h2>
+            <span class="badge badge-silver">Silver Layer</span>
+
+            <h3>Scripts de Análise Silver</h3>
+
+            <h4>1. temporal_analysis.py</h4>
+            <p>Análise temporal de atividades do repositório.</p>
+            <div class="info-box">
+                <p><strong>Métricas calculadas:</strong></p>
+                <ul>
+                    <li>📊 Commits por dia/semana/mês</li>
+                    <li>📈 Frequência de contribuições</li>
+                    <li>🕐 Padrões temporais de atividade</li>
+                    <li>➕➖ Linhas adicionadas/removidas por período</li>
+                </ul>
+                <p><strong>Saída:</strong> <code>data/silver/temporal_analysis/</code></p>
+            </div>
+
+            <h4>2. file_language_analysis.py</h4>
+            <p>Análise de linguagens e estrutura de arquivos.</p>
+            
+            <div class="optimization-box">
+                <h4>✅ Expansão de Linguagens (PR #101):</h4>
+                <p><strong>Antes:</strong> 32 extensões | <strong>Depois:</strong> 90+ extensões</p>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Categorias suportadas:</strong></p>
+                <ul>
+                    <li>💻 <strong>Programação:</strong> Python, JavaScript, TypeScript, Java, C, C++, Go, Rust...</li>
+                    <li>🎨 <strong>Markup/Estilos:</strong> HTML, CSS, Markdown, SCSS, LESS</li>
+                    <li>⚙️ <strong>Configuração:</strong> JSON, YAML, TOML, INI, ENV</li>
+                    <li>🖼️ <strong>Imagens:</strong> PNG, JPEG, SVG, WebP, GIF, ICO</li>
+                    <li>🔤 <strong>Fontes:</strong> TTF, OTF, WOFF, WOFF2, EOT</li>
+                    <li>🎥 <strong>Mídia:</strong> MP4, MP3, WAV, AVI, MOV</li>
+                    <li>📦 <strong>Arquivos:</strong> ZIP, TAR, RAR, 7Z, GZ</li>
+                    <li>📄 <strong>Documentação:</strong> RST, LaTeX, PDF, TXT</li>
+                    <li>🐚 <strong>Shell:</strong> Bash, Zsh, Fish, PowerShell</li>
+                </ul>
+            </div>
+
+            <h4>3. collaboration_analysis.py</h4>
+            <p>Análise de colaboração entre desenvolvedores.</p>
+            <div class="info-box">
+                <p><strong>Métricas:</strong></p>
+                <ul>
+                    <li>🕸️ Rede de colaboração (quem trabalha com quem)</li>
+                    <li>👥 Contribuições por desenvolvedor</li>
+                    <li>🔥 Heatmap de atividades</li>
+                    <li>🔄 Frequência de interações</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="frontend">🎨 Frontend - Visualização de Dados</h2>
+
+            <h3>Componentes de Visualização</h3>
+
+            <table>
+                <tr>
+                    <th>Componente</th>
+                    <th>Descrição</th>
+                    <th>Fonte de Dados</th>
+                </tr>
+                <tr>
+                    <td><strong>RepoFingerprint</strong></td>
+                    <td>Visualização de estrutura (Treemap/CirclePack)</td>
+                    <td>file_language_analysis (Silver)</td>
+                </tr>
+                <tr>
+                    <td><strong>CollaborationNetworkGraph</strong></td>
+                    <td>Grafo de rede de colaboração</td>
+                    <td>collaboration_analysis (Silver)</td>
+                </tr>
+                <tr>
+                    <td><strong>ActivityHeatmap</strong></td>
+                    <td>Mapa de calor temporal</td>
+                    <td>temporal_analysis (Silver)</td>
+                </tr>
+                <tr>
+                    <td><strong>Commits Timeline</strong></td>
+                    <td>Linha do tempo de commits</td>
+                    <td>commits (Bronze) + temporal_analysis (Silver)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2 id="otimizacoes">⚡ Otimizações Implementadas</h2>
+
+            <h3>1. Otimização de Estrutura (PR #101)</h3>
+            <div class="optimization-box">
+                <h4>Problema:</h4>
+                <ul>
+                    <li>⏱️ Extração levava 3-4 horas</li>
+                    <li>📈 ~1.500 requisições GraphQL para 73 repositórios</li>
+                    <li>❌ Erros frequentes de secondary rate limit (403)</li>
+                </ul>
+
+                <h4>Solução:</h4>
+                <ul>
+                    <li>✅ Migração para REST <code>/git/trees</code> com <code>recursive=1</code></li>
+                    <li>⚡ <strong>100x mais rápido:</strong> 3-4h → 30-40 segundos</li>
+                    <li>📉 Redução para 73 requisições (1 por repositório)</li>
+                    <li>🎯 Zero erros de rate limit</li>
+                    <li>📦 Suporte a até 100.000 arquivos por repo</li>
+                </ul>
+
+                <h4>Impacto:</h4>
+                <ul>
+                    <li>Pipeline completo: ~27 minutos (antes: horas)</li>
+                    <li>Complexidade reduzida: 150K linhas → 146</li>
+                </ul>
+            </div>
+
+            <h3>2. Otimização GraphQL/REST Híbrido (PR #104)</h3>
+            <div class="optimization-box">
+                <h4>Problema:</h4>
+                <ul>
+                    <li>❌ GraphQL falhava ocasionalmente (502 Bad Gateway)</li>
+                    <li>⏱️ Timeout muito longo causava travamentos</li>
+                    <li>🐌 Extração REST sequencial era lenta</li>
+                </ul>
+
+                <h4>Solução GraphQL:</h4>
+                <ul>
+                    <li>✅ Timeout único de 30 segundos (fail-fast)</li>
+                    <li>✅ Circuit breaker otimizado (1 falha → REST fallback)</li>
+                    <li>✅ Fallback imediato em 502 Bad Gateway</li>
+                </ul>
+
+                <h4>Solução REST (Fallback):</h4>
+                <ul>
+                    <li>✅ ThreadPoolExecutor com 5 workers simultâneos</li>
+                    <li>✅ Processamento em batches de 10 commits</li>
+                    <li>✅ Delay de 0.3s entre batches</li>
+                    <li>✅ ~50% mais rápido que sequencial</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Métricas de Performance</h2>
+
+            <h3>Pipeline Bronze</h3>
+            <table>
+                <tr>
+                    <th>Processo</th>
+                    <th>Tempo</th>
+                </tr>
+                <tr>
+                    <td>Commits (GraphQL)</td>
+                    <td>~10-20 segundos por repo</td>
+                </tr>
+                <tr>
+                    <td>Commits (REST Paralelo)</td>
+                    <td>~15-30 segundos por repo</td>
+                </tr>
+                <tr>
+                    <td>Estrutura (REST recursive)</td>
+                    <td>~30 segundos para 73 repos</td>
+                </tr>
+                <tr>
+                    <td>Issues</td>
+                    <td>~5-10 segundos por repo</td>
+                </tr>
+                <tr>
+                    <td>Pull Requests</td>
+                    <td>~5-10 segundos por repo</td>
+                </tr>
+            </table>
+
+            <h3>Pipeline Completa</h3>
+            <div class="info-box">
+                <p><strong>Bronze + Silver:</strong> ~27 minutos para 73 repositórios</p>
+                <p><strong>Antes das otimizações:</strong> Várias horas</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔧 Como rodar localmente</h2>
+            <ol>
+                <li>Clone o repositório</li>
+                <li>Instale as dependências do front-end: <code>npm install</code></li>
+                <li>Gere os dados necessários:
+                    <pre><code>python3 data/pipeline/bronze/extractor.py
+python3 data/pipeline/silver/repository_structure_analyzer.py</code></pre>
+                </li>
+                <li>Rode o dev server: <code>npm run dev</code></li>
+            </ol>
+        </div>
+
+        <a href="index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>
