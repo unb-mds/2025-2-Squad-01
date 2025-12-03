@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ "18", "20" ]
+        node-version: [ "20", "22" ]  # ← MUDANÇA: Node 20 e 22 (remove 18)
     
     defaults:
       run:
