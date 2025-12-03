@@ -3,302 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitetura - CoOps Documentação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Arquitetura Técnica - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --bg: #f4f6fa;
-            --white: #fff;
-            --gray: #7f8c8d;
-            --dark: #2c3e50;
-        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg);
-            margin: 0;
-            color: var(--dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
         }
-
+        
+        /* Header */
         header {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-            color: var(--white);
-            padding: 2rem 0 1.5rem 0;
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+            border-bottom: 1px solid var(--border);
+            position: relative;
         }
-
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
         header h1 {
-            font-size: 2.7rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-            margin-bottom: 0.5rem;
-        }
-
-        nav {
-            margin-top: 1.5rem;
-        }
-
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 1.2rem;
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: text-decoration 0.2s;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .main {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
-            padding: 2.5rem 2rem 2rem 2rem;
-        }
-
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        h1 {
-            color: var(--secondary);
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+        
+        /* Headings */
         h2 {
-            color: var(--secondary);
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 2rem;
             font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
         }
-
+        
         h3 {
-            color: var(--secondary);
-            font-size: 1.4rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
         }
-
+        
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+        
         p {
             margin-bottom: 1rem;
-            text-align: justify;
+            color: var(--text-muted);
         }
-
+        
+        /* Lists */
         ul, ol {
-            margin-left: 1.2rem;
-            margin-bottom: 0.7rem;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
         }
-
+        
         li {
-            margin-bottom: 0.3rem;
+            margin: 0.5rem 0;
+            color: var(--text-muted);
         }
-
+        
         strong {
-            color: var(--secondary);
+            color: var(--primary);
+            font-weight: 600;
         }
-
-        .section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8fafc;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-        }
-
+        
+        /* ADR Card */
         .adr-card {
-            background: #e0f2fe;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #0284c7;
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            border: 1px solid var(--success);
+            border-left: 4px solid var(--success);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
         }
-
+        
+        .adr-card h2 {
+            margin-top: 0;
+            color: var(--success);
+            border-bottom: none;
+        }
+        
         .status {
             display: inline-block;
-            background: #22c55e;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            background: var(--success);
+            color: var(--bg-dark);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
             margin-left: 0.5rem;
         }
-
+        
+        /* Tech Grid */
         .tech-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
-
+        
         .tech-item {
-            background: white;
-            padding: 1rem;
+            background: var(--bg-hover);
+            padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid var(--primary);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.2s;
         }
-
+        
+        .tech-item:hover {
+            border-color: var(--success);
+        }
+        
         .tech-item h4 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
+            margin-top: 0;
         }
-
+        
+        /* Overview */
         .overview {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1f35, #0d1117);
+            border: 1px solid var(--border);
             padding: 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
         }
-
+        
         .overview h2 {
-            color: white;
+            color: var(--primary);
             margin-top: 0;
         }
-
-        @media (max-width: 600px) {
-            .main { padding: 1rem; }
+        
+        /* Section */
+        .section {
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card, .adr-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
             .tech-list { grid-template-columns: 1fr; }
         }
-    </style>
     </style>
 </head>
 <body>
     <header>
-        <h1>CoOps – Arquitetura do Sistema</h1>
-        <p>Documentação da arquitetura, tecnologias e decisões de design do projeto.</p>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="index.html">Documentação</a>
-            <a href="backend.html">Backend</a>
-            <a href="requisitos.html">Requisitos</a>
-            <a href="scrum.html">Scrum</a>
-        </nav>
+        <h1>🏛️ Arquitetura Técnica</h1>
+        <p>Tecnologias, decisões de design e ADRs do projeto CoOps</p>
     </header>
-    <div class="main">
-            <h1>Arquitetura do Sistema</h1>
 
-            <div class="overview">
-                <h2>Visão Geral</h2>
-                <p>O projeto CoOps utiliza uma arquitetura moderna e modular, baseada em tecnologias web e integração com APIs do GitHub para análise de métricas de colaboração em repositórios e organizações.</p>
-            </div>
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#visao">Visão Geral</a>
+        <a href="#adr">ADR</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#fluxo">Fluxo</a>
+    </nav>
 
-            <div class="adr-card">
-                <h2>ADR 01: Escolha das Tecnologias para Desenvolvimento do Projeto <span class="status">✅ Aceito</span></h2>
-                
-                <h3>Contexto</h3>
-                <p>Nas discussões iniciais do projeto foi debatido sobre quais tecnologias utilizar.</p>
-                
-                <h3>Decisão</h3>
-                <p>As tecnologias definidas foram:</p>
-                <ul>
-                    <li><strong>Python</strong></li>
-                    <li><strong>React</strong></li>
-                    <li><strong>Biblioteca D3 (JavaScript)</strong></li>
-                    <li><strong>API GitHub</strong></li>
-                    <li><strong>GitHub Actions</strong></li>
-                    <li><strong>Firebase</strong></li>
-                    <li><strong>Arquivos JSON</strong> para armazenamento e transferência dos dados</li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="overview" id="visao">
+            <h2>Visão Geral</h2>
+            <p>O projeto CoOps utiliza uma arquitetura moderna e modular, baseada em tecnologias web e integração com APIs do GitHub para análise de métricas de colaboração em repositórios e organizações.</p>
+        </div>
 
-            <div class="section">
-                <h2>Detalhamento das Tecnologias</h2>
-                
-                <div class="tech-list">
-                    <div class="tech-item">
-                        <h4>Python</h4>
-                        <p>Utilizado para a criação dos scripts que irão realizar o tratamento dos dados extraídos da API do GitHub.</p>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <h4>React</h4>
-                        <p>Utilizado em conjunto com a biblioteca D3 para a criação da interface frontend, que consumirá os arquivos JSON e exibirá os gráficos com as métricas do GitHub.</p>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <h4>Biblioteca D3 (JavaScript)</h4>
-                        <p>Biblioteca de código aberto para visualização de dados. Permite a construção de gráficos personalizados. Será utilizada junto com o React para consumir os dados dos arquivos JSON e criar as páginas de visualização gráfica das métricas do GitHub.</p>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <h4>API GitHub</h4>
-                        <p>Utilizada para extrair os dados de repositórios e organizações do GitHub (commits, issues, datas de abertura e fechamento de issues, e pull requests).</p>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <h4>GitHub Actions</h4>
-                        <p>Garante a atualização permanente dos arquivos JSON e, consequentemente, uma análise sempre atualizada das métricas. Essa integração com os arquivos JSON dispensa a necessidade de uma aplicação backend e simplifica a implementação do projeto.</p>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <h4>Firebase</h4>
-                        <p>Utilizado para realizar a hospedagem do projeto, proporcionando uma solução escalável e de baixo custo.</p>
-                    </div>
+        <div class="adr-card" id="adr">
+            <h2>ADR 01: Escolha das Tecnologias <span class="status">✅ Aceito</span></h2>
+
+            <h3>Contexto</h3>
+            <p>Nas discussões iniciais do projeto foi debatido sobre quais tecnologias utilizar.</p>
+
+            <h3>Decisão</h3>
+            <p>As tecnologias definidas foram:</p>
+            <ul>
+                <li><strong>Python</strong></li>
+                <li><strong>React</strong></li>
+                <li><strong>Biblioteca D3 (JavaScript)</strong></li>
+                <li><strong>API GitHub</strong></li>
+                <li><strong>GitHub Actions</strong></li>
+                <li><strong>Firebase</strong></li>
+                <li><strong>Arquivos JSON</strong> para armazenamento e transferência dos dados</li>
+            </ul>
+        </div>
+
+        <div class="card" id="tecnologias">
+            <h2>🛠️ Detalhamento das Tecnologias</h2>
+
+            <div class="tech-list">
+                <div class="tech-item">
+                    <h4>🐍 Python</h4>
+                    <p>Utilizado para a criação dos scripts que irão realizar o tratamento dos dados extraídos da API do GitHub.</p>  
+                </div>
+
+                <div class="tech-item">
+                    <h4>⚛️ React</h4>
+                    <p>Utilizado em conjunto com a biblioteca D3 para a criação da interface frontend, que consumirá os arquivos JSON e exibirá os gráficos com as métricas do GitHub.</p>
+                </div>
+
+                <div class="tech-item">
+                    <h4>📊 Biblioteca D3 (JavaScript)</h4>
+                    <p>Biblioteca de código aberto para visualização de dados. Permite a construção de gráficos personalizados. Será utilizada junto com o React para consumir os dados dos arquivos JSON e criar as páginas de visualização gráfica das métricas do GitHub.</p>
+                </div>
+
+                <div class="tech-item">
+                    <h4>🔗 API GitHub</h4>
+                    <p>Utilizada para extrair os dados de repositórios e organizações do GitHub (commits, issues, datas de abertura e fechamento de issues, e pull requests).</p>
+                </div>
+
+                <div class="tech-item">
+                    <h4>🤖 GitHub Actions</h4>
+                    <p>Garante a atualização permanente dos arquivos JSON e, consequentemente, uma análise sempre atualizada das métricas. Essa integração com os arquivos JSON dispensa a necessidade de uma aplicação backend e simplifica a implementação do projeto.</p>    
+                </div>
+
+                <div class="tech-item">
+                    <h4>🔥 Firebase</h4>
+                    <p>Utilizado para realizar a hospedagem do projeto, proporcionando uma solução escalável e de baixo custo.</p>    
                 </div>
             </div>
-
-            <div class="section">
-                <h2>Consequências e Benefícios</h2>
-                <p>As tecnologias escolhidas proporcionam:</p>
-                <ul>
-                    <li><strong>Maior tempo de permanência do projeto:</strong> Utilizando tecnologias estáveis e amplamente suportadas.</li>
-                    <li><strong>Análises atualizadas:</strong> Com base nas métricas do GitHub através de automação via GitHub Actions.</li>
-                    <li><strong>Redução de custos com hospedagem:</strong> Utilizando Firebase para hospedagem estática.</li>
-                    <li><strong>Simplicidade arquitetural:</strong> Dispensando a necessidade de um backend complexo através do uso de arquivos JSON e GitHub Actions.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Fluxo de Dados</h2>
-                <ol>
-                    <li><strong>Extração:</strong> Scripts Python utilizam a API do GitHub para extrair dados de repositórios e organizações.</li>
-                    <li><strong>Processamento:</strong> Os dados são processados e transformados em arquivos JSON estruturados.</li>
-                    <li><strong>Atualização:</strong> GitHub Actions executa periodicamente os scripts para manter os dados atualizados.</li>
-                    <li><strong>Visualização:</strong> O frontend React consome os arquivos JSON e utiliza D3.js para gerar visualizações interativas.</li>
-                    <li><strong>Hospedagem:</strong> O projeto é servido através do Firebase para usuários finais.</li>
-                </ol>
-            </div>
-
-            <div class="section">
-                <h2>Vantagens da Arquitetura Escolhida</h2>
-                <ul>
-                    <li><strong>Escalabilidade:</strong> Cada componente pode ser escalado independentemente.</li>
-                    <li><strong>Manutenibilidade:</strong> Separação clara de responsabilidades entre camadas.</li>
-                    <li><strong>Performance:</strong> Dados pré-processados em JSON resultam em carregamento rápido.</li>
-                    <li><strong>Custo-benefício:</strong> Utilização de serviços gratuitos ou de baixo custo.</li>
-                    <li><strong>Automatização:</strong> Processo completamente automatizado de atualização de dados.</li>
-                </ul>
-            </div>
         </div>
+
+        <div class="section">
+            <h2>✨ Consequências e Benefícios</h2>
+            <p>As tecnologias escolhidas proporcionam:</p>
+            <ul>
+                <li><strong>Maior tempo de permanência do projeto:</strong> Utilizando tecnologias estáveis e amplamente suportadas.</li>
+                <li><strong>Análises atualizadas:</strong> Com base nas métricas do GitHub através de automação via GitHub Actions.</li>
+                <li><strong>Redução de custos com hospedagem:</strong> Utilizando Firebase para hospedagem estática.</li>
+                <li><strong>Simplicidade arquitetural:</strong> Dispensando a necessidade de um backend complexo através do uso de arquivos JSON e GitHub Actions.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="fluxo">
+            <h2>🔄 Fluxo de Dados</h2>
+            <ol>
+                <li><strong>Extração:</strong> Scripts Python utilizam a API do GitHub para extrair dados de repositórios e organizações.</li>
+                <li><strong>Processamento:</strong> Os dados são processados e transformados em arquivos JSON estruturados.</li>      
+                <li><strong>Atualização:</strong> GitHub Actions executa periodicamente os scripts para manter os dados atualizados.</li>
+                <li><strong>Visualização:</strong> O frontend React consome os arquivos JSON e utiliza D3.js para gerar visualizações interativas.</li>
+                <li><strong>Hospedagem:</strong> O projeto é servido através do Firebase para usuários finais.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Vantagens da Arquitetura Escolhida</h2>
+            <ul>
+                <li><strong>Escalabilidade:</strong> Cada componente pode ser escalado independentemente.</li>
+                <li><strong>Manutenibilidade:</strong> Separação clara de responsabilidades entre camadas.</li>
+                <li><strong>Performance:</strong> Dados pré-processados em JSON resultam em carregamento rápido.</li>
+                <li><strong>Custo-benefício:</strong> Utilização de serviços gratuitos ou de baixo custo.</li>
+                <li><strong>Automatização:</strong> Processo completamente automatizado de atualização de dados.</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
     </div>
 </body>
 </html>
