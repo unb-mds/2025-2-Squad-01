@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ "20", "22" ]  # ← MUDANÇA: Node 20 e 22 (remove 18)
+        node-version: [ "20", "22" ]
     
     defaults:
       run:
@@ -120,10 +120,7 @@ jobs:
             front-end/coverage/
           retention-days: 30
       
-      - name: Check coverage threshold
-        run: |
-          echo "Checking coverage thresholds..."
-          npm run test:coverage -- --reporter=json --reporter=text
+      # ← REMOVIDO O STEP "Check coverage threshold" (era redundante)
       
       - name: Comment Frontend coverage on PR
         if: github.event_name == 'pull_request' && matrix.node-version == '20'
