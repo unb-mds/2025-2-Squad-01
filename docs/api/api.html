@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API GitHub - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Overview */
+        .overview {
+            background: linear-gradient(135deg, #1a1f35, #0d1117);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .overview h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        /* Section */
+        .section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        
+        /* Headings */
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin: 0.4rem 0;
+            color: var(--text-muted);
+        }
+        
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Inline code */
+        code {
+            background: var(--bg-hover);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: var(--bg-hover);
+            color: var(--text);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+        
+        pre code {
+            background: transparent;
+            color: inherit;
+            padding: 0;
+        }
+        
+        /* API Types */
+        .api-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .api-type {
+            background: var(--bg-hover);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            text-align: center;
+        }
+        
+        .api-type h4 {
+            margin-top: 0;
+        }
+        
+        /* Examples */
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .example-item {
+            background: var(--bg-hover);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Advantages */
+        .advantages {
+            background: linear-gradient(135deg, #3fb95022, #3fb95011);
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0 2rem;
+            border: 1px solid var(--border);
+        }
+        
+        .advantages ul {
+            margin-left: 1.2rem;
+        }
+        
+        .advantages li::before {
+            content: '✅ ';
+        }
+        
+        /* Endpoints */
+        .endpoint-list {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .endpoint {
+            background: var(--bg-hover);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--warning);
+            border: 1px solid var(--border);
+        }
+        
+        .endpoint h4 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .endpoint-method {
+            background: var(--success);
+            color: var(--bg-dark);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        /* Testing sections */
+        .testing-section {
+            background: linear-gradient(135deg, #d2992222, #d2992211);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--warning);
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        /* Analysis */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .analysis-item {
+            background: var(--bg-hover);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            border: 1px solid var(--border);
+        }
+        
+        .status-codes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .status-code {
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .status-200 {
+            background: #23863633;
+            color: #3fb950;
+            border: 1px solid #238636;
+        }
+        
+        .status-404 {
+            background: #f8514933;
+            color: #f85149;
+            border: 1px solid #f85149;
+        }
+        
+        .status-403 {
+            background: #d2992233;
+            color: #d29922;
+            border: 1px solid #d29922;
+        }
+        
+        /* Links */
+        a {
+            color: var(--primary);
+        }
+        
+        a.link {
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        a.link:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section, .overview {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+            .api-types { grid-template-columns: 1fr; }
+            .examples { grid-template-columns: 1fr; }
+            .analysis-grid { grid-template-columns: 1fr; }
+            pre { font-size: 0.8rem; padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔗 Integração com a API do GitHub</h1>
+        <p>APIs, REST, JSON e coleta de métricas para o CoOps</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#conceitos">Conceitos</a>
+        <a href="#tipos">Tipos de API</a>
+        <a href="#github-api">GitHub API</a>
+        <a href="#endpoints">Endpoints</a>
+        <a href="#analise">Análise</a>
+        <a href="#coops">CoOps</a>
+    </nav>
+
+    <div class="container">
+        <div class="overview" id="conceitos">
+            <h2>O que é uma API?</h2>
+            <p><strong>API</strong> significa <strong>Application Programming Interface</strong> (Interface de Programação de Aplicações). Ela é como um <strong>"cardápio"</strong> de funções, dados e serviços que um sistema oferece para que outros sistemas possam interagir com ele.</p>
+            <p>➡ Em termos simples: uma API é uma <strong>ponte de comunicação entre softwares</strong>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Como funcionam as APIs?</h2>
+            <p>As APIs geralmente funcionam no modelo <strong>requisição e resposta</strong>:</p>
+            <ol>
+                <li>Seu sistema (cliente) <strong>faz uma requisição</strong> para a API (por exemplo: "me dê todos os usuários")</li>
+                <li>A API processa no servidor</li>
+                <li>A API <strong>responde</strong> com os dados, geralmente em <strong>JSON</strong> ou <strong>XML</strong></li>
+            </ol>
+            
+            <p>📌 Estrutura de uma requisição típica (REST API):</p>
+            <pre><code>GET https://api.exemplo.com/users
+
+Resposta (JSON):
+[
+  { "id": 1, "nome": "Ana" },
+  { "id": 2, "nome": "Carlos" }
+]</code></pre>
+        </div>
+
+        <div class="section" id="tipos">
+            <h2>Tipos principais de APIs</h2>
+            <div class="api-types">
+                <div class="api-type">
+                    <h4>REST</h4>
+                    <p>Mais comum, baseada em URLs e métodos HTTP</p>
+                </div>
+                <div class="api-type">
+                    <h4>SOAP</h4>
+                    <p>Mais antiga, usa XML e protocolos específicos</p>
+                </div>
+                <div class="api-type">
+                    <h4>GraphQL</h4>
+                    <p>Você define exatamente quais dados quer receber</p>
+                </div>
+                <div class="api-type">
+                    <h4>WebSockets</h4>
+                    <p>Comunicação em tempo real</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos famosos de APIs</h2>
+            <div class="examples">
+                <div class="example-item">
+                    <h4>Google Maps API</h4>
+                    <p>Mapas, rotas, geolocalização</p>
+                </div>
+                <div class="example-item">
+                    <h4>Twitter API</h4>
+                    <p>Postar e coletar tweets</p>
+                </div>
+                <div class="example-item">
+                    <h4>Spotify API</h4>
+                    <p>Acessar músicas, playlists, artistas</p>
+                </div>
+                <div class="example-item">
+                    <h4>OpenWeather API</h4>
+                    <p>Previsão do tempo</p>
+                </div>
+                <div class="example-item">
+                    <h4>GitHub API</h4>
+                    <p>Repositórios, commits, usuários</p>
+                </div>
+                <div class="example-item">
+                    <h4>Pix API</h4>
+                    <p>Pagamentos instantâneos no Brasil</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="advantages">
+            <h2>Vantagens de usar APIs</h2>
+            <ul>
+                <li>Reuso de serviços prontos (não precisa reinventar a roda)</li>
+                <li>Facilita integração entre diferentes sistemas</li>
+                <li>Escalabilidade (vários clientes consumindo os mesmos dados)</li>
+                <li>Padronização da comunicação</li>
+            </ul>
+            <p>👉 <strong>Resumindo:</strong> API é a forma de um software conversar com outro software, trocando dados ou funcionalidades. É fundamental em projetos modernos!</p>
+        </div>
+
+        <div class="section" id="github-api">
+            <h2>API do GitHub no Projeto CoOps</h2>
+            <p>Para o projeto CoOps, utilizamos a API do GitHub para extrair métricas de colaboração de repositórios e organizações.</p>
+            
+            <h3>Pré-requisitos</h3>
+            <ul>
+                <li>Conta no <a href="https://github.com" target="_blank" class="link">GitHub</a></li>
+                <li>Token de acesso pessoal (PAT) para autenticação (opcional, mas recomendado)</li>
+                <li>Postman instalado <strong>ou</strong> terminal com <code>cURL</code> disponível</li>
+            </ul>
+        </div>
+
+        <div class="section" id="endpoints">
+            <h2>Endpoints Utilizados</h2>
+            <div class="endpoint-list">
+                <div class="endpoint">
+                    <span class="endpoint-method">GET</span>
+                    <h4>Listar repositórios públicos de um usuário</h4>
+                    <code>https://api.github.com/users/{username}/repos</code>
+                </div>
+                <div class="endpoint">
+                    <span class="endpoint-method">GET</span>
+                    <h4>Listar commits de um repositório</h4>
+                    <code>https://api.github.com/repos/{owner}/{repo}/commits</code>
+                </div>
+                <div class="endpoint">
+                    <span class="endpoint-method">GET</span>
+                    <h4>Listar branches de um repositório</h4>
+                    <code>https://api.github.com/repos/{owner}/{repo}/branches</code>
+                </div>
+                <div class="endpoint">
+                    <span class="endpoint-method">GET</span>
+                    <h4>Buscar informações de um usuário</h4>
+                    <code>https://api.github.com/users/{username}</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="testing-section">
+            <h2>🧪 Testando no Postman</h2>
+            <ol>
+                <li>Abra o <strong>Postman</strong></li>
+                <li>Crie uma <strong>nova requisição</strong></li>
+                <li>Defina o método HTTP (<code>GET</code>)</li>
+                <li>Insira a URL do endpoint (exemplo): <code>https://api.github.com/users/octocat/repos</code></li>
+                <li>Clique em <strong>Send</strong> para executar a requisição</li>
+                <li>Analise o <strong>JSON</strong> retornado</li>
+            </ol>
+            
+            <p><strong>Dica:</strong> Se o JSON for muito grande, use a aba <strong>Pretty</strong> do Postman ou o atalho <code>Ctrl + F</code> para procurar campos específicos.</p>
+        </div>
+
+        <div class="testing-section">
+            <h2>Testando com cURL</h2>
+            <pre><code># Listar repositórios de um usuário
+curl https://api.github.com/users/octocat/repos
+
+# Listar commits de um repositório
+curl https://api.github.com/repos/octocat/Hello-World/commits
+
+# Quando tiver um token do GitHub:
+curl -H "Authorization: token SEU_TOKEN_AQUI" https://api.github.com/user</code></pre>
+        </div>
+
+        <div class="section" id="analise">
+            <h2>📊 Como Analisar a API</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-item">
+                    <h4>1. Estrutura da Resposta</h4>
+                    <p>A resposta geralmente é em <strong>JSON</strong>. Identifique os principais campos de cada endpoint (ex: <code>name</code>, <code>full_name</code>, <code>html_url</code> em repositórios).</p>
+                </div>
+                
+                <div class="analysis-item">
+                    <h4>2. Status Code</h4>
+                    <div class="status-codes">
+                        <div class="status-code status-200">200 OK</div>
+                        <div class="status-code status-404">404 Not Found</div>
+                        <div class="status-code status-403">403 Forbidden</div>
+                    </div>
+                </div>
+                
+                <div class="analysis-item">
+                    <h4>3. Paginação</h4>
+                    <p>Muitos endpoints retornam resultados paginados. Verifique os headers da resposta:</p>
+                    <code>Link: https://api.github.com/user/repos?page=2; rel="next"</code>
+                </div>
+                
+                <div class="analysis-item">
+                    <h4>4. Rate Limit</h4>
+                    <ul>
+                        <li><strong>Não autenticados:</strong> 60 requisições/hora</li>
+                        <li><strong>Autenticados:</strong> 5000 requisições/hora</li>
+                    </ul>
+                    <p>Verificar com: <code>curl https://api.github.com/rate_limit</code></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="coops">
+            <h2>Aplicação no Projeto CoOps</h2>
+            <p>No projeto CoOps, utilizamos a API do GitHub para:</p>
+            <ul>
+                <li><strong>Extrair dados de repositórios:</strong> commits, issues, pull requests</li>
+                <li><strong>Analisar métricas de colaboração:</strong> frequência de commits, tempo de resolução de issues</li>
+                <li><strong>Gerar insights com IA:</strong> contextualizar dados e fornecer análises inteligentes</li>
+                <li><strong>Criar visualizações:</strong> gráficos e dashboards para apresentar os resultados</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>

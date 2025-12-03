@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitetura do Sistema - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: inline-block;
+            padding: 0.5rem 0;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+        
+        /* Headings */
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        h4 {
+            color: var(--text);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        /* Lists */
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+        }
+        
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-bronze { background: #cd7f3244; color: #cd7f32; border: 1px solid #cd7f32; }
+        .badge-silver { background: #c0c0c044; color: #e1e4e8; border: 1px solid #c0c0c0; }
+        .badge-gold { background: #ffd70044; color: #ffd700; border: 1px solid #ffd700; }
+        .badge-success { background: #3fb95044; color: #3fb950; border: 1px solid #3fb950; }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            background: var(--bg-hover);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        
+        .grid-item:hover {
+            border-color: var(--primary);
+        }
+        
+        /* Code */
+        code {
+            background: var(--bg-hover);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--bg-hover);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: var(--bg-hover);
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏗️ Arquitetura do Sistema</h1>
+        <p>Projeto: Análise de Métricas de Repositórios GitHub | Squad 01</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Última Atualização: 01/12/2025</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Documentação</a>
+        <a href="#visao-geral">Visão Geral</a>
+        <a href="#medallion">Medallion</a>
+        <a href="#topologia">Topologia</a>
+        <a href="#tecnologias">Tecnologias</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2 id="visao-geral">🎯 Visão Geral</h2>
+            <p>O sistema utiliza a <strong>arquitetura Medallion</strong> (Bronze → Silver → Gold) para processamento incremental de dados, combinada com um frontend moderno em React para visualização de métricas e dashboards interativos.</p>
+
+            <h3>Princípios Arquiteturais</h3>
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>✅ Separação de Responsabilidades</h4>
+                    <p>Camadas Bronze, Silver e Gold bem definidas</p>
+                </div>
+                <div class="grid-item">
+                    <h4>✅ Processamento Incremental</h4>
+                    <p>ETL automatizado via GitHub Actions</p>
+                </div>
+                <div class="grid-item">
+                    <h4>✅ Cache Inteligente</h4>
+                    <p>Dados em JSON para reduzir chamadas à API</p>
+                </div>
+                <div class="grid-item">
+                    <h4>✅ Escalabilidade</h4>
+                    <p>Processamento assíncrono e paralelo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="medallion">🥉🥈🥇 Arquitetura Medallion</h2>
+
+            <div class="info-box">
+                <h3><span class="badge badge-bronze">🥉 Bronze Layer</span> Dados Brutos</h3>
+                <p><strong>Responsabilidade:</strong> Extração de dados brutos da GitHub API</p>
+                
+                <h4>Fontes de Dados:</h4>
+                <ul>
+                    <li>📊 <strong>Repositórios da Organização</strong> - Metadados e estrutura</li>
+                    <li>🐛 <strong>Issues/PRs</strong> - Lista completa com detalhes</li>
+                    <li>💬 <strong>Commits/Events</strong> - Histórico e colaboração</li>
+                </ul>
+
+                <h4>Tecnologias:</h4>
+                <ul>
+                    <li>Python Scripts (<code>src/bronze/</code>)</li>
+                    <li>GitHub REST API</li>
+                    <li>GitHub Actions (Cron: 0 6 * * *)</li>
+                </ul>
+
+                <p><strong>Armazenamento:</strong> <code>data/bronze/</code></p>
+            </div>
+
+            <div class="info-box">
+                <h3><span class="badge badge-silver">🥈 Silver Layer</span> Dados Normalizados</h3>
+                <p><strong>Responsabilidade:</strong> Transformação e normalização</p>
+                
+                <h4>Processos:</h4>
+                <ol>
+                    <li><strong>Parse & Normalize</strong> - dim_users, dim_repos, fact_commits, fact_prs</li>
+                    <li><strong>ETL Transform</strong> - Limpeza, enriquecimento, relacionamentos</li>
+                </ol>
+
+                <h4>Tecnologias:</h4>
+                <ul>
+                    <li>Python Scripts (<code>src/silver/</code>)</li>
+                    <li>Pandas para transformações</li>
+                </ul>
+
+                <p><strong>Armazenamento:</strong> <code>data/silver/</code></p>
+            </div>
+
+            <div class="info-box">
+                <h3><span class="badge badge-gold">🥇 Gold Layer</span> KPIs & Analytics</h3>
+                <p><strong>Responsabilidade:</strong> Agregação e cálculo de KPIs</p>
+                
+                <h4>Métricas Calculadas:</h4>
+                <ul>
+                    <li>📈 <strong>Throughput metrics</strong> - Velocidade de entrega</li>
+                    <li>📊 <strong>Code quality indices</strong> - Qualidade de código</li>
+                    <li>🔍 <strong>Contribution analysis</strong> - Análise de contribuição</li>
+                    <li>📉 <strong>Distribution indices</strong> - Distribuição de trabalho</li>
+                </ul>
+
+                <p><strong>Armazenamento:</strong> <code>data/gold/</code></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="tecnologias">🛠️ Stack Tecnológico</h2>
+
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Python 3.11+</li>
+                        <li>Pandas</li>
+                        <li>GitHub API Client</li>
+                    </ul>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>React 18 + TypeScript</li>
+                        <li>Vite</li>
+                        <li>D3.js</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="grid-item">
+                    <h4>Automação</h4>
+                    <ul>
+                        <li>GitHub Actions</li>
+                        <li>Cron Jobs</li>
+                    </ul>
+                </div>
+
+                <div class="grid-item">
+                    <h4>APIs</h4>
+                    <ul>
+                        <li>GitHub REST API</li>
+                        <li>GitHub GraphQL API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📝 Decisões Arquiteturais (ADRs)</h2>
+
+            <div class="info-box">
+                <h3>ADR-001: Arquitetura Medallion</h3>
+                <span class="badge badge-success">✅ Aceito</span>
+                <p><strong>Decisão:</strong> Adotar arquitetura Medallion (Bronze/Silver/Gold)</p>
+                <p><strong>Impacto:</strong></p>
+                <ul>
+                    <li>✅ Separação clara de responsabilidades</li>
+                    <li>✅ Reprocessamento seletivo possível</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>ADR-003: REST API ao invés de GraphQL</h3>
+                <span class="badge badge-success">✅ Aceito (Semana 14)</span>
+                <p><strong>Decisão:</strong> Usar REST API com <code>?recursive=1</code></p>
+                <p><strong>Impacto:</strong></p>
+                <ul>
+                    <li>✅ 100x mais rápido que GraphQL</li>
+                    <li>✅ Single request ao invés de múltiplos</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>ADR-004: D3.js para Visualizações</h3>
+                <span class="badge badge-success">✅ Aceito (Sprint 14)</span>
+                <p><strong>Decisão:</strong> Usar D3.js para Treemap e CirclePack</p>
+                <p><strong>Impacto:</strong></p>
+                <ul>
+                    <li>✅ Visualizações profissionais e interativas</li>
+                    <li>✅ Flexibilidade total de customização</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>
