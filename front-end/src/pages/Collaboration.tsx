@@ -6,7 +6,9 @@ import { CollaborationEdge, HeatmapDataPoint } from '../types';
 import { useMemo } from 'react'; 
 import { useSearchParams } from 'react-router-dom'; 
 import { Utils } from './Utils'; 
-import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils'; 
+import type { ProcessedActivityResponse, RepoActivitySummary } from './Utils';
+import { ExportPDFModal } from '../components/ExportPDFModal';
+import { useRepositoryPDFExport } from '../hooks/useRepositoryPDFExport'; 
 
 
 type CollaborationPageData = {
@@ -23,6 +25,7 @@ export default function CollaborationPage() {
   const [ mainData, setMainData ] = useState<ProcessedActivityResponse | null>(null); 
   const [searchParams] = useSearchParams();
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
+  const [showExportModal, setShowExportModal] = useState(false);
 
   
   useEffect(() => {
@@ -86,6 +89,8 @@ export default function CollaborationPage() {
     return repositories.find((repo) => repo.id === selectedRepoId) ?? null;
   }, [repositories, searchParams]);
 
+  const { exportToPDF } = useRepositoryPDFExport(selectedRepo?.name || 'unknown');
+
   const filteredCollaborationData = useMemo(() => {
     if (!pageData?.collaboration || !selectedRepo) return [];
     if (selectedRepo.name === 'All repositories') {
@@ -121,8 +126,21 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
       {/* --- Success State (Data Loaded) --- */}
       {pageData && mainData && selectedRepo && !loading && !error && (
         <div className="h-fit mt-30">
-          <h1 className="text-3xl font-bold text-white mb-2">Collaboration Map</h1>
-          <p className="text-slate-400 text-sm mb-4">Represents the collaboration connections between users based on their contributions to shared repositories.</p>
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h1 className="text-3xl font-bold text-white mb-2">Collaboration Map</h1>
+              <p className="text-slate-400 text-sm">Represents the collaboration connections between users based on their contributions to shared repositories.</p>
+            </div>
+            <button
+              onClick={() => setShowExportModal(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Export PDF
+            </button>
+          </div>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1">
@@ -187,6 +205,14 @@ if (pageData && !loading && !error) { // Adiciona verificações de loading/erro
           </div> 
         </div>
       )}
+
+      {/* Export PDF Modal */}
+      <ExportPDFModal
+        isOpen={showExportModal}
+        onClose={() => setShowExportModal(false)}
+        onExport={exportToPDF}
+        repoName={selectedRepo?.name || 'Repository'}
+      />
     </DashboardLayout>
   ); 
 }

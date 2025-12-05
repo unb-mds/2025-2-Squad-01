@@ -7,6 +7,8 @@ import BaseFilters from '../components/BaseFilters';
 import { Histogram, PieChart} from '../components/Graphs';
 import { Utils } from './Utils';
 import { AISummary } from '../components/AI.summary';
+import { ExportPDFModal } from '../components/ExportPDFModal';
+import { useRepositoryPDFExport } from '../hooks/useRepositoryPDFExport';
 
 export default function IssuesPage() {
   const [data, setData] = useState<ProcessedActivityResponse | null>(null);
@@ -17,6 +19,7 @@ export default function IssuesPage() {
   const [selectedTime, setSelectedTime] = useState<string>('Last 24 hours');
   const [chartType, setChartType] = useState<'line' | 'bar'>('line');
   const [lineToggle, setLineToggle] = useState(false);
+  const [showExportModal, setShowExportModal] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -52,6 +55,8 @@ export default function IssuesPage() {
   const { selectedRepo, members } = useMemo(() => {
     return Utils.selectRepoAndFilter(repositories, repoParam);
   }, [repositories, repoParam]);
+
+  const { exportToPDF } = useRepositoryPDFExport(selectedRepo?.name || 'unknown');
 
   useEffect(() => {
     setSelectedMembers([]);
@@ -105,6 +110,15 @@ export default function IssuesPage() {
               </p>
             )}
           </div>
+          <button
+            onClick={() => setShowExportModal(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Export PDF
+          </button>
         </div>
       </div>
 
@@ -211,6 +225,14 @@ export default function IssuesPage() {
           />
         </div>
       </div>
+
+      {/* Export PDF Modal */}
+      <ExportPDFModal
+        isOpen={showExportModal}
+        onClose={() => setShowExportModal(false)}
+        onExport={exportToPDF}
+        repoName={selectedRepo?.name || 'Repository'}
+      />
     </DashboardLayout>
   );
 }
