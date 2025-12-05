@@ -15,8 +15,8 @@ class PDFDataProcessor:
     """Processa dados para exportação PDF sem processamento no front-end."""
     
     def __init__(self, bronze_dir: str = "data/bronze", output_dir: str = "data/silver/pdf"):
-        self.bronze_dir = Path(bronze_dir)
-        self.output_dir = Path(output_dir)
+        self.bronze_dir = Path(bronze_dir).resolve()  # Resolve para caminho absoluto
+        self.output_dir = Path(output_dir).resolve()
         self.output_dir.mkdir(parents=True, exist_ok=True)
     
     def process_repository(self, repo_name: str) -> Dict[str, Any]:
@@ -35,7 +35,10 @@ class PDFDataProcessor:
         commits = self._load_bronze_file(f"commits_{repo_name}.json")
         issues = self._load_bronze_file(f"issues_{repo_name}.json")
         prs = self._load_bronze_file(f"prs_{repo_name}.json")
-        repo_info = self._load_bronze_file(f"repo_{repo_name}.json")
+        repo_info_list = self._load_bronze_file(f"repo_{repo_name}.json")
+        
+        # repo_info pode ser lista com um dict ou vazio
+        repo_info = repo_info_list[0] if repo_info_list and isinstance(repo_info_list, list) else {}
         
         # Processar commits por autor
         commits_by_author = self._aggregate_commits_by_author(commits)
@@ -105,6 +108,10 @@ class PDFDataProcessor:
             if isinstance(data[0], dict) and "_metadata" in data[0]:
                 data = data[1:]  # Skip metadata
         
+        # Filtrar None values que podem existir na lista
+        if isinstance(data, list):
+            data = [item for item in data if item is not None]
+        
         return data
     
     def _aggregate_commits_by_author(self, commits: List[Dict]) -> Dict[str, int]:
@@ -112,14 +119,23 @@ class PDFDataProcessor:
         commits_by_author = defaultdict(int)
         
         for commit in commits:
+            # Skip None or invalid values
+            if commit is None or not isinstance(commit, dict):
+                continue
+            
             # Extrair autor (ordem de prioridade)
-            author = (
-                commit.get("author", {}).get("login") or
-                commit.get("commit", {}).get("author", {}).get("login") or
-                commit.get("commit", {}).get("author", {}).get("name") or
-                commit.get("author", {}).get("name") or
-                "Unknown"
-            )
+            author = "Unknown"
+            
+            # Try author.login first (root level)
+            if isinstance(commit.get("author"), dict):
+                author = commit["author"].get("login") or commit["author"].get("name") or author
+            
+            # Fallback to commit.author
+            if author == "Unknown" and isinstance(commit.get("commit"), dict):
+                commit_info = commit["commit"]
+                if isinstance(commit_info.get("author"), dict):
+                    author = commit_info["author"].get("login") or commit_info["author"].get("name") or author
+            
             commits_by_author[author] += 1
         
         return dict(commits_by_author)
@@ -129,7 +145,10 @@ class PDFDataProcessor:
         issues_by_author = defaultdict(int)
         
         for issue in issues:
-            author = issue.get("user", {}).get("login", "Unknown")
+            if issue is None or not isinstance(issue, dict):
+                continue
+            user = issue.get("user")
+            author = user.get("login", "Unknown") if isinstance(user, dict) else "Unknown"
             issues_by_author[author] += 1
         
         return dict(issues_by_author)
@@ -139,7 +158,10 @@ class PDFDataProcessor:
         prs_by_author = defaultdict(int)
         
         for pr in prs:
-            author = pr.get("user", {}).get("login", "Unknown")
+            if pr is None or not isinstance(pr, dict):
+                continue
+            user = pr.get("user")
+            author = user.get("login", "Unknown") if isinstance(user, dict) else "Unknown"
             prs_by_author[author] += 1
         
         return dict(prs_by_author)
@@ -270,8 +292,17 @@ class PDFDataProcessor:
 
 def main():
     """Função principal para execução standalone."""
-    processor = PDFDataProcessor()
-    processor.process_all_repositories()
+    import sys
+    
+    if len(sys.argv) > 1 and sys.argv[1] == "--single":
+        # Processar um único repositório
+        repo_name = sys.argv[2] if len(sys.argv) > 2 else "2025-2-Squad-01"
+        processor = PDFDataProcessor()
+        processor.process_repository(repo_name)
+    else:
+        # Processar todos
+        processor = PDFDataProcessor()
+        processor.process_all_repositories()
 
 
 if __name__ == "__main__":
