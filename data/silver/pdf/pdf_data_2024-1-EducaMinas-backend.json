@@ -1,0 +1,990 @@
+{
+  "_metadata": {
+    "repo_name": "2024-1-EducaMinas-backend",
+    "processed_at": "2025-12-05T14:51:30.183301",
+    "processor": "pdf_data_processor.py",
+    "layer": "silver"
+  },
+  "repository": {
+    "name": "2024-1-EducaMinas-backend",
+    "description": "Repositório destinado ao backend do EducaMinas, uma plataforma que reúne dados da educação do estado de Minas Gerais.          https://educaminas.vercel.app/",
+    "created_at": "2024-03-27T14:53:41Z",
+    "updated_at": "2024-09-06T14:11:19Z",
+    "language": "Jupyter Notebook",
+    "license": "MIT License"
+  },
+  "stats": {
+    "total_commits": 191,
+    "total_issues": 31,
+    "total_prs": 40,
+    "total_members": 6
+  },
+  "members": [
+    {
+      "login": "rafgpereira",
+      "commits": 73,
+      "issues": 22,
+      "prs": 21,
+      "total_contributions": 116
+    },
+    {
+      "login": "DanielFsR",
+      "commits": 49,
+      "issues": 2,
+      "prs": 12,
+      "total_contributions": 63
+    },
+    {
+      "login": "johan-rocha",
+      "commits": 49,
+      "issues": 7,
+      "prs": 1,
+      "total_contributions": 57
+    },
+    {
+      "login": "dudupaz",
+      "commits": 18,
+      "issues": 0,
+      "prs": 6,
+      "total_contributions": 24
+    },
+    {
+      "login": "RochaCarla",
+      "commits": 1,
+      "issues": 0,
+      "prs": 0,
+      "total_contributions": 1
+    },
+    {
+      "login": "JoaoPedrooSS",
+      "commits": 1,
+      "issues": 0,
+      "prs": 0,
+      "total_contributions": 1
+    }
+  ],
+  "recent_commits": [
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #71 from unb-mds/develop",
+      "date": "2024-09-04T15:10:38-03:00",
+      "additions": 5835,
+      "deletions": 2
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'main' into develop",
+      "date": "2024-09-04T15:09:54-03:00",
+      "additions": 159,
+      "deletions": 173
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #70 from unb-mds/feature-#1/Inep-Data-Scraper",
+      "date": "2024-09-04T15:07:42-03:00",
+      "additions": 5835,
+      "deletions": 2
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'develop' into feature-#1/Inep-Data-Scraper",
+      "date": "2024-09-04T15:07:16-03:00",
+      "additions": 10407,
+      "deletions": 4
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "docs: outputs",
+      "date": "2024-09-04T11:48:03-03:00",
+      "additions": 22,
+      "deletions": 2
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): run all scripts",
+      "date": "2024-09-04T11:47:33-03:00",
+      "additions": 1,
+      "deletions": 2
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix: refact",
+      "date": "2024-09-04T11:47:04-03:00",
+      "additions": 91,
+      "deletions": 8
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix: transform refact",
+      "date": "2024-09-04T11:45:51-03:00",
+      "additions": 3,
+      "deletions": 2
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix: dotenv abs path",
+      "date": "2024-09-04T11:44:56-03:00",
+      "additions": 2,
+      "deletions": 1
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#1, #67): remove old orm map",
+      "date": "2024-09-04T11:43:43-03:00",
+      "additions": 0,
+      "deletions": 49
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#1, #67): refactoring orm",
+      "date": "2024-09-04T11:42:18-03:00",
+      "additions": 58,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#67): connect module new imports from models",
+      "date": "2024-09-04T11:40:04-03:00",
+      "additions": 5,
+      "deletions": 2
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): ETL indicator module",
+      "date": "2024-09-04T11:38:48-03:00",
+      "additions": 8,
+      "deletions": 7
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "ignore pycache from models",
+      "date": "2024-09-04T11:36:39-03:00",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "author": "Daniel Ferreira Santos Rabelo",
+      "message": "Merge pull request #69 from unb-mds/feature-#68/api-architecture",
+      "date": "2024-09-03T23:52:04-03:00",
+      "additions": 159,
+      "deletions": 173
+    },
+    {
+      "author": "Carlos Paz",
+      "message": "refactor(#68): refactor remaining files and clean code",
+      "date": "2024-09-03T23:39:11-03:00",
+      "additions": 5,
+      "deletions": 1653
+    },
+    {
+      "author": "Carlos Paz",
+      "message": "refactor(#68): create infrastructure folder and clean code",
+      "date": "2024-09-03T23:35:58-03:00",
+      "additions": 1098,
+      "deletions": 0
+    },
+    {
+      "author": "Carlos Paz",
+      "message": "refactor(#68): create application folder and clean code",
+      "date": "2024-09-03T23:34:30-03:00",
+      "additions": 413,
+      "deletions": 0
+    },
+    {
+      "author": "Carlos Paz",
+      "message": "refactor(#68): create adapters folder and clean code",
+      "date": "2024-09-03T23:32:18-03:00",
+      "additions": 123,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "delet files",
+      "date": "2024-08-28T10:01:10-03:00",
+      "additions": 0,
+      "deletions": 1213
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): main.py",
+      "date": "2024-08-28T10:00:44-03:00",
+      "additions": 17,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#43, #44, #67): ETL matricula",
+      "date": "2024-08-28T09:59:36-03:00",
+      "additions": 41,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#43, #44, #67): ETL indicadores",
+      "date": "2024-08-28T09:58:56-03:00",
+      "additions": 41,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): loading municipio table to DB",
+      "date": "2024-08-28T09:57:04-03:00",
+      "additions": 39,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): extract and create JSON Municipios",
+      "date": "2024-08-28T09:55:53-03:00",
+      "additions": 27,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): __init__.py",
+      "date": "2024-08-28T09:52:41-03:00",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) orm metadata",
+      "date": "2024-08-28T09:51:27-03:00",
+      "additions": 49,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) config class",
+      "date": "2024-08-28T09:49:39-03:00",
+      "additions": 18,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) load interface and classes",
+      "date": "2024-08-28T09:48:29-03:00",
+      "additions": 136,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) connect interface",
+      "date": "2024-08-28T09:47:27-03:00",
+      "additions": 28,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) transform interface and classes",
+      "date": "2024-08-28T09:45:47-03:00",
+      "additions": 19,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67) extractor interface and classes",
+      "date": "2024-08-28T09:42:42-03:00",
+      "additions": 53,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "feat(#67): etl pipeline",
+      "date": "2024-08-28T09:37:15-03:00",
+      "additions": 34,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#1): rename",
+      "date": "2024-08-28T09:32:45-03:00",
+      "additions": 3553,
+      "deletions": 620
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#1):change dir",
+      "date": "2024-08-28T09:31:03-03:00",
+      "additions": 858,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#1): rename inpynb",
+      "date": "2024-08-28T09:29:28-03:00",
+      "additions": 315,
+      "deletions": 0
+    },
+    {
+      "author": "Johan Rocha",
+      "message": "fix(#1): rename",
+      "date": "2024-08-28T09:28:17-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "Johan Rocha",
+      "message": ".gitignore",
+      "date": "2024-08-28T09:19:37-03:00",
+      "additions": 4,
+      "deletions": 3
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #66 from unb-mds/develop",
+      "date": "2024-08-28T02:45:08-03:00",
+      "additions": 1303,
+      "deletions": 589
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'main' into develop",
+      "date": "2024-08-28T02:44:14-03:00",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Update CONTRIBUTING.md",
+      "date": "2024-08-28T02:39:06-03:00",
+      "additions": 115,
+      "deletions": 31
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #64 from unb-mds/feat/Create-Security",
+      "date": "2024-08-28T02:34:50-03:00",
+      "additions": 21,
+      "deletions": 0
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'develop' into feat/Create-Security",
+      "date": "2024-08-28T02:34:01-03:00",
+      "additions": 685,
+      "deletions": 399
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #65 from unb-mds/feat/create-Crontributing",
+      "date": "2024-08-28T02:33:07-03:00",
+      "additions": 89,
+      "deletions": 0
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'develop' into feat/create-Crontributing",
+      "date": "2024-08-28T02:31:41-03:00",
+      "additions": 364,
+      "deletions": 395
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #63 from unb-mds/feat/CODE-OF-CONDUCT",
+      "date": "2024-08-28T02:31:19-03:00",
+      "additions": 128,
+      "deletions": 0
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'develop' into feat/CODE-OF-CONDUCT",
+      "date": "2024-08-28T02:30:34-03:00",
+      "additions": 468,
+      "deletions": 399
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge pull request #62 from unb-mds/feat-#61/implement-indicadores",
+      "date": "2024-08-28T02:29:59-03:00",
+      "additions": 236,
+      "deletions": 395
+    },
+    {
+      "author": "Daniel Ferreira Santos Rabelo",
+      "message": "Create CONTRIBUTING.md",
+      "date": "2024-08-28T02:28:59-03:00",
+      "additions": 89,
+      "deletions": 0
+    },
+    {
+      "author": "Rafael Gomes Pereira",
+      "message": "Merge branch 'develop' into feat-#61/implement-indicadores",
+      "date": "2024-08-28T02:26:51-03:00",
+      "additions": 232,
+      "deletions": 4
+    }
+  ],
+  "recent_issues": [
+    {
+      "number": 68,
+      "title": "API architecture",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-09-01T14:35:51Z",
+      "closed_at": "2024-09-04T02:52:05Z"
+    },
+    {
+      "number": 67,
+      "title": "Modularize ETL Process Using SOLID Architecture to Improve Code Readability and Maintainability",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-28T12:17:21Z",
+      "closed_at": "2024-09-04T14:48:39Z"
+    },
+    {
+      "number": 61,
+      "title": "implement indicadores",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T04:08:18Z",
+      "closed_at": "2024-08-28T05:30:00Z"
+    },
+    {
+      "number": 59,
+      "title": "ranking psql repository",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-27T11:23:11Z",
+      "closed_at": "2024-08-28T02:09:36Z"
+    },
+    {
+      "number": 56,
+      "title": "codecov",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-26T00:33:00Z",
+      "closed_at": "2024-08-26T00:39:59Z"
+    },
+    {
+      "number": 53,
+      "title": "frontend align",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-24T19:45:06Z",
+      "closed_at": "2024-08-24T19:54:53Z"
+    },
+    {
+      "number": 49,
+      "title": "pre commit tests",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-07T21:17:53Z",
+      "closed_at": "2024-08-07T21:25:20Z"
+    },
+    {
+      "number": 47,
+      "title": "Make automatic deployment of the insertion in the database(depending on the date)",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-07T14:04:48Z",
+      "closed_at": "2024-09-04T18:53:49Z"
+    },
+    {
+      "number": 46,
+      "title": "Make selenium run in headless mode (without graphical interface)",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-07T14:04:40Z",
+      "closed_at": "2024-09-04T18:53:58Z"
+    },
+    {
+      "number": 45,
+      "title": "Create testing pipeline with pytest",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-07T14:04:35Z",
+      "closed_at": "2024-09-04T18:54:10Z"
+    },
+    {
+      "number": 44,
+      "title": "Adapt ETL from registrations to indicators",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-07T14:04:27Z",
+      "closed_at": "2024-09-04T18:54:17Z"
+    },
+    {
+      "number": 43,
+      "title": "Performance problem and scrapper data load crash",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-05T18:01:14Z",
+      "closed_at": "2024-08-28T13:58:47Z"
+    },
+    {
+      "number": 42,
+      "title": "Create a checkpoint to save the data submission state",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-08-05T17:47:20Z",
+      "closed_at": "2024-09-04T18:54:24Z"
+    },
+    {
+      "number": 36,
+      "title": "matriculas repository psql",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-03T21:56:22Z",
+      "closed_at": "2024-08-14T20:53:18Z"
+    },
+    {
+      "number": 33,
+      "title": "deploy configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-03T17:07:08Z",
+      "closed_at": "2024-08-03T17:13:59Z"
+    },
+    {
+      "number": 30,
+      "title": "static returns",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-03T13:15:45Z",
+      "closed_at": "2024-08-03T15:25:50Z"
+    },
+    {
+      "number": 27,
+      "title": "nodemon",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T23:15:41Z",
+      "closed_at": "2024-08-02T23:30:00Z"
+    },
+    {
+      "number": 24,
+      "title": "api documentation",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T14:13:01Z",
+      "closed_at": "2024-08-02T22:40:44Z"
+    },
+    {
+      "number": 22,
+      "title": "database connection",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T14:01:40Z",
+      "closed_at": "2024-08-02T14:07:23Z"
+    },
+    {
+      "number": 18,
+      "title": "matriculas service ordenation",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-26T13:48:09Z",
+      "closed_at": "2024-07-30T17:55:58Z"
+    },
+    {
+      "number": 17,
+      "title": "ranking service",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T16:38:42Z",
+      "closed_at": "2024-08-01T15:53:28Z"
+    },
+    {
+      "number": 16,
+      "title": "indicators service",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T15:38:16Z",
+      "closed_at": "2024-08-03T15:26:51Z"
+    },
+    {
+      "number": 13,
+      "title": "quality pipeline",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T13:48:21Z",
+      "closed_at": "2024-07-25T15:17:06Z"
+    },
+    {
+      "number": 12,
+      "title": "matricula service tests",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T13:47:18Z",
+      "closed_at": "2024-07-25T15:07:37Z"
+    },
+    {
+      "number": 11,
+      "title": "implement tests",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T13:44:01Z",
+      "closed_at": "2024-07-25T15:07:36Z"
+    },
+    {
+      "number": 7,
+      "title": "services",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-17T20:56:18Z",
+      "closed_at": "2024-07-25T13:01:35Z"
+    },
+    {
+      "number": 6,
+      "title": "routes",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-17T20:52:24Z",
+      "closed_at": "2024-07-24T22:21:52Z"
+    },
+    {
+      "number": 4,
+      "title": "update backend documentation",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-11T18:33:05Z",
+      "closed_at": "2024-09-04T18:54:34Z"
+    },
+    {
+      "number": 3,
+      "title": "initialize backend structure",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-11T18:29:36Z",
+      "closed_at": "2024-07-18T00:04:52Z"
+    },
+    {
+      "number": 2,
+      "title": "Select scraping data",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-04T20:14:58Z",
+      "closed_at": "2024-08-28T13:59:04Z"
+    },
+    {
+      "number": 1,
+      "title": "Web scraping INEP data",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-05-02T21:36:40Z",
+      "closed_at": "2024-09-04T18:10:39Z"
+    }
+  ],
+  "recent_prs": [
+    {
+      "number": 71,
+      "title": "scraper-etl",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-09-04T18:09:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 70,
+      "title": "Feature #1/inep data scraper",
+      "author": "johan-rocha",
+      "state": "closed",
+      "created_at": "2024-09-04T15:06:44Z",
+      "merged_at": null
+    },
+    {
+      "number": 69,
+      "title": "Feature #68/api architecture",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-09-04T02:47:02Z",
+      "merged_at": null
+    },
+    {
+      "number": 66,
+      "title": "merge develop",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-28T05:43:16Z",
+      "merged_at": null
+    },
+    {
+      "number": 65,
+      "title": "Create CONTRIBUTING.md",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T05:29:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 64,
+      "title": "Create SECURITY.md",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T05:23:28Z",
+      "merged_at": null
+    },
+    {
+      "number": 63,
+      "title": "Create CODE_OF_CONDUCT.md",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T05:21:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 62,
+      "title": "Feat #61/implement indicadores",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T05:15:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 60,
+      "title": "Feat #59/ranking implementation",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-28T01:50:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 58,
+      "title": "feat(#56): includes codecov",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-26T00:43:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 57,
+      "title": "feat(#56): includes codecov on quality pipeline",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-26T00:37:38Z",
+      "merged_at": null
+    },
+    {
+      "number": 55,
+      "title": "randomic static returns",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-24T19:56:00Z",
+      "merged_at": null
+    },
+    {
+      "number": 54,
+      "title": "Feature#53/frontend align",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-24T19:54:17Z",
+      "merged_at": null
+    },
+    {
+      "number": 52,
+      "title": "deploy matriculas route",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-14T20:54:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 51,
+      "title": "Feat #36/matriculas repository psql",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-14T20:10:52Z",
+      "merged_at": null
+    },
+    {
+      "number": 50,
+      "title": "feat#49: includes pre commit tests",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-07T21:23:17Z",
+      "merged_at": null
+    },
+    {
+      "number": 48,
+      "title": "feat#27: return nodemon configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-07T14:06:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 41,
+      "title": "update main",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-04T20:01:11Z",
+      "merged_at": null
+    },
+    {
+      "number": 40,
+      "title": "Feature#33/deploy configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-04T19:58:46Z",
+      "merged_at": null
+    },
+    {
+      "number": 39,
+      "title": "update main",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-04T19:45:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 38,
+      "title": "feat#33: includes deploy express ci",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-04T19:29:40Z",
+      "merged_at": null
+    },
+    {
+      "number": 37,
+      "title": "Feature#33/deploy configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-04T04:15:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 35,
+      "title": "Feature#33/deploy configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-03T18:07:31Z",
+      "merged_at": null
+    },
+    {
+      "number": 34,
+      "title": "feat: includes deploy configuration",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-03T17:09:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 32,
+      "title": "Feat #30/static return",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-03T13:34:32Z",
+      "merged_at": null
+    },
+    {
+      "number": 31,
+      "title": "Feat #30/static return",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-03T13:27:16Z",
+      "merged_at": null
+    },
+    {
+      "number": 29,
+      "title": "Feature #16/indicators service",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-08-03T00:28:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 28,
+      "title": "feat#27: includes nodemon to run api",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T23:18:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 26,
+      "title": "Feature#24/api documentation",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T22:36:58Z",
+      "merged_at": null
+    },
+    {
+      "number": 25,
+      "title": "Feature #16/indicators service ",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-08-02T21:32:13Z",
+      "merged_at": null
+    },
+    {
+      "number": 23,
+      "title": "feat#22: implements supabase connection",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-08-02T14:05:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 21,
+      "title": "Feature #16/indicators service",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-08-02T13:29:08Z",
+      "merged_at": null
+    },
+    {
+      "number": 20,
+      "title": "Feat #17/ranking service",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-08-01T00:14:50Z",
+      "merged_at": null
+    },
+    {
+      "number": 19,
+      "title": "Feature #18/matriculas service ordenation",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-07-30T15:15:50Z",
+      "merged_at": null
+    },
+    {
+      "number": 15,
+      "title": "ci#13: includes quality workflow",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T15:15:26Z",
+      "merged_at": null
+    },
+    {
+      "number": 14,
+      "title": "Feature#11/implement tests",
+      "author": "rafgpereira",
+      "state": "closed",
+      "created_at": "2024-07-25T15:06:55Z",
+      "merged_at": null
+    },
+    {
+      "number": 10,
+      "title": "Feature #7/services",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-07-24T23:37:46Z",
+      "merged_at": null
+    },
+    {
+      "number": 9,
+      "title": "Feature #6/implement routes and controllers",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-07-24T22:12:22Z",
+      "merged_at": null
+    },
+    {
+      "number": 8,
+      "title": "feat(#3): creating initial routes",
+      "author": "DanielFsR",
+      "state": "closed",
+      "created_at": "2024-07-17T22:58:45Z",
+      "merged_at": null
+    },
+    {
+      "number": 5,
+      "title": "feat(#3): creating initial backend structure",
+      "author": "dudupaz",
+      "state": "closed",
+      "created_at": "2024-07-17T16:47:29Z",
+      "merged_at": null
+    }
+  ]
+}

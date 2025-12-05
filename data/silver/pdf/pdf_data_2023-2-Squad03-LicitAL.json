@@ -1,0 +1,859 @@
+{
+  "_metadata": {
+    "repo_name": "2023-2-Squad03-LicitAL",
+    "processed_at": "2025-12-05T14:51:29.881890",
+    "processor": "pdf_data_processor.py",
+    "layer": "silver"
+  },
+  "repository": {
+    "name": "2023-2-Squad03-LicitAL",
+    "description": "O LicitAl é um projeto que tem o objetivo de trazer informações financeiras a respeito das licitações feitas em cada município de Alagoas a partir de seus Diários Oficiais. Projeto da disciplina Métodos de Desenvolvimento de Software, UnB-FGA 2023.2 ",
+    "created_at": "2023-09-03T12:43:50Z",
+    "updated_at": "2025-08-01T08:51:48Z",
+    "language": "Python",
+    "license": "MIT License"
+  },
+  "stats": {
+    "total_commits": 81,
+    "total_issues": 63,
+    "total_prs": 2,
+    "total_members": 9
+  },
+  "members": [
+    {
+      "login": "M4RINH0",
+      "commits": 43,
+      "issues": 3,
+      "prs": 0,
+      "total_contributions": 46
+    },
+    {
+      "login": "joycedio",
+      "commits": 5,
+      "issues": 30,
+      "prs": 2,
+      "total_contributions": 37
+    },
+    {
+      "login": "DiegoSousaLeite",
+      "commits": 5,
+      "issues": 25,
+      "prs": 0,
+      "total_contributions": 30
+    },
+    {
+      "login": "joycejdm",
+      "commits": 19,
+      "issues": 0,
+      "prs": 0,
+      "total_contributions": 19
+    },
+    {
+      "login": "RochaCarla",
+      "commits": 1,
+      "issues": 3,
+      "prs": 0,
+      "total_contributions": 4
+    },
+    {
+      "login": "MarcoTulioSoares",
+      "commits": 4,
+      "issues": 0,
+      "prs": 0,
+      "total_contributions": 4
+    },
+    {
+      "login": "Paxxaglia",
+      "commits": 3,
+      "issues": 0,
+      "prs": 0,
+      "total_contributions": 3
+    },
+    {
+      "login": "brunocva",
+      "commits": 1,
+      "issues": 1,
+      "prs": 0,
+      "total_contributions": 2
+    },
+    {
+      "login": "EstherSousa",
+      "commits": 0,
+      "issues": 1,
+      "prs": 0,
+      "total_contributions": 1
+    }
+  ],
+  "recent_commits": [
+    {
+      "author": "Joyce",
+      "message": "atualizando readme",
+      "date": "2023-12-13T10:42:19-03:00",
+      "additions": 3,
+      "deletions": 0
+    },
+    {
+      "author": "Joyce",
+      "message": "atualizando readme",
+      "date": "2023-12-12T21:16:09-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "M4RINH0",
+      "message": "atualização README",
+      "date": "2023-12-12T11:42:52-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "M4RINH0",
+      "message": "att readme",
+      "date": "2023-12-12T11:40:54-03:00",
+      "additions": 18,
+      "deletions": 11
+    },
+    {
+      "author": "Joyce",
+      "message": "atualizando dispensas",
+      "date": "2023-12-11T00:24:08-03:00",
+      "additions": 26109,
+      "deletions": 47106
+    },
+    {
+      "author": "Joyce",
+      "message": "add dispensas",
+      "date": "2023-12-10T23:55:25-03:00",
+      "additions": 374,
+      "deletions": 272
+    },
+    {
+      "author": "Joyce",
+      "message": "adicionando dispensas de licitação",
+      "date": "2023-12-10T22:37:43-03:00",
+      "additions": 22,
+      "deletions": 10
+    },
+    {
+      "author": "Iago Passaglia",
+      "message": "Adição dos Png's das novas logos do LicitAL",
+      "date": "2023-12-10T22:08:57-03:00",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "author": "Sooties",
+      "message": "parece que deu certo",
+      "date": "2023-12-08T15:48:37-03:00",
+      "additions": 39,
+      "deletions": 65
+    },
+    {
+      "author": "Sooties",
+      "message": "Fazendo a base dos testes",
+      "date": "2023-12-08T15:37:57-03:00",
+      "additions": 24,
+      "deletions": 36
+    },
+    {
+      "author": "Sooties",
+      "message": "Criação dos arquivos de resultado",
+      "date": "2023-12-08T15:21:03-03:00",
+      "additions": 77,
+      "deletions": 2
+    },
+    {
+      "author": "Sooties",
+      "message": "Inicio dos testes",
+      "date": "2023-12-08T15:08:11-03:00",
+      "additions": 6,
+      "deletions": 0
+    },
+    {
+      "author": "Joyce",
+      "message": "atualizando valores",
+      "date": "2023-12-08T13:49:00-03:00",
+      "additions": 107,
+      "deletions": 107
+    },
+    {
+      "author": "brunocva",
+      "message": "atualizando valores",
+      "date": "2023-12-08T11:57:33-03:00",
+      "additions": 3,
+      "deletions": 2
+    },
+    {
+      "author": "Joyce",
+      "message": "atualizando dados",
+      "date": "2023-12-08T11:52:46-03:00",
+      "additions": 17677,
+      "deletions": 6153
+    },
+    {
+      "author": "Joyce",
+      "message": "add contagem de licitações",
+      "date": "2023-12-08T09:30:24-03:00",
+      "additions": 6,
+      "deletions": 2
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "coleta de dados desde 2014",
+      "date": "2023-12-07T08:57:25-03:00",
+      "additions": 6770588,
+      "deletions": 1952595
+    },
+    {
+      "author": "Joyce",
+      "message": "add filtro de licitações",
+      "date": "2023-12-06T12:06:45-03:00",
+      "additions": 1,
+      "deletions": 4
+    },
+    {
+      "author": "Joyce",
+      "message": "add filtro de licitações",
+      "date": "2023-12-06T12:05:10-03:00",
+      "additions": 35,
+      "deletions": 28
+    },
+    {
+      "author": "M4RINH0",
+      "message": "adição da função que gera o arquivo geral.json",
+      "date": "2023-12-05T09:13:10-03:00",
+      "additions": 164,
+      "deletions": 53
+    },
+    {
+      "author": "M4RINH0",
+      "message": "atualização de resumo por ano",
+      "date": "2023-12-05T08:55:01-03:00",
+      "additions": 568,
+      "deletions": 2
+    },
+    {
+      "author": "M4RINH0",
+      "message": "Atualização sem acentos",
+      "date": "2023-12-04T20:59:39-03:00",
+      "additions": 33,
+      "deletions": 33
+    },
+    {
+      "author": "Joyce",
+      "message": "resolvendo problema dos acentos",
+      "date": "2023-12-04T20:52:53-03:00",
+      "additions": 15,
+      "deletions": 3
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Atualização site_1",
+      "date": "2023-12-04T08:31:03-03:00",
+      "additions": 4532141,
+      "deletions": 3598
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "resumo total",
+      "date": "2023-12-04T07:33:34-03:00",
+      "additions": 77,
+      "deletions": 0
+    },
+    {
+      "author": "Joyce",
+      "message": "corrigindo municipios",
+      "date": "2023-12-04T10:19:45-03:00",
+      "additions": 28,
+      "deletions": 28
+    },
+    {
+      "author": "M4RINH0",
+      "message": "geração de arquivos para o site",
+      "date": "2023-11-29T16:26:54-03:00",
+      "additions": 3960,
+      "deletions": 57
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "update extrator",
+      "date": "2023-11-24T08:09:55-03:00",
+      "additions": 3853871,
+      "deletions": 130367
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "atualização de extração de valores",
+      "date": "2023-11-22T16:30:57-03:00",
+      "additions": 77,
+      "deletions": 61
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "printteste",
+      "date": "2023-11-20T10:34:34-03:00",
+      "additions": 57,
+      "deletions": 0
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "att backend",
+      "date": "2023-11-17T12:44:40-03:00",
+      "additions": 945451,
+      "deletions": 13
+    },
+    {
+      "author": "M4RINH0",
+      "message": "Refatoração back-end",
+      "date": "2023-11-17T10:45:45-03:00",
+      "additions": 68,
+      "deletions": 879
+    },
+    {
+      "author": "Joyce Dionizio",
+      "message": "Update README.md",
+      "date": "2023-10-25T09:28:37-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "Joyce Dionizio",
+      "message": "Update README.md",
+      "date": "2023-10-25T09:27:58-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "Diego Sousa",
+      "message": "Story map",
+      "date": "2023-10-24T21:10:07-03:00",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "author": "Joyce",
+      "message": "organizando ghpages",
+      "date": "2023-10-20T20:32:36-03:00",
+      "additions": 0,
+      "deletions": 53043
+    },
+    {
+      "author": "Joyce",
+      "message": "criação de gitpage de documentação",
+      "date": "2023-10-20T19:07:08-03:00",
+      "additions": 53043,
+      "deletions": 0
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update README.md",
+      "date": "2023-10-20T15:10:27-03:00",
+      "additions": 5,
+      "deletions": 5
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update README.md",
+      "date": "2023-10-20T14:59:14-03:00",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update README.md",
+      "date": "2023-10-20T14:56:33-03:00",
+      "additions": 45,
+      "deletions": 2
+    },
+    {
+      "author": "Joyce",
+      "message": "update readme",
+      "date": "2023-10-19T02:14:29-03:00",
+      "additions": 35,
+      "deletions": 9
+    },
+    {
+      "author": "Joyce",
+      "message": "update readme",
+      "date": "2023-10-19T01:30:57-03:00",
+      "additions": 30,
+      "deletions": 1
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "atualização de analises",
+      "date": "2023-10-18T16:05:01-03:00",
+      "additions": 10397,
+      "deletions": 459
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Atualização para coleta de valores",
+      "date": "2023-10-18T15:18:25-03:00",
+      "additions": 6410448,
+      "deletions": 532476
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "exemplo coletador",
+      "date": "2023-10-18T14:26:28-03:00",
+      "additions": 2,
+      "deletions": 1
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "geração de atos para analise",
+      "date": "2023-10-16T18:50:09-03:00",
+      "additions": 374653,
+      "deletions": 0
+    },
+    {
+      "author": "Joyce",
+      "message": "Merge branch 'main' of https://github.com/unb-mds/2023-2-Squad03",
+      "date": "2023-10-16T01:07:05-03:00",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update documento-de-protótipo.md",
+      "date": "2023-10-11T10:38:40-03:00",
+      "additions": 146697,
+      "deletions": 3635593
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update documento-de-protótipo.md",
+      "date": "2023-10-11T10:38:40-03:00",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "author": "Douglas Marinho",
+      "message": "Update documento-de-protótipo.md",
+      "date": "2023-10-11T10:36:32-03:00",
+      "additions": 2,
+      "deletions": 2
+    }
+  ],
+  "recent_issues": [
+    {
+      "number": 65,
+      "title": "Atualizar gráficos do front",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-12T23:40:59Z",
+      "closed_at": "2023-12-13T02:32:05Z"
+    },
+    {
+      "number": 64,
+      "title": "Corrigir bugs do Frontend - URGENTE",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-12T23:38:34Z",
+      "closed_at": "2023-12-13T02:30:58Z"
+    },
+    {
+      "number": 63,
+      "title": "Atualização da logo do Licital",
+      "author": "EstherSousa",
+      "state": "closed",
+      "created_at": "2023-12-09T22:52:34Z",
+      "closed_at": "2023-12-09T22:54:32Z"
+    },
+    {
+      "number": 62,
+      "title": "Trocar o grafico para gastos e quantidade de licitaçoes ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:27:51Z",
+      "closed_at": "2023-12-08T23:31:16Z"
+    },
+    {
+      "number": 61,
+      "title": "Ver a possibilidade de adicionar novas informações",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:25:35Z",
+      "closed_at": "2023-12-11T01:23:43Z"
+    },
+    {
+      "number": 60,
+      "title": "Tirar logo do exonero e colocar a do LicitAL",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:24:56Z",
+      "closed_at": "2023-12-13T02:31:26Z"
+    },
+    {
+      "number": 59,
+      "title": "Fazer Testes",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:24:10Z",
+      "closed_at": "2023-12-12T23:30:39Z"
+    },
+    {
+      "number": 58,
+      "title": "Atualizar README",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:23:36Z",
+      "closed_at": "2023-12-12T23:29:49Z"
+    },
+    {
+      "number": 57,
+      "title": "Atualizar documentaçao ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-07T23:22:36Z",
+      "closed_at": "2023-12-12T23:33:01Z"
+    },
+    {
+      "number": 56,
+      "title": "Arrumar filtro das licitações",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-05T00:05:38Z",
+      "closed_at": "2023-12-06T15:09:27Z"
+    },
+    {
+      "number": 55,
+      "title": "Organizar documentação ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-05T00:04:29Z",
+      "closed_at": "2023-12-06T17:52:38Z"
+    },
+    {
+      "number": 54,
+      "title": "Fazer resumo geral",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-12-05T00:03:17Z",
+      "closed_at": "2023-12-05T12:14:11Z"
+    },
+    {
+      "number": 53,
+      "title": "correção da gramática dos municipios",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-12-04T13:23:11Z",
+      "closed_at": "2023-12-04T13:25:08Z"
+    },
+    {
+      "number": 51,
+      "title": "Atualizar documentação",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:26:27Z",
+      "closed_at": "2023-11-30T18:27:49Z"
+    },
+    {
+      "number": 50,
+      "title": "Organizar os dados dentro dos arquivos",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:25:30Z",
+      "closed_at": "2023-12-05T00:02:01Z"
+    },
+    {
+      "number": 49,
+      "title": "Separar cidades por arquivo",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:24:07Z",
+      "closed_at": "2023-11-29T19:34:24Z"
+    },
+    {
+      "number": 48,
+      "title": "resolver bug das decimais ",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:23:28Z",
+      "closed_at": "2023-12-08T12:04:14Z"
+    },
+    {
+      "number": 47,
+      "title": "Atualização de Integrantes do Grupo - Frontend",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-11-23T00:22:03Z",
+      "closed_at": "2023-11-29T23:01:58Z"
+    },
+    {
+      "number": 46,
+      "title": "Atualizar logos do front",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:21:44Z",
+      "closed_at": "2023-11-29T23:02:44Z"
+    },
+    {
+      "number": 45,
+      "title": "template issue",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-23T00:21:12Z",
+      "closed_at": "2023-11-23T00:43:46Z"
+    },
+    {
+      "number": 44,
+      "title": "atualizar documentação",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-21T20:46:40Z",
+      "closed_at": "2023-11-21T20:47:43Z"
+    },
+    {
+      "number": 43,
+      "title": "Estudar React ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-11-07T00:20:55Z",
+      "closed_at": "2023-11-23T00:17:14Z"
+    },
+    {
+      "number": 42,
+      "title": "estudar metodologia xp",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:18:54Z",
+      "closed_at": "2023-11-14T22:55:03Z"
+    },
+    {
+      "number": 41,
+      "title": "refatorar back-end",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:14:26Z",
+      "closed_at": "2023-11-23T00:16:44Z"
+    },
+    {
+      "number": 40,
+      "title": "especificar dados de licitação",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:12:32Z",
+      "closed_at": "2023-11-09T01:01:18Z"
+    },
+    {
+      "number": 39,
+      "title": "estudar biblioteca spaCy",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:11:21Z",
+      "closed_at": "2023-11-09T02:36:33Z"
+    },
+    {
+      "number": 38,
+      "title": "refatorar front end",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:09:52Z",
+      "closed_at": "2023-11-07T23:59:29Z"
+    },
+    {
+      "number": 37,
+      "title": "criar logo Licital",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-07T00:09:31Z",
+      "closed_at": "2023-11-08T00:00:41Z"
+    },
+    {
+      "number": 36,
+      "title": "Fazer slide para apresentação",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-24T19:55:32Z",
+      "closed_at": "2023-10-24T23:42:21Z"
+    },
+    {
+      "number": 35,
+      "title": "Ultimas preparações para entrega da R1",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-24T00:39:59Z",
+      "closed_at": "2023-10-25T12:30:21Z"
+    },
+    {
+      "number": 33,
+      "title": "criar gitpage para documentação",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-20T22:12:12Z",
+      "closed_at": "2023-10-22T00:57:12Z"
+    },
+    {
+      "number": 32,
+      "title": "reogarnizar a documentação",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-17T00:54:37Z",
+      "closed_at": "2023-10-25T00:37:25Z"
+    },
+    {
+      "number": 31,
+      "title": "criar gitpage",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-17T00:49:28Z",
+      "closed_at": "2023-10-25T00:36:58Z"
+    },
+    {
+      "number": 30,
+      "title": "definir o atos.sh sobre licitações",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-17T00:47:53Z",
+      "closed_at": "2023-10-23T23:41:33Z"
+    },
+    {
+      "number": 29,
+      "title": "Criar o README",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-17T00:45:00Z",
+      "closed_at": "2023-10-19T00:48:05Z"
+    },
+    {
+      "number": 28,
+      "title": "Criação da página Home e Sobre",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-17T00:13:06Z",
+      "closed_at": "2023-10-18T20:24:15Z"
+    },
+    {
+      "number": 27,
+      "title": "Terminar User Story Map",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-11T00:46:42Z",
+      "closed_at": "2023-10-17T00:09:01Z"
+    },
+    {
+      "number": 26,
+      "title": "Criar Documento de Arquitetura ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-10T00:32:44Z",
+      "closed_at": "2023-10-17T00:43:45Z"
+    },
+    {
+      "number": 25,
+      "title": "Revisar API do exoonero",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-10-06T13:48:28Z",
+      "closed_at": "2023-10-17T00:09:21Z"
+    },
+    {
+      "number": 24,
+      "title": "Refatoração do Banco de Dados",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-05T00:41:53Z",
+      "closed_at": "2023-10-16T00:37:36Z"
+    },
+    {
+      "number": 23,
+      "title": "Estudar API Flesk ",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-09-28T01:19:52Z",
+      "closed_at": "2023-10-05T02:40:11Z"
+    },
+    {
+      "number": 22,
+      "title": "Vincular Bot com o Conversor",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-09-28T01:05:37Z",
+      "closed_at": "2023-10-02T12:47:47Z"
+    },
+    {
+      "number": 21,
+      "title": "Vincular banco de dados com o bot",
+      "author": "DiegoSousaLeite",
+      "state": "closed",
+      "created_at": "2023-09-28T01:04:33Z",
+      "closed_at": "2023-10-05T00:35:12Z"
+    },
+    {
+      "number": 20,
+      "title": "Mapeamento de Tecnologias Front-End",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-21T00:04:14Z",
+      "closed_at": "2023-09-28T12:22:27Z"
+    },
+    {
+      "number": 19,
+      "title": "Mapeamento de tecnologias para projeto backend.",
+      "author": "brunocva",
+      "state": "closed",
+      "created_at": "2023-09-20T23:59:58Z",
+      "closed_at": "2023-09-28T00:11:00Z"
+    },
+    {
+      "number": 18,
+      "title": "Protótipo de Baixa Fidelidade",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-20T16:30:31Z",
+      "closed_at": "2023-10-03T21:30:00Z"
+    },
+    {
+      "number": 17,
+      "title": "Conversão dos Diários Oficiais de PDF para TXT",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-20T16:12:20Z",
+      "closed_at": "2023-09-28T12:39:54Z"
+    },
+    {
+      "number": 16,
+      "title": "Definição de Épicos, Features, Histórias de Usuário e Mapeamento de User Stories",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-20T16:08:20Z",
+      "closed_at": "2023-09-28T01:01:18Z"
+    },
+    {
+      "number": 15,
+      "title": " Início do Levantamento de Requisitos do Projeto",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-20T15:58:51Z",
+      "closed_at": "2023-10-02T21:24:14Z"
+    },
+    {
+      "number": 14,
+      "title": "Definição dos Stakeholders do Projeto",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-09-20T15:49:50Z",
+      "closed_at": "2023-09-28T00:26:32Z"
+    }
+  ],
+  "recent_prs": [
+    {
+      "number": 52,
+      "title": "Atualização da Documentação na GitPage ",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-11-30T20:51:21Z",
+      "merged_at": null
+    },
+    {
+      "number": 34,
+      "title": "update",
+      "author": "joycedio",
+      "state": "closed",
+      "created_at": "2023-10-21T00:09:19Z",
+      "merged_at": null
+    }
+  ]
+}

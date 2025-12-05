@@ -1,0 +1,581 @@
+{
+  "_metadata": {
+    "repo_name": "2023.2-LicitaX",
+    "processed_at": "2025-12-05T14:51:30.115513",
+    "processor": "pdf_data_processor.py",
+    "layer": "silver"
+  },
+  "repository": {
+    "name": "2023.2-LicitaX",
+    "description": "Repositório do front-end do Squad 07 da disciplina Métodos de Desenvolvimento de Software.",
+    "created_at": "2023-10-15T17:43:02Z",
+    "updated_at": "2023-10-25T03:03:18Z",
+    "language": "TypeScript",
+    "license": "MIT License"
+  },
+  "stats": {
+    "total_commits": 36,
+    "total_issues": 0,
+    "total_prs": 34,
+    "total_members": 4
+  },
+  "members": [
+    {
+      "login": "joseandre25",
+      "commits": 33,
+      "issues": 0,
+      "prs": 27,
+      "total_contributions": 60
+    },
+    {
+      "login": "RafaBonach",
+      "commits": 1,
+      "issues": 0,
+      "prs": 4,
+      "total_contributions": 5
+    },
+    {
+      "login": "gio221",
+      "commits": 2,
+      "issues": 0,
+      "prs": 2,
+      "total_contributions": 4
+    },
+    {
+      "login": "juliatakaki",
+      "commits": 0,
+      "issues": 0,
+      "prs": 1,
+      "total_contributions": 1
+    }
+  ],
+  "recent_commits": [
+    {
+      "author": "José André",
+      "message": "Merge pull request #34 from unb-mds/feature/mudanca-components",
+      "date": "2023-12-12T20:05:02-03:00",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "author": "joseandre25",
+      "message": ":fire: pequena alteração nos components",
+      "date": "2023-12-12T20:04:08-03:00",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #33 from unb-mds/feature/testes-unitarios-front",
+      "date": "2023-12-11T17:45:37-03:00",
+      "additions": 7640,
+      "deletions": 2172
+    },
+    {
+      "author": "RafaBonach",
+      "message": "Os testes do front estão quase finalizados",
+      "date": "2023-12-11T16:29:43-03:00",
+      "additions": 7640,
+      "deletions": 2172
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #32 from unb-mds/feature/pesquisa-estilo",
+      "date": "2023-12-05T01:07:33-03:00",
+      "additions": 204,
+      "deletions": 53
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: Pesquisa estilizada e Tela Sobre",
+      "date": "2023-12-05T01:05:55-03:00",
+      "additions": 204,
+      "deletions": 53
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #31 from unb-mds/bug/build-actions",
+      "date": "2023-12-04T17:04:24-03:00",
+      "additions": 1,
+      "deletions": 4
+    },
+    {
+      "author": "joseandre25",
+      "message": ":bug: ESLint barrando build",
+      "date": "2023-12-04T17:03:43-03:00",
+      "additions": 1,
+      "deletions": 4
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #30 from unb-mds/feature/pesquisa",
+      "date": "2023-12-04T16:46:34-03:00",
+      "additions": 146,
+      "deletions": 50
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: busca na API",
+      "date": "2023-12-04T16:45:33-03:00",
+      "additions": 146,
+      "deletions": 50
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #29 from unb-mds/feature/pesquisa",
+      "date": "2023-12-02T16:28:24-03:00",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "author": "joseandre25",
+      "message": ":bug: favicon",
+      "date": "2023-12-02T16:27:49-03:00",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #28 from unb-mds/feature/pesquisa",
+      "date": "2023-12-02T13:26:34-03:00",
+      "additions": 103,
+      "deletions": 1
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: seção pesquisa",
+      "date": "2023-12-02T13:25:41-03:00",
+      "additions": 103,
+      "deletions": 1
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #27 from unb-mds/feature/jose-personalizacao",
+      "date": "2023-11-30T22:36:30-03:00",
+      "additions": 31,
+      "deletions": 22
+    },
+    {
+      "author": "joseandre25",
+      "message": ":repeat: ordem dos elementos na tela",
+      "date": "2023-11-30T22:35:28-03:00",
+      "additions": 31,
+      "deletions": 22
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #26 from unb-mds/bug/jose-index.tsx",
+      "date": "2023-11-30T16:21:08-03:00",
+      "additions": 11,
+      "deletions": 7
+    },
+    {
+      "author": "joseandre25",
+      "message": ":bug: props municipio não lido",
+      "date": "2023-11-30T16:20:34-03:00",
+      "additions": 11,
+      "deletions": 7
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #25 from unb-mds/feature/jose-graficos",
+      "date": "2023-11-30T16:08:55-03:00",
+      "additions": 198,
+      "deletions": 49
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: charts",
+      "date": "2023-11-30T16:07:07-03:00",
+      "additions": 198,
+      "deletions": 49
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #23 from unb-mds/feature/PaginasGio",
+      "date": "2023-11-26T22:14:16-03:00",
+      "additions": 10,
+      "deletions": 7
+    },
+    {
+      "author": "gio221",
+      "message": "Mudança nos textos e cores",
+      "date": "2023-11-26T22:10:10-03:00",
+      "additions": 10,
+      "deletions": 7
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #22 from unb-mds/feature/jose-home-ortografia",
+      "date": "2023-10-25T00:09:25-03:00",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "author": "joseandre25",
+      "message": ":bug: ortografia da home",
+      "date": "2023-10-24T23:53:00-03:00",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #21 from unb-mds/joseandre25-patch-2",
+      "date": "2023-10-24T22:40:57-03:00",
+      "additions": 1,
+      "deletions": 2
+    },
+    {
+      "author": "José André",
+      "message": "Update README.md",
+      "date": "2023-10-24T22:40:41-03:00",
+      "additions": 1,
+      "deletions": 2
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #20 from unb-mds/joseandre25-patch-1",
+      "date": "2023-10-24T22:34:07-03:00",
+      "additions": 3,
+      "deletions": 34
+    },
+    {
+      "author": "José André",
+      "message": "Update README.md",
+      "date": "2023-10-24T22:33:44-03:00",
+      "additions": 3,
+      "deletions": 34
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #19 from unb-mds/feature/gio-sobre",
+      "date": "2023-10-24T20:57:01-03:00",
+      "additions": 31,
+      "deletions": 0
+    },
+    {
+      "author": "gio221",
+      "message": ":TelaSobre",
+      "date": "2023-10-24T20:51:44-03:00",
+      "additions": 31,
+      "deletions": 0
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #18 from unb-mds/feature/jose-charts",
+      "date": "2023-10-24T20:33:53-03:00",
+      "additions": 14,
+      "deletions": 5
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: formatação da home",
+      "date": "2023-10-24T20:32:59-03:00",
+      "additions": 14,
+      "deletions": 5
+    },
+    {
+      "author": "joseandre25",
+      "message": ":snake: nova dependencia",
+      "date": "2023-10-24T19:34:26-03:00",
+      "additions": 20,
+      "deletions": 1
+    },
+    {
+      "author": "José André",
+      "message": "Merge pull request #17 from unb-mds/feature/jose-layout-sobre",
+      "date": "2023-10-24T17:44:02-03:00",
+      "additions": 31,
+      "deletions": 4
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: layout tela sobre - pronto pra estilizar",
+      "date": "2023-10-24T17:43:17-03:00",
+      "additions": 31,
+      "deletions": 4
+    },
+    {
+      "author": "joseandre25",
+      "message": ":pencil: tela home",
+      "date": "2023-10-24T13:16:39-03:00",
+      "additions": 7737,
+      "deletions": 0
+    }
+  ],
+  "recent_issues": [],
+  "recent_prs": [
+    {
+      "number": 34,
+      "title": ":fire: pequena alteração nos components",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-12T23:04:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 33,
+      "title": "Os testes do front estão quase finalizados",
+      "author": "RafaBonach",
+      "state": "closed",
+      "created_at": "2023-12-11T20:02:24Z",
+      "merged_at": null
+    },
+    {
+      "number": 32,
+      "title": ":pencil: Pesquisa estilizada e Tela Sobre",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-05T04:06:45Z",
+      "merged_at": null
+    },
+    {
+      "number": 31,
+      "title": ":bug: ESLint barrando build",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-04T20:04:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 30,
+      "title": ":pencil: busca na API",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-04T19:45:58Z",
+      "merged_at": null
+    },
+    {
+      "number": 29,
+      "title": ":bug: favicon",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-02T19:28:07Z",
+      "merged_at": null
+    },
+    {
+      "number": 28,
+      "title": ":pencil: seção pesquisa",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-02T16:26:06Z",
+      "merged_at": null
+    },
+    {
+      "number": 27,
+      "title": ":repeat: ordem dos elementos na tela",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-12-01T01:35:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 26,
+      "title": ":bug: props municipio não lido",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-11-30T19:21:02Z",
+      "merged_at": null
+    },
+    {
+      "number": 25,
+      "title": ":pencil: charts",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-11-30T19:07:55Z",
+      "merged_at": null
+    },
+    {
+      "number": 24,
+      "title": "Criando rodapé",
+      "author": "juliatakaki",
+      "state": "closed",
+      "created_at": "2023-11-27T13:40:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 23,
+      "title": "Mudança nos textos e cores",
+      "author": "gio221",
+      "state": "closed",
+      "created_at": "2023-11-27T01:11:47Z",
+      "merged_at": null
+    },
+    {
+      "number": 22,
+      "title": ":bug: ortografia da home",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-25T03:09:18Z",
+      "merged_at": null
+    },
+    {
+      "number": 21,
+      "title": "Update README.md",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-25T01:40:49Z",
+      "merged_at": null
+    },
+    {
+      "number": 20,
+      "title": "Update README.md",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-25T01:33:49Z",
+      "merged_at": null
+    },
+    {
+      "number": 19,
+      "title": ":TelaSobre",
+      "author": "gio221",
+      "state": "closed",
+      "created_at": "2023-10-24T23:56:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 18,
+      "title": ":pencil: formatação da home",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-24T23:33:37Z",
+      "merged_at": null
+    },
+    {
+      "number": 17,
+      "title": ":pencil: layout tela sobre - pronto pra estilizar",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-24T20:43:48Z",
+      "merged_at": null
+    },
+    {
+      "number": 16,
+      "title": "Feature/jose tela home",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-24T16:10:43Z",
+      "merged_at": null
+    },
+    {
+      "number": 15,
+      "title": ":pencil: custom do layout",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-24T03:23:40Z",
+      "merged_at": null
+    },
+    {
+      "number": 14,
+      "title": ":pencil: layout inicial",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-24T00:56:34Z",
+      "merged_at": null
+    },
+    {
+      "number": 13,
+      "title": ":repeat: novos components",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-23T22:05:51Z",
+      "merged_at": null
+    },
+    {
+      "number": 12,
+      "title": "Feature/jose adicionar home",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-22T03:58:14Z",
+      "merged_at": null
+    },
+    {
+      "number": 11,
+      "title": "Ensinei como alterar a pagina",
+      "author": "RafaBonach",
+      "state": "closed",
+      "created_at": "2023-10-20T00:23:58Z",
+      "merged_at": null
+    },
+    {
+      "number": 10,
+      "title": ":bug rect node dando problema, voltando pro orig",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T23:45:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 9,
+      "title": ":bug: build dando erro",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T23:30:04Z",
+      "merged_at": null
+    },
+    {
+      "number": 8,
+      "title": ":bug: build dando erro",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T23:22:08Z",
+      "merged_at": null
+    },
+    {
+      "number": 7,
+      "title": ":bug: primeiro layout",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T23:16:57Z",
+      "merged_at": null
+    },
+    {
+      "number": 6,
+      "title": ":pencil: primeiro layout",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T23:14:00Z",
+      "merged_at": null
+    },
+    {
+      "number": 5,
+      "title": ":pencil: links do repositorio | icone e nome",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T04:04:35Z",
+      "merged_at": null
+    },
+    {
+      "number": 4,
+      "title": ":pencil: estilizando a tela",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-19T00:30:44Z",
+      "merged_at": null
+    },
+    {
+      "number": 3,
+      "title": "Adicionei o meu nome e uma frase em Deploy",
+      "author": "RafaBonach",
+      "state": "closed",
+      "created_at": "2023-10-18T23:43:59Z",
+      "merged_at": null
+    },
+    {
+      "number": 2,
+      "title": "Adicionei o meu nome embaixo de deploy",
+      "author": "RafaBonach",
+      "state": "closed",
+      "created_at": "2023-10-18T23:14:10Z",
+      "merged_at": null
+    },
+    {
+      "number": 1,
+      "title": ":pencil: teste sistema branch/feature",
+      "author": "joseandre25",
+      "state": "closed",
+      "created_at": "2023-10-18T22:57:40Z",
+      "merged_at": null
+    }
+  ]
+}
