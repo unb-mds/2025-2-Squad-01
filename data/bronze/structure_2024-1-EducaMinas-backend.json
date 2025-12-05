@@ -1,0 +1,918 @@
+{
+  "owner": "unb-mds",
+  "repository": "2024-1-EducaMinas-backend",
+  "branch": "main",
+  "sha": "b8be4e1c35c528d26f037375d271f2758dba9e7c",
+  "tree": [
+    {
+      "name": ".editorconfig",
+      "path": ".editorconfig",
+      "type": "file",
+      "sha": "113c919405c860a4a95d5df1c5a499c7357accef",
+      "mode": "100644",
+      "extension": ".editorconfig",
+      "size": 250,
+      "is_binary": false
+    },
+    {
+      "name": ".eslintignore",
+      "path": ".eslintignore",
+      "type": "file",
+      "sha": "04c01ba7ba0830ccdc49fce1c7257114ed81e68b",
+      "mode": "100644",
+      "extension": ".eslintignore",
+      "size": 19,
+      "is_binary": false
+    },
+    {
+      "name": ".eslintrc.json",
+      "path": ".eslintrc.json",
+      "type": "file",
+      "sha": "2290b88cc05a107a128b02c09eb766d658d9a23a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 47,
+      "is_binary": false
+    },
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "9193f4b137b41af5ed8cc8af1396c7699b0a5cdc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "sha": "e3ffa4af7d3da4d5960dd0b71460a09a2c5af08a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bug_report.md",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "file",
+      "sha": "dd84ea7824f11be1eeda22377549cbc1aec7f980",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 834,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-tasks.md",
+      "path": ".github/ISSUE_TEMPLATE/sprint-tasks.md",
+      "type": "file",
+      "sha": "0c9e96ae9792f244c0278769040123b8f3eec149",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 742,
+      "is_binary": false
+    },
+    {
+      "name": "PULL_REQUEST_TEMPLATE.md",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "type": "file",
+      "sha": "3cf75ee80c675742cf02cada24620bc21bc79a01",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 810,
+      "is_binary": false
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "d1c7cc5614f485fdf3067878d502442fd89b800d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "deploy-express.yaml",
+      "path": ".github/workflows/deploy-express.yaml",
+      "type": "file",
+      "sha": "e419233208dd912351b37d5955efd71e9c2918fd",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 661,
+      "is_binary": false
+    },
+    {
+      "name": "quality.yaml",
+      "path": ".github/workflows/quality.yaml",
+      "type": "file",
+      "sha": "3aaeb5a8b2eb8a70a2a771590671e93fa43b073f",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 713,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "7bcc2e87389392f8a0b1be63ea38b4f4441a1282",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 464,
+      "is_binary": false
+    },
+    {
+      "name": ".vscode",
+      "path": ".vscode",
+      "type": "directory",
+      "sha": "7ca016b3ea452f31d5733a46e1f88ef0a86a6a13",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "extensions.json",
+      "path": ".vscode/extensions.json",
+      "type": "file",
+      "sha": "7bdf3677b4d1f259e0de772be2c4a77e29f9ae84",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 150,
+      "is_binary": false
+    },
+    {
+      "name": "settings.json",
+      "path": ".vscode/settings.json",
+      "type": "file",
+      "sha": "767aa83afed2de4dfb48fae7464ab7ab43e29575",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 371,
+      "is_binary": false
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "sha": "18c91471812cb6f4c4e8d0fc407f70c4612e1648",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5202,
+      "is_binary": false
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "sha": "13e51a6ddf9f2edc7f67d612d214937c88e23ad7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4777,
+      "is_binary": false
+    },
+    {
+      "name": "Database",
+      "path": "Database",
+      "type": "directory",
+      "sha": "d00d67004221b4bfdade458052b627c87044bcbb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "docker-compose.yaml",
+      "path": "Database/docker-compose.yaml",
+      "type": "file",
+      "sha": "1bd66b2c55acd37acfbf6c472b854c902fe65ffc",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 645,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "cab744be8795c94c54a987a3ed76d6a6784435c3",
+      "mode": "100644",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "d3b3adba44a1c9ed46c0239f5d2502e878ea934e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10490,
+      "is_binary": false
+    },
+    {
+      "name": "SECURITY.md",
+      "path": "SECURITY.md",
+      "type": "file",
+      "sha": "034e848032092eaf8ef96eac731b6ed5961987f3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 619,
+      "is_binary": false
+    },
+    {
+      "name": "WebScrapper",
+      "path": "WebScrapper",
+      "type": "directory",
+      "sha": "84885d6c51e29bc72ea6380bb07c1acd04fc9b02",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "DataETL",
+      "path": "WebScrapper/DataETL",
+      "type": "directory",
+      "sha": "8d88225bde8af2f2ecf74d5de882c59edc091e34",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ETLDebugger.ipynb",
+      "path": "WebScrapper/DataETL/ETLDebugger.ipynb",
+      "type": "file",
+      "sha": "77cd3f71b74ef9770335ed90b5be0da33b9b3504",
+      "mode": "100644",
+      "extension": ".ipynb",
+      "size": 303343,
+      "is_binary": false
+    },
+    {
+      "name": "ETLIndicadorPostgres.py",
+      "path": "WebScrapper/DataETL/ETLIndicadorPostgres.py",
+      "type": "file",
+      "sha": "11899c6831e08ce5a8a1ace603883f548efa4ca3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1290,
+      "is_binary": false
+    },
+    {
+      "name": "ETLMatriculaPostgres.py",
+      "path": "WebScrapper/DataETL/ETLMatriculaPostgres.py",
+      "type": "file",
+      "sha": "5ba8d542b87ce9b707c86ea5400d0ab502a70a55",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1286,
+      "is_binary": false
+    },
+    {
+      "name": "ETLMunicipioJSON.py",
+      "path": "WebScrapper/DataETL/ETLMunicipioJSON.py",
+      "type": "file",
+      "sha": "d7a375812f2d60d9f819cdedca05a4b9c5ae67f9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 714,
+      "is_binary": false
+    },
+    {
+      "name": "ETLMunicipioPostgres.py",
+      "path": "WebScrapper/DataETL/ETLMunicipioPostgres.py",
+      "type": "file",
+      "sha": "1289218bb9476eab692c16904c6a51953fb44f4f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1123,
+      "is_binary": false
+    },
+    {
+      "name": "MunicipioDebugger.ipynb",
+      "path": "WebScrapper/DataETL/MunicipioDebugger.ipynb",
+      "type": "file",
+      "sha": "eff5cada9cde73b386c09c0951681f7cd377d400",
+      "mode": "100644",
+      "extension": ".ipynb",
+      "size": 34490,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "WebScrapper/DataETL/main.py",
+      "type": "file",
+      "sha": "3c195be7be7f53f4dbaea298393095ff6fcef9ec",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 279,
+      "is_binary": false
+    },
+    {
+      "name": "models",
+      "path": "WebScrapper/DataETL/models",
+      "type": "directory",
+      "sha": "6aa7abba8d3e2b2d69401e6a98a24cb4bbc63b9b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "WebScrapper/DataETL/models/__init__.py",
+      "type": "file",
+      "sha": "7e7a11d83aca40e1ed62f9d50d17c3e6bedd9d12",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 187,
+      "is_binary": false
+    },
+    {
+      "name": "base.py",
+      "path": "WebScrapper/DataETL/models/base.py",
+      "type": "file",
+      "sha": "21145b0ac9e511d7209d6a5c868ce975ccfe74a5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 82,
+      "is_binary": false
+    },
+    {
+      "name": "filtro.py",
+      "path": "WebScrapper/DataETL/models/filtro.py",
+      "type": "file",
+      "sha": "e305c5e2634bb0c1e224667e8b12bc02bd5ca215",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 569,
+      "is_binary": false
+    },
+    {
+      "name": "indicador.py",
+      "path": "WebScrapper/DataETL/models/indicador.py",
+      "type": "file",
+      "sha": "272706092f9ed39273bca3574ab9bc446ef69c4e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 508,
+      "is_binary": false
+    },
+    {
+      "name": "matricula.py",
+      "path": "WebScrapper/DataETL/models/matricula.py",
+      "type": "file",
+      "sha": "cbb2e03d266f985274b716b1afcee4eb96bc9b21",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 439,
+      "is_binary": false
+    },
+    {
+      "name": "municipio.py",
+      "path": "WebScrapper/DataETL/models/municipio.py",
+      "type": "file",
+      "sha": "911679b652b5045e8fd0a5a088f7fef27142ec32",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 299,
+      "is_binary": false
+    },
+    {
+      "name": "municipio_id.py",
+      "path": "WebScrapper/DataETL/municipio_id.py",
+      "type": "file",
+      "sha": "2b042de8203cd7d3dc3b7b9767f6cad2db4ad1e8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 25238,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "WebScrapper/DataETL/src",
+      "type": "directory",
+      "sha": "f1766c3db810ca03aa6be0871d12a62c3ce83c02",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "WebScrapper/DataETL/src/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "config.py",
+      "path": "WebScrapper/DataETL/src/config.py",
+      "type": "file",
+      "sha": "a24c51ac0e40315bf6c231e5714f584a0053ea9e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 592,
+      "is_binary": false
+    },
+    {
+      "name": "connect.py",
+      "path": "WebScrapper/DataETL/src/connect.py",
+      "type": "file",
+      "sha": "293851fbd6903e7ca32cdc54e0ae8d8ce82cd63e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 971,
+      "is_binary": false
+    },
+    {
+      "name": "etl.py",
+      "path": "WebScrapper/DataETL/src/etl.py",
+      "type": "file",
+      "sha": "05a092d4c7c6621ffe29129ff1cc1395c8525925",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1031,
+      "is_binary": false
+    },
+    {
+      "name": "extractor.py",
+      "path": "WebScrapper/DataETL/src/extractor.py",
+      "type": "file",
+      "sha": "a8613d26ba52583f86fcbe9c7421abd32071c1aa",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2051,
+      "is_binary": false
+    },
+    {
+      "name": "load.py",
+      "path": "WebScrapper/DataETL/src/load.py",
+      "type": "file",
+      "sha": "cc0141ca644cd178bc60515ada04ef8972590c55",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5189,
+      "is_binary": false
+    },
+    {
+      "name": "transform.py",
+      "path": "WebScrapper/DataETL/src/transform.py",
+      "type": "file",
+      "sha": "e760fbd763388a145338034fb543988f32f8e242",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4001,
+      "is_binary": false
+    },
+    {
+      "name": "DataScraper",
+      "path": "WebScrapper/DataScraper",
+      "type": "directory",
+      "sha": "c20d0c64492669fe82eabfd476f614ee00381a79",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "InepScraper.py",
+      "path": "WebScrapper/DataScraper/InepScraper.py",
+      "type": "file",
+      "sha": "ceff3eeb797edb35e0878891778ca1e47cbdcbf5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9999,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "WebScrapper/requirements.txt",
+      "type": "file",
+      "sha": "f2a6dcbad520e4bb6bfe4b31f604a15d1bc0ef93",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 4669,
+      "is_binary": false
+    },
+    {
+      "name": "api",
+      "path": "api",
+      "type": "directory",
+      "sha": "b2b2c03e8fdf106021bd7b3dee070392f31702b1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "src",
+      "path": "api/src",
+      "type": "directory",
+      "sha": "6c7195057624c4126d9653b59a21915926e177dc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "adapters",
+      "path": "api/src/adapters",
+      "type": "directory",
+      "sha": "3128f4a1071ba974f815602eac3c3e869c51942d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "controllers",
+      "path": "api/src/adapters/controllers",
+      "type": "directory",
+      "sha": "7566b6fd90965458787d1a5e1bbc117f557f6723",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentController.ts",
+      "path": "api/src/adapters/controllers/enrollmentController.ts",
+      "type": "file",
+      "sha": "bce1aa19bd2ce9f9a5c1af3f87153692c16a5409",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 966,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorController.ts",
+      "path": "api/src/adapters/controllers/indicatorController.ts",
+      "type": "file",
+      "sha": "b6b94473c0468694ac06b53c068663be4aadbc00",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1111,
+      "is_binary": false
+    },
+    {
+      "name": "rankingController.ts",
+      "path": "api/src/adapters/controllers/rankingController.ts",
+      "type": "file",
+      "sha": "0eae93f358686d8cb562eb4104947f9e25273ecf",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 937,
+      "is_binary": false
+    },
+    {
+      "name": "repositories",
+      "path": "api/src/adapters/repositories",
+      "type": "directory",
+      "sha": "5aa953d7926170006876b0faa9d8687d34a1dafd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentRepository.ts",
+      "path": "api/src/adapters/repositories/enrollmentRepository.ts",
+      "type": "file",
+      "sha": "d079c8711829e1754cf2d7dc5e3cb55d509c24b2",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 363,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorRepository.ts",
+      "path": "api/src/adapters/repositories/indicatorRepository.ts",
+      "type": "file",
+      "sha": "cb8e1afc1e2f10ff8e92f3a6862815b0da4ac561",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 407,
+      "is_binary": false
+    },
+    {
+      "name": "rankingRepository.ts",
+      "path": "api/src/adapters/repositories/rankingRepository.ts",
+      "type": "file",
+      "sha": "29f6fcbd5bb2c67c19def9e1affc366f2b69476a",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 345,
+      "is_binary": false
+    },
+    {
+      "name": "application",
+      "path": "api/src/application",
+      "type": "directory",
+      "sha": "6df39d00454e7d1ea8cfeaf3f0109257f684b309",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "services",
+      "path": "api/src/application/services",
+      "type": "directory",
+      "sha": "7a799e1a87067885ad6323bf11a95af9fb29c281",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentService.spec.ts",
+      "path": "api/src/application/services/enrollmentService.spec.ts",
+      "type": "file",
+      "sha": "521cdd6facb691af495f5cb42d21c66a1308b1df",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 2857,
+      "is_binary": false
+    },
+    {
+      "name": "enrollmentServices.ts",
+      "path": "api/src/application/services/enrollmentServices.ts",
+      "type": "file",
+      "sha": "9520ff40eb319d3d3f0d539fb229c8576f5bbfb6",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1768,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorService.spec.ts",
+      "path": "api/src/application/services/indicatorService.spec.ts",
+      "type": "file",
+      "sha": "bb47dd95c9a823ef753febef95b44431053dcc99",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 2490,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorServices.ts",
+      "path": "api/src/application/services/indicatorServices.ts",
+      "type": "file",
+      "sha": "44b6dfc03823478dd2331d410a3b59dc32da11eb",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1471,
+      "is_binary": false
+    },
+    {
+      "name": "rankingServices.spec.ts",
+      "path": "api/src/application/services/rankingServices.spec.ts",
+      "type": "file",
+      "sha": "24bed9e81f3cb8522ed5ba59f0e3529a8ebc3777",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1691,
+      "is_binary": false
+    },
+    {
+      "name": "rankingServices.ts",
+      "path": "api/src/application/services/rankingServices.ts",
+      "type": "file",
+      "sha": "c60e6df602320f00136ef109a976a8023ec79617",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 2680,
+      "is_binary": false
+    },
+    {
+      "name": "index.ts",
+      "path": "api/src/index.ts",
+      "type": "file",
+      "sha": "0b685fa61db8489ebe5f4ffd61816057e30c2c99",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1224,
+      "is_binary": false
+    },
+    {
+      "name": "infrastructure",
+      "path": "api/src/infrastructure",
+      "type": "directory",
+      "sha": "99cca328c99e7cbb7a34c104193524b9565665a2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "database",
+      "path": "api/src/infrastructure/database",
+      "type": "directory",
+      "sha": "787d377f3765774526b0ce863de6e471064a8500",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "memory",
+      "path": "api/src/infrastructure/database/memory",
+      "type": "directory",
+      "sha": "6a498f6cee85619638b1dc6af23ba55413015f4e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "data",
+      "path": "api/src/infrastructure/database/memory/data",
+      "type": "directory",
+      "sha": "f1e7bcf5dd772a6f446cef8a4b73ef22082948eb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentMemoryData.ts",
+      "path": "api/src/infrastructure/database/memory/data/enrollmentMemoryData.ts",
+      "type": "file",
+      "sha": "7b07651850414c2f66f9392b56ac289de211ff39",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 3058,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorMemoryData.ts",
+      "path": "api/src/infrastructure/database/memory/data/indicatorMemoryData.ts",
+      "type": "file",
+      "sha": "ee186ef535ba5edf5b8ed31e70b98037c5bf1801",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 3434,
+      "is_binary": false
+    },
+    {
+      "name": "rankingMemoryData.ts",
+      "path": "api/src/infrastructure/database/memory/data/rankingMemoryData.ts",
+      "type": "file",
+      "sha": "63c72abd251664176315b21ee96f2651b65b7d05",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 5981,
+      "is_binary": false
+    },
+    {
+      "name": "enrollmentRepositoryMemory.ts",
+      "path": "api/src/infrastructure/database/memory/enrollmentRepositoryMemory.ts",
+      "type": "file",
+      "sha": "83ccec4066090d0bc60afa2aafa5b1b27abedbdb",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 614,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorRepositoryMemory.ts",
+      "path": "api/src/infrastructure/database/memory/indicatorRepositoryMemory.ts",
+      "type": "file",
+      "sha": "02f360285dada6d1b475ce6fe6781fd5b1d99f78",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 604,
+      "is_binary": false
+    },
+    {
+      "name": "rankingRepositoryMemory.ts",
+      "path": "api/src/infrastructure/database/memory/rankingRepositoryMemory.ts",
+      "type": "file",
+      "sha": "16b94490a0be24100f90630c10c1cd7ab563873c",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 565,
+      "is_binary": false
+    },
+    {
+      "name": "psql",
+      "path": "api/src/infrastructure/database/psql",
+      "type": "directory",
+      "sha": "b28511c6ed2a48bd949eb2e5a874221d674d4653",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentRepositoryPSQL.ts",
+      "path": "api/src/infrastructure/database/psql/enrollmentRepositoryPSQL.ts",
+      "type": "file",
+      "sha": "ce337e03088fc68a11ef5d907a27bdfa490c71e3",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1274,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorRepositoryPSQL.ts",
+      "path": "api/src/infrastructure/database/psql/indicatorRepositoryPSQL.ts",
+      "type": "file",
+      "sha": "a9eaa85eb131d0cca9ee715c2eeac3d398b631ec",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1361,
+      "is_binary": false
+    },
+    {
+      "name": "rankingRepositoryPSQL.ts",
+      "path": "api/src/infrastructure/database/psql/rankingRepositoryPSQL.ts",
+      "type": "file",
+      "sha": "ceaa46b8629f9e77ede5430fa37a78e00869cb3f",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 2102,
+      "is_binary": false
+    },
+    {
+      "name": "routes",
+      "path": "api/src/infrastructure/routes",
+      "type": "directory",
+      "sha": "319445cc4bf44869972420bf285d077024c72bf1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enrollmentRoute.ts",
+      "path": "api/src/infrastructure/routes/enrollmentRoute.ts",
+      "type": "file",
+      "sha": "baa8046688a5a30105f54b3c6263a23beef32127",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1435,
+      "is_binary": false
+    },
+    {
+      "name": "indicatorRoute.ts",
+      "path": "api/src/infrastructure/routes/indicatorRoute.ts",
+      "type": "file",
+      "sha": "e26bb7c1e26ac7baec797fedcf37ed41f56f9ac7",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1786,
+      "is_binary": false
+    },
+    {
+      "name": "rankingRoute.ts",
+      "path": "api/src/infrastructure/routes/rankingRoute.ts",
+      "type": "file",
+      "sha": "a89281969fec0efc35ae985442d0cfb12ddd71b7",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1109,
+      "is_binary": false
+    },
+    {
+      "name": "swaggerConfig.ts",
+      "path": "api/src/swaggerConfig.ts",
+      "type": "file",
+      "sha": "1755192e0d5a8a5b68ca5e333742ab6d0ea74214",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 516,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "type": "file",
+      "sha": "943c1b7e7fffc01a3d02ed1ab453a39af08f2514",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 286805,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "type": "file",
+      "sha": "e12d6760331f33a86f4bc488da1e8f93b70b3007",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1038,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.json",
+      "path": "tsconfig.json",
+      "type": "file",
+      "sha": "c49c7d2106526fd5be74d63d43660d51cb3ad166",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 285,
+      "is_binary": false
+    },
+    {
+      "name": "vercel.json",
+      "path": "vercel.json",
+      "type": "file",
+      "sha": "ca8e9ef8467f545793638c5bd39fdbcae94efc9d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 190,
+      "is_binary": false
+    },
+    {
+      "name": "vitest.config.ts",
+      "path": "vitest.config.ts",
+      "type": "file",
+      "sha": "c36ce3a80bbc9dad3e7ce168a346e077af0166e6",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 256,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2025-12-05T14:24:49.300620",
+  "method": "rest",
+  "total_items": 94,
+  "repository_metadata": {
+    "id": 778347092,
+    "full_name": "unb-mds/2024-1-EducaMinas-backend",
+    "description": "Repositório destinado ao backend do EducaMinas, uma plataforma que reúne dados da educação do estado de Minas Gerais.          https://educaminas.vercel.app/",
+    "created_at": "2024-03-27T14:53:41Z",
+    "updated_at": "2024-09-06T14:11:19Z",
+    "language": "Jupyter Notebook",
+    "size": 6282,
+    "stars": 4,
+    "forks": 5,
+    "open_issues": 0
+  }
+}

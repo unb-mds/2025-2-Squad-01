@@ -1,0 +1,1946 @@
+{
+  "owner": "unb-mds",
+  "repository": "2024-1-EducaMinas-frontend",
+  "branch": "main",
+  "sha": "186dd42260f265a920726c2a745f3318606f4ce9",
+  "tree": [
+    {
+      "name": ".editorconfig",
+      "path": ".editorconfig",
+      "type": "file",
+      "sha": "113c919405c860a4a95d5df1c5a499c7357accef",
+      "mode": "100644",
+      "extension": ".editorconfig",
+      "size": 250,
+      "is_binary": false
+    },
+    {
+      "name": ".env",
+      "path": ".env",
+      "type": "file",
+      "sha": "cb3cca4cbf8483849e60e50205552b6c29630593",
+      "mode": "100644",
+      "extension": ".env",
+      "size": 108,
+      "is_binary": false
+    },
+    {
+      "name": ".eslintrc.json",
+      "path": ".eslintrc.json",
+      "type": "file",
+      "sha": "dfa1330c59ef768b696de3abea8c782d65f1e7a8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 76,
+      "is_binary": false
+    },
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "897927bd9706405d80ddd5578da34a1cfc4f4542",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "sha": "e3ffa4af7d3da4d5960dd0b71460a09a2c5af08a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bug_report.md",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "file",
+      "sha": "dd84ea7824f11be1eeda22377549cbc1aec7f980",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 834,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-tasks.md",
+      "path": ".github/ISSUE_TEMPLATE/sprint-tasks.md",
+      "type": "file",
+      "sha": "0c9e96ae9792f244c0278769040123b8f3eec149",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 742,
+      "is_binary": false
+    },
+    {
+      "name": "pull_request_template.md",
+      "path": ".github/pull_request_template.md",
+      "type": "file",
+      "sha": "3cf75ee80c675742cf02cada24620bc21bc79a01",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 810,
+      "is_binary": false
+    },
+    {
+      "name": "templates",
+      "path": ".github/templates",
+      "type": "directory",
+      "sha": "470c1a33ade92b8b014e22e3344a48a8f35ce177",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "pullrequest.md",
+      "path": ".github/templates/pullrequest.md",
+      "type": "file",
+      "sha": "e02d90d8b50792c98e58c5f00387903a94240c39",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4151,
+      "is_binary": false
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "ea434a95c4e53f5a18ef6bf8e8270cf574c0be9c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "deploy-docs.yaml",
+      "path": ".github/workflows/deploy-docs.yaml",
+      "type": "file",
+      "sha": "a5d514939d9061fead78f860bb753a675c2142b2",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 816,
+      "is_binary": false
+    },
+    {
+      "name": "deploy-next.yaml",
+      "path": ".github/workflows/deploy-next.yaml",
+      "type": "file",
+      "sha": "01651d900c5354efb013c820e5d707c61958e129",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 733,
+      "is_binary": false
+    },
+    {
+      "name": "preview.yaml",
+      "path": ".github/workflows/preview.yaml",
+      "type": "file",
+      "sha": "fd1530e450019a14e30a3abb7055bac8fa8877f3",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 728,
+      "is_binary": false
+    },
+    {
+      "name": "quality.yaml",
+      "path": ".github/workflows/quality.yaml",
+      "type": "file",
+      "sha": "29375d2497f48365b4071806fa87fcf33a240dc5",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 710,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "7b60dcb71272001ae1473ba6031dddb52913a644",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 401,
+      "is_binary": false
+    },
+    {
+      "name": ".vscode",
+      "path": ".vscode",
+      "type": "directory",
+      "sha": "61fbdebe3b8bfdcbf24c84fb11af2ed6206654b8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "extensions.json",
+      "path": ".vscode/extensions.json",
+      "type": "file",
+      "sha": "1cac55a0e38d42804c69fa0ae085d1ec10b17864",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 127,
+      "is_binary": false
+    },
+    {
+      "name": "settings.json",
+      "path": ".vscode/settings.json",
+      "type": "file",
+      "sha": "5150bf46add91944aedd064fc88a562c9cfe81aa",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 370,
+      "is_binary": false
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "sha": "18c91471812cb6f4c4e8d0fc407f70c4612e1648",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5202,
+      "is_binary": false
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "sha": "7bf3dcf8c0cc0234b309e46f1777b0ded81bcb1f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4193,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "cab744be8795c94c54a987a3ed76d6a6784435c3",
+      "mode": "100644",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "1ff10bbcfa5f2c10a01f8b81a90ff193ec5b09c3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 9642,
+      "is_binary": false
+    },
+    {
+      "name": "SECURITY.md",
+      "path": "SECURITY.md",
+      "type": "file",
+      "sha": "5bd13890b931b6efe9125848e41793e9bf7a51d3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 184,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "bdff5dee428bb6b379db1fc20ea53b547446e86c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "docs",
+      "path": "docs/docs",
+      "type": "directory",
+      "sha": "6e7063b4e74de09374044a7abc51e5c063fc9ca5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about.md",
+      "path": "docs/docs/about.md",
+      "type": "file",
+      "sha": "6855c91e07ad1d6c4202e7e841a73d6af749f65d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3042,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "docs/docs/assets",
+      "type": "directory",
+      "sha": "9133e3154b5aad2aa4f5b1d390f61b9078b57d97",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about.png",
+      "path": "docs/docs/assets/about.png",
+      "type": "file",
+      "sha": "61e5a51c834ee1cf9f451b75b441396d769692fb",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 180996,
+      "is_binary": false
+    },
+    {
+      "name": "arq.png",
+      "path": "docs/docs/assets/arq.png",
+      "type": "file",
+      "sha": "e569b821f83e0d5092f1cc2f0da5a39489b2ba9b",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 90824,
+      "is_binary": false
+    },
+    {
+      "name": "home.png",
+      "path": "docs/docs/assets/home.png",
+      "type": "file",
+      "sha": "3602c87594ce78c073d985cd39b7f046fa2e0672",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 552488,
+      "is_binary": false
+    },
+    {
+      "name": "logo.png",
+      "path": "docs/docs/assets/logo.png",
+      "type": "file",
+      "sha": "7dc4cfe4400833de767902b02ac1b7244c08e4f4",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 60385,
+      "is_binary": false
+    },
+    {
+      "name": "search1.png",
+      "path": "docs/docs/assets/search1.png",
+      "type": "file",
+      "sha": "7bc767ca465ffb0845b9d7f22058772e59cc6d6e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 86393,
+      "is_binary": false
+    },
+    {
+      "name": "search2.png",
+      "path": "docs/docs/assets/search2.png",
+      "type": "file",
+      "sha": "60774cedb0ce5d121fdd30e50f6f8268b38ed37e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 61963,
+      "is_binary": false
+    },
+    {
+      "name": "contributing-backend.md",
+      "path": "docs/docs/contributing-backend.md",
+      "type": "file",
+      "sha": "db44fac8b222d675c10381939cfd3542a36d5d39",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4726,
+      "is_binary": false
+    },
+    {
+      "name": "contributing-frontend.md",
+      "path": "docs/docs/contributing-frontend.md",
+      "type": "file",
+      "sha": "c4bab3b3eba18c76e902c67c3d0b58f95051b6d1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4142,
+      "is_binary": false
+    },
+    {
+      "name": "environment.md",
+      "path": "docs/docs/environment.md",
+      "type": "file",
+      "sha": "0a5e925dbea66ee914daff5cffec80897fe9860a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2796,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/docs/index.md",
+      "type": "file",
+      "sha": "cea39668dab2d37e3b1b80331ef215a24582c9c5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3147,
+      "is_binary": false
+    },
+    {
+      "name": "project",
+      "path": "docs/docs/project",
+      "type": "directory",
+      "sha": "af962259bba0370023881423ec137ee24aa9f9e9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "arquitetura.md",
+      "path": "docs/docs/project/arquitetura.md",
+      "type": "file",
+      "sha": "a32ded5edacab85e2985ff29c1f3251414d6122e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 9001,
+      "is_binary": false
+    },
+    {
+      "name": "eap.md",
+      "path": "docs/docs/project/eap.md",
+      "type": "file",
+      "sha": "c12bec773e9f6fcc698da8ee4049c5687d476395",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 671,
+      "is_binary": false
+    },
+    {
+      "name": "personas.md",
+      "path": "docs/docs/project/personas.md",
+      "type": "file",
+      "sha": "eda690b9ad036aa9ff3337307e48bede05bc7931",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3918,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo.md",
+      "path": "docs/docs/project/prototipo.md",
+      "type": "file",
+      "sha": "2594f45cdc2044407cd94c6ec34b5ef3511391e1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1231,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.md",
+      "path": "docs/docs/project/requirements.md",
+      "type": "file",
+      "sha": "fac48c1060c3969d526eb1abf2e822124d7005b0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5027,
+      "is_binary": false
+    },
+    {
+      "name": "servicos.md",
+      "path": "docs/docs/project/servicos.md",
+      "type": "file",
+      "sha": "ab79cfa94f20e468c3698002ab29434c556cee73",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6046,
+      "is_binary": false
+    },
+    {
+      "name": "storymap.md",
+      "path": "docs/docs/project/storymap.md",
+      "type": "file",
+      "sha": "e91f9e5945242edc3ad6af9265fab32b31418ccd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 748,
+      "is_binary": false
+    },
+    {
+      "name": "sprints",
+      "path": "docs/docs/sprints",
+      "type": "directory",
+      "sha": "c4d3736e5103643e36491a15022cb83c432b452c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "sprint-0.md",
+      "path": "docs/docs/sprints/sprint-0.md",
+      "type": "file",
+      "sha": "ed82e0f4b9aec09cf221c51e09946ed9acebf15c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1483,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-1.md",
+      "path": "docs/docs/sprints/sprint-1.md",
+      "type": "file",
+      "sha": "d35d7b48d51d761be935e7725de7d529568df94c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1287,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-10.md",
+      "path": "docs/docs/sprints/sprint-10.md",
+      "type": "file",
+      "sha": "6a901f0bbce44f67bda3262d9ba386838e52a567",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2128,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-11.md",
+      "path": "docs/docs/sprints/sprint-11.md",
+      "type": "file",
+      "sha": "b722fb1e3b45f1c2637966eb36378939e35065c6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2888,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-12.md",
+      "path": "docs/docs/sprints/sprint-12.md",
+      "type": "file",
+      "sha": "e9e7cb9596327bd65ca68adea1a92a80e8de4bc6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1442,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-13.md",
+      "path": "docs/docs/sprints/sprint-13.md",
+      "type": "file",
+      "sha": "c12eb85e562813e8460f3ff63fdff4128a24424c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1941,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-14.md",
+      "path": "docs/docs/sprints/sprint-14.md",
+      "type": "file",
+      "sha": "d9fa5426481e404be1c5b8e8b7b9f7d064b4f0cc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2650,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-15.md",
+      "path": "docs/docs/sprints/sprint-15.md",
+      "type": "file",
+      "sha": "b7f6791499a060af7b654ca9bb62e9572b467e11",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1346,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-2.md",
+      "path": "docs/docs/sprints/sprint-2.md",
+      "type": "file",
+      "sha": "f3af7c19f438089fb5d64456b16f600c9974c29f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1853,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-3.md",
+      "path": "docs/docs/sprints/sprint-3.md",
+      "type": "file",
+      "sha": "27fb1d212185048bc4c33ed9ccb5caa2a9ccedfa",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2519,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-4.md",
+      "path": "docs/docs/sprints/sprint-4.md",
+      "type": "file",
+      "sha": "aab40ac689b5f1ecae2f075fe94a5b9768227f59",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1858,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-5.md",
+      "path": "docs/docs/sprints/sprint-5.md",
+      "type": "file",
+      "sha": "1decf67da2739f6cc2d1b7f0e39fd96c0e3c739b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1242,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-6.md",
+      "path": "docs/docs/sprints/sprint-6.md",
+      "type": "file",
+      "sha": "4fd776576e364cd80a4c627013fabb45564a8390",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1303,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-7.md",
+      "path": "docs/docs/sprints/sprint-7.md",
+      "type": "file",
+      "sha": "5018e0e6094ebb80480ea026a32401fe11e3fe77",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1482,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-8.md",
+      "path": "docs/docs/sprints/sprint-8.md",
+      "type": "file",
+      "sha": "d2cd18c2fdf2eeef0541ae797259adc7221f387b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1668,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-9.md",
+      "path": "docs/docs/sprints/sprint-9.md",
+      "type": "file",
+      "sha": "8d9760f4dedd259ec35797caf0346d4135b56ff6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1883,
+      "is_binary": false
+    },
+    {
+      "name": "mkdocs.yml",
+      "path": "docs/mkdocs.yml",
+      "type": "file",
+      "sha": "e7ce6f9711f26d6390e5c285cf6c5bdcc4672b4d",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1648,
+      "is_binary": false
+    },
+    {
+      "name": "site",
+      "path": "docs/site",
+      "type": "directory",
+      "sha": "1e566f9f76696435da9b59a2afa34f8316df13f9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "404.html",
+      "path": "docs/site/404.html",
+      "type": "file",
+      "sha": "acb6cb86a651fdc2041d898669b02a34405313e9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 20425,
+      "is_binary": false
+    },
+    {
+      "name": "about",
+      "path": "docs/site/about",
+      "type": "directory",
+      "sha": "09cf4ebb6bbfd86da97a3f8c2b955db36652f9f3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/about/index.html",
+      "type": "file",
+      "sha": "c89c44f829393c6b86c7f38316c386736b2721b2",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 22727,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "docs/site/assets",
+      "type": "directory",
+      "sha": "ce65f598578b6cdd13bb5f15236aba76498791de",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "images",
+      "path": "docs/site/assets/images",
+      "type": "directory",
+      "sha": "84ddac582579655e778df8c3d98a9e557e6d3f8a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "favicon.png",
+      "path": "docs/site/assets/images/favicon.png",
+      "type": "file",
+      "sha": "1cf13b9f9d978896599290a74f77d5dbe7d1655c",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1870,
+      "is_binary": false
+    },
+    {
+      "name": "javascripts",
+      "path": "docs/site/assets/javascripts",
+      "type": "directory",
+      "sha": "60ca046f8437994307aa5aa79be3eb27935cfb63",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bundle.bd41221c.min.js",
+      "path": "docs/site/assets/javascripts/bundle.bd41221c.min.js",
+      "type": "file",
+      "sha": "70bcbf19a056a6c20e6e0ed186a70c2245b74e71",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 103417,
+      "is_binary": false
+    },
+    {
+      "name": "bundle.bd41221c.min.js.map",
+      "path": "docs/site/assets/javascripts/bundle.bd41221c.min.js.map",
+      "type": "file",
+      "sha": "1663daba23f9e4abdfcaaa842ce4a5acf5488fe2",
+      "mode": "100644",
+      "extension": ".map",
+      "size": 933353,
+      "is_binary": false
+    },
+    {
+      "name": "lunr",
+      "path": "docs/site/assets/javascripts/lunr",
+      "type": "directory",
+      "sha": "3c0796dbd64c7013298c7f65b7e5844b13c79446",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "min",
+      "path": "docs/site/assets/javascripts/lunr/min",
+      "type": "directory",
+      "sha": "707fbea9e8f05dac5949127cda72e63550da8d8c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "lunr.ar.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ar.min.js",
+      "type": "file",
+      "sha": "9b06c26c1fc331ff8f95cfd719f40812a97f75cd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 17074,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.da.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.da.min.js",
+      "type": "file",
+      "sha": "b9d8509865dd5eb9f23b3fa7ad77e0e6fc888b6d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4654,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.de.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.de.min.js",
+      "type": "file",
+      "sha": "f3b5c108c9eebfe8a207e9fad1dc3ab571aa0d5c",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 6119,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.du.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.du.min.js",
+      "type": "file",
+      "sha": "49a0f3f0ac1786344ef7edbb969356f1b2ee8d48",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 6208,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.el.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.el.min.js",
+      "type": "file",
+      "sha": "ace017bd650d2f66a4929d431e0d133a45f2d5a7",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 14950,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.es.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.es.min.js",
+      "type": "file",
+      "sha": "2989d34265c9c7953c52b26d90cd87a24e9b927b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 11499,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.fi.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.fi.min.js",
+      "type": "file",
+      "sha": "29f5dfcea8f3dbc6d2331345b68156607e233eab",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 9342,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.fr.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.fr.min.js",
+      "type": "file",
+      "sha": "68cd0094ae03737ba72923d2ea1a3919a57b4f0b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10669,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.he.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.he.min.js",
+      "type": "file",
+      "sha": "b863d3eae0a33c7ce6590037a89cbb57255290b0",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 6882,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.hi.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.hi.min.js",
+      "type": "file",
+      "sha": "7dbc41402cf33eef80e038eeaaa4c89b9ec53ce8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3383,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.hu.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.hu.min.js",
+      "type": "file",
+      "sha": "ed9d909f734464b707bc804eba5ef220618ed82a",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 9437,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.hy.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.hy.min.js",
+      "type": "file",
+      "sha": "b37f79298555285a4ae1b01d5074ca37ef9997bd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1264,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.it.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.it.min.js",
+      "type": "file",
+      "sha": "344b6a3c0cf8e9d936ace3129b99158631ecdf6b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 11232,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.ja.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ja.min.js",
+      "type": "file",
+      "sha": "5f254ebe91fa9ef0e78132f4c9e4142d845ed9c9",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2313,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.jp.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.jp.min.js",
+      "type": "file",
+      "sha": "c055ebaf37a904fafc2815f4f8d0e810db0b0984",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 36,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.kn.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.kn.min.js",
+      "type": "file",
+      "sha": "1cef9befdac27c3d5ed23bf1e40b0701c8e0f729",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3494,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.ko.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ko.min.js",
+      "type": "file",
+      "sha": "eaf9dabf71030b544140a5a6e11471a0d46e42ae",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 7972,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.multi.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.multi.min.js",
+      "type": "file",
+      "sha": "7debad0961d78f02d916fdb7de8ab4194db917b2",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 817,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.nl.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.nl.min.js",
+      "type": "file",
+      "sha": "c4a253594802c1066c646bfd2393f3c36a875deb",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 6026,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.no.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.no.min.js",
+      "type": "file",
+      "sha": "92bc7e4e89446adda1cbf816e949896f37b713fb",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4754,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.pt.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.pt.min.js",
+      "type": "file",
+      "sha": "6c16996d65099c5de1f0ce3fd8bc9c92c5f2bcbb",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10171,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.ro.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ro.min.js",
+      "type": "file",
+      "sha": "727714018182a6cb94ba2bc2a4b2befb7a5770a8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10958,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.ru.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ru.min.js",
+      "type": "file",
+      "sha": "186cc485c23848c65769fdef7373d00b30448cbf",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10331,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.sa.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.sa.min.js",
+      "type": "file",
+      "sha": "50ee564205da301761c61a36820f187bf343ad71",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4901,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.stemmer.support.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.stemmer.support.min.js",
+      "type": "file",
+      "sha": "abd4475bb103339959c3319e5390b29164d526a3",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3647,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.sv.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.sv.min.js",
+      "type": "file",
+      "sha": "3e5eb6400026110fb17e1a6b932276363275997d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4523,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.ta.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.ta.min.js",
+      "type": "file",
+      "sha": "a644bed2280922ebbd20c736e20efb436c8a144b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2406,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.te.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.te.min.js",
+      "type": "file",
+      "sha": "9fa7a93b9913aea766276903781c899cf485afe9",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2330,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.th.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.th.min.js",
+      "type": "file",
+      "sha": "dee3aac6e5cb6e65fb411e6e64f31d1289d6798c",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1031,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.tr.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.tr.min.js",
+      "type": "file",
+      "sha": "563f6ec1f5259556445d6d725394d4651ab1925f",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 15009,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.vi.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.vi.min.js",
+      "type": "file",
+      "sha": "22aed28c49b895da20256b02a62dd0bcba9cc6a5",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 784,
+      "is_binary": false
+    },
+    {
+      "name": "lunr.zh.min.js",
+      "path": "docs/site/assets/javascripts/lunr/min/lunr.zh.min.js",
+      "type": "file",
+      "sha": "fda66e9c5725876e3e6449d7cd3cac78c94f81bb",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2158,
+      "is_binary": false
+    },
+    {
+      "name": "tinyseg.js",
+      "path": "docs/site/assets/javascripts/lunr/tinyseg.js",
+      "type": "file",
+      "sha": "167fa6dd69e074b43de3aa48005d0b748b8e83e7",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 22878,
+      "is_binary": false
+    },
+    {
+      "name": "wordcut.js",
+      "path": "docs/site/assets/javascripts/lunr/wordcut.js",
+      "type": "file",
+      "sha": "0d898c9ed144b1e677355833c2d43e6e8a665a27",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 677463,
+      "is_binary": false
+    },
+    {
+      "name": "workers",
+      "path": "docs/site/assets/javascripts/workers",
+      "type": "directory",
+      "sha": "6dc5b9c8b5ba31f7a9b0299b17dfb980d124443c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "search.b8dbb3d2.min.js",
+      "path": "docs/site/assets/javascripts/workers/search.b8dbb3d2.min.js",
+      "type": "file",
+      "sha": "c8a1ec8d8c60e839334c666a455bba99378cd1f5",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 39531,
+      "is_binary": false
+    },
+    {
+      "name": "search.b8dbb3d2.min.js.map",
+      "path": "docs/site/assets/javascripts/workers/search.b8dbb3d2.min.js.map",
+      "type": "file",
+      "sha": "7ef0846c061beb8d630511e51550d057bc68d765",
+      "mode": "100644",
+      "extension": ".map",
+      "size": 215802,
+      "is_binary": false
+    },
+    {
+      "name": "logo.png",
+      "path": "docs/site/assets/logo.png",
+      "type": "file",
+      "sha": "7dc4cfe4400833de767902b02ac1b7244c08e4f4",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 60385,
+      "is_binary": false
+    },
+    {
+      "name": "storymap.jpg",
+      "path": "docs/site/assets/storymap.jpg",
+      "type": "file",
+      "sha": "9256bf8e4525e9f8c220783fad484103bb504b34",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 1052986,
+      "is_binary": false
+    },
+    {
+      "name": "stylesheets",
+      "path": "docs/site/assets/stylesheets",
+      "type": "directory",
+      "sha": "318a9caeed06c5468a234f70fa33bbb63cec7a6f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "main.bcfcd587.min.css",
+      "path": "docs/site/assets/stylesheets/main.bcfcd587.min.css",
+      "type": "file",
+      "sha": "8102c8c08857048e160e603312b42d87423c644b",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 128974,
+      "is_binary": false
+    },
+    {
+      "name": "main.bcfcd587.min.css.map",
+      "path": "docs/site/assets/stylesheets/main.bcfcd587.min.css.map",
+      "type": "file",
+      "sha": "46829fa5acc8c1b5f08b819812393be9c260086a",
+      "mode": "100644",
+      "extension": ".map",
+      "size": 44820,
+      "is_binary": false
+    },
+    {
+      "name": "palette.06af60db.min.css",
+      "path": "docs/site/assets/stylesheets/palette.06af60db.min.css",
+      "type": "file",
+      "sha": "a640d38abb843bcf5a69091b6df63bec37d28aed",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 12522,
+      "is_binary": false
+    },
+    {
+      "name": "palette.06af60db.min.css.map",
+      "path": "docs/site/assets/stylesheets/palette.06af60db.min.css.map",
+      "type": "file",
+      "sha": "efb568c52a961a0797705f034dafa9224b5853c2",
+      "mode": "100644",
+      "extension": ".map",
+      "size": 3647,
+      "is_binary": false
+    },
+    {
+      "name": "contributing",
+      "path": "docs/site/contributing",
+      "type": "directory",
+      "sha": "2169db95e055db74acbfad87238fa87f7e02f002",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/contributing/index.html",
+      "type": "file",
+      "sha": "3be3439ec76adf11e32f13f18a4c9dd6d9ce8a28",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 22932,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/index.html",
+      "type": "file",
+      "sha": "b096ecbc0ee830b9afc5dbcd3c7cb3c8ec9e5e9a",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24052,
+      "is_binary": false
+    },
+    {
+      "name": "project",
+      "path": "docs/site/project",
+      "type": "directory",
+      "sha": "9ee0b6bd449a5b3eb7305b1bc858a0d146a265a5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "personaFernanda",
+      "path": "docs/site/project/personaFernanda",
+      "type": "directory",
+      "sha": "1c2f6187445d76d5edb18d6c4d4a4d35fc25044f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/project/personaFernanda/index.html",
+      "type": "file",
+      "sha": "b01da64889a92e1ca8c27795c99fcebd9d3b7bf7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24718,
+      "is_binary": false
+    },
+    {
+      "name": "personaLucas",
+      "path": "docs/site/project/personaLucas",
+      "type": "directory",
+      "sha": "24936162b0f91f01fda8c2304e1c3f65974bd234",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/project/personaLucas/index.html",
+      "type": "file",
+      "sha": "9f4f788633005bdf74193bb91b27af25798900ad",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24785,
+      "is_binary": false
+    },
+    {
+      "name": "requirements",
+      "path": "docs/site/project/requirements",
+      "type": "directory",
+      "sha": "e94bba4fb292fef9558444b05f0bf79883e139eb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/project/requirements/index.html",
+      "type": "file",
+      "sha": "c60aaddbe7627239428d98d623285636d68fd633",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 25628,
+      "is_binary": false
+    },
+    {
+      "name": "storymap",
+      "path": "docs/site/project/storymap",
+      "type": "directory",
+      "sha": "28a0fd7f44b7d0ed1ea325858e7f0a5aa5ee9669",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/project/storymap/index.html",
+      "type": "file",
+      "sha": "55c5a92867d0a3d696107911f62543e821a4f33e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 21496,
+      "is_binary": false
+    },
+    {
+      "name": "search",
+      "path": "docs/site/search",
+      "type": "directory",
+      "sha": "ab47552b490d9c9b0ffb670ff8df09698f9de326",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "search_index.json",
+      "path": "docs/site/search/search_index.json",
+      "type": "file",
+      "sha": "d289280f91475b64c3621be69f57ae4541395f78",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 18591,
+      "is_binary": false
+    },
+    {
+      "name": "sitemap.xml",
+      "path": "docs/site/sitemap.xml",
+      "type": "file",
+      "sha": "0f8724efd9fecfd8e03fbb4401d666e764ce9cf5",
+      "mode": "100644",
+      "extension": ".xml",
+      "size": 109,
+      "is_binary": false
+    },
+    {
+      "name": "sitemap.xml.gz",
+      "path": "docs/site/sitemap.xml.gz",
+      "type": "file",
+      "sha": "142414d9899ca0986664f4f2a360e789b7656b3a",
+      "mode": "100644",
+      "extension": ".gz",
+      "size": 127,
+      "is_binary": false
+    },
+    {
+      "name": "sprints",
+      "path": "docs/site/sprints",
+      "type": "directory",
+      "sha": "e7c983e0a632ece23b4b757220924d6075f3ee1d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "sprint-0",
+      "path": "docs/site/sprints/sprint-0",
+      "type": "directory",
+      "sha": "6d0db03d63633670ccf4c062affedde7f97fa9cb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/sprints/sprint-0/index.html",
+      "type": "file",
+      "sha": "905c0e8fe620f236094487cfd4b8cc4972ae92c8",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24450,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-1",
+      "path": "docs/site/sprints/sprint-1",
+      "type": "directory",
+      "sha": "62a6022c6e26994279989bb4dba05406434fd1d5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/sprints/sprint-1/index.html",
+      "type": "file",
+      "sha": "983ec20c55737c8c69f0404322b43bb8b77a6196",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24090,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-2",
+      "path": "docs/site/sprints/sprint-2",
+      "type": "directory",
+      "sha": "12c0e9ecdff6847b466226c4af91e36141e0183f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/sprints/sprint-2/index.html",
+      "type": "file",
+      "sha": "c4f18dbbf2fc530c531ed169c19a719aaee88a66",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 24674,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-3",
+      "path": "docs/site/sprints/sprint-3",
+      "type": "directory",
+      "sha": "fff5975c2906e4a584a60e1b4ef502f92f07fb49",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/site/sprints/sprint-3/index.html",
+      "type": "file",
+      "sha": "b5044d26a05f267c72883427b7055dca2cf7bf0c",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 21133,
+      "is_binary": false
+    },
+    {
+      "name": "next.config.mjs",
+      "path": "next.config.mjs",
+      "type": "file",
+      "sha": "6d7e917ebef4bfd8fe548f44a53d7a601a4145bb",
+      "mode": "100644",
+      "extension": ".mjs",
+      "size": 158,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "type": "file",
+      "sha": "63e58904f5cce65d44ab4ce51f230aed5419bee5",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 293960,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "type": "file",
+      "sha": "67661851f1b8bc64a22b894272ffeff623a75041",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1141,
+      "is_binary": false
+    },
+    {
+      "name": "postcss.config.js",
+      "path": "postcss.config.js",
+      "type": "file",
+      "sha": "12a703d900da8159c30e75acbd2c4d87ae177f62",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 83,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "public",
+      "type": "directory",
+      "sha": "c3a897b1c2b13f43b0197504d9bd4701052c39e1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "home.png",
+      "path": "public/home.png",
+      "type": "file",
+      "sha": "0de9e64e04d0bdcf3749ea63e52078ad01d46f3d",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 462061,
+      "is_binary": false
+    },
+    {
+      "name": "logo.png",
+      "path": "public/logo.png",
+      "type": "file",
+      "sha": "7dc4cfe4400833de767902b02ac1b7244c08e4f4",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 60385,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "src",
+      "type": "directory",
+      "sha": "11f1d4a14029df635b37ae5de56ad5e5b17ea007",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "app",
+      "path": "src/app",
+      "type": "directory",
+      "sha": "1db8f6c765dd18a740279e10cd70d5c0138330b7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about",
+      "path": "src/app/about",
+      "type": "directory",
+      "sha": "8eca509382dca1f58b3cd3009d13b7f4622913e3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "page.spec.tsx",
+      "path": "src/app/about/page.spec.tsx",
+      "type": "file",
+      "sha": "2f31041c6089725a5f7928a21242e08dda54b42b",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 267,
+      "is_binary": false
+    },
+    {
+      "name": "page.tsx",
+      "path": "src/app/about/page.tsx",
+      "type": "file",
+      "sha": "77734401e9680acdc361d43cf203084fda4b54c8",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 9092,
+      "is_binary": false
+    },
+    {
+      "name": "home",
+      "path": "src/app/home",
+      "type": "directory",
+      "sha": "7db2d3df306bf30922893aa25717cdb92e34ba5a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "page.spec.tsx",
+      "path": "src/app/home/page.spec.tsx",
+      "type": "file",
+      "sha": "3137c613db4ba7c8d1a650c0ede417830ad0b5a9",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1059,
+      "is_binary": false
+    },
+    {
+      "name": "page.tsx",
+      "path": "src/app/home/page.tsx",
+      "type": "file",
+      "sha": "d29463b5819401b9a6d80b00eb0a69d978914104",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1628,
+      "is_binary": false
+    },
+    {
+      "name": "icon.png",
+      "path": "src/app/icon.png",
+      "type": "file",
+      "sha": "7dc4cfe4400833de767902b02ac1b7244c08e4f4",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 60385,
+      "is_binary": false
+    },
+    {
+      "name": "layout.tsx",
+      "path": "src/app/layout.tsx",
+      "type": "file",
+      "sha": "6a445eecb7214f379deb586c24910de2619151a7",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 823,
+      "is_binary": false
+    },
+    {
+      "name": "page.tsx",
+      "path": "src/app/page.tsx",
+      "type": "file",
+      "sha": "5f0ca2e34480ec3b06f16c156fb84abd4e406390",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 101,
+      "is_binary": false
+    },
+    {
+      "name": "search",
+      "path": "src/app/search",
+      "type": "directory",
+      "sha": "8c34e454a67a800ab602c3773eb401e22403f9f2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "page.spec.tsx",
+      "path": "src/app/search/page.spec.tsx",
+      "type": "file",
+      "sha": "3b511da8f52a1e08a3a241a88eb31a34ac3da108",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2408,
+      "is_binary": false
+    },
+    {
+      "name": "page.tsx",
+      "path": "src/app/search/page.tsx",
+      "type": "file",
+      "sha": "628325d4fc8c6d84fc0908e3b601ed21d7c3bb7d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 17746,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "src/components",
+      "type": "directory",
+      "sha": "1d7ca18408a3620a62464eca6e5770a35b75171c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "FilterSearch.spec.tsx",
+      "path": "src/components/FilterSearch.spec.tsx",
+      "type": "file",
+      "sha": "89d6c784dcb9a68f370846bb794436a20ff8f30e",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2536,
+      "is_binary": false
+    },
+    {
+      "name": "FilterSearch.tsx",
+      "path": "src/components/FilterSearch.tsx",
+      "type": "file",
+      "sha": "470ac88544264050bc49a566f86b48d3f2bfd211",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3861,
+      "is_binary": false
+    },
+    {
+      "name": "Header.spec.tsx",
+      "path": "src/components/Header.spec.tsx",
+      "type": "file",
+      "sha": "fcfa1dff3a3509047e6494cf6b84f2d91613bd78",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2102,
+      "is_binary": false
+    },
+    {
+      "name": "Header.tsx",
+      "path": "src/components/Header.tsx",
+      "type": "file",
+      "sha": "802e1fe9fea75801c13649f68f803f2bca04df9f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3420,
+      "is_binary": false
+    },
+    {
+      "name": "Popup.spec.tsx",
+      "path": "src/components/Popup.spec.tsx",
+      "type": "file",
+      "sha": "a7ce05e81f2f7a9d363afd297fc6cb18117d9f49",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 978,
+      "is_binary": false
+    },
+    {
+      "name": "Popup.tsx",
+      "path": "src/components/Popup.tsx",
+      "type": "file",
+      "sha": "d8c2e99ab0ed98f33ba4e40b1a91c936ec74c1cd",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1350,
+      "is_binary": false
+    },
+    {
+      "name": "Ranking.spec.tsx",
+      "path": "src/components/Ranking.spec.tsx",
+      "type": "file",
+      "sha": "6aba90b4ee369089affb0b1f9b3d77d54f625615",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4785,
+      "is_binary": false
+    },
+    {
+      "name": "Ranking.tsx",
+      "path": "src/components/Ranking.tsx",
+      "type": "file",
+      "sha": "4f899b69a810d6936f1b4c73abe61ac4dddf1b73",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3233,
+      "is_binary": false
+    },
+    {
+      "name": "Subtopics.spec.tsx",
+      "path": "src/components/Subtopics.spec.tsx",
+      "type": "file",
+      "sha": "10bd525d3ae15b0eca97ea75e6a143a282af919b",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2239,
+      "is_binary": false
+    },
+    {
+      "name": "Subtopics.tsx",
+      "path": "src/components/Subtopics.tsx",
+      "type": "file",
+      "sha": "b3286adfc1aa22d9ff6ebc4aca64d3ca8917bf37",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1032,
+      "is_binary": false
+    },
+    {
+      "name": "Topics.spec.tsx",
+      "path": "src/components/Topics.spec.tsx",
+      "type": "file",
+      "sha": "a5ee1526296d477c2331480169b970813088a4bc",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1250,
+      "is_binary": false
+    },
+    {
+      "name": "Topics.tsx",
+      "path": "src/components/Topics.tsx",
+      "type": "file",
+      "sha": "baba75b532a2da5cdbeae20c76fe5b3d2afb7ed3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 399,
+      "is_binary": false
+    },
+    {
+      "name": "chart",
+      "path": "src/components/chart",
+      "type": "directory",
+      "sha": "8fdf86239b94b5038a0fd0bc0b100f115887eca1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "GroupedBar.spec.tsx",
+      "path": "src/components/chart/GroupedBar.spec.tsx",
+      "type": "file",
+      "sha": "a134a1478f5f9baecc158a152e0fa87ddafef540",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 900,
+      "is_binary": false
+    },
+    {
+      "name": "GroupedBar.tsx",
+      "path": "src/components/chart/GroupedBar.tsx",
+      "type": "file",
+      "sha": "d26ce7a9d935b1473acc354d51da2a4af1d9843d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2574,
+      "is_binary": false
+    },
+    {
+      "name": "StackedColumn.spec.tsx",
+      "path": "src/components/chart/StackedColumn.spec.tsx",
+      "type": "file",
+      "sha": "2a02b15a90965fd1c090e3d7a9f3536478974ba2",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 887,
+      "is_binary": false
+    },
+    {
+      "name": "StackedColumn.tsx",
+      "path": "src/components/chart/StackedColumn.tsx",
+      "type": "file",
+      "sha": "e434a0fdc567051e72b88a2489ba2096f8abf577",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2116,
+      "is_binary": false
+    },
+    {
+      "name": "data",
+      "path": "src/data",
+      "type": "directory",
+      "sha": "3a4c48a7bb7967d08286656d52f5fafce8b9f63e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "filtersData.ts",
+      "path": "src/data/filtersData.ts",
+      "type": "file",
+      "sha": "e96615817845d040c5c66b0f9e5fc73f452bf1b7",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 42486,
+      "is_binary": false
+    },
+    {
+      "name": "lib",
+      "path": "src/lib",
+      "type": "directory",
+      "sha": "d681a8450a83f48e33bab1c82c049f26873d91a0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "axios.ts",
+      "path": "src/lib/axios.ts",
+      "type": "file",
+      "sha": "b3b29e8e4abc9c5a9bae48a7c7797c5f7a963359",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 578,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "src/services",
+      "type": "directory",
+      "sha": "589bb5b66d0eeae5acc946efb0b2cd3de8d30862",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "EnrollmentService.ts",
+      "path": "src/services/EnrollmentService.ts",
+      "type": "file",
+      "sha": "069cdee278cff0efc3c483e0d2320758c15b24b1",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 737,
+      "is_binary": false
+    },
+    {
+      "name": "IndicatorsService.ts",
+      "path": "src/services/IndicatorsService.ts",
+      "type": "file",
+      "sha": "2be68426e823367534860fadd5efd1c948469429",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 784,
+      "is_binary": false
+    },
+    {
+      "name": "RankingService.ts",
+      "path": "src/services/RankingService.ts",
+      "type": "file",
+      "sha": "c699b7a8300e1a3ef204ecd7ba5ee6a41eb91d41",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 717,
+      "is_binary": false
+    },
+    {
+      "name": "styles",
+      "path": "src/styles",
+      "type": "directory",
+      "sha": "3caa757cd0c62b23230338b1b6bbd7b41d861844",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "globals.css",
+      "path": "src/styles/globals.css",
+      "type": "file",
+      "sha": "bd6213e1dfe6b0a79ce7d8b37d0d2dc70f0250bb",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 58,
+      "is_binary": false
+    },
+    {
+      "name": "types",
+      "path": "src/types",
+      "type": "directory",
+      "sha": "808590874d3ae51f71b268a901b7f7afcf2a71a8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Enrollment.ts",
+      "path": "src/types/Enrollment.ts",
+      "type": "file",
+      "sha": "865ff4d06a6d8ee6f16aa4917e545f1f762a0b91",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 102,
+      "is_binary": false
+    },
+    {
+      "name": "Indicator.ts",
+      "path": "src/types/Indicator.ts",
+      "type": "file",
+      "sha": "76404c9cea71e9c87943dede98fa2edf2c330932",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 101,
+      "is_binary": false
+    },
+    {
+      "name": "Ranking.ts",
+      "path": "src/types/Ranking.ts",
+      "type": "file",
+      "sha": "9fe57f11ded42a3b3bb30d0039501cad729e48e8",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 66,
+      "is_binary": false
+    },
+    {
+      "name": "tailwind.config.ts",
+      "path": "tailwind.config.ts",
+      "type": "file",
+      "sha": "2710465318002d1985489a423679530181ec1f58",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 575,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.json",
+      "path": "tsconfig.json",
+      "type": "file",
+      "sha": "7b2858930495fc4a76d7a51d958bacf2d64eb81f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 578,
+      "is_binary": false
+    },
+    {
+      "name": "vitest.config.ts",
+      "path": "vitest.config.ts",
+      "type": "file",
+      "sha": "79b71598a82b31da456ac35157208e07b4b85b2f",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 500,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2025-12-05T14:24:46.714018",
+  "method": "rest",
+  "total_items": 201,
+  "repository_metadata": {
+    "id": 777218716,
+    "full_name": "unb-mds/2024-1-EducaMinas-frontend",
+    "description": "Repositório destinado ao frontend do EducaMinas, uma plataforma que reúne dados da educação do estado de Minas Gerais.      https://educaminas.vercel.app/ ",
+    "created_at": "2024-03-25T12:43:43Z",
+    "updated_at": "2025-03-28T10:03:45Z",
+    "language": "TypeScript",
+    "size": 4408,
+    "stars": 6,
+    "forks": 5,
+    "open_issues": 0
+  }
+}

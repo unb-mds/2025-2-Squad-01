@@ -1,0 +1,1460 @@
+{
+  "owner": "unb-mds",
+  "repository": "MDS-MonitoraBSB",
+  "branch": "main",
+  "sha": "2569dc6614210c6edf898d6066f5d752f5431ca2",
+  "tree": [
+    {
+      "name": ".env",
+      "path": ".env",
+      "type": "file",
+      "sha": "39ef2412be12f056937554a18a5310366427ba22",
+      "mode": "100644",
+      "extension": ".env",
+      "size": 545,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "e1a75033f31030df80fe9c1328121c2b4e74fefb",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 3610,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "cab744be8795c94c54a987a3ed76d6a6784435c3",
+      "mode": "100644",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "0179af545254280c42482807bb21d2dd6fdd3a12",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5172,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "2f57d198950bd0535de50cdd875f8356fac89eea",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "d715f0eaa17c268529ebcecad9bf17ca1698b0f6",
+      "mode": "100644",
+      "extension": "",
+      "size": 628,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "backend/app",
+      "type": "directory",
+      "sha": "525a9c1f5539392e50b21a8af34c4926bf6d4777",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Serializers",
+      "path": "backend/app/Serializers",
+      "type": "directory",
+      "sha": "48c19f9fec071d8423b2181f3ddfb931827c2dfa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Email_Consumer.py",
+      "path": "backend/app/Serializers/Email_Consumer.py",
+      "type": "file",
+      "sha": "0760094ae2cea8822ed3740929dd9573d867868c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1028,
+      "is_binary": false
+    },
+    {
+      "name": "Email_Producer.py",
+      "path": "backend/app/Serializers/Email_Producer.py",
+      "type": "file",
+      "sha": "4c4665d4d5eea51425ba2fd1bf7d8b8fb55239a1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 630,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/Serializers/__init__.py",
+      "type": "file",
+      "sha": "00f5b52def14803acda37f896df4ac0d3ad25ccf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 85,
+      "is_binary": false
+    },
+    {
+      "name": "endereco_serializer.py",
+      "path": "backend/app/Serializers/endereco_serializer.py",
+      "type": "file",
+      "sha": "83bac651973efe8e6c6e0c05de4d9cba89c6871c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 319,
+      "is_binary": false
+    },
+    {
+      "name": "obra_serializer.py",
+      "path": "backend/app/Serializers/obra_serializer.py",
+      "type": "file",
+      "sha": "6112153c53340e3cd9896ae419a1d21b5e6100e1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 230,
+      "is_binary": false
+    },
+    {
+      "name": "usuario_serializer.py",
+      "path": "backend/app/Serializers/usuario_serializer.py",
+      "type": "file",
+      "sha": "1c332c86b11a13a84a6305b93f27435c8bfcc119",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 242,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/__init__.py",
+      "type": "file",
+      "sha": "616a478873d3839ad106c1a1ee1591b402a6bbf8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1979,
+      "is_binary": false
+    },
+    {
+      "name": "config.py",
+      "path": "backend/app/config.py",
+      "type": "file",
+      "sha": "9b71ad39b4902fd916ad073d3ee604f4cf867c1f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1104,
+      "is_binary": false
+    },
+    {
+      "name": "cron.py",
+      "path": "backend/app/cron.py",
+      "type": "file",
+      "sha": "ba90764a37e5c4582b238a8c76930ae6d4d87726",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 567,
+      "is_binary": false
+    },
+    {
+      "name": "db_models.py",
+      "path": "backend/app/db_models.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "models",
+      "path": "backend/app/models",
+      "type": "directory",
+      "sha": "a7d8235f2492f8744d63a780d7865b72775e1533",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/models/__init__.py",
+      "type": "file",
+      "sha": "9a20bc46de72055c7f9f66095fdd0150a14e5212",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 197,
+      "is_binary": false
+    },
+    {
+      "name": "endereco.py",
+      "path": "backend/app/models/endereco.py",
+      "type": "file",
+      "sha": "f4134c7356dcd3dde56eae12375fadd79447d143",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 969,
+      "is_binary": false
+    },
+    {
+      "name": "enums.py",
+      "path": "backend/app/models/enums.py",
+      "type": "file",
+      "sha": "d354ac59c95dccc23fd81a6e54e040426ec5b828",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 394,
+      "is_binary": false
+    },
+    {
+      "name": "obra.py",
+      "path": "backend/app/models/obra.py",
+      "type": "file",
+      "sha": "13a6285fed30e87d52411a00733ebc84a52c64d5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1546,
+      "is_binary": false
+    },
+    {
+      "name": "usuario.py",
+      "path": "backend/app/models/usuario.py",
+      "type": "file",
+      "sha": "4fb29ca24a935838f793c3f47fe375b157864503",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1084,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "backend/app/services",
+      "type": "directory",
+      "sha": "8c07cf32a60ab3a790f1030cc5e5aac5d23d811c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Email_Consumer.py",
+      "path": "backend/app/services/Email_Consumer.py",
+      "type": "file",
+      "sha": "0760094ae2cea8822ed3740929dd9573d867868c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1028,
+      "is_binary": false
+    },
+    {
+      "name": "Email_Producer.py",
+      "path": "backend/app/services/Email_Producer.py",
+      "type": "file",
+      "sha": "4c4665d4d5eea51425ba2fd1bf7d8b8fb55239a1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 630,
+      "is_binary": false
+    },
+    {
+      "name": "api_consumer.py",
+      "path": "backend/app/services/api_consumer.py",
+      "type": "file",
+      "sha": "6ad6c86bcd228c175f5373c396299e1ccf4d4d32",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6424,
+      "is_binary": false
+    },
+    {
+      "name": "consumer.py",
+      "path": "backend/app/services/consumer.py",
+      "type": "file",
+      "sha": "bfd2f1334f7b57092bc74568505faa6440cb9b49",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2175,
+      "is_binary": false
+    },
+    {
+      "name": "envia_email.py",
+      "path": "backend/app/services/envia_email.py",
+      "type": "file",
+      "sha": "b37ad6e56a9ff752f8411c8fb5d7cc556e2daf48",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 277,
+      "is_binary": false
+    },
+    {
+      "name": "obra_service.py",
+      "path": "backend/app/services/obra_service.py",
+      "type": "file",
+      "sha": "eac7fd7794cdc69a8064ee7b2249e1e70d4e18d3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 589,
+      "is_binary": false
+    },
+    {
+      "name": "produce.py",
+      "path": "backend/app/services/produce.py",
+      "type": "file",
+      "sha": "5c9df7064e6222681391b31ef958490eb8e09edf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 449,
+      "is_binary": false
+    },
+    {
+      "name": "task.py",
+      "path": "backend/app/services/task.py",
+      "type": "file",
+      "sha": "64f094d3eb4579cffe7e770ef4abf87421f80906",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 850,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/app/tests",
+      "type": "directory",
+      "sha": "507596b80abf6d28b4335e65068de21a14469c84",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/tests/__init__.py",
+      "type": "file",
+      "sha": "54ebada7c1a43a7400d76faf9c4c1f2745264ed5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 232,
+      "is_binary": false
+    },
+    {
+      "name": "backup.sql",
+      "path": "backend/app/tests/backup.sql",
+      "type": "file",
+      "sha": "3354153102f7e13685327d4918809de841228767",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 441702,
+      "is_binary": false
+    },
+    {
+      "name": "conftest.py",
+      "path": "backend/app/tests/conftest.py",
+      "type": "file",
+      "sha": "b51af1b2a2ca6c43dce985da303ad03ffceabaf3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1068,
+      "is_binary": false
+    },
+    {
+      "name": "test_email_task.py",
+      "path": "backend/app/tests/test_email_task.py",
+      "type": "file",
+      "sha": "415403442ea30471b1f7f2a991e5a0088ddc50b4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1248,
+      "is_binary": false
+    },
+    {
+      "name": "test_user.py",
+      "path": "backend/app/tests/test_user.py",
+      "type": "file",
+      "sha": "a8303bec423d068787d11e97fa4a44b5b9e1edd2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2270,
+      "is_binary": false
+    },
+    {
+      "name": "test_view.py",
+      "path": "backend/app/tests/test_view.py",
+      "type": "file",
+      "sha": "3955139978d7d5f707b574456e9f510140170dfe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2783,
+      "is_binary": false
+    },
+    {
+      "name": "views",
+      "path": "backend/app/views",
+      "type": "directory",
+      "sha": "5726b64939d4a4cbb45d86350fdfcf896b08ee4c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/views/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "geojson.py",
+      "path": "backend/app/views/geojson.py",
+      "type": "file",
+      "sha": "e4042f554eb5d1119229934d519b0f91f2530750",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 657,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/app/views/main.py",
+      "type": "file",
+      "sha": "9b644de3a71f543c9912053a0c2aeb4c572db29d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 153,
+      "is_binary": false
+    },
+    {
+      "name": "view_endereco.py",
+      "path": "backend/app/views/view_endereco.py",
+      "type": "file",
+      "sha": "6db5deb4c44bec37f30f8a06b76ed323bc6c17a7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2987,
+      "is_binary": false
+    },
+    {
+      "name": "view_filters.py",
+      "path": "backend/app/views/view_filters.py",
+      "type": "file",
+      "sha": "6573e9047e64731b22565c8433d240c43382e4f4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2491,
+      "is_binary": false
+    },
+    {
+      "name": "view_filtros.py",
+      "path": "backend/app/views/view_filtros.py",
+      "type": "file",
+      "sha": "d8077ea52fdcff46ce28a32dcdf79f2585c1635f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1952,
+      "is_binary": false
+    },
+    {
+      "name": "view_novaSenha.py",
+      "path": "backend/app/views/view_novaSenha.py",
+      "type": "file",
+      "sha": "b3ecd4b90850fc16945c3ec0a45a3502b3eac82f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2376,
+      "is_binary": false
+    },
+    {
+      "name": "view_obra.py",
+      "path": "backend/app/views/view_obra.py",
+      "type": "file",
+      "sha": "cd73d89a45a8b6fa78927a48c6fe6d49da94b526",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11420,
+      "is_binary": false
+    },
+    {
+      "name": "view_usuario.py",
+      "path": "backend/app/views/view_usuario.py",
+      "type": "file",
+      "sha": "220df092d13aeab700dd6793f90a925d01700ebb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3925,
+      "is_binary": false
+    },
+    {
+      "name": "celery_worker.py",
+      "path": "backend/celery_worker.py",
+      "type": "file",
+      "sha": "a6ea1f8011aecf3f75f553fa974e16a909d67108",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 289,
+      "is_binary": false
+    },
+    {
+      "name": "entrypoint.sh",
+      "path": "backend/entrypoint.sh",
+      "type": "file",
+      "sha": "894136fa565916afb68487a3e97434c0b943ae4f",
+      "mode": "100755",
+      "extension": ".sh",
+      "size": 201,
+      "is_binary": false
+    },
+    {
+      "name": "init-scripts",
+      "path": "backend/init-scripts",
+      "type": "directory",
+      "sha": "4380fc6287c0df9691c75114cd3a29e74e677a1c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "monitorabsb_backup.sql",
+      "path": "backend/init-scripts/monitorabsb_backup.sql",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "restore-backup.sh",
+      "path": "backend/init-scripts/restore-backup.sh",
+      "type": "file",
+      "sha": "0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "mode": "100644",
+      "extension": ".sh",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "migrations",
+      "path": "backend/migrations",
+      "type": "directory",
+      "sha": "2e7c61404e7b53d6b595c6663d42a5b09394ca9c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "versions",
+      "path": "backend/migrations/versions",
+      "type": "directory",
+      "sha": "df403d6f9f448ad07b8fa2dee8a22c117f911a08",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "790fb2b2347d_initial_migration.py",
+      "path": "backend/migrations/versions/790fb2b2347d_initial_migration.py",
+      "type": "file",
+      "sha": "d2b069b1553cc8a4242b43aa7ebcf9d822ea7635",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2941,
+      "is_binary": false
+    },
+    {
+      "name": "regioesAdm.json",
+      "path": "backend/regioesAdm.json",
+      "type": "file",
+      "sha": "a09aaa775523bf57b7f5f53484c6e6daddfd44d1",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4628292,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "backend/requirements.txt",
+      "type": "file",
+      "sha": "0cc5c0c3b28ef1d0425f4b589c511875787e0ed5",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 843,
+      "is_binary": false
+    },
+    {
+      "name": "run.py",
+      "path": "backend/run.py",
+      "type": "file",
+      "sha": "cb1ee66a4924ddf231ab66282f52b8c127e6c2fe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 188,
+      "is_binary": false
+    },
+    {
+      "name": "text.txt",
+      "path": "backend/text.txt",
+      "type": "file",
+      "sha": "25ac2e0f3a370ad804778f6417916e115461cf36",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 297,
+      "is_binary": false
+    },
+    {
+      "name": "wait-for-postgres.sh",
+      "path": "backend/wait-for-postgres.sh",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".sh",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "backup_20250118_223235.sql",
+      "path": "backup_20250118_223235.sql",
+      "type": "file",
+      "sha": "5353e6affc024a3be08dbd73af0ca9a91d5e5bc7",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 4776,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "26130e2bbf47ae4379a979eaf3a4285bd0aa8e57",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1745,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "1788cce7d7f0a95acb66a68c3f556acce9dfca65",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".env",
+      "path": "frontend/.env",
+      "type": "file",
+      "sha": "58b041499dabbf75dd0932e20d0853e268e81157",
+      "mode": "100644",
+      "extension": ".env",
+      "size": 57,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": "frontend/.gitignore",
+      "type": "file",
+      "sha": "a547bf36d8d11a4f89c59c144f24795749086dd1",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 253,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "872e6bb7b81b8b07a801fb3498b77fb8943ccf3f",
+      "mode": "100644",
+      "extension": "",
+      "size": 275,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/README.md",
+      "type": "file",
+      "sha": "74872fd4af60fb8d6cdb7d27e6c587ee0b6e1df7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1607,
+      "is_binary": false
+    },
+    {
+      "name": "eslint.config.js",
+      "path": "frontend/eslint.config.js",
+      "type": "file",
+      "sha": "092408a9f09eae19150818b4f0db5d1b70744828",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 734,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/index.html",
+      "type": "file",
+      "sha": "6b1355f707154a5a215fb1e2f78fe87c21957f73",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 361,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "frontend/package-lock.json",
+      "type": "file",
+      "sha": "4592fd1858295c17da11c1b5695338934034926f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 335963,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "frontend/package.json",
+      "type": "file",
+      "sha": "658e043322f5b2212454506b7c9ee343fac8b895",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1593,
+      "is_binary": false
+    },
+    {
+      "name": "postcss.config.js",
+      "path": "frontend/postcss.config.js",
+      "type": "file",
+      "sha": "2e7af2b7f1a6f391da1631d93968a9d487ba977d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 80,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "frontend/public",
+      "type": "directory",
+      "sha": "68a9c373fe360c6d5d6a0cea82263dcd1bbb0b72",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "INTERNA-2-Foto-Geovana-Albuquerque-3-2.jpg",
+      "path": "frontend/public/INTERNA-2-Foto-Geovana-Albuquerque-3-2.jpg",
+      "type": "file",
+      "sha": "fe5baf5548cc1e2be277c6fd48ec770f8f3bc2ac",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 332887,
+      "is_binary": false
+    },
+    {
+      "name": "image.png",
+      "path": "frontend/public/image.png",
+      "type": "file",
+      "sha": "75efb2190e45d7eb858034bf8068b4be93a3c835",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 525597,
+      "is_binary": false
+    },
+    {
+      "name": "pista.jpeg",
+      "path": "frontend/public/pista.jpeg",
+      "type": "file",
+      "sha": "24298eb31832a8ad97b5fd430a1778753dd2d943",
+      "mode": "100644",
+      "extension": ".jpeg",
+      "size": 121204,
+      "is_binary": false
+    },
+    {
+      "name": "unnamed.jpg",
+      "path": "frontend/public/unnamed.jpg",
+      "type": "file",
+      "sha": "f50e3acad59266d09c9426c0f79dfd63540cd953",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 110789,
+      "is_binary": false
+    },
+    {
+      "name": "vite.svg",
+      "path": "frontend/public/vite.svg",
+      "type": "file",
+      "sha": "e7b8dfb1b2a60bd50538bec9f876511b9cac21e3",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1497,
+      "is_binary": false
+    },
+    {
+      "name": "setupTests.js",
+      "path": "frontend/setupTests.js",
+      "type": "file",
+      "sha": "b4b50141e1a68a33e3a6a428993c45942240668f",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 62,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "frontend/src",
+      "type": "directory",
+      "sha": "d49e9bb915266e451eebdca2c2ce3ec37d9b6f32",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "App.tsx",
+      "path": "frontend/src/App.tsx",
+      "type": "file",
+      "sha": "c5326a4aca5817d602da060be2ca55ea49a21180",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 101,
+      "is_binary": false
+    },
+    {
+      "name": "AppRouter.tsx",
+      "path": "frontend/src/AppRouter.tsx",
+      "type": "file",
+      "sha": "ba14cda987f221389376ea3452266dfb2009a299",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1446,
+      "is_binary": false
+    },
+    {
+      "name": "Context",
+      "path": "frontend/src/Context",
+      "type": "directory",
+      "sha": "a36c2add3d7e05b6ab922cfb258c193be3f10fec",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "AuthContext.tsx",
+      "path": "frontend/src/Context/AuthContext.tsx",
+      "type": "file",
+      "sha": "553689d142d4490cb51a991899a71e3f791b5ba0",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4132,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "frontend/src/assets",
+      "type": "directory",
+      "sha": "36bdcf2fabb0fef8b7239c67f3b2d1f8baf8c162",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Executor.png",
+      "path": "frontend/src/assets/Executor.png",
+      "type": "file",
+      "sha": "06d1a3c593479439cfc10e9adbc30b15f1a4433c",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1151,
+      "is_binary": false
+    },
+    {
+      "name": "Geral.png",
+      "path": "frontend/src/assets/Geral.png",
+      "type": "file",
+      "sha": "90f877d0694d51d0c586c20d766dba661d43513e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1127,
+      "is_binary": false
+    },
+    {
+      "name": "Regiao.png",
+      "path": "frontend/src/assets/Regiao.png",
+      "type": "file",
+      "sha": "9382a5568f9e0977cab64d01ef95fe30f26fdcca",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1279,
+      "is_binary": false
+    },
+    {
+      "name": "Tipo.png",
+      "path": "frontend/src/assets/Tipo.png",
+      "type": "file",
+      "sha": "7a7480b663108f753feca0ef2ba5505ad642c69b",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 920,
+      "is_binary": false
+    },
+    {
+      "name": "Valor.png",
+      "path": "frontend/src/assets/Valor.png",
+      "type": "file",
+      "sha": "29a3f287125b88b76ee96f256171881010ea49dd",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1279,
+      "is_binary": false
+    },
+    {
+      "name": "adm.png",
+      "path": "frontend/src/assets/adm.png",
+      "type": "file",
+      "sha": "1ebd3d3065df1d36e4f6699f83029896cab3b4fa",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1557,
+      "is_binary": false
+    },
+    {
+      "name": "contruction.png",
+      "path": "frontend/src/assets/contruction.png",
+      "type": "file",
+      "sha": "ed480c5304bb9942f44560441d246f6ce45a9536",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2198,
+      "is_binary": false
+    },
+    {
+      "name": "development.png",
+      "path": "frontend/src/assets/development.png",
+      "type": "file",
+      "sha": "f97d987393153fc7a84cc599deb8b03180bf9641",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2043,
+      "is_binary": false
+    },
+    {
+      "name": "education.png",
+      "path": "frontend/src/assets/education.png",
+      "type": "file",
+      "sha": "70365daa96cc7f65a98caa0bd6e452c96f6fcf97",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 892,
+      "is_binary": false
+    },
+    {
+      "name": "energia.png",
+      "path": "frontend/src/assets/energia.png",
+      "type": "file",
+      "sha": "e3af06891bce4c41e1cc7e553ea1ff8b4a30a831",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1320,
+      "is_binary": false
+    },
+    {
+      "name": "road.png",
+      "path": "frontend/src/assets/road.png",
+      "type": "file",
+      "sha": "cb92f5a7796851e0ee5896d0d6538c82b1f29b86",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1793,
+      "is_binary": false
+    },
+    {
+      "name": "security.png",
+      "path": "frontend/src/assets/security.png",
+      "type": "file",
+      "sha": "e23809c9b32a1406abd8e9cbde25af1d71b6d4f0",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2141,
+      "is_binary": false
+    },
+    {
+      "name": "sport.png",
+      "path": "frontend/src/assets/sport.png",
+      "type": "file",
+      "sha": "14e6585838a5f17e2029daaab4083f4cc09e78a8",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1877,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "frontend/src/components",
+      "type": "directory",
+      "sha": "b101a643f7c390043ed5feb70bbf4f7a29a310e9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Footer.tsx",
+      "path": "frontend/src/components/Footer.tsx",
+      "type": "file",
+      "sha": "833dae0e7bd89182a7b36b8435238b706f3dfea9",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 382,
+      "is_binary": false
+    },
+    {
+      "name": "Logo.tsx",
+      "path": "frontend/src/components/Logo.tsx",
+      "type": "file",
+      "sha": "628df2d98c88849fbcaec207ad00e684b7500e2f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 385,
+      "is_binary": false
+    },
+    {
+      "name": "hooks",
+      "path": "frontend/src/hooks",
+      "type": "directory",
+      "sha": "02ce172da5e5a6bb704880c1ecf27d5504fccc6c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "useAddress.tsx",
+      "path": "frontend/src/hooks/useAddress.tsx",
+      "type": "file",
+      "sha": "0232b7f0053a4f979b2002ee39329e945e1a24ba",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4107,
+      "is_binary": false
+    },
+    {
+      "name": "useObras.tsx",
+      "path": "frontend/src/hooks/useObras.tsx",
+      "type": "file",
+      "sha": "9d9ea291d43b5b7bfc1d55adf2e9b30a11e7e244",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2871,
+      "is_binary": false
+    },
+    {
+      "name": "index.css",
+      "path": "frontend/src/index.css",
+      "type": "file",
+      "sha": "60492d30265af8deae4ea17671c99da1c89e8839",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 78,
+      "is_binary": false
+    },
+    {
+      "name": "main.tsx",
+      "path": "frontend/src/main.tsx",
+      "type": "file",
+      "sha": "c55d42c985fe16b0d7b9c6f706db80993bf95c37",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 436,
+      "is_binary": false
+    },
+    {
+      "name": "pages",
+      "path": "frontend/src/pages",
+      "type": "directory",
+      "sha": "be47eb2a3cb6abac832e28feaa1316446700c55c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Cadastro.tsx",
+      "path": "frontend/src/pages/Cadastro.tsx",
+      "type": "file",
+      "sha": "044351e0689aaa58350f0fa8bdab0437e0d227ad",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2615,
+      "is_binary": false
+    },
+    {
+      "name": "Email.tsx",
+      "path": "frontend/src/pages/Email.tsx",
+      "type": "file",
+      "sha": "356c04e10f55506d1b071232b414b6b52a8b8f1d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1780,
+      "is_binary": false
+    },
+    {
+      "name": "Endereco.tsx",
+      "path": "frontend/src/pages/Endereco.tsx",
+      "type": "file",
+      "sha": "cd676473b2479acf8246957c25f2b1c2f864d426",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4754,
+      "is_binary": false
+    },
+    {
+      "name": "FiltroExecutor.tsx",
+      "path": "frontend/src/pages/FiltroExecutor.tsx",
+      "type": "file",
+      "sha": "ecc381b2f6e56e6f5ca113e479b1b708916b9c02",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3449,
+      "is_binary": false
+    },
+    {
+      "name": "FiltroRegiao.tsx",
+      "path": "frontend/src/pages/FiltroRegiao.tsx",
+      "type": "file",
+      "sha": "8785e588a24fd4237cacdc945541a81897d0876b",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2847,
+      "is_binary": false
+    },
+    {
+      "name": "FiltroTipo.tsx",
+      "path": "frontend/src/pages/FiltroTipo.tsx",
+      "type": "file",
+      "sha": "832e13cca14ad0be5a0db1cbf4600e55c67501a3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3338,
+      "is_binary": false
+    },
+    {
+      "name": "FiltroValor.tsx",
+      "path": "frontend/src/pages/FiltroValor.tsx",
+      "type": "file",
+      "sha": "c95e5c55e680624e99032c897bf70d8426a4cc9a",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5055,
+      "is_binary": false
+    },
+    {
+      "name": "InformacoesGerais.tsx",
+      "path": "frontend/src/pages/InformacoesGerais.tsx",
+      "type": "file",
+      "sha": "5a62ef72154d7cd554af1be49e01e192f8855f40",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2644,
+      "is_binary": false
+    },
+    {
+      "name": "Login.tsx",
+      "path": "frontend/src/pages/Login.tsx",
+      "type": "file",
+      "sha": "69d986646966035bc1ae0a0b7a8bfe3a5e9ee2c6",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2710,
+      "is_binary": false
+    },
+    {
+      "name": "MapaGeral.tsx",
+      "path": "frontend/src/pages/MapaGeral.tsx",
+      "type": "file",
+      "sha": "04f0eeb4be5dd237c59c9a661e69d795b24b3e9d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4626,
+      "is_binary": false
+    },
+    {
+      "name": "Menu.tsx",
+      "path": "frontend/src/pages/Menu.tsx",
+      "type": "file",
+      "sha": "eff24feec346df87d46f93e6a227d9d0e0185144",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3588,
+      "is_binary": false
+    },
+    {
+      "name": "Senha.tsx",
+      "path": "frontend/src/pages/Senha.tsx",
+      "type": "file",
+      "sha": "beec618356c028c317d612c975db79ecfa70aeec",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2510,
+      "is_binary": false
+    },
+    {
+      "name": "styles",
+      "path": "frontend/src/styles",
+      "type": "directory",
+      "sha": "3e6ae6b19bad9647589f0427dabe98ac5d85df3f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Filtros.css",
+      "path": "frontend/src/styles/Filtros.css",
+      "type": "file",
+      "sha": "2801fce0175369e5fe9ad6abe577ab0b986a9a09",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2069,
+      "is_binary": false
+    },
+    {
+      "name": "InformacoesGerais.css",
+      "path": "frontend/src/styles/InformacoesGerais.css",
+      "type": "file",
+      "sha": "2f6222f9f37604302c627d94d8a4890f584342cf",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 724,
+      "is_binary": false
+    },
+    {
+      "name": "Logo.css",
+      "path": "frontend/src/styles/Logo.css",
+      "type": "file",
+      "sha": "1eea993f79bd0e466825aa03335682e4be17f691",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 418,
+      "is_binary": false
+    },
+    {
+      "name": "MapaGeral.css",
+      "path": "frontend/src/styles/MapaGeral.css",
+      "type": "file",
+      "sha": "857574c0400958ea25ce9af60a393a39171f6829",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 484,
+      "is_binary": false
+    },
+    {
+      "name": "Menu.css",
+      "path": "frontend/src/styles/Menu.css",
+      "type": "file",
+      "sha": "7abdaf076fc0aa03b278fdc4cde03e23dc7cd358",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1959,
+      "is_binary": false
+    },
+    {
+      "name": "Registros.css",
+      "path": "frontend/src/styles/Registros.css",
+      "type": "file",
+      "sha": "c5930fd17705acc3148de4c531495a0e5591604b",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1374,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "frontend/src/tests",
+      "type": "directory",
+      "sha": "839f10ddabda6b47f012ae65b9476be955d975ad",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "enderecoIntegration.test.tsx",
+      "path": "frontend/src/tests/enderecoIntegration.test.tsx",
+      "type": "file",
+      "sha": "e8bf582d13d57d2d9a78748d261a33d884204f83",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 946,
+      "is_binary": false
+    },
+    {
+      "name": "filterUnit.test.tsx",
+      "path": "frontend/src/tests/filterUnit.test.tsx",
+      "type": "file",
+      "sha": "39d713d7168efc7e4f6190e4ea98535409d88f9f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2565,
+      "is_binary": false
+    },
+    {
+      "name": "logoUnit.test.tsx",
+      "path": "frontend/src/tests/logoUnit.test.tsx",
+      "type": "file",
+      "sha": "e25964193e8396a7789a0c26820a242f8f1f14d6",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 753,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "frontend/src/utils",
+      "type": "directory",
+      "sha": "d3e191f81c193039222ee6664da0a5ef1fbde003",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "FiltroUtils.tsx",
+      "path": "frontend/src/utils/FiltroUtils.tsx",
+      "type": "file",
+      "sha": "45c5e53285fa058c5062b5613a7604a0a1c0af90",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 858,
+      "is_binary": false
+    },
+    {
+      "name": "wktParser.tsx",
+      "path": "frontend/src/utils/wktParser.tsx",
+      "type": "file",
+      "sha": "5a6418ff9ca6162a03d8653024dab36d1f5fdc55",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 760,
+      "is_binary": false
+    },
+    {
+      "name": "vite-env.d.ts",
+      "path": "frontend/src/vite-env.d.ts",
+      "type": "file",
+      "sha": "11f02fe2a0061d6e6e1f271b21da95423b448b32",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 38,
+      "is_binary": false
+    },
+    {
+      "name": "tailwind.config.cjs",
+      "path": "frontend/tailwind.config.cjs",
+      "type": "file",
+      "sha": "970d07756c505a00d2cd02ee10a5cf0cf0ee9c8a",
+      "mode": "100644",
+      "extension": ".cjs",
+      "size": 168,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.app.json",
+      "path": "frontend/tsconfig.app.json",
+      "type": "file",
+      "sha": "f867de0dd1a8383a72d62b9bc61854bd7ea45e36",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 665,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.json",
+      "path": "frontend/tsconfig.json",
+      "type": "file",
+      "sha": "1ffef600d959ec9e396d5a260bd3f5b927b2cef8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 119,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.node.json",
+      "path": "frontend/tsconfig.node.json",
+      "type": "file",
+      "sha": "abcd7f0dacddc7a2b68e2c81235dc55d2e1ecad9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 593,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.ts",
+      "path": "frontend/vite.config.ts",
+      "type": "file",
+      "sha": "584332549989f8aa00e1d4311d8835fb306e4e39",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 490,
+      "is_binary": false
+    },
+    {
+      "name": "initdb",
+      "path": "initdb",
+      "type": "directory",
+      "sha": "e9a9691dddfcdface9e95ff3c71d8698d1c583c2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "backup_monitorabsb_20250118.sql",
+      "path": "initdb/backup_monitorabsb_20250118.sql",
+      "type": "file",
+      "sha": "86dfafacdc6eca3ea96fe48a93e0a41434240ca4",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 439183,
+      "is_binary": false
+    },
+    {
+      "name": "dump.sql",
+      "path": "initdb/dump.sql",
+      "type": "file",
+      "sha": "30c7360e05841adb0270169df746ff78c6add0ab",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 438469,
+      "is_binary": false
+    },
+    {
+      "name": "restore.sh",
+      "path": "initdb/restore.sh",
+      "type": "file",
+      "sha": "34b0233e5ef2efb711c6421bb8c9c8f89efd0779",
+      "mode": "100755",
+      "extension": ".sh",
+      "size": 992,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "type": "file",
+      "sha": "c8cb17957c00819c711da624b1920e210fde7bb9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 27105,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "type": "file",
+      "sha": "2c22bad240551fd7c6c12933c2ce2c97637b6467",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 100,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2025-12-05T14:24:53.323004",
+  "method": "rest",
+  "total_items": 148,
+  "repository_metadata": {
+    "id": 878441321,
+    "full_name": "unb-mds/MDS-MonitoraBSB",
+    "description": "O projeto de Mapeamento de Obras e Serviços Públicos é um sistema de mapeamento interativo que extrai e apresenta informações sobre obras e serviços públicos anunciados nos diários oficiais. Ele permite que cidadãos acompanhem o progresso, a localização e os detalhes dessas iniciativas, promovendo transparência e facilitando o acesso a informações ",
+    "created_at": "2024-10-25T11:58:16Z",
+    "updated_at": "2025-02-14T12:39:48Z",
+    "language": "TypeScript",
+    "size": 40543,
+    "stars": 2,
+    "forks": 1,
+    "open_issues": 2
+  }
+}

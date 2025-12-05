@@ -1,0 +1,4658 @@
+{
+  "owner": "unb-mds",
+  "repository": "LicitaBSB-24.1",
+  "branch": "main",
+  "sha": "707ab0143f6786a2d1142405aa5aa783a508f818",
+  "tree": [
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "1ab28829e77a4316c4718a30923d1a419cdcb145",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "COMMIT_TEMPLATE",
+      "path": ".github/COMMIT_TEMPLATE",
+      "type": "directory",
+      "sha": "e6ed22f78d62f888262fac5517c1ab0c8099c639",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": ".github/COMMIT_TEMPLATE/README.md",
+      "type": "file",
+      "sha": "f0fdcc2c7876a8b94629c8b166c662732ae9b2b9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8281,
+      "is_binary": false
+    },
+    {
+      "name": "ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "sha": "ced8142949ffd73990932be79e62f768587505fd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "feature.md",
+      "path": ".github/ISSUE_TEMPLATE/feature.md",
+      "type": "file",
+      "sha": "afb137708146bd7ce574163cb74cd4e6b23e2b26",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 515,
+      "is_binary": false
+    },
+    {
+      "name": "pull_request_template.md",
+      "path": ".github/pull_request_template.md",
+      "type": "file",
+      "sha": "c3756a25e362e020295393a4f036629f362ecb52",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1254,
+      "is_binary": false
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "c94571b09d4c925747583da5238b0758743b845b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": ".github/workflows/README.md",
+      "type": "file",
+      "sha": "fcd8fbff4af3b9cc5b4b47217ca4a173037e1b38",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3182,
+      "is_binary": false
+    },
+    {
+      "name": "docs.yml",
+      "path": ".github/workflows/docs.yml",
+      "type": "file",
+      "sha": "270f9fe8ffbf3df0f08e5263f9b1aed6db9eb645",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 883,
+      "is_binary": false
+    },
+    {
+      "name": "emails.yml",
+      "path": ".github/workflows/emails.yml",
+      "type": "file",
+      "sha": "fffdb070cffd13bf15e3c684a1ab77ed8c6cb09c",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 792,
+      "is_binary": false
+    },
+    {
+      "name": "main.yml",
+      "path": ".github/workflows/main.yml",
+      "type": "file",
+      "sha": "88ea1f67fde3a04ed90cf104b88fb887507310fd",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1287,
+      "is_binary": false
+    },
+    {
+      "name": "tests.yml",
+      "path": ".github/workflows/tests.yml",
+      "type": "file",
+      "sha": "cac09a0c887ce2945f015fe2798e5acd0196c477",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 475,
+      "is_binary": false
+    },
+    {
+      "name": "twitter.yml",
+      "path": ".github/workflows/twitter.yml",
+      "type": "file",
+      "sha": "e27e10add1826dc53d236c949bf489b35af2187c",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 951,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "7cca086a0e0bbd13f3ca53c1378c37fda54f22c5",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 332,
+      "is_binary": false
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "sha": "c83a0625974e123512b8c8f12b690d309e0a88e0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5777,
+      "is_binary": false
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "sha": "885632c8ff1deaadaeebc7bbc6259da829232148",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3052,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "cab744be8795c94c54a987a3ed76d6a6784435c3",
+      "mode": "100644",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "Procfile",
+      "path": "Procfile",
+      "type": "file",
+      "sha": "d10c9664eb5a194703e1ae6309be21298387a479",
+      "mode": "100644",
+      "extension": "",
+      "size": 53,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "6b44c1c538ff7fc8dca7fead58d9f744408fc859",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10041,
+      "is_binary": false
+    },
+    {
+      "name": "SECURITY.md",
+      "path": "SECURITY.md",
+      "type": "file",
+      "sha": "19fc767af850491904ecc1046f2fd34dfc85f582",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2115,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "da72473494237686cdc7da2d54df3ac6daf52547",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/.gitignore",
+      "type": "file",
+      "sha": "d80a9f9dd947b65003ab308c6f7a2e78894c359e",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 1557,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "backend/README.md",
+      "type": "file",
+      "sha": "98a6c402b2013a7806cd8bc25f38c5a25a941d74",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 805,
+      "is_binary": false
+    },
+    {
+      "name": "colecao_de_dados",
+      "path": "backend/colecao_de_dados",
+      "type": "directory",
+      "sha": "0fb1cddb0d30a6f7760f8042a21885b655dee1d1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "backend/colecao_de_dados/README.md",
+      "type": "file",
+      "sha": "df8b591a9b4e97796aee0a8e4780805bd4b09718",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4102,
+      "is_binary": false
+    },
+    {
+      "name": "funcoes_coletoras.py",
+      "path": "backend/colecao_de_dados/funcoes_coletoras.py",
+      "type": "file",
+      "sha": "65bb9260d8e2a5456f57cda1495b59c5d3f4b92a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 17889,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/colecao_de_dados/main.py",
+      "type": "file",
+      "sha": "d9451959470737d0ae926519e16863bd1472ab49",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3090,
+      "is_binary": false
+    },
+    {
+      "name": "manipulacao_de_dados",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados",
+      "type": "directory",
+      "sha": "4569176ced66bf718aa1f218d5da387575b036cc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "add_qtd_licitacoes.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/add_qtd_licitacoes.py",
+      "type": "file",
+      "sha": "e8352904466828f7dd421a0707cac04638ffb206",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1633,
+      "is_binary": false
+    },
+    {
+      "name": "alterandoponto.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/alterandoponto.py",
+      "type": "file",
+      "sha": "5993a570d52c90fc72e4178e278f3b018b73b208",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 919,
+      "is_binary": false
+    },
+    {
+      "name": "corrigindo_valores.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/corrigindo_valores.py",
+      "type": "file",
+      "sha": "88248bf10bde959e9378ef64cddc4d6efb4a8431",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1421,
+      "is_binary": false
+    },
+    {
+      "name": "fill_licitacao_valores_mensal.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/fill_licitacao_valores_mensal.py",
+      "type": "file",
+      "sha": "7ab418e2895eed3690b524560064efdc732c1ab1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1503,
+      "is_binary": false
+    },
+    {
+      "name": "import-avisos-licitacao.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/import-avisos-licitacao.py",
+      "type": "file",
+      "sha": "740348cdda83d71ca1d30a66374b3bfede42ccdf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2678,
+      "is_binary": false
+    },
+    {
+      "name": "import-extrato-licitacao.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/import-extrato-licitacao.py",
+      "type": "file",
+      "sha": "2546e8e1500a230880ef0e4addd13e1c28618c76",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2574,
+      "is_binary": false
+    },
+    {
+      "name": "renomeador_de_json.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/renomeador_de_json.py",
+      "type": "file",
+      "sha": "7a9a3beb6f7900f4d9c14d0d4a47f876af0d19fb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1590,
+      "is_binary": false
+    },
+    {
+      "name": "teste.py",
+      "path": "backend/colecao_de_dados/manipulacao_de_dados/teste.py",
+      "type": "file",
+      "sha": "ae75c28df8e0172728ae51a28db5bf8ab9a02755",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 395,
+      "is_binary": false
+    },
+    {
+      "name": "testes.py",
+      "path": "backend/colecao_de_dados/testes.py",
+      "type": "file",
+      "sha": "3a04f4dfc8d8d2e7fbdc7f5fec43702073ffc045",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7315,
+      "is_binary": false
+    },
+    {
+      "name": "extrair_dados_csv",
+      "path": "backend/extrair_dados_csv",
+      "type": "directory",
+      "sha": "18ccaf439dd4d588adda2f8e2ed2ed10a601b58a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "backend/extrair_dados_csv/README.md",
+      "type": "file",
+      "sha": "5bc0f6f07a7a513730a5fbd00652f24b8281bbc5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 915,
+      "is_binary": false
+    },
+    {
+      "name": "extrair_dados_csv.py",
+      "path": "backend/extrair_dados_csv/extrair_dados_csv.py",
+      "type": "file",
+      "sha": "fa7a6043aa08f97a8b8c275a912a148488394afc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1410,
+      "is_binary": false
+    },
+    {
+      "name": "licitacoes_csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv",
+      "type": "directory",
+      "sha": "eb534d3e2e4be9793721451053f766cc1dcacac8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "202301_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202301_Licitação.csv",
+      "type": "file",
+      "sha": "e6666d5d884e3e84f8a568f652b47a91122b16c9",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 1666151,
+      "is_binary": false
+    },
+    {
+      "name": "202302_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202302_Licitação.csv",
+      "type": "file",
+      "sha": "12a691a65f191999360de294d7339299ae2d5bb2",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 2093023,
+      "is_binary": false
+    },
+    {
+      "name": "202303_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202303_Licitação.csv",
+      "type": "file",
+      "sha": "e30a853cc83f195828b4a9fee0883172077f58ae",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 4047603,
+      "is_binary": false
+    },
+    {
+      "name": "202304_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202304_Licitação.csv",
+      "type": "file",
+      "sha": "d053e5a30590d3fda4367a89fa3d3c6e6139029d",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 2546597,
+      "is_binary": false
+    },
+    {
+      "name": "202305_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202305_Licitação.csv",
+      "type": "file",
+      "sha": "95cb1cf03db3e69e41cbf74ef7fa8ff8c0b1190c",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 3100566,
+      "is_binary": false
+    },
+    {
+      "name": "202306_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202306_Licitação.csv",
+      "type": "file",
+      "sha": "357907dd5db1b9ea6d13be1c7e628f3698a7de48",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 2999137,
+      "is_binary": false
+    },
+    {
+      "name": "202307_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202307_Licitação.csv",
+      "type": "file",
+      "sha": "2fc1166e5c441ba9aa9efae9fa800e7912039a5b",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 2990600,
+      "is_binary": false
+    },
+    {
+      "name": "202308_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202308_Licitação.csv",
+      "type": "file",
+      "sha": "5bed2d7884ca2d8118c74c30b9dc3907e5bf977f",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 3391802,
+      "is_binary": false
+    },
+    {
+      "name": "202309_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202309_Licitação.csv",
+      "type": "file",
+      "sha": "856c195bc98c7f94cf046d9f40d5ffd2f3e3bb1b",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 3150357,
+      "is_binary": false
+    },
+    {
+      "name": "202310_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202310_Licitação.csv",
+      "type": "file",
+      "sha": "2e03b338d9812dc740358bef6c68202f0e24adee",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 3410619,
+      "is_binary": false
+    },
+    {
+      "name": "202311_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202311_Licitação.csv",
+      "type": "file",
+      "sha": "9e57b6d2ecb0ab0b00cb7ad4e5407a3429686595",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 4121715,
+      "is_binary": false
+    },
+    {
+      "name": "202312_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202312_Licitação.csv",
+      "type": "file",
+      "sha": "85d5846c890c1340e3aa0320384136a233dd76d0",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 4321828,
+      "is_binary": false
+    },
+    {
+      "name": "202401_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202401_Licitação.csv",
+      "type": "file",
+      "sha": "cac85554174b41b3c38fe0d0edfd3060b6123498",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 1204421,
+      "is_binary": false
+    },
+    {
+      "name": "202402_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202402_Licitação.csv",
+      "type": "file",
+      "sha": "e8a18d30649055cd56a7f501a4f4c6d50035b13d",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 1012010,
+      "is_binary": false
+    },
+    {
+      "name": "202403_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202403_Licitação.csv",
+      "type": "file",
+      "sha": "d61dc0a6ebc23c3d8efbb0b8794d772b01e6efe7",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 1219153,
+      "is_binary": false
+    },
+    {
+      "name": "202404_Licitação.csv",
+      "path": "backend/extrair_dados_csv/licitacoes_csv/202404_Licitação.csv",
+      "type": "file",
+      "sha": "56c6fbf5ca39d894dfefcd2c14e31f67de56ff72",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 329427,
+      "is_binary": false
+    },
+    {
+      "name": "newsletter",
+      "path": "backend/newsletter",
+      "type": "directory",
+      "sha": "d8a383b65bc8e2044c68e8372714a7dc0d40b0b9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "backend/newsletter/README.md",
+      "type": "file",
+      "sha": "5c9613bed23d58a35db6ce263a90bb50dd4242e5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2682,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "backend/newsletter/package-lock.json",
+      "type": "file",
+      "sha": "ae017feab0c7e9dbccd126e73e8c4fa4c6e853da",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 31114,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "backend/newsletter/package.json",
+      "type": "file",
+      "sha": "d643ab331e1c02f181be39e917463de64a557a20",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 403,
+      "is_binary": false
+    },
+    {
+      "name": "sendEmails.js",
+      "path": "backend/newsletter/sendEmails.js",
+      "type": "file",
+      "sha": "963a3acb7e0cebde5b474cc720d5a9c67fd18085",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3380,
+      "is_binary": false
+    },
+    {
+      "name": "server.js",
+      "path": "backend/newsletter/server.js",
+      "type": "file",
+      "sha": "cf2feab785e4cf0beabbd9f3eab6dfb1991aa2b5",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 882,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "backend/package-lock.json",
+      "type": "file",
+      "sha": "19be45b49dcd54f49e34296d4332ca318b1d770f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 569,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "backend/package.json",
+      "type": "file",
+      "sha": "f0b326074712ac56f4ce6721c99856516467d5d1",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 52,
+      "is_binary": false
+    },
+    {
+      "name": "server",
+      "path": "backend/server",
+      "type": "directory",
+      "sha": "a362804261e7a48ffadfa9d7429288160157dbf4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "backend/server/README.md",
+      "type": "file",
+      "sha": "27d01cc00d4e9fa15964db33ae82d51451f968f4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2325,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "backend/server/app",
+      "type": "directory",
+      "sha": "18f3648a969740d2bac0f3c8aebe1e04cc5c39d7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/server/app/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "admin.py",
+      "path": "backend/server/app/admin.py",
+      "type": "file",
+      "sha": "290ab30611451fe0bb212e4c2f6883a6710e0685",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1223,
+      "is_binary": false
+    },
+    {
+      "name": "apps.py",
+      "path": "backend/server/app/apps.py",
+      "type": "file",
+      "sha": "ed327d22f5ad028ff7fae6c967945e1da8438a82",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 138,
+      "is_binary": false
+    },
+    {
+      "name": "migrations",
+      "path": "backend/server/app/migrations",
+      "type": "directory",
+      "sha": "295f0601f4a499efbac1f0a5991f0242cf24f453",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "0001_initial.py",
+      "path": "backend/server/app/migrations/0001_initial.py",
+      "type": "file",
+      "sha": "955599d7e83083ea3e5ad948779cee6089e35e82",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2008,
+      "is_binary": false
+    },
+    {
+      "name": "0002_licitacaoquantidade.py",
+      "path": "backend/server/app/migrations/0002_licitacaoquantidade.py",
+      "type": "file",
+      "sha": "0d1e16440e9c29235df8916a23d4d5bc3bb7e5c2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 612,
+      "is_binary": false
+    },
+    {
+      "name": "0003_licitacaovaloresmensal.py",
+      "path": "backend/server/app/migrations/0003_licitacaovaloresmensal.py",
+      "type": "file",
+      "sha": "47bcfe9d94ef6453163fcd75d51b28399889e4d0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 620,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/server/app/migrations/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "backend/server/app/models.py",
+      "type": "file",
+      "sha": "e86c83f9480cc7a9463a2121cd6299eff6d9cd56",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1873,
+      "is_binary": false
+    },
+    {
+      "name": "serializers.py",
+      "path": "backend/server/app/serializers.py",
+      "type": "file",
+      "sha": "7fabc3e36042e131d467c4ee971f108640f61efe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2672,
+      "is_binary": false
+    },
+    {
+      "name": "tests.py",
+      "path": "backend/server/app/tests.py",
+      "type": "file",
+      "sha": "b9cc4b01e7ecf334b79811b6cb9f1ab4d4bb95cc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12497,
+      "is_binary": false
+    },
+    {
+      "name": "urls.py",
+      "path": "backend/server/app/urls.py",
+      "type": "file",
+      "sha": "167df07bdd0dbd944e64f79044358d17229b8ecc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1184,
+      "is_binary": false
+    },
+    {
+      "name": "views.py",
+      "path": "backend/server/app/views.py",
+      "type": "file",
+      "sha": "ad015bbb9129743efd22aea1ef698bdfae34ad8e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11664,
+      "is_binary": false
+    },
+    {
+      "name": "db.sqlite3",
+      "path": "backend/server/db.sqlite3",
+      "type": "file",
+      "sha": "9e9403e0371034bad9ad595b4842b6f968e2b713",
+      "mode": "100644",
+      "extension": ".sqlite3",
+      "size": 46198784,
+      "is_binary": false
+    },
+    {
+      "name": "manage.py",
+      "path": "backend/server/manage.py",
+      "type": "file",
+      "sha": "8b46ee6c39fbb356de251ebdf5111b2bc88d8bdc",
+      "mode": "100755",
+      "extension": ".py",
+      "size": 662,
+      "is_binary": false
+    },
+    {
+      "name": "server",
+      "path": "backend/server/server",
+      "type": "directory",
+      "sha": "3aea9d99b768c68f69f25e26a0759ebd2abf0d74",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/server/server/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "asgi.py",
+      "path": "backend/server/server/asgi.py",
+      "type": "file",
+      "sha": "1a39bf0ac5daafc8b9b2a65fa898a0417d38f6fe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 389,
+      "is_binary": false
+    },
+    {
+      "name": "settings.py",
+      "path": "backend/server/server/settings.py",
+      "type": "file",
+      "sha": "ada9e7c53cd3b758c254fb9829eab2023b4c1a0f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3952,
+      "is_binary": false
+    },
+    {
+      "name": "urls.py",
+      "path": "backend/server/server/urls.py",
+      "type": "file",
+      "sha": "08a999c8a2f7555e69b0029d7814c6f28608c8bc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1002,
+      "is_binary": false
+    },
+    {
+      "name": "wsgi.py",
+      "path": "backend/server/server/wsgi.py",
+      "type": "file",
+      "sha": "d871e1eac2c0d1f47df57cf94a50eb7e492c0ee1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 294,
+      "is_binary": false
+    },
+    {
+      "name": "static",
+      "path": "backend/server/static",
+      "type": "directory",
+      "sha": "c2358bfb590a4ec1bca0e2b26fca998fcd073dab",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "solve.txt",
+      "path": "backend/server/static/solve.txt",
+      "type": "file",
+      "sha": "c0b8fcdb6435b52839b18fedb07556c9a0ce4678",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 300,
+      "is_binary": false
+    },
+    {
+      "name": "twitter",
+      "path": "backend/twitter",
+      "type": "directory",
+      "sha": "d57089b8bd0ba0aab83bd0468268c1b3fee74349",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "backend/twitter/README.md",
+      "type": "file",
+      "sha": "74f79560fd068a518ce7937384c577bbadd39348",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3494,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "backend/twitter/assets",
+      "type": "directory",
+      "sha": "39be43435f281f5e0a65d7df03599e29d7e93fb3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "IBMPLEXMONO.TTF",
+      "path": "backend/twitter/assets/IBMPLEXMONO.TTF",
+      "type": "file",
+      "sha": "81ca3dcc9264054eda54892f2105a4d9f85eaf50",
+      "mode": "100644",
+      "extension": ".TTF",
+      "size": 133720,
+      "is_binary": false
+    },
+    {
+      "name": "IBMPLEXSANS.TTF",
+      "path": "backend/twitter/assets/IBMPLEXSANS.TTF",
+      "type": "file",
+      "sha": "b5819647e1dfa7dae61b29e582f3464a90c537e1",
+      "mode": "100644",
+      "extension": ".TTF",
+      "size": 175748,
+      "is_binary": false
+    },
+    {
+      "name": "IBMPLEXSERIF.TTF",
+      "path": "backend/twitter/assets/IBMPLEXSERIF.TTF",
+      "type": "file",
+      "sha": "ae7fa24b818465dadaea0e532e4936b1adb15b7e",
+      "mode": "100644",
+      "extension": ".TTF",
+      "size": 160304,
+      "is_binary": false
+    },
+    {
+      "name": "auto.py",
+      "path": "backend/twitter/auto.py",
+      "type": "file",
+      "sha": "5b6c5c51c90cbe941aa400c6c579f13aa5c8abd9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12435,
+      "is_binary": false
+    },
+    {
+      "name": "background.jpg",
+      "path": "backend/twitter/background.jpg",
+      "type": "file",
+      "sha": "51841b0914f67432c990adbc496bd18c61832ff3",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 27681,
+      "is_binary": false
+    },
+    {
+      "name": "test.py",
+      "path": "backend/twitter/test.py",
+      "type": "file",
+      "sha": "ea380076db1df523b9e758ffd65742ec215c430a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5712,
+      "is_binary": false
+    },
+    {
+      "name": "df",
+      "path": "df",
+      "type": "file",
+      "sha": "f13bb3923c1a89d186174f02d1acfa354fb52e34",
+      "mode": "100644",
+      "extension": "",
+      "size": 495,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "3ee8a78853a455d450b74cf52ace4c67d9156307",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Arquitetura",
+      "path": "docs/Arquitetura",
+      "type": "directory",
+      "sha": "d88a92e1689131906c096eb46d4e026483a3899a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Diagrama_vai.png",
+      "path": "docs/Arquitetura/Diagrama_vai.png",
+      "type": "file",
+      "sha": "92791bf94b00b3a859948792f2f67f47a4cb18a8",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 66140,
+      "is_binary": false
+    },
+    {
+      "name": "Modelagem_BD.png",
+      "path": "docs/Arquitetura/Modelagem_BD.png",
+      "type": "file",
+      "sha": "53d5f38c4a117b7b2e209d1eb5a9184bd0838941",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 71398,
+      "is_binary": false
+    },
+    {
+      "name": "arquitetura.md",
+      "path": "docs/Arquitetura/arquitetura.md",
+      "type": "file",
+      "sha": "6444d63ed10823b6e467501f160fb98b4ea5caff",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7939,
+      "is_binary": false
+    },
+    {
+      "name": "Atas",
+      "path": "docs/Atas",
+      "type": "directory",
+      "sha": "6b04057dcdb930ed23fa477641113b9ee0489ee6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint0_reuniao1.md",
+      "path": "docs/Atas/Sprint0_reuniao1.md",
+      "type": "file",
+      "sha": "01f45a620b6984e30cc4b41b84e0f9c1a9a0fed0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2634,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint0_reuniao2.md",
+      "path": "docs/Atas/Sprint0_reuniao2.md",
+      "type": "file",
+      "sha": "60884ca9c4b727050837faf41a11e153453d3519",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2195,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint10.md",
+      "path": "docs/Atas/Sprint10.md",
+      "type": "file",
+      "sha": "8d49a03b6572286a57912b0b799fb0eb1c89527e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 747,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint11.md",
+      "path": "docs/Atas/Sprint11.md",
+      "type": "file",
+      "sha": "c3074b3b1d00a838fda8eec6b4ebb1fbff569843",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1196,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint12.md",
+      "path": "docs/Atas/Sprint12.md",
+      "type": "file",
+      "sha": "63f08022dc734c60fd53b88ec38481386e6f543d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3062,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint13.md",
+      "path": "docs/Atas/Sprint13.md",
+      "type": "file",
+      "sha": "33dba801f5c0cfa38e293e46eb1b176134132e70",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2171,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint14.md",
+      "path": "docs/Atas/Sprint14.md",
+      "type": "file",
+      "sha": "f521da0a7f9c26e58fab435a0d50e20aa4e4f0a1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1693,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint14_2.md",
+      "path": "docs/Atas/Sprint14_2.md",
+      "type": "file",
+      "sha": "930d4cfab6737b414371cd6f73faed626f84ba60",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1264,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint15.md",
+      "path": "docs/Atas/Sprint15.md",
+      "type": "file",
+      "sha": "aff347159cd15dae3756610287da0862d045b811",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2109,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint1_reuniao1.md",
+      "path": "docs/Atas/Sprint1_reuniao1.md",
+      "type": "file",
+      "sha": "d1b9447739dad46fbef380ff4182a82ba5401ed3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2196,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint1_reuniao2.md",
+      "path": "docs/Atas/Sprint1_reuniao2.md",
+      "type": "file",
+      "sha": "f41b98ee5da1fc64b39bddc371a2b961cd228c18",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2427,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint2.md",
+      "path": "docs/Atas/Sprint2.md",
+      "type": "file",
+      "sha": "76059c091576bb503f171309e0f5778d2b845cb4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2374,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint3_reuniao1.md",
+      "path": "docs/Atas/Sprint3_reuniao1.md",
+      "type": "file",
+      "sha": "cb19afa39015e9d99d384dc32600584bf2dd178e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2158,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint3_reuniao2.md",
+      "path": "docs/Atas/Sprint3_reuniao2.md",
+      "type": "file",
+      "sha": "23284836a4f80939fac89a74b479752474e70500",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1526,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint4.md",
+      "path": "docs/Atas/Sprint4.md",
+      "type": "file",
+      "sha": "da24f582313ab5b18d6d089224f54e962baa0f3f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1828,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint5.md",
+      "path": "docs/Atas/Sprint5.md",
+      "type": "file",
+      "sha": "5c43d91127d14aba55f64d3594d1e114bb49eeca",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1574,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint6.md",
+      "path": "docs/Atas/Sprint6.md",
+      "type": "file",
+      "sha": "1f069c914237616013cec5e60db769ff497018ac",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3934,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint7_reuniao1.md",
+      "path": "docs/Atas/Sprint7_reuniao1.md",
+      "type": "file",
+      "sha": "d50a473f7af2803f87a93f64af35de9582806b42",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3509,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint7_reuniao2.md",
+      "path": "docs/Atas/Sprint7_reuniao2.md",
+      "type": "file",
+      "sha": "bf276c9b3fbf0ce5b418b4f0657d0e8b01553bcd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1082,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint8_reuniao1.md",
+      "path": "docs/Atas/Sprint8_reuniao1.md",
+      "type": "file",
+      "sha": "b6c825b2d503200df4878da0a3733c47a2988f39",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1595,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint8_reuniao2.md",
+      "path": "docs/Atas/Sprint8_reuniao2.md",
+      "type": "file",
+      "sha": "96192d2b086bdca96ac825403bc460164872ac05",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 941,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint9.md",
+      "path": "docs/Atas/Sprint9.md",
+      "type": "file",
+      "sha": "5efd73197e11907b17326b59faf16b20d385d824",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1971,
+      "is_binary": false
+    },
+    {
+      "name": "feedbackR1.md",
+      "path": "docs/Atas/feedbackR1.md",
+      "type": "file",
+      "sha": "7318e38f062dbd98ea93c2362de1b8b67b234dd7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3426,
+      "is_binary": false
+    },
+    {
+      "name": "linksAtas.md",
+      "path": "docs/Atas/linksAtas.md",
+      "type": "file",
+      "sha": "a145426aa6e32b78618b988a23cda62a4386a3db",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1897,
+      "is_binary": false
+    },
+    {
+      "name": "Estudos",
+      "path": "docs/Estudos",
+      "type": "directory",
+      "sha": "9006ec452c42ff46103ea578ce2b4d46cd7013f0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "2020-Scrum-Guide-US.pdf",
+      "path": "docs/Estudos/2020-Scrum-Guide-US.pdf",
+      "type": "file",
+      "sha": "d13496f1e1e9680d57a5ee7c8c4e1db9bb635a72",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 254353,
+      "is_binary": false
+    },
+    {
+      "name": "Artigo_DispensaLicitação.pdf",
+      "path": "docs/Estudos/Artigo_DispensaLicitação.pdf",
+      "type": "file",
+      "sha": "11f3c464ac44ccd2666421726289a3c3765b6b41",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 54000,
+      "is_binary": false
+    },
+    {
+      "name": "Automatizacao_email.md",
+      "path": "docs/Estudos/Automatizacao_email.md",
+      "type": "file",
+      "sha": "f47f58edafaaa703406242a1ad6a594459e2ed6f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3033,
+      "is_binary": false
+    },
+    {
+      "name": "Dashboard Integração MDS.pdf",
+      "path": "docs/Estudos/Dashboard Integração MDS.pdf",
+      "type": "file",
+      "sha": "cd4618c9341d1ced357e9f466194308c9d77a28c",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 123804,
+      "is_binary": false
+    },
+    {
+      "name": "Deploy & Database.pdf",
+      "path": "docs/Estudos/Deploy & Database.pdf",
+      "type": "file",
+      "sha": "ddd07b5c1d3e5f775d4e3503848e87d675327b84",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 95824,
+      "is_binary": false
+    },
+    {
+      "name": "Desenvolvimento Newsletter.pdf",
+      "path": "docs/Estudos/Desenvolvimento Newsletter.pdf",
+      "type": "file",
+      "sha": "4372aea075b5a58ae107ba05caf327880becbf57",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 70737,
+      "is_binary": false
+    },
+    {
+      "name": "Estudos.md",
+      "path": "docs/Estudos/Estudos.md",
+      "type": "file",
+      "sha": "f7cb892009e156bf8aeb682e137ecacc023d91cc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5693,
+      "is_binary": false
+    },
+    {
+      "name": "Github Json.pdf",
+      "path": "docs/Estudos/Github Json.pdf",
+      "type": "file",
+      "sha": "69e010aa8e3645580886afec2ed37d5f219d99e0",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 73132,
+      "is_binary": false
+    },
+    {
+      "name": "Header Definition.pdf",
+      "path": "docs/Estudos/Header Definition.pdf",
+      "type": "file",
+      "sha": "ab3c2da5fb08db62688190b977320b7bdbfa9694",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 86762,
+      "is_binary": false
+    },
+    {
+      "name": "Integração Email.pdf",
+      "path": "docs/Estudos/Integração Email.pdf",
+      "type": "file",
+      "sha": "d12701bc6e5f0c1824c3d7084d78ec909d37842d",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 160274,
+      "is_binary": false
+    },
+    {
+      "name": "Executar",
+      "path": "docs/Executar",
+      "type": "directory",
+      "sha": "757cf8c2abb1d5895f3d791171c123ecdf1e35be",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "execution.md",
+      "path": "docs/Executar/execution.md",
+      "type": "file",
+      "sha": "b0c23dcf56a3c055069185a46bc8ccc89d58eceb",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4887,
+      "is_binary": false
+    },
+    {
+      "name": "Ferramentas",
+      "path": "docs/Ferramentas",
+      "type": "directory",
+      "sha": "08e34d8a1b5ec79de1bf921f0a5efb1aeee0799d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ferramentas.md",
+      "path": "docs/Ferramentas/ferramentas.md",
+      "type": "file",
+      "sha": "eb1b1384238ee2d051d2d45004dac053bf074a6f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 318,
+      "is_binary": false
+    },
+    {
+      "name": "OrganizacaoEquipe",
+      "path": "docs/OrganizacaoEquipe",
+      "type": "directory",
+      "sha": "ff12b53289c9d6759210593203c0ed0b0b483de9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Apresentação Funções dos Cargos.pdf",
+      "path": "docs/OrganizacaoEquipe/Apresentação Funções dos Cargos.pdf",
+      "type": "file",
+      "sha": "76dcb1073888d44c56d8b93012b15c4e0bd93b7e",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 1419161,
+      "is_binary": false
+    },
+    {
+      "name": "Cargos do Time.md",
+      "path": "docs/OrganizacaoEquipe/Cargos do Time.md",
+      "type": "file",
+      "sha": "cc3ca79a82535f48bca217f2d83ddf0c2512e344",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5182,
+      "is_binary": false
+    },
+    {
+      "name": "Requisitos",
+      "path": "docs/Requisitos",
+      "type": "directory",
+      "sha": "3057551f45d34011e821522bf11e8807a1914dea",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Licita BSB - Documento de Projeto.pdf",
+      "path": "docs/Requisitos/Licita BSB - Documento de Projeto.pdf",
+      "type": "file",
+      "sha": "22e227fe80cd63d545b92ba748826d0f3c0414c6",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 182723,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/index.md",
+      "type": "file",
+      "sha": "cdaa0db1886997f4993475e8cc551e3978ee44fb",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3840,
+      "is_binary": false
+    },
+    {
+      "name": "sobre_o_bot.md",
+      "path": "docs/sobre_o_bot.md",
+      "type": "file",
+      "sha": "3b07c86b6d8bfb2ddb139f33c9748324899aa533",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2923,
+      "is_binary": false
+    },
+    {
+      "name": "storymap",
+      "path": "docs/storymap",
+      "type": "directory",
+      "sha": "63d964461a34e50c3a11522cc003fd6061a7ee74",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "storymap.md",
+      "path": "docs/storymap/storymap.md",
+      "type": "file",
+      "sha": "68cd7d2a2e764043bf9e24be067a992ea2885753",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 337,
+      "is_binary": false
+    },
+    {
+      "name": "stylesheets",
+      "path": "docs/stylesheets",
+      "type": "directory",
+      "sha": "88157e1bfd7c3fb2253b3ad363afcf7594d5bc63",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "logo.png",
+      "path": "docs/stylesheets/logo.png",
+      "type": "file",
+      "sha": "3aa76afcbe78923e444f9d8a0db4d0358581609e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 205241,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "docs/stylesheets/style.css",
+      "type": "file",
+      "sha": "570140d5a5364a83ed7fcc3059b8bf7e78d9ea09",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 870,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "8da4a9ca0989357a7f7856500fe7f7fb21c3bcc1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".eslintrc",
+      "path": "frontend/.eslintrc",
+      "type": "file",
+      "sha": "1691334c115a12cdac3d6d4105e575e39eee0a2e",
+      "mode": "100644",
+      "extension": ".eslintrc",
+      "size": 889,
+      "is_binary": false
+    },
+    {
+      "name": ".prettierrc",
+      "path": "frontend/.prettierrc",
+      "type": "file",
+      "sha": "f1091fc9285306f4da8838343b9db2bee27a6994",
+      "mode": "100644",
+      "extension": ".prettierrc",
+      "size": 49,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/README.md",
+      "type": "file",
+      "sha": "232d468c956dc92720556df2264cbb3eef5a99ad",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 952,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "frontend/assets",
+      "type": "directory",
+      "sha": "625064eebafe810ae69d7bb8c32613bcc7ff1702",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/assets/README.md",
+      "type": "file",
+      "sha": "bcb65e4d0510be08b87b4c47507529e14afe84ca",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 399,
+      "is_binary": false
+    },
+    {
+      "name": "Search.svg",
+      "path": "frontend/assets/Search.svg",
+      "type": "file",
+      "sha": "73f0edad8fb31422bb9b5caeb42006de28846144",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 247,
+      "is_binary": false
+    },
+    {
+      "name": "SearchDark.svg",
+      "path": "frontend/assets/SearchDark.svg",
+      "type": "file",
+      "sha": "a22ba2ca2c4c9619754dcd4a67ed1143f48de699",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 251,
+      "is_binary": false
+    },
+    {
+      "name": "articles",
+      "path": "frontend/assets/articles",
+      "type": "directory",
+      "sha": "82970886f381c240519e41253f5df7f70fa8442b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "imagem-bot.png",
+      "path": "frontend/assets/articles/imagem-bot.png",
+      "type": "file",
+      "sha": "dc296491c513fafc9a4d1af15401d7318074d0cc",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 73274,
+      "is_binary": false
+    },
+    {
+      "name": "imagem-dispensa.png",
+      "path": "frontend/assets/articles/imagem-dispensa.png",
+      "type": "file",
+      "sha": "aa92cf79056174ad8b367470be68ce6082ded9ac",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 135811,
+      "is_binary": false
+    },
+    {
+      "name": "imagem-licitacao.png",
+      "path": "frontend/assets/articles/imagem-licitacao.png",
+      "type": "file",
+      "sha": "5f4393405f221298e1163c1d17465cbc934bb9ce",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 26850,
+      "is_binary": false
+    },
+    {
+      "name": "logo-licita.jpg",
+      "path": "frontend/assets/articles/logo-licita.jpg",
+      "type": "file",
+      "sha": "1f304b6c17166393e2e0caa24791238c7e271544",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 14020,
+      "is_binary": false
+    },
+    {
+      "name": "burger.svg",
+      "path": "frontend/assets/burger.svg",
+      "type": "file",
+      "sha": "c62f1e601a4fd8e66ae88ba17dd340c9fa2a0783",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 326,
+      "is_binary": false
+    },
+    {
+      "name": "calendario.svg",
+      "path": "frontend/assets/calendario.svg",
+      "type": "file",
+      "sha": "a390946a1805355583fc25233fc60d1aa571487a",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 327,
+      "is_binary": false
+    },
+    {
+      "name": "carrossel",
+      "path": "frontend/assets/carrossel",
+      "type": "directory",
+      "sha": "52a469ef453851b4f77f022d1b53ae70fc74a5a2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "1.png",
+      "path": "frontend/assets/carrossel/1.png",
+      "type": "file",
+      "sha": "99a0adedc5957e0c6df5117612bd9a65f093acea",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 358657,
+      "is_binary": false
+    },
+    {
+      "name": "2.png",
+      "path": "frontend/assets/carrossel/2.png",
+      "type": "file",
+      "sha": "07d199bb0d6e05197c5e3af59cf281631099a877",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 323381,
+      "is_binary": false
+    },
+    {
+      "name": "3.png",
+      "path": "frontend/assets/carrossel/3.png",
+      "type": "file",
+      "sha": "415638d5bbf44c816f3e8444032b245fb638ab5c",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 357361,
+      "is_binary": false
+    },
+    {
+      "name": "4.png",
+      "path": "frontend/assets/carrossel/4.png",
+      "type": "file",
+      "sha": "1f79804261a25d3f1fa083355ccb5f8e5b66a63d",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 161181,
+      "is_binary": false
+    },
+    {
+      "name": "download.jpg",
+      "path": "frontend/assets/download.jpg",
+      "type": "file",
+      "sha": "80953c610c362c66e1c911cf30d3f84522b7be3a",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 333241,
+      "is_binary": false
+    },
+    {
+      "name": "facebook.svg",
+      "path": "frontend/assets/facebook.svg",
+      "type": "file",
+      "sha": "a02913fa77295d713db3f121f93e3fb93468ce17",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 395,
+      "is_binary": false
+    },
+    {
+      "name": "filter.svg",
+      "path": "frontend/assets/filter.svg",
+      "type": "file",
+      "sha": "8d111e2d8680f90498fae58ae0707dbd132fa09a",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 495,
+      "is_binary": false
+    },
+    {
+      "name": "google.svg",
+      "path": "frontend/assets/google.svg",
+      "type": "file",
+      "sha": "f28e8de44da17b14f1fefcda53243bdccd0d230d",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1391,
+      "is_binary": false
+    },
+    {
+      "name": "icon.jpg",
+      "path": "frontend/assets/icon.jpg",
+      "type": "file",
+      "sha": "1f304b6c17166393e2e0caa24791238c7e271544",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 14020,
+      "is_binary": false
+    },
+    {
+      "name": "icon.png",
+      "path": "frontend/assets/icon.png",
+      "type": "file",
+      "sha": "a8aef06020035d70126410b8bf42bdfbe66de143",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1617,
+      "is_binary": false
+    },
+    {
+      "name": "logo.png",
+      "path": "frontend/assets/logo.png",
+      "type": "file",
+      "sha": "5d98b1840c41ef9eb9218a653a0ff82103d1c7ee",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 7437,
+      "is_binary": false
+    },
+    {
+      "name": "logoUnb.png",
+      "path": "frontend/assets/logoUnb.png",
+      "type": "file",
+      "sha": "dd2fbc1b718b9b9b29fd30e7c4ffbbdd4da30e5c",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2998,
+      "is_binary": false
+    },
+    {
+      "name": "members",
+      "path": "frontend/assets/members",
+      "type": "directory",
+      "sha": "12ca65d1ce7de11d2c85f8254b012632c183f8c2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "1.jpg",
+      "path": "frontend/assets/members/1.jpg",
+      "type": "file",
+      "sha": "db82ef24b69afc0f2455cc9dc4332a02ed6ebd1f",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 37051,
+      "is_binary": false
+    },
+    {
+      "name": "2.jpg",
+      "path": "frontend/assets/members/2.jpg",
+      "type": "file",
+      "sha": "31e80cf8f01ceb0545ccf94aa27d41e964caa48f",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 66082,
+      "is_binary": false
+    },
+    {
+      "name": "3.jpg",
+      "path": "frontend/assets/members/3.jpg",
+      "type": "file",
+      "sha": "0dd468063be99dc23330ea0b82c81d540ed6e195",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 42675,
+      "is_binary": false
+    },
+    {
+      "name": "4.jpg",
+      "path": "frontend/assets/members/4.jpg",
+      "type": "file",
+      "sha": "b71ad8190e4f866da0d0bbcdbebc1c078ce58973",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 479902,
+      "is_binary": false
+    },
+    {
+      "name": "5.jpg",
+      "path": "frontend/assets/members/5.jpg",
+      "type": "file",
+      "sha": "c7ea1038e6e5db1d29430df4b839434f759c8809",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 36121,
+      "is_binary": false
+    },
+    {
+      "name": "6.jpg",
+      "path": "frontend/assets/members/6.jpg",
+      "type": "file",
+      "sha": "3c48bec4905928cae28ceb8868f5c2f655c7bccf",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 41034,
+      "is_binary": false
+    },
+    {
+      "name": "7.jpg",
+      "path": "frontend/assets/members/7.jpg",
+      "type": "file",
+      "sha": "70d7949b9734d3c860d1207fec2ae392d1691bc5",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 84651,
+      "is_binary": false
+    },
+    {
+      "name": "twitter.svg",
+      "path": "frontend/assets/twitter.svg",
+      "type": "file",
+      "sha": "bf8f222624e42888a17835ef0cb5d51fef3a24a1",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1478,
+      "is_binary": false
+    },
+    {
+      "name": "unb.png",
+      "path": "frontend/assets/unb.png",
+      "type": "file",
+      "sha": "1c8451f8ca4c51f10ac569a4ef716abd1792ed7d",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 628,
+      "is_binary": false
+    },
+    {
+      "name": "valor.svg",
+      "path": "frontend/assets/valor.svg",
+      "type": "file",
+      "sha": "ac35d605fbb630258a3070c1ba0978bf2d8a263a",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 342,
+      "is_binary": false
+    },
+    {
+      "name": "coverage",
+      "path": "frontend/coverage",
+      "type": "directory",
+      "sha": "592cdcd92615665af7ee37b1fa2e90315de2ac2d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/coverage/README.md",
+      "type": "file",
+      "sha": "a46fcad910be51f8ef94ca4760a1baf2e558bafc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 292,
+      "is_binary": false
+    },
+    {
+      "name": "clover.xml",
+      "path": "frontend/coverage/clover.xml",
+      "type": "file",
+      "sha": "b0b5f678ad763e633f370a6638a0be0cada8efe0",
+      "mode": "100644",
+      "extension": ".xml",
+      "size": 31910,
+      "is_binary": false
+    },
+    {
+      "name": "coverage-final.json",
+      "path": "frontend/coverage/coverage-final.json",
+      "type": "file",
+      "sha": "b3f1a59af4dcb50c1304d885b8269bea6d399f54",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 71925,
+      "is_binary": false
+    },
+    {
+      "name": "lcov-report",
+      "path": "frontend/coverage/lcov-report",
+      "type": "directory",
+      "sha": "8cb6151ca4c4485bcf04548edfcd19b94659cfe3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "base.css",
+      "path": "frontend/coverage/lcov-report/base.css",
+      "type": "file",
+      "sha": "f418035b469aff23689a74c912849662f442aed4",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 5394,
+      "is_binary": false
+    },
+    {
+      "name": "block-navigation.js",
+      "path": "frontend/coverage/lcov-report/block-navigation.js",
+      "type": "file",
+      "sha": "cc121302316c8faaaebfd6a15f4212d99e563199",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2655,
+      "is_binary": false
+    },
+    {
+      "name": "favicon.png",
+      "path": "frontend/coverage/lcov-report/favicon.png",
+      "type": "file",
+      "sha": "c1525b811a167671e9de1fa78aab9f5c0b61cef7",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 445,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/index.html",
+      "type": "file",
+      "sha": "e437118baee3c7db5c491ed304e8610cfa86a82f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 25579,
+      "is_binary": false
+    },
+    {
+      "name": "prettify.css",
+      "path": "frontend/coverage/lcov-report/prettify.css",
+      "type": "file",
+      "sha": "b317a7cda31a440fbd47540297ee3c68d51f343e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 676,
+      "is_binary": false
+    },
+    {
+      "name": "prettify.js",
+      "path": "frontend/coverage/lcov-report/prettify.js",
+      "type": "file",
+      "sha": "b3225238f26e3ab49a5e41e9cb287a73c82740b7",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 17590,
+      "is_binary": false
+    },
+    {
+      "name": "sort-arrow-sprite.png",
+      "path": "frontend/coverage/lcov-report/sort-arrow-sprite.png",
+      "type": "file",
+      "sha": "6ed68316eb3f65dec9063332d2f69bf3093bbfab",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 138,
+      "is_binary": false
+    },
+    {
+      "name": "sorter.js",
+      "path": "frontend/coverage/lcov-report/sorter.js",
+      "type": "file",
+      "sha": "2bb296a8ca8e48e468f22b92250b9fe2518b8cfc",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 6181,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "frontend/coverage/lcov-report/src",
+      "type": "directory",
+      "sha": "1851776ada9647362ff483436c1233f0b2b0ff7a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "article-root.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/article-root.jsx.html",
+      "type": "file",
+      "sha": "3789b1e14ad1010d5bf25efaee6d6d3272a86667",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4392,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "frontend/coverage/lcov-report/src/components",
+      "type": "directory",
+      "sha": "148deb70d4d136a06440171bd0b1ab927cde6c61",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "campo-pesquisa",
+      "path": "frontend/coverage/lcov-report/src/components/campo-pesquisa",
+      "type": "directory",
+      "sha": "3a96cab35c1eade27bf0d16573f7904094c8ea96",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/campo-pesquisa/index.html",
+      "type": "file",
+      "sha": "93258af4528d7b1f61020ccadb44138337b795a4",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4499,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/campo-pesquisa/index.jsx.html",
+      "type": "file",
+      "sha": "a03d5622b18dfc407e6610dee2728c5fc998dc4c",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6920,
+      "is_binary": false
+    },
+    {
+      "name": "card-about",
+      "path": "frontend/coverage/lcov-report/src/components/card-about",
+      "type": "directory",
+      "sha": "33c5d67934d40e211ceda0703fb203877553611f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/card-about/index.html",
+      "type": "file",
+      "sha": "d080c2220e375189696af0a6b8e9c3b1f370b856",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4491,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/card-about/index.jsx.html",
+      "type": "file",
+      "sha": "0e8d6d307d2d8843a720e6e0ef11d54cd650786d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 7165,
+      "is_binary": false
+    },
+    {
+      "name": "card-licitacoes",
+      "path": "frontend/coverage/lcov-report/src/components/card-licitacoes",
+      "type": "directory",
+      "sha": "d9abb146f3375fe2b32562b25a7c46aada38ddbc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/card-licitacoes/index.html",
+      "type": "file",
+      "sha": "df4116f655a5638306cb4e19d4726fe47923c577",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4501,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/card-licitacoes/index.jsx.html",
+      "type": "file",
+      "sha": "45717af55ffb6386318305694531a6b6bbfafd62",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 10368,
+      "is_binary": false
+    },
+    {
+      "name": "carrosel",
+      "path": "frontend/coverage/lcov-report/src/components/carrosel",
+      "type": "directory",
+      "sha": "88936285fe7522026992f02e6aeba769df581e95",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/carrosel/index.html",
+      "type": "file",
+      "sha": "dd167e91a0b1d37f046576793265eab0febe2a06",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4459,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/carrosel/index.jsx.html",
+      "type": "file",
+      "sha": "cb99554cee5cb35c1c03015f4d8d1dd811650f37",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 3521,
+      "is_binary": false
+    },
+    {
+      "name": "footer",
+      "path": "frontend/coverage/lcov-report/src/components/footer",
+      "type": "directory",
+      "sha": "7105c740bef9d0b8739651a8e96e590734ba952e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/footer/index.html",
+      "type": "file",
+      "sha": "1a243fc6871441c4d754cb15dba47c2a7658220d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4474,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/footer/index.jsx.html",
+      "type": "file",
+      "sha": "77563584345a58b1c5b3270a4d1a0df13435e1c1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 12691,
+      "is_binary": false
+    },
+    {
+      "name": "header",
+      "path": "frontend/coverage/lcov-report/src/components/header",
+      "type": "directory",
+      "sha": "d6d9f7ef0a7295e917091e27697a4fc50da7fc12",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/header/index.html",
+      "type": "file",
+      "sha": "33a3ea5849d2a0b7c686fb32d2f53d8c0578ab3e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4510,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/header/index.jsx.html",
+      "type": "file",
+      "sha": "62ebfbf58b0319d10c432bbf17f44b20095753f8",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 19096,
+      "is_binary": false
+    },
+    {
+      "name": "layout",
+      "path": "frontend/coverage/lcov-report/src/components/layout",
+      "type": "directory",
+      "sha": "2933007033c747d87a158f450ab66f1c9ec469e1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "custom-button",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-button",
+      "type": "directory",
+      "sha": "04656c1a633916633bf85c87f613bccf87494467",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-button/index.html",
+      "type": "file",
+      "sha": "7c1b481cbf05df5bf67506cca20b0e575586b329",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4535,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-button/index.jsx.html",
+      "type": "file",
+      "sha": "984f0e5559f6cb5095acf3d6f2ea81a64231b1bf",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4726,
+      "is_binary": false
+    },
+    {
+      "name": "custom-input-checkbox",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-checkbox",
+      "type": "directory",
+      "sha": "55e5f04ad8101b4d87490c6df24746259b45a7d1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-checkbox/index.html",
+      "type": "file",
+      "sha": "01f881d0d0ca3b9232d9153f0c1dfa82559db5c7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4511,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-checkbox/index.jsx.html",
+      "type": "file",
+      "sha": "fca8528c41dcb2140ca5a40eff029e69cba2a5af",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6019,
+      "is_binary": false
+    },
+    {
+      "name": "custom-input-radio",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-radio",
+      "type": "directory",
+      "sha": "1f67e45f99791f18164d4c7b5374070bbcc67d7e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-radio/index.html",
+      "type": "file",
+      "sha": "4c4ae5a0683823b9cdf0d7023b4a52e8cf5ddb75",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4545,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/layout/custom-input-radio/index.jsx.html",
+      "type": "file",
+      "sha": "dca886268dcc947a70cad658aa4814eb7e87486c",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4710,
+      "is_binary": false
+    },
+    {
+      "name": "newsletter",
+      "path": "frontend/coverage/lcov-report/src/components/newsletter",
+      "type": "directory",
+      "sha": "66e74550cba81eecce0120756b2b666146e9f756",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Test.js.html",
+      "path": "frontend/coverage/lcov-report/src/components/newsletter/Test.js.html",
+      "type": "file",
+      "sha": "fc249938b4cb68f1471830ec037987e031e00335",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4581,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/newsletter/index.html",
+      "type": "file",
+      "sha": "0019596530fe5f4a5119e77c99cb7d3fcfa065f8",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5077,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/newsletter/index.jsx.html",
+      "type": "file",
+      "sha": "06fd63f41f170fd9c7520536ecb15ca913bf94c3",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 12803,
+      "is_binary": false
+    },
+    {
+      "name": "sidebar-responsive",
+      "path": "frontend/coverage/lcov-report/src/components/sidebar-responsive",
+      "type": "directory",
+      "sha": "09d646f3c24dac4b05991778f461ea15531dcc0d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/components/sidebar-responsive/index.html",
+      "type": "file",
+      "sha": "259efd986808e942b94e52c31a46f1aee4287977",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4506,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/components/sidebar-responsive/index.jsx.html",
+      "type": "file",
+      "sha": "56f41ec7d063aaa242512696ceb88a9435099ca7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 9012,
+      "is_binary": false
+    },
+    {
+      "name": "config",
+      "path": "frontend/coverage/lcov-report/src/config",
+      "type": "directory",
+      "sha": "c4d84a52f5a792ae181c82e3500418f5ba002ccc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api.js.html",
+      "path": "frontend/coverage/lcov-report/src/config/api.js.html",
+      "type": "file",
+      "sha": "4e5caebb7792ab2b51461078e0180843697b2a65",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 3806,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/config/index.html",
+      "type": "file",
+      "sha": "ea5d45c9d628e355ed4c567049e7d843215e8a02",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4428,
+      "is_binary": false
+    },
+    {
+      "name": "context",
+      "path": "frontend/coverage/lcov-report/src/context",
+      "type": "directory",
+      "sha": "8a02ba71ee5ab479625ac6dc7bc6d9cb53795e18",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "BiddingContext.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/context/BiddingContext.jsx.html",
+      "type": "file",
+      "sha": "35979f976ee69d0880013a2ee761ccdd4d55058d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6189,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/context/index.html",
+      "type": "file",
+      "sha": "deb0b04aaf4411376d366673b2329f870045a8b9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4466,
+      "is_binary": false
+    },
+    {
+      "name": "hooks",
+      "path": "frontend/coverage/lcov-report/src/hooks",
+      "type": "directory",
+      "sha": "c26b6009276cffa7a2aec3fed546f266d30cdd04",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/hooks/index.html",
+      "type": "file",
+      "sha": "ffbf94ed222998a10660b1f346f94371cb3bbf63",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5811,
+      "is_binary": false
+    },
+    {
+      "name": "useGetImage.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/hooks/useGetImage.jsx.html",
+      "type": "file",
+      "sha": "de29f81adcc53f61d089c52954e9730d1f9b883e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5090,
+      "is_binary": false
+    },
+    {
+      "name": "useLoadData.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/hooks/useLoadData.jsx.html",
+      "type": "file",
+      "sha": "72756f95948f3d683606b712dac786d252c763f9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6271,
+      "is_binary": false
+    },
+    {
+      "name": "useSearchBidding.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/hooks/useSearchBidding.jsx.html",
+      "type": "file",
+      "sha": "af0f31693efbcbecb231f7f479b5eefaa17508fa",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 7538,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/index.html",
+      "type": "file",
+      "sha": "2d41a654e513c334c3a31ec8f33a7194bc93258e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5648,
+      "is_binary": false
+    },
+    {
+      "name": "main.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/main.jsx.html",
+      "type": "file",
+      "sha": "0440862b0d6edeadb8f9c25a12edf0f4a363c7a1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 13681,
+      "is_binary": false
+    },
+    {
+      "name": "mocks",
+      "path": "frontend/coverage/lcov-report/src/mocks",
+      "type": "directory",
+      "sha": "ede7490d5843e6c1f80cc04d3978e75d1ddb08b3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/mocks/index.html",
+      "type": "file",
+      "sha": "4f1d8fbec01727b02528725b44cf964d8bb31f0f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5760,
+      "is_binary": false
+    },
+    {
+      "name": "licitacoes.js.html",
+      "path": "frontend/coverage/lcov-report/src/mocks/licitacoes.js.html",
+      "type": "file",
+      "sha": "01db2a2d9ebbc228c05ffbfba2b36be90b47921a",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 8394,
+      "is_binary": false
+    },
+    {
+      "name": "members.js.html",
+      "path": "frontend/coverage/lcov-report/src/mocks/members.js.html",
+      "type": "file",
+      "sha": "5185ce915163fbabc4d070d4ae603bf0ec04a48d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 11478,
+      "is_binary": false
+    },
+    {
+      "name": "sobreLicitacoes.js.html",
+      "path": "frontend/coverage/lcov-report/src/mocks/sobreLicitacoes.js.html",
+      "type": "file",
+      "sha": "767319b0a8d7da847c4200a280dbb1855836d1b9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6183,
+      "is_binary": false
+    },
+    {
+      "name": "pages",
+      "path": "frontend/coverage/lcov-report/src/pages",
+      "type": "directory",
+      "sha": "dabdd9117b886052bb6f3d0f74c436a94a08850f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-bidding-dispatch",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding-dispatch",
+      "type": "directory",
+      "sha": "002f6831e113b1b20314fed0d374d3d7b1585f5b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding-dispatch/index.html",
+      "type": "file",
+      "sha": "2e1b2ab7b265bbc67189e423d4d0c6df42b99044",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4505,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding-dispatch/index.jsx.html",
+      "type": "file",
+      "sha": "4ec9ce93ed86880d1b369c8cbbc64fe0fc80ec2e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 21712,
+      "is_binary": false
+    },
+    {
+      "name": "about-bidding",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding",
+      "type": "directory",
+      "sha": "84626a5125e5edcf3fbda094c4399f42698f2417",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding/index.html",
+      "type": "file",
+      "sha": "6cff3a0d0fd8f4493ca9b0e173cc60ca1751c7b7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4487,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bidding/index.jsx.html",
+      "type": "file",
+      "sha": "496d566c032326589b9004a0a86fd4ef3468df00",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 13812,
+      "is_binary": false
+    },
+    {
+      "name": "about-bot",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bot",
+      "type": "directory",
+      "sha": "8ca81a410a5acdda6af918579f99f55b2d0fe6b1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bot/index.html",
+      "type": "file",
+      "sha": "cb0d2a28dc788186a3a829fccd32536614d19692",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4479,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-bot/index.jsx.html",
+      "type": "file",
+      "sha": "2a36eaec53d8c48eaf228943721cf472a49ef1a1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 19874,
+      "is_binary": false
+    },
+    {
+      "name": "about-licitaBSB",
+      "path": "frontend/coverage/lcov-report/src/pages/about-licitaBSB",
+      "type": "directory",
+      "sha": "0704d17ac500ca92fae72f0f3b35eeeec640a09e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-licitaBSB/index.html",
+      "type": "file",
+      "sha": "6decd61b5068d3b608c8f282e9fd6320557879ef",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4491,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-licitaBSB/index.jsx.html",
+      "type": "file",
+      "sha": "a6238d50f3b1980cb8801eb66a90d207fa5547ac",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 21415,
+      "is_binary": false
+    },
+    {
+      "name": "about-lisitaBSB",
+      "path": "frontend/coverage/lcov-report/src/pages/about-lisitaBSB",
+      "type": "directory",
+      "sha": "d088195551883a5ec7e6c9392da9395507364a25",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-lisitaBSB/index.html",
+      "type": "file",
+      "sha": "b32cabc1812323a649bc61923b5b71d7f40a8da7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4491,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-lisitaBSB/index.jsx.html",
+      "type": "file",
+      "sha": "ef797a13c7e48ad22a17eddee8a60be6db08cf97",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 21426,
+      "is_binary": false
+    },
+    {
+      "name": "about-us",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us",
+      "type": "directory",
+      "sha": "1558045246e095a8c79a78cd222c9181489b9e0e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "card-member",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us/card-member",
+      "type": "directory",
+      "sha": "5b5c6994726a3fa28b4c2ab8bbd2f2e65e62fa07",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us/card-member/index.html",
+      "type": "file",
+      "sha": "0a1174d235c2d3218c5559c8232b88eb59315e6a",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4525,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us/card-member/index.jsx.html",
+      "type": "file",
+      "sha": "29b6f8f1c4657b57f0efc558c953c39f4022c1e1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 9444,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us/index.html",
+      "type": "file",
+      "sha": "3ea645517068bf9fa1f2157d02779de1ebb5f778",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4477,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/about-us/index.jsx.html",
+      "type": "file",
+      "sha": "795ed16d3ae1729b3259af5250c5166f302dcaf4",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 8365,
+      "is_binary": false
+    },
+    {
+      "name": "articles",
+      "path": "frontend/coverage/lcov-report/src/pages/articles",
+      "type": "directory",
+      "sha": "722730203d4fd90bfe13290f55e76902435e8b53",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "article-card",
+      "path": "frontend/coverage/lcov-report/src/pages/articles/article-card",
+      "type": "directory",
+      "sha": "85e4d757a76dfb5172c035f7900dd1af68634881",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/articles/article-card/index.html",
+      "type": "file",
+      "sha": "f672b8586256cf391df673f29753dcb30ad5f850",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4487,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/articles/article-card/index.jsx.html",
+      "type": "file",
+      "sha": "9ca2ab1520c7c88e6d981baf5531d2fdfa96e17d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5827,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/articles/index.html",
+      "type": "file",
+      "sha": "483e120ea9de9a66f4e3b5db8f641c9343aba55b",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4437,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/articles/index.jsx.html",
+      "type": "file",
+      "sha": "e2032732808dd25c8d24f3867eeab21ed3b44f9d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 11563,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-list",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list",
+      "type": "directory",
+      "sha": "7f1bab9cfc6226133d8591790a1a0069f193cf91",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "filter",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list/filter",
+      "type": "directory",
+      "sha": "90cc0c83727d6104ababfd01acd3246775a0d7b2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list/filter/index.html",
+      "type": "file",
+      "sha": "f15493af22a5274f68d108f5906471b0e5d4609d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4561,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list/filter/index.jsx.html",
+      "type": "file",
+      "sha": "1b186fbab814999c0e06ed58737d852c2bc62812",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 31645,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list/index.html",
+      "type": "file",
+      "sha": "b22084a89a0dd06c473b10f312aafdb41818cf3b",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4446,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-list/index.jsx.html",
+      "type": "file",
+      "sha": "bdf2434c6148fe6eaae6468e2dd41ce79ae49082",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 16631,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-page",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-page",
+      "type": "directory",
+      "sha": "e7f6f959ee40d43d32139368c0c444fb605166ae",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-page/index.html",
+      "type": "file",
+      "sha": "a89e9f4765d33249f3b0681b715cdcb2e1d4c9e0",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4485,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-page/index.jsx.html",
+      "type": "file",
+      "sha": "1e85405873e79334090623ad0d252cb6b0ee4c77",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 14798,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-search-list",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-search-list",
+      "type": "directory",
+      "sha": "795aa14576c40a21c9646b22430bb11f9b4930bd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-search-list/index.html",
+      "type": "file",
+      "sha": "8eb52ac0dcaf7a303cf5d1a2f2685e2debe1ab09",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4457,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/bidding-search-list/index.jsx.html",
+      "type": "file",
+      "sha": "e9b8f8882dab1af8ba979922feb04804e11bdc41",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 12377,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard",
+      "path": "frontend/coverage/lcov-report/src/pages/dashboard",
+      "type": "directory",
+      "sha": "7c892a660cd7f212a22cef8834fb524b3740cf59",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/dashboard/index.html",
+      "type": "file",
+      "sha": "e4b4d70b8b9cc111d16cadf4766d453c83fca4b9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4443,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/dashboard/index.jsx.html",
+      "type": "file",
+      "sha": "4567573f1998a4cd9dcb6ba3fafea9446158613d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 59240,
+      "is_binary": false
+    },
+    {
+      "name": "error",
+      "path": "frontend/coverage/lcov-report/src/pages/error",
+      "type": "directory",
+      "sha": "8eb5e4779a873fa49f073387be25e87cae044642",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/error/index.html",
+      "type": "file",
+      "sha": "1f731fbb3d25a6a17681be2306d67a38800b3550",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4431,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/error/index.jsx.html",
+      "type": "file",
+      "sha": "cf614a9317cd8324bd993c0f5e43c5e378c15d33",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4287,
+      "is_binary": false
+    },
+    {
+      "name": "landing",
+      "path": "frontend/coverage/lcov-report/src/pages/landing",
+      "type": "directory",
+      "sha": "0b2276b731437e6fce2f2e629d346dc8bfaf3650",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/landing/index.html",
+      "type": "file",
+      "sha": "22561edcc6ac2a1f149a256751197116d77ad902",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4435,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/landing/index.jsx.html",
+      "type": "file",
+      "sha": "1da60882f1cb48debc92e4a7bc57e7f1d9bac006",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5107,
+      "is_binary": false
+    },
+    {
+      "name": "ultimas-licitacoes",
+      "path": "frontend/coverage/lcov-report/src/pages/landing/ultimas-licitacoes",
+      "type": "directory",
+      "sha": "e98c9b75d9d4830fba4ac5b7ce52675e1959ee7a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/pages/landing/ultimas-licitacoes/index.html",
+      "type": "file",
+      "sha": "ff85dc9901b0ea16f2618ab09d20187091bdf74f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4537,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/pages/landing/ultimas-licitacoes/index.jsx.html",
+      "type": "file",
+      "sha": "3c487783bff3fd82e8d318f0a1a3cc79c3cbbde1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 7913,
+      "is_binary": false
+    },
+    {
+      "name": "root.jsx.html",
+      "path": "frontend/coverage/lcov-report/src/root.jsx.html",
+      "type": "file",
+      "sha": "377e3de116688ba79f29936490f28c7b2d296688",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4766,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "frontend/coverage/lcov-report/src/services",
+      "type": "directory",
+      "sha": "4ba0bdd03fb69ab58b7c653381d70d55f8bc63cd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/services/index.html",
+      "type": "file",
+      "sha": "17841d1d3fc7fdc5021b991cfdfea8c26942f9ba",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5178,
+      "is_binary": false
+    },
+    {
+      "name": "licitacoes.service.js.html",
+      "path": "frontend/coverage/lcov-report/src/services/licitacoes.service.js.html",
+      "type": "file",
+      "sha": "889a80c0765f2aa5d9e9daf1771eee668a59a5d7",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5939,
+      "is_binary": false
+    },
+    {
+      "name": "orgaos.service.js.html",
+      "path": "frontend/coverage/lcov-report/src/services/orgaos.service.js.html",
+      "type": "file",
+      "sha": "e9ad7e221e148e68ca5a388022f2b5fb13949677",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4741,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "frontend/coverage/lcov-report/src/utils",
+      "type": "directory",
+      "sha": "48aeeb8e4d830624d4260dbba7eca73e50a58f4f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bidding-types.js.html",
+      "path": "frontend/coverage/lcov-report/src/utils/bidding-types.js.html",
+      "type": "file",
+      "sha": "74d93417d2ad83f8300c6d572fad7c21f83182cf",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 3273,
+      "is_binary": false
+    },
+    {
+      "name": "format-bidding-object.js.html",
+      "path": "frontend/coverage/lcov-report/src/utils/format-bidding-object.js.html",
+      "type": "file",
+      "sha": "62361f987b8d6ba43f6cd71b95762f532485fcf5",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5496,
+      "is_binary": false
+    },
+    {
+      "name": "format-currency.js.html",
+      "path": "frontend/coverage/lcov-report/src/utils/format-currency.js.html",
+      "type": "file",
+      "sha": "3420816baec1b3d54dd48fdf571f1c4dd20de957",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 5025,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/coverage/lcov-report/src/utils/index.html",
+      "type": "file",
+      "sha": "f13a2d73776dc6de353169651fe4caae4c0fb84f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 6521,
+      "is_binary": false
+    },
+    {
+      "name": "status-bidding.js.html",
+      "path": "frontend/coverage/lcov-report/src/utils/status-bidding.js.html",
+      "type": "file",
+      "sha": "d1323ec07d95a96619430e0e219c6f6c3a6d6757",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 3619,
+      "is_binary": false
+    },
+    {
+      "name": "transform-date.utils.js.html",
+      "path": "frontend/coverage/lcov-report/src/utils/transform-date.utils.js.html",
+      "type": "file",
+      "sha": "097bc2c7b4da1ca8c361325603071fc8fb6ee839",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 4379,
+      "is_binary": false
+    },
+    {
+      "name": "lcov.info",
+      "path": "frontend/coverage/lcov.info",
+      "type": "file",
+      "sha": "26864caaeab5c14f96da6af4462cd30002ad0c0c",
+      "mode": "100644",
+      "extension": ".info",
+      "size": 12396,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/index.html",
+      "type": "file",
+      "sha": "932b76529d519521d7e1a7a0ae9b92afb9133977",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 752,
+      "is_binary": false
+    },
+    {
+      "name": "jest.config.js",
+      "path": "frontend/jest.config.js",
+      "type": "file",
+      "sha": "bf57b6b7e6f375bcacbd7c04b2adf9d4fe48fe43",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 130,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "frontend/package-lock.json",
+      "type": "file",
+      "sha": "ab5a9e27eac7a60f564ce391024c406751b684e8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 932619,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "frontend/package.json",
+      "type": "file",
+      "sha": "9b751a7e6f4374e4a564e5e466df03cf0ba20a02",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1794,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "frontend/public",
+      "type": "directory",
+      "sha": "5dc9a3795c76e6bea49ca6e09f196eb034586b53",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/public/README.md",
+      "type": "file",
+      "sha": "0647447d088a309b2685b42a3fdf760dc0bc7862",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 262,
+      "is_binary": false
+    },
+    {
+      "name": "_redirects",
+      "path": "frontend/public/_redirects",
+      "type": "file",
+      "sha": "7797f7c6a7356b0d451d11a49925df854c22e978",
+      "mode": "100644",
+      "extension": "",
+      "size": 19,
+      "is_binary": false
+    },
+    {
+      "name": "google0ac55b310b137dd4.html",
+      "path": "frontend/public/google0ac55b310b137dd4.html",
+      "type": "file",
+      "sha": "7a42c5773463f97cbaed49167154162e1a8ed66d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 53,
+      "is_binary": false
+    },
+    {
+      "name": "images",
+      "path": "frontend/public/images",
+      "type": "directory",
+      "sha": "6038e59e9a3f37b3a898267c1f0a1687b978d80f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "card-about-bidding",
+      "path": "frontend/public/images/card-about-bidding",
+      "type": "directory",
+      "sha": "9f93a9ffde06a0bd12b489c5e250e74b1cb064e9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "licitacao01.jpg",
+      "path": "frontend/public/images/card-about-bidding/licitacao01.jpg",
+      "type": "file",
+      "sha": "c00ddbe081ac7ee7bb8090a7c8ce866a1f7ce01e",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 11307,
+      "is_binary": false
+    },
+    {
+      "name": "vite.svg",
+      "path": "frontend/public/vite.svg",
+      "type": "file",
+      "sha": "e7b8dfb1b2a60bd50538bec9f876511b9cac21e3",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1497,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "frontend/src",
+      "type": "directory",
+      "sha": "0311ab49eb8752d8ce9c0ce693cd314688a83f31",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/src/README.md",
+      "type": "file",
+      "sha": "07d13ee832f7ff239b21f45f961fc5f781ca1cc2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 758,
+      "is_binary": false
+    },
+    {
+      "name": "article-root.jsx",
+      "path": "frontend/src/article-root.jsx",
+      "type": "file",
+      "sha": "ce1748aa8e376102979a32b521aecb1d484e5e28",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 159,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "frontend/src/components",
+      "type": "directory",
+      "sha": "cd0c1ab132c62c9912ab0b0aa742b845a712a9d4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "campo-pesquisa",
+      "path": "frontend/src/components/campo-pesquisa",
+      "type": "directory",
+      "sha": "b0873919d3fc88df9cf302dd1ef0540e7a77ce87",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "campo-pesquisa.test.js",
+      "path": "frontend/src/components/campo-pesquisa/campo-pesquisa.test.js",
+      "type": "file",
+      "sha": "741412447a61e146dc4a48c457762a07e2b08cba",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1831,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/campo-pesquisa/index.jsx",
+      "type": "file",
+      "sha": "14a1ab6284295b448c93f44fed9a0f1deb85eb4a",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 864,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/campo-pesquisa/style.module.css",
+      "type": "file",
+      "sha": "487c0baac6fbc3c0391567d88a19a2be2570acfd",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1006,
+      "is_binary": false
+    },
+    {
+      "name": "card-licitacoes",
+      "path": "frontend/src/components/card-licitacoes",
+      "type": "directory",
+      "sha": "938b9f70f45de4d9266fcd282394797df6aa92f0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "card-licitacoes.test.js",
+      "path": "frontend/src/components/card-licitacoes/card-licitacoes.test.js",
+      "type": "file",
+      "sha": "c42a0fbb2587c98975639afbc80b443362292cf6",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4292,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/card-licitacoes/index.jsx",
+      "type": "file",
+      "sha": "42abd5c2c5d3de4b38e77f12fe521fa02e6932f7",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1752,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/card-licitacoes/style.module.css",
+      "type": "file",
+      "sha": "9ea9accda288466958631c4ffd9ae3f66f96937c",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2223,
+      "is_binary": false
+    },
+    {
+      "name": "carrosel",
+      "path": "frontend/src/components/carrosel",
+      "type": "directory",
+      "sha": "2263754cb15369c5fe7d1c1f27ee32a5be1db123",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/carrosel/index.jsx",
+      "type": "file",
+      "sha": "119bcc86efbd1352205efd7ec08147ee70aaf61a",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 77,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/carrosel/style.module.css",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "footer",
+      "path": "frontend/src/components/footer",
+      "type": "directory",
+      "sha": "26ad513065ced4226cf72514adfddceddc08cdf7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/components/footer/__snapshots__",
+      "type": "directory",
+      "sha": "66d8f649722c9a792d87632c2e48084cd54d0ebb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "footer.test.js.snap",
+      "path": "frontend/src/components/footer/__snapshots__/footer.test.js.snap",
+      "type": "file",
+      "sha": "b6859413a0784dcd330e54e3979260463a72fa1f",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 952,
+      "is_binary": false
+    },
+    {
+      "name": "footer.test.js",
+      "path": "frontend/src/components/footer/footer.test.js",
+      "type": "file",
+      "sha": "cfb34d042dfe4a75450f9cce085c05a75e3ac0f3",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1771,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/footer/index.jsx",
+      "type": "file",
+      "sha": "3a09040240e2995175ebbba44bb6aca209b442d3",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2050,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/footer/style.module.css",
+      "type": "file",
+      "sha": "85b89e1610ffb62f0160e1cf4080f432dc8912f3",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1508,
+      "is_binary": false
+    },
+    {
+      "name": "header",
+      "path": "frontend/src/components/header",
+      "type": "directory",
+      "sha": "efbd3349cde325602cedd4214abf28b75cfc5017",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/components/header/__snapshots__",
+      "type": "directory",
+      "sha": "9a688d5c8bf0168cdd910fa662c8a5148bc1476c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "header.test.js.snap",
+      "path": "frontend/src/components/header/__snapshots__/header.test.js.snap",
+      "type": "file",
+      "sha": "07d2d9ac863f765fa487c7946ef92687b6a94492",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 1217,
+      "is_binary": false
+    },
+    {
+      "name": "header.test.js",
+      "path": "frontend/src/components/header/header.test.js",
+      "type": "file",
+      "sha": "e5b0ded379d5abf42add552f0273637ed78831b7",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2328,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/header/index.jsx",
+      "type": "file",
+      "sha": "36ce1762e3a69325667d023719a38ae9370ec9d7",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 3970,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/header/style.module.css",
+      "type": "file",
+      "sha": "cae0a7f22e0c3197a8354bf46716459bfb96e9fe",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2211,
+      "is_binary": false
+    },
+    {
+      "name": "layout",
+      "path": "frontend/src/components/layout",
+      "type": "directory",
+      "sha": "b3742571c0b3ec32512fd1ae6bca7168bc24fdf9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "custom-button",
+      "path": "frontend/src/components/layout/custom-button",
+      "type": "directory",
+      "sha": "696f5432f05b4dae74f940f062b94a1d46153244",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/layout/custom-button/index.jsx",
+      "type": "file",
+      "sha": "ba809bb3edd73940aaa73c285f38ac28e1ad3271",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 315,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/layout/custom-button/style.module.css",
+      "type": "file",
+      "sha": "309408a06fb86b7e8956e22376903979675fa2cb",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 444,
+      "is_binary": false
+    },
+    {
+      "name": "custom-input-checkbox",
+      "path": "frontend/src/components/layout/custom-input-checkbox",
+      "type": "directory",
+      "sha": "9b70152254edbd047e17747b7b2773398edfa1a2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/layout/custom-input-checkbox/index.jsx",
+      "type": "file",
+      "sha": "5e0c1b52ddfe3e4eeb912d35d613a9630db8589b",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 434,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/layout/custom-input-checkbox/style.module.css",
+      "type": "file",
+      "sha": "76aaf2c16bdedda5ebfb11d5bc1293f343bb1934",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 834,
+      "is_binary": false
+    },
+    {
+      "name": "custom-input-radio",
+      "path": "frontend/src/components/layout/custom-input-radio",
+      "type": "directory",
+      "sha": "05514bca592c751c418a6d779f35da1af9d3e6f1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/layout/custom-input-radio/index.jsx",
+      "type": "file",
+      "sha": "316c71a0f13fb9a7d6c1b79a13d2a6900d348c3f",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 363,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/layout/custom-input-radio/style.module.css",
+      "type": "file",
+      "sha": "f89f16d990393054a6e14ab3093f6ecd2c8046ca",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 713,
+      "is_binary": false
+    },
+    {
+      "name": "newsletter",
+      "path": "frontend/src/components/newsletter",
+      "type": "directory",
+      "sha": "8bf7b58b6f5b530e85ddd610bc288ce31286612b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Test.js",
+      "path": "frontend/src/components/newsletter/Test.js",
+      "type": "file",
+      "sha": "53eae346cceff15c8fff8994b723b426a85fa1a6",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 159,
+      "is_binary": false
+    },
+    {
+      "name": "amico.png",
+      "path": "frontend/src/components/newsletter/amico.png",
+      "type": "file",
+      "sha": "2c71ebc939f5bf37d28dec0a727b445f2337a048",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 27590,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/newsletter/index.jsx",
+      "type": "file",
+      "sha": "c64401855d8d8658743687a98637ea0b4eb39e76",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2195,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/newsletter/style.module.css",
+      "type": "file",
+      "sha": "9ce1511abd5fe260a9d43fd208d820672cf80e2a",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2891,
+      "is_binary": false
+    },
+    {
+      "name": "sidebar-responsive",
+      "path": "frontend/src/components/sidebar-responsive",
+      "type": "directory",
+      "sha": "ae96b2e8bd4f21019675a8b670b40b82051014ed",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/components/sidebar-responsive/index.jsx",
+      "type": "file",
+      "sha": "ea096d104f88edd2a519441877e53af82af91994",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1093,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/components/sidebar-responsive/style.module.css",
+      "type": "file",
+      "sha": "7ac5446723ab29701b2c8c3f465e5c7f792c0e77",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 716,
+      "is_binary": false
+    },
+    {
+      "name": "config",
+      "path": "frontend/src/config",
+      "type": "directory",
+      "sha": "cb106303e7ce4e8a2448b65cef631017ca85b0fe",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api.js",
+      "path": "frontend/src/config/api.js",
+      "type": "file",
+      "sha": "5146a488216fc300a25f11e9adce030e2fd46671",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 150,
+      "is_binary": false
+    },
+    {
+      "name": "hooks",
+      "path": "frontend/src/hooks",
+      "type": "directory",
+      "sha": "4ca2ac125181a7d92df9d2176c70c6b6f1b71691",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "useGetImage.jsx",
+      "path": "frontend/src/hooks/useGetImage.jsx",
+      "type": "file",
+      "sha": "71c9960fa58250dc323cfd666b7dcad53d6ded3e",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 443,
+      "is_binary": false
+    },
+    {
+      "name": "useGetImage.test.js",
+      "path": "frontend/src/hooks/useGetImage.test.js",
+      "type": "file",
+      "sha": "814d3d7bd3bb3d9e6d191d5d2f15a573281b1964",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1835,
+      "is_binary": false
+    },
+    {
+      "name": "useLoadData.jsx",
+      "path": "frontend/src/hooks/useLoadData.jsx",
+      "type": "file",
+      "sha": "46691c0843a9160e15ce062e81ad49dc9a657e38",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 661,
+      "is_binary": false
+    },
+    {
+      "name": "useLoadData.test.js",
+      "path": "frontend/src/hooks/useLoadData.test.js",
+      "type": "file",
+      "sha": "5003a2610fdff2626e60f8cc155d7c89ab47e19e",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1637,
+      "is_binary": false
+    },
+    {
+      "name": "useSearchBidding.jsx",
+      "path": "frontend/src/hooks/useSearchBidding.jsx",
+      "type": "file",
+      "sha": "29fdc75fa19408e7e7896749a2ce2cbee69a7b1b",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 843,
+      "is_binary": false
+    },
+    {
+      "name": "main.jsx",
+      "path": "frontend/src/main.jsx",
+      "type": "file",
+      "sha": "cf648665ee20fadcffbf4c7a361e9e1674867133",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2200,
+      "is_binary": false
+    },
+    {
+      "name": "mocks",
+      "path": "frontend/src/mocks",
+      "type": "directory",
+      "sha": "41bd168d2548c5b53fa62bca6910ce270fc29f0e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "carrossel.js",
+      "path": "frontend/src/mocks/carrossel.js",
+      "type": "file",
+      "sha": "2a5a44bfdb2d66fc888a9561d67cb65ce05ed6bd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1425,
+      "is_binary": false
+    },
+    {
+      "name": "licitacoes.js",
+      "path": "frontend/src/mocks/licitacoes.js",
+      "type": "file",
+      "sha": "b78687b30281d2014ef14c6e63cc79a3814a6a31",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1637,
+      "is_binary": false
+    },
+    {
+      "name": "members.js",
+      "path": "frontend/src/mocks/members.js",
+      "type": "file",
+      "sha": "dda90b8979e262402cf96a75c5af2ccf67b9bdb9",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3498,
+      "is_binary": false
+    },
+    {
+      "name": "sobreLicitacoes.js",
+      "path": "frontend/src/mocks/sobreLicitacoes.js",
+      "type": "file",
+      "sha": "c8104b9fee2e6dbe89165fc2b71bbf1b3cd345dd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1532,
+      "is_binary": false
+    },
+    {
+      "name": "pages",
+      "path": "frontend/src/pages",
+      "type": "directory",
+      "sha": "db591005bb510e4df8d7d9daab5991246be5d6d3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-bidding-dispatch",
+      "path": "frontend/src/pages/about-bidding-dispatch",
+      "type": "directory",
+      "sha": "4e5064f9eefca1e3ad444698d787070509c3e70c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/pages/about-bidding-dispatch/__snapshots__",
+      "type": "directory",
+      "sha": "6163816685afd75f9b3d15ade5597eaac1f768ad",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-bidding-dispatch.test.js.snap",
+      "path": "frontend/src/pages/about-bidding-dispatch/__snapshots__/about-bidding-dispatch.test.js.snap",
+      "type": "file",
+      "sha": "73a0c7f6dee5010b8f40d3f8e6b2893528a09ab8",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 5215,
+      "is_binary": false
+    },
+    {
+      "name": "about-bidding-dispatch.test.js",
+      "path": "frontend/src/pages/about-bidding-dispatch/about-bidding-dispatch.test.js",
+      "type": "file",
+      "sha": "9c69da2aaad8106a28d99fee963fe69d8b24e7d8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 856,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-bidding-dispatch/index.jsx",
+      "type": "file",
+      "sha": "e20ad14783b47ded1e5d8d9085427375da830bbd",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6342,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-bidding-dispatch/style.module.css",
+      "type": "file",
+      "sha": "07088193ae886604c1f769aede563a1ba3d847b0",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2826,
+      "is_binary": false
+    },
+    {
+      "name": "about-bidding",
+      "path": "frontend/src/pages/about-bidding",
+      "type": "directory",
+      "sha": "15e47f5c10aefd3854d52cb89b2eed27cf13b3ca",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/pages/about-bidding/__snapshots__",
+      "type": "directory",
+      "sha": "f68a41ca0311c450f88b708bb5590d7521494c1d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-bidding.test.js.snap",
+      "path": "frontend/src/pages/about-bidding/__snapshots__/about-bidding.test.js.snap",
+      "type": "file",
+      "sha": "4af2432644e845d3f9d47412e11a35297d769834",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 3123,
+      "is_binary": false
+    },
+    {
+      "name": "about-bidding.test.js",
+      "path": "frontend/src/pages/about-bidding/about-bidding.test.js",
+      "type": "file",
+      "sha": "ad6cc036318802fded22a3923455b0c77c9596c4",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 789,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-bidding/index.jsx",
+      "type": "file",
+      "sha": "c1aef0fb9974f3f75a0e705566435a85792f9442",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 3702,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-bidding/style.module.css",
+      "type": "file",
+      "sha": "07088193ae886604c1f769aede563a1ba3d847b0",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2826,
+      "is_binary": false
+    },
+    {
+      "name": "about-bot",
+      "path": "frontend/src/pages/about-bot",
+      "type": "directory",
+      "sha": "e70af3e80e1b8e99ba88511ef7c2a91f19251ed2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/pages/about-bot/__snapshots__",
+      "type": "directory",
+      "sha": "a7fec521c29bf51f3c2874b0414f05808922c9dc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-bot.test.js.snap",
+      "path": "frontend/src/pages/about-bot/__snapshots__/about-bot.test.js.snap",
+      "type": "file",
+      "sha": "67fa3db1050d393d632c7b6127e44c2482630cbb",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 4813,
+      "is_binary": false
+    },
+    {
+      "name": "about-bot.test.js",
+      "path": "frontend/src/pages/about-bot/about-bot.test.js",
+      "type": "file",
+      "sha": "b49ecd3dc57c5da5b619cc9605d57b7f83eebfab",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 788,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-bot/index.jsx",
+      "type": "file",
+      "sha": "bf5cb99ec21b776f033c3a96221dbf254825cd37",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 5408,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-bot/style.module.css",
+      "type": "file",
+      "sha": "03a39ac154f32aed388b648117216793d7f188a3",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 3161,
+      "is_binary": false
+    },
+    {
+      "name": "about-licitaBSB",
+      "path": "frontend/src/pages/about-licitaBSB",
+      "type": "directory",
+      "sha": "6a48fd835ffeb0505f19e4c746b4edd54d5777ee",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/pages/about-licitaBSB/__snapshots__",
+      "type": "directory",
+      "sha": "b4b7a0856fedbf698ed18c10dd2bbaddbfd04406",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-lisitaBSB.test.js.snap",
+      "path": "frontend/src/pages/about-licitaBSB/__snapshots__/about-lisitaBSB.test.js.snap",
+      "type": "file",
+      "sha": "a293d32d01d6504e384c086dba354c1eab815662",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 5320,
+      "is_binary": false
+    },
+    {
+      "name": "about-lisitaBSB.test.js",
+      "path": "frontend/src/pages/about-licitaBSB/about-lisitaBSB.test.js",
+      "type": "file",
+      "sha": "7c1e67125d9d2de7bdfd86d30bd7dd39d7bb9968",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1002,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-licitaBSB/index.jsx",
+      "type": "file",
+      "sha": "c5c6fa738a8dd15877b9cfc89d5de77ee8344920",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6191,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-licitaBSB/style.module.css",
+      "type": "file",
+      "sha": "9a0a0727dbea258bae7461e94361664145ad6c2c",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 3245,
+      "is_binary": false
+    },
+    {
+      "name": "about-us",
+      "path": "frontend/src/pages/about-us",
+      "type": "directory",
+      "sha": "f7e10b3aea5090ffe3356beaecf27f9a571f4245",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "about-us.test.js",
+      "path": "frontend/src/pages/about-us/about-us.test.js",
+      "type": "file",
+      "sha": "0e69bb11ebe7fcc0e07e57f8a1b34b23479031cd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1071,
+      "is_binary": false
+    },
+    {
+      "name": "card-member",
+      "path": "frontend/src/pages/about-us/card-member",
+      "type": "directory",
+      "sha": "7c1536070834fda1daf25c44f24c42e62cfa7284",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "card-member.test.js",
+      "path": "frontend/src/pages/about-us/card-member/card-member.test.js",
+      "type": "file",
+      "sha": "26aeff9dc18e31d5a8fe23c1dcdc3b33b1a8c72f",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4672,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-us/card-member/index.jsx",
+      "type": "file",
+      "sha": "ef155a5ce3e5a1e3840f6556aa87f8bf11baead2",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1119,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-us/card-member/style.module.css",
+      "type": "file",
+      "sha": "4beb353c355735d80845b28f1d3a77c8b05c4a8e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1368,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/about-us/index.jsx",
+      "type": "file",
+      "sha": "ffe70fe094206a3ea01c631502b6deae34ab1c86",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1356,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/about-us/style.module.css",
+      "type": "file",
+      "sha": "caa762ddb5907c8eff23448ac9c2a5c088ae42d6",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 524,
+      "is_binary": false
+    },
+    {
+      "name": "articles",
+      "path": "frontend/src/pages/articles",
+      "type": "directory",
+      "sha": "bbb31dbe411cbc13792185acdc90b7ae940d560b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "article-card",
+      "path": "frontend/src/pages/articles/article-card",
+      "type": "directory",
+      "sha": "1e283811fd7395b3532745781f56ab85bb18b2cf",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/articles/article-card/index.jsx",
+      "type": "file",
+      "sha": "b5eed22abab0afc07a51c2b887e7f847e3699dad",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 506,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/articles/article-card/style.module.css",
+      "type": "file",
+      "sha": "6a9e27ee5d7ae1a3549861fd13534213244160c1",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 727,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/articles/index.jsx",
+      "type": "file",
+      "sha": "fd2ad4bd627e4cb4988c5d8aaa2e28908736daf4",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2894,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/articles/style.module.css",
+      "type": "file",
+      "sha": "8b0b42516a14434dec793783db14ff1ca16352de",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 172,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-list",
+      "path": "frontend/src/pages/bidding-list",
+      "type": "directory",
+      "sha": "2d3e6cefe32ad17cf493c14935dea118d3e83c46",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "filter",
+      "path": "frontend/src/pages/bidding-list/filter",
+      "type": "directory",
+      "sha": "b0eb7c7c61dcd0b913f7acbd26af46e6d242e14d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "filter.test.js",
+      "path": "frontend/src/pages/bidding-list/filter/filter.test.js",
+      "type": "file",
+      "sha": "cf217406987bd89609af6a93d43e61e62281dc54",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3359,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/bidding-list/filter/index.jsx",
+      "type": "file",
+      "sha": "b185796867c516a92d5891d1bbe999f180d0bcbd",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6636,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/bidding-list/filter/style.module.css",
+      "type": "file",
+      "sha": "08321b4258a22f197edfafca652641afc2469a69",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1242,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/bidding-list/index.jsx",
+      "type": "file",
+      "sha": "3511c0331c84f3eaf0b8f8b9e79a0a781d8a633c",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2757,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/bidding-list/style.module.css",
+      "type": "file",
+      "sha": "58525fd25726d707e79616b6c2ecb0cb6a904429",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2278,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-page",
+      "path": "frontend/src/pages/bidding-page",
+      "type": "directory",
+      "sha": "fb1bc4caa5c090d8b85fc02672d6ff5d0e57e908",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bidding-page.test.js",
+      "path": "frontend/src/pages/bidding-page/bidding-page.test.js",
+      "type": "file",
+      "sha": "291a56096948bafbdf27d1c27910e15e57a5f6ed",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3681,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/bidding-page/index.jsx",
+      "type": "file",
+      "sha": "aadca5f6ede130bc92bbca7bdeab4070fd60a33a",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 3130,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/bidding-page/style.module.css",
+      "type": "file",
+      "sha": "04239af676ca1d20ff22487708504c12d8880ac1",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2699,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard",
+      "path": "frontend/src/pages/dashboard",
+      "type": "directory",
+      "sha": "3ae30e9d1834f600e3135c538ffafc060195fcfc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/dashboard/index.jsx",
+      "type": "file",
+      "sha": "c50cc2c7b27ce67a4dca3181c22f8084ba84a8de",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 11934,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/dashboard/style.module.css",
+      "type": "file",
+      "sha": "7f1d0febe9ad732c246f17e78186637379049724",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2682,
+      "is_binary": false
+    },
+    {
+      "name": "error",
+      "path": "frontend/src/pages/error",
+      "type": "directory",
+      "sha": "c788c3baa721d547df29ea57f546a0a9f75c9b0b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/error/index.jsx",
+      "type": "file",
+      "sha": "4f91c48a1ebdab5fd9387023b330b2adc56ca294",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 266,
+      "is_binary": false
+    },
+    {
+      "name": "landing",
+      "path": "frontend/src/pages/landing",
+      "type": "directory",
+      "sha": "62317ab13c29bde3efd405702637553934bf97a3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "carrossel",
+      "path": "frontend/src/pages/landing/carrossel",
+      "type": "directory",
+      "sha": "8ab91cc0892f8ac50205748d81e8c372cb3e2dd8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/landing/carrossel/index.jsx",
+      "type": "file",
+      "sha": "26c19483519447f5388851605d091f4a73868d85",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1958,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/landing/carrossel/style.module.css",
+      "type": "file",
+      "sha": "8a5dbd13991a0d399cb2a92eb266571b86ebc23e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 782,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/landing/index.jsx",
+      "type": "file",
+      "sha": "4d1f7e42e2ab30fc174058e6b2d84e8c4f346238",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 459,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/landing/style.module.css",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "ultimas-licitacoes",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes",
+      "type": "directory",
+      "sha": "84dee1756ebf402ca65ecc067d22a653cd81868e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__snapshots__",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes/__snapshots__",
+      "type": "directory",
+      "sha": "4c76ddb3aae23b15d89f9d8e1984e7f4c8330459",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ultimas-licitacoes.test.js.snap",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes/__snapshots__/ultimas-licitacoes.test.js.snap",
+      "type": "file",
+      "sha": "b8b849fb5ee7afdba55f615c1465c1e075d3929c",
+      "mode": "100644",
+      "extension": ".snap",
+      "size": 3137,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes/index.jsx",
+      "type": "file",
+      "sha": "5f8c09a9e6de45ff72d8cde3c6dca13750341312",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1118,
+      "is_binary": false
+    },
+    {
+      "name": "style.module.css",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes/style.module.css",
+      "type": "file",
+      "sha": "43048f833d3e865c4255ee535c3b3ae66457eb34",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 525,
+      "is_binary": false
+    },
+    {
+      "name": "ultimas-licitacoes.test.js",
+      "path": "frontend/src/pages/landing/ultimas-licitacoes/ultimas-licitacoes.test.js",
+      "type": "file",
+      "sha": "020b851ff1235ebde83c10d1e716e77b0b510f97",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2036,
+      "is_binary": false
+    },
+    {
+      "name": "root.jsx",
+      "path": "frontend/src/root.jsx",
+      "type": "file",
+      "sha": "fe8617bda94f370ac234a6611a78d2c80b87e7bc",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 267,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "frontend/src/services",
+      "type": "directory",
+      "sha": "a0198555905133d7b870ed4882562ac20b69f9fc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "licitacoes.service.js",
+      "path": "frontend/src/services/licitacoes.service.js",
+      "type": "file",
+      "sha": "4d9c4ae4aa5c4e0fd971fa449088b3ef1ecbf89b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 471,
+      "is_binary": false
+    },
+    {
+      "name": "licitacoes.service.test.js",
+      "path": "frontend/src/services/licitacoes.service.test.js",
+      "type": "file",
+      "sha": "ab781e78d5de8a886325165431fb942799874f22",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 4087,
+      "is_binary": false
+    },
+    {
+      "name": "orgaos.service.js",
+      "path": "frontend/src/services/orgaos.service.js",
+      "type": "file",
+      "sha": "c7c5bd83bbe071554e42946d75ee8f79a30a59d8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 272,
+      "is_binary": false
+    },
+    {
+      "name": "orgaos.service.test.js",
+      "path": "frontend/src/services/orgaos.service.test.js",
+      "type": "file",
+      "sha": "0f2e90eae519c0681da9db4efee685f470880485",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1661,
+      "is_binary": false
+    },
+    {
+      "name": "styles",
+      "path": "frontend/src/styles",
+      "type": "directory",
+      "sha": "1915483212753fb198fad96bede9bbfdb2108eb8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "global.css",
+      "path": "frontend/src/styles/global.css",
+      "type": "file",
+      "sha": "286ff948eab07f97ea237ca9c90b04de350ce70e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 869,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "frontend/src/utils",
+      "type": "directory",
+      "sha": "ba075ebb017fbaff836a473c661c8f61e0c83530",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bidding-types.js",
+      "path": "frontend/src/utils/bidding-types.js",
+      "type": "file",
+      "sha": "894fab4c9736f7f2570ef196037d6ffdd43a3c06",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 50,
+      "is_binary": false
+    },
+    {
+      "name": "bidding-types.test.js",
+      "path": "frontend/src/utils/bidding-types.test.js",
+      "type": "file",
+      "sha": "f385fb4fef04f3f4adf7b97e95d7ae43214effd4",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 267,
+      "is_binary": false
+    },
+    {
+      "name": "format-bidding-object.js",
+      "path": "frontend/src/utils/format-bidding-object.js",
+      "type": "file",
+      "sha": "092e947ee36697279ca759f47cd4d4c998921db6",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 535,
+      "is_binary": false
+    },
+    {
+      "name": "format-currency.js",
+      "path": "frontend/src/utils/format-currency.js",
+      "type": "file",
+      "sha": "104b8906ba991df304a7390f9a855d183162d892",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 321,
+      "is_binary": false
+    },
+    {
+      "name": "status-bidding.js",
+      "path": "frontend/src/utils/status-bidding.js",
+      "type": "file",
+      "sha": "1949e38c836a9ef68ad3c737a3f65ccf6b9831f6",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 151,
+      "is_binary": false
+    },
+    {
+      "name": "status-bidding.test.js",
+      "path": "frontend/src/utils/status-bidding.test.js",
+      "type": "file",
+      "sha": "26a57f34444d4aba78bf888129666077a7b957c2",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 697,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.js",
+      "path": "frontend/vite.config.js",
+      "type": "file",
+      "sha": "627a3196243d3790494ae62921354de4d8060b62",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 166,
+      "is_binary": false
+    },
+    {
+      "name": "mkdocs.yml",
+      "path": "mkdocs.yml",
+      "type": "file",
+      "sha": "a6f759b1080df416040c143979f655a37fd197bd",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 2175,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "type": "file",
+      "sha": "097854d105b8980d29c89473ab8cac6ddf340001",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 712,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2025-12-05T14:24:46.005543",
+  "method": "rest",
+  "total_items": 487,
+  "repository_metadata": {
+    "id": 777217621,
+    "full_name": "unb-mds/LicitaBSB-24.1",
+    "description": "Licita BSB é uma plataforma dedicada à coleta e divulgação de licitações realizadas no Distrito Federal.",
+    "created_at": "2024-03-25T12:41:16Z",
+    "updated_at": "2025-11-26T03:48:48Z",
+    "language": "HTML",
+    "size": 126041,
+    "stars": 13,
+    "forks": 3,
+    "open_issues": 0
+  }
+}

@@ -1,0 +1,2918 @@
+{
+  "owner": "unb-mds",
+  "repository": "2025-2-Portal-dos-Professores",
+  "branch": "main",
+  "sha": "06eb5e9e622b68856026f6df35686e3645c09b0d",
+  "tree": [
+    {
+      "name": ".coveragerc",
+      "path": ".coveragerc",
+      "type": "file",
+      "sha": "8be157cf60f7c6ee12b7fb1902ca99a9b2974a82",
+      "mode": "100644",
+      "extension": ".coveragerc",
+      "size": 475,
+      "is_binary": false
+    },
+    {
+      "name": ".env.example",
+      "path": ".env.example",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "2439c82d6c738f1da6b729dc63513b53e4d04425",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "0c29c336b23d873710bb173ec427f17a69132c00",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "deploy-frontend.yml",
+      "path": ".github/workflows/deploy-frontend.yml",
+      "type": "file",
+      "sha": "dedc5769f6d174f90bc53407926904af8c41252b",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1157,
+      "is_binary": false
+    },
+    {
+      "name": "run_sigaa_scraper.yml",
+      "path": ".github/workflows/run_sigaa_scraper.yml",
+      "type": "file",
+      "sha": "3028e6ca59e1e3e05167030007f9a0d33dd62830",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 954,
+      "is_binary": false
+    },
+    {
+      "name": "tests.yml",
+      "path": ".github/workflows/tests.yml",
+      "type": "file",
+      "sha": "855e47a2528afbb3e5c03b8dd4629a7e938f341f",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1055,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "46134693ac277f9d1cfeef01fa68f3ec1de20373",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 1565,
+      "is_binary": false
+    },
+    {
+      "name": ".readthedocs.yaml",
+      "path": ".readthedocs.yaml",
+      "type": "file",
+      "sha": "cd9af116d0ff5529b694ac01204995c845ce9d8d",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 380,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "b1e060f9fe83ea63a267414cd52825cc3b794284",
+      "mode": "100644",
+      "extension": "",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "8d248fbd7f867339424281e2a1261da8b06f4572",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 9432,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "1b40f35e19f2bc945cba3d705ba40295d7fb9e2d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".dockerignore",
+      "path": "backend/.dockerignore",
+      "type": "file",
+      "sha": "b9b8cd9d80c1064b0a53f2de72d1483a1cc29be9",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 44,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "92c091947c170e6b384a80073a2c6cd8694bf741",
+      "mode": "100644",
+      "extension": "",
+      "size": 229,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "ai_agent",
+      "path": "backend/ai_agent",
+      "type": "directory",
+      "sha": "5e77b457367b842dbbf8adfefad890c5ccdaec37",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "models.py",
+      "path": "backend/ai_agent/models.py",
+      "type": "file",
+      "sha": "9a27575ee8b7952eac6e1ce1661347cbdd324d24",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 203,
+      "is_binary": false
+    },
+    {
+      "name": "router.py",
+      "path": "backend/ai_agent/router.py",
+      "type": "file",
+      "sha": "a9d543df8f1cf752daacbc9b5777bfecae8846ea",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 919,
+      "is_binary": false
+    },
+    {
+      "name": "scripts",
+      "path": "backend/ai_agent/scripts",
+      "type": "directory",
+      "sha": "705e897b577e3e19c29e96ff82a8ac030a921599",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "rag_indexing.py",
+      "path": "backend/ai_agent/scripts/rag_indexing.py",
+      "type": "file",
+      "sha": "c8b21246d398b25d10cccffd4568d922828d4fa8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5401,
+      "is_binary": false
+    },
+    {
+      "name": "service.py",
+      "path": "backend/ai_agent/service.py",
+      "type": "file",
+      "sha": "52bcdef372445ac739a3e6f80f9b01b95cf3380f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3875,
+      "is_binary": false
+    },
+    {
+      "name": "analise_professores.py",
+      "path": "backend/analise_professores.py",
+      "type": "file",
+      "sha": "3b82cf487b1c461b14736f62dbf0eaeb95ba5533",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3048,
+      "is_binary": false
+    },
+    {
+      "name": "browser_extensions",
+      "path": "backend/browser_extensions",
+      "type": "directory",
+      "sha": "434291b053ee0f9b11be4b255f0820f1bbdcb270",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "buster_extension",
+      "path": "backend/browser_extensions/buster_extension",
+      "type": "directory",
+      "sha": "1f6836c0637682a68402d31ed09db343b02624f3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "LICENSE",
+      "path": "backend/browser_extensions/buster_extension/LICENSE",
+      "type": "file",
+      "sha": "94a9ed024d3859793618152ea559a168bbcbb5e2",
+      "mode": "100644",
+      "extension": "",
+      "size": 35147,
+      "is_binary": false
+    },
+    {
+      "name": "NOTICE",
+      "path": "backend/browser_extensions/buster_extension/NOTICE",
+      "type": "file",
+      "sha": "54e4ede81ed1aa84d24afa80616bb8b30ea41f72",
+      "mode": "100644",
+      "extension": "",
+      "size": 203,
+      "is_binary": false
+    },
+    {
+      "name": "_locales",
+      "path": "backend/browser_extensions/buster_extension/_locales",
+      "type": "directory",
+      "sha": "ed5a24e3eb7c257a52cce8383fe480a2c81694db",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "en",
+      "path": "backend/browser_extensions/buster_extension/_locales/en",
+      "type": "directory",
+      "sha": "b65be9eaa17ce37e77b07f84860a5992819d7878",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "messages.json",
+      "path": "backend/browser_extensions/buster_extension/_locales/en/messages.json",
+      "type": "file",
+      "sha": "4cdd01c6a7dbb06ea0a021e4abae67fd456f4b2f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 9218,
+      "is_binary": false
+    },
+    {
+      "name": "manifest.json",
+      "path": "backend/browser_extensions/buster_extension/manifest.json",
+      "type": "file",
+      "sha": "30c060a0bfbfd556e66a2d6cd4baf6f142a94034",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 2352,
+      "is_binary": false
+    },
+    {
+      "name": "secrets.txt",
+      "path": "backend/browser_extensions/buster_extension/secrets.txt",
+      "type": "file",
+      "sha": "546789dc6ed4a2db314c93cdd86196a56bc88227",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 2048,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "backend/browser_extensions/buster_extension/src",
+      "type": "directory",
+      "sha": "70b92afe422580dab8431d6b176d3ab1ea1f4cae",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "assets",
+      "path": "backend/browser_extensions/buster_extension/src/assets",
+      "type": "directory",
+      "sha": "b79b16f5ca7c8bcdad9e2728551f0827b01cdbd6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "fonts",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts",
+      "type": "directory",
+      "sha": "46b5b649270f0032dd40331b55df6a22e9f19382",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "files",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts/files",
+      "type": "directory",
+      "sha": "7d999aab1441409d0659f520d838641b31f1a4b9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "roboto-latin-400-normal.woff2",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts/files/roboto-latin-400-normal.woff2",
+      "type": "file",
+      "sha": "020729ef8d353ff843438008300bedee1f519380",
+      "mode": "100644",
+      "extension": ".woff2",
+      "size": 15744,
+      "is_binary": false
+    },
+    {
+      "name": "roboto-latin-500-normal.woff2",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts/files/roboto-latin-500-normal.woff2",
+      "type": "file",
+      "sha": "29342a8de253983b7b1a8c94efc6bb5c4f72a5c0",
+      "mode": "100644",
+      "extension": ".woff2",
+      "size": 15920,
+      "is_binary": false
+    },
+    {
+      "name": "roboto-latin-700-normal.woff2",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts/files/roboto-latin-700-normal.woff2",
+      "type": "file",
+      "sha": "771fbeccc691aab1962e33dbdf2be7c659d84c27",
+      "mode": "100644",
+      "extension": ".woff2",
+      "size": 15860,
+      "is_binary": false
+    },
+    {
+      "name": "roboto.css",
+      "path": "backend/browser_extensions/buster_extension/src/assets/fonts/roboto.css",
+      "type": "file",
+      "sha": "e76207ef99a71ea859034ad98decffa7314f2633",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 503,
+      "is_binary": false
+    },
+    {
+      "name": "icons",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons",
+      "type": "directory",
+      "sha": "ce5419d16836143de03fd1b41a466eaf769f1503",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "app",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app",
+      "type": "directory",
+      "sha": "086858d1a213565af5d9aeda5aff1c0b08a4e360",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "icon-128.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-128.png",
+      "type": "file",
+      "sha": "8ff9fadb74b97672d78f1c39882472dc8721fff5",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2147,
+      "is_binary": false
+    },
+    {
+      "name": "icon-16.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-16.png",
+      "type": "file",
+      "sha": "8d5a19c276642aeade413f916ebb57c59fd9308e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 419,
+      "is_binary": false
+    },
+    {
+      "name": "icon-19.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-19.png",
+      "type": "file",
+      "sha": "e4e94ae81fbd2bc3f3e6e3fc6e5a8dcb6bbf099e",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 451,
+      "is_binary": false
+    },
+    {
+      "name": "icon-24.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-24.png",
+      "type": "file",
+      "sha": "299eaee69fba95529ab589d6b6a96aed5f83ed9d",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 533,
+      "is_binary": false
+    },
+    {
+      "name": "icon-32.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-32.png",
+      "type": "file",
+      "sha": "72c3f797c9f813f5e6992756dff26ccf93ff078d",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 645,
+      "is_binary": false
+    },
+    {
+      "name": "icon-38.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-38.png",
+      "type": "file",
+      "sha": "0362d63fee17a618c28681d0097d9e9bf74e10c7",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 763,
+      "is_binary": false
+    },
+    {
+      "name": "icon-48.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-48.png",
+      "type": "file",
+      "sha": "6d0e10ab4109c0226ed1a54f34aa96e04f5e5d30",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 927,
+      "is_binary": false
+    },
+    {
+      "name": "icon-64.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-64.png",
+      "type": "file",
+      "sha": "3b8e5e765622b487d3da0905957eb5202ba3d5be",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1142,
+      "is_binary": false
+    },
+    {
+      "name": "icon-96.png",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon-96.png",
+      "type": "file",
+      "sha": "19d99be41facd2906ba7d2a94c9022339c18f96b",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1710,
+      "is_binary": false
+    },
+    {
+      "name": "icon.svg",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/app/icon.svg",
+      "type": "file",
+      "sha": "066bf72e60c17a3a69820d6b63e814b8c9b8b4b4",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 485,
+      "is_binary": false
+    },
+    {
+      "name": "misc",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/misc",
+      "type": "directory",
+      "sha": "b7f60a2c6bbc941029f386ab5e525dbc3950c59d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "favorite-filled.svg",
+      "path": "backend/browser_extensions/buster_extension/src/assets/icons/misc/favorite-filled.svg",
+      "type": "file",
+      "sha": "91936c69b912f18c98790ff0b3b764a2f8d47096",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 375,
+      "is_binary": false
+    },
+    {
+      "name": "background",
+      "path": "backend/browser_extensions/buster_extension/src/background",
+      "type": "directory",
+      "sha": "e883eeef1e59c9eda161bd78d82af8f75ccb9a5f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/background/script.js",
+      "type": "file",
+      "sha": "82b3a09c17a3b8184fa329ee264e5356145edcea",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 109312,
+      "is_binary": false
+    },
+    {
+      "name": "base",
+      "path": "backend/browser_extensions/buster_extension/src/base",
+      "type": "directory",
+      "sha": "2dfefdb7c578d5b50a4525e98a10f6be0cacc74e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/base/script.js",
+      "type": "file",
+      "sha": "fa8c8f1d9b93ac56c5581a0e609d6fa3ef7b3c4c",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 62073,
+      "is_binary": false
+    },
+    {
+      "name": "solver-button.css",
+      "path": "backend/browser_extensions/buster_extension/src/base/solver-button.css",
+      "type": "file",
+      "sha": "521fea88f05c2d85ac4a7fb256d7337058a58a52",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1895,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "backend/browser_extensions/buster_extension/src/base/style.css",
+      "type": "file",
+      "sha": "3c48b207ab7f0fb2a7ca5f33c303c308561a444c",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 781,
+      "is_binary": false
+    },
+    {
+      "name": "commons-ui",
+      "path": "backend/browser_extensions/buster_extension/src/commons-ui",
+      "type": "directory",
+      "sha": "2eeaf2cb9bd099e01c57297cb953ef58d23e700f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/commons-ui/script.js",
+      "type": "file",
+      "sha": "90dc0b4cabd5e45acfb6d839fc12f622d945892a",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 295047,
+      "is_binary": false
+    },
+    {
+      "name": "script.js.LICENSE.txt",
+      "path": "backend/browser_extensions/buster_extension/src/commons-ui/script.js.LICENSE.txt",
+      "type": "file",
+      "sha": "05799ba26ee0935363c80c8a8831776727c8704f",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 616,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "backend/browser_extensions/buster_extension/src/commons-ui/style.css",
+      "type": "file",
+      "sha": "8c357b66a752f77029431e3dc702c3c010d95856",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 103153,
+      "is_binary": false
+    },
+    {
+      "name": "contribute",
+      "path": "backend/browser_extensions/buster_extension/src/contribute",
+      "type": "directory",
+      "sha": "8f1b6724aca1a09e8535d8350824ee28fc9796cf",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "assets",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets",
+      "type": "directory",
+      "sha": "073f601be5212956c3881e8b98a7b59c7cdfa993",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "avocado.svg",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets/avocado.svg",
+      "type": "file",
+      "sha": "62a0ada56bdbe55bb5e571c36e8966afbef2790f",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 3855,
+      "is_binary": false
+    },
+    {
+      "name": "circle.svg",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets/circle.svg",
+      "type": "file",
+      "sha": "249e1f19207d249220125cefaad8e1dd1e76a951",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 100,
+      "is_binary": false
+    },
+    {
+      "name": "illustration.webp",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets/illustration.webp",
+      "type": "file",
+      "sha": "4bc59fbe00efaad1c039c7eb4f70cedaaad2ea89",
+      "mode": "100644",
+      "extension": ".webp",
+      "size": 57352,
+      "is_binary": false
+    },
+    {
+      "name": "patreon.webp",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets/patreon.webp",
+      "type": "file",
+      "sha": "8409e8f2b1466089f077137bf3f2d692f7089f66",
+      "mode": "100644",
+      "extension": ".webp",
+      "size": 2196,
+      "is_binary": false
+    },
+    {
+      "name": "paypal.webp",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/assets/paypal.webp",
+      "type": "file",
+      "sha": "cab0e20e31864f7d3b74a49cf29f777704eecea2",
+      "mode": "100644",
+      "extension": ".webp",
+      "size": 3208,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/index.html",
+      "type": "file",
+      "sha": "930082c79baf9ce225f427935eb1adffeda5e841",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 560,
+      "is_binary": false
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/script.js",
+      "type": "file",
+      "sha": "4eb98d56ecfeab16108dd69f1ed8733e4991649e",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10483,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "backend/browser_extensions/buster_extension/src/contribute/style.css",
+      "type": "file",
+      "sha": "c8c262078fed8e1c453eaa596e57bc69a3c3cf5b",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 41208,
+      "is_binary": false
+    },
+    {
+      "name": "offscreen",
+      "path": "backend/browser_extensions/buster_extension/src/offscreen",
+      "type": "directory",
+      "sha": "cf766d19f16412f1adbdd260610a2f21009d6d72",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "backend/browser_extensions/buster_extension/src/offscreen/index.html",
+      "type": "file",
+      "sha": "70e5be7588b6669c2cfb9d59b7f176ce4abc4b73",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 153,
+      "is_binary": false
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/offscreen/script.js",
+      "type": "file",
+      "sha": "e4c1c45c270c10701adb3785aa4fa07000af3b5f",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 54780,
+      "is_binary": false
+    },
+    {
+      "name": "options",
+      "path": "backend/browser_extensions/buster_extension/src/options",
+      "type": "directory",
+      "sha": "190ca344aa0bbac955b1f5d670681eb45256e33a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "backend/browser_extensions/buster_extension/src/options/index.html",
+      "type": "file",
+      "sha": "930082c79baf9ce225f427935eb1adffeda5e841",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 560,
+      "is_binary": false
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/options/script.js",
+      "type": "file",
+      "sha": "84fb0a6d80ae1f4d1aa3097a21987d9b6d74dfd4",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 18206,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "backend/browser_extensions/buster_extension/src/options/style.css",
+      "type": "file",
+      "sha": "bf31ab8fe157e1605a141491b30960dffe24ce67",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 37440,
+      "is_binary": false
+    },
+    {
+      "name": "scripts",
+      "path": "backend/browser_extensions/buster_extension/src/scripts",
+      "type": "directory",
+      "sha": "c5e927a947e7f5485b2f091ed5e4b28523cab75f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "init-setup.js",
+      "path": "backend/browser_extensions/buster_extension/src/scripts/init-setup.js",
+      "type": "file",
+      "sha": "c120390025e8650aa624392dd77862aeb2aa0bdc",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 10062,
+      "is_binary": false
+    },
+    {
+      "name": "reset.js",
+      "path": "backend/browser_extensions/buster_extension/src/scripts/reset.js",
+      "type": "file",
+      "sha": "e0cf2c7a7b46c1a0cec9b441b980b4a6c12f7547",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 544,
+      "is_binary": false
+    },
+    {
+      "name": "setup",
+      "path": "backend/browser_extensions/buster_extension/src/setup",
+      "type": "directory",
+      "sha": "ac06cda8e8d2aff23d7cc0660925dbbd12901e65",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "backend/browser_extensions/buster_extension/src/setup/index.html",
+      "type": "file",
+      "sha": "e1aaf5b8abdf5cda3a76a0c4bbc16afc82373e81",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 513,
+      "is_binary": false
+    },
+    {
+      "name": "script.js",
+      "path": "backend/browser_extensions/buster_extension/src/setup/script.js",
+      "type": "file",
+      "sha": "2104adcaeef46d0d14c82a9e9244afa4e99c8484",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 8881,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "backend/browser_extensions/buster_extension/src/setup/style.css",
+      "type": "file",
+      "sha": "32210d6e75ef597796fc85be07364b20ae6b3a05",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 36244,
+      "is_binary": false
+    },
+    {
+      "name": "config.py",
+      "path": "backend/config.py",
+      "type": "file",
+      "sha": "a651e0ca9d9f2621bffde46bb1f41f739276e3f8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1015,
+      "is_binary": false
+    },
+    {
+      "name": "database_manager.py",
+      "path": "backend/database_manager.py",
+      "type": "file",
+      "sha": "bf8e441e1097a69387923ec5abc3dd7270365d84",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1602,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/main.py",
+      "type": "file",
+      "sha": "baec261d4cae25c5a31383a9782beb2982348b66",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5138,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "backend/models.py",
+      "type": "file",
+      "sha": "df462e899b735fb9ed1e3c483e6a4ce810503aa3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 836,
+      "is_binary": false
+    },
+    {
+      "name": "modes",
+      "path": "backend/modes",
+      "type": "directory",
+      "sha": "c4159991efa9ae6afd14bfbb925a7164952f05c8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/modes/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "lattes_update.py",
+      "path": "backend/modes/lattes_update.py",
+      "type": "file",
+      "sha": "35710b67b4d0c365d4f47e14f02808e86f9548fe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 8340,
+      "is_binary": false
+    },
+    {
+      "name": "scholar_update.py",
+      "path": "backend/modes/scholar_update.py",
+      "type": "file",
+      "sha": "0c5ed9c9e6986f36212c7fa68278837092079df0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6414,
+      "is_binary": false
+    },
+    {
+      "name": "sigaa_update.py",
+      "path": "backend/modes/sigaa_update.py",
+      "type": "file",
+      "sha": "e9ecd01a28ffce89c35c72872ca1b2bef734e6f9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2931,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "backend/requirements.txt",
+      "type": "file",
+      "sha": "79edfdf01281acbca234f333e3590331518dd5d6",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 2204,
+      "is_binary": false
+    },
+    {
+      "name": "scraper_runner.py",
+      "path": "backend/scraper_runner.py",
+      "type": "file",
+      "sha": "97a9d9a7e4e416bb7c3bcfce04ac188660d33900",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4617,
+      "is_binary": false
+    },
+    {
+      "name": "scrapers",
+      "path": "backend/scrapers",
+      "type": "directory",
+      "sha": "f14e4f06a5fdde25535486546368c1474f43d502",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/scrapers/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "lattes_parser.py",
+      "path": "backend/scrapers/lattes_parser.py",
+      "type": "file",
+      "sha": "cb71d5d85fb25b9387b99a60fad44f31ff8f2e52",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7738,
+      "is_binary": false
+    },
+    {
+      "name": "lattes_scraper.py",
+      "path": "backend/scrapers/lattes_scraper.py",
+      "type": "file",
+      "sha": "5836047a243039671a1366da0f51d8dbc5e580d9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 10259,
+      "is_binary": false
+    },
+    {
+      "name": "scholar_scraper.py",
+      "path": "backend/scrapers/scholar_scraper.py",
+      "type": "file",
+      "sha": "592a2b2051ec82d2744eae5b5ca7531eb5452352",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 10539,
+      "is_binary": false
+    },
+    {
+      "name": "sigaa_scraper.py",
+      "path": "backend/scrapers/sigaa_scraper.py",
+      "type": "file",
+      "sha": "e6322fb404bce8c05014445c96ab1cc1d7ed3fb9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 8155,
+      "is_binary": false
+    },
+    {
+      "name": "utils.py",
+      "path": "backend/utils.py",
+      "type": "file",
+      "sha": "b2e202f3ddad37aa0e4b81eef28cd4630c7572b4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 593,
+      "is_binary": false
+    },
+    {
+      "name": "coverage.svg",
+      "path": "coverage.svg",
+      "type": "file",
+      "sha": "1c7007cd523945f2e0f955226f5dd8408a9ab881",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 904,
+      "is_binary": false
+    },
+    {
+      "name": "data",
+      "path": "data",
+      "type": "directory",
+      "sha": "a33e461a9c31c694e707ef9d1e7b2e06099d0397",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "professors.json",
+      "path": "data/professors.json",
+      "type": "file",
+      "sha": "f960558e676e7ac2d503486f5e65ec4c33753fa2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 15306424,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "60f653d5cbf53149167ca0548ecacdf25660d386",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 346,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "51c3fdb6dfa30ff386e385ea5972e50dab49d9c3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "docs/README.md",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "SPRIINT_04",
+      "path": "docs/SPRIINT_04",
+      "type": "directory",
+      "sha": "16224ca0b552bb8a4d2e087a56b12988ec35b48a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint04_Mapeamento_de_Dados.md",
+      "path": "docs/SPRIINT_04/Sprint04_Mapeamento_de_Dados.md",
+      "type": "file",
+      "sha": "ff364ec1b2c088d05b1839670c13f2296a9654ee",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1158,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint04_Story_Map.md",
+      "path": "docs/SPRIINT_04/Sprint04_Story_Map.md",
+      "type": "file",
+      "sha": "7a0d6c55ad9e021340185a5390fc7ae53481103d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3739,
+      "is_binary": false
+    },
+    {
+      "name": "estrutura-example.md",
+      "path": "docs/SPRIINT_04/estrutura-example.md",
+      "type": "file",
+      "sha": "a4d65408cb2c52dea6620a4480f26062f4c9d95f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1415,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_00",
+      "path": "docs/SPRINT_00",
+      "type": "directory",
+      "sha": "505a2a276a7250757e53b3bfb312b3b285ed398d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint00_Flutter.md",
+      "path": "docs/SPRINT_00/Sprint00_Flutter.md",
+      "type": "file",
+      "sha": "7b7286291e95be0670afbe889499791d0d32a8d9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3953,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint00_Git_Github.md",
+      "path": "docs/SPRINT_00/Sprint00_Git_Github.md",
+      "type": "file",
+      "sha": "30a37a0266850068e1d0c64669d8c27592d738be",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4364,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint00_Methodology.md",
+      "path": "docs/SPRINT_00/Sprint00_Methodology.md",
+      "type": "file",
+      "sha": "8be496a9d4e220bde8badd315b01c1da120b2a57",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3917,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint00_Scrum.md",
+      "path": "docs/SPRINT_00/Sprint00_Scrum.md",
+      "type": "file",
+      "sha": "fe7f8512a72231d941314012e0ee5f4905621189",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3567,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint00_Software_Architecture.md",
+      "path": "docs/SPRINT_00/Sprint00_Software_Architecture.md",
+      "type": "file",
+      "sha": "0a6f73e284565e945bc0a0081a66f91ca0c23535",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10252,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint00_requisitos.md",
+      "path": "docs/SPRINT_00/Sprint00_requisitos.md",
+      "type": "file",
+      "sha": "82410dd7ac00fd8e8145655c211bc1290b2e0bbd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4582,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_01",
+      "path": "docs/SPRINT_01",
+      "type": "directory",
+      "sha": "4adfabe66a7be7cf6117439b59dc819c7a9b8c1d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint01_Figma.md",
+      "path": "docs/SPRINT_01/Sprint01_Figma.md",
+      "type": "file",
+      "sha": "f830e7564b2541adfd154c2c946181c544bb9893",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2691,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint01_Sites_Similares.md",
+      "path": "docs/SPRINT_01/Sprint01_Sites_Similares.md",
+      "type": "file",
+      "sha": "d78422c82016f597643ab25e99a0137e091718c0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4918,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_02",
+      "path": "docs/SPRINT_02",
+      "type": "directory",
+      "sha": "29fe6684db99b37107ca9fd368caf152b05f46e0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Diagrama de fishbone atraso na entrega.jam",
+      "path": "docs/SPRINT_02/Diagrama de fishbone atraso na entrega.jam",
+      "type": "file",
+      "sha": "b9b522b773cf66795de4e8949f6fa8d244ff32e2",
+      "mode": "100644",
+      "extension": ".jam",
+      "size": 592162,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint02_Conceito_Diagrama_de_Fishbone.md",
+      "path": "docs/SPRINT_02/Sprint02_Conceito_Diagrama_de_Fishbone.md",
+      "type": "file",
+      "sha": "8262d3bf807006dee6ed6fc194192b1c864c5a61",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1337,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint02_Documento_de_Visão.md",
+      "path": "docs/SPRINT_02/Sprint02_Documento_de_Visão.md",
+      "type": "file",
+      "sha": "0d53d16182484bb91e3d915deaf5c6dcaf5ad33f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3428,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint02_Story_Map.md",
+      "path": "docs/SPRINT_02/Sprint02_Story_Map.md",
+      "type": "file",
+      "sha": "31ef1ecc1335ed9f8b414f63dd373554c2359868",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2649,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_03",
+      "path": "docs/SPRINT_03",
+      "type": "directory",
+      "sha": "e4daa0501d428882f4cc789d8b2009e9613cd82b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint03_Agentes_de_IA.md",
+      "path": "docs/SPRINT_03/Sprint03_Agentes_de_IA.md",
+      "type": "file",
+      "sha": "94efd2575b31a1f7dba82ab6ed0cde5e86944fd8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3485,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_Decisão_de_tecnologia.md",
+      "path": "docs/SPRINT_03/Sprint03_Decisão_de_tecnologia.md",
+      "type": "file",
+      "sha": "4b6c2df1599ac96328de076ecd51b71ed1933d2a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2708,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_Docker.md",
+      "path": "docs/SPRINT_03/Sprint03_Docker.md",
+      "type": "file",
+      "sha": "f2b9ddaa12a3f078da725cf9221d589359632d0c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4717,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_POC_minima.py",
+      "path": "docs/SPRINT_03/Sprint03_POC_minima.py",
+      "type": "file",
+      "sha": "f76010c0dd3c6338a1aff11db0481ef06f9d4d9a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2277,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_Product_backlog.md",
+      "path": "docs/SPRINT_03/Sprint03_Product_backlog.md",
+      "type": "file",
+      "sha": "89e5d12605a74f54848cb2885d7d2ec51eac2a59",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3389,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_Scraper-SIGAA.py",
+      "path": "docs/SPRINT_03/Sprint03_Scraper-SIGAA.py",
+      "type": "file",
+      "sha": "4a9ed0f9c05d9da2bd733c765d02e9eb9b1f3fc5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4143,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03_Webscraping.md",
+      "path": "docs/SPRINT_03/Sprint03_Webscraping.md",
+      "type": "file",
+      "sha": "a797c7ea910888967e878320add62ea65cf7372c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6269,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_05",
+      "path": "docs/SPRINT_05",
+      "type": "directory",
+      "sha": "17121c1a8433b1952501261f045c608d532b21fa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint05_Decisao_Escopo.md",
+      "path": "docs/SPRINT_05/Sprint05_Decisao_Escopo.md",
+      "type": "file",
+      "sha": "ba2eb652d3aa767b15c9a4e86fd67a3c5473c891",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3646,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint05_Ideias_para_aprimorar_home_page.md",
+      "path": "docs/SPRINT_05/Sprint05_Ideias_para_aprimorar_home_page.md",
+      "type": "file",
+      "sha": "5a20c1fe87ee10077e8490b374b672fdf722e2cb",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4396,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_06",
+      "path": "docs/SPRINT_06",
+      "type": "directory",
+      "sha": "c69173c31b18ea7b1cdb30144f88add4b51ec332",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "docs/SPRINT_06/.gitkeep",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "doc_fonte_de_dados.md",
+      "path": "docs/SPRINT_06/doc_fonte_de_dados.md",
+      "type": "file",
+      "sha": "786dc38100e7ef58018083a3c85558f9a6b421ab",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3904,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_07",
+      "path": "docs/SPRINT_07",
+      "type": "directory",
+      "sha": "8c3c22cac1bcab10573f950ca07c0e251ce55087",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "docs/SPRINT_07/.gitkeep",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_Decisão_de_Hospedagem_Backend.md",
+      "path": "docs/SPRINT_07/Sprint07_Decisão_de_Hospedagem_Backend.md",
+      "type": "file",
+      "sha": "c643ae6deb02183ac59bd7f5f719d37a332bbccd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2146,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_att_prototipo.md",
+      "path": "docs/SPRINT_07/Sprint07_att_prototipo.md",
+      "type": "file",
+      "sha": "d136f99f713730d28be2f9a788f27ab9c284ac39",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3261,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_css-framework-decision.md",
+      "path": "docs/SPRINT_07/Sprint07_css-framework-decision.md",
+      "type": "file",
+      "sha": "b381ece513922eb1ffa5c6b82f22092b1c3b7ff0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3202,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_pass_captcha_lates.md",
+      "path": "docs/SPRINT_07/Sprint07_pass_captcha_lates.md",
+      "type": "file",
+      "sha": "7ceb107a89950be81ba6b6002da7d2fc2f6ba6c2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5190,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_react_lib_decision.md",
+      "path": "docs/SPRINT_07/Sprint07_react_lib_decision.md",
+      "type": "file",
+      "sha": "4caca05e20e66355ac5d1ac8a33206a786c57fe8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2220,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07_seções_adicionais_da_homepage.md",
+      "path": "docs/SPRINT_07/Sprint07_seções_adicionais_da_homepage.md",
+      "type": "file",
+      "sha": "c5de428ad79ad88843dc8afc4e963cd80fce9795",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4692,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_08",
+      "path": "docs/SPRINT_08",
+      "type": "directory",
+      "sha": "5df7f650b80fef281199e7d1c6bf53c6a5280802",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "docs/SPRINT_08/README.md",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "SPRINT_09",
+      "path": "docs/SPRINT_09",
+      "type": "directory",
+      "sha": "2261a3c1fd4b8467e71909fa026cdb3309ab45fa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "docs/SPRINT_09/README.md",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint09_Renderização_Recursiva_na _HomePage.md",
+      "path": "docs/SPRINT_09/Sprint09_Renderização_Recursiva_na _HomePage.md",
+      "type": "file",
+      "sha": "d848756f5241d88c05ee1b5e71492c2fe8dd6578",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4306,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo-alta-fidelidade.md",
+      "path": "docs/SPRINT_09/prototipo-alta-fidelidade.md",
+      "type": "file",
+      "sha": "b01f262993aac76bf8c8f3716aefd996273a208d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1466,
+      "is_binary": false
+    },
+    {
+      "name": "arquitetura.md",
+      "path": "docs/arquitetura.md",
+      "type": "file",
+      "sha": "2d87ba5535f1e959050e277d97336e0775e06270",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7669,
+      "is_binary": false
+    },
+    {
+      "name": "ata",
+      "path": "docs/ata",
+      "type": "directory",
+      "sha": "9fc3d4daf54dd4effc6a39d0ba415296a87903e6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "01_09_25.md",
+      "path": "docs/ata/01_09_25.md",
+      "type": "file",
+      "sha": "a419b51c7d2df8520cf06a80de69faa128f81509",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1488,
+      "is_binary": false
+    },
+    {
+      "name": "02_11_25.md",
+      "path": "docs/ata/02_11_25.md",
+      "type": "file",
+      "sha": "f1ce0ba780a25943f7730344989a623567718b64",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1855,
+      "is_binary": false
+    },
+    {
+      "name": "03_11_25.md",
+      "path": "docs/ata/03_11_25.md",
+      "type": "file",
+      "sha": "0ee91209312bd6f953bff6c0e27bcea7743a1a76",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2026,
+      "is_binary": false
+    },
+    {
+      "name": "05_10_25.md",
+      "path": "docs/ata/05_10_25.md",
+      "type": "file",
+      "sha": "0de5993477db04ffa6071b6d3c4f27e4f4f86b1e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1355,
+      "is_binary": false
+    },
+    {
+      "name": "06_10_25.md",
+      "path": "docs/ata/06_10_25.md",
+      "type": "file",
+      "sha": "4f4a2a27c7a9416377b4bba8005b132d619bb5d2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1611,
+      "is_binary": false
+    },
+    {
+      "name": "07_09_25.md",
+      "path": "docs/ata/07_09_25.md",
+      "type": "file",
+      "sha": "10991bd6d8bb83b565dd32c3e1acb63d7642caea",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1804,
+      "is_binary": false
+    },
+    {
+      "name": "09_11_25.md",
+      "path": "docs/ata/09_11_25.md",
+      "type": "file",
+      "sha": "92714cf38ab22f428fd4e932c667f9ed2d1d65e2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1907,
+      "is_binary": false
+    },
+    {
+      "name": "10_11_25.md",
+      "path": "docs/ata/10_11_25.md",
+      "type": "file",
+      "sha": "8493bd637fd9fa2a3f9112fa336f9dfd3b69f24d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2207,
+      "is_binary": false
+    },
+    {
+      "name": "12_10_25.md",
+      "path": "docs/ata/12_10_25.md",
+      "type": "file",
+      "sha": "035dad146b1a623d21bb96e2b0926f7aa40e8955",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1379,
+      "is_binary": false
+    },
+    {
+      "name": "13_10_25.md",
+      "path": "docs/ata/13_10_25.md",
+      "type": "file",
+      "sha": "3371b83857256952360f92821f3ebc8447e71fc1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1934,
+      "is_binary": false
+    },
+    {
+      "name": "14_09_25.md",
+      "path": "docs/ata/14_09_25.md",
+      "type": "file",
+      "sha": "590fd259349534700532ef288850a6d8abee438a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2168,
+      "is_binary": false
+    },
+    {
+      "name": "15_09_25.md",
+      "path": "docs/ata/15_09_25.md",
+      "type": "file",
+      "sha": "46f5dbcd5d74f7677838bc9433c1d870d6cbd481",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2731,
+      "is_binary": false
+    },
+    {
+      "name": "16_11_25.md",
+      "path": "docs/ata/16_11_25.md",
+      "type": "file",
+      "sha": "2a5ae0231358b8427ab34048a3dbb2676dde6b87",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2068,
+      "is_binary": false
+    },
+    {
+      "name": "17_11_25.md",
+      "path": "docs/ata/17_11_25.md",
+      "type": "file",
+      "sha": "f712cc7525a0cecd6d08158e6f131601e4c12328",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2164,
+      "is_binary": false
+    },
+    {
+      "name": "19_10_25.md",
+      "path": "docs/ata/19_10_25.md",
+      "type": "file",
+      "sha": "9a539278cc6736e7a019407717ce55d3e46229e1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2111,
+      "is_binary": false
+    },
+    {
+      "name": "20_10_25.md",
+      "path": "docs/ata/20_10_25.md",
+      "type": "file",
+      "sha": "09ee02e8af45d221f9113a5d858d525e99f7feb8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1984,
+      "is_binary": false
+    },
+    {
+      "name": "21_09_25.md",
+      "path": "docs/ata/21_09_25.md",
+      "type": "file",
+      "sha": "bee8e2c698fd0b8ec71b071e4ff41a4e854ad9a9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2064,
+      "is_binary": false
+    },
+    {
+      "name": "23_09_25.md",
+      "path": "docs/ata/23_09_25.md",
+      "type": "file",
+      "sha": "758cd02a5ef06a14cc0b3cf97d2c2a23b0525436",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1173,
+      "is_binary": false
+    },
+    {
+      "name": "23_11_25.md",
+      "path": "docs/ata/23_11_25.md",
+      "type": "file",
+      "sha": "d84bf83590b506dacef7d718fb150da6235d947a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2283,
+      "is_binary": false
+    },
+    {
+      "name": "24_11_25.md",
+      "path": "docs/ata/24_11_25.md",
+      "type": "file",
+      "sha": "200e7d1ea4d3c5c3bf1ef03836d3adc63cca79a0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2088,
+      "is_binary": false
+    },
+    {
+      "name": "26_10_25.md",
+      "path": "docs/ata/26_10_25.md",
+      "type": "file",
+      "sha": "176b83f18998c2aece2ca8b9d71ebf7441944c11",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1791,
+      "is_binary": false
+    },
+    {
+      "name": "27_10_25.md",
+      "path": "docs/ata/27_10_25.md",
+      "type": "file",
+      "sha": "f0b351eb1b12b13e20fd016b3fa18785a1ceb4ad",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1773,
+      "is_binary": false
+    },
+    {
+      "name": "28_09_25.md",
+      "path": "docs/ata/28_09_25.md",
+      "type": "file",
+      "sha": "3c965cab22804ae49723e81d863377cb01f24bfc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2159,
+      "is_binary": false
+    },
+    {
+      "name": "29_09_25.md",
+      "path": "docs/ata/29_09_25.md",
+      "type": "file",
+      "sha": "5854dfb66c180c2ada2351d353998bdfed863926",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1716,
+      "is_binary": false
+    },
+    {
+      "name": "31_08_25.md",
+      "path": "docs/ata/31_08_25.md",
+      "type": "file",
+      "sha": "45d3fec6a2ce713081ffb50feac693cb449927a2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2099,
+      "is_binary": false
+    },
+    {
+      "name": "templete.md",
+      "path": "docs/ata/templete.md",
+      "type": "file",
+      "sha": "4f7ecae3325aa6e05bf0ad13bf2f712c6ff97d98",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 857,
+      "is_binary": false
+    },
+    {
+      "name": "atas.md",
+      "path": "docs/atas.md",
+      "type": "file",
+      "sha": "087e449578e40cbe08a04cb7a3cc107f4d2d508d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7975,
+      "is_binary": false
+    },
+    {
+      "name": "desenvolvimento.md",
+      "path": "docs/desenvolvimento.md",
+      "type": "file",
+      "sha": "cfda89018a6eb1a8df7d9f93eb9f507a23561c6d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5676,
+      "is_binary": false
+    },
+    {
+      "name": "documento_de_visao.md",
+      "path": "docs/documento_de_visao.md",
+      "type": "file",
+      "sha": "0d4961d952568726480b1b6aadc9a2382fa5d4a8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 14323,
+      "is_binary": false
+    },
+    {
+      "name": "guias-de-uso.md",
+      "path": "docs/guias-de-uso.md",
+      "type": "file",
+      "sha": "afeb8cace29de871dea5fe451172449415615e33",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3110,
+      "is_binary": false
+    },
+    {
+      "name": "images",
+      "path": "docs/images",
+      "type": "directory",
+      "sha": "1d88f3f3be05183b9796bcd9f596924d527b0b54",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "AgenteIA.png",
+      "path": "docs/images/AgenteIA.png",
+      "type": "file",
+      "sha": "421a3fcfbc064483aa8e912accf170b0ea428505",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 34275,
+      "is_binary": false
+    },
+    {
+      "name": "BuscaUnificada.png",
+      "path": "docs/images/BuscaUnificada.png",
+      "type": "file",
+      "sha": "20c7d9f1cb783509bcef52ef65a6fb1a6baa7595",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 86097,
+      "is_binary": false
+    },
+    {
+      "name": "Component.png",
+      "path": "docs/images/Component.png",
+      "type": "file",
+      "sha": "295089613e79445c96137c7429925679c762ccc9",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 967493,
+      "is_binary": false
+    },
+    {
+      "name": "Container.png",
+      "path": "docs/images/Container.png",
+      "type": "file",
+      "sha": "d4743ae5598fffe4d8a82214e17f3f70c9e05262",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 759562,
+      "is_binary": false
+    },
+    {
+      "name": "Context.png",
+      "path": "docs/images/Context.png",
+      "type": "file",
+      "sha": "8aa16d957b6b392f0f27c0ef826be9431719494b",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 516220,
+      "is_binary": false
+    },
+    {
+      "name": "Contributors.png",
+      "path": "docs/images/Contributors.png",
+      "type": "file",
+      "sha": "a9507bb7ce060b63be9b9b8491af3242024e0de1",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 76937,
+      "is_binary": false
+    },
+    {
+      "name": "PerfilProfessor.png",
+      "path": "docs/images/PerfilProfessor.png",
+      "type": "file",
+      "sha": "ed4fa34c928f5d607690034070fa9a85bbfe0ac6",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 108825,
+      "is_binary": false
+    },
+    {
+      "name": "TestsCoverage.png",
+      "path": "docs/images/TestsCoverage.png",
+      "type": "file",
+      "sha": "6dd459a446d5abeefb7af9c0946bfe1c1815b0d3",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 24904,
+      "is_binary": false
+    },
+    {
+      "name": "corujaa-removebg-preview.png",
+      "path": "docs/images/corujaa-removebg-preview.png",
+      "type": "file",
+      "sha": "6aaf5f75dbb41d302998917e879a4933b0a0752a",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 92351,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/index.md",
+      "type": "file",
+      "sha": "56f07b316e75539d589774fbf662d6b021c06b46",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4882,
+      "is_binary": false
+    },
+    {
+      "name": "qa.md",
+      "path": "docs/qa.md",
+      "type": "file",
+      "sha": "fcb9547b75b79769fb22816fdf8da56d79c4725b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3771,
+      "is_binary": false
+    },
+    {
+      "name": "report_sprints",
+      "path": "docs/report_sprints",
+      "type": "directory",
+      "sha": "39271f1c27f980cf4d17df4120eb832fcc695c95",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Sprint00.md",
+      "path": "docs/report_sprints/Sprint00.md",
+      "type": "file",
+      "sha": "294b45c64b22c0c3c1ff0c101634474e683b4d3e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3704,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint01.md",
+      "path": "docs/report_sprints/Sprint01.md",
+      "type": "file",
+      "sha": "f7370bdc6560fb5d91823502fe27ef4d08a240b6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3350,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint02.md",
+      "path": "docs/report_sprints/Sprint02.md",
+      "type": "file",
+      "sha": "7125a52eec10c4ab126ac7a784599fefe2e5d3b3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3996,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint03.md",
+      "path": "docs/report_sprints/Sprint03.md",
+      "type": "file",
+      "sha": "c4008677114f4700b98172134d0fd155c4258a41",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3410,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint04.md",
+      "path": "docs/report_sprints/Sprint04.md",
+      "type": "file",
+      "sha": "6c7123ebad78260b180d21adf0b4813d4856fc1c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3315,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint05.md",
+      "path": "docs/report_sprints/Sprint05.md",
+      "type": "file",
+      "sha": "6192632f54755637499ab647f247ad4d42e8f1d0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3246,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint06.md",
+      "path": "docs/report_sprints/Sprint06.md",
+      "type": "file",
+      "sha": "40e12d7c17ccdf6fc55a8e4c0994a9903c41bee5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3215,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint07.md",
+      "path": "docs/report_sprints/Sprint07.md",
+      "type": "file",
+      "sha": "9c29d3d1592c8a1d252aac637538ff8247f2e55f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3213,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint08.md",
+      "path": "docs/report_sprints/Sprint08.md",
+      "type": "file",
+      "sha": "bb25455381df37047eeb739a13035f25a19c9802",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3613,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint09.md",
+      "path": "docs/report_sprints/Sprint09.md",
+      "type": "file",
+      "sha": "71719ee3e1ea8f841d2c62166678862a89fa8383",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3342,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint10.md",
+      "path": "docs/report_sprints/Sprint10.md",
+      "type": "file",
+      "sha": "94f6511f235778b1a715a24028ca3ebaf8c6e579",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3485,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint11.md",
+      "path": "docs/report_sprints/Sprint11.md",
+      "type": "file",
+      "sha": "2acbc9996966b7fab541818c4f9918fbc14c0fe6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3734,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint12.md",
+      "path": "docs/report_sprints/Sprint12.md",
+      "type": "file",
+      "sha": "6eb5fbcc172182d08f3209a3529a19147126b93d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3616,
+      "is_binary": false
+    },
+    {
+      "name": "Sprint13.md",
+      "path": "docs/report_sprints/Sprint13.md",
+      "type": "file",
+      "sha": "7e4ef2ae6244d4edcfa4b30b64b4748fb1fa2a01",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3515,
+      "is_binary": false
+    },
+    {
+      "name": "templete.md",
+      "path": "docs/report_sprints/templete.md",
+      "type": "file",
+      "sha": "ad18bf309c62346c992d9db2799f854ef5faa90e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1844,
+      "is_binary": false
+    },
+    {
+      "name": "requisitos.md",
+      "path": "docs/requisitos.md",
+      "type": "file",
+      "sha": "5abf25e737a196fc4f2ba06a30be8ace540cef07",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2593,
+      "is_binary": false
+    },
+    {
+      "name": "results.md",
+      "path": "docs/results.md",
+      "type": "file",
+      "sha": "b25c6bdf92545a6563ae5e113d00027aeebfbfec",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4934,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "f4e67ecb89448afcdd2a0ea7a820667129b1ad04",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".dockerignore",
+      "path": "frontend/.dockerignore",
+      "type": "file",
+      "sha": "469ca981514e1a21fb45b83631cd00cdc4e49da3",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 47,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": "frontend/.gitignore",
+      "type": "file",
+      "sha": "a547bf36d8d11a4f89c59c144f24795749086dd1",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 253,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "badcf50ca68b29b588e0c05f55d7a87802bd5f4d",
+      "mode": "100644",
+      "extension": "",
+      "size": 149,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/README.md",
+      "type": "file",
+      "sha": "7059a962adb0138b65dd10e0aee66ccfe984b8c6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 856,
+      "is_binary": false
+    },
+    {
+      "name": "eslint.config.js",
+      "path": "frontend/eslint.config.js",
+      "type": "file",
+      "sha": "cee1e2c788d908e4a8ff796eb6edbe73ee73fffd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 763,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/index.html",
+      "type": "file",
+      "sha": "997705bad7adb535d9d0af90172671cc0f504341",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 445,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "frontend/package-lock.json",
+      "type": "file",
+      "sha": "28ecd65eeefb674b80486c20fe762cbec60b261f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 141391,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "frontend/package.json",
+      "type": "file",
+      "sha": "1902230c821baf7f9b78e71866c202ae0048aaa2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 901,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "frontend/public",
+      "type": "directory",
+      "sha": "b7df780055581a1a068455895acb51c7fac55a1f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "404.html",
+      "path": "frontend/public/404.html",
+      "type": "file",
+      "sha": "b73433a6a0079a2b019c5158eb0492eb99a6ddf1",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 517,
+      "is_binary": false
+    },
+    {
+      "name": "favicon.png",
+      "path": "frontend/public/favicon.png",
+      "type": "file",
+      "sha": "6445ae3f6dfe83c20cf2c98b0913c6e4f42563f8",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 67241,
+      "is_binary": false
+    },
+    {
+      "name": "favicon.svg",
+      "path": "frontend/public/favicon.svg",
+      "type": "file",
+      "sha": "3e6c5bfa318bce4f284b96c2e1e16b51149fde6b",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 244,
+      "is_binary": false
+    },
+    {
+      "name": "vite.svg",
+      "path": "frontend/public/vite.svg",
+      "type": "file",
+      "sha": "e7b8dfb1b2a60bd50538bec9f876511b9cac21e3",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1497,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "frontend/src",
+      "type": "directory",
+      "sha": "4e80b5ffb4801df1f2213d4b64914e318c7f57b7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "App.css",
+      "path": "frontend/src/App.css",
+      "type": "file",
+      "sha": "99422a09e5ee5e9b98f58cebf6502cc919fc9443",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 6239,
+      "is_binary": false
+    },
+    {
+      "name": "App.jsx",
+      "path": "frontend/src/App.jsx",
+      "type": "file",
+      "sha": "8e3478a99b5f4cc1e33545efc47f7c4ce64dae22",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1179,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "frontend/src/assets",
+      "type": "directory",
+      "sha": "94c0b2fc152a086447a04f62793957235d2475be",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "react.svg",
+      "path": "frontend/src/assets/react.svg",
+      "type": "file",
+      "sha": "6c87de9bb3358469122cc991d5cf578927246184",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 4126,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "frontend/src/components",
+      "type": "directory",
+      "sha": "8e3a0f66470f7fdaf43b600a277bcabf12be2a5e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Footer.jsx",
+      "path": "frontend/src/components/Footer.jsx",
+      "type": "file",
+      "sha": "6a87be168655473a9c2f7cc31f004eb0a7aace2c",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1093,
+      "is_binary": false
+    },
+    {
+      "name": "Header.jsx",
+      "path": "frontend/src/components/Header.jsx",
+      "type": "file",
+      "sha": "345800aac8db9c9d1b75e59b41553f7be5297261",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 5598,
+      "is_binary": false
+    },
+    {
+      "name": "Layout",
+      "path": "frontend/src/components/Layout",
+      "type": "directory",
+      "sha": "eab6ab9f7031cd83c654a2f035eba088e4281533",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Navbar.jsx",
+      "path": "frontend/src/components/Layout/Navbar.jsx",
+      "type": "file",
+      "sha": "98b1ca58c9cb1abab283a274b32495aa49b87f9d",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 396,
+      "is_binary": false
+    },
+    {
+      "name": "MobileMenuButton.jsx",
+      "path": "frontend/src/components/MobileMenuButton.jsx",
+      "type": "file",
+      "sha": "3784a4da575e0e7807ababc65f7eb40df0d5ccec",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 439,
+      "is_binary": false
+    },
+    {
+      "name": "Professorlist.jsx",
+      "path": "frontend/src/components/Professorlist.jsx",
+      "type": "file",
+      "sha": "e80bcb179be8c77d3d4a51dac072d6b35c8c0b70",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1338,
+      "is_binary": false
+    },
+    {
+      "name": "ScrollToTop.jsx",
+      "path": "frontend/src/components/ScrollToTop.jsx",
+      "type": "file",
+      "sha": "2df3a442c914aa2cc218b17804c9d118da80f6c1",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 382,
+      "is_binary": false
+    },
+    {
+      "name": "SearchBar.jsx",
+      "path": "frontend/src/components/SearchBar.jsx",
+      "type": "file",
+      "sha": "ac97e125c42dd219ed35c7432badf41224396bef",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1143,
+      "is_binary": false
+    },
+    {
+      "name": "orientador",
+      "path": "frontend/src/components/orientador",
+      "type": "directory",
+      "sha": "bff61a36db35f8ffaa4eac1c4bd8520e8f3deb26",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "CourseStep.jsx",
+      "path": "frontend/src/components/orientador/CourseStep.jsx",
+      "type": "file",
+      "sha": "02b6a9a344eefbe8ab1baf2af2c413080f26c413",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 5040,
+      "is_binary": false
+    },
+    {
+      "name": "InterestsStep.jsx",
+      "path": "frontend/src/components/orientador/InterestsStep.jsx",
+      "type": "file",
+      "sha": "e7c89c4f9b5834c29d19279ed491db3bb85ddefe",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6248,
+      "is_binary": false
+    },
+    {
+      "name": "ProjectTypeStep.jsx",
+      "path": "frontend/src/components/orientador/ProjectTypeStep.jsx",
+      "type": "file",
+      "sha": "a8646b169b73e9596163e62d75dbffddfdaa94c9",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 4873,
+      "is_binary": false
+    },
+    {
+      "name": "ResultsStep.jsx",
+      "path": "frontend/src/components/orientador/ResultsStep.jsx",
+      "type": "file",
+      "sha": "5e5f3dfbe1f8374c054dc64be44a170193c7793b",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 8208,
+      "is_binary": false
+    },
+    {
+      "name": "ReviewStep.jsx",
+      "path": "frontend/src/components/orientador/ReviewStep.jsx",
+      "type": "file",
+      "sha": "efcd5ca0a95cd2d21843752854a04b60649926b9",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 5603,
+      "is_binary": false
+    },
+    {
+      "name": "SkillsStep.jsx",
+      "path": "frontend/src/components/orientador/SkillsStep.jsx",
+      "type": "file",
+      "sha": "08ce15b02d72f7bfd571f339c150ceeec7f98710",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6016,
+      "is_binary": false
+    },
+    {
+      "name": "StepIndicator.jsx",
+      "path": "frontend/src/components/orientador/StepIndicator.jsx",
+      "type": "file",
+      "sha": "927b759bf5a9d91862155f8e1d533bfbb3dd1fe7",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1047,
+      "is_binary": false
+    },
+    {
+      "name": "WelcomeStep.jsx",
+      "path": "frontend/src/components/orientador/WelcomeStep.jsx",
+      "type": "file",
+      "sha": "ce42f4141f0c5a9e6cbf02a273353e6d1eb959ba",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2597,
+      "is_binary": false
+    },
+    {
+      "name": "professores",
+      "path": "frontend/src/components/professores",
+      "type": "directory",
+      "sha": "35dd9ecafce6df58a93aa2c090cebd015774a72c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ProfessorCard.jsx",
+      "path": "frontend/src/components/professores/ProfessorCard.jsx",
+      "type": "file",
+      "sha": "c3fd6c4f2f5618b06ecaf5cd46ab69fc8f8f2db6",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6137,
+      "is_binary": false
+    },
+    {
+      "name": "context",
+      "path": "frontend/src/context",
+      "type": "directory",
+      "sha": "28fb52a215abd4dfa1ab5d23eb83bacdd710f587",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ProfessorContext.jsx",
+      "path": "frontend/src/context/ProfessorContext.jsx",
+      "type": "file",
+      "sha": "746d93f9c6ea30800665bb901b67632b37e0a3c2",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1734,
+      "is_binary": false
+    },
+    {
+      "name": "data",
+      "path": "frontend/src/data",
+      "type": "directory",
+      "sha": "db70d265ea74f108e96c78b6842d6e2421d771b1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "professorMock.ts",
+      "path": "frontend/src/data/professorMock.ts",
+      "type": "file",
+      "sha": "944786ba5c376fd2f45916a5fbefa645836a5df4",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1590,
+      "is_binary": false
+    },
+    {
+      "name": "index.css",
+      "path": "frontend/src/index.css",
+      "type": "file",
+      "sha": "9edef9f5ca2112122ba821f4de2c163e1afe515f",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1224,
+      "is_binary": false
+    },
+    {
+      "name": "main.jsx",
+      "path": "frontend/src/main.jsx",
+      "type": "file",
+      "sha": "6f36a65abc947923e9ec506c3c7b29240329c913",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2061,
+      "is_binary": false
+    },
+    {
+      "name": "pages",
+      "path": "frontend/src/pages",
+      "type": "directory",
+      "sha": "6deb1b87aef355d7517170dafb601dee5d3de67c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "EncontrarOrientadorPage.jsx",
+      "path": "frontend/src/pages/EncontrarOrientadorPage.jsx",
+      "type": "file",
+      "sha": "849901c8616bcd944c3c8bf042383ddd71f2e513",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 9016,
+      "is_binary": false
+    },
+    {
+      "name": "HomePage.jsx",
+      "path": "frontend/src/pages/HomePage.jsx",
+      "type": "file",
+      "sha": "622e5a423d513d9c4a5e656553b5aa00995e2cc5",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 22805,
+      "is_binary": false
+    },
+    {
+      "name": "ProfessorDetailPage.jsx",
+      "path": "frontend/src/pages/ProfessorDetailPage.jsx",
+      "type": "file",
+      "sha": "6f7bec5c00a6c05eaa5ef88621979531bf5dae4e",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 31307,
+      "is_binary": false
+    },
+    {
+      "name": "ProfessoresPage.jsx",
+      "path": "frontend/src/pages/ProfessoresPage.jsx",
+      "type": "file",
+      "sha": "bacca9160e40c5a128763c54c6a7b396759b15be",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 19996,
+      "is_binary": false
+    },
+    {
+      "name": "SobreNosPage.jsx",
+      "path": "frontend/src/pages/SobreNosPage.jsx",
+      "type": "file",
+      "sha": "fd455f3ebe52a340ad7c4c0733854f78f30bfb0e",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 6960,
+      "is_binary": false
+    },
+    {
+      "name": "routes",
+      "path": "frontend/src/routes",
+      "type": "directory",
+      "sha": "c668faebfad451357ee60b25a64f54d6466d46f5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "AppRoutes.jsx",
+      "path": "frontend/src/routes/AppRoutes.jsx",
+      "type": "file",
+      "sha": "f1dc0e9442b9e13a7e5b91c3ff421c3ad0caefd1",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 807,
+      "is_binary": false
+    },
+    {
+      "name": "index.jsx",
+      "path": "frontend/src/routes/index.jsx",
+      "type": "file",
+      "sha": "2115ffa8828e80d3dc88dd2368495ecd95713e83",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1266,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "frontend/src/services",
+      "type": "directory",
+      "sha": "633d12ba8ba7d5ac333044c38d65d6ae2ee2e07a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api.js",
+      "path": "frontend/src/services/api.js",
+      "type": "file",
+      "sha": "055921c8c1ee66ddbd328e27e3a11dc9ed1edae8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2818,
+      "is_binary": false
+    },
+    {
+      "name": "styles",
+      "path": "frontend/src/styles",
+      "type": "directory",
+      "sha": "c8443fb62174b2654f46ff58ebb8c7b1158e0c5f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ProfessorDetailPage.css",
+      "path": "frontend/src/styles/ProfessorDetailPage.css",
+      "type": "file",
+      "sha": "0eab7b2acee560f78946e5dd8720918937b0e020",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 538,
+      "is_binary": false
+    },
+    {
+      "name": "home.css",
+      "path": "frontend/src/styles/home.css",
+      "type": "file",
+      "sha": "3770fa50c45b899cff3c5198e1b853c7c410b711",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 514,
+      "is_binary": false
+    },
+    {
+      "name": "sobrenos.css",
+      "path": "frontend/src/styles/sobrenos.css",
+      "type": "file",
+      "sha": "d9bd36c688ae2e1bbb295097fdb0a84e9851227e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 4221,
+      "is_binary": false
+    },
+    {
+      "name": "types",
+      "path": "frontend/src/types",
+      "type": "directory",
+      "sha": "560b33a9cad9380cce1c807e61710050287bb474",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "professor.ts",
+      "path": "frontend/src/types/professor.ts",
+      "type": "file",
+      "sha": "2b70242a06257ce1484b230a833dcd6f9f418672",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 225,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.js",
+      "path": "frontend/vite.config.js",
+      "type": "file",
+      "sha": "957a8110207542f4ac1c1661f82910f3addf19e0",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 570,
+      "is_binary": false
+    },
+    {
+      "name": "mkdocs.yml",
+      "path": "mkdocs.yml",
+      "type": "file",
+      "sha": "5e2aecf0f9d209791fc6335cc672f060bbb10581",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1714,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "type": "file",
+      "sha": "e2a6441b71aed437046dc2dd6734e736b93fdb55",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 74997,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "type": "file",
+      "sha": "17ed400f2efb044a6ef6f395ac14e9f9626c68ad",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 95,
+      "is_binary": false
+    },
+    {
+      "name": "pytest.ini",
+      "path": "pytest.ini",
+      "type": "file",
+      "sha": "4463080fe6dbc3b03ce0f21fd3aa047ad1d92e7b",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 85,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "type": "file",
+      "sha": "845a83edcc07a7866994b5f32b1606517f76dc97",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 4178,
+      "is_binary": false
+    },
+    {
+      "name": "tatus",
+      "path": "tatus",
+      "type": "file",
+      "sha": "f4bc4eb589d430debd14684bc80913394a2cf9fd",
+      "mode": "100644",
+      "extension": "",
+      "size": 269,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "tests",
+      "type": "directory",
+      "sha": "9465525aeb9b05c71859162a3fa1c66a9c9cec16",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_analise_dados.py",
+      "path": "tests/test_analise_dados.py",
+      "type": "file",
+      "sha": "43eb8984cfce92cbea5105f9a50482b689bfcf45",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2713,
+      "is_binary": false
+    },
+    {
+      "name": "test_database_manager.py",
+      "path": "tests/test_database_manager.py",
+      "type": "file",
+      "sha": "4ee7ac9527e792ed188531938ffd199a63e43607",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2160,
+      "is_binary": false
+    },
+    {
+      "name": "test_lattes_parser.py",
+      "path": "tests/test_lattes_parser.py",
+      "type": "file",
+      "sha": "5b90f1e2094cff2b57c015030976b39f600809dc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1455,
+      "is_binary": false
+    },
+    {
+      "name": "test_lattes_scraper.py",
+      "path": "tests/test_lattes_scraper.py",
+      "type": "file",
+      "sha": "9a3c304404ea251105f6bbabf55740ed42cc7d6d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2519,
+      "is_binary": false
+    },
+    {
+      "name": "test_lattes_update.py",
+      "path": "tests/test_lattes_update.py",
+      "type": "file",
+      "sha": "176250c4c7bb0ffeddce62c8c3f6e345b56e0c7a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6614,
+      "is_binary": false
+    },
+    {
+      "name": "test_scholar_scraper.py",
+      "path": "tests/test_scholar_scraper.py",
+      "type": "file",
+      "sha": "cd48c1ead92ad4a92e051c64d7b3c0c165f897fa",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5433,
+      "is_binary": false
+    },
+    {
+      "name": "test_scholar_update.py",
+      "path": "tests/test_scholar_update.py",
+      "type": "file",
+      "sha": "8b6ff7bd77d1f094a26107ea3cc57fc2dbb14924",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6022,
+      "is_binary": false
+    },
+    {
+      "name": "test_scraper_runner.py",
+      "path": "tests/test_scraper_runner.py",
+      "type": "file",
+      "sha": "74fbc295584047d14a3f57c7032928221591cf01",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1660,
+      "is_binary": false
+    },
+    {
+      "name": "test_sigaa_scraper.py",
+      "path": "tests/test_sigaa_scraper.py",
+      "type": "file",
+      "sha": "63ef10c707fc052af292b4a80fc102b1aee7fb39",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3774,
+      "is_binary": false
+    },
+    {
+      "name": "test_sigaa_update.py",
+      "path": "tests/test_sigaa_update.py",
+      "type": "file",
+      "sha": "6108e53a0c52c739f1bd42de5efb42356ff6b2fc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3040,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2025-12-05T14:25:01.498438",
+  "method": "rest",
+  "total_items": 301,
+  "repository_metadata": {
+    "id": 1042662280,
+    "full_name": "unb-mds/2025-2-Portal-dos-Professores",
+    "description": null,
+    "created_at": "2025-08-22T11:23:25Z",
+    "updated_at": "2025-12-03T13:26:41Z",
+    "language": "JavaScript",
+    "size": 8632,
+    "stars": 2,
+    "forks": 2,
+    "open_issues": 0
+  }
+}
