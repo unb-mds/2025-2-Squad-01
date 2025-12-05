@@ -4,6 +4,7 @@ import { RepoFingerprint } from '../components/RepoFingerprint';
 import { RepoTreemap } from '../components/RepoTreemap';
 import { VisualizationTabs } from '../components/VisualizationTabs';
 import { LanguageLegend } from '../components/LanguageLegend';
+import { RepoStructureAnalysis } from '../components/RepoStructureAnalysis';
 import DashboardLayout from '../components/DashboardLayout';
 import { VisualizationUtils, type LanguageAnalysis } from './VisualizationUtils';
 
@@ -160,6 +161,11 @@ export default function VisualizationPage() {
         <div className="flex items-center justify-center h-96 border rounded-lg" style={{ backgroundColor: '#222222', borderColor: '#333333' }}>
           <p className="text-slate-400">Please select a repository from the toolbar above</p>
         </div>
+      )}
+
+      {/* Análise de IA */}
+      {repoParam && !loading && !error && languageData && (
+        <RepoStructureAnalysis data={languageData} />
       )}
 
       {/* Legenda */}

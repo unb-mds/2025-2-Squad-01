@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprints - CoOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #1c2128;
+            --primary: #58a6ff;
+            --secondary: #8b949e;
+            --accent: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Section */
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg-dark);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--bg-hover);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: var(--bg-hover);
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .badge-success { background: #3fb95044; color: #3fb950; border: 1px solid #3fb950; }
+        .badge-warning { background: #d2992244; color: #d29922; border: 1px solid #d29922; }
+        .badge-danger { background: #f8514944; color: #f85149; border: 1px solid #f85149; }
+        .badge-info { background: #58a6ff44; color: #58a6ff; border: 1px solid #58a6ff; }
+        
+        /* Chart */
+        .chart {
+            background: var(--bg-hover);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        
+        .chart-bar {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            color: var(--text-muted);
+        }
+        
+        .chart-fill {
+            height: 20px;
+            background: var(--primary);
+            border-radius: 4px;
+            margin-left: 1rem;
+        }
+        
+        .chart-value {
+            margin-left: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Phases */
+        .phase {
+            background: var(--bg-hover);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        
+        .phase h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            color: var(--text-muted);
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            nav a { margin-right: 1rem; font-size: 0.9rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            table { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Documentação de Sprints</h1>
+        <p>Squad 01 - Desenvolvimento Ágil</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Período: 22/08/2025 a 07/12/2025 (15 semanas)</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">← Documentação</a>
+        <a href="#visao-geral">Visão Geral</a>
+        <a href="#sprints">Sprints</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#evolucao">Evolução</a>
+    </nav>
+
+    <div class="container">
+        <div class="stats-grid" id="visao-geral">
+            <div class="stat-card">
+                <span class="stat-number">15</span>
+                <div class="stat-label">Sprints Completas</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">~540</span>
+                <div class="stat-label">Commits Totais</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">10+</span>
+                <div class="stat-label">PRs Merged</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2</span>
+                <div class="stat-label">Releases Entregues</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📅 Sobre as Sprints</h2>
+            <p>Este documento contém a documentação completa e retrospectivas de todas as sprints do projeto, cobrindo o período de <strong>22/08/2025 a 07/12/2025</strong> (15 semanas de desenvolvimento ágil).</p>
+            <p>Cada sprint seguiu a metodologia Scrum adaptada para contexto acadêmico, com sprints de 1 semana e retrospectivas documentadas.</p>
+        </div>
+
+        <div class="section" id="sprints">
+            <h2>📋 Índice de Sprints</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sprint</th>
+                        <th>Período</th>
+                        <th>Status</th>
+                        <th>Commits</th>
+                        <th>Destaques</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Semana 01</strong></td>
+                        <td>22/08 - 31/08</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>9</td>
+                        <td>🎉 Kick-off, docs iniciais</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 02</strong></td>
+                        <td>01/09 - 07/09</td>
+                        <td><span class="badge badge-warning">⚠️ Baixa</span></td>
+                        <td>1</td>
+                        <td>Planejamento</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 03</strong></td>
+                        <td>08/09 - 14/09</td>
+                        <td><span class="badge badge-warning">⚠️ Baixa</span></td>
+                        <td>2</td>
+                        <td>Estudos técnicos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 04</strong></td>
+                        <td>15/09 - 21/09</td>
+                        <td><span class="badge badge-info">🚀 Virada</span></td>
+                        <td>11</td>
+                        <td>PR #39, GitHub Actions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 05</strong></td>
+                        <td>22/09 - 28/09</td>
+                        <td><span class="badge badge-danger">🔥 Alta</span></td>
+                        <td>25</td>
+                        <td>4 PRs merged</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 06</strong></td>
+                        <td>29/09 - 05/10</td>
+                        <td><span class="badge badge-success">🏆 Release 1</span></td>
+                        <td>68</td>
+                        <td>Bronze consolidation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 07</strong></td>
+                        <td>06/10 - 12/10</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>24</td>
+                        <td>Silver layer started</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 08</strong></td>
+                        <td>13/10 - 19/10</td>
+                        <td><span class="badge badge-danger">🔥 Recorde</span></td>
+                        <td>72</td>
+                        <td>Silver completed, burnout</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 09</strong></td>
+                        <td>20/10 - 26/10</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>45</td>
+                        <td>Features pós-Release 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 10</strong></td>
+                        <td>27/10 - 02/11</td>
+                        <td><span class="badge badge-info">✅ Recovery</span></td>
+                        <td>30</td>
+                        <td>Recovery sprint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 11</strong></td>
+                        <td>03/11 - 09/11</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>20</td>
+                        <td>Manutenção</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 12</strong></td>
+                        <td>10/11 - 16/11</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>25</td>
+                        <td>Features Release 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 13</strong></td>
+                        <td>17/11 - 23/11</td>
+                        <td><span class="badge badge-success">✅ Completa</span></td>
+                        <td>12</td>
+                        <td>Code review</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 14</strong></td>
+                        <td>24/11 - 30/11</td>
+                        <td><span class="badge badge-danger">🔥 Intensa</span></td>
+                        <td>51</td>
+                        <td>PR #97 merged, D3.js</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semana 15</strong></td>
+                        <td>01/12 - 07/12</td>
+                        <td><span class="badge badge-success">🏆 Release 2</span></td>
+                        <td>~5</td>
+                        <td>Release 2 delivered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="metricas">
+            <h2>📊 Métricas de Produtividade</h2>
+            
+            <div class="chart">
+                <h3>Commits por Sprint</h3>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 01</span>
+                    <div class="chart-fill" style="width: 12.5%;"></div>
+                    <span class="chart-value">9</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 02</span>
+                    <div class="chart-fill" style="width: 1.4%;"></div>
+                    <span class="chart-value">1</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 03</span>
+                    <div class="chart-fill" style="width: 2.8%;"></div>
+                    <span class="chart-value">2</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 04</span>
+                    <div class="chart-fill" style="width: 15.3%;"></div>
+                    <span class="chart-value">11</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 05</span>
+                    <div class="chart-fill" style="width: 34.7%;"></div>
+                    <span class="chart-value">25</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 06</span>
+                    <div class="chart-fill" style="width: 94.4%;"></div>
+                    <span class="chart-value">68 🏆</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 07</span>
+                    <div class="chart-fill" style="width: 33.3%;"></div>
+                    <span class="chart-value">24</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 08</span>
+                    <div class="chart-fill" style="width: 100%;"></div>
+                    <span class="chart-value">72 🔥</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 09</span>
+                    <div class="chart-fill" style="width: 62.5%;"></div>
+                    <span class="chart-value">45</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 10</span>
+                    <div class="chart-fill" style="width: 41.7%;"></div>
+                    <span class="chart-value">30</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 11</span>
+                    <div class="chart-fill" style="width: 27.8%;"></div>
+                    <span class="chart-value">20</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 12</span>
+                    <div class="chart-fill" style="width: 34.7%;"></div>
+                    <span class="chart-value">25</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 13</span>
+                    <div class="chart-fill" style="width: 16.7%;"></div>
+                    <span class="chart-value">12</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 14</span>
+                    <div class="chart-fill" style="width: 70.8%;"></div>
+                    <span class="chart-value">51</span>
+                </div>
+                <div class="chart-bar">
+                    <span class="chart-label">Sprint 15</span>
+                    <div class="chart-fill" style="width: 6.9%;"></div>
+                    <span class="chart-value">~5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="evolucao">
+            <h2>📈 Evolução do Projeto</h2>
+
+            <div class="phase">
+                <h4>Fase 0: Setup e Planejamento (Semanas 1-3)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> Kick-off, documentação inicial, estudos técnicos</li>
+                    <li><strong>Commits:</strong> ~12 commits</li>
+                    <li><strong>Desafio:</strong> Ritmo muito baixo, sem desenvolvimento real</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Fase 1: Início do Desenvolvimento (Semanas 4-5)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> GitHub Actions, automações, protótipos</li>
+                    <li><strong>Commits:</strong> ~36 commits</li>
+                    <li><strong>Conquista:</strong> 🚀 Desenvolvimento ativo iniciado</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Fase 2: Fundação e Release 1 (Semanas 6-7)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> Bronze layer consolidation</li>
+                    <li><strong>Commits:</strong> ~92 commits</li>
+                    <li><strong>Conquista:</strong> 🏆 Release 1 entregue (01/10/2025)</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Fase 3: Desenvolvimento Intenso (Semanas 8-10)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> Silver layer completa, features pós-Release 1</li>
+                    <li><strong>Commits:</strong> ~147 commits</li>
+                    <li><strong>Desafio:</strong> Burnout na Sprint 8 (72 commits)</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Fase 4: Preparação Release 2 (Semanas 11-13)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> Manutenção, features novas, code review</li>
+                    <li><strong>Commits:</strong> ~57 commits</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Fase 5: Finalização e Release 2 (Semanas 14-15)</h4>
+                <ul>
+                    <li><strong>Foco:</strong> PR #97 merged, visualizações D3.js</li>
+                    <li><strong>Commits:</strong> ~51 commits</li>
+                    <li><strong>Conquista:</strong> 🏆 Release 2 entregue (07/12/2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Conquistas do Projeto</h2>
+            <ul>
+                <li>✅ <strong>2 Releases entregues no prazo</strong></li>
+                <li>✅ <strong>Pipeline Bronze → Silver → Gold funcional</strong></li>
+                <li>✅ <strong>Frontend com visualizações D3.js profissionais</strong></li>
+                <li>✅ <strong>90+ linguagens de programação suportadas</strong></li>
+                <li>✅ <strong>540+ commits de trabalho</strong></li>
+                <li>✅ <strong>Documentação completa de 15 sprints</strong></li>
+                <li>✅ <strong>Arquitetura Medallion bem estruturada</strong></li>
+                <li>✅ <strong>GitHub Actions com automações desde Sprint 4</strong></li>
+                <li>✅ <strong>10+ PRs merged ao longo do projeto</strong></li>
+                <li>✅ <strong>Crescimento de 1 commit/sprint → 72 commits/sprint</strong></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>👥 Time</h2>
+            <p><strong>Scrum Master:</strong> Pedro Druck</p>
+            <p><strong>Equipe:</strong></p>
+            <ul>
+                <li>Carlos Eduardo</li>
+                <li>Gustavo Xavier</li>
+                <li>Heitor Macedo</li>
+                <li>Pedro Rocha</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar para Documentação
+        </a>
+    </div>
+</body>
+</html>
