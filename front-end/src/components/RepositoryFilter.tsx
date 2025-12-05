@@ -29,7 +29,7 @@ export default function RepositoryFilter({
     if (!data) {
       async function fetchRepoNames() {
         try {
-          const response = await fetch('/2025-2-Squad-01/available_repos.json');
+          const response = await fetch(`${import.meta.env.BASE_URL}available_repos.json`);
           if (response.ok) {
             const repos = await response.json();
             setAvailableRepoNames(repos);

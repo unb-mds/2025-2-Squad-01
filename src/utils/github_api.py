@@ -6,6 +6,7 @@ import time
 import hashlib
 import requests
 import threading
+import logging
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Tuple
 
@@ -571,7 +572,7 @@ class GitHubAPIClient:
                 pages = 0
                 period_commits = 0
                 rest_page = 1
-                last_rest_commit_sha = None  # Track último commit processado via REST
+                last_rest_commit_sha = None
                 
                 while True:
                     if max_pages is not None and pages >= max_pages:
@@ -744,12 +745,330 @@ class GitHubAPIClient:
                         break
                 
                 if len(time_ranges) > 1 and period_commits > 0:
-                    print(f"[GRAPHQL] Extracted {period_commits}total unique commits from this period")
+                    print(f"[GRAPHQL] Extracted {period_commits} total unique commits from this period")
         
         commits = list(commits_by_sha.values())
         if branches:
             print(f"  [GRAPHQL] Total unique commits across all branches: {len(commits)}")
         return commits, rate_meta
+
+    # ============================================================================
+    # 🆕 REPOSITORY STRUCTURE EXTRACTION (REST + GraphQL Fallback)
+    # ============================================================================
+
+    def get_repository_tree(
+        self,
+        owner: str,
+        repo: str,
+        branch: str = "main",
+        use_cache: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Obtém árvore de arquivos usando REST API Git Trees como método principal.
+        Se a árvore for truncada, automaticamente usa GraphQL como fallback.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisada (padrão: "main")
+            use_cache: Se deve usar cache
+        
+        Returns:
+            Dicionário com a árvore de arquivos padronizada
+        """
+        logger = logging.getLogger(__name__)
+        
+        try:
+            # Passo 1: Obter SHA do branch via REST
+            branch_url = f"https://api.github.com/repos/{owner}/{repo}/branches/{branch}"
+            branch_data = self.get_with_cache(branch_url, use_cache=use_cache)
+            
+            if not branch_data:
+                logger.error(f"Branch {branch} not found for {owner}/{repo}")
+                return self._empty_tree_response(owner, repo, branch, error="Branch not found")
+            
+            tree_sha = branch_data['commit']['sha']
+            logger.info(f"Fetching tree for {owner}/{repo} (SHA: {tree_sha[:8]})")
+            
+            # Passo 2: Obter árvore recursiva com REST (1 requisição!)
+            tree_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{tree_sha}"
+            tree_data = self.get_with_cache(
+                f"{tree_url}?recursive=1",
+                use_cache=use_cache
+            )
+            
+            if not tree_data:
+                logger.error(f"Failed to fetch tree for {owner}/{repo}")
+                return self._empty_tree_response(owner, repo, branch, error="Tree fetch failed")
+            
+            is_truncated = tree_data.get('truncated', False)
+            raw_tree = tree_data.get('tree', [])
+            
+            logger.info(f"  ├─ Items fetched: {len(raw_tree)}")
+            logger.info(f"  ├─ Truncated: {is_truncated}")
+            
+            # ⚠️ Se truncado, fallback para GraphQL
+            if is_truncated:
+                logger.warning(f"  ⚠️  Tree truncated! Falling back to GraphQL...")
+                return self.graphql_repository_tree(owner, repo, branch, use_cache)
+            
+            # Passo 3: Padronizar formato dos nós
+            standardized_tree = []
+            for item in raw_tree:
+                node = self._standardize_tree_node(item)
+                if node:
+                    standardized_tree.append(node)
+            
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'sha': tree_sha,
+                'tree': standardized_tree,
+                'truncated': is_truncated,
+                'extracted_at': datetime.now().isoformat(),
+                'method': 'rest',
+                'total_items': len(standardized_tree)
+            }
+            
+        except Exception as e:
+            logger.error(f"Error in get_repository_tree: {str(e)}")
+            return self._empty_tree_response(owner, repo, branch, error=str(e))
+
+    def graphql_repository_tree(
+        self,
+        owner: str,
+        repo: str,
+        branch: str = "main",
+        use_cache: bool = True,
+        max_depth: int = 100
+    ) -> Dict[str, Any]:
+        """
+        Extrai árvore completa usando GraphQL (usado quando REST trunca).
+        Implementação iterativa com stack para evitar recursão profunda.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch a ser analisada
+            use_cache: Se deve usar cache
+            max_depth: Profundidade máxima para segurança
+        
+        Returns:
+            Dicionário com árvore hierárquica
+        """
+        logger = logging.getLogger(__name__)
+        
+        def build_tree_iterative(start_path: str = "") -> List[Dict[str, Any]]:
+            """Constrói árvore usando stack iterativa."""
+            root_tree = []
+            stack = [(start_path, root_tree)]
+            processed = set()
+            
+            while stack and len(processed) < max_depth:
+                current_path, parent_list = stack.pop()
+                
+                if current_path in processed:
+                    logger.warning(f"Skipping already processed path: {current_path}")
+                    continue
+                processed.add(current_path)
+                
+                expression = f"{branch}:{current_path}" if current_path else f"{branch}:"
+                
+                query = """
+                query($owner: String!, $repo: String!, $expression: String!) {
+                  repository(owner: $owner, name: $repo) {
+                    object(expression: $expression) {
+                      ... on Tree {
+                        entries {
+                          name
+                          type
+                          mode
+                          path
+                          extension
+                          object {
+                            ... on Blob {
+                              byteSize
+                              isBinary
+                              oid
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                """
+                
+                variables = {
+                    "owner": owner,
+                    "repo": repo,
+                    "expression": expression
+                }
+                
+                try:
+                    result = self.graphql(query, variables, use_cache=use_cache)
+                    
+                    if not result or 'data' not in result:
+                        logger.warning(f"No data returned for path: {current_path}")
+                        continue
+                    
+                    repo_obj = result.get('data', {}).get('repository', {})
+                    if not repo_obj:
+                        logger.warning(f"Repository not found")
+                        continue
+                    
+                    tree_obj = repo_obj.get('object', {})
+                    if not tree_obj:
+                        logger.debug(f"No tree object for path: {current_path}")
+                        continue
+                    
+                    entries = tree_obj.get('entries', [])
+                    
+                    for entry in entries:
+                        entry_type = entry.get('type')
+                        entry_name = entry.get('name')
+                        entry_path = entry.get('path')
+                        
+                        if entry_type == 'tree':
+                            logger.debug(f"Processing directory: {entry_path}")
+                            directory_node = {
+                                'name': entry_name,
+                                'path': entry_path,
+                                'type': 'directory',
+                                'children': []
+                            }
+                            parent_list.append(directory_node)
+                            stack.append((entry_path, directory_node['children']))
+                            
+                        elif entry_type == 'blob':
+                            blob_info = entry.get('object', {})
+                            file_node = {
+                                'name': entry_name,
+                                'path': entry_path,
+                                'type': 'file',
+                                'extension': entry.get('extension', ''),
+                                'size': blob_info.get('byteSize', 0),
+                                'is_binary': blob_info.get('isBinary', False),
+                                'oid': blob_info.get('oid', '')
+                            }
+                            parent_list.append(file_node)
+                
+                except Exception as e:
+                    logger.error(f"Error processing path {current_path}: {str(e)}")
+                    continue
+            
+            return root_tree
+        
+        logger.info(f"Building repository tree via GraphQL for {owner}/{repo}")
+        
+        try:
+            tree = build_tree_iterative("")
+            
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': tree,
+                'extracted_at': datetime.now().isoformat(),
+                'method': 'graphql',
+                'total_items': len(tree)
+            }
+        except Exception as e:
+            logger.error(f"Failed to build repository tree: {str(e)}")
+            return {
+                'owner': owner,
+                'repository': repo,
+                'branch': branch,
+                'tree': [],
+                'error': str(e),
+                'extracted_at': datetime.now().isoformat(),
+                'method': 'graphql'
+            }
+
+    def _standardize_tree_node(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """
+        Padroniza formato de um nó da árvore (REST ou GraphQL).
+        
+        Args:
+            item: Item bruto da API
+        
+        Returns:
+            Nó padronizado ou None se inválido
+        """
+        node_type = item.get('type', '')
+        path = item.get('path', '')
+        
+        if not path:
+            return None
+        
+        name = path.split('/')[-1] if '/' in path else path
+        
+        if node_type == 'blob':
+            file_type = 'file'
+        elif node_type == 'tree':
+            file_type = 'directory'
+        else:
+            file_type = node_type
+        
+        standardized = {
+            'name': name,
+            'path': path,
+            'type': file_type,
+            'sha': item.get('sha', item.get('oid', '')),
+            'mode': item.get('mode', '')
+        }
+        
+        if file_type == 'file':
+            extension = ''
+            if '.' in name:
+                extension = '.' + name.rsplit('.', 1)[-1]
+            
+            standardized['extension'] = extension
+            
+            size = item.get('size')
+            if size is None and 'object' in item:
+                size = item['object'].get('byteSize', 0)
+            
+            standardized['size'] = size or 0
+            standardized['is_binary'] = item.get('is_binary', False)
+        
+        elif file_type == 'directory':
+            standardized['children'] = item.get('children', [])
+        
+        return standardized
+
+    def _empty_tree_response(
+        self,
+        owner: str,
+        repo: str,
+        branch: str,
+        error: str = ""
+    ) -> Dict[str, Any]:
+        """
+        Retorna estrutura vazia em caso de erro.
+        
+        Args:
+            owner: Proprietário do repositório
+            repo: Nome do repositório
+            branch: Branch
+            error: Mensagem de erro
+        
+        Returns:
+            Estrutura vazia padronizada
+        """
+        return {
+            'owner': owner,
+            'repository': repo,
+            'branch': branch,
+            'sha': '',
+            'tree': [],
+            'truncated': False,
+            'extracted_at': datetime.now().isoformat(),
+            'method': 'rest',
+            'total_items': 0,
+            'error': error
+        }
 
     def get_paginated(
         self,

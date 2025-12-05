@@ -1,6 +1,5 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useMemo, useState, useEffect } from 'react';
-import { useSidebar } from '../contexts/SidebarContext';
 import type { ProcessedActivityResponse, RepoActivitySummary } from '../pages/Utils';
 
 interface RepositoryToolbarProps {
@@ -20,6 +19,7 @@ const menuItems: MenuItem[] = [
   { id: 'commits', label: 'Commits', icon: '💻' },
   { id: 'issues', label: 'Issues', icon: '📊' },
   { id: 'pullrequests', label: 'Pull Requests', icon: '🔀' },
+  { id: 'visualization', label: 'Visualization', icon: '🎨' }, 
 ];
 
 /**
@@ -42,14 +42,13 @@ export default function RepositoryToolbar({
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading] = useState(false);
   const [availableRepoNames, setAvailableRepoNames] = useState<string[]>([]);
-  const { sidebarWidth } = useSidebar();
 
   // Fetch available repository names if data is not provided
   useEffect(() => {
     if (!data) {
       async function fetchRepoNames() {
         try {
-          const response = await fetch('/2025-2-Squad-01/available_repos.json');
+          const response = await fetch(`${import.meta.env.BASE_URL}available_repos.json`);
           if (response.ok) {
             const repos = await response.json();
             setAvailableRepoNames(repos);
@@ -86,37 +85,30 @@ export default function RepositoryToolbar({
 
   return (
     <aside
-      className="h-34.5 right-0 flex-shrink-0 transition-all duration-300 ease-in-out fixed top-0 hidden md:block z-10"
-      style={{ 
-        backgroundColor: '#222222', 
-        borderRightColor: '#333333', 
-        left: sidebarWidth,
-        width: `calc(100vw - ${sidebarWidth})`
-      }}
+      className="h-34.5 w-full flex-shrink-0 transition-all duration-300 ease-in-out"
+      style={{ backgroundColor: '#222222', borderRightColor: '#333333' }}
     >
       <div className="h-32 flex flex-col">
         {/* Header with Repository Info */}
         <div
-          className="pt-4 pl-5 pb-1 border-b-1 flex items-center justify-between gap-3"
+          className="pt-4 pl-5 pb-1 border-b-1 flex items-center gap-3"
           style={{ borderBottomColor: '#333333' }}
         >
-          <div className="flex items-center gap-3 min-w-0 flex-1">
-            <span className="text-xl">📊</span>
-            <div className="min-w-0">
-              <h1 className="text-lg font-semibold text-white leading-tight truncate">
-                Repository Related Metrics
-              </h1>
-              <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400 truncate">
-                Currently Viewing: {currentRepo}
-              </p>
-            </div>
+          <span className="text-xl">📊</span>
+          <div>
+            <h1 className="text-lg font-semibold text-white leading-tight">
+              Repository Related Metrics
+            </h1>
+            <p className="mt-0.5 text-[15px] pt-0.5 text-slate-400">
+              Currently Viewing: {currentRepo}
+            </p>
           </div>
 
           {/* Repository Selector */}
           <select
             value={selectedRepoId}
             onChange={(e) => handleRepoChange(e.target.value)}
-            className="px-4 py-2 mb-3 mr-4 border rounded text-white max-w-xs flex-shrink-0"
+            className="ml-auto mr-3 mb-2 px-4 py-2 border rounded text-white"
             style={{ backgroundColor: '#333333', borderColor: '#444444' }}
             disabled={loading}
           >
