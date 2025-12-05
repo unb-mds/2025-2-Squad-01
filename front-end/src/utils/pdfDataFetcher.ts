@@ -78,7 +78,7 @@ export interface DateFilterOptions {
  * @returns Dados agregados prontos para PDF
  */
 export async function fetchPDFData(repoName: string): Promise<PDFRepositoryData> {
-  const baseUrl = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/main/data/silver/';
+  const baseUrl = 'https://raw.githubusercontent.com/unb-mds/2025-2-Squad-01/extracaoPDf/data/silver/pdf/';
   const url = `${baseUrl}pdf_data_${repoName}.json`;
   
   console.log('[PDF Data Fetcher] Fetching from:', url);
