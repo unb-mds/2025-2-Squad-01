@@ -2,26 +2,20 @@
   "repository": "2025-2-Squad-01",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2025-12-05T14:25:00.600685",
+  "analyzed_at": "2025-12-06T05:35:05.968479",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 877,
-  "total_bytes": 305006666,
+  "total_files": 1098,
+  "total_bytes": 344276220,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 535,
-      "total_bytes": 299307699,
-      "percentage": 98.13,
+      "file_count": 756,
+      "total_bytes": 338577253,
+      "percentage": 98.34,
       "files": [
-        {
-          "path": "data/bronze/issues_all.json",
-          "name": "issues_all.json",
-          "size": 38795279,
-          "extension": ".json"
-        },
         {
           "path": "data/bronze/commits_2025-2-Squad-01_with_stats.json",
           "name": "commits_2025-2-Squad-01_with_stats.json",
@@ -29,15 +23,33 @@
           "extension": ".json"
         },
         {
-          "path": "data/bronze/commits_all.json",
-          "name": "commits_all.json",
-          "size": 16540317,
+          "path": "data/bronze/issues_all.json",
+          "name": "issues_all.json",
+          "size": 27935461,
           "extension": ".json"
         },
         {
-          "path": "data/silver/temporal_events.json",
-          "name": "temporal_events.json",
-          "size": 13184626,
+          "path": "data/bronze/prs_all.json",
+          "name": "prs_all.json",
+          "size": 18040975,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/structure_2023-2-Squad03-LicitAL.json",
+          "name": "structure_2023-2-Squad03-LicitAL.json",
+          "size": 12754962,
+          "extension": ".json"
+        },
+        {
+          "path": "data/silver/hierarchy_2023-2-Squad03-LicitAL.json",
+          "name": "hierarchy_2023-2-Squad03-LicitAL.json",
+          "size": 10257470,
+          "extension": ".json"
+        },
+        {
+          "path": "data/bronze/commits_all.json",
+          "name": "commits_all.json",
+          "size": 9674637,
           "extension": ".json"
         },
         {
@@ -47,33 +59,21 @@
           "extension": ".json"
         },
         {
+          "path": "data/bronze/structure_2024-2-SuaFinanca.json",
+          "name": "structure_2024-2-SuaFinanca.json",
+          "size": 6616126,
+          "extension": ".json"
+        },
+        {
+          "path": "data/silver/temporal_events.json",
+          "name": "temporal_events.json",
+          "size": 6530475,
+          "extension": ".json"
+        },
+        {
           "path": "data/bronze/commits_LicitaBSB-24.1_with_stats.json",
           "name": "commits_LicitaBSB-24.1_with_stats.json",
           "size": 6184302,
-          "extension": ".json"
-        },
-        {
-          "path": "data/bronze/commits_2024-2-AcheiUnB_with_stats.json",
-          "name": "commits_2024-2-AcheiUnB_with_stats.json",
-          "size": 4396183,
-          "extension": ".json"
-        },
-        {
-          "path": "data/bronze/commits_2024-1-forUnB_with_stats.json",
-          "name": "commits_2024-1-forUnB_with_stats.json",
-          "size": 3954396,
-          "extension": ".json"
-        },
-        {
-          "path": "data/bronze/commits_2025-1-NoFluxoUNB_with_stats.json",
-          "name": "commits_2025-1-NoFluxoUNB_with_stats.json",
-          "size": 3255446,
-          "extension": ".json"
-        },
-        {
-          "path": "data/silver/daily_activity_summary.json",
-          "name": "daily_activity_summary.json",
-          "size": 2758203,
           "extension": ".json"
         }
       ]
@@ -82,7 +82,7 @@
       "language": "SVG Image",
       "file_count": 10,
       "total_bytes": 2295067,
-      "percentage": 0.75,
+      "percentage": 0.67,
       "files": [
         {
           "path": "docs/arquitetura/Level2-Container-Diagram.drawio.svg",
@@ -150,7 +150,7 @@
       "language": "TypeScript",
       "file_count": 73,
       "total_bytes": 855580,
-      "percentage": 0.28,
+      "percentage": 0.25,
       "files": [
         {
           "path": "front-end/src/components/Graphs.tsx",
@@ -218,7 +218,7 @@
       "language": "Markdown",
       "file_count": 132,
       "total_bytes": 607713,
-      "percentage": 0.2,
+      "percentage": 0.18,
       "files": [
         {
           "path": "docs/ARQUITETURA.md",
@@ -283,30 +283,10 @@
       ]
     },
     {
-      "language": "PNG Image",
-      "file_count": 2,
-      "total_bytes": 597958,
-      "percentage": 0.2,
-      "files": [
-        {
-          "path": "docs/arquitetura/fluxos/FluxoPrincipal.png",
-          "name": "FluxoPrincipal.png",
-          "size": 298979,
-          "extension": ".png"
-        },
-        {
-          "path": "front-end/public/docs/arquitetura/fluxos/FluxoPrincipal.png",
-          "name": "FluxoPrincipal.png",
-          "size": 298979,
-          "extension": ".png"
-        }
-      ]
-    },
-    {
       "language": "Python",
       "file_count": 65,
       "total_bytes": 572468,
-      "percentage": 0.19,
+      "percentage": 0.17,
       "files": [
         {
           "path": "src/utils/github_api.py",
@@ -371,10 +351,30 @@
       ]
     },
     {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 597958,
+      "percentage": 0.17,
+      "files": [
+        {
+          "path": "docs/arquitetura/fluxos/FluxoPrincipal.png",
+          "name": "FluxoPrincipal.png",
+          "size": 298979,
+          "extension": ".png"
+        },
+        {
+          "path": "front-end/public/docs/arquitetura/fluxos/FluxoPrincipal.png",
+          "name": "FluxoPrincipal.png",
+          "size": 298979,
+          "extension": ".png"
+        }
+      ]
+    },
+    {
       "language": "HTML",
       "file_count": 33,
       "total_bytes": 548275,
-      "percentage": 0.18,
+      "percentage": 0.16,
       "files": [
         {
           "path": "docs/backend/backend.html",
@@ -442,7 +442,7 @@
       "language": "YAML",
       "file_count": 7,
       "total_bytes": 139019,
-      "percentage": 0.05,
+      "percentage": 0.04,
       "files": [
         {
           "path": "front-end/pnpm-lock.yaml",
@@ -666,7 +666,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2025-12-05T14:26:40.694175",
+    "extracted_at": "2025-12-06T05:36:38.284000",
     "file_path": "data/silver/language_analysis_2025-2-Squad-01.json"
   }
 }

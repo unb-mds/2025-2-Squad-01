@@ -2,20 +2,26 @@
   "repository": "2025-2-Squad12",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2025-12-05T14:25:06.384299",
+  "analyzed_at": "2025-12-06T05:35:11.579188",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 77,
-  "total_bytes": 769006,
+  "total_files": 71,
+  "total_bytes": 1396555,
   "languages": [
     {
       "language": "PNG Image",
-      "file_count": 5,
-      "total_bytes": 673851,
-      "percentage": 87.63,
+      "file_count": 6,
+      "total_bytes": 1306748,
+      "percentage": 93.57,
       "files": [
+        {
+          "path": "docs/img/arquitetura.png",
+          "name": "arquitetura.png",
+          "size": 632897,
+          "extension": ".png"
+        },
         {
           "path": "docs/tema claro.png",
           "name": "tema claro.png",
@@ -50,14 +56,20 @@
     },
     {
       "language": "Markdown",
-      "file_count": 26,
-      "total_bytes": 39122,
-      "percentage": 5.09,
+      "file_count": 28,
+      "total_bytes": 41982,
+      "percentage": 3.01,
       "files": [
         {
           "path": "estudos/arquitetura.md",
           "name": "arquitetura.md",
           "size": 3725,
+          "extension": ".md"
+        },
+        {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 3184,
           "extension": ".md"
         },
         {
@@ -82,12 +94,6 @@
           "path": "docs/Sprints/sprint-02.md",
           "name": "sprint-02.md",
           "size": 2323,
-          "extension": ".md"
-        },
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 2162,
           "extension": ".md"
         },
         {
@@ -119,8 +125,8 @@
     {
       "language": "Python",
       "file_count": 14,
-      "total_bytes": 17592,
-      "percentage": 2.29,
+      "total_bytes": 17352,
+      "percentage": 1.24,
       "files": [
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/middlewares.py",
@@ -143,7 +149,7 @@
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/settings.py",
           "name": "settings.py",
-          "size": 2589,
+          "size": 2328,
           "extension": ".py"
         },
         {
@@ -161,7 +167,7 @@
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/pipelines.py",
           "name": "pipelines.py",
-          "size": 694,
+          "size": 715,
           "extension": ".py"
         },
         {
@@ -185,24 +191,10 @@
       ]
     },
     {
-      "language": "JavaScript",
-      "file_count": 1,
-      "total_bytes": 11342,
-      "percentage": 1.47,
-      "files": [
-        {
-          "path": "FRONTEND/app.js",
-          "name": "app.js",
-          "size": 11342,
-          "extension": ".js"
-        }
-      ]
-    },
-    {
       "language": "Unknown",
       "file_count": 12,
-      "total_bytes": 10862,
-      "percentage": 1.41,
+      "total_bytes": 10837,
+      "percentage": 0.78,
       "files": [
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/spiders/__pycache__/coindesk_spider.cpython-313.pyc",
@@ -225,13 +217,13 @@
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/__pycache__/settings.cpython-313.pyc",
           "name": "settings.cpython-313.pyc",
-          "size": 1340,
+          "size": 1300,
           "extension": ".pyc"
         },
         {
           "path": "BACKEND/coindesk_scraper/coindesk_scraper/__pycache__/pipelines.cpython-313.pyc",
           "name": "pipelines.cpython-313.pyc",
-          "size": 924,
+          "size": 939,
           "extension": ".pyc"
         },
         {
@@ -267,69 +259,41 @@
       ]
     },
     {
-      "language": "JSON",
-      "file_count": 12,
-      "total_bytes": 9391,
-      "percentage": 1.22,
+      "language": "JavaScript",
+      "file_count": 1,
+      "total_bytes": 10264,
+      "percentage": 0.73,
       "files": [
         {
-          "path": "BACKEND/coindesk_scraper/coindesk_news_2025-12-04T19-43-42+00-00.json",
-          "name": "coindesk_news_2025-12-04T19-43-42+00-00.json",
-          "size": 1893,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/coindesk_news_2025-12-04T19-50-17+00-00.json",
-          "name": "coindesk_news_2025-12-04T19-50-17+00-00.json",
-          "size": 1632,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/coindesk_news_2025-12-04T19-53-02+00-00.json",
-          "name": "coindesk_news_2025-12-04T19-53-02+00-00.json",
-          "size": 788,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/primeira_noticia_2025-12-05T04-06-54+00-00.json",
-          "name": "primeira_noticia_2025-12-05T04-06-54+00-00.json",
-          "size": 768,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/data/noticias_20251205_020022.json",
-          "name": "noticias_20251205_020022.json",
-          "size": 710,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/coindesk_news_2025-12-04T20-07-00+00-00.json",
-          "name": "coindesk_news_2025-12-04T20-07-00+00-00.json",
-          "size": 667,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/primeira_noticia_2025-12-04T20-08-48+00-00.json",
-          "name": "primeira_noticia_2025-12-04T20-08-48+00-00.json",
-          "size": 667,
-          "extension": ".json"
-        },
-        {
-          "path": "BACKEND/coindesk_scraper/coindesk_news_2025-12-04T19-59-58+00-00.json",
-          "name": "coindesk_news_2025-12-04T19-59-58+00-00.json",
-          "size": 639,
-          "extension": ".json"
-        },
+          "path": "FRONTEND/app.js",
+          "name": "app.js",
+          "size": 10264,
+          "extension": ".js"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 3,
+      "total_bytes": 2562,
+      "percentage": 0.18,
+      "files": [
         {
           "path": "FRONTEND/noticias.json",
           "name": "noticias.json",
-          "size": 608,
+          "size": 1934,
           "extension": ".json"
         },
         {
-          "path": "BACKEND/coindesk_scraper/primeira_noticia_2025-12-05T04-53-36+00-00.json",
-          "name": "primeira_noticia_2025-12-05T04-53-36+00-00.json",
-          "size": 569,
+          "path": "BACKEND/coindesk_scraper/data/noticias.json",
+          "name": "noticias.json",
+          "size": 616,
+          "extension": ".json"
+        },
+        {
+          "path": "BACKEND/spider0/raspagem.json",
+          "name": "raspagem.json",
+          "size": 12,
           "extension": ".json"
         }
       ]
@@ -337,13 +301,13 @@
     {
       "language": "YAML",
       "file_count": 2,
-      "total_bytes": 2303,
-      "percentage": 0.3,
+      "total_bytes": 2267,
+      "percentage": 0.16,
       "files": [
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 1960,
+          "size": 1924,
           "extension": ".yml"
         },
         {
@@ -358,7 +322,7 @@
       "language": "CSS",
       "file_count": 1,
       "total_bytes": 1988,
-      "percentage": 0.26,
+      "percentage": 0.14,
       "files": [
         {
           "path": "FRONTEND/styles.css",
@@ -372,7 +336,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.14,
+      "percentage": 0.08,
       "files": [
         {
           "path": "LICENSE",
@@ -386,7 +350,7 @@
       "language": "HTML",
       "file_count": 1,
       "total_bytes": 963,
-      "percentage": 0.13,
+      "percentage": 0.07,
       "files": [
         {
           "path": "FRONTEND/index.html",
@@ -400,7 +364,7 @@
       "language": "Config",
       "file_count": 2,
       "total_bytes": 532,
-      "percentage": 0.07,
+      "percentage": 0.04,
       "files": [
         {
           "path": "BACKEND/coindesk_scraper/scrapy.cfg",
@@ -418,7 +382,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2025-12-05T14:26:41.146476",
+    "extracted_at": "2025-12-06T05:36:38.732897",
     "file_path": "data/silver/language_analysis_2025-2-Squad12.json"
   }
 }
