@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-02-15T05:46:39.277930",
+      "extracted_at": "2026-02-16T05:58:47.719446",
       "file_path": "data/bronze/prs_2023-2-SuaGradeUnB.json",
       "record_count": 77
     }
@@ -39,16 +39,16 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [],
     "milestone": null,
-    "comments": 2,
+    "comments": 4,
     "created_at": "2026-02-12T17:56:03Z",
-    "updated_at": "2026-02-14T22:41:29Z",
-    "closed_at": null,
-    "author_association": "NONE",
+    "updated_at": "2026-02-15T13:44:50Z",
+    "closed_at": "2026-02-15T13:44:50Z",
+    "author_association": "CONTRIBUTOR",
     "type": null,
     "active_lock_reason": null,
     "draft": false,
@@ -57,10 +57,30 @@
       "html_url": "https://github.com/unb-mds/2023-2-SuaGradeUnB/pull/250",
       "diff_url": "https://github.com/unb-mds/2023-2-SuaGradeUnB/pull/250.diff",
       "patch_url": "https://github.com/unb-mds/2023-2-SuaGradeUnB/pull/250.patch",
-      "merged_at": null
+      "merged_at": "2026-02-15T13:44:50Z"
     },
     "body": "# Descrição\r\n\r\nO scraper parou de atualizar o banco de dados corretamente. O problema ocorria porque o código utilizava IDs fixos para o `ViewState` e para o botão de submit, mas o sistema da UnB (SIGAA) gera esses valores dinamicamente a cada sessão/atualização. Com IDs incorretos, o servidor rejeitava as requisições silenciosamente.\r\n\r\nTambém corrigi um *anti-pattern* onde uma requisição HTTP era feita na definição dos argumentos padrão de uma função, o que executava a chamada de rede já na inicialização do projeto.\r\n\r\n**O que foi feito:**\r\n* Implementação de um fluxo dinâmico: agora o script faz um `GET` na página primeiro, extrai os IDs reais do HTML e só então envia o `POST`.\r\n* Remoção da chamada de função nos argumentos padrão em `get_list_of_departments`.\r\n\r\n## Tipo de alteração\r\n\r\n* [x]   **Bug fix** (alteração que corrige um problema)\r\n* [ ]   **New feature** (alteração que adiciona funcionalidade)\r\n* [ ]   **Breaking change** (correção ou funcionalidade que altera o comportamento de outras partes do sistema de maneira significativa)\r\n* [ ]   **Documentation update** (alteração na documentação)\r\n\r\n## Como isso foi testado?\r\n\r\n* [x]   **Validação Manual:** Executei o comando de atualização do banco localmente. O script conseguiu navegar pelos departamentos, extrair as disciplinas e popular o banco de dados com sucesso, o que antes resultava em algumas listas vazias.\r\n* [x]   **Testes Unitários:** Executei a suíte de testes existente (`utils/tests/test_web_scraping.py`). Todos os testes passaram, garantindo que a lógica de *parsing* do HTML extraído continua funcionando corretamente após a refatoração da requisição.\r\n\r\n## Checklist\r\n\r\n* [x]   Meu código segue as diretrizes de contribuição deste projeto\r\n* [x]   Realizei uma revisão pessoal do meu código\r\n* [x]   Comentei meu código, especialmente em áreas de difícil compreensão\r\n* [ ]   Fiz alterações correspondentes na documentação \r\n* [x]   Minhas alterações não geram novos *warnings* ou erros\r\n* [x]   Adicionei testes que comprovam que minha correção é eficaz ou que minha funcionalidade está funcionando corretamente * [x]   Todos os testes unitários novos e existentes passam localmente com minhas alterações ```",
-    "closed_by": null,
+    "closed_by": {
+      "login": "caio-felipee",
+      "id": 45669355,
+      "node_id": "MDQ6VXNlcjQ1NjY5MzU1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45669355?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caio-felipee",
+      "html_url": "https://github.com/caio-felipee",
+      "followers_url": "https://api.github.com/users/caio-felipee/followers",
+      "following_url": "https://api.github.com/users/caio-felipee/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caio-felipee/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caio-felipee/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caio-felipee/subscriptions",
+      "organizations_url": "https://api.github.com/users/caio-felipee/orgs",
+      "repos_url": "https://api.github.com/users/caio-felipee/repos",
+      "events_url": "https://api.github.com/users/caio-felipee/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caio-felipee/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2023-2-SuaGradeUnB/issues/250/reactions",
       "total_count": 0,
