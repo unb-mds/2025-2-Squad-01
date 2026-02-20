@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-02-19T06:33:40.698256",
+  "extracted_at": "2026-02-20T06:22:05.767295",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -3245,7 +3245,7 @@
         "name": "integracao_banco.py",
         "type": "file",
         "language": "Python",
-        "size": 31872,
+        "size": 51025,
         "extension": ".py",
         "path": "coleta_dados/scraping/integracao_banco.py"
       },
@@ -3320,6 +3320,14 @@
         "size": 5180,
         "extension": ".py",
         "path": "coleta_dados/scraping/temp_parser.py"
+      },
+      {
+        "name": "upload_direito_2019.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1216,
+        "extension": ".py",
+        "path": "coleta_dados/scraping/upload_direito_2019.py"
       },
       {
         "name": "coverage",
@@ -7698,6 +7706,14 @@
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramaLegendControls.svelte"
       },
       {
+        "name": "IntegralizacaoSection.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4524,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/IntegralizacaoSection.svelte"
+      },
+      {
         "name": "OptativasAdicionadasSection.svelte",
         "type": "file",
         "language": "Unknown",
@@ -7757,7 +7773,7 @@
         "name": "SubjectCard.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 7543,
+        "size": 7963,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectCard.svelte"
       },
@@ -7765,7 +7781,7 @@
         "name": "SubjectDetailsModal.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 8558,
+        "size": 11459,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectDetailsModal.svelte"
       },
@@ -7933,7 +7949,7 @@
         "name": "Navbar.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 7095,
+        "size": 7097,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte"
       },
@@ -8823,7 +8839,7 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 16856,
+        "size": 22738,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts"
       },
@@ -8933,9 +8949,17 @@
         "name": "fluxograma.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6295,
+        "size": 7103,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/fluxograma.service.ts"
+      },
+      {
+        "name": "integralizacao.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4527,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/integralizacao.service.ts"
       },
       {
         "name": "pdf",
@@ -8947,7 +8971,7 @@
         "name": "pdfDataExtractor.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 28314,
+        "size": 29139,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfDataExtractor.ts"
       },
@@ -8979,7 +9003,7 @@
         "name": "supabase-data.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 7508,
+        "size": 14625,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts"
       },
@@ -9025,7 +9049,7 @@
         "name": "fluxograma.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6675,
+        "size": 7233,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/fluxograma.store.svelte.ts"
       },
@@ -9057,7 +9081,7 @@
         "name": "uploadStore.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 10374,
+        "size": 9801,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/uploadStore.ts"
       },
@@ -9115,7 +9139,7 @@
         "name": "curso.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3279,
+        "size": 4538,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/curso.ts"
       },
@@ -9155,9 +9179,17 @@
         "name": "materia.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 4007,
+        "size": 4368,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/materia.ts"
+      },
+      {
+        "name": "matriz.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2211,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/types/matriz.ts"
       },
       {
         "name": "prerequisite-tree.ts",
@@ -9171,7 +9203,7 @@
         "name": "user.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3500,
+        "size": 4107,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/user.ts"
       },
@@ -9204,6 +9236,14 @@
         "size": 533,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/breakpoints.ts"
+      },
+      {
+        "name": "expressao-logica.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1891,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/expressao-logica.ts"
       },
       {
         "name": "fileValidation.ts",
@@ -9291,7 +9331,7 @@
         "name": "+server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 23873,
+        "size": 32969,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/api/casar-disciplinas/+server.ts"
       },
@@ -9361,7 +9401,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 7684,
+        "size": 7785,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/fluxogramas/+page.svelte"
       },
@@ -9431,7 +9471,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 5936,
+        "size": 8422,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/+page.svelte"
       },
@@ -10790,7 +10830,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-02-19T06:35:45.469528",
+    "extracted_at": "2026-02-20T06:24:03.893398",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }
