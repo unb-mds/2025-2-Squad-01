@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-02-27T06:19:59.224418",
+  "extracted_at": "2026-02-28T06:00:04.065989",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -4113,7 +4113,7 @@
         "name": "k8s.frontend-svelte.Dockerfile",
         "type": "file",
         "language": "Unknown",
-        "size": 2729,
+        "size": 2431,
         "extension": ".Dockerfile",
         "path": "k8s.frontend-svelte.Dockerfile"
       },
@@ -4509,7 +4509,7 @@
         "name": "database_functions.sql",
         "type": "file",
         "language": "SQL",
-        "size": 33413,
+        "size": 71467,
         "extension": ".sql",
         "path": "no_fluxo_backend/docs/database_functions.sql"
       },
@@ -4517,7 +4517,7 @@
         "name": "database_schema.json",
         "type": "file",
         "language": "JSON",
-        "size": 138516,
+        "size": 226496,
         "extension": ".json",
         "path": "no_fluxo_backend/docs/database_schema.json"
       },
@@ -4525,7 +4525,7 @@
         "name": "database_tables.md",
         "type": "file",
         "language": "Markdown",
-        "size": 9498,
+        "size": 16336,
         "extension": ".md",
         "path": "no_fluxo_backend/docs/database_tables.md"
       },
@@ -4544,10 +4544,18 @@
         "children": []
       },
       {
+        "name": "casar_disciplinas_function.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 30337,
+        "extension": ".sql",
+        "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql"
+      },
+      {
         "name": "latest_init_from_export.sql",
         "type": "file",
         "language": "SQL",
-        "size": 38629,
+        "size": 61195,
         "extension": ".sql",
         "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql"
       },
@@ -5154,6 +5162,2276 @@
         "path": "no_fluxo_backend/tsconfig.json"
       },
       {
+        "name": "no_fluxo_frontend",
+        "type": "directory",
+        "path": "no_fluxo_frontend",
+        "children": []
+      },
+      {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 223,
+        "extension": ".dockerignore",
+        "path": "no_fluxo_frontend/.dockerignore"
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 709,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/.gitignore"
+      },
+      {
+        "name": ".metadata",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1706,
+        "extension": ".metadata",
+        "path": "no_fluxo_frontend/.metadata"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 553,
+        "extension": ".md",
+        "path": "no_fluxo_frontend/README.md"
+      },
+      {
+        "name": "analysis_options.yaml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1420,
+        "extension": ".yaml",
+        "path": "no_fluxo_frontend/analysis_options.yaml"
+      },
+      {
+        "name": "android",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 253,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/android/.gitignore"
+      },
+      {
+        "name": "app",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app",
+        "children": []
+      },
+      {
+        "name": "build.gradle.kts",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1392,
+        "extension": ".kts",
+        "path": "no_fluxo_frontend/android/app/build.gradle.kts"
+      },
+      {
+        "name": "src",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src",
+        "children": []
+      },
+      {
+        "name": "debug",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/debug",
+        "children": []
+      },
+      {
+        "name": "AndroidManifest.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 378,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/debug/AndroidManifest.xml"
+      },
+      {
+        "name": "main",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main",
+        "children": []
+      },
+      {
+        "name": "AndroidManifest.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 2198,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/main/AndroidManifest.xml"
+      },
+      {
+        "name": "kotlin",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/kotlin",
+        "children": []
+      },
+      {
+        "name": "com",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/kotlin/com",
+        "children": []
+      },
+      {
+        "name": "example",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/kotlin/com/example",
+        "children": []
+      },
+      {
+        "name": "mobile_app",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/kotlin/com/example/mobile_app",
+        "children": []
+      },
+      {
+        "name": "MainActivity.kt",
+        "type": "file",
+        "language": "Kotlin",
+        "size": 124,
+        "extension": ".kt",
+        "path": "no_fluxo_frontend/android/app/src/main/kotlin/com/example/mobile_app/MainActivity.kt"
+      },
+      {
+        "name": "res",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res",
+        "children": []
+      },
+      {
+        "name": "drawable-v21",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/drawable-v21",
+        "children": []
+      },
+      {
+        "name": "launch_background.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 438,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/main/res/drawable-v21/launch_background.xml"
+      },
+      {
+        "name": "drawable",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/drawable",
+        "children": []
+      },
+      {
+        "name": "launch_background.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 434,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/main/res/drawable/launch_background.xml"
+      },
+      {
+        "name": "mipmap-hdpi",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-hdpi",
+        "children": []
+      },
+      {
+        "name": "ic_launcher.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 544,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+      },
+      {
+        "name": "mipmap-mdpi",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-mdpi",
+        "children": []
+      },
+      {
+        "name": "ic_launcher.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 442,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+      },
+      {
+        "name": "mipmap-xhdpi",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xhdpi",
+        "children": []
+      },
+      {
+        "name": "ic_launcher.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 721,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+      },
+      {
+        "name": "mipmap-xxhdpi",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xxhdpi",
+        "children": []
+      },
+      {
+        "name": "ic_launcher.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1031,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+      },
+      {
+        "name": "mipmap-xxxhdpi",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xxxhdpi",
+        "children": []
+      },
+      {
+        "name": "ic_launcher.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1443,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+      },
+      {
+        "name": "values-night",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/values-night",
+        "children": []
+      },
+      {
+        "name": "styles.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 995,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/main/res/values-night/styles.xml"
+      },
+      {
+        "name": "values",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/main/res/values",
+        "children": []
+      },
+      {
+        "name": "styles.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 996,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/main/res/values/styles.xml"
+      },
+      {
+        "name": "profile",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/app/src/profile",
+        "children": []
+      },
+      {
+        "name": "AndroidManifest.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 378,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend/android/app/src/profile/AndroidManifest.xml"
+      },
+      {
+        "name": "build.gradle.kts",
+        "type": "file",
+        "language": "Unknown",
+        "size": 515,
+        "extension": ".kts",
+        "path": "no_fluxo_frontend/android/build.gradle.kts"
+      },
+      {
+        "name": "gradle.properties",
+        "type": "file",
+        "language": "Unknown",
+        "size": 166,
+        "extension": ".properties",
+        "path": "no_fluxo_frontend/android/gradle.properties"
+      },
+      {
+        "name": "gradle",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/gradle",
+        "children": []
+      },
+      {
+        "name": "wrapper",
+        "type": "directory",
+        "path": "no_fluxo_frontend/android/gradle/wrapper",
+        "children": []
+      },
+      {
+        "name": "gradle-wrapper.properties",
+        "type": "file",
+        "language": "Unknown",
+        "size": 203,
+        "extension": ".properties",
+        "path": "no_fluxo_frontend/android/gradle/wrapper/gradle-wrapper.properties"
+      },
+      {
+        "name": "settings.gradle.kts",
+        "type": "file",
+        "language": "Unknown",
+        "size": 739,
+        "extension": ".kts",
+        "path": "no_fluxo_frontend/android/settings.gradle.kts"
+      },
+      {
+        "name": "animaçãocss",
+        "type": "directory",
+        "path": "no_fluxo_frontend/animaçãocss",
+        "children": []
+      },
+      {
+        "name": "desconectado-animado.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 14739,
+        "extension": ".html",
+        "path": "no_fluxo_frontend/animaçãocss/desconectado-animado.html"
+      },
+      {
+        "name": "desconectado.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 11918,
+        "extension": ".css",
+        "path": "no_fluxo_frontend/animaçãocss/desconectado.css"
+      },
+      {
+        "name": "desconectado.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 4941,
+        "extension": ".html",
+        "path": "no_fluxo_frontend/animaçãocss/desconectado.html"
+      },
+      {
+        "name": "erro.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 6618,
+        "extension": ".css",
+        "path": "no_fluxo_frontend/animaçãocss/erro.css"
+      },
+      {
+        "name": "erro.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 2612,
+        "extension": ".html",
+        "path": "no_fluxo_frontend/animaçãocss/erro.html"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 806,
+        "extension": ".html",
+        "path": "no_fluxo_frontend/animaçãocss/index.html"
+      },
+      {
+        "name": "style.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 4168,
+        "extension": ".css",
+        "path": "no_fluxo_frontend/animaçãocss/style.css"
+      },
+      {
+        "name": "assets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/assets",
+        "children": []
+      },
+      {
+        "name": "fonts",
+        "type": "directory",
+        "path": "no_fluxo_frontend/assets/fonts",
+        "children": []
+      },
+      {
+        "name": "PermanentMarker-Regular.ttf",
+        "type": "file",
+        "language": "TrueType Font",
+        "size": 73620,
+        "extension": ".ttf",
+        "path": "no_fluxo_frontend/assets/fonts/PermanentMarker-Regular.ttf"
+      },
+      {
+        "name": "help",
+        "type": "directory",
+        "path": "no_fluxo_frontend/assets/help",
+        "children": []
+      },
+      {
+        "name": "emitir_historico.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 47397,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/assets/help/emitir_historico.png"
+      },
+      {
+        "name": "historico_baixado.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 121501,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/assets/help/historico_baixado.png"
+      },
+      {
+        "name": "tela_de_cadastro.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 29025,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/assets/help/tela_de_cadastro.png"
+      },
+      {
+        "name": "icons",
+        "type": "directory",
+        "path": "no_fluxo_frontend/assets/icons",
+        "children": []
+      },
+      {
+        "name": "Google__G__logo.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 742,
+        "extension": ".svg",
+        "path": "no_fluxo_frontend/assets/icons/Google__G__logo.svg"
+      },
+      {
+        "name": "computer_phone.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 7503,
+        "extension": ".svg",
+        "path": "no_fluxo_frontend/assets/icons/computer_phone.svg"
+      },
+      {
+        "name": "ios",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 569,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/ios/.gitignore"
+      },
+      {
+        "name": "Flutter",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Flutter",
+        "children": []
+      },
+      {
+        "name": "AppFrameworkInfo.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 774,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/ios/Flutter/AppFrameworkInfo.plist"
+      },
+      {
+        "name": "Debug.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 107,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/ios/Flutter/Debug.xcconfig"
+      },
+      {
+        "name": "Release.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 109,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/ios/Flutter/Release.xcconfig"
+      },
+      {
+        "name": "Podfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 1391,
+        "extension": "",
+        "path": "no_fluxo_frontend/ios/Podfile"
+      },
+      {
+        "name": "Podfile.lock",
+        "type": "file",
+        "language": "Lock File",
+        "size": 3034,
+        "extension": ".lock",
+        "path": "no_fluxo_frontend/ios/Podfile.lock"
+      },
+      {
+        "name": "Runner.xcodeproj",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj",
+        "children": []
+      },
+      {
+        "name": "project.pbxproj",
+        "type": "file",
+        "language": "Unknown",
+        "size": 30594,
+        "extension": ".pbxproj",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.pbxproj"
+      },
+      {
+        "name": "project.xcworkspace",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.xcworkspace",
+        "children": []
+      },
+      {
+        "name": "contents.xcworkspacedata",
+        "type": "file",
+        "language": "Unknown",
+        "size": 135,
+        "extension": ".xcworkspacedata",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "IDEWorkspaceChecks.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 238,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+      },
+      {
+        "name": "WorkspaceSettings.xcsettings",
+        "type": "file",
+        "language": "Unknown",
+        "size": 226,
+        "extension": ".xcsettings",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings"
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "xcschemes",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/xcshareddata/xcschemes",
+        "children": []
+      },
+      {
+        "name": "Runner.xcscheme",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3833,
+        "extension": ".xcscheme",
+        "path": "no_fluxo_frontend/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme"
+      },
+      {
+        "name": "Runner.xcworkspace",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcworkspace",
+        "children": []
+      },
+      {
+        "name": "contents.xcworkspacedata",
+        "type": "file",
+        "language": "Unknown",
+        "size": 224,
+        "extension": ".xcworkspacedata",
+        "path": "no_fluxo_frontend/ios/Runner.xcworkspace/contents.xcworkspacedata"
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner.xcworkspace/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "IDEWorkspaceChecks.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 238,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+      },
+      {
+        "name": "WorkspaceSettings.xcsettings",
+        "type": "file",
+        "language": "Unknown",
+        "size": 226,
+        "extension": ".xcsettings",
+        "path": "no_fluxo_frontend/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings"
+      },
+      {
+        "name": "Runner",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner",
+        "children": []
+      },
+      {
+        "name": "AppDelegate.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 391,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/ios/Runner/AppDelegate.swift"
+      },
+      {
+        "name": "Assets.xcassets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets",
+        "children": []
+      },
+      {
+        "name": "AppIcon.appiconset",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset",
+        "children": []
+      },
+      {
+        "name": "Contents.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 2519,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json"
+      },
+      {
+        "name": "Icon-App-1024x1024@1x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 10932,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png"
+      },
+      {
+        "name": "Icon-App-20x20@1x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 295,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png"
+      },
+      {
+        "name": "Icon-App-20x20@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 406,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png"
+      },
+      {
+        "name": "Icon-App-20x20@3x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 450,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png"
+      },
+      {
+        "name": "Icon-App-29x29@1x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 282,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png"
+      },
+      {
+        "name": "Icon-App-29x29@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 462,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png"
+      },
+      {
+        "name": "Icon-App-29x29@3x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 704,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png"
+      },
+      {
+        "name": "Icon-App-40x40@1x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 406,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png"
+      },
+      {
+        "name": "Icon-App-40x40@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 586,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png"
+      },
+      {
+        "name": "Icon-App-40x40@3x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 862,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png"
+      },
+      {
+        "name": "Icon-App-60x60@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 862,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png"
+      },
+      {
+        "name": "Icon-App-60x60@3x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1674,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png"
+      },
+      {
+        "name": "Icon-App-76x76@1x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 762,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png"
+      },
+      {
+        "name": "Icon-App-76x76@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1226,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png"
+      },
+      {
+        "name": "Icon-App-83.5x83.5@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1418,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png"
+      },
+      {
+        "name": "LaunchImage.imageset",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset",
+        "children": []
+      },
+      {
+        "name": "Contents.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 391,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json"
+      },
+      {
+        "name": "LaunchImage.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 68,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png"
+      },
+      {
+        "name": "LaunchImage@2x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 68,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png"
+      },
+      {
+        "name": "LaunchImage@3x.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 68,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png"
+      },
+      {
+        "name": "Base.lproj",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/Runner/Base.lproj",
+        "children": []
+      },
+      {
+        "name": "LaunchScreen.storyboard",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2377,
+        "extension": ".storyboard",
+        "path": "no_fluxo_frontend/ios/Runner/Base.lproj/LaunchScreen.storyboard"
+      },
+      {
+        "name": "Main.storyboard",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1605,
+        "extension": ".storyboard",
+        "path": "no_fluxo_frontend/ios/Runner/Base.lproj/Main.storyboard"
+      },
+      {
+        "name": "Info.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1647,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/ios/Runner/Info.plist"
+      },
+      {
+        "name": "Runner-Bridging-Header.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 38,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/ios/Runner/Runner-Bridging-Header.h"
+      },
+      {
+        "name": "RunnerTests",
+        "type": "directory",
+        "path": "no_fluxo_frontend/ios/RunnerTests",
+        "children": []
+      },
+      {
+        "name": "RunnerTests.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 285,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/ios/RunnerTests/RunnerTests.swift"
+      },
+      {
+        "name": "lib",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib",
+        "children": []
+      },
+      {
+        "name": "cache",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/cache",
+        "children": []
+      },
+      {
+        "name": "shared_preferences_helper.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1205,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/cache/shared_preferences_helper.dart"
+      },
+      {
+        "name": "config",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/config",
+        "children": []
+      },
+      {
+        "name": "app_colors.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1844,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/config/app_colors.dart"
+      },
+      {
+        "name": "size_config.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2135,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/config/size_config.dart"
+      },
+      {
+        "name": "environment.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5274,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/environment.dart"
+      },
+      {
+        "name": "main.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1758,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/main.dart"
+      },
+      {
+        "name": "models",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/models",
+        "children": []
+      },
+      {
+        "name": "user_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4638,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/models/user_model.dart"
+      },
+      {
+        "name": "routes",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/routes",
+        "children": []
+      },
+      {
+        "name": "app_router.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 9166,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/routes/app_router.dart"
+      },
+      {
+        "name": "screens",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens",
+        "children": []
+      },
+      {
+        "name": "assistente",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente",
+        "children": []
+      },
+      {
+        "name": "assistente_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 51121,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/assistente_screen.dart"
+      },
+      {
+        "name": "index.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 543,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/index.dart"
+      },
+      {
+        "name": "widgets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets",
+        "children": []
+      },
+      {
+        "name": "chat",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/chat",
+        "children": []
+      },
+      {
+        "name": "chat_container.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4082,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/chat/chat_container.dart"
+      },
+      {
+        "name": "chat_input.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2610,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/chat/chat_input.dart"
+      },
+      {
+        "name": "chat_message.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2517,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/chat/chat_message.dart"
+      },
+      {
+        "name": "typing_indicator.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3046,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/chat/typing_indicator.dart"
+      },
+      {
+        "name": "fluxogram",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/fluxogram",
+        "children": []
+      },
+      {
+        "name": "fluxogram_preview.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7450,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/fluxogram/fluxogram_preview.dart"
+      },
+      {
+        "name": "selected_courses.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5603,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/fluxogram/selected_courses.dart"
+      },
+      {
+        "name": "modals",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/modals",
+        "children": []
+      },
+      {
+        "name": "equivalent_courses_modal.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6872,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/modals/equivalent_courses_modal.dart"
+      },
+      {
+        "name": "navigation",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/navigation",
+        "children": []
+      },
+      {
+        "name": "app_header.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3435,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/navigation/app_header.dart"
+      },
+      {
+        "name": "mobile_menu.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4476,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/assistente/widgets/navigation/mobile_menu.dart"
+      },
+      {
+        "name": "auth",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/auth",
+        "children": []
+      },
+      {
+        "name": "anonymous_login_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 9627,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/auth/anonymous_login_screen.dart"
+      },
+      {
+        "name": "auth_page.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2114,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/auth/auth_page.dart"
+      },
+      {
+        "name": "login_form.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 22371,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/auth/login_form.dart"
+      },
+      {
+        "name": "password_recovery_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 8405,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/auth/password_recovery_screen.dart"
+      },
+      {
+        "name": "signup_form.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 30853,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/auth/signup_form.dart"
+      },
+      {
+        "name": "fluxogramas",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas",
+        "children": []
+      },
+      {
+        "name": "data",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data",
+        "children": []
+      },
+      {
+        "name": "course_data.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 555,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/course_data.dart"
+      },
+      {
+        "name": "course_subject.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 427,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/course_subject.dart"
+      },
+      {
+        "name": "curso_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 11458,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/curso_model.dart"
+      },
+      {
+        "name": "equivalencia_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6785,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/equivalencia_model.dart"
+      },
+      {
+        "name": "materia_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3037,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/materia_model.dart"
+      },
+      {
+        "name": "minimal_cursos_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/minimal_cursos_model.dart"
+      },
+      {
+        "name": "prerequisite_example.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7975,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/prerequisite_example.dart"
+      },
+      {
+        "name": "prerequisite_tree_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 10806,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/prerequisite_tree_model.dart"
+      },
+      {
+        "name": "prerequisite_visualization_helper.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 8947,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/data/prerequisite_visualization_helper.dart"
+      },
+      {
+        "name": "presentation",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation",
+        "children": []
+      },
+      {
+        "name": "pages",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/pages",
+        "children": []
+      },
+      {
+        "name": "fluxogramas_index_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 56841,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/pages/fluxogramas_index_screen.dart"
+      },
+      {
+        "name": "meu_fluxograma_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 39235,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/pages/meu_fluxograma_screen.dart"
+      },
+      {
+        "name": "widgets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets",
+        "children": []
+      },
+      {
+        "name": "course_card_widget.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6418,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/course_card_widget.dart"
+      },
+      {
+        "name": "fluxogram_container.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 11495,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/fluxogram_container.dart"
+      },
+      {
+        "name": "fluxograma_header.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 10460,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/fluxograma_header.dart"
+      },
+      {
+        "name": "fluxograma_legend_controls.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 11279,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/fluxograma_legend_controls.dart"
+      },
+      {
+        "name": "materia_data_dialog_content.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 29240,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/materia_data_dialog_content.dart"
+      },
+      {
+        "name": "optativa_adicionada_model.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 207,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/optativa_adicionada_model.dart"
+      },
+      {
+        "name": "optativas_adicionadas_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6959,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/optativas_adicionadas_section.dart"
+      },
+      {
+        "name": "optativas_modal.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 13531,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/optativas_modal.dart"
+      },
+      {
+        "name": "prerequisite_chain_dialog.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 10660,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/prerequisite_chain_dialog.dart"
+      },
+      {
+        "name": "prerequisite_connections_widget.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 27572,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/prerequisite_connections_widget.dart"
+      },
+      {
+        "name": "prerequisite_indicator_widget.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3247,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/prerequisite_indicator_widget.dart"
+      },
+      {
+        "name": "progress_summary_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 13192,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/progress_summary_section.dart"
+      },
+      {
+        "name": "progress_tools_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 9534,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/progress_tools_section.dart"
+      },
+      {
+        "name": "tool_modals.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 42898,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/tool_modals.dart"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/services",
+        "children": []
+      },
+      {
+        "name": "meu_fluxograma_service.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4122,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/fluxogramas/services/meu_fluxograma_service.dart"
+      },
+      {
+        "name": "home_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 9758,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/home_screen.dart"
+      },
+      {
+        "name": "upload-historico",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/upload-historico",
+        "children": []
+      },
+      {
+        "name": "presentation",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/upload-historico/presentation",
+        "children": []
+      },
+      {
+        "name": "upload_historico_screen.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 67378,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/upload-historico/presentation/upload_historico_screen.dart"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/screens/upload-historico/services",
+        "children": []
+      },
+      {
+        "name": "upload_historico_service.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 11054,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/screens/upload-historico/services/upload_historico_service.dart"
+      },
+      {
+        "name": "service",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/service",
+        "children": []
+      },
+      {
+        "name": "auth_service.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 8259,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/service/auth_service.dart"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/utils",
+        "children": []
+      },
+      {
+        "name": "utils.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3361,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/utils/utils.dart"
+      },
+      {
+        "name": "widgets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/lib/widgets",
+        "children": []
+      },
+      {
+        "name": "animated_background.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4182,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/animated_background.dart"
+      },
+      {
+        "name": "app_logo.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1441,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/app_logo.dart"
+      },
+      {
+        "name": "app_navbar.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 22109,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/app_navbar.dart"
+      },
+      {
+        "name": "como_funciona_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5284,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/como_funciona_section.dart"
+      },
+      {
+        "name": "glass_container.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1730,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/glass_container.dart"
+      },
+      {
+        "name": "gradient_cta_button.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3139,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/gradient_cta_button.dart"
+      },
+      {
+        "name": "gradient_underline_button.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3039,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/gradient_underline_button.dart"
+      },
+      {
+        "name": "graffiti_background.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3930,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/graffiti_background.dart"
+      },
+      {
+        "name": "premium_hover_button.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6680,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/premium_hover_button.dart"
+      },
+      {
+        "name": "pronto_para_organizar_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4387,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/pronto_para_organizar_section.dart"
+      },
+      {
+        "name": "router_widget.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2934,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/router_widget.dart"
+      },
+      {
+        "name": "sobre_nos_section.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 16434,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/sobre_nos_section.dart"
+      },
+      {
+        "name": "splash_widget.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 22779,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/lib/widgets/splash_widget.dart"
+      },
+      {
+        "name": "linux",
+        "type": "directory",
+        "path": "no_fluxo_frontend/linux",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 18,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/linux/.gitignore"
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 4759,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/linux/CMakeLists.txt"
+      },
+      {
+        "name": "flutter",
+        "type": "directory",
+        "path": "no_fluxo_frontend/linux/flutter",
+        "children": []
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 2815,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/linux/flutter/CMakeLists.txt"
+      },
+      {
+        "name": "generated_plugin_registrant.cc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 636,
+        "extension": ".cc",
+        "path": "no_fluxo_frontend/linux/flutter/generated_plugin_registrant.cc"
+      },
+      {
+        "name": "generated_plugin_registrant.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 303,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/linux/flutter/generated_plugin_registrant.h"
+      },
+      {
+        "name": "generated_plugins.cmake",
+        "type": "file",
+        "language": "Unknown",
+        "size": 766,
+        "extension": ".cmake",
+        "path": "no_fluxo_frontend/linux/flutter/generated_plugins.cmake"
+      },
+      {
+        "name": "runner",
+        "type": "directory",
+        "path": "no_fluxo_frontend/linux/runner",
+        "children": []
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 974,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/linux/runner/CMakeLists.txt"
+      },
+      {
+        "name": "main.cc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 180,
+        "extension": ".cc",
+        "path": "no_fluxo_frontend/linux/runner/main.cc"
+      },
+      {
+        "name": "my_application.cc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4754,
+        "extension": ".cc",
+        "path": "no_fluxo_frontend/linux/runner/my_application.cc"
+      },
+      {
+        "name": "my_application.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 388,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/linux/runner/my_application.h"
+      },
+      {
+        "name": "macos",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 89,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/macos/.gitignore"
+      },
+      {
+        "name": "Flutter",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Flutter",
+        "children": []
+      },
+      {
+        "name": "Flutter-Debug.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 125,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Flutter/Flutter-Debug.xcconfig"
+      },
+      {
+        "name": "Flutter-Release.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 127,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Flutter/Flutter-Release.xcconfig"
+      },
+      {
+        "name": "GeneratedPluginRegistrant.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 729,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/macos/Flutter/GeneratedPluginRegistrant.swift"
+      },
+      {
+        "name": "Podfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 1366,
+        "extension": "",
+        "path": "no_fluxo_frontend/macos/Podfile"
+      },
+      {
+        "name": "Runner.xcodeproj",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj",
+        "children": []
+      },
+      {
+        "name": "project.pbxproj",
+        "type": "file",
+        "language": "Unknown",
+        "size": 26382,
+        "extension": ".pbxproj",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/project.pbxproj"
+      },
+      {
+        "name": "project.xcworkspace",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/project.xcworkspace",
+        "children": []
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "IDEWorkspaceChecks.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 238,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "xcschemes",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/xcshareddata/xcschemes",
+        "children": []
+      },
+      {
+        "name": "Runner.xcscheme",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3699,
+        "extension": ".xcscheme",
+        "path": "no_fluxo_frontend/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme"
+      },
+      {
+        "name": "Runner.xcworkspace",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcworkspace",
+        "children": []
+      },
+      {
+        "name": "contents.xcworkspacedata",
+        "type": "file",
+        "language": "Unknown",
+        "size": 152,
+        "extension": ".xcworkspacedata",
+        "path": "no_fluxo_frontend/macos/Runner.xcworkspace/contents.xcworkspacedata"
+      },
+      {
+        "name": "xcshareddata",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner.xcworkspace/xcshareddata",
+        "children": []
+      },
+      {
+        "name": "IDEWorkspaceChecks.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 238,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+      },
+      {
+        "name": "Runner",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner",
+        "children": []
+      },
+      {
+        "name": "AppDelegate.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 311,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/macos/Runner/AppDelegate.swift"
+      },
+      {
+        "name": "Assets.xcassets",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets",
+        "children": []
+      },
+      {
+        "name": "AppIcon.appiconset",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset",
+        "children": []
+      },
+      {
+        "name": "Contents.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 1291,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json"
+      },
+      {
+        "name": "app_icon_1024.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 102994,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+      },
+      {
+        "name": "app_icon_128.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 5680,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png"
+      },
+      {
+        "name": "app_icon_16.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 520,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png"
+      },
+      {
+        "name": "app_icon_256.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 14142,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png"
+      },
+      {
+        "name": "app_icon_32.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 1066,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png"
+      },
+      {
+        "name": "app_icon_512.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 36406,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png"
+      },
+      {
+        "name": "app_icon_64.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 2218,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png"
+      },
+      {
+        "name": "Base.lproj",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner/Base.lproj",
+        "children": []
+      },
+      {
+        "name": "MainMenu.xib",
+        "type": "file",
+        "language": "Unknown",
+        "size": 23729,
+        "extension": ".xib",
+        "path": "no_fluxo_frontend/macos/Runner/Base.lproj/MainMenu.xib"
+      },
+      {
+        "name": "Configs",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/Runner/Configs",
+        "children": []
+      },
+      {
+        "name": "AppInfo.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 606,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Runner/Configs/AppInfo.xcconfig"
+      },
+      {
+        "name": "Debug.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 77,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Runner/Configs/Debug.xcconfig"
+      },
+      {
+        "name": "Release.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 79,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Runner/Configs/Release.xcconfig"
+      },
+      {
+        "name": "Warnings.xcconfig",
+        "type": "file",
+        "language": "Unknown",
+        "size": 580,
+        "extension": ".xcconfig",
+        "path": "no_fluxo_frontend/macos/Runner/Configs/Warnings.xcconfig"
+      },
+      {
+        "name": "DebugProfile.entitlements",
+        "type": "file",
+        "language": "Unknown",
+        "size": 348,
+        "extension": ".entitlements",
+        "path": "no_fluxo_frontend/macos/Runner/DebugProfile.entitlements"
+      },
+      {
+        "name": "Info.plist",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1060,
+        "extension": ".plist",
+        "path": "no_fluxo_frontend/macos/Runner/Info.plist"
+      },
+      {
+        "name": "MainFlutterWindow.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 388,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/macos/Runner/MainFlutterWindow.swift"
+      },
+      {
+        "name": "Release.entitlements",
+        "type": "file",
+        "language": "Unknown",
+        "size": 240,
+        "extension": ".entitlements",
+        "path": "no_fluxo_frontend/macos/Runner/Release.entitlements"
+      },
+      {
+        "name": "RunnerTests",
+        "type": "directory",
+        "path": "no_fluxo_frontend/macos/RunnerTests",
+        "children": []
+      },
+      {
+        "name": "RunnerTests.swift",
+        "type": "file",
+        "language": "Swift",
+        "size": 290,
+        "extension": ".swift",
+        "path": "no_fluxo_frontend/macos/RunnerTests/RunnerTests.swift"
+      },
+      {
+        "name": "nginx.conf",
+        "type": "file",
+        "language": "Config",
+        "size": 1552,
+        "extension": ".conf",
+        "path": "no_fluxo_frontend/nginx.conf"
+      },
+      {
+        "name": "package.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 373,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/package.json"
+      },
+      {
+        "name": "pubspec.yaml",
+        "type": "file",
+        "language": "YAML",
+        "size": 4231,
+        "extension": ".yaml",
+        "path": "no_fluxo_frontend/pubspec.yaml"
+      },
+      {
+        "name": "test",
+        "type": "directory",
+        "path": "no_fluxo_frontend/test",
+        "children": []
+      },
+      {
+        "name": "widget_test.dart",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1061,
+        "extension": ".dart",
+        "path": "no_fluxo_frontend/test/widget_test.dart"
+      },
+      {
+        "name": "vercel-simple.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 126,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/vercel-simple.json"
+      },
+      {
+        "name": "vercel.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 126,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/vercel.json"
+      },
+      {
+        "name": "web",
+        "type": "directory",
+        "path": "no_fluxo_frontend/web",
+        "children": []
+      },
+      {
+        "name": "favicon.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 917,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/web/favicon.png"
+      },
+      {
+        "name": "icons",
+        "type": "directory",
+        "path": "no_fluxo_frontend/web/icons",
+        "children": []
+      },
+      {
+        "name": "Icon-192.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 5292,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/web/icons/Icon-192.png"
+      },
+      {
+        "name": "Icon-512.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 8252,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/web/icons/Icon-512.png"
+      },
+      {
+        "name": "Icon-maskable-192.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 5594,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/web/icons/Icon-maskable-192.png"
+      },
+      {
+        "name": "Icon-maskable-512.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 20998,
+        "extension": ".png",
+        "path": "no_fluxo_frontend/web/icons/Icon-maskable-512.png"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 1218,
+        "extension": ".html",
+        "path": "no_fluxo_frontend/web/index.html"
+      },
+      {
+        "name": "manifest.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 916,
+        "extension": ".json",
+        "path": "no_fluxo_frontend/web/manifest.json"
+      },
+      {
+        "name": "windows",
+        "type": "directory",
+        "path": "no_fluxo_frontend/windows",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 291,
+        "extension": ".gitignore",
+        "path": "no_fluxo_frontend/windows/.gitignore"
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 4156,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/windows/CMakeLists.txt"
+      },
+      {
+        "name": "flutter",
+        "type": "directory",
+        "path": "no_fluxo_frontend/windows/flutter",
+        "children": []
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 3742,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/windows/flutter/CMakeLists.txt"
+      },
+      {
+        "name": "generated_plugin_registrant.cc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 475,
+        "extension": ".cc",
+        "path": "no_fluxo_frontend/windows/flutter/generated_plugin_registrant.cc"
+      },
+      {
+        "name": "generated_plugin_registrant.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 302,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/windows/flutter/generated_plugin_registrant.h"
+      },
+      {
+        "name": "generated_plugins.cmake",
+        "type": "file",
+        "language": "Unknown",
+        "size": 778,
+        "extension": ".cmake",
+        "path": "no_fluxo_frontend/windows/flutter/generated_plugins.cmake"
+      },
+      {
+        "name": "runner",
+        "type": "directory",
+        "path": "no_fluxo_frontend/windows/runner",
+        "children": []
+      },
+      {
+        "name": "CMakeLists.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1796,
+        "extension": ".txt",
+        "path": "no_fluxo_frontend/windows/runner/CMakeLists.txt"
+      },
+      {
+        "name": "Runner.rc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3037,
+        "extension": ".rc",
+        "path": "no_fluxo_frontend/windows/runner/Runner.rc"
+      },
+      {
+        "name": "flutter_window.cpp",
+        "type": "file",
+        "language": "C++",
+        "size": 2122,
+        "extension": ".cpp",
+        "path": "no_fluxo_frontend/windows/runner/flutter_window.cpp"
+      },
+      {
+        "name": "flutter_window.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 928,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/windows/runner/flutter_window.h"
+      },
+      {
+        "name": "main.cpp",
+        "type": "file",
+        "language": "C++",
+        "size": 1263,
+        "extension": ".cpp",
+        "path": "no_fluxo_frontend/windows/runner/main.cpp"
+      },
+      {
+        "name": "resource.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 432,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/windows/runner/resource.h"
+      },
+      {
+        "name": "resources",
+        "type": "directory",
+        "path": "no_fluxo_frontend/windows/runner/resources",
+        "children": []
+      },
+      {
+        "name": "app_icon.ico",
+        "type": "file",
+        "language": "Icon",
+        "size": 33772,
+        "extension": ".ico",
+        "path": "no_fluxo_frontend/windows/runner/resources/app_icon.ico"
+      },
+      {
+        "name": "runner.exe.manifest",
+        "type": "file",
+        "language": "Unknown",
+        "size": 602,
+        "extension": ".manifest",
+        "path": "no_fluxo_frontend/windows/runner/runner.exe.manifest"
+      },
+      {
+        "name": "utils.cpp",
+        "type": "file",
+        "language": "C++",
+        "size": 1797,
+        "extension": ".cpp",
+        "path": "no_fluxo_frontend/windows/runner/utils.cpp"
+      },
+      {
+        "name": "utils.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 672,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/windows/runner/utils.h"
+      },
+      {
+        "name": "win32_window.cpp",
+        "type": "file",
+        "language": "C++",
+        "size": 8534,
+        "extension": ".cpp",
+        "path": "no_fluxo_frontend/windows/runner/win32_window.cpp"
+      },
+      {
+        "name": "win32_window.h",
+        "type": "file",
+        "language": "C/C++ Header",
+        "size": 3522,
+        "extension": ".h",
+        "path": "no_fluxo_frontend/windows/runner/win32_window.h"
+      },
+      {
         "name": "no_fluxo_frontend_svelte",
         "type": "directory",
         "path": "no_fluxo_frontend_svelte",
@@ -5211,7 +7489,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 2222,
+        "size": 2225,
         "extension": ".json",
         "path": "no_fluxo_frontend_svelte/package.json"
       },
@@ -5219,7 +7497,7 @@
         "name": "pnpm-lock.yaml",
         "type": "file",
         "language": "YAML",
-        "size": 112087,
+        "size": 112097,
         "extension": ".yaml",
         "path": "no_fluxo_frontend_svelte/pnpm-lock.yaml"
       },
@@ -5249,7 +7527,7 @@
         "name": "app.d.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 324,
+        "size": 139,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/app.d.ts"
       },
@@ -5265,7 +7543,7 @@
         "name": "hooks.server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2558,
+        "size": 246,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/hooks.server.ts"
       },
@@ -6499,7 +8777,7 @@
         "name": "HelpModal.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 2981,
+        "size": 4375,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/upload/HelpModal.svelte"
       },
@@ -6573,7 +8851,7 @@
         "name": "authGuard.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1515,
+        "size": 1827,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/guards/authGuard.ts"
       },
@@ -6639,7 +8917,7 @@
         "name": "supabase.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 831,
+        "size": 166,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/server/supabase.ts"
       },
@@ -6661,7 +8939,7 @@
         "name": "auth.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 9635,
+        "size": 9480,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/auth.service.ts"
       },
@@ -6723,7 +9001,7 @@
         "name": "supabase-data.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14625,
+        "size": 15398,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts"
       },
@@ -6731,7 +9009,7 @@
         "name": "upload.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3314,
+        "size": 3602,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/upload.service.ts"
       },
@@ -6815,7 +9093,7 @@
         "name": "client.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 406,
+        "size": 390,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/supabase/client.ts"
       },
@@ -7020,6 +9298,14 @@
         "path": "no_fluxo_frontend_svelte/src/routes/+layout.svelte"
       },
       {
+        "name": "+layout.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 26,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/routes/+layout.ts"
+      },
+      {
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
@@ -7051,7 +9337,7 @@
         "name": "+server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 32969,
+        "size": 402,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/api/casar-disciplinas/+server.ts"
       },
@@ -7085,7 +9371,7 @@
         "name": "+page.server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 535,
+        "size": 147,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/auth/callback/+page.server.ts"
       },
@@ -7093,7 +9379,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 1648,
+        "size": 2794,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/auth/callback/+page.svelte"
       },
@@ -7135,7 +9421,7 @@
         "name": "+server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 188,
+        "size": 145,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/health/+server.ts"
       },
@@ -7149,9 +9435,17 @@
         "name": "+page.server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 216,
+        "size": 67,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/home/+page.server.ts"
+      },
+      {
+        "name": "+page.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 157,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/routes/home/+page.svelte"
       },
       {
         "name": "login-anonimo",
@@ -7247,7 +9541,7 @@
         "name": "+server.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 750,
+        "size": 80,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/sitemap.xml/+server.ts"
       },
@@ -7270,6 +9564,44 @@
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/static",
         "children": []
+      },
+      {
+        "name": "health.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 16,
+        "extension": ".json",
+        "path": "no_fluxo_frontend_svelte/static/health.json"
+      },
+      {
+        "name": "help",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/static/help",
+        "children": []
+      },
+      {
+        "name": "emitir_historico.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 47397,
+        "extension": ".png",
+        "path": "no_fluxo_frontend_svelte/static/help/emitir_historico.png"
+      },
+      {
+        "name": "historico_baixado.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 121501,
+        "extension": ".png",
+        "path": "no_fluxo_frontend_svelte/static/help/historico_baixado.png"
+      },
+      {
+        "name": "tela_de_cadastro.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 29025,
+        "extension": ".png",
+        "path": "no_fluxo_frontend_svelte/static/help/tela_de_cadastro.png"
       },
       {
         "name": "icons",
@@ -7302,10 +9634,18 @@
         "path": "no_fluxo_frontend_svelte/static/robots.txt"
       },
       {
+        "name": "sitemap.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 542,
+        "extension": ".xml",
+        "path": "no_fluxo_frontend_svelte/static/sitemap.xml"
+      },
+      {
         "name": "svelte.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 855,
+        "size": 598,
         "extension": ".js",
         "path": "no_fluxo_frontend_svelte/svelte.config.js"
       },
@@ -7329,7 +9669,7 @@
         "name": "vite.config.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 236,
+        "size": 223,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/vite.config.ts"
       },
@@ -7522,6 +9862,38 @@
         "size": 15401,
         "extension": ".md",
         "path": "plans/18-AI-AGENT-BACKEND-INTEGRATION.md"
+      },
+      {
+        "name": "19-CONEXOES-BEHAVIOR-REWORK.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8550,
+        "extension": ".md",
+        "path": "plans/19-CONEXOES-BEHAVIOR-REWORK.md"
+      },
+      {
+        "name": "20-CONNECTION-ROUTING-IMPROVEMENTS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8244,
+        "extension": ".md",
+        "path": "plans/20-CONNECTION-ROUTING-IMPROVEMENTS.md"
+      },
+      {
+        "name": "21-EXPORT-VISUAL-PARITY.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 19351,
+        "extension": ".md",
+        "path": "plans/21-EXPORT-VISUAL-PARITY.md"
+      },
+      {
+        "name": "22-SSR-REMOVAL-CLIENT-FIRST.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 19587,
+        "extension": ".md",
+        "path": "plans/22-SSR-REMOVAL-CLIENT-FIRST.md"
       },
       {
         "name": "MASTER-MIGRATION-PLAN.md",
@@ -7999,7 +10371,7 @@
         "name": "deploy_config.py",
         "type": "file",
         "language": "Python",
-        "size": 4819,
+        "size": 4724,
         "extension": ".py",
         "path": "scripts/deploy/deploy_config.py"
       },
@@ -8026,6 +10398,32 @@
         "size": 3841,
         "extension": ".md",
         "path": "storymap.md"
+      },
+      {
+        "name": "supabase",
+        "type": "directory",
+        "path": "supabase",
+        "children": []
+      },
+      {
+        "name": "functions",
+        "type": "directory",
+        "path": "supabase/functions",
+        "children": []
+      },
+      {
+        "name": "casar-disciplinas",
+        "type": "directory",
+        "path": "supabase/functions/casar-disciplinas",
+        "children": []
+      },
+      {
+        "name": "index.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 30454,
+        "extension": ".ts",
+        "path": "supabase/functions/casar-disciplinas/index.ts"
       },
       {
         "name": "test_historicos",
@@ -8550,7 +10948,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-02-27T06:21:56.756716",
+    "extracted_at": "2026-02-28T06:02:03.240702",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }
