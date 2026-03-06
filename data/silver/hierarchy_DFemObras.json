@@ -2,7 +2,7 @@
   "repository": "DFemObras",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-03-05T06:22:33.374944",
+  "extracted_at": "2026-03-06T06:17:26.286777",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -45,7 +45,7 @@
         "name": "00_pr_validation.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1029,
+        "size": 1040,
         "extension": ".yml",
         "path": ".github/workflows/00_pr_validation.yml"
       },
@@ -53,7 +53,7 @@
         "name": "01_ingestao_diaria.yml",
         "type": "file",
         "language": "YAML",
-        "size": 680,
+        "size": 919,
         "extension": ".yml",
         "path": ".github/workflows/01_ingestao_diaria.yml"
       },
@@ -61,7 +61,7 @@
         "name": "02_dbt_run_tests.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1065,
+        "size": 1046,
         "extension": ".yml",
         "path": ".github/workflows/02_dbt_run_tests.yml"
       },
@@ -69,7 +69,7 @@
         "name": "03_bot_report_semanal.yml",
         "type": "file",
         "language": "YAML",
-        "size": 992,
+        "size": 1134,
         "extension": ".yml",
         "path": ".github/workflows/03_bot_report_semanal.yml"
       },
@@ -90,6 +90,14 @@
         "path": ".gitignore"
       },
       {
+        "name": ".user.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 41,
+        "extension": ".yml",
+        "path": ".user.yml"
+      },
+      {
         "name": "Bots",
         "type": "directory",
         "path": "Bots",
@@ -107,7 +115,7 @@
         "name": "bot_twitter.py",
         "type": "file",
         "language": "Python",
-        "size": 3779,
+        "size": 3848,
         "extension": ".py",
         "path": "Bots/bot_twitter.py"
       },
@@ -217,7 +225,7 @@
         "name": "anomalias.html",
         "type": "file",
         "language": "HTML",
-        "size": 1552,
+        "size": 1848,
         "extension": ".html",
         "path": "anomalias.html"
       },
@@ -239,7 +247,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 1396,
+        "size": 1397,
         "extension": ".py",
         "path": "api/main.py"
       },
@@ -277,7 +285,7 @@
         "name": "style.css",
         "type": "file",
         "language": "CSS",
-        "size": 7691,
+        "size": 9291,
         "extension": ".css",
         "path": "css/style.css"
       },
@@ -310,10 +318,18 @@
         "path": "data_eng/ingestion/__init__.py"
       },
       {
+        "name": "ingestao_financeira.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2875,
+        "extension": ".py",
+        "path": "data_eng/ingestion/ingestao_financeira.py"
+      },
+      {
         "name": "ingestao_obras.py",
         "type": "file",
         "language": "Python",
-        "size": 4167,
+        "size": 4110,
         "extension": ".py",
         "path": "data_eng/ingestion/ingestao_obras.py"
       },
@@ -1631,7 +1647,7 @@
         "name": "dbt_project.yml",
         "type": "file",
         "language": "YAML",
-        "size": 76,
+        "size": 86,
         "extension": ".yml",
         "path": "data_eng/transform/dbt_project.yml"
       },
@@ -1640,6 +1656,34 @@
         "type": "directory",
         "path": "data_eng/transform/models",
         "children": []
+      },
+      {
+        "name": "intermediate",
+        "type": "directory",
+        "path": "data_eng/transform/models/intermediate",
+        "children": []
+      },
+      {
+        "name": "int_pagamentos_por_obra.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 210,
+        "extension": ".sql",
+        "path": "data_eng/transform/models/intermediate/int_pagamentos_por_obra.sql"
+      },
+      {
+        "name": "marts",
+        "type": "directory",
+        "path": "data_eng/transform/models/marts",
+        "children": []
+      },
+      {
+        "name": "dim_obras_financeiro.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 462,
+        "extension": ".sql",
+        "path": "data_eng/transform/models/marts/dim_obras_financeiro.sql"
       },
       {
         "name": "staging",
@@ -1659,9 +1703,17 @@
         "name": "src_df_obras.yml",
         "type": "file",
         "language": "YAML",
-        "size": 153,
+        "size": 348,
         "extension": ".yml",
         "path": "data_eng/transform/models/staging/src_df_obras.yml"
+      },
+      {
+        "name": "stg_execucao_financeira.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 670,
+        "extension": ".sql",
+        "path": "data_eng/transform/models/staging/stg_execucao_financeira.sql"
       },
       {
         "name": "stg_obras_completas.sql",
@@ -2027,7 +2079,7 @@
         "name": "dashboard.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 3935,
+        "size": 5283,
         "extension": ".js",
         "path": "js/dashboard.js"
       },
@@ -2035,7 +2087,7 @@
         "name": "map.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 8136,
+        "size": 10342,
         "extension": ".js",
         "path": "js/map.js"
       },
@@ -2289,7 +2341,7 @@
         "name": "test_bot.py",
         "type": "file",
         "language": "Python",
-        "size": 862,
+        "size": 780,
         "extension": ".py",
         "path": "tests/test_bot.py"
       },
@@ -2304,7 +2356,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-03-05T06:24:55.995136",
+    "extracted_at": "2026-03-06T06:19:34.500058",
     "file_path": "data/silver/hierarchy_DFemObras.json"
   }
 }

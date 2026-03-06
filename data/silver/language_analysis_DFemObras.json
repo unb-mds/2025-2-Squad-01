@@ -2,19 +2,19 @@
   "repository": "DFemObras",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-03-05T06:22:33.374944",
+  "analyzed_at": "2026-03-06T06:17:26.286777",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 244,
-  "total_bytes": 5165749,
+  "total_files": 249,
+  "total_bytes": 5175966,
   "languages": [
     {
       "language": "JPEG Image",
       "file_count": 15,
       "total_bytes": 3248266,
-      "percentage": 62.88,
+      "percentage": 62.76,
       "files": [
         {
           "path": "fotos/nathan.jpg",
@@ -82,7 +82,7 @@
       "language": "PNG Image",
       "file_count": 12,
       "total_bytes": 985719,
-      "percentage": 19.08,
+      "percentage": 19.04,
       "files": [
         {
           "path": "Bots/imagens/dashboard_screenshot.png",
@@ -150,7 +150,7 @@
       "language": "PDF",
       "file_count": 4,
       "total_bytes": 453700,
-      "percentage": 8.78,
+      "percentage": 8.77,
       "files": [
         {
           "path": "docs/Estudo/2020-Scrum-Guide-PortugueseBR-3.0.pdf",
@@ -180,9 +180,9 @@
     },
     {
       "language": "SQL",
-      "file_count": 139,
-      "total_bytes": 259662,
-      "percentage": 5.03,
+      "file_count": 142,
+      "total_bytes": 261004,
+      "percentage": 5.04,
       "files": [
         {
           "path": "data_eng/transform/dbt_internal_packages/dbt-adapters/macros/materializations/snapshots/helpers.sql",
@@ -249,7 +249,7 @@
     {
       "language": "HTML",
       "file_count": 7,
-      "total_bytes": 106425,
+      "total_bytes": 106721,
       "percentage": 2.06,
       "files": [
         {
@@ -291,7 +291,7 @@
         {
           "path": "anomalias.html",
           "name": "anomalias.html",
-          "size": 1552,
+          "size": 1848,
           "extension": ".html"
         }
       ]
@@ -367,9 +367,15 @@
     {
       "language": "JavaScript",
       "file_count": 4,
-      "total_bytes": 21348,
-      "percentage": 0.41,
+      "total_bytes": 24902,
+      "percentage": 0.48,
       "files": [
+        {
+          "path": "js/map.js",
+          "name": "map.js",
+          "size": 10342,
+          "extension": ".js"
+        },
         {
           "path": "js/map.test.js",
           "name": "map.test.js",
@@ -377,15 +383,9 @@
           "extension": ".js"
         },
         {
-          "path": "js/map.js",
-          "name": "map.js",
-          "size": 8136,
-          "extension": ".js"
-        },
-        {
           "path": "js/dashboard.js",
           "name": "dashboard.js",
-          "size": 3935,
+          "size": 5283,
           "extension": ".js"
         },
         {
@@ -399,13 +399,13 @@
     {
       "language": "CSS",
       "file_count": 2,
-      "total_bytes": 12243,
-      "percentage": 0.24,
+      "total_bytes": 13843,
+      "percentage": 0.27,
       "files": [
         {
           "path": "css/style.css",
           "name": "style.css",
-          "size": 7691,
+          "size": 9291,
           "extension": ".css"
         },
         {
@@ -418,32 +418,38 @@
     },
     {
       "language": "Python",
-      "file_count": 8,
-      "total_bytes": 10639,
-      "percentage": 0.21,
+      "file_count": 9,
+      "total_bytes": 13445,
+      "percentage": 0.26,
       "files": [
         {
           "path": "data_eng/ingestion/ingestao_obras.py",
           "name": "ingestao_obras.py",
-          "size": 4167,
+          "size": 4110,
           "extension": ".py"
         },
         {
           "path": "Bots/bot_twitter.py",
           "name": "bot_twitter.py",
-          "size": 3779,
+          "size": 3848,
+          "extension": ".py"
+        },
+        {
+          "path": "data_eng/ingestion/ingestao_financeira.py",
+          "name": "ingestao_financeira.py",
+          "size": 2875,
           "extension": ".py"
         },
         {
           "path": "api/main.py",
           "name": "main.py",
-          "size": 1396,
+          "size": 1397,
           "extension": ".py"
         },
         {
           "path": "tests/test_bot.py",
           "name": "test_bot.py",
-          "size": 862,
+          "size": 780,
           "extension": ".py"
         },
         {
@@ -474,26 +480,32 @@
     },
     {
       "language": "YAML",
-      "file_count": 12,
-      "total_bytes": 5734,
-      "percentage": 0.11,
+      "file_count": 13,
+      "total_bytes": 6353,
+      "percentage": 0.12,
       "files": [
+        {
+          "path": ".github/workflows/03_bot_report_semanal.yml",
+          "name": "03_bot_report_semanal.yml",
+          "size": 1134,
+          "extension": ".yml"
+        },
         {
           "path": ".github/workflows/02_dbt_run_tests.yml",
           "name": "02_dbt_run_tests.yml",
-          "size": 1065,
+          "size": 1046,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/00_pr_validation.yml",
           "name": "00_pr_validation.yml",
-          "size": 1029,
+          "size": 1040,
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/03_bot_report_semanal.yml",
-          "name": "03_bot_report_semanal.yml",
-          "size": 992,
+          "path": ".github/workflows/01_ingestao_diaria.yml",
+          "name": "01_ingestao_diaria.yml",
+          "size": 919,
           "extension": ".yml"
         },
         {
@@ -503,27 +515,21 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/01_ingestao_diaria.yml",
-          "name": "01_ingestao_diaria.yml",
-          "size": 680,
-          "extension": ".yml"
-        },
-        {
           "path": "data_eng/transform/models/staging/_staging__models.yml",
           "name": "_staging__models.yml",
           "size": 645,
           "extension": ".yml"
         },
         {
-          "path": "profiles.yml",
-          "name": "profiles.yml",
-          "size": 156,
+          "path": "data_eng/transform/models/staging/src_df_obras.yml",
+          "name": "src_df_obras.yml",
+          "size": 348,
           "extension": ".yml"
         },
         {
-          "path": "data_eng/transform/models/staging/src_df_obras.yml",
-          "name": "src_df_obras.yml",
-          "size": 153,
+          "path": "profiles.yml",
+          "name": "profiles.yml",
+          "size": 156,
           "extension": ".yml"
         },
         {
@@ -535,7 +541,7 @@
         {
           "path": "data_eng/transform/dbt_project.yml",
           "name": "dbt_project.yml",
-          "size": 76,
+          "size": 86,
           "extension": ".yml"
         }
       ]
@@ -656,7 +662,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-03-05T06:24:55.993113",
+    "extracted_at": "2026-03-06T06:19:34.498081",
     "file_path": "data/silver/language_analysis_DFemObras.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-03-05T06:22:40.361152",
+  "analyzed_at": "2026-03-06T06:17:29.877376",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 923,
-  "total_bytes": 37617638,
+  "total_files": 998,
+  "total_bytes": 40134230,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 120,
-      "total_bytes": 16803670,
-      "percentage": 44.67,
+      "file_count": 183,
+      "total_bytes": 18493702,
+      "percentage": 46.08,
       "files": [
         {
           "path": "coleta_dados/dados/materias/turmas_depto_455.json",
@@ -82,7 +82,7 @@
       "language": "PNG Image",
       "file_count": 58,
       "total_bytes": 11816719,
-      "percentage": 31.41,
+      "percentage": 29.44,
       "files": [
         {
           "path": "documentacao/estudos/Github/Assets/ex_repositorio.png",
@@ -148,15 +148,21 @@
     },
     {
       "language": "Unknown",
-      "file_count": 275,
-      "total_bytes": 2363016,
-      "percentage": 6.28,
+      "file_count": 277,
+      "total_bytes": 3104739,
+      "percentage": 7.74,
       "files": [
         {
           "path": "no_fluxo_frontend_svelte/static/pdf.worker.min.mjs",
           "name": "pdf.worker.min.mjs",
           "size": 1078612,
           "extension": ".mjs"
+        },
+        {
+          "path": "coleta_dados/turmas_2026_1/turmas_unb_20260226_FULL.csv",
+          "name": "turmas_unb_20260226_FULL.csv",
+          "size": 733283,
+          "extension": ".csv"
         },
         {
           "path": "no_fluxo_frontend/lib/screens/upload-historico/presentation/upload_historico_screen.dart",
@@ -205,20 +211,14 @@
           "name": "materia_data_dialog_content.dart",
           "size": 29240,
           "extension": ".dart"
-        },
-        {
-          "path": "no_fluxo_frontend/lib/screens/fluxogramas/presentation/widgets/prerequisite_connections_widget.dart",
-          "name": "prerequisite_connections_widget.dart",
-          "size": 27572,
-          "extension": ".dart"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 101,
-      "total_bytes": 1347076,
-      "percentage": 3.58,
+      "file_count": 103,
+      "total_bytes": 1361616,
+      "percentage": 3.39,
       "files": [
         {
           "path": "plans/05-MODELS-TYPES.md",
@@ -286,7 +286,7 @@
       "language": "PDF",
       "file_count": 16,
       "total_bytes": 1057508,
-      "percentage": 2.81,
+      "percentage": 2.63,
       "files": [
         {
           "path": "documentacao/estudos/SCRUM e Programação eXtrema/SRUM e programação eXtrema.pdf",
@@ -354,7 +354,7 @@
       "language": "JPEG Image",
       "file_count": 4,
       "total_bytes": 774924,
-      "percentage": 2.06,
+      "percentage": 1.93,
       "files": [
         {
           "path": "assets/Logo_eu_3 editada.JPG",
@@ -386,7 +386,7 @@
       "language": "Log File",
       "file_count": 1,
       "total_bytes": 657761,
-      "percentage": 1.75,
+      "percentage": 1.64,
       "files": [
         {
           "path": "logs/ai_agent.log",
@@ -398,9 +398,9 @@
     },
     {
       "language": "TypeScript",
-      "file_count": 105,
-      "total_bytes": 523814,
-      "percentage": 1.39,
+      "file_count": 106,
+      "total_bytes": 539607,
+      "percentage": 1.34,
       "files": [
         {
           "path": "no_fluxo_backend/scripts/export_schema.ts",
@@ -447,28 +447,28 @@
         {
           "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfPositionExtractor.ts",
           "name": "pdfPositionExtractor.ts",
-          "size": 16983,
+          "size": 17131,
           "extension": ".ts"
         },
         {
           "path": "no_fluxo_frontend_svelte/src/lib/stores/uploadStore.ts",
           "name": "uploadStore.ts",
-          "size": 10840,
+          "size": 11274,
           "extension": ".ts"
         },
         {
           "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfParser.ts",
           "name": "pdfParser.ts",
-          "size": 10495,
+          "size": 10986,
           "extension": ".ts"
         }
       ]
     },
     {
       "language": "Text",
-      "file_count": 40,
-      "total_bytes": 501247,
-      "percentage": 1.33,
+      "file_count": 41,
+      "total_bytes": 501827,
+      "percentage": 1.25,
       "files": [
         {
           "path": "test_historicos/extracted_texts/historico_211029503 (1)_numbered.txt",
@@ -534,9 +534,9 @@
     },
     {
       "language": "Python",
-      "file_count": 48,
-      "total_bytes": 446815,
-      "percentage": 1.19,
+      "file_count": 54,
+      "total_bytes": 499429,
+      "percentage": 1.24,
       "files": [
         {
           "path": "coleta_dados/scraping/integracao_banco.py",
@@ -581,6 +581,12 @@
           "extension": ".py"
         },
         {
+          "path": "coleta_dados/scraping/scraping_turmas.py",
+          "name": "scraping_turmas.py",
+          "size": 21718,
+          "extension": ".py"
+        },
+        {
           "path": "coleta_dados/scraping/integracao_estruturas_turno.py",
           "name": "integracao_estruturas_turno.py",
           "size": 17733,
@@ -591,12 +597,6 @@
           "name": "scraping_ementa.py",
           "size": 16041,
           "extension": ".py"
-        },
-        {
-          "path": "coleta_dados/parse_pdf/pdf_parser_final.py",
-          "name": "pdf_parser_final.py",
-          "size": 15791,
-          "extension": ".py"
         }
       ]
     },
@@ -604,7 +604,7 @@
       "language": "YAML",
       "file_count": 15,
       "total_bytes": 397509,
-      "percentage": 1.06,
+      "percentage": 0.99,
       "files": [
         {
           "path": "pnpm-lock.yaml",
@@ -672,7 +672,7 @@
       "language": "HTML",
       "file_count": 16,
       "total_bytes": 272136,
-      "percentage": 0.72,
+      "percentage": 0.68,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.html",
@@ -739,8 +739,8 @@
     {
       "language": "SQL",
       "file_count": 12,
-      "total_bytes": 199251,
-      "percentage": 0.53,
+      "total_bytes": 200544,
+      "percentage": 0.5,
       "files": [
         {
           "path": "no_fluxo_backend/docs/database_functions.sql",
@@ -757,7 +757,7 @@
         {
           "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
           "name": "casar_disciplinas_function.sql",
-          "size": 30337,
+          "size": 31630,
           "extension": ".sql"
         },
         {
@@ -808,7 +808,7 @@
       "language": "JavaScript",
       "file_count": 27,
       "total_bytes": 170760,
-      "percentage": 0.45,
+      "percentage": 0.43,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.js",
@@ -876,7 +876,7 @@
       "language": "CSS",
       "file_count": 13,
       "total_bytes": 80153,
-      "percentage": 0.21,
+      "percentage": 0.2,
       "files": [
         {
           "path": "no_fluxo_frontend/animaçãocss/desconectado.css",
@@ -944,7 +944,7 @@
       "language": "TrueType Font",
       "file_count": 1,
       "total_bytes": 73620,
-      "percentage": 0.2,
+      "percentage": 0.18,
       "files": [
         {
           "path": "no_fluxo_frontend/assets/fonts/PermanentMarker-Regular.ttf",
@@ -958,7 +958,7 @@
       "language": "Icon",
       "file_count": 1,
       "total_bytes": 33772,
-      "percentage": 0.09,
+      "percentage": 0.08,
       "files": [
         {
           "path": "no_fluxo_frontend/windows/runner/resources/app_icon.ico",
@@ -1075,10 +1075,24 @@
       ]
     },
     {
+      "language": "ZIP Archive",
+      "file_count": 1,
+      "total_bytes": 10278,
+      "percentage": 0.03,
+      "files": [
+        {
+          "path": "docs/PROJECT_DOCUMENTATION.md.zip",
+          "name": "PROJECT_DOCUMENTATION.md.zip",
+          "size": 10278,
+          "extension": ".zip"
+        }
+      ]
+    },
+    {
       "language": "C++",
       "file_count": 4,
       "total_bytes": 13716,
-      "percentage": 0.04,
+      "percentage": 0.03,
       "files": [
         {
           "path": "no_fluxo_frontend/windows/runner/win32_window.cpp",
@@ -1103,20 +1117,6 @@
           "name": "main.cpp",
           "size": 1263,
           "extension": ".cpp"
-        }
-      ]
-    },
-    {
-      "language": "ZIP Archive",
-      "file_count": 1,
-      "total_bytes": 10278,
-      "percentage": 0.03,
-      "files": [
-        {
-          "path": "docs/PROJECT_DOCUMENTATION.md.zip",
-          "name": "PROJECT_DOCUMENTATION.md.zip",
-          "size": 10278,
-          "extension": ".zip"
         }
       ]
     },
@@ -1283,47 +1283,15 @@
       ]
     },
     {
-      "language": "Docker Ignore",
-      "file_count": 4,
-      "total_bytes": 2000,
-      "percentage": 0.01,
-      "files": [
-        {
-          "path": ".dockerignore",
-          "name": ".dockerignore",
-          "size": 874,
-          "extension": ".dockerignore"
-        },
-        {
-          "path": "kubernetes_docs/templates/.dockerignore",
-          "name": ".dockerignore",
-          "size": 767,
-          "extension": ".dockerignore"
-        },
-        {
-          "path": "no_fluxo_frontend/.dockerignore",
-          "name": ".dockerignore",
-          "size": 223,
-          "extension": ".dockerignore"
-        },
-        {
-          "path": "no_fluxo_backend/.dockerignore",
-          "name": ".dockerignore",
-          "size": 136,
-          "extension": ".dockerignore"
-        }
-      ]
-    },
-    {
       "language": "Git Ignore",
       "file_count": 9,
-      "total_bytes": 3441,
+      "total_bytes": 3458,
       "percentage": 0.01,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 1006,
+          "size": 1023,
           "extension": ".gitignore"
         },
         {
@@ -1373,26 +1341,6 @@
           "name": ".gitignore",
           "size": 18,
           "extension": ".gitignore"
-        }
-      ]
-    },
-    {
-      "language": "Batch",
-      "file_count": 2,
-      "total_bytes": 1906,
-      "percentage": 0.01,
-      "files": [
-        {
-          "path": "no_fluxo_backend/generate-ssl.bat",
-          "name": "generate-ssl.bat",
-          "size": 1203,
-          "extension": ".bat"
-        },
-        {
-          "path": "no_fluxo_backend/testes-web/start.bat",
-          "name": "start.bat",
-          "size": 703,
-          "extension": ".bat"
         }
       ]
     },
@@ -1469,6 +1417,38 @@
       ]
     },
     {
+      "language": "Docker Ignore",
+      "file_count": 4,
+      "total_bytes": 2000,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "name": ".dockerignore",
+          "size": 874,
+          "extension": ".dockerignore"
+        },
+        {
+          "path": "kubernetes_docs/templates/.dockerignore",
+          "name": ".dockerignore",
+          "size": 767,
+          "extension": ".dockerignore"
+        },
+        {
+          "path": "no_fluxo_frontend/.dockerignore",
+          "name": ".dockerignore",
+          "size": 223,
+          "extension": ".dockerignore"
+        },
+        {
+          "path": "no_fluxo_backend/.dockerignore",
+          "name": ".dockerignore",
+          "size": 136,
+          "extension": ".dockerignore"
+        }
+      ]
+    },
+    {
       "language": "Go",
       "file_count": 1,
       "total_bytes": 768,
@@ -1479,6 +1459,26 @@
           "name": "Dockerfile.go",
           "size": 768,
           "extension": ".go"
+        }
+      ]
+    },
+    {
+      "language": "Batch",
+      "file_count": 2,
+      "total_bytes": 1906,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "no_fluxo_backend/generate-ssl.bat",
+          "name": "generate-ssl.bat",
+          "size": 1203,
+          "extension": ".bat"
+        },
+        {
+          "path": "no_fluxo_backend/testes-web/start.bat",
+          "name": "start.bat",
+          "size": 703,
+          "extension": ".bat"
         }
       ]
     },
@@ -1526,7 +1526,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-03-05T06:24:56.285751",
+    "extracted_at": "2026-03-06T06:19:34.805480",
     "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
   }
 }
