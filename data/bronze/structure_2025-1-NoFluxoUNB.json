@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2025-1-NoFluxoUNB",
   "branch": "main",
-  "sha": "99f6cfbc2312e70e00bcab4947e1e04e69533a98",
+  "sha": "ad216664619b3625ccfd37f3c333e7337f01ba8d",
   "tree": [
     {
       "name": ".dockerignore",
@@ -162,10 +162,10 @@
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
-      "sha": "4ea0f070e451084847241fdfd983185f6e48c444",
+      "sha": "cfb4c1a7b3183ebf07f08c5f0e96ef2ca5865b9b",
       "mode": "100644",
       "extension": ".gitignore",
-      "size": 1006,
+      "size": 1023,
       "is_binary": false
     },
     {
@@ -267,6 +267,16 @@
       "is_binary": false
     },
     {
+      "name": "SABIA_INTEGRATION.md",
+      "path": "SABIA_INTEGRATION.md",
+      "type": "file",
+      "sha": "09e4d08788819a45e13e57c597dd19dd0e3a0049",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6903,
+      "is_binary": false
+    },
+    {
       "name": "SECURITY.md",
       "path": "SECURITY.md",
       "type": "file",
@@ -328,7 +338,7 @@
       "name": "coleta_dados",
       "path": "coleta_dados",
       "type": "directory",
-      "sha": "945a1971f217ca95651ff9099078145c767fe88c",
+      "sha": "e70a63eb4674efe34131b786afe082692b9720fc",
       "mode": "040000",
       "children": []
     },
@@ -1280,7 +1290,7 @@
       "name": "scraping",
       "path": "coleta_dados/scraping",
       "type": "directory",
-      "sha": "69d28622e7136019d3cf5537979400955d4204bc",
+      "sha": "04dcd3fbbfcda287bcdcd29fee26e40062fe2eda",
       "mode": "040000",
       "children": []
     },
@@ -1312,6 +1322,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 6681,
+      "is_binary": false
+    },
+    {
+      "name": "departamentos_ID_unb.csv",
+      "path": "coleta_dados/scraping/departamentos_ID_unb.csv",
+      "type": "file",
+      "sha": "4fb967ac50e01a30503e1e27e32d45902a7c3f29",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 880,
       "is_binary": false
     },
     {
@@ -1448,10 +1468,10 @@
       "name": "scraping_atual.py",
       "path": "coleta_dados/scraping/scraping_atual.py",
       "type": "file",
-      "sha": "c73aa63579ee8661c8296cc616af77cac3fcead0",
+      "sha": "424bf3384aca9a99c4bb7326149c6c8bf93565d4",
       "mode": "100644",
       "extension": ".py",
-      "size": 7806,
+      "size": 7860,
       "is_binary": false
     },
     {
@@ -1498,10 +1518,20 @@
       "name": "scraping_sigaa.py",
       "path": "coleta_dados/scraping/scraping_sigaa.py",
       "type": "file",
-      "sha": "51f88b5985558fba241bfbd481766fd6db01f1d0",
+      "sha": "4a98dcf5ded9264759d67445be881a03c58f2db6",
       "mode": "100644",
       "extension": ".py",
-      "size": 9575,
+      "size": 9671,
+      "is_binary": false
+    },
+    {
+      "name": "scraping_turmas.py",
+      "path": "coleta_dados/scraping/scraping_turmas.py",
+      "type": "file",
+      "sha": "7016c0c215160c5c93a3419e2c7f6c281b818c0c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 21718,
       "is_binary": false
     },
     {
@@ -1532,6 +1562,654 @@
       "mode": "100644",
       "extension": ".py",
       "size": 1216,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_2026_1",
+      "path": "coleta_dados/turmas_2026_1",
+      "type": "directory",
+      "sha": "d00042fd619d8f4c3d922af831236fc0f2bf6099",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "turmas_depto_1448.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_1448.json",
+      "type": "file",
+      "sha": "99542c21a02c4f11ee8eda74317fb61ebf748006",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 282,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_314.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_314.json",
+      "type": "file",
+      "sha": "5d3f52e5b7081772e363bf3f68dbb6e218e94fa6",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 8058,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_327.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_327.json",
+      "type": "file",
+      "sha": "0bca9f4ee9f1f89d4f40bb1e6e8df182a8b7c536",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 55659,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_333.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_333.json",
+      "type": "file",
+      "sha": "525ac0731731fd16be268a6350f263bde1d87a5d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 37519,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_345.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_345.json",
+      "type": "file",
+      "sha": "3c948a46d9678626c18de1ada1bbc7ed0e1c283b",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 8637,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_351.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_351.json",
+      "type": "file",
+      "sha": "71eab23e11d0457b48c174220fff15243346771e",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 15460,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_352.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_352.json",
+      "type": "file",
+      "sha": "3c5c53462d4de5b21537fc59b556fcd8f9a450ce",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 13566,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_360.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_360.json",
+      "type": "file",
+      "sha": "0f83a30e1e99d4bbfd9031c0bd698ca1d195e91e",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 17346,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_361.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_361.json",
+      "type": "file",
+      "sha": "b43b8a5a86c41a009dd41f4dfad87e82d532cb69",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 10232,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_362.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_362.json",
+      "type": "file",
+      "sha": "322cdde60ab2c2ff82fbb0d327d42e38f0676c00",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 5836,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_363.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_363.json",
+      "type": "file",
+      "sha": "b6b33a3f84addec7d37c36d89b7fc73d48d7dfc0",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 54411,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_370.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_370.json",
+      "type": "file",
+      "sha": "a920d74490f83085d9020932561f21dbc4ee27ad",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 46969,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_381.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_381.json",
+      "type": "file",
+      "sha": "d1d9bd7426c7318ff603a440647b752f4eb88dc8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 41341,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_393.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_393.json",
+      "type": "file",
+      "sha": "7fa3dc56821831568041f488bb8145b6715a8c81",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 30546,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_402.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_402.json",
+      "type": "file",
+      "sha": "d12bffda10957b2e9ecf74669b396b5c73ea0ed1",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 35732,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_420.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_420.json",
+      "type": "file",
+      "sha": "71af926890bcf2f6a39c47c0ae10f091df5657dd",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 13464,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_422.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_422.json",
+      "type": "file",
+      "sha": "31fa3d8c4815168e901134006abfec273b414ebc",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 42213,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_424.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_424.json",
+      "type": "file",
+      "sha": "9296010cf27d71292066a1f65f5b73eb92224280",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 12606,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_427.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_427.json",
+      "type": "file",
+      "sha": "de88c7ff6da4be88a7f0cf618bd6876fe07bab71",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 12526,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_429.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_429.json",
+      "type": "file",
+      "sha": "ebe65c75de13ad1d1a4a547fff4fb8b23df2dbf3",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 809,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_433.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_433.json",
+      "type": "file",
+      "sha": "d393d82d8db09c75f3c3d7dedd3753a8400cd586",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 13597,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_437.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_437.json",
+      "type": "file",
+      "sha": "4357fccf33f5400b857ef60576a1182c19fe8e2c",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 47907,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_443.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_443.json",
+      "type": "file",
+      "sha": "1f933bc43245595050e6ac108e29444319c261c9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 37725,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_449.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_449.json",
+      "type": "file",
+      "sha": "7a6da3cd3822f96a55b19b30fc711078666142e2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 29948,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_455.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_455.json",
+      "type": "file",
+      "sha": "432b5d3b7e705508b6d7bb6263672b0c411bf39b",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 68788,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_479.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_479.json",
+      "type": "file",
+      "sha": "37b4a017f8434c6b7919d7bd4f64ff37eeec2c4a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3952,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_481.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_481.json",
+      "type": "file",
+      "sha": "a44d8e11d0ca80c9294393ca38b25ea850d1721d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 7908,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_483.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_483.json",
+      "type": "file",
+      "sha": "6dfd3b017edce0a6337aebfde0713ac8cca35abc",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 53911,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_485.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_485.json",
+      "type": "file",
+      "sha": "921500d62eaa57e7005d46cd6355da3f1280cb69",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4600,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_492.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_492.json",
+      "type": "file",
+      "sha": "ccec07f26102044df41f1c0a4e9096f970ebe562",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 14482,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_495.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_495.json",
+      "type": "file",
+      "sha": "d6122328a71680fd2aa8288b78449f606cd1dd6a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 88397,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_498.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_498.json",
+      "type": "file",
+      "sha": "08efa00df9e6f5ce56306522e73a90b7d6b06552",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 18114,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_504.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_504.json",
+      "type": "file",
+      "sha": "03d8ee6b292e2c6061832f320428e94583a0c6e9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 274,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_508.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_508.json",
+      "type": "file",
+      "sha": "d94817e3fe89112a0ff1416d7d0f923fade2b308",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 31021,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_514.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_514.json",
+      "type": "file",
+      "sha": "16241e79674e659594937a7a88178937f5d192eb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 12313,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_518.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_518.json",
+      "type": "file",
+      "sha": "0af0980083c222752d5ac65c7ca2dca6cb17870d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 33015,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_524.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_524.json",
+      "type": "file",
+      "sha": "b3a64069808bbc5746760ad56de6672db32b7021",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 54985,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_533.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_533.json",
+      "type": "file",
+      "sha": "76dea693ac50b6aeb191c1acbf8c452f620bb62f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 32164,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_544.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_544.json",
+      "type": "file",
+      "sha": "ee2cf0d6f3d5151a3eed5e370dc30cf68a8ddb22",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1857,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_548.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_548.json",
+      "type": "file",
+      "sha": "bbdcb6b86f15578587da9530fd49c57f71a74f00",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 18345,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_552.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_552.json",
+      "type": "file",
+      "sha": "db402b8c9285d0ef0fbf391a0ef3f0d80dc17323",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 15124,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_555.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_555.json",
+      "type": "file",
+      "sha": "fa28cf232808871f382c691c1739a2c29120390a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 11244,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_559.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_559.json",
+      "type": "file",
+      "sha": "d3a4a281da243869f029235b9889a0d1ff967b50",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 20565,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_563.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_563.json",
+      "type": "file",
+      "sha": "45d77a81a1be7fab3259fd9449dfe7df4103bf21",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 24084,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_567.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_567.json",
+      "type": "file",
+      "sha": "2549dffff057b4721aaa5f743263d5c38ba76a1e",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 2590,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_574.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_574.json",
+      "type": "file",
+      "sha": "23dd07003a5c4cf61f3df9a9d587e8014ac531de",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 69786,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_578.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_578.json",
+      "type": "file",
+      "sha": "b6d86336d04afb4232bdefdad756d19bb0354961",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 35969,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_580.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_580.json",
+      "type": "file",
+      "sha": "029c76104465fb7ad0915de82ec806134b2a4b5f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 25905,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_583.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_583.json",
+      "type": "file",
+      "sha": "439451cfa6fce49cd18f8043bd4a396833131b61",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 22876,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_610.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_610.json",
+      "type": "file",
+      "sha": "9f18ee992ca3086fa7daa72b3de4dabc53cac621",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 54680,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_640.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_640.json",
+      "type": "file",
+      "sha": "48c1115282abb22a0296957ed45adb622af81878",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 2620,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_643.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_643.json",
+      "type": "file",
+      "sha": "ea27014def0f1006c206b82c1b895dc26645ad16",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1230,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_650.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_650.json",
+      "type": "file",
+      "sha": "c26bcc6e429ee22cd6ed033dddae5695f94099a7",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 7822,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_660.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_660.json",
+      "type": "file",
+      "sha": "7728cae3b6669e4518a58285e0476d942846fd92",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 8628,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_666.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_666.json",
+      "type": "file",
+      "sha": "20b1020a6a4a1711f494ee7b8c794d82b3ae5e51",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 70832,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_668.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_668.json",
+      "type": "file",
+      "sha": "485f775e4ef0db11ce056b87df29b507fdb89d68",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 13798,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_669.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_669.json",
+      "type": "file",
+      "sha": "1ed3cef34160fd005d18532cbc3f30b64ce36868",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 11344,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_672.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_672.json",
+      "type": "file",
+      "sha": "a8a027ecaa63d9208c8003ff6f3d728ed6fddef9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 143874,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_673.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_673.json",
+      "type": "file",
+      "sha": "22dff65b2ecdb64672f0c951345b39024cd656ba",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 62050,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_674.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_674.json",
+      "type": "file",
+      "sha": "7436d7e61c55eb725173a0436157d7b4fd95dadb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 28516,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_677.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_677.json",
+      "type": "file",
+      "sha": "eba056b10b5fb6439c4f5ce3a77cae867341bbef",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1394,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_760.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_760.json",
+      "type": "file",
+      "sha": "7fddcbd295b90c3612b4e841f94db16b4b151542",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 11675,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_depto_791.json",
+      "path": "coleta_dados/turmas_2026_1/turmas_depto_791.json",
+      "type": "file",
+      "sha": "c5ecba1c67501a1cbc3e5372a585c4a96ca106c2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 6354,
+      "is_binary": false
+    },
+    {
+      "name": "turmas_unb_20260226_FULL.csv",
+      "path": "coleta_dados/turmas_2026_1/turmas_unb_20260226_FULL.csv",
+      "type": "file",
+      "sha": "7c3049271ac60252ca215dddf9f4794a626d8830",
+      "mode": "100644",
+      "extension": ".csv",
+      "size": 733283,
       "is_binary": false
     },
     {
@@ -2538,10 +3216,10 @@
       "name": "k8s.frontend-svelte.Dockerfile",
       "path": "k8s.frontend-svelte.Dockerfile",
       "type": "file",
-      "sha": "c58c37e2fa14406a281d35fa2f05815e7de5d667",
+      "sha": "986f679b13f4844ccdb7ad1094c890b18de0e860",
       "mode": "100644",
       "extension": ".Dockerfile",
-      "size": 2506,
+      "size": 2668,
       "is_binary": false
     },
     {
@@ -2929,6 +3607,94 @@
       "is_binary": false
     },
     {
+      "name": "mcp_agent",
+      "path": "mcp_agent",
+      "type": "directory",
+      "sha": "0046902e2a5cc18b6fb9547700d9e12f30f404dd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "mcp_agent/README.md",
+      "type": "file",
+      "sha": "bfeb3d6a8074966cb60a9045c96ad0f4e55966c3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7879,
+      "is_binary": false
+    },
+    {
+      "name": "agente.py",
+      "path": "mcp_agent/agente.py",
+      "type": "file",
+      "sha": "111f3d9ad03996cf6a50995b629ffa4408e18139",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5051,
+      "is_binary": false
+    },
+    {
+      "name": "agente_sabia.py",
+      "path": "mcp_agent/agente_sabia.py",
+      "type": "file",
+      "sha": "297235248ec57efda809f0df8fe041537211c22c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15294,
+      "is_binary": false
+    },
+    {
+      "name": "baixar_modelo.py",
+      "path": "mcp_agent/baixar_modelo.py",
+      "type": "file",
+      "sha": "52a694909ded9f9b0199ac285752c829f7c95c68",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 738,
+      "is_binary": false
+    },
+    {
+      "name": "databaseScript.py",
+      "path": "mcp_agent/databaseScript.py",
+      "type": "file",
+      "sha": "d718df3b72e93f56f62523d757fb3c40ba4baaad",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1701,
+      "is_binary": false
+    },
+    {
+      "name": "requirements-mcp.txt",
+      "path": "mcp_agent/requirements-mcp.txt",
+      "type": "file",
+      "sha": "ba553970c78159d836ae90b15d519d539b13227f",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 403,
+      "is_binary": false
+    },
+    {
+      "name": "servidor_mcp.py",
+      "path": "mcp_agent/servidor_mcp.py",
+      "type": "file",
+      "sha": "808cfec3a9ddde5752ae3ac82c1fba9095a9628f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2550,
+      "is_binary": false
+    },
+    {
+      "name": "servidor_mcp_sabia.py",
+      "path": "mcp_agent/servidor_mcp_sabia.py",
+      "type": "file",
+      "sha": "6d54b2422e6c70aa50bd5364f4c868fd50917543",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5978,
+      "is_binary": false
+    },
+    {
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
@@ -2942,7 +3708,7 @@
       "name": "no_fluxo_backend",
       "path": "no_fluxo_backend",
       "type": "directory",
-      "sha": "f56f129654a7b73931b30370eeb573e5d8b2a713",
+      "sha": "2da4fe2453f6fb5d298590e58cc688556e8e69d7",
       "mode": "040000",
       "children": []
     },
@@ -3030,7 +3796,7 @@
       "name": "docs",
       "path": "no_fluxo_backend/docs",
       "type": "directory",
-      "sha": "f55b44a401cc7d7cb25306c9746ab790ad63b79e",
+      "sha": "9484480441a0d619bb2880952b195b2afb6ae1af",
       "mode": "040000",
       "children": []
     },
@@ -3078,7 +3844,7 @@
       "name": "supabase_migrations",
       "path": "no_fluxo_backend/docs/supabase_migrations",
       "type": "directory",
-      "sha": "2e9c39b02e9211139c4777ed6cdae045f2d5ee32",
+      "sha": "53609b36b88118cdcbc2d639d045ad1af8d4b70c",
       "mode": "040000",
       "children": []
     },
@@ -3086,10 +3852,10 @@
       "name": "casar_disciplinas_function.sql",
       "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
       "type": "file",
-      "sha": "bfcd9e72fb9ae89d227a5fa6d02909dc97ab5c8f",
+      "sha": "06a935fc292db37a76e67505aefef7e2df3f00d0",
       "mode": "100644",
       "extension": ".sql",
-      "size": 30337,
+      "size": 31630,
       "is_binary": false
     },
     {
@@ -3176,10 +3942,10 @@
       "name": "package.json",
       "path": "no_fluxo_backend/package.json",
       "type": "file",
-      "sha": "1a1ecdcb844cf9caaaa6a423f0f3623984f6156d",
+      "sha": "c01ca6da2595dd81355c4c28815430d269b01ef4",
       "mode": "100644",
       "extension": ".json",
-      "size": 2326,
+      "size": 2883,
       "is_binary": false
     },
     {
@@ -3408,7 +4174,7 @@
       "name": "src",
       "path": "no_fluxo_backend/src",
       "type": "directory",
-      "sha": "5ba6e37cbb5b897df0ed57493fcb6bd77cdacd08",
+      "sha": "e8d0703f9523302e60bff8a08bb25811c37962f4",
       "mode": "040000",
       "children": []
     },
@@ -3416,7 +4182,7 @@
       "name": "controllers",
       "path": "no_fluxo_backend/src/controllers",
       "type": "directory",
-      "sha": "aea2d461dce2cab438a77efd10ec3cd014692232",
+      "sha": "16dd647c8065ec686b3965627c2c57920b3cceba",
       "mode": "040000",
       "children": []
     },
@@ -3424,10 +4190,10 @@
       "name": "assistente_controller.ts",
       "path": "no_fluxo_backend/src/controllers/assistente_controller.ts",
       "type": "file",
-      "sha": "7ee33a525c7f06f7627df5d768a93e0e8aac75fe",
+      "sha": "7d71ecae5cd1b7b8e1b0df6fbec1750b59375e12",
       "mode": "100644",
       "extension": ".ts",
-      "size": 3552,
+      "size": 6054,
       "is_binary": false
     },
     {
@@ -3484,10 +4250,10 @@
       "name": "index.ts",
       "path": "no_fluxo_backend/src/index.ts",
       "type": "file",
-      "sha": "a5d8c50980d3a7257ee0fb04fefd1c346c263ce0",
+      "sha": "9a885a7793ab31e3108cd1bff35358bc1e6afddc",
       "mode": "100644",
       "extension": ".ts",
-      "size": 7188,
+      "size": 7865,
       "is_binary": false
     },
     {
@@ -3514,7 +4280,7 @@
       "name": "services",
       "path": "no_fluxo_backend/src/services",
       "type": "directory",
-      "sha": "89d879e6410cd254018512fa45e6df211b11a85f",
+      "sha": "f07e70528fb147de2b39f868343383a2ef6bbf09",
       "mode": "040000",
       "children": []
     },
@@ -3546,6 +4312,16 @@
       "mode": "100644",
       "extension": ".ts",
       "size": 786,
+      "is_binary": false
+    },
+    {
+      "name": "sabia.service.ts",
+      "path": "no_fluxo_backend/src/services/sabia.service.ts",
+      "type": "file",
+      "sha": "1b2ef341b3654aecdb4f1c0b837d07955ebff9b1",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 7997,
       "is_binary": false
     },
     {
@@ -6710,7 +7486,7 @@
       "name": "no_fluxo_frontend_svelte",
       "path": "no_fluxo_frontend_svelte",
       "type": "directory",
-      "sha": "b52d86f2aa48d0c7b56bec3972581f4926108ad2",
+      "sha": "36b60541df654c5171272680563d64142519b381",
       "mode": "040000",
       "children": []
     },
@@ -6826,7 +7602,7 @@
       "name": "src",
       "path": "no_fluxo_frontend_svelte/src",
       "type": "directory",
-      "sha": "15c8e322f6fe10d4af4fbf78f5dc0d8031a38c63",
+      "sha": "bb0d822a6e41475bfc14675e031bb8ad31fb3ccc",
       "mode": "040000",
       "children": []
     },
@@ -6874,7 +7650,7 @@
       "name": "lib",
       "path": "no_fluxo_frontend_svelte/src/lib",
       "type": "directory",
-      "sha": "71983298183ff8a6e4564648b0a4f5e7aec151f2",
+      "sha": "81cccf55fef13169bd4960dbe86f996557935e94",
       "mode": "040000",
       "children": []
     },
@@ -6920,7 +7696,7 @@
       "name": "components",
       "path": "no_fluxo_frontend_svelte/src/lib/components",
       "type": "directory",
-      "sha": "efea2e95377d4c08efad72ff4b91c7e6d1959564",
+      "sha": "6a0b05893c3561c864e6f98d985c3ba0113af2e8",
       "mode": "040000",
       "children": []
     },
@@ -7220,7 +7996,7 @@
       "name": "home",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home",
       "type": "directory",
-      "sha": "de7efe2701c411db34b0a7e57d08a1f29becfdfb",
+      "sha": "2554f9f2f1329dd38eac1350a3d93f46295b1a94",
       "mode": "040000",
       "children": []
     },
@@ -7288,10 +8064,10 @@
       "name": "SobreNosSection.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home/SobreNosSection.svelte",
       "type": "file",
-      "sha": "feceb6fb823e1af0120fee8264f3b5cce896ebdb",
+      "sha": "cc41d2239c9f85ddebcc5b62e65aad67e026958b",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 4291,
+      "size": 4345,
       "is_binary": false
     },
     {
@@ -8628,7 +9404,7 @@
       "name": "services",
       "path": "no_fluxo_frontend_svelte/src/lib/services",
       "type": "directory",
-      "sha": "a4dbf69f3818b16df59ee6488c07bee0634b1d35",
+      "sha": "c644d5236c21e21724aa07fe0a2f393de8fcbf34",
       "mode": "040000",
       "children": []
     },
@@ -8636,10 +9412,10 @@
       "name": "assistente.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/assistente.service.ts",
       "type": "file",
-      "sha": "40b9db343d49ec275575b76ae106219038707972",
+      "sha": "8cfea82c66cc33387519c338cf8c2170c3d00dea",
       "mode": "100644",
       "extension": ".ts",
-      "size": 1289,
+      "size": 2700,
       "is_binary": false
     },
     {
@@ -8676,7 +9452,7 @@
       "name": "pdf",
       "path": "no_fluxo_frontend_svelte/src/lib/services/pdf",
       "type": "directory",
-      "sha": "3126ffc25ab96d34779a8105d6d7e8d0b477d425",
+      "sha": "f1a5f558e6db9498d29b5a53789557e70c86b6df",
       "mode": "040000",
       "children": []
     },
@@ -8704,30 +9480,30 @@
       "name": "pdfExtractor.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfExtractor.ts",
       "type": "file",
-      "sha": "19120ff50eded8644edaa766bcb207193798bc4f",
+      "sha": "d9d382fb645d16230a79bf502a8d3cbfff6b3567",
       "mode": "100644",
       "extension": ".ts",
-      "size": 6769,
+      "size": 7674,
       "is_binary": false
     },
     {
       "name": "pdfParser.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfParser.ts",
       "type": "file",
-      "sha": "89bea52c1afc514c919f71ff1800154da97c37df",
+      "sha": "1c8bdc80c9bb1d2dfb3aa49bc907dedf8a8c3bea",
       "mode": "100644",
       "extension": ".ts",
-      "size": 10495,
+      "size": 10986,
       "is_binary": false
     },
     {
       "name": "pdfPositionExtractor.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfPositionExtractor.ts",
       "type": "file",
-      "sha": "11049804840adb15d76160c9228c3d09242443ba",
+      "sha": "0bb0c3944bce9abafb9a487b422618bdd321fdc5",
       "mode": "100644",
       "extension": ".ts",
-      "size": 16983,
+      "size": 17131,
       "is_binary": false
     },
     {
@@ -8744,10 +9520,10 @@
       "name": "upload.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/upload.service.ts",
       "type": "file",
-      "sha": "1f95b3004a865bfdc195a171394524f0ef3ebe0e",
+      "sha": "0e9adc8d475de24d601494028a38c040b6d1a692",
       "mode": "100644",
       "extension": ".ts",
-      "size": 3618,
+      "size": 4846,
       "is_binary": false
     },
     {
@@ -8764,7 +9540,7 @@
       "name": "stores",
       "path": "no_fluxo_frontend_svelte/src/lib/stores",
       "type": "directory",
-      "sha": "080b8724987c72060b73950a5fb30c06ea207afb",
+      "sha": "3e2b67de1549afa035147400599bee2b9cf529f2",
       "mode": "040000",
       "children": []
     },
@@ -8832,10 +9608,10 @@
       "name": "uploadStore.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/stores/uploadStore.ts",
       "type": "file",
-      "sha": "e2c8b23ecf10f7028be1b91696926cfdf831f478",
+      "sha": "c8c88032d57dd6f9bb357de64534e47920d6fbdb",
       "mode": "100644",
       "extension": ".ts",
-      "size": 10840,
+      "size": 11274,
       "is_binary": false
     },
     {
@@ -9084,7 +9860,7 @@
       "name": "routes",
       "path": "no_fluxo_frontend_svelte/src/routes",
       "type": "directory",
-      "sha": "b83fdb443ad013faec65fcf703a4415c3886d502",
+      "sha": "afda5e11d9ce670cc97cc1fb19a8ef58de67739f",
       "mode": "040000",
       "children": []
     },
@@ -9186,7 +9962,7 @@
       "name": "assistente",
       "path": "no_fluxo_frontend_svelte/src/routes/assistente",
       "type": "directory",
-      "sha": "20a37773bbc351dc42d73524994d2953436f73ff",
+      "sha": "6eb505b901a15855a2ef5214a241fd23a80795dc",
       "mode": "040000",
       "children": []
     },
@@ -9194,10 +9970,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/assistente/+page.svelte",
       "type": "file",
-      "sha": "840386f22ad3a47c6efc1130bf0b477765f9c955",
+      "sha": "fca22165120d73608d066f99f185c83bb34d604a",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 1052,
+      "size": 8396,
       "is_binary": false
     },
     {
@@ -9650,7 +10426,7 @@
       "name": "plans",
       "path": "plans",
       "type": "directory",
-      "sha": "f43d899ff5e7d754b160968ee43a300cf29e8be1",
+      "sha": "c6768fb836f1e5353de964b4556d0e6d0f37ae34",
       "mode": "040000",
       "children": []
     },
@@ -9668,10 +10444,10 @@
       "name": "01-PROJECT-SETUP.md",
       "path": "plans/01-PROJECT-SETUP.md",
       "type": "file",
-      "sha": "9e3cbd64d5e2729cd64f4c1905e95f7971de7c08",
+      "sha": "0b9a63369541e0ab75e3c319c9595377b96a9520",
       "mode": "100644",
       "extension": ".md",
-      "size": 37459,
+      "size": 37217,
       "is_binary": false
     },
     {
@@ -10496,10 +11272,10 @@
       "name": "requirements.txt",
       "path": "requirements.txt",
       "type": "file",
-      "sha": "7aabeeda3451caa67f8c18294308eb019d6025f5",
+      "sha": "c2cfe48707194c1fd9376a75f0841570addf49aa",
       "mode": "100644",
       "extension": ".txt",
-      "size": 328,
+      "size": 505,
       "is_binary": false
     },
     {
@@ -11115,16 +11891,6 @@
       "is_binary": false
     },
     {
-      "name": "teste.py",
-      "path": "teste.py",
-      "type": "file",
-      "sha": "136ba08e0c933709ab7abdfb61f1ebc9dc3afaa5",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 566,
-      "is_binary": false
-    },
-    {
       "name": "tests-python",
       "path": "tests-python",
       "type": "directory",
@@ -11284,17 +12050,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-03-05T06:22:40.361152",
+  "extracted_at": "2026-03-06T06:17:29.877376",
   "method": "rest",
-  "total_items": 1179,
+  "total_items": 1256,
   "repository_metadata": {
     "id": 957040204,
     "full_name": "unb-mds/2025-1-NoFluxoUNB",
     "description": "Fluxograma interativo com chat-bot que auxilia na escolha e visualização da sua estrutura curricular da UnB.",
     "created_at": "2025-03-29T12:09:56Z",
-    "updated_at": "2026-03-05T01:43:47Z",
+    "updated_at": "2026-03-05T20:31:06Z",
     "language": "JavaScript",
-    "size": 113390,
+    "size": 113469,
     "stars": 10,
     "forks": 3,
     "open_issues": 6
