@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-03-11T05:41:55.593978",
+      "extracted_at": "2026-03-12T05:43:24.329940",
       "file_path": "data/bronze/issues_2025-1-NoFluxoUNB.json",
-      "record_count": 78
+      "record_count": 76
     }
   },
   {
@@ -94,7 +94,7 @@
         "description": "Realização de testes da aplicação"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -206,8 +206,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-03T13:08:45Z",
-    "updated_at": "2026-03-03T13:09:39Z",
-    "closed_at": null,
+    "updated_at": "2026-03-11T15:16:54Z",
+    "closed_at": "2026-03-11T15:16:54Z",
     "assignee": {
       "login": "darkymeubem",
       "id": 73255212,
@@ -253,7 +253,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título  \nImplementar Recomendação Automática de Grade\n\n---\n\n## 📋 Descrição  \nCriar sistema de recomendação que sugira automaticamente uma grade compatível com:\n\n- Fluxo obrigatório\n- Disponibilidade de turmas\n- Compatibilidade de horários\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [ ] Média  \n- [x] Alta  \n- [ ] Crítica  \n\n---\n\n## ✅ Checklist de Tarefas  \n\n### 🎯 Regras Base\n- [ ] Priorizar matérias do fluxo obrigatório  \n- [ ] Permitir inclusão opcional de optativas  \n- [ ] Considerar disponibilidade de vagas  \n\n### ⏰ Compatibilidade\n- [ ] Verificar conflitos de horário  \n- [ ] Sugerir combinações viáveis  \n\n### 🤖 Inteligência\n- [ ] Implementar algoritmo de geração de combinações  \n- [ ] Avaliar futura integração com **SUAGRADE**  \n- [ ] Permitir feedback do usuário para melhoria da recomendação  \n\n---\n\n## 🧠 Notas Adicionais  \nEssa feature é diferencial competitivo do produto.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/101/reactions",
       "total_count": 0,
@@ -268,7 +288,8 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/101/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -359,7 +380,7 @@
         "description": "Realização de testes da aplicação"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -408,8 +429,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-03T13:07:06Z",
-    "updated_at": "2026-03-03T13:07:26Z",
-    "closed_at": null,
+    "updated_at": "2026-03-11T15:16:49Z",
+    "closed_at": "2026-03-11T15:16:49Z",
     "assignee": {
       "login": "darkymeubem",
       "id": 73255212,
@@ -455,7 +476,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título  \nCriar Organizador de Grade para Próximo Semestre\n\n---\n\n## 📋 Descrição  \nDesenvolver funcionalidade que permita ao aluno montar sua grade horária com base nas turmas disponíveis do semestre atual.\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [x] Média  \n- [ ] Alta  \n- [ ] Crítica  \n\n---\n\n## ✅ Checklist de Tarefas  \n\n### 📅 Interface\n- [ ] Criar visualização semanal (grade horária)  \n- [ ] Permitir adicionar/remover disciplinas  \n- [ ] Destacar conflitos de horário  \n\n### 🔄 Integração com Dados\n- [ ] Integrar com base de turmas raspadas  \n- [ ] Exibir professor, local e vagas disponíveis  \n\n### ⚠️ Validação\n- [ ] Detectar conflitos automaticamente  \n- [ ] Alertar quando não houver vagas  \n\n---\n\n## 🧠 Notas Adicionais  \nBase futura para recomendação automática de grade.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/100/reactions",
       "total_count": 0,
@@ -470,7 +511,8 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/100/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -579,7 +621,7 @@
         "description": "Realização de testes da aplicação"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -628,8 +670,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-03T13:06:03Z",
-    "updated_at": "2026-03-03T13:11:52Z",
-    "closed_at": null,
+    "updated_at": "2026-03-11T15:16:27Z",
+    "closed_at": "2026-03-11T15:16:27Z",
     "assignee": {
       "login": "darkymeubem",
       "id": 73255212,
@@ -675,7 +717,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título  \nImplementar Analytics de Vagas por Semestre\n\n---\n\n## 📋 Descrição  \nDesenvolver módulo de analytics que permita visualizar dados históricos de vagas por componente curricular.\n\nObjetivo: gerar inteligência de dados para auxiliar alunos na escolha de disciplinas.\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [x] Média  \n- [ ] Alta  \n- [ ] Crítica  \n\n---\n\n## ✅ Checklist de Tarefas  \n\n### 📊 Estrutura de Dados\n- [ ] Modelar armazenamento histórico de vagas  \n- [ ] Garantir versionamento por semestre  \n\n### 📈 Página de Analytics\n- [ ] Criar página dedicada para visualização  \n- [ ] Implementar gráficos de vagas por semestre  \n- [ ] Permitir filtro por disciplina  \n\n### 🔎 Análise\n- [ ] Exibir média de vagas por semestre  \n- [ ] Exibir tendência de oferta  \n- [ ] Identificar variações significativas  \n\n---\n\n## 🧠 Notas Adicionais  \nScraping das turmas já está implementado.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/99/reactions",
       "total_count": 0,
@@ -690,7 +752,8 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/99/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -857,6 +920,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/98/timeline",
     "performed_via_github_app": null,
     "state_reason": null,
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -938,7 +1002,7 @@
         "description": "Geração ou utilização de API's"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -964,10 +1028,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-03-03T13:02:12Z",
-    "updated_at": "2026-03-05T15:18:39Z",
-    "closed_at": null,
+    "updated_at": "2026-03-11T15:14:20Z",
+    "closed_at": "2026-03-11T15:14:20Z",
     "assignee": {
       "login": "darkymeubem",
       "id": 73255212,
@@ -1012,8 +1076,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📝 Título  \nValidação e Padronização dos Fluxogramas Acadêmicos  \n\n---\n\n## 📋 Descrição  \nRealizar a validação completa dos fluxogramas acadêmicos disponíveis na plataforma, garantindo que estejam atualizados e coerentes com a matriz curricular vigente.\n\nO objetivo é assegurar que o aluno visualize corretamente:\n- Todas as disciplinas obrigatórias\n- Todas as disciplinas optativas\n- Organização clara e padronizada das optativas\n- Coerência com a matriz curricular oficial\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [ ] Média  \n- [ ] Alta  \n- [x] Crítica  \n\n---\n\n## ✅ Checklist de Tarefas  \n\n### 🔎 Validação dos Fluxogramas\n- [ ] Conferir se todos os fluxogramas estão atualizados conforme a matriz curricular vigente  \n- [ ] Verificar se todas as matérias obrigatórias estão corretamente ofertadas  \n- [x] Identificar inconsistências ou disciplinas ausentes  \n\n### 📚 Inclusão de Matérias Optativas\n- [ ] Levantar lista completa de matérias optativas oficiais  \n- [ ] Identificar optativas que não aparecem atualmente no fluxograma  \n- [ ] Inserir as optativas faltantes  \n\n### 🧩 Definição de Regra de Exibição\n- [ ] Definir padrão visual para matérias optativas (cor, borda, tag ou destaque)  \n- [ ] Definir modelo de exibição:\n  - [ ] Agrupadas em bloco separado  \n  - [ ] Distribuídas por período sugerido  \n  - [ ] Lista complementar ao final do fluxograma  \n- [x] Definir regra clara para diferenciar:\n  - [x] Obrigatória  \n  - [x] Optativa  \n  - [x] Optatória (se aplicável)  \n\n### 🎨 Padronização Visual\n- [ ] Garantir que todas as optativas sigam o mesmo padrão visual  \n- [ ] Revisar legibilidade e evitar ambiguidade para o usuário  \n- [ ] Validar experiência com teste interno  \n\n### 📝 Documentação\n- [ ] Documentar regra de exibição definida  \n- [ ] Atualizar documentação técnica dos fluxogramas  \n\n---\n\n## 🧠 Notas Adicionais  \n- Confirmar versão oficial da matriz curricular antes da validação  \n- Verificar se há cursos com múltiplas matrizes ativas  \n- Avaliar impacto nas regras de equivalência  \n- Garantir que a padronização facilite futuras atualizações automatizadas  ",
-    "closed_by": null,
+    "body": "## 📝 Título  \nValidação e Padronização dos Fluxogramas Acadêmicos  \n\n---\n\n## 📋 Descrição  \nRealizar a validação completa dos fluxogramas acadêmicos disponíveis na plataforma, garantindo que estejam atualizados e coerentes com a matriz curricular vigente.\n\nO objetivo é assegurar que o aluno visualize corretamente:\n- Todas as disciplinas obrigatórias\n- Todas as disciplinas optativas\n- Organização clara e padronizada das optativas\n- Coerência com a matriz curricular oficial\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [ ] Média  \n- [ ] Alta  \n- [x] Crítica  \n\n---\n\n## ✅ Checklist de Tarefas  \n\n### 🔎 Validação dos Fluxogramas\n- [x] Conferir se todos os fluxogramas estão atualizados conforme a matriz curricular vigente  \n- [x] Verificar se todas as matérias obrigatórias estão corretamente ofertadas  \n- [x] Identificar inconsistências ou disciplinas ausentes  \n\n### 📚 Inclusão de Matérias Optativas\n- [x] Levantar lista completa de matérias optativas oficiais  \n- [x] Identificar optativas que não aparecem atualmente no fluxograma  \n- [x] Inserir as optativas faltantes  \n\n### 🧩 Definição de Regra de Exibição\n- [x] Definir padrão visual para matérias optativas (cor, borda, tag ou destaque)  \n- [x] Definir modelo de exibição:\n  - [x] Agrupadas em bloco separado  \n  - [ ] Distribuídas por período sugerido  \n  - [ ] Lista complementar ao final do fluxograma  \n- [x] Definir regra clara para diferenciar:\n  - [x] Obrigatória  \n  - [x] Optativa  \n  - [x] Optatória (se aplicável)  \n\n### 🎨 Padronização Visual\n- [x] Garantir que todas as optativas sigam o mesmo padrão visual  \n- [x] Revisar legibilidade e evitar ambiguidade para o usuário  \n- [x] Validar experiência com teste interno  \n\n### 📝 Documentação\n- [x] Documentar regra de exibição definida  \n- [x] Atualizar documentação técnica dos fluxogramas  \n\n---\n\n## 🧠 Notas Adicionais  \n- Confirmar versão oficial da matriz curricular antes da validação  \n- Verificar se há cursos com múltiplas matrizes ativas  \n- Avaliar impacto nas regras de equivalência  \n- Garantir que a padronização facilite futuras atualizações automatizadas  ",
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/97/reactions",
       "total_count": 0,
@@ -1028,7 +1112,8 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/97/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -1195,6 +1280,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/96/timeline",
     "performed_via_github_app": null,
     "state_reason": null,
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -1409,6 +1495,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/92/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -1583,6 +1670,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/90/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -1797,6 +1885,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/89/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2017,6 +2106,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/86/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2210,6 +2300,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/85/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2403,6 +2494,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/84/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2614,6 +2706,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/82/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2761,6 +2854,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/81/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -2975,6 +3069,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/79/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -3228,6 +3323,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/77/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -3451,6 +3547,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/75/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -3704,6 +3801,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/74/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -3851,6 +3949,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/72/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -3956,6 +4055,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/67/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -4170,6 +4270,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/66/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -4372,6 +4473,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/65/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -4574,6 +4676,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/64/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -4767,6 +4870,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/63/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -4960,6 +5064,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/62/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -5183,6 +5288,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/61/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -5385,6 +5491,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/60/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -5587,6 +5694,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/59/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -5780,6 +5888,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/58/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -5982,6 +6091,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/57/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -6235,6 +6345,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/56/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -6458,6 +6569,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/55/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -6651,6 +6763,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/54/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -6853,6 +6966,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/53/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7055,6 +7169,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/52/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7278,6 +7393,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/51/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7467,6 +7583,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/46/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7656,6 +7773,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/45/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7803,6 +7921,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/44/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -7950,6 +8069,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/43/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -8055,6 +8175,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/42/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -8404,6 +8525,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/41/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -8597,6 +8719,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/40/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -8832,6 +8955,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/39/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -9067,6 +9191,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/38/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -9260,6 +9385,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/37/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -9474,6 +9600,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/36/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -9739,6 +9866,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/35/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -9974,6 +10102,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/34/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -10209,6 +10338,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/33/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -10402,6 +10532,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/32/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -10604,6 +10735,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/31/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -10848,6 +10980,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/30/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11041,6 +11174,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/29/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11234,6 +11368,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/28/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11427,6 +11562,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/27/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11620,6 +11756,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/26/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11767,6 +11904,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/23/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -11981,6 +12119,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/22/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -12204,6 +12343,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/21/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -12418,6 +12558,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/20/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -12662,6 +12803,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/19/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -12906,6 +13048,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/18/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -13171,6 +13314,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/17/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -13394,6 +13538,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/16/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -13608,6 +13753,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/15/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -13810,6 +13956,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/14/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14033,6 +14180,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/13/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14226,6 +14374,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/12/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14382,6 +14531,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/10/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14605,6 +14755,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/9/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14752,6 +14903,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/8/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -14899,6 +15051,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/7/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -15055,6 +15208,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/6/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -15211,6 +15365,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/5/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
   {
@@ -15413,392 +15568,7 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/4/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
-    "repo_name": "2025-1-NoFluxoUNB"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3",
-    "repository_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB",
-    "labels_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3/events",
-    "html_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/issues/3",
-    "id": 2971055783,
-    "node_id": "I_kwDOOQtGTM6xFran",
-    "number": 3,
-    "title": "[FEAT/SPRINTS] Sprint 0 / Estudos sobre Vercel",
-    "user": {
-      "login": "hisarxt",
-      "id": 123188031,
-      "node_id": "U_kgDOB1ezPw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123188031?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/hisarxt",
-      "html_url": "https://github.com/hisarxt",
-      "followers_url": "https://api.github.com/users/hisarxt/followers",
-      "following_url": "https://api.github.com/users/hisarxt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/hisarxt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/hisarxt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/hisarxt/subscriptions",
-      "organizations_url": "https://api.github.com/users/hisarxt/orgs",
-      "repos_url": "https://api.github.com/users/hisarxt/repos",
-      "events_url": "https://api.github.com/users/hisarxt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/hisarxt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 8397669626,
-        "node_id": "LA_kwDOOQtGTM8AAAAB9IpE-g",
-        "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/labels/Estudos",
-        "name": "Estudos",
-        "color": "bfdadc",
-        "default": false,
-        "description": "Toda parte de estudos sobre tecnologias, meios e etc se encontra aqui"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "hisarxt",
-        "id": 123188031,
-        "node_id": "U_kgDOB1ezPw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/123188031?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/hisarxt",
-        "html_url": "https://github.com/hisarxt",
-        "followers_url": "https://api.github.com/users/hisarxt/followers",
-        "following_url": "https://api.github.com/users/hisarxt/following{/other_user}",
-        "gists_url": "https://api.github.com/users/hisarxt/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/hisarxt/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/hisarxt/subscriptions",
-        "organizations_url": "https://api.github.com/users/hisarxt/orgs",
-        "repos_url": "https://api.github.com/users/hisarxt/repos",
-        "events_url": "https://api.github.com/users/hisarxt/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/hisarxt/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/milestones/1",
-      "html_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/milestone/1",
-      "labels_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/milestones/1/labels",
-      "id": 12658481,
-      "node_id": "MI_kwDOOQtGTM4AwScx",
-      "number": 1,
-      "title": "Sprint 00",
-      "description": "Sprint 0 - Estudo de Tecnologias\r\n\r\nA Sprint 0 tem como objetivo o estudo e definição das tecnologias que serão utilizadas no projeto. Durante este período, a equipe se familiarizará com ferramentas essenciais, como Git, GitHub, Flutter, Supabase e Vercel, garantindo um ambiente de desenvolvimento adequado. Além disso, serão realizados testes iniciais para validar a viabilidade dessas tecnologias, preparando a base para as próximas sprints.",
-      "creator": {
-        "login": "erickaalves",
-        "id": 102527985,
-        "node_id": "U_kgDOBhxz8Q",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/erickaalves",
-        "html_url": "https://github.com/erickaalves",
-        "followers_url": "https://api.github.com/users/erickaalves/followers",
-        "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-        "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-        "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-        "repos_url": "https://api.github.com/users/erickaalves/repos",
-        "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 4,
-      "state": "open",
-      "created_at": "2025-04-02T12:53:38Z",
-      "updated_at": "2025-05-01T13:04:26Z",
-      "due_on": "2025-04-04T00:00:00Z",
-      "closed_at": null
-    },
-    "comments": 2,
-    "created_at": "2025-04-04T01:32:29Z",
-    "updated_at": "2025-04-08T23:13:22Z",
-    "closed_at": "2025-04-07T22:09:30Z",
-    "assignee": {
-      "login": "hisarxt",
-      "id": 123188031,
-      "node_id": "U_kgDOB1ezPw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123188031?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/hisarxt",
-      "html_url": "https://github.com/hisarxt",
-      "followers_url": "https://api.github.com/users/hisarxt/followers",
-      "following_url": "https://api.github.com/users/hisarxt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/hisarxt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/hisarxt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/hisarxt/subscriptions",
-      "organizations_url": "https://api.github.com/users/hisarxt/orgs",
-      "repos_url": "https://api.github.com/users/hisarxt/repos",
-      "events_url": "https://api.github.com/users/hisarxt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/hisarxt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": {
-      "id": 20193710,
-      "node_id": "IT_kwDOCH8E_c4BNCGu",
-      "name": "Task",
-      "description": "A specific piece of work",
-      "color": "yellow",
-      "created_at": "2024-02-18T04:46:03Z",
-      "updated_at": "2024-07-26T15:22:11Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Título  \nEstudo sobre Vercel\n\n\n## 📋 Descrição  \nEste estudo tem como objetivo pesquisar, aprender e compreender os conceitos sobre Vercel. E como desafio, aplicar na prática tudo que foi estudado.\n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [x] Média  \n- [ ] Alta  \n- [ ] Crítica\n\n\n\n## ✅ Checklist de Tarefas  \n- [x] Pesquisar sobre os conceitos essenciais da Vercel\n- [x] Pesquisar e aprender como faz um deploy na Vercel\n- [x] Fazer um resumo sobre o que foi aprendido\n- [x] Escrever comandos para realizar um deploy\n- [x] Realizar um deploy usando Flutter\n\n",
-    "closed_by": {
-      "login": "hisarxt",
-      "id": 123188031,
-      "node_id": "U_kgDOB1ezPw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123188031?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/hisarxt",
-      "html_url": "https://github.com/hisarxt",
-      "followers_url": "https://api.github.com/users/hisarxt/followers",
-      "following_url": "https://api.github.com/users/hisarxt/following{/other_user}",
-      "gists_url": "https://api.github.com/users/hisarxt/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/hisarxt/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/hisarxt/subscriptions",
-      "organizations_url": "https://api.github.com/users/hisarxt/orgs",
-      "repos_url": "https://api.github.com/users/hisarxt/repos",
-      "events_url": "https://api.github.com/users/hisarxt/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/hisarxt/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/3/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "repo_name": "2025-1-NoFluxoUNB"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2",
-    "repository_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB",
-    "labels_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2/events",
-    "html_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/issues/2",
-    "id": 2969616498,
-    "node_id": "I_kwDOOQtGTM6xAMBy",
-    "number": 2,
-    "title": "[FEAT/SPRINTS] Sprint 0 / Estudos sobre levantamento e análise de requisitos",
-    "user": {
-      "login": "erickaalves",
-      "id": 102527985,
-      "node_id": "U_kgDOBhxz8Q",
-      "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/erickaalves",
-      "html_url": "https://github.com/erickaalves",
-      "followers_url": "https://api.github.com/users/erickaalves/followers",
-      "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-      "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-      "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-      "repos_url": "https://api.github.com/users/erickaalves/repos",
-      "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 8397669626,
-        "node_id": "LA_kwDOOQtGTM8AAAAB9IpE-g",
-        "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/labels/Estudos",
-        "name": "Estudos",
-        "color": "bfdadc",
-        "default": false,
-        "description": "Toda parte de estudos sobre tecnologias, meios e etc se encontra aqui"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "erickaalves",
-        "id": 102527985,
-        "node_id": "U_kgDOBhxz8Q",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/erickaalves",
-        "html_url": "https://github.com/erickaalves",
-        "followers_url": "https://api.github.com/users/erickaalves/followers",
-        "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-        "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-        "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-        "repos_url": "https://api.github.com/users/erickaalves/repos",
-        "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/milestones/1",
-      "html_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/milestone/1",
-      "labels_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/milestones/1/labels",
-      "id": 12658481,
-      "node_id": "MI_kwDOOQtGTM4AwScx",
-      "number": 1,
-      "title": "Sprint 00",
-      "description": "Sprint 0 - Estudo de Tecnologias\r\n\r\nA Sprint 0 tem como objetivo o estudo e definição das tecnologias que serão utilizadas no projeto. Durante este período, a equipe se familiarizará com ferramentas essenciais, como Git, GitHub, Flutter, Supabase e Vercel, garantindo um ambiente de desenvolvimento adequado. Além disso, serão realizados testes iniciais para validar a viabilidade dessas tecnologias, preparando a base para as próximas sprints.",
-      "creator": {
-        "login": "erickaalves",
-        "id": 102527985,
-        "node_id": "U_kgDOBhxz8Q",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/erickaalves",
-        "html_url": "https://github.com/erickaalves",
-        "followers_url": "https://api.github.com/users/erickaalves/followers",
-        "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-        "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-        "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-        "repos_url": "https://api.github.com/users/erickaalves/repos",
-        "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 4,
-      "state": "open",
-      "created_at": "2025-04-02T12:53:38Z",
-      "updated_at": "2025-05-01T13:04:26Z",
-      "due_on": "2025-04-04T00:00:00Z",
-      "closed_at": null
-    },
-    "comments": 1,
-    "created_at": "2025-04-03T13:35:30Z",
-    "updated_at": "2025-04-08T22:45:42Z",
-    "closed_at": "2025-04-03T15:09:15Z",
-    "assignee": {
-      "login": "erickaalves",
-      "id": 102527985,
-      "node_id": "U_kgDOBhxz8Q",
-      "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/erickaalves",
-      "html_url": "https://github.com/erickaalves",
-      "followers_url": "https://api.github.com/users/erickaalves/followers",
-      "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-      "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-      "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-      "repos_url": "https://api.github.com/users/erickaalves/repos",
-      "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": {
-      "id": 20193710,
-      "node_id": "IT_kwDOCH8E_c4BNCGu",
-      "name": "Task",
-      "description": "A specific piece of work",
-      "color": "yellow",
-      "created_at": "2024-02-18T04:46:03Z",
-      "updated_at": "2024-07-26T15:22:11Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Título  \nEstudo sobre Levantamento e Análise de Requisitos  \n\n## 📋 Descrição  \nEste estudo tem como objetivo compreender os processos, técnicas e melhores práticas para o levantamento e análise de requisitos de software. A partir da pesquisa teórica, serão explorados conceitos fundamentais, metodologias, desafios e boas práticas que auxiliam na definição precisa dos requisitos de um sistema.  \n\n---\n\n## ⚠️ Prioridade  \n- [ ] Baixa  \n- [x] Média  \n- [ ] Alta  \n- [ ] Crítica  \n\n## ✅ Checklist de Tarefas  \n- [x] Pesquisar conceitos fundamentais sobre requisitos de software  \n- [ ] Estudar as principais técnicas de levantamento de requisitos (entrevistas, brainstorming, questionários, etc.)  \n- [ ] Analisar metodologias como Waterfall, Ágil e Design Thinking no contexto de requisitos  \n- [ ] Identificar desafios comuns e boas práticas na análise de requisitos  \n- [ ] Elaborar um resumo ou relatório com os principais aprendizados  \n\n## 🧠 Notas Adicionais  \nPodem ser utilizados livros, artigos acadêmicos e materiais oficiais como referência. Além disso, será útil comparar diferentes abordagens para entender como escolher a mais adequada para cada projeto.  \n",
-    "closed_by": {
-      "login": "erickaalves",
-      "id": 102527985,
-      "node_id": "U_kgDOBhxz8Q",
-      "avatar_url": "https://avatars.githubusercontent.com/u/102527985?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/erickaalves",
-      "html_url": "https://github.com/erickaalves",
-      "followers_url": "https://api.github.com/users/erickaalves/followers",
-      "following_url": "https://api.github.com/users/erickaalves/following{/other_user}",
-      "gists_url": "https://api.github.com/users/erickaalves/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/erickaalves/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/erickaalves/subscriptions",
-      "organizations_url": "https://api.github.com/users/erickaalves/orgs",
-      "repos_url": "https://api.github.com/users/erickaalves/repos",
-      "events_url": "https://api.github.com/users/erickaalves/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/erickaalves/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/2/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
+    "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   }
 ]
