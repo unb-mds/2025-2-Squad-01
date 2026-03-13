@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2025-1-NoFluxoUNB",
   "branch": "main",
-  "sha": "ba096322c39e42a8cb83cb4e74d4b3f562d2c6db",
+  "sha": "35827fecf4a4afc45a7102e3fca06a25c53fa9e3",
   "tree": [
     {
       "name": ".dockerignore",
@@ -3264,20 +3264,30 @@
       "name": "k8s.backend.Dockerfile",
       "path": "k8s.backend.Dockerfile",
       "type": "file",
-      "sha": "d93abf66fc0ee761b51e35dace17537c08e9f647",
+      "sha": "98fafc485c02a8687efdfda51e97f65ccc2094ec",
       "mode": "100644",
       "extension": ".Dockerfile",
-      "size": 954,
+      "size": 1003,
       "is_binary": false
     },
     {
       "name": "k8s.frontend-svelte.Dockerfile",
       "path": "k8s.frontend-svelte.Dockerfile",
       "type": "file",
-      "sha": "986f679b13f4844ccdb7ad1094c890b18de0e860",
+      "sha": "5ba07f394b54fb0247c1b75b8509c921af61ed09",
       "mode": "100644",
       "extension": ".Dockerfile",
-      "size": 2668,
+      "size": 2784,
+      "is_binary": false
+    },
+    {
+      "name": "k8s.mcp-agent.Dockerfile",
+      "path": "k8s.mcp-agent.Dockerfile",
+      "type": "file",
+      "sha": "8276ee97fcf7c0954a13030a05333fab065fecfb",
+      "mode": "100644",
+      "extension": ".Dockerfile",
+      "size": 1134,
       "is_binary": false
     },
     {
@@ -3668,7 +3678,7 @@
       "name": "mcp_agent",
       "path": "mcp_agent",
       "type": "directory",
-      "sha": "ed2bdd42834f814c579926adb68f9bf25c579c54",
+      "sha": "0c22668b1d24e721eb940be98f3745075a28711a",
       "mode": "040000",
       "children": []
     },
@@ -3716,10 +3726,10 @@
       "name": "api_producao.py",
       "path": "mcp_agent/api_producao.py",
       "type": "file",
-      "sha": "9083c0b1e39a2161b11b8a1357a1b60b114fd53c",
+      "sha": "4d935cf9d7be880f6f058fc8bc02a1c1c4939c04",
       "mode": "100644",
       "extension": ".py",
-      "size": 10446,
+      "size": 10882,
       "is_binary": false
     },
     {
@@ -3756,10 +3766,10 @@
       "name": "requirements.txt",
       "path": "mcp_agent/requirements.txt",
       "type": "file",
-      "sha": "90cb8bdf5ff86d3db2835c3d77acf7ef5963b87c",
+      "sha": "d161239e32b7b1924a3c7ee2a7a4cc5a03923236",
       "mode": "100644",
       "extension": ".txt",
-      "size": 433,
+      "size": 419,
       "is_binary": false
     },
     {
@@ -3836,7 +3846,7 @@
       "name": "no_fluxo_backend",
       "path": "no_fluxo_backend",
       "type": "directory",
-      "sha": "c6e41430949501e2e750c868758398e8b80d171e",
+      "sha": "15c4391f0cf837769388081f2f6bc55a1e79fd89",
       "mode": "040000",
       "children": []
     },
@@ -4302,7 +4312,7 @@
       "name": "src",
       "path": "no_fluxo_backend/src",
       "type": "directory",
-      "sha": "949e2c4347b9ef66c430332dd015c465265d63fe",
+      "sha": "1b5510b779f9867b3942029220435c36630e10ef",
       "mode": "040000",
       "children": []
     },
@@ -4408,7 +4418,7 @@
       "name": "services",
       "path": "no_fluxo_backend/src/services",
       "type": "directory",
-      "sha": "c1d947bf4131cf72a7a329aae9b7e7f223c6a5d0",
+      "sha": "abbddefb8bdca4e1d82770c540889a1d55dcffa5",
       "mode": "040000",
       "children": []
     },
@@ -4446,10 +4456,10 @@
       "name": "sabia.service.ts",
       "path": "no_fluxo_backend/src/services/sabia.service.ts",
       "type": "file",
-      "sha": "7678f0ef16f550c6fe1ed75a83e79df7c18b1c1e",
+      "sha": "a8fa4127e454ea5d01a15cd58f1d1ff6dfd445e0",
       "mode": "100644",
       "extension": ".ts",
-      "size": 6672,
+      "size": 6902,
       "is_binary": false
     },
     {
@@ -7614,7 +7624,7 @@
       "name": "no_fluxo_frontend_svelte",
       "path": "no_fluxo_frontend_svelte",
       "type": "directory",
-      "sha": "27a40bb79ad51652291bb5e71c46f0a10d9b2a77",
+      "sha": "44a937951f2c0dc1d42ce7d1764f4b85eb27c9d4",
       "mode": "040000",
       "children": []
     },
@@ -7646,6 +7656,26 @@
       "mode": "100644",
       "extension": ".prettierrc",
       "size": 256,
+      "is_binary": false
+    },
+    {
+      "name": "SUPABASE_AUTH.md",
+      "path": "no_fluxo_frontend_svelte/SUPABASE_AUTH.md",
+      "type": "file",
+      "sha": "d8bd3c3f03c7c6ec564888bdbadd8f48a9477380",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3593,
+      "is_binary": false
+    },
+    {
+      "name": "SUPABASE_PKCE_FIX.md",
+      "path": "no_fluxo_frontend_svelte/SUPABASE_PKCE_FIX.md",
+      "type": "file",
+      "sha": "c316fc16f00092c8b62d25550ae3e9c5245d4096",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3601,
       "is_binary": false
     },
     {
@@ -7730,7 +7760,7 @@
       "name": "src",
       "path": "no_fluxo_frontend_svelte/src",
       "type": "directory",
-      "sha": "fbb340b3164bc1a89496d6db28f56bf16d4392f6",
+      "sha": "ad383193a44122b795dc79116a2389e9dd0dea4b",
       "mode": "040000",
       "children": []
     },
@@ -7778,7 +7808,7 @@
       "name": "lib",
       "path": "no_fluxo_frontend_svelte/src/lib",
       "type": "directory",
-      "sha": "c16a14a797cc6a39fd29c8a2e893ba2e9c2a525d",
+      "sha": "0ed2c0da6b54accf9d3dae3f10310775ebe544d7",
       "mode": "040000",
       "children": []
     },
@@ -7824,7 +7854,7 @@
       "name": "components",
       "path": "no_fluxo_frontend_svelte/src/lib/components",
       "type": "directory",
-      "sha": "7a2ab8f9ed8637db9fac77ded29136057f5fc7b3",
+      "sha": "50ddcdf1ffe7081cd8fa09885be515fe62d55982",
       "mode": "040000",
       "children": []
     },
@@ -7832,7 +7862,7 @@
       "name": "auth",
       "path": "no_fluxo_frontend_svelte/src/lib/components/auth",
       "type": "directory",
-      "sha": "c1e4a7cc26fd4033fab0400124985e660b221e91",
+      "sha": "228ef6ccc1a818c31fc1ba92ad7f902f584d6bb2",
       "mode": "040000",
       "children": []
     },
@@ -7870,10 +7900,10 @@
       "name": "LoginForm.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/auth/LoginForm.svelte",
       "type": "file",
-      "sha": "bba49932c0c95b93134ccbe2137ff894eaa2ded4",
+      "sha": "b30dbdee65109ac6a5bb7af931aaf3ae27133436",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 6245,
+      "size": 8567,
       "is_binary": false
     },
     {
@@ -7938,7 +7968,7 @@
       "name": "fluxograma",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma",
       "type": "directory",
-      "sha": "095ac7cc12ed8f5d482d29dd7bcca3c7983b976d",
+      "sha": "d40d3ac9782c1ca2ea5e828d599d90ff2e475cf5",
       "mode": "040000",
       "children": []
     },
@@ -8046,20 +8076,20 @@
       "name": "PrerequisiteConnections.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteConnections.svelte",
       "type": "file",
-      "sha": "7d278b6717688c27841074980567813c9b4147e4",
+      "sha": "2491532a6946c759aeedbb5bbafb80266445eeda",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 23537,
+      "size": 23523,
       "is_binary": false
     },
     {
       "name": "ProgressSummarySection.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/ProgressSummarySection.svelte",
       "type": "file",
-      "sha": "b430fbba4863d51afdbaf9f3becf2bb72b72c0db",
+      "sha": "59437f7e5a6b3bc96e27124db39f1c92cce23807",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 11729,
+      "size": 11774,
       "is_binary": false
     },
     {
@@ -8134,7 +8164,7 @@
       "name": "home",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home",
       "type": "directory",
-      "sha": "2554f9f2f1329dd38eac1350a3d93f46295b1a94",
+      "sha": "a8a1207fca1dc4b0de5339e3aeff62c1a1dfdf88",
       "mode": "040000",
       "children": []
     },
@@ -8142,10 +8172,10 @@
       "name": "ComoFuncionaSection.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home/ComoFuncionaSection.svelte",
       "type": "file",
-      "sha": "2003a64c47e94afddb97689c3532896010d9a76a",
+      "sha": "1f29f18956019a30ecc67e877fd967627f859014",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 1782,
+      "size": 2599,
       "is_binary": false
     },
     {
@@ -8162,10 +8192,10 @@
       "name": "HeroSection.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home/HeroSection.svelte",
       "type": "file",
-      "sha": "68a668f79f53923946542a32d3017f5363880c19",
+      "sha": "ae6bbce3cb70b49a836b7895d9cb42eb0314d183",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 3086,
+      "size": 4535,
       "is_binary": false
     },
     {
@@ -8192,10 +8222,10 @@
       "name": "ProntoParaOrganizarSection.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/home/ProntoParaOrganizarSection.svelte",
       "type": "file",
-      "sha": "baf8300cebecc03a4bfad3fcada0afb27e3429da",
+      "sha": "82040d2d3ff6c2a0eeae66ce3bfc763809df7a0c",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 1750,
+      "size": 1914,
       "is_binary": false
     },
     {
@@ -8230,7 +8260,7 @@
       "name": "layout",
       "path": "no_fluxo_frontend_svelte/src/lib/components/layout",
       "type": "directory",
-      "sha": "9050d89a97fb91c190f7bf23a8806e437efc9628",
+      "sha": "0e716ec53e0cad7f66f935b749a94ccd1b13d354",
       "mode": "040000",
       "children": []
     },
@@ -8308,10 +8338,10 @@
       "name": "Navbar.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte",
       "type": "file",
-      "sha": "6aef4ec4ed32f4056b9162fa0bc87298c6fdd6fe",
+      "sha": "d9fc6ddc33d0ded5fee9f3415662512ffc6b8699",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 7353,
+      "size": 7432,
       "is_binary": false
     },
     {
@@ -8328,10 +8358,10 @@
       "name": "Sidebar.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Sidebar.svelte",
       "type": "file",
-      "sha": "b75410114f7cfe2a4a1c52c2dc4d77a28da84836",
+      "sha": "91987c932e5b1fc1103558e327ab6c345fc45808",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 2552,
+      "size": 2634,
       "is_binary": false
     },
     {
@@ -9404,7 +9434,7 @@
       "name": "config",
       "path": "no_fluxo_frontend_svelte/src/lib/config",
       "type": "directory",
-      "sha": "cacdd0df059e5b8d083674b8bae030664fb153dc",
+      "sha": "a3abe96512c04421331d197155022f2088af33db",
       "mode": "040000",
       "children": []
     },
@@ -9412,10 +9442,10 @@
       "name": "routes.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/config/routes.ts",
       "type": "file",
-      "sha": "6ed62fcf03bee66567722b281c64c3412657804b",
+      "sha": "90ceed19d82f9cb2d85118a2d62d102f87f8d990",
       "mode": "100644",
       "extension": ".ts",
-      "size": 1517,
+      "size": 1566,
       "is_binary": false
     },
     {
@@ -9542,7 +9572,7 @@
       "name": "services",
       "path": "no_fluxo_frontend_svelte/src/lib/services",
       "type": "directory",
-      "sha": "7efd4b85b13e74a17de92ea39ed3eed7fe8f0906",
+      "sha": "65965682ac5aa5c1cfce8c4f9655ec9faf339670",
       "mode": "040000",
       "children": []
     },
@@ -9570,10 +9600,10 @@
       "name": "fluxograma.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/fluxograma.service.ts",
       "type": "file",
-      "sha": "45d8e4f0d1e9b79403d605c3dcab3c6d4c50537b",
+      "sha": "b18497c0b52e16060cd8f70395d3220a73f3fea4",
       "mode": "100644",
       "extension": ".ts",
-      "size": 9582,
+      "size": 13761,
       "is_binary": false
     },
     {
@@ -9648,10 +9678,10 @@
       "name": "supabase-data.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts",
       "type": "file",
-      "sha": "5c3d1153f1fbe6b523139397461f7ccb80da05cb",
+      "sha": "d92234f958fdaa7acc59f3259378bee74bcc2a8b",
       "mode": "100644",
       "extension": ".ts",
-      "size": 23235,
+      "size": 26929,
       "is_binary": false
     },
     {
@@ -9998,7 +10028,7 @@
       "name": "routes",
       "path": "no_fluxo_frontend_svelte/src/routes",
       "type": "directory",
-      "sha": "1fca8970b5882a7a7206877522ba3acfe5a40e9d",
+      "sha": "bef6e03dc13f3e3831e594ac1ceeacaf07c8e6cb",
       "mode": "040000",
       "children": []
     },
@@ -10100,7 +10130,7 @@
       "name": "assistente",
       "path": "no_fluxo_frontend_svelte/src/routes/assistente",
       "type": "directory",
-      "sha": "6eb505b901a15855a2ef5214a241fd23a80795dc",
+      "sha": "d1b92da9cf69ad92bfb40f31c725f4cb5b2d8396",
       "mode": "040000",
       "children": []
     },
@@ -10108,17 +10138,17 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/assistente/+page.svelte",
       "type": "file",
-      "sha": "fca22165120d73608d066f99f185c83bb34d604a",
+      "sha": "2a5411f944ae7ab617c057197fc32c957e49f740",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 8396,
+      "size": 9079,
       "is_binary": false
     },
     {
       "name": "auth",
       "path": "no_fluxo_frontend_svelte/src/routes/auth",
       "type": "directory",
-      "sha": "7e1e20f8257d644ef9147c2d8070b548088b5602",
+      "sha": "35ffd7c4f79616537d378f680561a791c33afa12",
       "mode": "040000",
       "children": []
     },
@@ -10154,7 +10184,7 @@
       "name": "reset-password",
       "path": "no_fluxo_frontend_svelte/src/routes/auth/reset-password",
       "type": "directory",
-      "sha": "334c6ad3dd7e58e76dade1f311d66e95d45cc9b4",
+      "sha": "53deccc079cda451d2e7b6a3a9f84a8f8ea9127f",
       "mode": "040000",
       "children": []
     },
@@ -10162,17 +10192,35 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/auth/reset-password/+page.svelte",
       "type": "file",
-      "sha": "30dcf9d660200e9cb125180327431f6fb373b030",
+      "sha": "a555f6372e5b7b8d9b6e0ef7b787c9f65b75b9ac",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 5998,
+      "size": 6193,
+      "is_binary": false
+    },
+    {
+      "name": "disciplinas",
+      "path": "no_fluxo_frontend_svelte/src/routes/disciplinas",
+      "type": "directory",
+      "sha": "24ef138fc33e68ae1caef2bb6c060a96920dcb59",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "+page.svelte",
+      "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte",
+      "type": "file",
+      "sha": "6cc59eef05479a0cb13cda4d6544bf7b29be78d1",
+      "mode": "100644",
+      "extension": ".svelte",
+      "size": 12670,
       "is_binary": false
     },
     {
       "name": "fluxogramas",
       "path": "no_fluxo_frontend_svelte/src/routes/fluxogramas",
       "type": "directory",
-      "sha": "7a400c32e587db73111191996ef45c19db5c901c",
+      "sha": "f61c86b05cf3f120fe48546bd0c3618450360426",
       "mode": "040000",
       "children": []
     },
@@ -10180,10 +10228,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/fluxogramas/+page.svelte",
       "type": "file",
-      "sha": "d5ab6f09a9cb4bb352eb969996cf64353790ded7",
+      "sha": "5dfd0805808d5c562e936740551ec7c4639d5c09",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 9408,
+      "size": 9620,
       "is_binary": false
     },
     {
@@ -10254,7 +10302,7 @@
       "name": "login",
       "path": "no_fluxo_frontend_svelte/src/routes/login",
       "type": "directory",
-      "sha": "bfb1c53218a3e5d2682599bc37eff226fc2158b4",
+      "sha": "92d0fbee3f4be70354ddbcbb906e7df6a3e786b1",
       "mode": "040000",
       "children": []
     },
@@ -10262,10 +10310,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/login/+page.svelte",
       "type": "file",
-      "sha": "2918fa1767418f77aa5a81d7e97cec4b2f0cdcb5",
+      "sha": "dcd62496502b528919779ef29716e5a85af1639c",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 509,
+      "size": 705,
       "is_binary": false
     },
     {
@@ -10326,7 +10374,7 @@
       "name": "signup",
       "path": "no_fluxo_frontend_svelte/src/routes/signup",
       "type": "directory",
-      "sha": "c0158d839e9aea31689e56caaca173e5030f02ba",
+      "sha": "b55bd1eb384c18c6453445ea53794c5187e18d4d",
       "mode": "040000",
       "children": []
     },
@@ -10334,10 +10382,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/signup/+page.svelte",
       "type": "file",
-      "sha": "3435d7e02ae92e57e297993f7400522a6db735b0",
+      "sha": "bcb8ad0dbe64cb9048fd10b020451d3fb2883b71",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 486,
+      "size": 682,
       "is_binary": false
     },
     {
@@ -11430,7 +11478,7 @@
       "name": "scripts",
       "path": "scripts",
       "type": "directory",
-      "sha": "8618460ac2d1d2d63871d4ae18936b253e7c5b6a",
+      "sha": "28766f3115d8b837a0804c80a7ad174df64e5c67",
       "mode": "040000",
       "children": []
     },
@@ -11438,7 +11486,7 @@
       "name": "deploy",
       "path": "scripts/deploy",
       "type": "directory",
-      "sha": "eddfb832a5917d172c1e6ece99767fad2c5bfa95",
+      "sha": "c0f115b383276275a6bfc3cb853d0728e514d755",
       "mode": "040000",
       "children": []
     },
@@ -11446,20 +11494,20 @@
       "name": "deploy_config.py",
       "path": "scripts/deploy/deploy_config.py",
       "type": "file",
-      "sha": "59a90814fcea4dfe3952254d50a62d6f7ca25641",
+      "sha": "68060d0885d55e780b9bf78d5ce2aa9ffe8f65a9",
       "mode": "100644",
       "extension": ".py",
-      "size": 4724,
+      "size": 5708,
       "is_binary": false
     },
     {
       "name": "deploy_local.py",
       "path": "scripts/deploy/deploy_local.py",
       "type": "file",
-      "sha": "b21b0f39d3dcc8d7c2e2a46c6d94778a5f76122b",
+      "sha": "05de54e45073abc14ffc4aae287ffd3a99e048fb",
       "mode": "100644",
       "extension": ".py",
-      "size": 26344,
+      "size": 26614,
       "is_binary": false
     },
     {
@@ -12188,19 +12236,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-03-12T06:23:34.567942",
+  "extracted_at": "2026-03-13T06:22:00.605902",
   "method": "rest",
-  "total_items": 1270,
+  "total_items": 1275,
   "repository_metadata": {
     "id": 957040204,
     "full_name": "unb-mds/2025-1-NoFluxoUNB",
     "description": "Fluxograma interativo com chat-bot que auxilia na escolha e visualização da sua estrutura curricular da UnB.",
     "created_at": "2025-03-29T12:09:56Z",
-    "updated_at": "2026-03-12T02:55:50Z",
+    "updated_at": "2026-03-12T21:38:21Z",
     "language": "JavaScript",
-    "size": 113651,
+    "size": 113700,
     "stars": 10,
     "forks": 3,
-    "open_issues": 2
+    "open_issues": 1
   }
 }
