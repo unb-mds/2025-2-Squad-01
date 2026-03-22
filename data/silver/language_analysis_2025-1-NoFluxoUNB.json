@@ -2,19 +2,19 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-03-21T06:14:10.986626",
+  "analyzed_at": "2026-03-22T06:24:16.050915",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 927,
-  "total_bytes": 24977020,
+  "total_files": 934,
+  "total_bytes": 25255080,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 58,
       "total_bytes": 11816719,
-      "percentage": 47.31,
+      "percentage": 46.79,
       "files": [
         {
           "path": "documentacao/estudos/Github/Assets/ex_repositorio.png",
@@ -80,9 +80,9 @@
     },
     {
       "language": "Unknown",
-      "file_count": 284,
-      "total_bytes": 3172465,
-      "percentage": 12.7,
+      "file_count": 287,
+      "total_bytes": 3193869,
+      "percentage": 12.65,
       "files": [
         {
           "path": "no_fluxo_frontend_svelte/static/pdf.worker.min.mjs",
@@ -149,9 +149,15 @@
     {
       "language": "JSON",
       "file_count": 98,
-      "total_bytes": 2907821,
-      "percentage": 11.64,
+      "total_bytes": 2982427,
+      "percentage": 11.81,
       "files": [
+        {
+          "path": "no_fluxo_backend/docs/database_schema.json",
+          "name": "database_schema.json",
+          "size": 301102,
+          "extension": ".json"
+        },
         {
           "path": "no_fluxo_backend/package-lock.json",
           "name": "package-lock.json",
@@ -162,12 +168,6 @@
           "path": "package-lock.json",
           "name": "package-lock.json",
           "size": 230445,
-          "extension": ".json"
-        },
-        {
-          "path": "no_fluxo_backend/docs/database_schema.json",
-          "name": "database_schema.json",
-          "size": 226496,
           "extension": ".json"
         },
         {
@@ -217,8 +217,8 @@
     {
       "language": "Markdown",
       "file_count": 107,
-      "total_bytes": 1381736,
-      "percentage": 5.53,
+      "total_bytes": 1387535,
+      "percentage": 5.49,
       "files": [
         {
           "path": "plans/05-MODELS-TYPES.md",
@@ -286,7 +286,7 @@
       "language": "PDF",
       "file_count": 16,
       "total_bytes": 1057508,
-      "percentage": 4.23,
+      "percentage": 4.19,
       "files": [
         {
           "path": "documentacao/estudos/SCRUM e Programação eXtrema/SRUM e programação eXtrema.pdf",
@@ -354,7 +354,7 @@
       "language": "JPEG Image",
       "file_count": 4,
       "total_bytes": 774924,
-      "percentage": 3.1,
+      "percentage": 3.07,
       "files": [
         {
           "path": "assets/Logo_eu_3 editada.JPG",
@@ -386,7 +386,7 @@
       "language": "Log File",
       "file_count": 1,
       "total_bytes": 657761,
-      "percentage": 2.63,
+      "percentage": 2.6,
       "files": [
         {
           "path": "logs/ai_agent.log",
@@ -397,10 +397,146 @@
       ]
     },
     {
+      "language": "SQL",
+      "file_count": 11,
+      "total_bytes": 575992,
+      "percentage": 2.28,
+      "files": [
+        {
+          "path": "DBA/scraping/correcao_requisitos_20260307_233352.sql",
+          "name": "correcao_requisitos_20260307_233352.sql",
+          "size": 210570,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/database_functions.sql",
+          "name": "database_functions.sql",
+          "size": 106763,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql",
+          "name": "latest_init_from_export.sql",
+          "size": 96784,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20260312120000_schema_snapshot_from_export.sql",
+          "name": "20260312120000_schema_snapshot_from_export.sql",
+          "size": 95923,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
+          "name": "casar_disciplinas_function.sql",
+          "size": 32829,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql",
+          "name": "export_schema_rpc.sql",
+          "size": 20844,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/rls_policies.sql",
+          "name": "rls_policies.sql",
+          "size": 5681,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/nova_view_equivalencias.sql",
+          "name": "nova_view_equivalencias.sql",
+          "size": 3326,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20250304193000_create_historicos_usuarios.sql",
+          "name": "20250304193000_create_historicos_usuarios.sql",
+          "size": 2397,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20250304192200_add_carga_horaria_integralizada.sql",
+          "name": "20250304192200_add_carga_horaria_integralizada.sql",
+          "size": 532,
+          "extension": ".sql"
+        }
+      ]
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 108,
+      "total_bytes": 572228,
+      "percentage": 2.27,
+      "files": [
+        {
+          "path": "no_fluxo_backend/scripts/export_schema.ts",
+          "name": "export_schema.ts",
+          "size": 55304,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/src/controllers/fluxograma_controller.ts",
+          "name": "fluxograma_controller.ts",
+          "size": 52634,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfDataExtractor.ts",
+          "name": "pdfDataExtractor.ts",
+          "size": 38865,
+          "extension": ".ts"
+        },
+        {
+          "path": "supabase/functions/casar-disciplinas/index.ts",
+          "name": "index.ts",
+          "size": 30666,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts",
+          "name": "supabase-data.service.ts",
+          "size": 27281,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts",
+          "name": "index.ts",
+          "size": 26540,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/src/controllers/testes_controller.ts",
+          "name": "testes_controller.ts",
+          "size": 24495,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfPositionExtractor.ts",
+          "name": "pdfPositionExtractor.ts",
+          "size": 17155,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/fluxograma.service.ts",
+          "name": "fluxograma.service.ts",
+          "size": 14119,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/auth.service.ts",
+          "name": "auth.service.ts",
+          "size": 12806,
+          "extension": ".ts"
+        }
+      ]
+    },
+    {
       "language": "Python",
       "file_count": 53,
-      "total_bytes": 567068,
-      "percentage": 2.27,
+      "total_bytes": 567368,
+      "percentage": 2.25,
       "files": [
         {
           "path": "DBA/scraping/integracao_banco.py",
@@ -411,13 +547,13 @@
         {
           "path": "no_fluxo_backend/parse-pdf/pdf_parser_final.py",
           "name": "pdf_parser_final.py",
-          "size": 36978,
+          "size": 37143,
           "extension": ".py"
         },
         {
           "path": "no_fluxo_backend/parse-pdf/pdf_parser_ocr.py",
           "name": "pdf_parser_ocr.py",
-          "size": 32063,
+          "size": 32198,
           "extension": ".py"
         },
         {
@@ -465,78 +601,10 @@
       ]
     },
     {
-      "language": "TypeScript",
-      "file_count": 105,
-      "total_bytes": 563820,
-      "percentage": 2.26,
-      "files": [
-        {
-          "path": "no_fluxo_backend/scripts/export_schema.ts",
-          "name": "export_schema.ts",
-          "size": 55304,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_backend/src/controllers/fluxograma_controller.ts",
-          "name": "fluxograma_controller.ts",
-          "size": 52296,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfDataExtractor.ts",
-          "name": "pdfDataExtractor.ts",
-          "size": 38531,
-          "extension": ".ts"
-        },
-        {
-          "path": "supabase/functions/casar-disciplinas/index.ts",
-          "name": "index.ts",
-          "size": 30454,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts",
-          "name": "supabase-data.service.ts",
-          "size": 27281,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts",
-          "name": "index.ts",
-          "size": 25642,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_backend/src/controllers/testes_controller.ts",
-          "name": "testes_controller.ts",
-          "size": 24203,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfPositionExtractor.ts",
-          "name": "pdfPositionExtractor.ts",
-          "size": 17131,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/fluxograma.service.ts",
-          "name": "fluxograma.service.ts",
-          "size": 13761,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/auth.service.ts",
-          "name": "auth.service.ts",
-          "size": 12806,
-          "extension": ".ts"
-        }
-      ]
-    },
-    {
       "language": "Text",
       "file_count": 41,
       "total_bytes": 501643,
-      "percentage": 2.01,
+      "percentage": 1.99,
       "files": [
         {
           "path": "test_historicos/extracted_texts/historico_211029503 (1)_numbered.txt",
@@ -601,78 +669,10 @@
       ]
     },
     {
-      "language": "SQL",
-      "file_count": 10,
-      "total_bytes": 408418,
-      "percentage": 1.64,
-      "files": [
-        {
-          "path": "DBA/scraping/correcao_requisitos_20260307_233352.sql",
-          "name": "correcao_requisitos_20260307_233352.sql",
-          "size": 210570,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/database_functions.sql",
-          "name": "database_functions.sql",
-          "size": 71467,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql",
-          "name": "latest_init_from_export.sql",
-          "size": 61195,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
-          "name": "casar_disciplinas_function.sql",
-          "size": 32829,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql",
-          "name": "export_schema_rpc.sql",
-          "size": 20844,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/rls_policies.sql",
-          "name": "rls_policies.sql",
-          "size": 4915,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/nova_view_equivalencias.sql",
-          "name": "nova_view_equivalencias.sql",
-          "size": 3326,
-          "extension": ".sql"
-        },
-        {
-          "path": "supabase/migrations/20250304193000_create_historicos_usuarios.sql",
-          "name": "20250304193000_create_historicos_usuarios.sql",
-          "size": 2397,
-          "extension": ".sql"
-        },
-        {
-          "path": "supabase/migrations/20250304192200_add_carga_horaria_integralizada.sql",
-          "name": "20250304192200_add_carga_horaria_integralizada.sql",
-          "size": 532,
-          "extension": ".sql"
-        },
-        {
-          "path": "DBA/database/migrations/alter_cursos_drop_identity.sql",
-          "name": "alter_cursos_drop_identity.sql",
-          "size": 343,
-          "extension": ".sql"
-        }
-      ]
-    },
-    {
       "language": "YAML",
       "file_count": 16,
-      "total_bytes": 399362,
-      "percentage": 1.6,
+      "total_bytes": 399331,
+      "percentage": 1.58,
       "files": [
         {
           "path": "pnpm-lock.yaml",
@@ -717,15 +717,15 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/deploy.yml",
-          "name": "deploy.yml",
-          "size": 2047,
-          "extension": ".yml"
-        },
-        {
           "path": ".github/workflows/python-tests.yml",
           "name": "python-tests.yml",
           "size": 2043,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/deploy.yml",
+          "name": "deploy.yml",
+          "size": 2016,
           "extension": ".yml"
         },
         {
@@ -740,7 +740,7 @@
       "language": "HTML",
       "file_count": 16,
       "total_bytes": 272136,
-      "percentage": 1.09,
+      "percentage": 1.08,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.html",
@@ -808,7 +808,7 @@
       "language": "JavaScript",
       "file_count": 28,
       "total_bytes": 172646,
-      "percentage": 0.69,
+      "percentage": 0.68,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.js",
@@ -1002,7 +1002,7 @@
       "language": "Icon",
       "file_count": 1,
       "total_bytes": 33772,
-      "percentage": 0.14,
+      "percentage": 0.13,
       "files": [
         {
           "path": "no_fluxo_frontend/windows/runner/resources/app_icon.ico",
@@ -1538,7 +1538,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-03-21T06:16:21.923672",
+    "extracted_at": "2026-03-22T06:26:34.542594",
     "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
   }
 }
