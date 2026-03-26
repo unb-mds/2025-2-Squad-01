@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-03-25T05:55:16.498897",
+      "extracted_at": "2026-03-26T06:05:56.065425",
       "file_path": "data/bronze/issues_2026-1-Squad01.json",
       "record_count": 1
     }
@@ -51,7 +51,29 @@
     ],
     "state": "open",
     "locked": false,
-    "assignees": [],
+    "assignees": [
+      {
+        "login": "IsraelSoares-25",
+        "id": 242254122,
+        "node_id": "U_kgDODnCBKg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/IsraelSoares-25",
+        "html_url": "https://github.com/IsraelSoares-25",
+        "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+        "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+        "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+        "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+        "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+        "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      }
+    ],
     "milestone": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/milestones/1",
       "html_url": "https://github.com/unb-mds/2026-1-Squad01/milestone/1",
@@ -92,9 +114,29 @@
     },
     "comments": 1,
     "created_at": "2026-03-23T15:12:29Z",
-    "updated_at": "2026-03-25T00:27:20Z",
+    "updated_at": "2026-03-25T23:21:56Z",
     "closed_at": null,
-    "assignee": null,
+    "assignee": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "author_association": "CONTRIBUTOR",
     "type": {
       "id": 20193710,
@@ -118,7 +160,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "\n**Descrição**\nRealizar um estudo introdutório e prático sobre o sistema de controle de versão Git, com foco nos principais conceitos e comandos utilizados no fluxo de desenvolvimento de software.\n\n\n\n###  Objetivos\n\n* Compreender o que é controle de versão distribuído\n* Entender a estrutura básica de um repositório Git\n* Aprender os comandos essenciais do dia a dia\n* Aplicar um fluxo básico de trabalho com Git (local + remoto)\n\n\n\n### Conteúdo a ser estudado\n\n* Conceitos fundamentais:\n\n  * Repositório (local vs remoto)\n  * Commit, branch, merge\n  * Working directory, staging area e histórico\n\n* Principais comandos:\n\n  * `git init`\n  * `git clone`\n  * `git add`\n  * `git commit`\n  * `git status`\n  * `git log`\n  * `git branch`\n  * `git checkout` / `git switch`\n  * `git merge`\n  * `git pull`\n  * `git push`\n\n\n\n###  Atividades práticas\n\n* [ ] Criar um repositório local com `git init`\n* [ ] Versionar arquivos e realizar commits\n* [ ] Criar e alternar entre branches\n* [ ] Simular um merge entre branches\n* [ ] Conectar com um repositório remoto (GitHub/GitLab)\n* [ ] Realizar `push` e `pull`\n\n\n\n### Entregáveis\n\n* Repositório no GitHub/GitLab contendo:\n\n  * Histórico de commits bem estruturado\n  * Uso de pelo menos uma branch além da main\n* Arquivo `README.md` contendo:\n\n  * Explicação dos comandos utilizados\n  * Descrição do fluxo seguido\n  * Principais aprendizados\n\n### Critérios de avaliação\n\n* Clareza no uso dos conceitos de Git\n* Organização do histórico de commits\n* Uso correto de branches e merge\n* Documentação no README\n* Execução completa das atividades propostas\n\n",
+    "body": "\n##  Issue: Aprender Git e GitHub do básico ao avançado\n\n**Descrição:**\nEstudar e praticar os principais conceitos e comandos de Git e GitHub, desde o básico até funcionalidades mais avançadas, aplicando tudo em um projeto real.\n\n\n\n**Objetivos:**\n\n* Entender controle de versão\n* Aprender comandos essenciais do Git\n* Utilizar o GitHub para versionamento remoto\n* Simular fluxo real de desenvolvimento\n\n\n\n**Checklist de tarefas:**\n\n### Fundamentos\n\n* [ ] Entender o que é Git e controle de versão\n* [ ] Instalar e configurar Git (`user.name` e `user.email`)\n* [ ] Criar repositório com `git init`\n* [ ] Fazer primeiro commit (`git add` + `git commit`)\n\n\n\n###  Intermediário\n\n* [ ] Entender o ciclo do Git (working directory, staging, commit)\n* [ ] Usar `git log` para visualizar histórico\n* [ ] Criar e alternar branches (`git branch`, `git checkout`)\n* [ ] Fazer merge entre branches\n* [ ] Resolver conflitos simples\n\n\n\n###  GitHub\n\n* [ ] Criar repositório no GitHub\n* [ ] Conectar repositório local (`git remote add origin`)\n* [ ] Enviar código (`git push`)\n* [ ] Clonar repositório (`git clone`)\n\n\n\n###  Avançado\n\n* [ ] Criar Pull Request (PR)\n* [ ] Revisar e aprovar PR\n* [ ] Criar e gerenciar Issues\n* [ ] Testar `git rebase`\n* [ ] Usar `git stash`\n\n\n\n###  Projeto final\n\n* [ ] Criar projeto completo versionado\n* [ ] Usar branches para features\n* [ ] Criar issues para tarefas\n* [ ] Abrir PRs simulando trabalho em equipe\n\n\n\n**Critérios de conclusão:**\n\n* Conseguir criar e gerenciar um repositório do zero\n* Entender fluxo de trabalho com branches e PRs\n* Usar GitHub como ferramenta de organização\n\n\n\nSe quiser, posso te mandar essa mesma issue em **formato YAML (template do GitHub)** ou adaptar pra você colar direto no **Notion** \n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/1/reactions",
