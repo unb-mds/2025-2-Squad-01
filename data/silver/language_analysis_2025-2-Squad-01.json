@@ -2,18 +2,18 @@
   "repository": "2025-2-Squad-01",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-03-28T06:25:52.083827",
+  "analyzed_at": "2026-03-29T06:44:06.313218",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1145,
-  "total_bytes": 346822153,
+  "total_files": 1165,
+  "total_bytes": 347148341,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 803,
-      "total_bytes": 341123186,
+      "file_count": 823,
+      "total_bytes": 341449374,
       "percentage": 98.36,
       "files": [
         {
@@ -25,7 +25,7 @@
         {
           "path": "data/bronze/issues_all.json",
           "name": "issues_all.json",
-          "size": 28066608,
+          "size": 28122929,
           "extension": ".json"
         },
         {
@@ -49,7 +49,7 @@
         {
           "path": "data/bronze/commits_all.json",
           "name": "commits_all.json",
-          "size": 10061237,
+          "size": 10065518,
           "extension": ".json"
         },
         {
@@ -61,7 +61,7 @@
         {
           "path": "data/silver/temporal_events.json",
           "name": "temporal_events.json",
-          "size": 6729447,
+          "size": 6736248,
           "extension": ".json"
         },
         {
@@ -283,10 +283,30 @@
       ]
     },
     {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 597958,
+      "percentage": 0.17,
+      "files": [
+        {
+          "path": "docs/arquitetura/fluxos/FluxoPrincipal.png",
+          "name": "FluxoPrincipal.png",
+          "size": 298979,
+          "extension": ".png"
+        },
+        {
+          "path": "front-end/public/docs/arquitetura/fluxos/FluxoPrincipal.png",
+          "name": "FluxoPrincipal.png",
+          "size": 298979,
+          "extension": ".png"
+        }
+      ]
+    },
+    {
       "language": "Python",
       "file_count": 65,
       "total_bytes": 572468,
-      "percentage": 0.17,
+      "percentage": 0.16,
       "files": [
         {
           "path": "src/utils/github_api.py",
@@ -347,26 +367,6 @@
           "name": "test_github_api_coverage.py",
           "size": 15767,
           "extension": ".py"
-        }
-      ]
-    },
-    {
-      "language": "PNG Image",
-      "file_count": 2,
-      "total_bytes": 597958,
-      "percentage": 0.17,
-      "files": [
-        {
-          "path": "docs/arquitetura/fluxos/FluxoPrincipal.png",
-          "name": "FluxoPrincipal.png",
-          "size": 298979,
-          "extension": ".png"
-        },
-        {
-          "path": "front-end/public/docs/arquitetura/fluxos/FluxoPrincipal.png",
-          "name": "FluxoPrincipal.png",
-          "size": 298979,
-          "extension": ".png"
         }
       ]
     },
@@ -666,7 +666,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-03-28T06:28:03.662954",
+    "extracted_at": "2026-03-29T06:46:17.364931",
     "file_path": "data/silver/language_analysis_2025-2-Squad-01.json"
   }
 }
