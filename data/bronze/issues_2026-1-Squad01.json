@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-03-30T06:24:04.211692",
+      "extracted_at": "2026-03-31T06:09:44.592692",
       "file_path": "data/bronze/issues_2026-1-Squad01.json",
       "record_count": 5
     }
@@ -104,11 +104,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-03-23T15:09:20Z",
-      "updated_at": "2026-03-29T02:48:53Z",
+      "updated_at": "2026-03-31T00:25:06Z",
       "due_on": "2026-03-30T00:00:00Z",
       "closed_at": null
     },
@@ -243,7 +243,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -298,18 +298,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-03-23T15:09:20Z",
-      "updated_at": "2026-03-29T02:48:53Z",
+      "updated_at": "2026-03-31T00:25:06Z",
       "due_on": "2026-03-30T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-03-28T09:12:47Z",
-    "updated_at": "2026-03-29T00:49:35Z",
-    "closed_at": null,
+    "updated_at": "2026-03-31T00:25:06Z",
+    "closed_at": "2026-03-31T00:25:06Z",
     "assignee": {
       "login": "EdsonToppzera",
       "id": 157309764,
@@ -355,7 +355,27 @@
       "total_blocking": 0
     },
     "body": "## O que é Arquitetura de Software\n\nA arquitetura de software é o projeto estrutural de um sistema. Ela define os componentes principais, suas responsabilidades e como eles se comunicam. Em vez de focar em como escrever uma função específica, a arquitetura foca em decisões de design que são custosas ou difíceis de reverter no futuro.\n\n**Principais Vantagens:**\n\n* **Escalabilidade:** Permite que o sistema cresça para suportar mais usuários ou mais dados sem precisar ser reescrito do zero.\n* **Manutenibilidade:** Com uma estrutura bem definida (separação de responsabilidades), encontrar e corrigir bugs ou adicionar novas funcionalidades torna-se muito mais rápido.\n* **Trabalho em Equipe:** Uma arquitetura clara funciona como um mapa, permitindo o trabalho simultâneo sem conflitos.\n* **Redução de Riscos:** Antecipa problemas de segurança, gargalos de performance e custos de infraestrutura.\n\n---\n\n## Fase de Planejamento e Modelagem\n\nAntes de qualquer linha de código, é preciso documentar o que será construído e como.\n\n* **Engenharia de Requisitos:**\n    * **Requisitos Funcionais:** O que o sistema faz (ex: \"Permitir o login do usuário\").\n    * **Requisitos Não-Funcionais:** Como o sistema se comporta (ex: \"O login deve ocorrer em menos de 1 segundo\").\n\n* **Modelagem de Arquitetura e Interface:**\n    * **UML:** Padrão clássico com diagramas de classes e casos de uso. *Referência:* [[Guia sobre UML (Lucidchart)](https://www.lucidchart.com/pages/pt/o-que-e-uml)]\n    * **C4 Model:** Abordagem moderna que dá um \"zoom\" na arquitetura em 4 níveis (Contexto, Contêineres, Componentes e Código). *Referência:* https://zup.com.br/blog/c4-model/\n    * **Prototipagem (Figma):** Antes de programar as telas, utiliza-se o Figma para desenhar a interface e a experiência do usuário (UI/UX). Ele permite validar o visual e o fluxo de navegação de forma rápida, evitando retrabalho no desenvolvimento do Frontend. *Issue do tópico:* https://github.com/unb-mds/2026-1-Squad01/issues/3\n\n---\n\n## A Estrutura Básica: Stack\n\nUma Stack representa as camadas conceituais e tecnológicas do projeto. Em um sistema moderno voltado para extração e análise de dados, essa estrutura se divide em:\n\n* **Frontend (Apresentação):** A interface visual. Captura interações e exibe dados processados para o usuário. *Issue:* https://github.com/unb-mds/2026-1-Squad01/issues/2\n    * *Exemplos de tecnologias:* React (Next.js), Vue.js.\n* **Backend (Lógica de Negócio):** O motor do sistema. Gerencia rotas, valida regras, processa requisições do Frontend e orquestra a comunicação com outras camadas.\n    * *Exemplos de tecnologias:* Node.js, Python (FastAPI ou Django).\n* **Database (Persistência):** Armazena o estado do sistema, os usuários e os dados processados (bancos relacionais ou não-relacionais).\n    * *Exemplos de tecnologias:* PostgreSQL, MongoDB.\n* **Coleta de Dados (Web Scraping):** Um módulo dedicado a extrair informações de páginas da web de forma automatizada. Ele atua varrendo o código HTML de sites de terceiros para obter dados que não estão disponíveis através de APIs públicas. *Referência:* https://youtu.be/KhoY423O76o\n* **Inteligência Artificial (Classificação):** Camada de processamento inteligente que atua logo após a coleta. Ela recebe os dados brutos do Web Scraping e utiliza modelos de IA (Processamento de Linguagem Natural, por exemplo) para analisar, categorizar e decidir se aquela informação é relevante para o domínio do seu projeto antes de salvá-la no banco de dados.\n\n---\n\n## Comunicação de Sistemas: APIs REST\n\nÉ o padrão arquitetural que permite que o Frontend converse com o Backend, e que os módulos internos (como o de Scraping e o de IA) troquem informações entre si. \n\n* **O Ciclo:** O Cliente envia uma **Requisição (Request)** via protocolo HTTP, e o Servidor devolve uma **Resposta (Response)** com os dados, geralmente no formato JSON.\n* **Métodos HTTP:**\n    * `GET`: Ler dados.\n    * `POST`: Criar dados ou enviar dados para processamento (ex: enviar um texto para a IA classificar).\n    * `PUT`/`PATCH`: Atualizar dados.\n    * `DELETE`: Remover dados.\n* *Referência:* \n\n---\n\n## Ambiente Isolado: Contêineres (Docker)\n\nA infraestrutura moderna exige consistência. Um contêiner empacota sua aplicação e tudo o que ela precisa para rodar em uma caixa isolada. Isso garante que o código se comporte da mesma forma no seu computador e no servidor, sendo especialmente útil para isolar o ambiente complexo do módulo de Inteligência Artificial do resto do sistema.\n\n* *Referência:* [[O que é Docker? (AWS)](https://aws.amazon.com/pt/docker/)]\n\n---\n\n## Pipeline GitHub-Native e Hospedagem\n\nA automação do ciclo de vida do seu código, desde o salvar até a publicação na internet, utilizando CI/CD integrado ao repositório.\n\n* **O que é o GitHub Actions:**\n    Serviço que permite criar fluxos de trabalho (workflows) automatizados. \n    * EX: Ao fazer um envio de código (`git push`), o GitHub Actions cria um servidor temporário, instala dependências e roda testes. Se o novo código do módulo de IA ou do Backend funcionar sem quebrar o sistema, ele empacota tudo (via Docker) e envia para produção.\n    * *Referência:* [[Entendendo o GitHub Actions (GitHub Docs)](https://docs.github.com/pt/actions/learn-github-actions/understanding-github-actions)]\n    * *Issue:* https://github.com/unb-mds/2026-1-Squad01/issues/1\n\n* **O que é o GitHub Pages (Hospedagem de Frontend):**\n    Serviço gratuito para hospedar sites estáticos e interfaces web.\n    * Como se conectam: Sua pipeline do GitHub Actions compila o Frontend e o publica automaticamente no GitHub Pages, disponibilizando a interface gráfica de graça e atualizada a cada modificação aprovada.\n    * *Referência:* [[Sobre o GitHub Pages (GitHub Docs)](https://docs.github.com/pt/pages/getting-started-with-github-pages/about-github-pages)]",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/4/reactions",
       "total_count": 0,
@@ -370,7 +390,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/4/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -417,7 +437,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -472,18 +492,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-03-23T15:09:20Z",
-      "updated_at": "2026-03-29T02:48:53Z",
+      "updated_at": "2026-03-31T00:25:06Z",
       "due_on": "2026-03-30T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-03-27T20:07:34Z",
-    "updated_at": "2026-03-27T23:18:02Z",
-    "closed_at": null,
+    "updated_at": "2026-03-31T00:24:56Z",
+    "closed_at": "2026-03-31T00:24:56Z",
     "assignee": {
       "login": "Nic0laslc",
       "id": 240096349,
@@ -529,7 +549,27 @@
       "total_blocking": 0
     },
     "body": "+ **Objetivo**\n\nO objetivo principal dessa issue é complementar os estudos dos integrantes do Squad 01, procurando apresentar as principais características e funcionalidades do Figma e, a partir disso, fortalecer e criar novas \"skills\" de todos os envolvidos no projeto.\n\n+ **Descrição**\n\nO Figma é uma ferramenta de design digital baseada na nuvem, utilizada principalmente para criar interfaces de usuário, projetar experiências do usuário e desenvolver protótipos interativos de aplicações e sites. Ele se destaca por permitir colaboração em tempo real entre várias pessoas, diretamente no navegador ou por meio de aplicativo desktop.\n\n+ **Atalhos importantes**\n\n**Navegação**\nV = mover (cursor padrão)\nH = mão (arrastar tela)\nCtrl + Scroll = zoom\n \n**Criação**\nF = frame\nR = retângulo\nO = círculo\nT = texto\nL = linha\n\n**Produtividade**\nCtrl + D = duplicar\nCtrl + G = agrupar\nCtrl + Shift + G = desagrupar\nShift + A = auto layout\nAlt + arrastar = duplicar rápido\n\n**Avançados**\nCtrl + / = buscar comandos\nCtrl + Alt + K = criar componente\nCtrl + Shift + K = inserir imagem\n\n+ **Funcionalidades**\n\n?) Criar uma tela\nPressione F no teclado\nEscolha um tamanho (ex: celular, desktop)\nClique no espaço de trabalho\n\n?) Adicionar elementos (formas e texto)\nT: inserir texto\nR: criar retângulos\nO: criar círculos\n\n?) Editar o visual \nSelecione um elemento\nUse o painel da direita para editar\n\nO que pode ser alterado:\nCores\nTipografia (fonte, tamanho)\nBordas\nSombras\n\n?) Organizar com Auto Layout\nO que é:\nUma ferramenta que organiza automaticamente os elementos.\n\nComo fazer:\nSelecione vários elementos\nPressione Shift + A\n\n?) Usar plugins\nO que é:\nExtensões que adicionam novas funções.\n\nComo acessar:\nPressione Shift + I (Resources)\nBusque plugins\n\n**RESUMÃO**\nCrie telas para seu projeto\nAdicione e edite elementos visuais\nOrganize layouts automaticamente\nReutilize componentes\nCrie interações e protótipos\nTrabalhe em equipe em tempo real\nUtilize plugins para melhorar seutrabalho\n\n_**LINKS**_\nLink complementar: https://quickref.me/figma.html\nLink complementar: https://www.youtube.com/playlist?list=PLwgL9IEA0PxXzmOu0crRl9l6PT46nqtI9",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/3/reactions",
       "total_count": 0,
@@ -544,7 +584,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/3/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -591,7 +631,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -646,18 +686,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-03-23T15:09:20Z",
-      "updated_at": "2026-03-29T02:48:53Z",
+      "updated_at": "2026-03-31T00:25:06Z",
       "due_on": "2026-03-30T00:00:00Z",
       "closed_at": null
     },
     "comments": 5,
     "created_at": "2026-03-26T22:10:10Z",
-    "updated_at": "2026-03-29T03:03:41Z",
-    "closed_at": null,
+    "updated_at": "2026-03-30T23:01:02Z",
+    "closed_at": "2026-03-30T23:01:02Z",
     "assignee": {
       "login": "jorgevasquez25",
       "id": 247237551,
@@ -703,7 +743,27 @@
       "total_blocking": 0
     },
     "body": "##  Estudo de Front-end\n\n### Descrição\n\nSerá realizado um estudo focado em desenvolvimento front-end com o objetivo de fortalecer conhecimentos e melhorar a qualidade das interfaces do projeto.\n\n### Objetivos\n\n* Revisar conceitos fundamentais de HTML, CSS e JavaScript\n* Explorar boas práticas de desenvolvimento front-end\n* Avaliar possíveis frameworks ou bibliotecas (ex: React, Vue, etc.)\n* Melhorar a experiência do usuário (UX/UI)\n\n### Tarefas\n\n* [ ] Levantamento de conteúdos e materiais de estudo\n* [ ] Definição de tecnologias mais utilizadas\n* [ ] Documentação dos aprendizados\n\n### Observações\n\nEste estudo servirá como base para futuras melhorias no projeto e padronização do desenvolvimento front-end.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "jorgevasquez25",
+      "id": 247237551,
+      "node_id": "U_kgDODryLrw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/247237551?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jorgevasquez25",
+      "html_url": "https://github.com/jorgevasquez25",
+      "followers_url": "https://api.github.com/users/jorgevasquez25/followers",
+      "following_url": "https://api.github.com/users/jorgevasquez25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jorgevasquez25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jorgevasquez25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jorgevasquez25/subscriptions",
+      "organizations_url": "https://api.github.com/users/jorgevasquez25/orgs",
+      "repos_url": "https://api.github.com/users/jorgevasquez25/repos",
+      "events_url": "https://api.github.com/users/jorgevasquez25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jorgevasquez25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/2/reactions",
       "total_count": 0,
@@ -718,7 +778,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/2/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -765,7 +825,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -820,18 +880,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 1,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-03-23T15:09:20Z",
-      "updated_at": "2026-03-29T02:48:53Z",
+      "updated_at": "2026-03-31T00:25:06Z",
       "due_on": "2026-03-30T00:00:00Z",
       "closed_at": null
     },
     "comments": 3,
     "created_at": "2026-03-23T15:12:29Z",
-    "updated_at": "2026-03-28T01:42:06Z",
-    "closed_at": null,
+    "updated_at": "2026-03-31T00:24:49Z",
+    "closed_at": "2026-03-31T00:24:49Z",
     "assignee": {
       "login": "IsraelSoares-25",
       "id": 242254122,
@@ -877,7 +937,27 @@
       "total_blocking": 0
     },
     "body": "\n##  Issue: Aprender Git e GitHub do básico ao avançado\n\n**Descrição:**\nEstudar e praticar os principais conceitos e comandos de Git e GitHub, desde o básico até funcionalidades mais avançadas, aplicando tudo em um projeto real.\n\n\n\n**Objetivos:**\n\n* Entender controle de versão\n* Aprender comandos essenciais do Git\n* Utilizar o GitHub para versionamento remoto\n* Simular fluxo real de desenvolvimento\n\n\n\n**Checklist de tarefas:**\n\n### Fundamentos\n\n* [x] Entender o que é Git e controle de versão\n* [x] Instalar e configurar Git (`user.name` e `user.email`)\n* [x] Criar repositório com `git init`\n* [x] Fazer primeiro commit (`git add` + `git commit`)\n\n\n\n###  Intermediário\n\n* [ ] Entender o ciclo do Git (working directory, staging, commit)\n* [ ] Usar `git log` para visualizar histórico\n* [ ] Criar e alternar branches (`git branch`, `git checkout`)\n* [ ] Fazer merge entre branches\n* [ ] Resolver conflitos simples\n\n\n\n###  GitHub\n\n* [x] Criar repositório no GitHub\n* [x] Conectar repositório local (`git remote add origin`)\n* [x] Enviar código (`git push`)\n* [ ] Clonar repositório (`git clone`)\n\n\n\n###  Avançado\n\n* [ ] Criar Pull Request (PR)\n* [ ] Revisar e aprovar PR\n* [ ] Criar e gerenciar Issues\n* [ ] Testar `git rebase`\n* [ ] Usar `git stash`\n\n\n\n###  Projeto final\n\n* [ ] Criar projeto completo versionado\n* [ ] Usar branches para features\n* [ ] Criar issues para tarefas\n* [ ] Abrir PRs simulando trabalho em equipe\n\n\n\n**Critérios de conclusão:**\n\n* Conseguir criar e gerenciar um repositório do zero\n* Entender fluxo de trabalho com branches e PRs\n* Usar GitHub como ferramenta de organização\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/1/reactions",
       "total_count": 0,
@@ -892,7 +972,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/1/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   }
