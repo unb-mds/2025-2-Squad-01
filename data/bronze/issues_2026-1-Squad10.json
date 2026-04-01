@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-03-31T06:09:51.515293",
+      "extracted_at": "2026-04-01T06:20:59.455412",
       "file_path": "data/bronze/issues_2026-1-Squad10.json",
       "record_count": 2
     }
@@ -58,7 +58,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -113,18 +113,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-03-30T17:49:40Z",
-      "updated_at": "2026-03-30T18:32:17Z",
+      "updated_at": "2026-03-31T13:19:25Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-03-30T18:32:17Z",
-    "updated_at": "2026-03-30T18:32:17Z",
-    "closed_at": null,
+    "updated_at": "2026-03-31T13:21:10Z",
+    "closed_at": "2026-03-31T13:19:25Z",
     "assignee": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -170,7 +170,27 @@
       "total_blocking": 0
     },
     "body": "# Estudo sobre Arquitetura de Software\n\n## Descrição\n\nEstudar e documentar os fundamentos, padrões e atributos de qualidade de arquitetura de software para garantir que o sistema de Monitoramento Legislativo seja robusto, escalável e fácil de manter por toda a equipe.\n\n## Critérios de aceitação:\n\n- [ ] Estudar conceitos de Acoplamento e Coesão em sistemas modulares.\n- [ ] Documentar diferentes padrões arquiteturais (Monolito, Camadas, Hexagonal).\n- [ ] Estudar o modelo de documentação C4 Model (Foco em Nível 1 e 2).\n- [ ] Pesquisar atributos de qualidade (Requisitos Não-Funcionais) relevantes para o tema (Segurança e Manutenibilidade).\n\n## Definição de pronto:\n\n- [ ] Documento de estudo teórico sobre padrões arquiteturais criado na Wiki/Docs.\n- [ ] Comparativo entre arquiteturas candidatas para o projeto realizado.\n- [ ] Entendimento consolidado sobre como separar a lógica de NLP da coleta de dados.\n- [ ] Apresentação dos conceitos fundamentais para o restante da equipe.\n\n## Tópicos específicos:\n\n## **Fundamentos da Arquitetura de Software**\n\n- **Modularidade**\n- **Acoplamento vs. Coesão** \n- **Interface vs. Implementação** \n\n## **Padrões de Arquitetura**\n\n- **Arquitetura em Camadas**\n- **Client-Server** \n- **Pipeline de Dados** \n\n## **Documentação**\n\n- **C4 Model**\n- **Diagramas de sequência** \n- **ADRs** \n\n## **Atributos de Qualidade**\n\n- **Manutenibilidade**\n- **Segurança** \n- **Performance** \n\n## **Quality Gates**\n\n- A equipe compreende a separação de pastas e responsabilidades do projeto.\n- O fluxo de dados do sistema está teoricamente validado antes do início da codificação.\n- As decisões técnicas futuras serão baseadas nos padrões estudados \n\n## **Aceite**\n\nConhecimento consolidado que permita ao Arquiteto guiar a equipe na construção de um software organizado, utilizando padrões de mercado que facilitem a rastreabilidade e a evolução do sistema de proteção infantil.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "augustogmedeiros",
+      "id": 75932316,
+      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/augustogmedeiros",
+      "html_url": "https://github.com/augustogmedeiros",
+      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
+      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
+      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
+      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
+      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
+      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/2/reactions",
       "total_count": 0,
@@ -185,7 +205,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/2/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad10"
   },
