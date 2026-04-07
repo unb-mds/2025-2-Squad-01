@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-06T06:24:16.601066",
+      "extracted_at": "2026-04-07T06:12:50.047407",
       "file_path": "data/bronze/issues_2026-1-Squad01.json",
       "record_count": 10
     }
@@ -113,13 +113,13 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 4,
+      "state": "closed",
       "created_at": "2026-04-01T00:02:10Z",
-      "updated_at": "2026-04-05T01:31:26Z",
+      "updated_at": "2026-04-06T21:49:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2026-04-06T21:49:12Z"
     },
     "comments": 1,
     "created_at": "2026-04-05T01:30:03Z",
@@ -242,14 +242,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-04T04:44:35Z",
-    "updated_at": "2026-04-04T04:51:52Z",
-    "closed_at": null,
+    "updated_at": "2026-04-06T21:48:48Z",
+    "closed_at": "2026-04-06T21:48:48Z",
     "assignee": null,
     "author_association": "NONE",
     "type": null,
@@ -266,7 +266,27 @@
       "total_blocking": 0
     },
     "body": "**O que é React?**\n\nO React é conhecido como uma biblioteca de JavaScript utilizado para a criação de user interfaces (UI), ou interfaces do usuário em português.\n\nPara deixar as coisas uma pouco mais claras, aqui vai uma breve explicação sobre o que é JavaScript e o que são bibliotecas JavaScript:\n\n**JavaScript:** linguagem de programação web, utilizada para controlar elementos dinâmicos, como banners, botões, imagens e slides, e atualizar informações em tempo real, como gráficos, rankings, datas, contagens regressivas e etc.\n\n**Biblioteca JavaScript:** conjunto de linhas de código JavaScript pré-prontos criadas pela comunidade, que podem ser utilizadas em diversos projetos, desde interfaces mais simples de websites até interfaces mais complexas, como o próprio Facebook.\n\nA biblioteca foi criada por um time de desenvolvedores do Facebook, em 2011, com a finalidade de otimizar a atualização do feed de notícias da rede social. No ano seguinte, o grupo Facebook, hoje conhecido como Meta, passou a utilizar a eficiência do React no Instagram e outras redes sociais da empresa.\n\nEm 2013, o React teve sua biblioteca de códigos aberta à comunidade, dando início à sua crescente popularidade no mercado de tecnologia.\n\n**O que é um Framework? - Entendendo melhor o React**\n\nUm framework é um conjunto de ferramentas e bibliotecas que fornecem um conjunto de recursos e funcionalidades prontas para desenvolvedores e desenvolvedoras de software.\n\nIsso permite construir aplicativos mais rapidamente, com menos esforço e código, e com menores chances de erros.\n\nExistem diferentes frameworks disponíveis para diferentes [linguagens de programação](https://www.alura.com.br/artigos/qual-e-a-melhor-linguagem-de-programacao), incluindo:\n\n[JavaScript](https://www.alura.com.br/artigos/javascript);\n[Python](https://www.alura.com.br/artigos/python);\n[Java](https://www.alura.com.br/artigos/java) e muitas outras.\nAlguns dos frameworks mais populares incluem o React para JavaScript, o Django para Python e o Spring para Java.\n\n**Como funciona o React?**\n\nO React permite dividir uma página inteira em partes, chamadas de componentes. Assim é possível trabalhar cada um desses componentes de forma individual e independente.\n\n<img width=\"964\" height=\"502\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c58e88d9-bc72-4807-a794-147e9440fefa\" />\n\nTambém é possível reaproveitar códigos entre estes componentes, usando o mesmo comando para modelos de elementos como botões, imagens, menus, etc. Isso facilita e otimiza o desenvolvimento de uma interface, pois permite manter uma unidade entre os componentes de forma prática.\n\nO React também é conhecido por sua flexibilidade, permitindo a criação de pequenas linhas de código no desenvolvimento de uma interface sem que seja necessário o uso de outras ferramentas de build, ou seja, ferramentas de desenvolvimento.\n\n**React e React Native são a mesma coisa?**\n\nNão, o React e o React Native não são a mesma coisa, embora estejam associados. A principal diferença entre o React e o [React Native](https://www.alura.com.br/artigos/react-native) é o tipo de aplicação que eles criam.\n\nO React é usado para criar aplicações web, enquanto o React Native é usado para criar aplicações *móveis.\n\nNo entanto, ambos compartilham muitos conceitos e sintaxe, então se você é familiarizado com o React, será mais fácil aprender o React Native. Em resumo, React e React Native são ferramentas diferentes, mas *relacionadas.\n\n**DOM e Virtual DOM**\n\nO DOM, ou Document Object Model, é uma representação em árvore de um documento [HTML](https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica) ou XML. Ele é usado pelo navegador para entender o conteúdo de uma página web e permitir que o usuário interaja com ela.\n\nPor exemplo, quando você clica em um botão em uma página web, o navegador usa o DOM para entender o que deve acontecer. Ele procura o elemento HTML correspondente ao botão no DOM, e depois executa a ação especificada pelo desenvolvedor.\n\nO problema é que o DOM pode ser lento para atualizar e manipular. Ele é uma representação direta da página web, então qualquer alteração nos dados da página requer uma atualização completa do DOM.\n\nIsso pode ser muito lento para aplicações web mais complexas, que podem ter milhares ou até milhões de elementos HTML.\n\nPara resolver esse problema, o React introduziu o Virtual DOM, que é uma representação em memória do DOM, atualizada muito mais rapidamente do que o DOM real.\n\nQuando um componente do React é atualizado, o Virtual DOM é atualizado primeiro, e depois, as alterações são sincronizadas com o DOM real. Isso torna a atualização da interface de usuário muito mais rápida e eficiente.\n\nEm resumo, o DOM é a representação de um documento HTML ou XML no navegador, enquanto o Virtual DOM é uma representação em memória do DOM, que é usada pelo React para atualizar a interface de usuário de forma mais rápida e eficiente.\n\nMatérias de estudo: \n\nhttps://ebaconline.com.br/blog/react-o-que-e-como-funciona\nhttps://www.alura.com.br/artigos/react-js?srsltid=AfmBOooGGI_KF__SJAV_o1z7ZsNGsb61Zn8pSBOZO7mFdMni9SxWdwjZ\n\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/9/reactions",
       "total_count": 0,
@@ -281,7 +301,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/9/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -337,7 +357,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -413,18 +433,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 4,
+      "state": "closed",
       "created_at": "2026-04-01T00:02:10Z",
-      "updated_at": "2026-04-05T01:31:26Z",
+      "updated_at": "2026-04-06T21:49:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2026-04-06T21:49:12Z"
     },
     "comments": 2,
     "created_at": "2026-04-03T23:27:26Z",
-    "updated_at": "2026-04-04T18:14:43Z",
-    "closed_at": null,
+    "updated_at": "2026-04-06T21:48:54Z",
+    "closed_at": "2026-04-06T21:48:54Z",
     "assignee": {
       "login": "IsraelSoares-25",
       "id": 242254122,
@@ -470,7 +490,27 @@
       "total_blocking": 0
     },
     "body": "# 📌 Issue: Estudo de Web Scraping\n\n## 🧠 Contexto\n\nO Web Scraping é uma técnica utilizada para extrair dados de sites de forma automatizada. Esse estudo tem como objetivo compreender os conceitos fundamentais, ferramentas e boas práticas relacionadas à coleta de dados na web.\n\n\n## 🎯 Objetivo\n\nAprender a coletar, manipular e armazenar dados de páginas web utilizando diferentes tecnologias, respeitando aspectos legais e éticos.\n\n\n## 📚 Conteúdos a estudar\n\n### 🔹 Conceitos básicos\n\n* O que é Web Scraping\n* Diferença entre Web Scraping e APIs\n* Estrutura de páginas HTML (tags, classes, IDs)\n\n### 🔹 Ferramentas e tecnologias\n\n* Python para automação\n* Bibliotecas:\n\n  * BeautifulSoup (parse de HTML)\n  * Requests (requisições HTTP)\n  * Selenium (automação de navegador)\n* Noções de JavaScript (para páginas dinâmicas)\n\n### 🔹 Técnicas importantes\n\n* Inspeção de elementos (DevTools)\n* Extração de dados (texto, links, imagens)\n* Navegação entre páginas (paginação)\n* Tratamento de dados coletados\n\n### 🔹 Armazenamento de dados\n\n* Arquivos CSV\n* JSON\n* Bancos de dados (SQLite, MongoDB)\n\n\n## ⚠️ Boas práticas e ética\n\n* Respeitar o arquivo `robots.txt`\n* Evitar sobrecarga nos servidores (uso de delays)\n* Não coletar dados sensíveis\n* Verificar termos de uso dos sites\n\n\n## 🛠️ Atividades práticas\n\n* Criar um scraper simples para coletar títulos de notícias\n* Extrair preços de produtos de um e-commerce fictício\n* Automatizar navegação em páginas com múltiplas abas\n* Salvar dados coletados em CSV ou JSON\n\n\n## ✅ Critérios de conclusão\n\n* Entender como funciona a estrutura de uma página web\n* Conseguir extrair dados de um site simples\n* Utilizar pelo menos uma biblioteca de scraping\n* Armazenar os dados coletados corretamente\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/8/reactions",
       "total_count": 0,
@@ -485,7 +525,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/8/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -541,7 +581,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -596,18 +636,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 4,
+      "state": "closed",
       "created_at": "2026-04-01T00:02:10Z",
-      "updated_at": "2026-04-05T01:31:26Z",
+      "updated_at": "2026-04-06T21:49:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2026-04-06T21:49:12Z"
     },
     "comments": 0,
     "created_at": "2026-04-03T23:02:47Z",
-    "updated_at": "2026-04-03T23:02:55Z",
-    "closed_at": null,
+    "updated_at": "2026-04-06T21:49:01Z",
+    "closed_at": "2026-04-06T21:49:01Z",
     "assignee": {
       "login": "Nic0laslc",
       "id": 240096349,
@@ -653,7 +693,27 @@
       "total_blocking": 0
     },
     "body": "+ **Objetivo**\nO objetivo principal dessa issue é complementar os estudos dos integrantes do Squad 01, procurando apresentar as principais características e funcionalidades do Back-End e, a partir disso, fortalecer e criar novas \"skills\" de todos os envolvidos no projeto.\n\n+ **Descrição**\nO Back-End é a parte invisível de um sistema, nele é aplicado todas as funcionalidades de dos programas, logo é tudo que acontece por trás da interface que o usuário vê (Front-End). \n\n+ **Principais termos que envolvem o Back-End**\n\n _**API**_ (Application Programming Interface)\n É a forma de comunicação entre sistemas\n\n_**Database**_ (Banco de Dados)\nOnde os dados do sistema ficam armazenados\n\n_**Controller**_\nOnde fica a lógica da aplicação\n\n_**ORM**_ (Object Relational Mapping)\nFerramenta que conecta código ao banco\n\n_**HTTP**_ Status Code\nCódigo de resposta do servidor\nPrincipais:\n200 → OK\n201 → Criado\n400 → Erro do cliente\n404 → Não encontrado\n500 → Erro no servidor\n\n+ **Funcionalidades**\n\nO Back-End tem várias funções essenciais:\n\n 1. Processar dados\n\nRecebe informações do usuário e processa.\n\n 2. Regras de negócio\n\nDefine como o sistema funciona\nExemplo:\n\n. Quem pode acessar o quê\n. Cálculo de preços\n. Validação de dados\n\n 3. Comunicação com banco de dados\n\n. Salva informações\n. Busca dados\n. Atualiza registros\n\n 4. Segurança\n\n. Autenticação (login/senha)\n. Autorização (permissões)\n. Criptografia de dados\n\n 5. Integração com outros sistemas\n\n. APIs externas\n. Pagamentos\n. Serviços de terceiros\n\n+ **Principais linguagens utilizadas no Back-End** \n\n**Java**: é uma linguagem muito utilizada para aplicações complexas, que precisam de um alto nível de segurança, como aplicações bancárias.\n**JavaScript**: principal linguagem para o desenvolvimento de aplicações Front-End, mas ela também pode ser usada para o Back-End. Podemos utilizar o framework Node.js, que permite a execução de código JavaScript para o Back-End.\n**.Net**: é usado em aplicações complexas e que precisam ser bastante confiáveis e seguras.\n**PHP**: é bastante popular para o desenvolvimento Web. As versões mais recentes se destacam, já que trouxeram melhorias como o suporte à orientação a objetos e a verificação de tipos, o que sem dúvida aproximou o PHP das outras linguagens.\n**Python**: talvez mais conhecido como a linguagem da Ciência de Dados e da Inteligência Artificial. Porém, ele pode ser também utilizado para a implementação do Back-End de aplicações.\n**SQL**: O SQL (Structured Query Language) é a principal linguagem para a criação e a manipulação de um banco de dados.\n\n+ **Resumo++\n\nParte invisível do sistema (lógica e funcionamento)\nProcessa dados e aplica regras de negócio\nFaz comunicação com banco de dados e outros sistemas\nGarante segurança (autenticação e autorização)\nUtiliza conceitos como API, Controller, ORM e HTTP\nUsa linguagens como Java, JavaScript, Python, PHP, .NET e SQL\n\n\nLinks associados:\nhttps://www.alura.com.br/artigos/backend?srsltid=AfmBOopCIX4a8eN42Cg6NWJtTmijD4NbiBZwVMb0czuOu6PGy5FNDPOQ\nhttps://medium.com/@ana.ariasgonz/the-big-backend-cheat-sheet-e279f36d43de",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/7/reactions",
       "total_count": 0,
@@ -668,7 +728,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/7/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
@@ -715,7 +775,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -770,18 +830,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 4,
+      "state": "closed",
       "created_at": "2026-04-01T00:02:10Z",
-      "updated_at": "2026-04-05T01:31:26Z",
+      "updated_at": "2026-04-06T21:49:12Z",
       "due_on": null,
-      "closed_at": null
+      "closed_at": "2026-04-06T21:49:12Z"
     },
     "comments": 0,
     "created_at": "2026-04-03T12:37:46Z",
-    "updated_at": "2026-04-03T12:38:44Z",
-    "closed_at": null,
+    "updated_at": "2026-04-06T21:48:40Z",
+    "closed_at": "2026-04-06T21:48:40Z",
     "assignee": {
       "login": "jorgevasquez25",
       "id": 247237551,
@@ -827,7 +887,27 @@
       "total_blocking": 0
     },
     "body": "# Ciclo de vida do software\n\nNesta tarefa, vamos estudar sobre o **Ciclo de Vida do Software**, um conceito fundamental no desenvolvimento de sistemas. Esse ciclo descreve as etapas pelas quais um software passa, desde sua concepção até sua manutenção e evolução.\n\nO objetivo é compreender cada fase do processo, como planejamento, desenvolvimento, testes e manutenção, permitindo uma visão mais organizada e eficiente na criação de soluções tecnológicas.\n\n## Nível de Dificuldade\n\n**Fácil**\n\nO ciclo de vida é a estrutura contendo processos, atividades e tarefas envolvidas no desenvolvimento, operação e manutenção de um produto de software, abrangendo a vido do sistema, desde a definição de seus requisitos até o término de seu uso. O modelo de ciclo de vida é a primeira escolha a ser feita no processo de software, onde se define a maneira mais adequada de obter as necessidades do cliente, até quando e como o cliente receberá sua primeira versão operacional do sistema. \n\nProcesso de software é o conjunto de atividades que constituem o desenvolvimento de um sistema computacional. Estas atividades são agrupadas em fases, como: definição de requisitos, análise, projeto, desenvolvimento, teste e implantação. Em cada fase são definidas, além das suas atividades, as funções e responsabilidades de cada membro da equipe.\n\nO que diferencia um processo de software do outro é a ordem em que as fases vão ocorrer, o tempo e a ênfase dados a cada fase, as atividades presentes, e os produtos entregues. \n\nO modelo cascata, que é o modelo no qual vamos focar no estudo nesta ocasião foi formalizado por Royce em 1970 e suas atividades fundamentais são:\n- análise e definição de requisitos;\n- design ou projeto;\n- implementação;\n- verificação e validação;\n- manutenção\n\nO nome “cascata” foi atribuído em razão da sequência das fases, onde cada fase só começa quando a anterior termina; e da transmissão do resultado da fase anterior como entrada para a fase atual (o fim de cada fase resulta em um documento aprovado). Nesse modelo, portanto, é dada muita ênfase às fases de análise e projeto antes de partir para a programação, a fim de que o objetivo do software esteja bem definido e que sejam evitados retrabalhos.\n\n### Definição de requisitos\n\nEsta é a fase inicial, onde se busca compreender e documentar todas as necessidades do cliente ou usuário final. Nesta etapa, são realizadas reuniões, entrevistas e análises para identificar os objetivos do projeto e os requisitos funcionais e não funcionais. O resultado é um documento detalhado que servirá como base para as próximas etapas.\n\n### Design\n\nEnvolve o planejamento detalhado da arquitetura do sistema, isso inclui o design das interfaces, a modelagem de dados e a definição de estruturas técnicas. O foco é criar uma solução que atenda aos requisitos definidos, garantindo que o sistema seja funcional e escalável.\n\n### Implementação\n\nNesta etapa, o sistema ou produto começa a ser desenvolvido. Os programadores e desenvolvedores trabalham para transformar o design em código, seguindo as especificações definidas na fase de projeto ou design. É aqui que o produto começa a tomar forma, com a criação de módulos, integração de componentes e testes iniciais para assegurar o funcionamento básico.\n\n### Verificação e Validação\n\nApós a implementação, o sistema é submetido a uma fase rigorosa de testes. Isso inclui testes funcionais, de integração, de desempenho e de segurança, com o objetivo de identificar e corrigir erros. O foco é garantir que o produto final esteja alinhado aos requisitos definidos e opere sem falhas antes de ser entregue ao cliente.\n\n### Manutenção\n\nApós a entrega do produto, inicia-se a fase de manutenção. Essa etapa inclui a correção de possíveis erros encontrados durante o uso, a implementação de melhorias ou atualizações e o suporte contínuo ao cliente. A manutenção é essencial para prolongar a vida útil do sistema e garantir sua eficácia ao longo do tempo.\n\n### Vantagens e desvantagens\n\n![Image](https://github.com/user-attachments/assets/f6548adc-a46a-4c8d-a6e6-52f7d61c47c9)\n\n### Links do conteúdo de estudo:\n\n- https://euax.com.br/2025/01/modelo-de-cascata/\n- https://www.sydle.com/br/blog/ciclo-de-vida-do-software-67632c1e3cbfbb6a3699e0a1\n- https://www.devmedia.com.br/ciclos-de-vida-do-software/21099",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/6/reactions",
       "total_count": 0,
@@ -842,7 +922,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad01/issues/6/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad01"
   },
