@@ -1,10 +1,86 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-07T06:12:52.546410",
+      "extracted_at": "2026-04-08T06:15:45.913069",
       "file_path": "data/bronze/issues_2026-1-Squad4.json",
-      "record_count": 8
+      "record_count": 9
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad4/issues/9",
+    "id": 4221559312,
+    "node_id": "I_kwDORqqLFs77n-IQ",
+    "number": 9,
+    "title": "Resumo de algumas partes da arquitetura",
+    "user": {
+      "login": "SUDOTMOX",
+      "id": 248756952,
+      "node_id": "U_kgDODtO62A",
+      "avatar_url": "https://avatars.githubusercontent.com/u/248756952?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SUDOTMOX",
+      "html_url": "https://github.com/SUDOTMOX",
+      "followers_url": "https://api.github.com/users/SUDOTMOX/followers",
+      "following_url": "https://api.github.com/users/SUDOTMOX/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SUDOTMOX/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SUDOTMOX/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SUDOTMOX/subscriptions",
+      "organizations_url": "https://api.github.com/users/SUDOTMOX/orgs",
+      "repos_url": "https://api.github.com/users/SUDOTMOX/repos",
+      "events_url": "https://api.github.com/users/SUDOTMOX/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SUDOTMOX/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-04-08T01:47:34Z",
+    "updated_at": "2026-04-08T01:47:34Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "Infraestrutura e Automação (Pipeline GitHub-Native)\nGitHub Actions: Atuará como o \"maestro\" invisível do projeto. Você configurará um arquivo .yml para despertar, por exemplo, todo domingo à noite. Ele iniciará um ambiente virtual, executará seus scripts Python para puxar os dados da semana nas APIs, processará os discursos pela IA e, ao final, fará um commit automático salvando um arquivo coerencia_parlamentar.json direto no repositório.\n\nGitHub Pages: Será a vitrine pública. Ele hospedará os arquivos HTML, CSS e JavaScript estáticos que formam o painel visual do cidadão. Esse frontend vai simplesmente ler o arquivo coerencia_parlamentar.json (gerado pelo Actions) e renderizar gráficos dinâmicos na tela, como um ranking dos deputados com maior divergência entre fala e voto, sem precisar de um banco de dados rodando por trás.\n\nColeta e Tratamento de Dados (ETL)\nAPIs REST (Câmara e Senado): Serão as fontes primárias dos fatos. O pipeline fará requisições GET mirando em dois conjuntos de dados distintos, mas conectados: a transcrição em texto das falas no plenário sobre um Projeto de Lei (PL) específico e o registro final de votação nominal (Sim, Não, Abstenção) daquele mesmo parlamentar para o mesmo PL.\n\nPython (Pandas): Será a esteira de montagem. Os dados do governo chegam bagunçados e separados. O Pandas vai transformar as respostas das APIs em tabelas, limpando colunas inúteis e fazendo um Merge (cruzamento) usando o ID do parlamentar e o ID da proposição. O resultado final dessa etapa é uma tabela unificada contendo apenas: Nome do Político, Projeto de Lei, Texto do Discurso e Voto Real.\n\nInteligência Artificial e NLP (O \"Cérebro\" do Projeto)\nspaCy & Expressões Regulares (Regex): O texto bruto governamental é cheio de formalidades vazias (\"Senhor Presidente, peço a palavra...\"). O Regex vai varrer e deletar esses padrões repetitivos instantaneamente. Logo depois, o spaCy vai escanear o texto limpo para identificar o \"Sujeito\" da fala, extraindo automaticamente os temas ou leis específicas citadas pelo parlamentar para garantir que o discurso analisado realmente condiz com o tema da votação.\n\nModelos de Linguagem (Hugging Face): Será o avaliador de viés. Um modelo pré-treinado em português receberá o discurso focado e o classificará de forma binária ou probabilística (ex: \"70% de chance de ser um discurso de Apoio\" ou \"Rejeição\"). O seu código criará a métrica a partir disso: se a IA detectou forte tom de rejeição no discurso, mas o voto registrado foi \"Sim\", o sistema acusa a divergência e abaixa o \"score de coerência\" do político naquele tema.\n\nDocumentação Arquitetural\nC4 Model: Será a planta baixa do sistema no repositório, garantindo que qualquer professor ou novo desenvolvedor entenda a engenharia em 5 minutos. O Nível 1 (Contexto) mostrará o \"Eleitor/Jornalista\" acessando o seu \"Portal de Coerência\", que por sua vez busca informações no \"Sistema da Câmara\". O Nível 2 (Container) abrirá a caixa do seu sistema, ilustrando o fluxo exato de dados saindo do script de coleta, passando pelo modelo de NLP e sendo injetado no frontend via GitHub Actions.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/9/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad4"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/8",
@@ -931,14 +1007,14 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-23T23:48:41Z",
-    "updated_at": "2026-03-23T23:54:17Z",
-    "closed_at": null,
+    "updated_at": "2026-04-08T01:43:55Z",
+    "closed_at": "2026-04-08T01:43:55Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -956,7 +1032,27 @@
       "total_blocking": 0
     },
     "body": "Aqui está um modelo de guia de estudos estruturado, no formato de resumo e cheat sheets (guias rápidos/folhas de dicas), feito sob medida para ser compartilhado com a equipe. Ele foca nas tecnologias essenciais para o pipeline de coleta, IA e portal estático.\n\n📚 Guia de Estudos e Cheat Sheets: Stack Tecnológica\nEste documento reúne resumos e links de referência rápida (cheat sheets) sobre as principais tecnologias que compõem a arquitetura do nosso projeto de Monitoramento Legislativo. O objetivo é nivelar o conhecimento da equipe e servir como material de consulta rápida durante o desenvolvimento.\n\n1. Infraestrutura e Automação (Pipeline GitHub-Native)\nA base do nosso projeto não usa servidores em nuvem tradicionais (como AWS EC2). Tudo roda dentro do ecossistema do GitHub.\n\nGitHub Actions\nO que é: Ferramenta de CI/CD nativa do GitHub. Usaremos para criar workflows (arquivos YAML) que rodam scripts Python de forma agendada (CRON jobs) para coletar dados nas APIs do governo e atualizar os modelos de IA.\n\nPara a equipe: Entender como configurar um .yml, como instalar dependências do Python no runner e como salvar arquivos resultantes (como JSONs) no repositório.\n\n🔗 Cheat Sheet: [GitHub Actions Cheat Sheet (PDF Oficial)](https://www.google.com/search?q=https://github.githubassets.com/images/modules/actions/github-actions-cheat-sheet.pdf)\n\n🔗 Guia Rápido: [Sintaxe de workflow para o GitHub Actions](https://docs.github.com/pt/actions/using-workflows/workflow-syntax-for-github-actions)\n\nGitHub Pages\nO que é: Serviço de hospedagem de sites estáticos. Ele vai ler os arquivos .json gerados pelo GitHub Actions e exibi-los no nosso portal frontend sem precisar de um back-end ativo.\n\n🔗 Guia Rápido: [Criando um site no GitHub Pages](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)\n\n2. Coleta e Tratamento de Dados (ETL)\nA fase de extração e organização dos dados brutos consumidos do Governo.\n\nAPIs REST (Câmara e Senado)\nO que é: Interface de comunicação onde faremos requisições HTTP (usando a biblioteca requests do Python) para buscar discursos e votos.\n\nPara a equipe: Entender os métodos (GET), códigos de status (200, 404, 500) e como lidar com paginação e limites de requisição (rate limit).\n\n🔗 Cheat Sheet: [REST API Design - Cheat Sheet (OWASP)](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) (Focado em boas práticas, útil para entender como APIs robustas funcionam)\n\n🔗 Referências do Projeto: [Swagger API Câmara](https://dadosabertos.camara.leg.br/swagger/api.html) | [Docs API Senado](https://www.google.com/search?q=https://legis.senado.leg.br/dadosabertos/docs/)\n\nPython: Pandas\nO que é: A principal biblioteca em Python para manipulação e análise de dados. Essencial para transformar os JSONs complexos das APIs do governo em tabelas relacionais limpas (DataFrames) antes de passar pela IA.\n\n🔗 Cheat Sheet: [Pandas Cheat Sheet Oficial (PDF)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)\n\n3. Inteligência Artificial e NLP (O \"Cérebro\" do Projeto)\nA etapa onde aplicamos Processamento de Linguagem Natural para extrair sentido dos discursos e comparar com as votações.\n\nspaCy & Expressões Regulares (Regex)\nO que é: O spaCy é uma biblioteca de NLP em Python focada em uso em produção. Perfeita para extrair entidades (nomes, locais, leis citadas) e analisar a semântica básica dos discursos. Regex ajuda na limpeza inicial do texto.\n\n🔗 Cheat Sheet spaCy: [spaCy Cheat Sheet](https://www.google.com/search?q=https://ugoproto.github.io/ugo_py_doc/spacy_cheat_sheet/)\n\n🔗 Cheat Sheet Regex: [Regex Cheat Sheet (Python)](https://www.dataquest.io/blog/regex-cheatsheet/)\n\nModelos de Linguagem (Hugging Face)\nO que é: Caso o projeto utilize modelos mais avançados de IA para classificação de sentimento ou coerência (ex: BERT em português - BETO ou DeBERTa). A biblioteca transformers da Hugging Face é o padrão da indústria.\n\n🔗 Guia Rápido: [Hugging Face NLP Course (Capítulo 1)](https://huggingface.co/learn/nlp-course/chapter1/1)\n\n4. Documentação Arquitetural\nComo vamos desenhar e comunicar a estrutura do projeto para professores e novos membros.\n\nC4 Model\nO que é: Uma abordagem baseada em mapas para visualizar a arquitetura de software em 4 níveis de abstração: Contexto, Container, Componente e Código. (Focaremos nos níveis 1 e 2).\n\n🔗 Cheat Sheet/Resumo: [C4 Model - Guia Visual e Resumo](https://c4model.com/) (O próprio site é um cheat sheet interativo e direto ao ponto).",
-    "closed_by": null,
+    "closed_by": {
+      "login": "SUDOTMOX",
+      "id": 248756952,
+      "node_id": "U_kgDODtO62A",
+      "avatar_url": "https://avatars.githubusercontent.com/u/248756952?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SUDOTMOX",
+      "html_url": "https://github.com/SUDOTMOX",
+      "followers_url": "https://api.github.com/users/SUDOTMOX/followers",
+      "following_url": "https://api.github.com/users/SUDOTMOX/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SUDOTMOX/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SUDOTMOX/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SUDOTMOX/subscriptions",
+      "organizations_url": "https://api.github.com/users/SUDOTMOX/orgs",
+      "repos_url": "https://api.github.com/users/SUDOTMOX/repos",
+      "events_url": "https://api.github.com/users/SUDOTMOX/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SUDOTMOX/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/3/reactions",
       "total_count": 0,
@@ -971,7 +1067,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/3/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4"
   },
@@ -1027,22 +1123,22 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-23T23:43:50Z",
-    "updated_at": "2026-03-23T23:54:04Z",
-    "closed_at": null,
+    "updated_at": "2026-04-08T01:43:55Z",
+    "closed_at": "2026-04-08T01:43:55Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 1,
-      "completed": 0,
-      "percent_completed": 0
+      "completed": 1,
+      "percent_completed": 100
     },
     "issue_dependencies_summary": {
       "blocked_by": 0,
@@ -1051,7 +1147,27 @@
       "total_blocking": 0
     },
     "body": "🏗️ Pesquisa sobre Arquitetura de Software\nO que é?\nA arquitetura de software deste projeto refere-se à estruturação e organização do nosso pipeline de dados automatizado (100% GitHub-native). Ela define como os componentes essenciais — os crawlers de coleta, o agente de Inteligência Artificial para análise semântica (NLP) e o portal estático de visualização — interagem de forma estruturada e assíncrona.\n\nPorquê é importante?\nA arquitetura é fundamental para o sucesso do projeto, pois não utilizaremos um servidor tradicional rodando de forma contínua. Sem uma definição clara do fluxo de dados (ETL - Extração, Transformação e Carga), os workflows de automação podem se tornar instáveis e difíceis de debugar. Uma arquitetura bem desenhada garante que a coleta nas APIs do governo, a classificação dos discursos e a atualização do painel ocorram de maneira organizada, facilitando a implementação de melhorias no modelo de IA e acelerando o desenvolvimento geral.\n\nOs responsáveis por apresentar esta tarefa e o @SUDOTMOX  \nTópicos a serem estudados:\n\nDocumentação: C4 Model (foco nos diagramas de Contexto e Container) para mapear os sistemas externos e internos.\n\nStacks (Infraestrutura): GitHub Actions (para orquestração de tarefas e rotinas) e GitHub Pages (para hospedagem estática).\n\nFrameworks e Bibliotecas: Ferramentas em Python voltadas para Processamento de Linguagem Natural (NLP) e manipulação estruturada de arquivos (JSON/Pandas).\n\nAPI: Padrões de consumo, paginação e limites (Rate Limits) das APIs REST da Câmara dos Deputados e do Senado Federal.\n\nEstudo:\nTodas as anotações dos estudos estão na pasta/página de Arquitetura de Software.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "SUDOTMOX",
+      "id": 248756952,
+      "node_id": "U_kgDODtO62A",
+      "avatar_url": "https://avatars.githubusercontent.com/u/248756952?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SUDOTMOX",
+      "html_url": "https://github.com/SUDOTMOX",
+      "followers_url": "https://api.github.com/users/SUDOTMOX/followers",
+      "following_url": "https://api.github.com/users/SUDOTMOX/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SUDOTMOX/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SUDOTMOX/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SUDOTMOX/subscriptions",
+      "organizations_url": "https://api.github.com/users/SUDOTMOX/orgs",
+      "repos_url": "https://api.github.com/users/SUDOTMOX/repos",
+      "events_url": "https://api.github.com/users/SUDOTMOX/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SUDOTMOX/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/2/reactions",
       "total_count": 0,
@@ -1066,7 +1182,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4/issues/2/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4"
   },
