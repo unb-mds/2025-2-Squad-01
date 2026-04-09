@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad10",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-04-08T07:00:28.881555",
+  "analyzed_at": "2026-04-09T06:59:36.028620",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 6,
-  "total_bytes": 28110,
+  "total_files": 11,
+  "total_bytes": 29649,
   "languages": [
     {
       "language": "Markdown",
       "file_count": 5,
       "total_bytes": 27050,
-      "percentage": 96.23,
+      "percentage": 91.23,
       "files": [
         {
           "path": "docs/estudos/requisitos/requisitos.md",
@@ -50,21 +50,75 @@
     },
     {
       "language": "No Extension",
-      "file_count": 1,
-      "total_bytes": 1060,
-      "percentage": 3.77,
+      "file_count": 3,
+      "total_bytes": 1573,
+      "percentage": 5.31,
       "files": [
         {
           "path": "LICENSE",
           "name": "LICENSE",
           "size": 1060,
           "extension": ""
+        },
+        {
+          "path": "backend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 434,
+          "extension": ""
+        },
+        {
+          "path": "frontend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 79,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 1,
+      "total_bytes": 696,
+      "percentage": 2.35,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 696,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 1,
+      "total_bytes": 172,
+      "percentage": 0.58,
+      "files": [
+        {
+          "path": "backend/main.py",
+          "name": "main.py",
+          "size": 172,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 158,
+      "percentage": 0.53,
+      "files": [
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 158,
+          "extension": ".txt"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-04-08T07:02:53.736999",
+    "extracted_at": "2026-04-09T07:01:44.617191",
     "file_path": "data/silver/language_analysis_2026-1-Squad10.json"
   }
 }
