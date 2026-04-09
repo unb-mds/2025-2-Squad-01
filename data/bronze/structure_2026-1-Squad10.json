@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-Squad10",
   "branch": "main",
-  "sha": "87d88d13e3eb3f0834e48031f55889ddad8b758b",
+  "sha": "f9d1ff03a8f423721db5336173052ac796a83385",
   "tree": [
     {
       "name": "LICENSE",
@@ -22,6 +22,54 @@
       "mode": "100644",
       "extension": ".md",
       "size": 16,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "970699de06ce00641de11a9bc2533c49eb3c2075",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "90182a902655e3637e4b1d3114e92739644ae535",
+      "mode": "100644",
+      "extension": "",
+      "size": 434,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/main.py",
+      "type": "file",
+      "sha": "bb97c4148b20a0065e693f01540827bbcdcb6862",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 172,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "backend/requirements.txt",
+      "type": "file",
+      "sha": "7a960a23a7c5d731bc6e7f7c423f65c09ad9f232",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 158,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "1f3ad07a153aa8b8502b0d43f964cf2b6df98286",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 696,
       "is_binary": false
     },
     {
@@ -111,20 +159,38 @@
       "extension": ".md",
       "size": 12682,
       "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "1d1f5b0f53101b003bf100506d78e4b58be0bb5b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "54117f478b35f931b223b36d1d518bef0f4c5193",
+      "mode": "100644",
+      "extension": "",
+      "size": 79,
+      "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-04-08T07:00:28.881555",
+  "extracted_at": "2026-04-09T06:59:36.028620",
   "method": "rest",
-  "total_items": 12,
+  "total_items": 19,
   "repository_metadata": {
     "id": 1196216020,
     "full_name": "unb-mds/2026-1-Squad10",
     "description": null,
     "created_at": "2026-03-30T13:37:41Z",
-    "updated_at": "2026-04-06T00:54:54Z",
-    "language": null,
-    "size": 19,
+    "updated_at": "2026-04-08T22:39:06Z",
+    "language": "Dockerfile",
+    "size": 21,
     "stars": 1,
     "forks": 0,
     "open_issues": 8
