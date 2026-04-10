@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-09T06:15:00.201513",
+      "extracted_at": "2026-04-10T06:25:55.621388",
       "file_path": "data/bronze/issues_ContraDito.json",
       "record_count": 23
     }
@@ -73,10 +73,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-08T10:00:12Z",
-      "updated_at": "2026-04-09T02:28:31Z",
+      "updated_at": "2026-04-09T20:31:05Z",
       "due_on": "2026-04-14T00:00:00Z",
       "closed_at": null
     },
@@ -171,7 +171,7 @@
         "description": null
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -226,18 +226,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-06T20:38:27Z",
-      "updated_at": "2026-04-09T02:21:26Z",
+      "updated_at": "2026-04-09T20:49:10Z",
       "due_on": "2026-04-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-09T02:21:26Z",
-    "updated_at": "2026-04-09T02:21:26Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:49:10Z",
+    "closed_at": "2026-04-09T20:49:10Z",
     "assignee": {
       "login": "luizhtmoreira",
       "id": 210590632,
@@ -283,7 +283,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nEsta issue visa a criação de um script Python local que funcionará como uma Prova de Conceito (PoC) para o motor de Processamento de Linguagem Natural (NLP) do projeto. O script deve ser capaz de carregar textos brutos (discursos parlamentares), processá-los usando um modelo de linguagem local (como o Llama 3 via Ollama) e extrair metadados estruturados (tópico e postura).\n\n## Objetivo\nValidar a viabilidade técnica e a precisão da arquitetura de IA escolhida (local e offline) utilizando dados reais e autênticos da Câmara dos Deputados, antes de proceder com a integração em larga escala no pipeline de dados ou na nuvem. Isso inclui testes de performance e calibragem de engenharia de prompt.\n\n## Requisitos (Critérios de Aceite)\nrequisitos que a issue deve ter pra ser considerada pronta\n- [X] O script deve rodar localmente, sem depender de chamadas de API externas para inferência.\n- [X] O script deve carregar e processar com sucesso o arquivo `.json` real fornecido pela equipe de dados (amostra autêntica).\n- [X] O motor deve identificar corretamente o tópico e a postura do orador em >80% de uma amostra de teste.\n- [X] A saída do script deve ser um JSON estruturado e válido, pronto para consumo pelo back-end.\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [X] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [X] Configurar ambiente de desenvolvimento local (venv, langchain, ollama).\n- [X] Instalar e configurar o motor local (Ollama e modelo Llama3).\n- [X] Implementar o script core (leitura de arquivo, engenharia de prompt).\n- [X] Implementar parser para o arquivo JSON de dados reais.\n- [X] Validar resultados em amostras de teste.\n- [X] Refinar prompts e parâmetros com base na validação.\n\n## Responsável\n@luizhtmoreira\n\n## Anexo\n\n<img width=\"1112\" height=\"727\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/84f33e12-1cbd-4307-a382-1277b9322936\" />\n\n<img width=\"257\" height=\"71\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a1eab3ae-f49d-4b8d-8b0d-e07dfcda0c3e\" />",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/27/reactions",
       "total_count": 0,
@@ -298,7 +318,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/27/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
@@ -369,10 +389,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-08T10:00:12Z",
-      "updated_at": "2026-04-09T02:28:31Z",
+      "updated_at": "2026-04-09T20:31:05Z",
       "due_on": "2026-04-14T00:00:00Z",
       "closed_at": null
     },
@@ -457,14 +477,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-08T09:59:33Z",
-    "updated_at": "2026-04-08T09:59:33Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:49:03Z",
+    "closed_at": "2026-04-09T20:49:03Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -481,7 +501,27 @@
       "total_blocking": 0
     },
     "body": "## Ata de Reunião\n\n**Projeto:** ContraDito\n**Data da Reunião:** 07/04/2026\n\n---\n\n## Descrição\nReunião focada na transição da Sprint 02 pra Sprint 03 e na definição dos principais requisitos pra norteamento do desenvolvimento.\n\n---\n\n## Participantes\n* @henriquemendeselias\n* @jot4-ge \n* @luizhtmoreira \n* @G2SBiell \n* @lucasaraujoszz\n* @matheus0346\n\n---\n\n## Pautas Discutidas\n\n### 1. Definição da Arquitetura\nAcordamos que o sistema utilizará o padrão arquitetural ‘Pipe and Filter’. \n\n### 2. Requisitos do MVP \nForam selecionados alguns requisitos essenciais:\n* **Descoberta:** Barra de busca global (incluindo o \"nome de urna\" da API oficial) e filtros de listagem por Partido, Cargo e Estado.\n* **Raio-X do Parlamentar:** Tela de perfil exibindo o *Score de Coerência* visual e as *Tags* de postura.\n* **Provas da Contradição:** Tabela de comparação direta (O que foi dito *vs.* O que foi votado).\n* **Transparência:** Linkagem direta para as fontes oficiais da Câmara e informações de atualização dos dados.\n\n---\n\n## Backlog da Sprint 03\n\n* **@henriquemendeselias:** Refatoração no Supabase/Pydantic e implementação de rotas, GET. \n\n* **@jot4-ge:** Script de carga inicial para popular o banco com uma amostra real de deputados. \n\n* **@luizhtmoreira:** Processamento em lote com a IA para calcular o score e atualizar os dados direto no banco. \n\n* **@G2SBiel:** Setup do Front-end e criação da tela de busca e do perfil consumindo a API. \n\n* **@lucasaraujoszz:** Configuração do docker-compose e automação de Linter no GitHub Actions. \n\n* **@matheus0346:** Documentação da arquitetura e página de transparência/LGPD no MkDocs.\n\n* **Data de Entrega:** 14/04/2026\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/24/reactions",
       "total_count": 0,
@@ -496,7 +536,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/24/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
@@ -543,7 +583,7 @@
         "description": "Improvements or additions to documentation"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -598,18 +638,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-06T20:38:27Z",
-      "updated_at": "2026-04-09T02:21:26Z",
+      "updated_at": "2026-04-09T20:49:10Z",
       "due_on": "2026-04-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-08T04:31:56Z",
-    "updated_at": "2026-04-08T04:31:56Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:48:55Z",
+    "closed_at": "2026-04-09T20:48:55Z",
     "assignee": {
       "login": "lucasaraujoszz",
       "id": 168549878,
@@ -655,7 +695,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nConfiguração do ambiente de desenvolvimento local utilizando Docker para o back-end (FastAPI) e implementação das regras de segurança no repositório do GitHub.\n\n## Objetivo\nGarantir que toda a equipe consiga rodar a API localmente com um único comando, sem conflitos de versão ou dependências (evitar o \"na minha máquina funciona\"). Além disso, blindar as branches principais contra commits diretos para garantir a qualidade do código via Pull Requests.\n\n## Requisitos (Critérios de Aceite)\n\n[x] O contêiner da API deve subir com sucesso rodando o comando docker-compose up --build.\n\n[x] Senhas e credenciais devem estar protegidas (uso de .env adicionado ao .gitignore).\n\n[x] O Dockerfile deve ignorar arquivos pesados de dados da equipe de raspagem (.dockerignore).\n\n[x] Branches main e develop devem estar bloqueadas para push direto no GitHub (exigindo aprovação de PR).\n\n## Prioridade\n\n[ ] Baixa: Não impacta o fluxo principal.\n\n[ ] Média: Necessária para a continuidade do projeto.\n\n[x] Alta: Impacto direto na entrega da sprint. (Marquei esta porque sem a infraestrutura, a equipe de front não consegue testar a API).\n\n[ ] Urgente: Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n\n[x] Criar Dockerfile com a imagem oficial do Python 3.12 slim.\n\n[x] Criar docker-compose.yml mapeando portas e habilitando o hot-reload.\n\n[x] Criar e configurar o .dockerignore.\n\n[x] Atualizar o .gitignore com a exclusão do arquivo .env.\n\n[x] Configurar Branch Protection Rules no repositório do GitHub.\n\n## Responsável\n@lucasaraujoszz\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/23/reactions",
       "total_count": 0,
@@ -670,7 +730,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/23/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
@@ -717,7 +777,7 @@
         "description": "Improvements or additions to documentation"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -750,18 +810,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-06T20:38:27Z",
-      "updated_at": "2026-04-09T02:21:26Z",
+      "updated_at": "2026-04-09T20:49:10Z",
       "due_on": "2026-04-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-08T01:15:53Z",
-    "updated_at": "2026-04-08T01:17:03Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:48:49Z",
+    "closed_at": "2026-04-09T20:48:49Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -778,7 +838,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nConfiguração da infraestrutura base para a documentação do projeto utilizando o MkDocs e o tema Material for MkDocs. A implementação foi feita em uma branch dedicada e inclui a preparação do repositório para ignorar arquivos de build, garantindo que o código fique limpo, além da integração com o GitHub Pages para hospedagem do site.\n## Objetivo\nEstabelecer um ambiente de documentação padronizado, rápido e fácil de manter (baseado em Markdown) para que toda a equipe possa registrar a arquitetura, as metodologias e os guias do projeto de MDS de forma profissional.\n## Requisitos (Critérios de Aceite)\n- [x] O projeto possui o arquivo `mkdocs.yml` e a pasta `docs/` na raiz da documentação.\n- [x] O arquivo `.gitignore` na raiz do repositório foi atualizado para ignorar os arquivos gerados no build (`docs/site/`).\n- [x] O comando de deploy (`mkdocs gh-deploy`) funciona sem erros.\n- [x] O site da documentação está no ar e acessível via link público do GitHub Pages.\n- [x] Pull Request aberto direcionado para a branch `develop`.\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [x] **Média:** Necessária para a continuidade do projeto.\n- [ ] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n\n## Checklist de Tarefas\n- [x] Instalar o MkDocs e o tema Material for MkDocs localmente.\n- [x] Criar a branch `feat/adiciona-mkdocs`.\n- [x] Inicializar a estrutura do MkDocs.\n- [x] Configurar as regras de proteção no `.gitignore`.\n- [x] Fazer o commit e push para o repositório remoto.\n- [x] Realizar o deploy na branch `gh-pages`.\n- [x] Configurar o repositório para exibir o GitHub Pages.\n- [x] Abrir PR para a branch `develop`.\n\n## Responsável\n@matheus0346\n\n## Anexo\n- **Link do Site:** https://unb-mds.github.io/ContraDito/",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/21/reactions",
       "total_count": 0,
@@ -793,7 +873,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/21/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
@@ -830,7 +910,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -863,18 +943,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-06T20:38:27Z",
-      "updated_at": "2026-04-09T02:21:26Z",
+      "updated_at": "2026-04-09T20:49:10Z",
       "due_on": "2026-04-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-07T02:48:02Z",
-    "updated_at": "2026-04-07T23:25:50Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:32:56Z",
+    "closed_at": "2026-04-09T20:32:56Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -891,7 +971,27 @@
       "total_blocking": 0
     },
     "body": "# Extração e Modelagem de Dados para Análise de Coerência\n\n## Descrição\nEsta issue compreende a implementação técnica da coleta de dados brutos da API da Câmara dos Deputados (XML) e a sua transformação para o contrato de dados unificado (JSON) da Squad 09. O foco é garantir que o Luiz (IA) e o Henrique (Back-end) tenham insumos reais para validar o Walking Skeleton da R1.\n\n## Objetivo\n*   Estabelecer a conexão funcional com os endpoints da Câmara.\n*   Extrair e limpar transcrições de discursos parlamentares.\n*   Converter o XML governamental para o formato JSON definido pela squad.\n*   Disponibilizar o \"mock real\" para destravar o desenvolvimento do Front-end e da IA.\n\n## Requisitos (Critérios de Aceite)\n- [ ] O script `extrair_amostras.py` deve salvar os arquivos XML localmente sem erros de conexão ou de parâmetros (400 Bad Request).\n- [ ] O script `parsear_amostras.py` deve gerar o arquivo `amostra_para_luiz.json` com os dados do deputado e o texto do discurso.\n- [ ] O JSON resultante deve seguir rigorosamente o contrato: campos `id_camara`, `nome`, `partido`, `estado`, `tipo_documento`, `data_evento` e `texto_extraido`.\n- [ ] O código deve ser submetido via Pull Request para a branch `develop`.\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [x] Escolha de amostras ricas (Aécio Neves - ID 74646).\n- [x] Implementação do script de extração (HTTPX/XML).\n- [x] Implementação do parser de limpeza e formatação (ElementTree/JSON).\n- [x] Criação da Branch e abertura do Pull Request.\n\n## Responsável\n@jot4-ge\n\n## Anexo\n\n<img width=\"697\" height=\"153\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/37df84bd-e1dc-4780-8838-6925ed6875d0\" />\n<img width=\"1476\" height=\"418\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/88c9b209-c47f-4ccf-99d7-e9700b6312b0\" />",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/18/reactions",
       "total_count": 0,
@@ -906,7 +1006,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/18/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
@@ -943,7 +1043,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -976,18 +1076,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-06T20:38:27Z",
-      "updated_at": "2026-04-09T02:21:26Z",
+      "updated_at": "2026-04-09T20:49:10Z",
       "due_on": "2026-04-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-07T02:07:23Z",
-    "updated_at": "2026-04-07T02:29:41Z",
-    "closed_at": null,
+    "updated_at": "2026-04-09T20:32:41Z",
+    "closed_at": "2026-04-09T20:32:41Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -1004,7 +1104,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\n- Esta issue compreende a configuração inicial do ambiente de desenvolvimento do lado do servidor (Back-end) e a estruturação do banco de dados para o projeto **EntreLinhas unb**. O objetivo é estabelecer o \"Walking Skeleton\" da aplicação para garantir a viabilidade técnica da R1.\n---\n## Objetivos\n- [x] Definir o contrato de API unificado para parlamentares (JSON).\n- [x] Configurar a instância do banco de dados e políticas de segurança (Supabase).\n- [x] Implementar o servidor básico (FastAPI).\n- [x] Estruturar o fluxo de versionamento e proteção de chaves (Git/Gitignore).\n---\n## Critérios de Aceitação\n- O servidor deve rodar localmente via Uvicorn sem erros.\n- As credenciais do Supabase não devem estar expostas no repositório público.\n- O código deve estar integrado à branch `develop` via Pull Request revisado.\n---\n## Prioridade\n- [ ] Baixa\n- [x] Média\n- [ ] Alta\n\n##### Responsável: @henriquemendeselias",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/16/reactions",
       "total_count": 0,
@@ -1019,7 +1139,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/16/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "ContraDito"
   },
