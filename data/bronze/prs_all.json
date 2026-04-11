@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-10T06:25:59.441729",
+      "extracted_at": "2026-04-11T05:52:52.715452",
       "file_path": "data/bronze/prs_all.json",
-      "record_count": 2203
+      "record_count": 2204
     }
   },
   {
@@ -328792,6 +328792,78 @@
     "repo_name": "2026-1-Squad07"
   },
   {
+    "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32",
+    "repository_url": "https://api.github.com/repos/unb-mds/ContraDito",
+    "labels_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32/events",
+    "html_url": "https://github.com/unb-mds/ContraDito/pull/32",
+    "id": 4241717998,
+    "node_id": "PR_kwDORypDns7RkaNj",
+    "number": 32,
+    "title": "ci: adiciona github actions para rodar flake8 e black nos PRs",
+    "user": {
+      "login": "lucasaraujoszz",
+      "id": 168549878,
+      "node_id": "U_kgDOCgvd9g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/168549878?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lucasaraujoszz",
+      "html_url": "https://github.com/lucasaraujoszz",
+      "followers_url": "https://api.github.com/users/lucasaraujoszz/followers",
+      "following_url": "https://api.github.com/users/lucasaraujoszz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lucasaraujoszz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lucasaraujoszz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lucasaraujoszz/subscriptions",
+      "organizations_url": "https://api.github.com/users/lucasaraujoszz/orgs",
+      "repos_url": "https://api.github.com/users/lucasaraujoszz/repos",
+      "events_url": "https://api.github.com/users/lucasaraujoszz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lucasaraujoszz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-04-10T21:03:36Z",
+    "updated_at": "2026-04-10T21:17:50Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "draft": false,
+    "pull_request": {
+      "url": "https://api.github.com/repos/unb-mds/ContraDito/pulls/32",
+      "html_url": "https://github.com/unb-mds/ContraDito/pull/32",
+      "diff_url": "https://github.com/unb-mds/ContraDito/pull/32.diff",
+      "patch_url": "https://github.com/unb-mds/ContraDito/pull/32.patch",
+      "merged_at": null
+    },
+    "body": "Este Pull Request implementa a esteira de Integração Contínua (CI) utilizando GitHub Actions para garantir a qualidade e a padronização do código do back-end.\r\n\r\n## O que foi feito?\r\n\r\n🤖 Setup do GitHub Actions: Criação do arquivo .github/workflows/linter.yml.\r\n\r\n🔍 Linters (Black e Flake8): Configuração para rodar verificações automáticas de formatação (Black) e análise de sintaxe (Flake8) na pasta app/.\r\n\r\n🚧 Gatilho (Trigger): A pipeline está configurada para barrar ou aprovar códigos enviados via PR para as branches main e develop.\r\n\r\n🐳 Otimização do Docker: Atualização do .dockerignore para isolar a pasta pocs/ e o script seeder_camara.py, deixando o contêiner da API mais leve.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/32/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "repo_name": "ContraDito"
+  },
+  {
     "url": "https://api.github.com/repos/unb-mds/ContraDito/issues/31",
     "repository_url": "https://api.github.com/repos/unb-mds/ContraDito",
     "labels_url": "https://api.github.com/repos/unb-mds/ContraDito/issues/31/labels{/name}",
@@ -328857,11 +328929,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
+      "open_issues": 3,
       "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-08T10:00:12Z",
-      "updated_at": "2026-04-09T20:31:05Z",
+      "updated_at": "2026-04-10T21:26:08Z",
       "due_on": "2026-04-14T00:00:00Z",
       "closed_at": null
     },
