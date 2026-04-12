@@ -1,10 +1,86 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-11T05:52:51.354974",
+      "extracted_at": "2026-04-12T06:18:52.319145",
       "file_path": "data/bronze/issues_2026-1-Squad10.json",
-      "record_count": 18
+      "record_count": 19
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad10/issues/20",
+    "id": 4245761692,
+    "node_id": "I_kwDOR0zO1M79ES6c",
+    "number": 20,
+    "title": "Implementação do Docker",
+    "user": {
+      "login": "VegasVvegas",
+      "id": 122989946,
+      "node_id": "U_kgDOB1Steg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122989946?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/VegasVvegas",
+      "html_url": "https://github.com/VegasVvegas",
+      "followers_url": "https://api.github.com/users/VegasVvegas/followers",
+      "following_url": "https://api.github.com/users/VegasVvegas/following{/other_user}",
+      "gists_url": "https://api.github.com/users/VegasVvegas/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/VegasVvegas/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/VegasVvegas/subscriptions",
+      "organizations_url": "https://api.github.com/users/VegasVvegas/orgs",
+      "repos_url": "https://api.github.com/users/VegasVvegas/repos",
+      "events_url": "https://api.github.com/users/VegasVvegas/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/VegasVvegas/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-04-11T20:50:37Z",
+    "updated_at": "2026-04-11T20:50:37Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 📋 Descrição\nEstudar e implementar a conteinerização do projeto utilizando Docker e Docker Compose. O objetivo é padronizar o ambiente de desenvolvimento do grupo.\n\n---\n\n## ✅ Critérios de aceitação:\n- Estudar os conceitos fundamentais de containers vs. máquinas virtuais.\n\n- Implementar o arquivo docker-compose.yml configurando o serviço do PostgreSQL 15+.\n\n- Configurar a persitência de dados via volumes para evitar perda de informações ao reiniciar o container.\n\n- Definir variáveis de ambiente seguras para credenciais de acesso ao banco.\n\n- Documentar o processo de instalação e os comandos básicos para a equipe.\n\n---\n\n## 🏁 Definição de pronto:\n- Arquivo docker-compose.yml funcional e disponível na raiz do repositório.\n\n- Documentação de \"Setup do Ambiente\" criada na /Docs do projeto.\n\n- Sucesso ao rodar o comando docker compose up -d sem erros de conexão.\n\n- Testar a persistência: criar uma tabela, derrubar o container e verificar se os dados continuam lá ao subir novamente.\n\n- Breve explicação enviada ao grupo sobre como subir e descer o ambiente.\n\n---\n\n## 🧠 Tópicos específicos:\n### Fundamentos de Docker\nFundamentos de Docker\n\n### Networking:\nComo o container se comunica com o script Python local (localhost:5432).\n\n### Troubleshooting (Resolução de Problemas)\nWSL2: Configuração de limites de memória para evitar congelamentos no Windows.\n\nLogs: Uso do comando docker compose logs -f para debugar erros de inicialização.\n\nModo Detached: Diferença entre rodar em primeiro plano e em background (-d).\n\n---\n\n## Impacto no Projeto\n- A equipe ganha agilidade no onboarding de novos membros.\n\n- Facilita a integração contínua (CI) em etapas futuras do projeto.\n\n- Garante que o banco de dados legislativo esteja sempre disponível para testes de integração.\n\n---\n\n## 🤝 Aceite\nAmbiente de desenvolvimento totalmente automatizado que permita ao desenvolvedor iniciar o trabalho em menos de 5 minutos, utilizando padrões de mercado que facilitam a escalabilidade do sistema de monitoramento legislativo.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/20/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad10"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/19",
