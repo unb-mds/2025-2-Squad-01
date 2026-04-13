@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-04-12T06:59:22.445300",
+  "extracted_at": "2026-04-13T07:52:22.371232",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -228,6 +228,14 @@
         "path": "DBA/database/02_insert_pre_requisitos_equivalencias.py"
       },
       {
+        "name": "03_insert_turmas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7584,
+        "extension": ".py",
+        "path": "DBA/database/03_insert_turmas.py"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
@@ -385,7 +393,7 @@
         "name": "extrair_turmas_sigaa.py",
         "type": "file",
         "language": "Python",
-        "size": 14469,
+        "size": 14464,
         "extension": ".py",
         "path": "DBA/scraping/extrair_turmas_sigaa.py"
       },
@@ -473,7 +481,7 @@
         "name": "scraping_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 21718,
+        "size": 25507,
         "extension": ".py",
         "path": "DBA/scraping/scraping_turmas.py"
       },
@@ -2253,7 +2261,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 293,
+        "size": 301,
         "extension": ".txt",
         "path": "mcp_agent/requirements.txt"
       },
@@ -2699,7 +2707,7 @@
         "name": "assistente_controller.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 7917,
+        "size": 12948,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/assistente_controller.ts"
       },
@@ -3027,7 +3035,7 @@
         "name": "tsconfig.json",
         "type": "file",
         "language": "JSON",
-        "size": 853,
+        "size": 869,
         "extension": ".json",
         "path": "no_fluxo_backend/tsconfig.json"
       },
@@ -5582,6 +5590,20 @@
         "path": "no_fluxo_frontend_svelte/src/lib/components/auth/SignupForm.svelte"
       },
       {
+        "name": "disciplinas",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas",
+        "children": []
+      },
+      {
+        "name": "SubjectChainView.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 21970,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas/SubjectChainView.svelte"
+      },
+      {
         "name": "effects",
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/src/lib/components/effects",
@@ -5629,7 +5651,7 @@
         "name": "FluxogramContainer.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 9282,
+        "size": 9385,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramContainer.svelte"
       },
@@ -5645,7 +5667,7 @@
         "name": "FluxogramViewportChrome.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 17714,
+        "size": 18086,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramViewportChrome.svelte"
       },
@@ -5709,7 +5731,7 @@
         "name": "PrerequisiteChainDialog.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 7064,
+        "size": 16273,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteChainDialog.svelte"
       },
@@ -5717,7 +5739,7 @@
         "name": "PrerequisiteConnections.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 27898,
+        "size": 31438,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteConnections.svelte"
       },
@@ -5749,7 +5771,7 @@
         "name": "SemesterColumn.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 4520,
+        "size": 4710,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SemesterColumn.svelte"
       },
@@ -5757,7 +5779,7 @@
         "name": "SubjectCard.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 10491,
+        "size": 11295,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectCard.svelte"
       },
@@ -6914,6 +6936,14 @@
         "children": []
       },
       {
+        "name": "assistente-ui.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 10661,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/assistente-ui.service.ts"
+      },
+      {
         "name": "assistente.service.ts",
         "type": "file",
         "language": "TypeScript",
@@ -7041,7 +7071,7 @@
         "name": "fluxograma.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 20105,
+        "size": 20587,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/fluxograma.store.svelte.ts"
       },
@@ -7238,10 +7268,26 @@
         "path": "no_fluxo_frontend_svelte/src/lib/utils/casar-materias.ts"
       },
       {
+        "name": "curriculum-graph.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 13263,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/curriculum-graph.ts"
+      },
+      {
+        "name": "curriculum-utils.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5349,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/curriculum-utils.ts"
+      },
+      {
         "name": "expressao-logica.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 8221,
+        "size": 11322,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/expressao-logica.ts"
       },
@@ -7377,7 +7423,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 11719,
+        "size": 35159,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/assistente/+page.svelte"
       },
@@ -7433,7 +7479,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 12670,
+        "size": 43464,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte"
       },
@@ -7525,7 +7571,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 11467,
+        "size": 11700,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/+page.svelte"
       },
@@ -7539,7 +7585,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 11295,
+        "size": 11951,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/[courseName]/+page.svelte"
       },
@@ -9078,7 +9124,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-04-12T07:02:00.524506",
+    "extracted_at": "2026-04-13T07:55:04.842239",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }
