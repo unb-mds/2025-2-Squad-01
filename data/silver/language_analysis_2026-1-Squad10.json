@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad10",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-04-17T07:12:07.640195",
+  "analyzed_at": "2026-04-18T06:49:03.939391",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 21,
-  "total_bytes": 94208,
+  "total_files": 23,
+  "total_bytes": 96345,
   "languages": [
     {
       "language": "Markdown",
       "file_count": 13,
-      "total_bytes": 52575,
-      "percentage": 55.81,
+      "total_bytes": 52490,
+      "percentage": 54.48,
       "files": [
         {
           "path": "docs/estudos/requisitos/requisitos.md",
@@ -41,13 +41,13 @@
           "extension": ".md"
         },
         {
-          "path": "docs/estudos/metodologias ágeis/metodologiasageis.md",
+          "path": "docs/estudos/metodologias/metodologiasageis.md",
           "name": "metodologiasageis.md",
-          "size": 4639,
+          "size": 4554,
           "extension": ".md"
         },
         {
-          "path": "docs/estudos/docker-estudos.md",
+          "path": "docs/estudos/arquitetura/docker-estudos.md",
           "name": "docker-estudos.md",
           "size": 3616,
           "extension": ".md"
@@ -59,7 +59,7 @@
           "extension": ".md"
         },
         {
-          "path": "docs/estudos/controle-de-versao-git.md",
+          "path": "docs/estudos/arquitetura/controle-de-versao-git.md",
           "name": "controle-de-versao-git.md",
           "size": 3084,
           "extension": ".md"
@@ -71,7 +71,7 @@
           "extension": ".md"
         },
         {
-          "path": "docs/estudos/database/postgreSQL.md",
+          "path": "docs/estudos/banco de dados/postgreSQL.md",
           "name": "postgreSQL.md",
           "size": 2275,
           "extension": ".md"
@@ -82,7 +82,7 @@
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 39034,
-      "percentage": 41.43,
+      "percentage": 40.51,
       "files": [
         {
           "path": "docs/estudos/arquitetura/container.drawio.svg",
@@ -99,10 +99,24 @@
       ]
     },
     {
+      "language": "SQL",
+      "file_count": 1,
+      "total_bytes": 1646,
+      "percentage": 1.71,
+      "files": [
+        {
+          "path": "backend/scripts/init.sql",
+          "name": "init.sql",
+          "size": 1646,
+          "extension": ".sql"
+        }
+      ]
+    },
+    {
       "language": "No Extension",
       "file_count": 3,
-      "total_bytes": 1573,
-      "percentage": 1.67,
+      "total_bytes": 1564,
+      "percentage": 1.62,
       "files": [
         {
           "path": "LICENSE",
@@ -119,7 +133,7 @@
         {
           "path": "frontend/Dockerfile",
           "name": "Dockerfile",
-          "size": 79,
+          "size": 70,
           "extension": ""
         }
       ]
@@ -127,14 +141,28 @@
     {
       "language": "YAML",
       "file_count": 1,
-      "total_bytes": 696,
-      "percentage": 0.74,
+      "total_bytes": 768,
+      "percentage": 0.8,
       "files": [
         {
           "path": "docker-compose.yml",
           "name": "docker-compose.yml",
-          "size": 696,
+          "size": 768,
           "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 513,
+      "percentage": 0.53,
+      "files": [
+        {
+          "path": "backend/__pycache__/main.cpython-311.pyc",
+          "name": "main.cpython-311.pyc",
+          "size": 513,
+          "extension": ".pyc"
         }
       ]
     },
@@ -156,7 +184,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 158,
-      "percentage": 0.17,
+      "percentage": 0.16,
       "files": [
         {
           "path": "backend/requirements.txt",
@@ -168,7 +196,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-04-17T07:14:21.029428",
+    "extracted_at": "2026-04-18T06:50:59.890403",
     "file_path": "data/silver/language_analysis_2026-1-Squad10.json"
   }
 }
