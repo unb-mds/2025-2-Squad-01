@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-17T06:29:06.698147",
+      "extracted_at": "2026-04-18T06:06:55.138622",
       "file_path": "data/bronze/issues_2026-1-Squad08.json",
       "record_count": 23
     }
@@ -104,17 +104,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-04-14T20:22:16Z",
-    "updated_at": "2026-04-16T21:03:39Z",
+    "updated_at": "2026-04-17T14:25:05Z",
     "closed_at": "2026-04-16T21:03:39Z",
     "assignee": {
       "login": "arthurpalhares1",
@@ -307,11 +307,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
@@ -502,11 +502,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
@@ -696,11 +696,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
@@ -870,11 +870,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
@@ -1018,7 +1018,7 @@
         "description": "Inclui definição e melhoria de práticas, fluxos, cerimônias, organização e regras do projeto."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1073,18 +1073,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-13T18:07:18Z",
-    "updated_at": "2026-04-16T16:06:39Z",
-    "closed_at": null,
+    "updated_at": "2026-04-17T14:19:41Z",
+    "closed_at": "2026-04-17T14:19:40Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -1130,7 +1130,27 @@
       "total_blocking": 0
     },
     "body": "# Objetivo\nGarantir que as tecnologias escolhidas para o projeto sejam compatíveis entre si e possam ser integradas sem conflitos durante o desenvolvimento.\n\n# Descrição\nAntes de avançar com a implementação, é necessário validar se o stack tecnológico definido funciona de forma integrada.\n\nEssa verificação reduz riscos como:\n\nIncompatibilidades entre versões\nDificuldades de integração\nLimitações técnicas inesperadas\nNecessidade de refatoração futura\n\n# Tarefas\n\n Listar todas as tecnologias e ferramentas escolhidas\n Verificar compatibilidade entre frontend e backend\n Validar compatibilidade com banco de dados\n Checar versões das linguagens e frameworks\n Verificar suporte e documentação das integrações necessárias\n Identificar possíveis conflitos ou limitações\n Documentar decisões e ajustes necessários\n\n# Critérios de Aceitação\n\n Todas as tecnologias utilizadas estão claramente listadas\n Compatibilidade entre os componentes foi validada\n Possíveis conflitos foram identificados e resolvidos (ou documentados)\n Versões das tecnologias estão definidas\n Existe documentação básica das decisões tomadas\n\n# Definição de Pronto (DoD)\n\nVerificação concluída sem bloqueios críticos\nAjustes realizados (se necessário)\nDocumentação adicionada ao repositório",
-    "closed_by": null,
+    "closed_by": {
+      "login": "thatsrenan",
+      "id": 161871698,
+      "node_id": "U_kgDOCaX3Ug",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thatsrenan",
+      "html_url": "https://github.com/thatsrenan",
+      "followers_url": "https://api.github.com/users/thatsrenan/followers",
+      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
+      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
+      "repos_url": "https://api.github.com/users/thatsrenan/repos",
+      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/18/reactions",
       "total_count": 0,
@@ -1145,7 +1165,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/18/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad08"
   },
@@ -1247,11 +1267,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
@@ -1421,17 +1441,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 3,
+      "open_issues": 4,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-13T15:15:39Z",
-      "updated_at": "2026-04-16T21:03:39Z",
+      "updated_at": "2026-04-17T14:19:40Z",
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-13T18:01:10Z",
-    "updated_at": "2026-04-13T18:01:11Z",
+    "updated_at": "2026-04-17T16:33:36Z",
     "closed_at": null,
     "assignee": {
       "login": "thatsrenan",
