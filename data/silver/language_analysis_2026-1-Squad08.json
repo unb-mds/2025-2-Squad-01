@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad08",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-04-18T06:49:01.160933",
+  "analyzed_at": "2026-04-19T07:06:14.674329",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 18,
-  "total_bytes": 127090,
+  "total_files": 21,
+  "total_bytes": 129043,
   "languages": [
     {
       "language": "Markdown",
       "file_count": 17,
       "total_bytes": 126030,
-      "percentage": 99.17,
+      "percentage": 97.67,
       "files": [
         {
           "path": "docs/estudos/requisitos/requisitos-software.md",
@@ -79,10 +79,24 @@
       ]
     },
     {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 1103,
+      "percentage": 0.85,
+      "files": [
+        {
+          "path": "src/services/__pycache__/camara_api.cpython-312.pyc",
+          "name": "camara_api.cpython-312.pyc",
+          "size": 1103,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.83,
+      "percentage": 0.82,
       "files": [
         {
           "path": "LICENSE",
@@ -91,10 +105,30 @@
           "extension": ""
         }
       ]
+    },
+    {
+      "language": "Python",
+      "file_count": 2,
+      "total_bytes": 850,
+      "percentage": 0.66,
+      "files": [
+        {
+          "path": "src/services/camara_api.py",
+          "name": "camara_api.py",
+          "size": 652,
+          "extension": ".py"
+        },
+        {
+          "path": "src/main.py",
+          "name": "main.py",
+          "size": 198,
+          "extension": ".py"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-04-18T06:50:59.800730",
+    "extracted_at": "2026-04-19T07:08:39.074835",
     "file_path": "data/silver/language_analysis_2026-1-Squad08.json"
   }
 }
