@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-19T06:24:16.717393",
+      "extracted_at": "2026-04-20T07:09:44.249950",
       "file_path": "data/bronze/issues_2026-1-Squad10.json",
       "record_count": 26
     }
@@ -315,9 +315,9 @@
       "due_on": "2026-04-20T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-17T12:27:42Z",
-    "updated_at": "2026-04-17T12:27:43Z",
+    "updated_at": "2026-04-19T19:44:14Z",
     "closed_at": null,
     "assignee": {
       "login": "VegasVvegas",
@@ -704,7 +704,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-17T12:17:15Z",
-    "updated_at": "2026-04-17T12:17:15Z",
+    "updated_at": "2026-04-19T15:54:42Z",
     "closed_at": null,
     "assignee": {
       "login": "Golira12",
@@ -750,7 +750,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição\nRealizar a criação da estrutura inicial do código frontend dentro da pasta /frontend. O objetivo agora é apenas gerar o boilerplate (esqueleto) do projeto utilizando React (preferencialmente com Vite pela rapidez), ajustar o contêiner e garantir que uma página básica rode corretamente junto com o resto da nossa infraestrutura para a entrega da R1.\n\n## ⚠️ Prioridade\n\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [ ] Rodar o comando de inicialização do projeto (ex: npm create vite@latest . -- --template react-ts ou Next.js) diretamente na pasta /frontend\n\n- [ ] Limpar os arquivos de exemplo gerados por padrão que não serão utilizados\n\n- [ ] Atualizar o arquivo Dockerfile do frontend para instalar as dependências (npm install) e rodar o servidor de desenvolvimento\n\n- [ ] Testar se o comando docker-compose up consegue subir o contêiner do frontend na porta 3000 sem erros\n\n- [ ] Adicionar um título simples na página inicial (ex: \"Frontend Squad 10 - Monitoramento Legislativo\") apenas para validar que a tela está sendo renderizada\n\n## 🧠 Notas Adicionais\n\nVite Setup (Recomendado): https://vitejs.dev/guide/\n\nAtenção ao Docker: O nosso docker-compose.yml já está mapeando o frontend para a porta 3000. Certifiquem-se de que o framework escolhido está expondo a aplicação nessa mesma porta dentro do Dockerfile.\n\nFoco da R1: Não precisamos nos preocupar com estilização pesada ou CSS agora. O foco é apenas o contêiner subir e a página existir.",
+    "body": "## 📋 Descrição\nRealizar a criação da estrutura inicial do código frontend dentro da pasta /frontend. O objetivo agora é apenas gerar o boilerplate (esqueleto) do projeto utilizando React (preferencialmente com Vite pela rapidez), ajustar o contêiner e garantir que uma página básica rode corretamente junto com o resto da nossa infraestrutura para a entrega da R1.\n\n## ⚠️ Prioridade\n\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [x] Rodar o comando de inicialização do projeto (ex: npm create vite@latest . -- --template react-ts ou Next.js) diretamente na pasta /frontend\n\n- [x] Limpar os arquivos de exemplo gerados por padrão que não serão utilizados\n\n- [ ] Atualizar o arquivo Dockerfile do frontend para instalar as dependências (npm install) e rodar o servidor de desenvolvimento\n\n- [ ] Testar se o comando docker-compose up consegue subir o contêiner do frontend na porta 3000 sem erros\n\n- [ ] Adicionar um título simples na página inicial (ex: \"Frontend Squad 10 - Monitoramento Legislativo\") apenas para validar que a tela está sendo renderizada\n\n## 🧠 Notas Adicionais\n\nVite Setup (Recomendado): https://vitejs.dev/guide/\n\nAtenção ao Docker: O nosso docker-compose.yml já está mapeando o frontend para a porta 3000. Certifiquem-se de que o framework escolhido está expondo a aplicação nessa mesma porta dentro do Dockerfile.\n\nFoco da R1: Não precisamos nos preocupar com estilização pesada ou CSS agora. O foco é apenas o contêiner subir e a página existir.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad10/issues/24/reactions",

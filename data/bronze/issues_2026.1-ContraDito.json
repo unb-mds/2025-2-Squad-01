@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-19T06:24:14.462887",
+      "extracted_at": "2026-04-20T07:09:42.316325",
       "file_path": "data/bronze/issues_2026.1-ContraDito.json",
       "record_count": 32
     }
@@ -94,11 +94,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
+      "open_issues": 4,
       "closed_issues": 2,
       "state": "open",
       "created_at": "2026-04-15T02:01:48Z",
-      "updated_at": "2026-04-17T23:32:05Z",
+      "updated_at": "2026-04-19T17:08:41Z",
       "due_on": "2026-04-17T00:00:00Z",
       "closed_at": null
     },
@@ -400,10 +400,47 @@
     "state": "open",
     "locked": false,
     "assignees": [],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/milestones/5",
+      "html_url": "https://github.com/unb-mds/2026.1-ContraDito/milestone/5",
+      "labels_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/milestones/5/labels",
+      "id": 15542581,
+      "node_id": "MI_kwDORypDns4A7Sk1",
+      "number": 5,
+      "title": "Sprint 04",
+      "description": "",
+      "creator": {
+        "login": "jot4-ge",
+        "id": 211538258,
+        "node_id": "U_kgDODJvRUg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/211538258?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jot4-ge",
+        "html_url": "https://github.com/jot4-ge",
+        "followers_url": "https://api.github.com/users/jot4-ge/followers",
+        "following_url": "https://api.github.com/users/jot4-ge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jot4-ge/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jot4-ge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jot4-ge/subscriptions",
+        "organizations_url": "https://api.github.com/users/jot4-ge/orgs",
+        "repos_url": "https://api.github.com/users/jot4-ge/repos",
+        "events_url": "https://api.github.com/users/jot4-ge/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jot4-ge/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "open_issues": 4,
+      "closed_issues": 2,
+      "state": "open",
+      "created_at": "2026-04-15T02:01:48Z",
+      "updated_at": "2026-04-19T17:08:41Z",
+      "due_on": "2026-04-17T00:00:00Z",
+      "closed_at": null
+    },
     "comments": 0,
     "created_at": "2026-04-16T19:49:14Z",
-    "updated_at": "2026-04-16T19:49:14Z",
+    "updated_at": "2026-04-19T17:08:41Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -506,11 +543,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
+      "open_issues": 4,
       "closed_issues": 2,
       "state": "open",
       "created_at": "2026-04-15T02:01:48Z",
-      "updated_at": "2026-04-17T23:32:05Z",
+      "updated_at": "2026-04-19T17:08:41Z",
       "due_on": "2026-04-17T00:00:00Z",
       "closed_at": null
     },
@@ -715,11 +752,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
+      "open_issues": 4,
       "closed_issues": 2,
       "state": "open",
       "created_at": "2026-04-15T02:01:48Z",
-      "updated_at": "2026-04-17T23:32:05Z",
+      "updated_at": "2026-04-19T17:08:41Z",
       "due_on": "2026-04-17T00:00:00Z",
       "closed_at": null
     },
@@ -847,7 +884,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-12T05:04:28Z",
-    "updated_at": "2026-04-16T13:30:36Z",
+    "updated_at": "2026-04-20T03:32:34Z",
     "closed_at": "2026-04-16T13:30:36Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -873,7 +910,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\nAtualização do visual da página inicial da documentação do projeto ContraDito. A página inicial agora conta com uma apresentação visual da equipe e o arquivo de configuração foi ajustado para utilizar o menu superior em abas.\n## Objetivo\nMelhorar a identidade visual da documentação, apresentando a equipe de forma profissional e amigável, além de facilitar a navegação dos usuários aplicando o padrão de menu no topo.\n## Requisitos (Critérios de Aceite)\nrequisitos que a issue deve ter pra ser considerada pronta\n- [x] O arquivo `index.md` deve conter a seção \"Sobre\" e a tabela com a foto da equipe.\n- [x] As fotos dos membros devem ser puxadas do GitHub, ter formato circular e a tabela não deve possuir linhas/bordas visíveis.\n- [x] O menu de navegação deve estar configurado para aparecer no topo (`navigation.tabs`).\n- [x] Pull Request aberto apontando para a branch `develop`.\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [x] **Média:** Necessária para a continuidade do projeto.\n- [ ] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n\n## Checklist de Tarefas\n- [x] Criar a branch `docs/pagina-inicial` a partir da `develop`.\n- [x] Adicionar o código HTML/Markdown no `index.md` para a grade de fotos.\n- [x] Inserir a regra CSS inline `style=\"border: none; background-color: transparent;\"` na tabela.\n- [ ] Atualizar a paleta de cores e features de navegação no `mkdocs.yml`.\n- [x] Testar as alterações localmente com `mkdocs serve`.\n- [x] Fazer commit e push das alterações.\n- [x] Abrir PR para a branch `develop`.\n- [ ] Documentação inicial da arquitetura.\n- [ ] página de transparência/LGPD\n\n## Responsável\n@matheus0346 \n## Anexo\n- **Link do PR:** https://github.com/unb-mds/ContraDito/pull/35\n",
+    "body": "## Descrição\nAtualização do visual da página inicial da documentação do projeto ContraDito. A página inicial agora conta com uma apresentação visual da equipe e o arquivo de configuração foi ajustado para utilizar o menu superior em abas.\n## Objetivo\nMelhorar a identidade visual da documentação, apresentando a equipe de forma profissional e amigável, além de facilitar a navegação dos usuários aplicando o padrão de menu no topo.\n## Requisitos (Critérios de Aceite)\nrequisitos que a issue deve ter pra ser considerada pronta\n- [x] O arquivo `index.md` deve conter a seção \"Sobre\" e a tabela com a foto da equipe.\n- [x] As fotos dos membros devem ser puxadas do GitHub, ter formato circular e a tabela não deve possuir linhas/bordas visíveis.\n- [x] O menu de navegação deve estar configurado para aparecer no topo (`navigation.tabs`).\n- [x] Pull Request aberto apontando para a branch `develop`.\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [x] **Média:** Necessária para a continuidade do projeto.\n- [ ] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n\n## Checklist de Tarefas\n- [x] Criar a branch `docs/pagina-inicial` a partir da `develop`.\n- [x] Adicionar o código HTML/Markdown no `index.md` para a grade de fotos.\n- [x] Inserir a regra CSS inline `style=\"border: none; background-color: transparent;\"` na tabela.\n- [x] Atualizar a paleta de cores e features de navegação no `mkdocs.yml`.\n- [x] Testar as alterações localmente com `mkdocs serve`.\n- [x] Fazer commit e push das alterações.\n- [x] Abrir PR para a branch `develop`.\n- [x] Documentação inicial da arquitetura.\n- [x] página de transparência/LGPD\n\n## Responsável\n@matheus0346 \n## Anexo\n- **Link do PR:** https://github.com/unb-mds/ContraDito/pull/35\n",
     "closed_by": {
       "login": "matheus0346",
       "id": 197320329,
