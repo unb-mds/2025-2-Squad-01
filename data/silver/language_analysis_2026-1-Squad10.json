@@ -2,19 +2,39 @@
   "repository": "2026-1-Squad10",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-04-19T07:06:17.457725",
+  "analyzed_at": "2026-04-20T07:53:39.630911",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 23,
-  "total_bytes": 96345,
+  "total_files": 36,
+  "total_bytes": 208864,
   "languages": [
     {
+      "language": "JSON",
+      "file_count": 2,
+      "total_bytes": 91758,
+      "percentage": 43.93,
+      "files": [
+        {
+          "path": "frontend/package-lock.json",
+          "name": "package-lock.json",
+          "size": 91154,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/package.json",
+          "name": "package.json",
+          "size": 604,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
-      "file_count": 13,
-      "total_bytes": 52490,
-      "percentage": 54.48,
+      "file_count": 14,
+      "total_bytes": 54766,
+      "percentage": 26.22,
       "files": [
         {
           "path": "docs/estudos/requisitos/requisitos.md",
@@ -80,9 +100,9 @@
     },
     {
       "language": "SVG Image",
-      "file_count": 2,
-      "total_bytes": 39034,
-      "percentage": 40.51,
+      "file_count": 4,
+      "total_bytes": 53587,
+      "percentage": 25.66,
       "files": [
         {
           "path": "docs/estudos/arquitetura/container.drawio.svg",
@@ -91,10 +111,42 @@
           "extension": ".svg"
         },
         {
+          "path": "frontend/public/favicon.svg",
+          "name": "favicon.svg",
+          "size": 9522,
+          "extension": ".svg"
+        },
+        {
           "path": "docs/estudos/arquitetura/contexto.drawio.svg",
           "name": "contexto.drawio.svg",
           "size": 6132,
           "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/icons.svg",
+          "name": "icons.svg",
+          "size": 5031,
+          "extension": ".svg"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 2170,
+      "percentage": 1.04,
+      "files": [
+        {
+          "path": "frontend/src/index.css",
+          "name": "index.css",
+          "size": 2169,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/src/App.css",
+          "name": "App.css",
+          "size": 1,
+          "extension": ".css"
         }
       ]
     },
@@ -102,7 +154,7 @@
       "language": "SQL",
       "file_count": 1,
       "total_bytes": 1646,
-      "percentage": 1.71,
+      "percentage": 0.79,
       "files": [
         {
           "path": "backend/scripts/init.sql",
@@ -116,7 +168,7 @@
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 1564,
-      "percentage": 1.62,
+      "percentage": 0.75,
       "files": [
         {
           "path": "LICENSE",
@@ -139,10 +191,42 @@
       ]
     },
     {
+      "language": "JavaScript",
+      "file_count": 4,
+      "total_bytes": 1149,
+      "percentage": 0.55,
+      "files": [
+        {
+          "path": "frontend/eslint.config.js",
+          "name": "eslint.config.js",
+          "size": 758,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/src/main.jsx",
+          "name": "main.jsx",
+          "size": 229,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/vite.config.js",
+          "name": "vite.config.js",
+          "size": 161,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/src/App.jsx",
+          "name": "App.jsx",
+          "size": 1,
+          "extension": ".jsx"
+        }
+      ]
+    },
+    {
       "language": "YAML",
       "file_count": 1,
       "total_bytes": 768,
-      "percentage": 0.8,
+      "percentage": 0.37,
       "files": [
         {
           "path": "docker-compose.yml",
@@ -156,7 +240,7 @@
       "language": "Unknown",
       "file_count": 1,
       "total_bytes": 513,
-      "percentage": 0.53,
+      "percentage": 0.25,
       "files": [
         {
           "path": "backend/__pycache__/main.cpython-311.pyc",
@@ -167,10 +251,38 @@
       ]
     },
     {
+      "language": "HTML",
+      "file_count": 1,
+      "total_bytes": 360,
+      "percentage": 0.17,
+      "files": [
+        {
+          "path": "frontend/index.html",
+          "name": "index.html",
+          "size": 360,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 253,
+      "percentage": 0.12,
+      "files": [
+        {
+          "path": "frontend/.gitignore",
+          "name": ".gitignore",
+          "size": 253,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
       "language": "Python",
       "file_count": 1,
       "total_bytes": 172,
-      "percentage": 0.18,
+      "percentage": 0.08,
       "files": [
         {
           "path": "backend/main.py",
@@ -184,7 +296,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 158,
-      "percentage": 0.16,
+      "percentage": 0.08,
       "files": [
         {
           "path": "backend/requirements.txt",
@@ -196,7 +308,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-04-19T07:08:39.192945",
+    "extracted_at": "2026-04-20T07:55:55.289230",
     "file_path": "data/silver/language_analysis_2026-1-Squad10.json"
   }
 }
