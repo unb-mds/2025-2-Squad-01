@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-20T07:09:37.815407",
+      "extracted_at": "2026-04-21T06:29:16.120714",
       "file_path": "data/bronze/issues_2026-1-Squad06.json",
       "record_count": 12
     }
@@ -108,7 +108,7 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
@@ -302,7 +302,7 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
@@ -474,7 +474,7 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
@@ -648,7 +648,7 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
@@ -842,14 +842,14 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
     "comments": 0,
     "created_at": "2026-04-02T13:46:26Z",
-    "updated_at": "2026-04-15T03:28:30Z",
-    "closed_at": "2026-04-15T03:28:30Z",
+    "updated_at": "2026-04-20T14:38:35Z",
+    "closed_at": "2026-04-20T14:38:35Z",
     "assignee": {
       "login": "otaviotex",
       "id": 217771019,
@@ -885,24 +885,24 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### **1. O que é Docker?**\n\n- Docker é uma ferramenta que empacota sua aplicação junto com tudo que ela precisa, garantindo que ela funcione em qualquer lugar.\n\n### **2. Container vs Máquina Virtual**\n\n- **Máquina Virtua**l simula um computador inteiro, com sistema operacional completo. É pesada e demora para iniciar.\n\n- O **Container** compartilha o sistema operacional da máquina hospedeira, carregando apenas o necessário. É leve e inicia em segundos.\n\n### **3. Os termos que você precisa entender**\n\n- Imagem: é a receita do bolo. Ela contém todas as instruções e ingredientes necessários para criar um container. Você não altera a imagem diretamente, ela é um modelo.\n\n- Container: é o bolo pronto. Ele é criado a partir de uma imagem e é onde sua aplicação realmente roda. Você pode criar vários containers a partir de uma mesma imagem.\n\n- Dockerfile: é o arquivo de texto onde você escreve a receita. Nele você define qual sistema usar, quais arquivos copiar, quais comandos executar, etc.\n\n-  Dockerhub: é o repositório público de imagens. Funciona como uma loja de receitas prontas. Lá você encontra imagens de bancos de dados, linguagens de programação, servidores, etc.\n\n- Docker Engine: é o motor que faz tudo funcionar. Ele lê suas instruções e cria containers.\n\n### **4. Como funciona na prática (fluxo básico)**\n\n1. Você descreve um Dockerfile com as instruções que sua aplicação precisa.\n2.  A partir desse arquivo, você constrói uma imagem.\n3.  A partir dessa imagem, você cria e roda um container.\n4.  Se você quiser, pode enviar essa imagem para o Docker Hub para várias pessoas usarem.\n\n### **5. Boas Práticas**\n\n- Usar imagens leves para não desperdiçar recursos.\n\n- Não rodar aplicações como administrador dentro do container por questões de segurança.\n\n- Manter o Dockerfile o mais simples possível.\n\n- Ignorar arquivos desnecessários na hora de criar uma imagem.\n\n- Sempre versionar suas imagens para ter controle do que está rodando.",
+    "body": "### **1. O que é Docker?**\n\n- Docker é uma ferramenta que empacota sua aplicação junto com tudo que ela precisa, garantindo que ela funcione em qualquer lugar.\n\n### **2. Container vs Máquina Virtual**\n\n- **Máquina Virtua**l simula um computador inteiro, com sistema operacional completo. É pesada e demora para iniciar.\n\n- O **Container** compartilha o sistema operacional da máquina hospedeira, carregando apenas o necessário. É leve e inicia em segundos.\n\n### **3. Os termos que você precisa entender**\n\n- Imagem: é a receita do bolo. Ela contém todas as instruções e ingredientes necessários para criar um container. Você não altera a imagem diretamente, ela é um modelo.\n\n- Container: é o bolo pronto. Ele é criado a partir de uma imagem e é onde sua aplicação realmente roda. Você pode criar vários containers a partir de uma mesma imagem.\n\n- Dockerfile: é o arquivo de texto onde você escreve a receita. Nele você define qual sistema usar, quais arquivos copiar, quais comandos executar, etc.\n\n-  Dockerhub: é o repositório público de imagens. Funciona como uma loja de receitas prontas. Lá você encontra imagens de bancos de dados, linguagens de programação, servidores, etc.\n\n- Docker Engine: é o motor que faz tudo funcionar. Ele lê suas instruções e cria containers.\n\n### **4. Como funciona na prática (fluxo básico)**\n\n1. Você descreve um Dockerfile com as instruções que sua aplicação precisa.\n2.  A partir desse arquivo, você constrói uma imagem.\n3.  A partir dessa imagem, você cria e roda um container.\n4.  Se você quiser, pode enviar essa imagem para o Docker Hub para várias pessoas usarem.\n\n### **5. Boas Práticas**\n\n- Usar imagens leves para não desperdiçar recursos.\n\n- Não rodar aplicações como administrador dentro do container por questões de segurança.\n\n- Manter o Dockerfile o mais simples possível.\n\n- Ignorar arquivos desnecessários na hora de criar uma imagem.\n\n- Sempre versionar suas imagens para ter controle do que está rodando.\n\n### **Referências**\n- Documentação Oficial do Docker -https://docs.docker.com/get-started/\n- O que é Docker? - https://www.redhat.com/pt-br/topics/containers/what-is-docker\n- Docker em 22 Minutos - https://www.youtube.com/watch?v=KczhlcwEXJ4",
     "closed_by": {
-      "login": "claranunes22",
-      "id": 214158924,
-      "node_id": "U_kgDODMPOTA",
-      "avatar_url": "https://avatars.githubusercontent.com/u/214158924?v=4",
+      "login": "otaviotex",
+      "id": 217771019,
+      "node_id": "U_kgDODPrsCw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/217771019?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/claranunes22",
-      "html_url": "https://github.com/claranunes22",
-      "followers_url": "https://api.github.com/users/claranunes22/followers",
-      "following_url": "https://api.github.com/users/claranunes22/following{/other_user}",
-      "gists_url": "https://api.github.com/users/claranunes22/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/claranunes22/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/claranunes22/subscriptions",
-      "organizations_url": "https://api.github.com/users/claranunes22/orgs",
-      "repos_url": "https://api.github.com/users/claranunes22/repos",
-      "events_url": "https://api.github.com/users/claranunes22/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/claranunes22/received_events",
+      "url": "https://api.github.com/users/otaviotex",
+      "html_url": "https://github.com/otaviotex",
+      "followers_url": "https://api.github.com/users/otaviotex/followers",
+      "following_url": "https://api.github.com/users/otaviotex/following{/other_user}",
+      "gists_url": "https://api.github.com/users/otaviotex/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/otaviotex/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/otaviotex/subscriptions",
+      "organizations_url": "https://api.github.com/users/otaviotex/orgs",
+      "repos_url": "https://api.github.com/users/otaviotex/repos",
+      "events_url": "https://api.github.com/users/otaviotex/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/otaviotex/received_events",
       "type": "User",
       "user_view_type": "public",
       "site_admin": false
@@ -1027,7 +1027,7 @@
       "closed_issues": 6,
       "state": "closed",
       "created_at": "2026-04-01T14:24:37Z",
-      "updated_at": "2026-04-15T03:28:52Z",
+      "updated_at": "2026-04-20T14:38:35Z",
       "due_on": "2026-04-06T00:00:00Z",
       "closed_at": "2026-04-15T03:28:52Z"
     },
