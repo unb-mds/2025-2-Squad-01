@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-22T06:29:28.617682",
+      "extracted_at": "2026-04-23T06:31:50.841654",
       "file_path": "data/bronze/issues_2026-1-Squad4-Dito_e_Feito.json",
       "record_count": 16
     }
@@ -58,7 +58,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -113,18 +113,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 0,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 2,
+      "state": "closed",
       "created_at": "2026-04-13T23:31:45Z",
-      "updated_at": "2026-04-21T23:53:48Z",
+      "updated_at": "2026-04-22T15:55:58Z",
       "due_on": "2026-04-20T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-04-22T15:55:58Z"
     },
     "comments": 0,
     "created_at": "2026-04-21T23:53:48Z",
-    "updated_at": "2026-04-21T23:57:01Z",
-    "closed_at": null,
+    "updated_at": "2026-04-22T15:52:42Z",
+    "closed_at": "2026-04-22T15:52:42Z",
     "assignee": {
       "login": "IndianoDev",
       "id": 81726993,
@@ -161,7 +161,27 @@
       "total_blocking": 0
     },
     "body": "Como responsável pela tecnologia de banco de dados do projeto Dito e Feito, é necessário realizar um estudo teórico sobre o PostgreSQL para embasar as decisões de modelagem e configuração nas próximas sprints. Esta issue cobre a pesquisa e documentação dos conceitos fundamentais relevantes ao contexto do sistema.\n\n✅ Critérios de Aceitação\n\n- [ ]  Entender as diferenças entre PostgreSQL e outros bancos relacionais (MySQL, SQLite)\n\n- [ ]  Estudar tipos de dados relevantes para o projeto (TEXT, JSONB, TIMESTAMP, ENUM, UUID)\n\n- [ ] Compreender o conceito de schemas e como organizar as tabelas do sistema\n\n- [ ]  Estudar índices e quando utilizá-los (ex: buscas por parlamentar, partido, data)\n\n- [ ] Entender transações e integridade referencial (chaves estrangeiras)\n\n- [ ]  Documentar um esboço inicial das entidades do banco (parlamentar, discurso, votação, coerência)\n\n- [ ]  Registrar referências e fontes utilizadas\n\n\n🔗 Contexto técnico\nO banco será responsável por armazenar:\nDados de parlamentares (nome, partido, estado, mandato)\nDiscursos (texto, data, ementa)\nVotações (resultado por parlamentar, data, tema)\nScores de coerência gerados pela IA/NLP",
-    "closed_by": null,
+    "closed_by": {
+      "login": "gus-ant",
+      "id": 176245725,
+      "node_id": "U_kgDOCoFL3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/176245725?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gus-ant",
+      "html_url": "https://github.com/gus-ant",
+      "followers_url": "https://api.github.com/users/gus-ant/followers",
+      "following_url": "https://api.github.com/users/gus-ant/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gus-ant/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gus-ant/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gus-ant/subscriptions",
+      "organizations_url": "https://api.github.com/users/gus-ant/orgs",
+      "repos_url": "https://api.github.com/users/gus-ant/repos",
+      "events_url": "https://api.github.com/users/gus-ant/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gus-ant/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/16/reactions",
       "total_count": 0,
@@ -176,7 +196,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/16/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4-Dito_e_Feito"
   },
@@ -232,14 +252,14 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-20T01:12:44Z",
-    "updated_at": "2026-04-20T01:12:44Z",
-    "closed_at": null,
+    "updated_at": "2026-04-22T15:52:42Z",
+    "closed_at": "2026-04-22T15:52:42Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -256,7 +276,27 @@
       "total_blocking": 0
     },
     "body": "foi feito o manual da marca",
-    "closed_by": null,
+    "closed_by": {
+      "login": "gus-ant",
+      "id": 176245725,
+      "node_id": "U_kgDOCoFL3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/176245725?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gus-ant",
+      "html_url": "https://github.com/gus-ant",
+      "followers_url": "https://api.github.com/users/gus-ant/followers",
+      "following_url": "https://api.github.com/users/gus-ant/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gus-ant/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gus-ant/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gus-ant/subscriptions",
+      "organizations_url": "https://api.github.com/users/gus-ant/orgs",
+      "repos_url": "https://api.github.com/users/gus-ant/repos",
+      "events_url": "https://api.github.com/users/gus-ant/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gus-ant/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/15/reactions",
       "total_count": 0,
@@ -271,7 +311,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/15/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4-Dito_e_Feito"
   },
@@ -327,14 +367,14 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-20T00:44:51Z",
-    "updated_at": "2026-04-20T00:50:43Z",
-    "closed_at": null,
+    "updated_at": "2026-04-22T15:52:41Z",
+    "closed_at": "2026-04-22T15:52:41Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -351,7 +391,27 @@
       "total_blocking": 0
     },
     "body": "\n🖥️ Resumo de Estudo: Frontend do Portal de Coerência Parlamentar\n1. O Papel do Frontend (Arquitetura Jamstack)\nNo nosso projeto, o frontend não se conecta a um banco de dados nem faz cálculos complexos de IA. A IA já fez todo o trabalho pesado no backend (via GitHub Actions) e salvou o resultado mastigado em arquivos estáticos (ex: coerencia_geral.json).\nO papel exclusivo do Frontend é:\n\nFazer o download (via requisição HTTP simples) desses arquivos JSON hospedados no próprio repositório.\n\nTransformar esses dados brutos em Métricas, Gráficos e Rankings visuais para o cidadão.\n\nGarantir uma navegação rápida e responsiva (funcionando bem no celular e no PC).\n\n2. Estrutura de Telas Necessárias (O que vamos desenhar?)\nPara atender ao escopo de comparar discursos com votos e mostrar divergências, o portal precisará das seguintes seções principais:\n\n🏠 Dashboard Principal (Visão Geral):\n\nMétrica de \"Coerência Média\" da Câmara/Senado no mês.\n\nGráfico de linhas mostrando a evolução temporal de divergências (Discurso vs. Voto).\n\nDestaques: As 3 votações mais recentes com maior índice de divergência.\n\n🏆 Ranking de Parlamentares (O \"Placar\"):\n\nUma tabela interativa listando os deputados/senadores.\n\nFiltros por: Partido, Estado (UF) e Tema (Economia, Segurança, etc.).\n\nO \"Score de Coerência\" individual de cada político.\n\n🔎 Perfil Detalhado (A Prova do Crime):\n\nAo clicar em um político ou votação, a tela deve mostrar a evidência.\n\nDe um lado: O trecho do discurso (analisado pela IA).\n\nDo outro lado: O voto registrado no painel eletrônico.\n\nDestaque semântico da contradição (ex: grifado em vermelho).\n\n3. Stack Tecnológica Recomendada (Para rodar no GitHub Pages)\nPara criar esse painel sem precisar de um servidor ativo, a equipe precisará focar nessas tecnologias:\n\nA. Estrutura e Estilização\n\nHTML5 / CSS3: A base de qualquer página web.\n\nTailwind CSS ou Bootstrap: Frameworks de CSS para não precisarmos escrever estilos do zero. Eles permitem criar cards, botões e grids responsivos de forma muito rápida.\n\nB. Dinamismo e Lógica de Tela\n\nJavaScript (Vanilla) ou React: Se a equipe for iniciante, JavaScript puro (Vanilla JS) é mais do que suficiente para ler um JSON e jogar na tela. Se a equipe já tiver experiência, usar React (exportado de forma estática via Vite ou Next.js SSG) facilita a criação de componentes reutilizáveis (como os \"Cards\" de cada deputado).\n\nC. Visualização de Dados (DataViz - Essencial)\n\nChart.js ou Recharts (para React): Bibliotecas para gerar os gráficos (barras, pizzas, linhas) de forma animada e profissional. Você passa os números do JSON para elas, e elas desenham os painéis.\n\n4. O \"Pulo do Gato\": Como o Frontend pega os dados?\nO conceito mais importante para a equipe de Front estudar nesta primeira semana é o consumo de arquivos estáticos via fetch API no JavaScript.\n\nO fluxo é literalmente este:\n\nA página HTML carrega no navegador do usuário.\n\nO JavaScript dispara um comando silencioso: \"Vá na pasta /dados do nosso repositório e baixe o arquivo ranking.json\".\n\nAssim que o arquivo chega, o JavaScript faz um loop (laço de repetição) criando uma linha na tabela para cada político encontrado no arquivo.\n\n5. Dica de Fluxo de Trabalho (Para o GitHub Actions)\nO código fonte do site (HTML/JS) fica no repositório.\n\nQuando o script de coleta/IA termina de rodar de madrugada, ele atualiza o arquivo .json.\n\nO GitHub Actions percebe que o dado mudou e aciona o Deploy do GitHub Pages, reconstruindo o site automaticamente para que, pela manhã, os gráficos já reflitam os dados mais recentes.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "gus-ant",
+      "id": 176245725,
+      "node_id": "U_kgDOCoFL3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/176245725?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gus-ant",
+      "html_url": "https://github.com/gus-ant",
+      "followers_url": "https://api.github.com/users/gus-ant/followers",
+      "following_url": "https://api.github.com/users/gus-ant/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gus-ant/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gus-ant/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gus-ant/subscriptions",
+      "organizations_url": "https://api.github.com/users/gus-ant/orgs",
+      "repos_url": "https://api.github.com/users/gus-ant/repos",
+      "events_url": "https://api.github.com/users/gus-ant/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gus-ant/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/14/reactions",
       "total_count": 0,
@@ -366,7 +426,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/14/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4-Dito_e_Feito"
   },
@@ -422,7 +482,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -477,18 +537,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 0,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 2,
+      "state": "closed",
       "created_at": "2026-04-13T23:31:45Z",
-      "updated_at": "2026-04-21T23:53:48Z",
+      "updated_at": "2026-04-22T15:55:58Z",
       "due_on": "2026-04-20T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-04-22T15:55:58Z"
     },
     "comments": 0,
     "created_at": "2026-04-14T16:35:01Z",
-    "updated_at": "2026-04-14T16:35:01Z",
-    "closed_at": null,
+    "updated_at": "2026-04-22T15:55:32Z",
+    "closed_at": "2026-04-22T15:55:32Z",
     "assignee": {
       "login": "nerylucas",
       "id": 97478323,
@@ -534,7 +594,27 @@
       "total_blocking": 0
     },
     "body": "# Objetivo\n\nAprender o básico sobre desenvolvimento backend com Python usando FastAPI, entendendo como APIs funcionam e sabendo utilizá-las.\n\n# O que estudar\n\n## Fundamentos de backend\n\n* HTTP e APIs\n* Lógica com Python\n* Criação de APIs\n* Banco de dados\n* Estrutura e boas práticas\n\n## Python para backend\n\n* Funções e organização de código\n* Estrutura de dados\n* Tipagem básica\n* Imports e modularização\n* Tratamento de erros\n\n## Conceitos básicos de API\n\n* Request e Response\n* Métodos HTTP\n* JSON\n* Status Codes\n* Endpoints (rotas)\n\n## FastAPI\n\n* Criação de rotas\n* Parâmetros\n* Validação com Pydantic\n* Documentação automática (Swagger)\n* Estrutura básica do APP\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "gus-ant",
+      "id": 176245725,
+      "node_id": "U_kgDOCoFL3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/176245725?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gus-ant",
+      "html_url": "https://github.com/gus-ant",
+      "followers_url": "https://api.github.com/users/gus-ant/followers",
+      "following_url": "https://api.github.com/users/gus-ant/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gus-ant/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gus-ant/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gus-ant/subscriptions",
+      "organizations_url": "https://api.github.com/users/gus-ant/orgs",
+      "repos_url": "https://api.github.com/users/gus-ant/repos",
+      "events_url": "https://api.github.com/users/gus-ant/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gus-ant/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/13/reactions",
       "total_count": 0,
@@ -549,7 +629,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/13/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4-Dito_e_Feito"
   },
@@ -662,11 +742,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-04-08T14:26:22Z",
-      "updated_at": "2026-04-20T00:27:52Z",
+      "updated_at": "2026-04-22T15:53:18Z",
       "due_on": "2026-04-13T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-04-22T15:53:18Z"
     },
     "comments": 0,
     "created_at": "2026-04-11T03:11:29Z",
@@ -865,11 +945,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-04-08T14:26:22Z",
-      "updated_at": "2026-04-20T00:27:52Z",
+      "updated_at": "2026-04-22T15:53:18Z",
       "due_on": "2026-04-13T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-04-22T15:53:18Z"
     },
     "comments": 1,
     "created_at": "2026-04-11T00:53:47Z",
@@ -1050,11 +1130,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-04-08T14:26:22Z",
-      "updated_at": "2026-04-20T00:27:52Z",
+      "updated_at": "2026-04-22T15:53:18Z",
       "due_on": "2026-04-13T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-04-22T15:53:18Z"
     },
     "comments": 0,
     "created_at": "2026-04-08T14:31:44Z",

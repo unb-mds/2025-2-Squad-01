@@ -2,8 +2,62 @@
   "owner": "unb-mds",
   "repository": "2026.1-ContraDito",
   "branch": "main",
-  "sha": "48a2a6d395132adae0d6482cf47df157565d10c8",
+  "sha": "5d8a9e81616ccae26c5758ed68280d14b2764a31",
   "tree": [
+    {
+      "name": ".dockerignore",
+      "path": ".dockerignore",
+      "type": "file",
+      "sha": "2de517c5b688e0276f84ad9cecee4abb8d51265f",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 127,
+      "is_binary": false
+    },
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "663675228a286a96cb38c4677de39b0dc2e48707",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "sha": "c931e327c65b39c176f86b121fe769df7de9c730",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "template-issue.md",
+      "path": ".github/ISSUE_TEMPLATE/template-issue.md",
+      "type": "file",
+      "sha": "316a5655c81ebeeb247c4e8c9d92e49168ca7494",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 600,
+      "is_binary": false
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "c2242d476b8826a06fa53604802ab7e53def31cc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "linter.yml",
+      "path": ".github/workflows/linter.yml",
+      "type": "file",
+      "sha": "e88f7e70d578960167ac76df05b7434b70684999",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 612,
+      "is_binary": false
+    },
     {
       "name": ".gitignore",
       "path": ".gitignore",
@@ -12,6 +66,16 @@
       "mode": "100644",
       "extension": ".gitignore",
       "size": 338,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "Dockerfile",
+      "type": "file",
+      "sha": "0d9cf5a3609158d188eee78756dfcaf56069e0ed",
+      "mode": "100644",
+      "extension": "",
+      "size": 207,
       "is_binary": false
     },
     {
@@ -33,22 +97,650 @@
       "extension": ".md",
       "size": 3856,
       "is_binary": false
+    },
+    {
+      "name": "amostras",
+      "path": "amostras",
+      "type": "directory",
+      "sha": "153f2aeb8601e2b0c83f43a85801848250e0a1a1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "amostra_para_luiz.json",
+      "path": "amostras/amostra_para_luiz.json",
+      "type": "file",
+      "sha": "bef1c9140d7c032bccc0068a37a5b45a5b7d6b7f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 9872,
+      "is_binary": false
+    },
+    {
+      "name": "discursos_deputado.xml",
+      "path": "amostras/discursos_deputado.xml",
+      "type": "file",
+      "sha": "53a1eaca3cba171815d326d0cd5d5c8263773490",
+      "mode": "100644",
+      "extension": ".xml",
+      "size": 34238,
+      "is_binary": false
+    },
+    {
+      "name": "ementa_proposicao.xml",
+      "path": "amostras/ementa_proposicao.xml",
+      "type": "file",
+      "sha": "180570825588dc331a5df897e1266680de8d3616",
+      "mode": "100644",
+      "extension": ".xml",
+      "size": 959,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "app",
+      "type": "directory",
+      "sha": "31b527e4fd9ee3608518dc7b10b790bfe0229f10",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "app/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "bancos",
+      "path": "app/bancos",
+      "type": "directory",
+      "sha": "cd2679f388ca1a37427df00b6de753cd7c470092",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "supabase.py",
+      "path": "app/bancos/supabase.py",
+      "type": "file",
+      "sha": "648ba8acff979476022e455436657642ef62b40f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 388,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "app/main.py",
+      "type": "file",
+      "sha": "9f87aa71b695f2924282964df41a87cef48c908e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 970,
+      "is_binary": false
+    },
+    {
+      "name": "modelos",
+      "path": "app/modelos",
+      "type": "directory",
+      "sha": "e27665207fa575c9cdbbc98ecfaa78c6b400f73f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "schemas.py",
+      "path": "app/modelos/schemas.py",
+      "type": "file",
+      "sha": "3e640fb08f0757251e7ea70b7d260e3a2468b8e3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1401,
+      "is_binary": false
+    },
+    {
+      "name": "rotas",
+      "path": "app/rotas",
+      "type": "directory",
+      "sha": "58591732af00b166237fba1bbe0506637cc61264",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "logs.py",
+      "path": "app/rotas/logs.py",
+      "type": "file",
+      "sha": "bc85f1af8271439bd9884c46d78f43227bb7cf35",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1245,
+      "is_binary": false
+    },
+    {
+      "name": "politicos.py",
+      "path": "app/rotas/politicos.py",
+      "type": "file",
+      "sha": "12cd2c592b2ecf39c26bbc9ac666415c72670ca8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4377,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "bf7c5427afa40d877620d0fbeaf00749894da758",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 359,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "714a3056069c573d0dad25aa89114f8326a76eeb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "docs",
+      "path": "docs/docs",
+      "type": "directory",
+      "sha": "761cdd7240c7b15d89c2f53b3ffaadbdcb4ec725",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api.md",
+      "path": "docs/docs/api.md",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "arquitetura.md",
+      "path": "docs/docs/arquitetura.md",
+      "type": "file",
+      "sha": "9e1d3d66eab81ab8e58a90daf0cd4b58be2b5b3e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3223,
+      "is_binary": false
+    },
+    {
+      "name": "calculo-score.md",
+      "path": "docs/docs/calculo-score.md",
+      "type": "file",
+      "sha": "a40843b53458072f7331d278f4087a8881178f86",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4632,
+      "is_binary": false
+    },
+    {
+      "name": "execucao.md",
+      "path": "docs/docs/execucao.md",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/docs/index.md",
+      "type": "file",
+      "sha": "e791e50b5a44533b0e8d46a14551c81fbcaa78de",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2522,
+      "is_binary": false
+    },
+    {
+      "name": "lgpd.md",
+      "path": "docs/docs/lgpd.md",
+      "type": "file",
+      "sha": "7a687621e91088b8b21c2c341180d404af7c23b8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3215,
+      "is_binary": false
+    },
+    {
+      "name": "sprints",
+      "path": "docs/docs/sprints",
+      "type": "directory",
+      "sha": "e5a6229fdbd30f2b11a29691b8a4942e9523a6bc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "sprint-0.md",
+      "path": "docs/docs/sprints/sprint-0.md",
+      "type": "file",
+      "sha": "18f16277f7c0b7afc731750830e1e4dbcfd445e1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2112,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-1.md",
+      "path": "docs/docs/sprints/sprint-1.md",
+      "type": "file",
+      "sha": "9c8facf56d52b14dcedbbbc0c10c3e6b07ab8887",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2420,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-2.md",
+      "path": "docs/docs/sprints/sprint-2.md",
+      "type": "file",
+      "sha": "cefda4330cfe16610246d91e43a1ddcaa0f5256a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2482,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-3.md",
+      "path": "docs/docs/sprints/sprint-3.md",
+      "type": "file",
+      "sha": "44a167f1247880865c53757e28c93015b20299e8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3213,
+      "is_binary": false
+    },
+    {
+      "name": "stylesheets",
+      "path": "docs/docs/stylesheets",
+      "type": "directory",
+      "sha": "efe6197838f97601f9fb2d7af433e9ba5ad99684",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "extra.css",
+      "path": "docs/docs/stylesheets/extra.css",
+      "type": "file",
+      "sha": "5980f65e42308795bd929ae9eb3911b1f0b48ec4",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 223,
+      "is_binary": false
+    },
+    {
+      "name": "mkdocs.yml",
+      "path": "docs/mkdocs.yml",
+      "type": "file",
+      "sha": "5bada0c3831106e7a653af35383d5a8b67a6e6d1",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 768,
+      "is_binary": false
+    },
+    {
+      "name": "extrair_amostras.py",
+      "path": "extrair_amostras.py",
+      "type": "file",
+      "sha": "43fad8a17a413f4c158ac70387bcfded58bd008a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1003,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "f217c49329e74ebdfa22da4ddd25dea23b1bc431",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "frontend/.gitignore",
+      "type": "file",
+      "sha": "5ef6a520780202a1d6addd833d800ccb1ecac0bb",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 480,
+      "is_binary": false
+    },
+    {
+      "name": "AGENTS.md",
+      "path": "frontend/AGENTS.md",
+      "type": "file",
+      "sha": "8bd0e39085d5260e7f8faffcad2fdc45e10aef33",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 327,
+      "is_binary": false
+    },
+    {
+      "name": "CLAUDE.md",
+      "path": "frontend/CLAUDE.md",
+      "type": "file",
+      "sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 11,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "e91285cb198d7dbe0578ac29c8b53cb7fb2b0744",
+      "mode": "100644",
+      "extension": "",
+      "size": 115,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/README.md",
+      "type": "file",
+      "sha": "e215bc4ccf138bbc38ad58ad57e92135484b3c0f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1450,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "frontend/app",
+      "type": "directory",
+      "sha": "88f74de13c99e430673ed0ebf93833044b0f79f5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "favicon.ico",
+      "path": "frontend/app/favicon.ico",
+      "type": "file",
+      "sha": "718d6fea4835ec2d246af9800eddb7ffb276240c",
+      "mode": "100644",
+      "extension": ".ico",
+      "size": 25931,
+      "is_binary": false
+    },
+    {
+      "name": "globals.css",
+      "path": "frontend/app/globals.css",
+      "type": "file",
+      "sha": "a2dc41ecee5ec435200fe7cba2bde4107f823774",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 488,
+      "is_binary": false
+    },
+    {
+      "name": "layout.tsx",
+      "path": "frontend/app/layout.tsx",
+      "type": "file",
+      "sha": "976eb90df142ef2c4f3f39cee8b0e4c4f4771b62",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 719,
+      "is_binary": false
+    },
+    {
+      "name": "page.tsx",
+      "path": "frontend/app/page.tsx",
+      "type": "file",
+      "sha": "d32852d899475635520be402d76a44bc428f8bec",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 13870,
+      "is_binary": false
+    },
+    {
+      "name": "politico",
+      "path": "frontend/app/politico",
+      "type": "directory",
+      "sha": "353234cb3553f350a96bb2fdf057aea1359ff434",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "[id]",
+      "path": "frontend/app/politico/[id]",
+      "type": "directory",
+      "sha": "3950a420af4f179983dc51a98dbafafbf96ac306",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "page.tsx",
+      "path": "frontend/app/politico/[id]/page.tsx",
+      "type": "file",
+      "sha": "740a7faad6f24b6ae5ea91261bb6c3995cf93d0a",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4649,
+      "is_binary": false
+    },
+    {
+      "name": "eslint.config.mjs",
+      "path": "frontend/eslint.config.mjs",
+      "type": "file",
+      "sha": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+      "mode": "100644",
+      "extension": ".mjs",
+      "size": 465,
+      "is_binary": false
+    },
+    {
+      "name": "next.config.ts",
+      "path": "frontend/next.config.ts",
+      "type": "file",
+      "sha": "e9ffa3083ad279ecf95fd8eae59cb253e9a539c4",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 133,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "frontend/package-lock.json",
+      "type": "file",
+      "sha": "cc535a0ed72bff662178baca2db687b656c36381",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 229543,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "frontend/package.json",
+      "type": "file",
+      "sha": "c9b07a27f98093286aab4a75982343d5323a698d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 530,
+      "is_binary": false
+    },
+    {
+      "name": "postcss.config.mjs",
+      "path": "frontend/postcss.config.mjs",
+      "type": "file",
+      "sha": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "mode": "100644",
+      "extension": ".mjs",
+      "size": 94,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "frontend/public",
+      "type": "directory",
+      "sha": "c88f389de09f418da376598c42e8788d4fb6d172",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "file.svg",
+      "path": "frontend/public/file.svg",
+      "type": "file",
+      "sha": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 391,
+      "is_binary": false
+    },
+    {
+      "name": "globe.svg",
+      "path": "frontend/public/globe.svg",
+      "type": "file",
+      "sha": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1035,
+      "is_binary": false
+    },
+    {
+      "name": "next.svg",
+      "path": "frontend/public/next.svg",
+      "type": "file",
+      "sha": "5174b28c565c285e3e312ec5178be64fbeca8398",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1375,
+      "is_binary": false
+    },
+    {
+      "name": "vercel.svg",
+      "path": "frontend/public/vercel.svg",
+      "type": "file",
+      "sha": "77053960334e2e34dc584dea8019925c3b4ccca9",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 128,
+      "is_binary": false
+    },
+    {
+      "name": "window.svg",
+      "path": "frontend/public/window.svg",
+      "type": "file",
+      "sha": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 385,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.json",
+      "path": "frontend/tsconfig.json",
+      "type": "file",
+      "sha": "3a13f90a773b0facb675bf5b1a8239c8f33d36f5",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 666,
+      "is_binary": false
+    },
+    {
+      "name": "parsear_amostras.py",
+      "path": "parsear_amostras.py",
+      "type": "file",
+      "sha": "8f1d2b26b8e47b61474b5012218b708687b47a26",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1155,
+      "is_binary": false
+    },
+    {
+      "name": "pocs",
+      "path": "pocs",
+      "type": "directory",
+      "sha": "7534009ad14d9dcbd5040a797e072677387cabcb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "lote_nlp.py",
+      "path": "pocs/lote_nlp.py",
+      "type": "file",
+      "sha": "3e1d483a5df3ce37dd5f019e1dea159eac3779b0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6997,
+      "is_binary": false
+    },
+    {
+      "name": "motor_nlp",
+      "path": "pocs/motor_nlp",
+      "type": "directory",
+      "sha": "b67f142c4e527c9fe4c0dd227d96c21c54370d45",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "poc_npl.py",
+      "path": "pocs/motor_nlp/poc_npl.py",
+      "type": "file",
+      "sha": "4293bc69aa5d95acf09ab5cb8f36f7cf298e7199",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1554,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "type": "file",
+      "sha": "a26ad969c6f3d0febe5ff2c9c5af5e4deadfb9f6",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 98,
+      "is_binary": false
+    },
+    {
+      "name": "seeder_camara.py",
+      "path": "seeder_camara.py",
+      "type": "file",
+      "sha": "beb5fca1a61f7e95e55d62d8a826507921607eeb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4375,
+      "is_binary": false
+    },
+    {
+      "name": "seeder_parlamentares.py",
+      "path": "seeder_parlamentares.py",
+      "type": "file",
+      "sha": "7aa436e4f5e58e0659992bfd74e30f7ef4e47250",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9633,
+      "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-04-22T07:14:26.485122",
+  "extracted_at": "2026-04-23T07:13:18.333453",
   "method": "rest",
-  "total_items": 3,
+  "total_items": 76,
   "repository_metadata": {
     "id": 1193952158,
     "full_name": "unb-mds/2026.1-ContraDito",
     "description": null,
     "created_at": "2026-03-27T18:55:34Z",
-    "updated_at": "2026-04-21T00:32:13Z",
-    "language": null,
-    "size": 1816,
+    "updated_at": "2026-04-22T09:38:36Z",
+    "language": "Python",
+    "size": 1554,
     "stars": 2,
     "forks": 0,
-    "open_issues": 4
+    "open_issues": 2
   }
 }
