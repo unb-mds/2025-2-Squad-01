@@ -2,11 +2,53 @@
   "repository": "2026.1-ContraDito",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-04-22T07:14:26.485122",
+  "extracted_at": "2026-04-23T07:13:18.333453",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
+      {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 127,
+        "extension": ".dockerignore",
+        "path": ".dockerignore"
+      },
+      {
+        "name": ".github",
+        "type": "directory",
+        "path": ".github",
+        "children": []
+      },
+      {
+        "name": "ISSUE_TEMPLATE",
+        "type": "directory",
+        "path": ".github/ISSUE_TEMPLATE",
+        "children": []
+      },
+      {
+        "name": "template-issue.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 600,
+        "extension": ".md",
+        "path": ".github/ISSUE_TEMPLATE/template-issue.md"
+      },
+      {
+        "name": "workflows",
+        "type": "directory",
+        "path": ".github/workflows",
+        "children": []
+      },
+      {
+        "name": "linter.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 612,
+        "extension": ".yml",
+        "path": ".github/workflows/linter.yml"
+      },
       {
         "name": ".gitignore",
         "type": "file",
@@ -14,6 +56,14 @@
         "size": 338,
         "extension": ".gitignore",
         "path": ".gitignore"
+      },
+      {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 207,
+        "extension": "",
+        "path": "Dockerfile"
       },
       {
         "name": "LICENSE",
@@ -30,11 +80,507 @@
         "size": 3856,
         "extension": ".md",
         "path": "README.md"
+      },
+      {
+        "name": "amostras",
+        "type": "directory",
+        "path": "amostras",
+        "children": []
+      },
+      {
+        "name": "amostra_para_luiz.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 9872,
+        "extension": ".json",
+        "path": "amostras/amostra_para_luiz.json"
+      },
+      {
+        "name": "discursos_deputado.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 34238,
+        "extension": ".xml",
+        "path": "amostras/discursos_deputado.xml"
+      },
+      {
+        "name": "ementa_proposicao.xml",
+        "type": "file",
+        "language": "XML",
+        "size": 959,
+        "extension": ".xml",
+        "path": "amostras/ementa_proposicao.xml"
+      },
+      {
+        "name": "app",
+        "type": "directory",
+        "path": "app",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "app/__init__.py"
+      },
+      {
+        "name": "bancos",
+        "type": "directory",
+        "path": "app/bancos",
+        "children": []
+      },
+      {
+        "name": "supabase.py",
+        "type": "file",
+        "language": "Python",
+        "size": 388,
+        "extension": ".py",
+        "path": "app/bancos/supabase.py"
+      },
+      {
+        "name": "main.py",
+        "type": "file",
+        "language": "Python",
+        "size": 970,
+        "extension": ".py",
+        "path": "app/main.py"
+      },
+      {
+        "name": "modelos",
+        "type": "directory",
+        "path": "app/modelos",
+        "children": []
+      },
+      {
+        "name": "schemas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1401,
+        "extension": ".py",
+        "path": "app/modelos/schemas.py"
+      },
+      {
+        "name": "rotas",
+        "type": "directory",
+        "path": "app/rotas",
+        "children": []
+      },
+      {
+        "name": "logs.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1245,
+        "extension": ".py",
+        "path": "app/rotas/logs.py"
+      },
+      {
+        "name": "politicos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4377,
+        "extension": ".py",
+        "path": "app/rotas/politicos.py"
+      },
+      {
+        "name": "docker-compose.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 359,
+        "extension": ".yml",
+        "path": "docker-compose.yml"
+      },
+      {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs",
+        "children": []
+      },
+      {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs/docs",
+        "children": []
+      },
+      {
+        "name": "api.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 0,
+        "extension": ".md",
+        "path": "docs/docs/api.md"
+      },
+      {
+        "name": "arquitetura.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3223,
+        "extension": ".md",
+        "path": "docs/docs/arquitetura.md"
+      },
+      {
+        "name": "calculo-score.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4632,
+        "extension": ".md",
+        "path": "docs/docs/calculo-score.md"
+      },
+      {
+        "name": "execucao.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 0,
+        "extension": ".md",
+        "path": "docs/docs/execucao.md"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2522,
+        "extension": ".md",
+        "path": "docs/docs/index.md"
+      },
+      {
+        "name": "lgpd.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3215,
+        "extension": ".md",
+        "path": "docs/docs/lgpd.md"
+      },
+      {
+        "name": "sprints",
+        "type": "directory",
+        "path": "docs/docs/sprints",
+        "children": []
+      },
+      {
+        "name": "sprint-0.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2112,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-0.md"
+      },
+      {
+        "name": "sprint-1.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2420,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-1.md"
+      },
+      {
+        "name": "sprint-2.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2482,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-2.md"
+      },
+      {
+        "name": "sprint-3.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3213,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-3.md"
+      },
+      {
+        "name": "stylesheets",
+        "type": "directory",
+        "path": "docs/docs/stylesheets",
+        "children": []
+      },
+      {
+        "name": "extra.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 223,
+        "extension": ".css",
+        "path": "docs/docs/stylesheets/extra.css"
+      },
+      {
+        "name": "mkdocs.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 768,
+        "extension": ".yml",
+        "path": "docs/mkdocs.yml"
+      },
+      {
+        "name": "extrair_amostras.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1003,
+        "extension": ".py",
+        "path": "extrair_amostras.py"
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "frontend",
+        "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 480,
+        "extension": ".gitignore",
+        "path": "frontend/.gitignore"
+      },
+      {
+        "name": "AGENTS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 327,
+        "extension": ".md",
+        "path": "frontend/AGENTS.md"
+      },
+      {
+        "name": "CLAUDE.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 11,
+        "extension": ".md",
+        "path": "frontend/CLAUDE.md"
+      },
+      {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 115,
+        "extension": "",
+        "path": "frontend/Dockerfile"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1450,
+        "extension": ".md",
+        "path": "frontend/README.md"
+      },
+      {
+        "name": "app",
+        "type": "directory",
+        "path": "frontend/app",
+        "children": []
+      },
+      {
+        "name": "favicon.ico",
+        "type": "file",
+        "language": "Icon",
+        "size": 25931,
+        "extension": ".ico",
+        "path": "frontend/app/favicon.ico"
+      },
+      {
+        "name": "globals.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 488,
+        "extension": ".css",
+        "path": "frontend/app/globals.css"
+      },
+      {
+        "name": "layout.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 719,
+        "extension": ".tsx",
+        "path": "frontend/app/layout.tsx"
+      },
+      {
+        "name": "page.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 13870,
+        "extension": ".tsx",
+        "path": "frontend/app/page.tsx"
+      },
+      {
+        "name": "politico",
+        "type": "directory",
+        "path": "frontend/app/politico",
+        "children": []
+      },
+      {
+        "name": "[id]",
+        "type": "directory",
+        "path": "frontend/app/politico/[id]",
+        "children": []
+      },
+      {
+        "name": "page.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4649,
+        "extension": ".tsx",
+        "path": "frontend/app/politico/[id]/page.tsx"
+      },
+      {
+        "name": "eslint.config.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 465,
+        "extension": ".mjs",
+        "path": "frontend/eslint.config.mjs"
+      },
+      {
+        "name": "next.config.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 133,
+        "extension": ".ts",
+        "path": "frontend/next.config.ts"
+      },
+      {
+        "name": "package-lock.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 229543,
+        "extension": ".json",
+        "path": "frontend/package-lock.json"
+      },
+      {
+        "name": "package.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 530,
+        "extension": ".json",
+        "path": "frontend/package.json"
+      },
+      {
+        "name": "postcss.config.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 94,
+        "extension": ".mjs",
+        "path": "frontend/postcss.config.mjs"
+      },
+      {
+        "name": "public",
+        "type": "directory",
+        "path": "frontend/public",
+        "children": []
+      },
+      {
+        "name": "file.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 391,
+        "extension": ".svg",
+        "path": "frontend/public/file.svg"
+      },
+      {
+        "name": "globe.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 1035,
+        "extension": ".svg",
+        "path": "frontend/public/globe.svg"
+      },
+      {
+        "name": "next.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 1375,
+        "extension": ".svg",
+        "path": "frontend/public/next.svg"
+      },
+      {
+        "name": "vercel.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 128,
+        "extension": ".svg",
+        "path": "frontend/public/vercel.svg"
+      },
+      {
+        "name": "window.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 385,
+        "extension": ".svg",
+        "path": "frontend/public/window.svg"
+      },
+      {
+        "name": "tsconfig.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 666,
+        "extension": ".json",
+        "path": "frontend/tsconfig.json"
+      },
+      {
+        "name": "parsear_amostras.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1155,
+        "extension": ".py",
+        "path": "parsear_amostras.py"
+      },
+      {
+        "name": "pocs",
+        "type": "directory",
+        "path": "pocs",
+        "children": []
+      },
+      {
+        "name": "lote_nlp.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6997,
+        "extension": ".py",
+        "path": "pocs/lote_nlp.py"
+      },
+      {
+        "name": "motor_nlp",
+        "type": "directory",
+        "path": "pocs/motor_nlp",
+        "children": []
+      },
+      {
+        "name": "poc_npl.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1554,
+        "extension": ".py",
+        "path": "pocs/motor_nlp/poc_npl.py"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 98,
+        "extension": ".txt",
+        "path": "requirements.txt"
+      },
+      {
+        "name": "seeder_camara.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4375,
+        "extension": ".py",
+        "path": "seeder_camara.py"
+      },
+      {
+        "name": "seeder_parlamentares.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9633,
+        "extension": ".py",
+        "path": "seeder_parlamentares.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-04-22T07:16:44.407849",
+    "extracted_at": "2026-04-23T07:15:49.795398",
     "file_path": "data/silver/hierarchy_2026.1-ContraDito.json"
   }
 }

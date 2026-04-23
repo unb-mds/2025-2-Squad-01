@@ -2,48 +2,350 @@
   "repository": "2026.1-ContraDito",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-04-22T07:14:26.485122",
+  "analyzed_at": "2026-04-23T07:13:18.333453",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 3,
-  "total_bytes": 5254,
+  "total_files": 57,
+  "total_bytes": 393019,
   "languages": [
     {
-      "language": "Markdown",
-      "file_count": 1,
-      "total_bytes": 3856,
-      "percentage": 73.39,
+      "language": "JSON",
+      "file_count": 4,
+      "total_bytes": 240611,
+      "percentage": 61.22,
       "files": [
+        {
+          "path": "frontend/package-lock.json",
+          "name": "package-lock.json",
+          "size": 229543,
+          "extension": ".json"
+        },
+        {
+          "path": "amostras/amostra_para_luiz.json",
+          "name": "amostra_para_luiz.json",
+          "size": 9872,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "name": "tsconfig.json",
+          "size": 666,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/package.json",
+          "name": "package.json",
+          "size": 530,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "XML",
+      "file_count": 2,
+      "total_bytes": 35197,
+      "percentage": 8.96,
+      "files": [
+        {
+          "path": "amostras/discursos_deputado.xml",
+          "name": "discursos_deputado.xml",
+          "size": 34238,
+          "extension": ".xml"
+        },
+        {
+          "path": "amostras/ementa_proposicao.xml",
+          "name": "ementa_proposicao.xml",
+          "size": 959,
+          "extension": ".xml"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 12,
+      "total_bytes": 33098,
+      "percentage": 8.42,
+      "files": [
+        {
+          "path": "seeder_parlamentares.py",
+          "name": "seeder_parlamentares.py",
+          "size": 9633,
+          "extension": ".py"
+        },
+        {
+          "path": "pocs/lote_nlp.py",
+          "name": "lote_nlp.py",
+          "size": 6997,
+          "extension": ".py"
+        },
+        {
+          "path": "app/rotas/politicos.py",
+          "name": "politicos.py",
+          "size": 4377,
+          "extension": ".py"
+        },
+        {
+          "path": "seeder_camara.py",
+          "name": "seeder_camara.py",
+          "size": 4375,
+          "extension": ".py"
+        },
+        {
+          "path": "pocs/motor_nlp/poc_npl.py",
+          "name": "poc_npl.py",
+          "size": 1554,
+          "extension": ".py"
+        },
+        {
+          "path": "app/modelos/schemas.py",
+          "name": "schemas.py",
+          "size": 1401,
+          "extension": ".py"
+        },
+        {
+          "path": "app/rotas/logs.py",
+          "name": "logs.py",
+          "size": 1245,
+          "extension": ".py"
+        },
+        {
+          "path": "parsear_amostras.py",
+          "name": "parsear_amostras.py",
+          "size": 1155,
+          "extension": ".py"
+        },
+        {
+          "path": "extrair_amostras.py",
+          "name": "extrair_amostras.py",
+          "size": 1003,
+          "extension": ".py"
+        },
+        {
+          "path": "app/main.py",
+          "name": "main.py",
+          "size": 970,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Markdown",
+      "file_count": 15,
+      "total_bytes": 30063,
+      "percentage": 7.65,
+      "files": [
+        {
+          "path": "docs/docs/calculo-score.md",
+          "name": "calculo-score.md",
+          "size": 4632,
+          "extension": ".md"
+        },
         {
           "path": "README.md",
           "name": "README.md",
           "size": 3856,
           "extension": ".md"
+        },
+        {
+          "path": "docs/docs/arquitetura.md",
+          "name": "arquitetura.md",
+          "size": 3223,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/lgpd.md",
+          "name": "lgpd.md",
+          "size": 3215,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/sprints/sprint-3.md",
+          "name": "sprint-3.md",
+          "size": 3213,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/index.md",
+          "name": "index.md",
+          "size": 2522,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/sprints/sprint-2.md",
+          "name": "sprint-2.md",
+          "size": 2482,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/sprints/sprint-1.md",
+          "name": "sprint-1.md",
+          "size": 2420,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/docs/sprints/sprint-0.md",
+          "name": "sprint-0.md",
+          "size": 2112,
+          "extension": ".md"
+        },
+        {
+          "path": "frontend/README.md",
+          "name": "README.md",
+          "size": 1450,
+          "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "Icon",
+      "file_count": 1,
+      "total_bytes": 25931,
+      "percentage": 6.6,
+      "files": [
+        {
+          "path": "frontend/app/favicon.ico",
+          "name": "favicon.ico",
+          "size": 25931,
+          "extension": ".ico"
+        }
+      ]
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 4,
+      "total_bytes": 19371,
+      "percentage": 4.93,
+      "files": [
+        {
+          "path": "frontend/app/page.tsx",
+          "name": "page.tsx",
+          "size": 13870,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/app/politico/[id]/page.tsx",
+          "name": "page.tsx",
+          "size": 4649,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/app/layout.tsx",
+          "name": "layout.tsx",
+          "size": 719,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/next.config.ts",
+          "name": "next.config.ts",
+          "size": 133,
+          "extension": ".ts"
+        }
+      ]
+    },
+    {
+      "language": "SVG Image",
+      "file_count": 5,
+      "total_bytes": 3314,
+      "percentage": 0.84,
+      "files": [
+        {
+          "path": "frontend/public/next.svg",
+          "name": "next.svg",
+          "size": 1375,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/globe.svg",
+          "name": "globe.svg",
+          "size": 1035,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/file.svg",
+          "name": "file.svg",
+          "size": 391,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/window.svg",
+          "name": "window.svg",
+          "size": 385,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/vercel.svg",
+          "name": "vercel.svg",
+          "size": 128,
+          "extension": ".svg"
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 3,
+      "total_bytes": 1739,
+      "percentage": 0.44,
+      "files": [
+        {
+          "path": "docs/mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 768,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/linter.yml",
+          "name": "linter.yml",
+          "size": 612,
+          "extension": ".yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 359,
+          "extension": ".yml"
         }
       ]
     },
     {
       "language": "No Extension",
-      "file_count": 1,
-      "total_bytes": 1060,
-      "percentage": 20.18,
+      "file_count": 3,
+      "total_bytes": 1382,
+      "percentage": 0.35,
       "files": [
         {
           "path": "LICENSE",
           "name": "LICENSE",
           "size": 1060,
           "extension": ""
+        },
+        {
+          "path": "Dockerfile",
+          "name": "Dockerfile",
+          "size": 207,
+          "extension": ""
+        },
+        {
+          "path": "frontend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 115,
+          "extension": ""
         }
       ]
     },
     {
       "language": "Git Ignore",
-      "file_count": 1,
-      "total_bytes": 338,
-      "percentage": 6.43,
+      "file_count": 2,
+      "total_bytes": 818,
+      "percentage": 0.21,
       "files": [
+        {
+          "path": "frontend/.gitignore",
+          "name": ".gitignore",
+          "size": 480,
+          "extension": ".gitignore"
+        },
         {
           "path": ".gitignore",
           "name": ".gitignore",
@@ -51,10 +353,78 @@
           "extension": ".gitignore"
         }
       ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 711,
+      "percentage": 0.18,
+      "files": [
+        {
+          "path": "frontend/app/globals.css",
+          "name": "globals.css",
+          "size": 488,
+          "extension": ".css"
+        },
+        {
+          "path": "docs/docs/stylesheets/extra.css",
+          "name": "extra.css",
+          "size": 223,
+          "extension": ".css"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 2,
+      "total_bytes": 559,
+      "percentage": 0.14,
+      "files": [
+        {
+          "path": "frontend/eslint.config.mjs",
+          "name": "eslint.config.mjs",
+          "size": 465,
+          "extension": ".mjs"
+        },
+        {
+          "path": "frontend/postcss.config.mjs",
+          "name": "postcss.config.mjs",
+          "size": 94,
+          "extension": ".mjs"
+        }
+      ]
+    },
+    {
+      "language": "Docker Ignore",
+      "file_count": 1,
+      "total_bytes": 127,
+      "percentage": 0.03,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "name": ".dockerignore",
+          "size": 127,
+          "extension": ".dockerignore"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 98,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "requirements.txt",
+          "name": "requirements.txt",
+          "size": 98,
+          "extension": ".txt"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-04-22T07:16:44.407635",
+    "extracted_at": "2026-04-23T07:15:49.794648",
     "file_path": "data/silver/language_analysis_2026.1-ContraDito.json"
   }
 }
