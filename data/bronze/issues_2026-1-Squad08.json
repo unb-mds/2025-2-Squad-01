@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-23T06:31:54.773954",
+      "extracted_at": "2026-04-24T06:57:49.575435",
       "file_path": "data/bronze/issues_2026-1-Squad08.json",
       "record_count": 33
     }
@@ -134,11 +134,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -308,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -502,11 +502,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -676,11 +676,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -892,11 +892,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1066,11 +1066,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1185,7 +1185,7 @@
         "description": "Inclui definição e melhoria de práticas, fluxos, cerimônias, organização e regras do projeto."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1240,18 +1240,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-21T00:12:39Z",
-    "updated_at": "2026-04-21T00:12:39Z",
-    "closed_at": null,
+    "updated_at": "2026-04-23T16:05:07Z",
+    "closed_at": "2026-04-23T16:05:07Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -1297,7 +1297,27 @@
       "total_blocking": 0
     },
     "body": "## Objetivo\n\nDefinir um padrão de mensagens de commit para o projeto, garantindo maior organização do histórico do repositório, melhor rastreabilidade das alterações e maior clareza para toda a equipe durante o desenvolvimento.\n\n## Descrição\n\nDurante o desenvolvimento, diferentes membros da equipe podem realizar commits com formatos distintos, o que dificulta a leitura do histórico e a identificação rápida do tipo de alteração realizada.\n\nPara evitar isso, será criada uma convenção de commits baseada em prefixos que indiquem a natureza da mudança realizada.\n\nEssa padronização permitirá:\n- melhor leitura do histórico\n- maior organização do repositório\n- rastreamento mais fácil de mudanças\n- melhor manutenção do projeto\n- integração mais profissional entre a equipe\n\nTarefas:\n- Definir os prefixos oficiais\n- Documentar o significado de cada prefixo\n- Validar o padrão com a equipe\n- Adicionar o padrão ao repositório\n- Orientar a equipe sobre o uso correto\n- Aplicar o padrão nos próximos commits\n\nCritérios de Aceitação:\n- O padrão de commits está documentado\n- Os prefixos foram definidos\n- O formato está claro para a equipe\n- O repositório contém a convenção registrada\n- Os próximos commits seguem o padrão definido\n\nDefinição de Pronto (DoD):\n- Convenção definida\n- Documentação criada\n- Equipe alinhada\n- Repositório atualizado com o padrão",
-    "closed_by": null,
+    "closed_by": {
+      "login": "thatsrenan",
+      "id": 161871698,
+      "node_id": "U_kgDOCaX3Ug",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thatsrenan",
+      "html_url": "https://github.com/thatsrenan",
+      "followers_url": "https://api.github.com/users/thatsrenan/followers",
+      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
+      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
+      "repos_url": "https://api.github.com/users/thatsrenan/repos",
+      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/29/reactions",
       "total_count": 0,
@@ -1312,7 +1332,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/29/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad08"
   },
@@ -1444,11 +1464,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1618,11 +1638,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -2465,7 +2485,7 @@
         "description": "Identidade visual e UX : cores, tipografia, layout, componentes e prototipação."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2520,18 +2540,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 3,
+      "open_issues": 6,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-23T04:14:24Z",
+      "updated_at": "2026-04-24T01:16:12Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-04-13T18:26:36Z",
-    "updated_at": "2026-04-22T14:01:52Z",
-    "closed_at": null,
+    "updated_at": "2026-04-24T01:16:12Z",
+    "closed_at": "2026-04-24T01:16:12Z",
     "assignee": {
       "login": "CaioMota16",
       "id": 160689206,
@@ -2577,7 +2597,27 @@
       "total_blocking": 0
     },
     "body": "# Descrição\nA identidade visual é responsável por transmitir a proposta do sistema por meio de elementos como cores, tipografia, estilo e componentes visuais.\n\nEsta tarefa consiste em pesquisar referências, gerar ideias e documentar diretrizes iniciais que poderão ser usadas no design da interface (UI) do sistema.\n\n# Tarefas\n\n Definir o propósito e público-alvo do projeto\n Pesquisar referências visuais (sites, apps, sistemas similares)\n Definir possíveis paletas de cores\n Escolher estilos de tipografia (ex: moderna, formal, minimalista)\n Pensar em identidade (ex: mais séria, tecnológica, amigável, etc.)\n Criar um moodboard (ex: Figma, Pinterest)\n Esboçar ideias de logo (opcional)\n Documentar decisões iniciais de design\n\n# Critérios de Aceitação\n\n Existe uma proposta clara de identidade visual\n Paleta de cores definida (mesmo que inicial)\n Tipografia sugerida\n Referências visuais documentadas\n Estilo do projeto (ex: moderno, institucional, etc.) está definido\n\n# Definição de Pronto (DoD)\n\nDocumento com diretrizes visuais criado\nReferências organizadas (links ou imagens)\nIdentidade inicial definida",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/20/reactions",
       "total_count": 0,
@@ -2592,7 +2632,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/20/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad08"
   },
