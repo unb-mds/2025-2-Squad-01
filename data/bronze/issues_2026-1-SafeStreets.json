@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-24T06:57:42.061585",
+      "extracted_at": "2026-04-25T06:14:48.782793",
       "file_path": "data/bronze/issues_2026-1-SafeStreets.json",
       "record_count": 25
     }
@@ -105,10 +105,10 @@
         "site_admin": false
       },
       "open_issues": 4,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-21T23:55:20Z",
-      "updated_at": "2026-04-24T01:19:17Z",
+      "updated_at": "2026-04-24T22:18:17Z",
       "due_on": null,
       "closed_at": null
     },
@@ -279,16 +279,16 @@
         "site_admin": false
       },
       "open_issues": 4,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-21T23:55:20Z",
-      "updated_at": "2026-04-24T01:19:17Z",
+      "updated_at": "2026-04-24T22:18:17Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-24T01:17:00Z",
-    "updated_at": "2026-04-24T01:17:00Z",
+    "updated_at": "2026-04-25T05:21:24Z",
     "closed_at": null,
     "assignee": {
       "login": "matheusqsa",
@@ -334,7 +334,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição  \n\n> A **📋 Descrição** deve esclarecer o objetivo da issue e explicar ela.\n\nImplementar um pipeline de **CI/CD (Integração Contínua e Entrega Contínua)** para automatizar processos de build, testes e deploy da aplicação.  \nO objetivo é garantir maior qualidade no código, reduzir erros manuais e acelerar o ciclo de desenvolvimento.\n\nO pipeline deve seguir boas práticas de DevOps, incluindo validação automática, padronização e segurança no processo de entrega.\n\n**Prefixos:** Todo título deve conter pelo menos um desses:  \n- **[DOCS]** (documentação)  \n- **[FEAT]** (funcionalidade do projeto)  \n- **[BUG]** (problema no código)  \n\n---\n\n## ✅ Tarefas *(Opcional para documentação e estudos)*  \n\n\n> As **✅ Tarefas** servem para estabelecer uma trajetória/guia claro antes da implementação, evitando confusão e facilitando feedback.\n\n- [ ] Configurar ferramenta de CI (ex: GitHub Actions, GitLab CI)  \n- [ ] Criar pipeline de build automatizado  \n- [ ] Configurar execução de testes automatizados  \n- [ ] Implementar validação de código (lint/format)  \n- [ ] Configurar pipeline de deploy (CD)  \n- [ ] Definir ambientes (dev, staging, produção)  \n- [ ] Configurar variáveis de ambiente e secrets  \n- [ ] Implementar notificações de status (sucesso/falha)  \n- [ ] Documentar o fluxo de CI/CD  \n\n**EX1:** Pipeline executando testes a cada push  \n**EX2:** Deploy automático após merge na branch principal  \n\n---\n\n## 🔗 Contexto Adicional  \n\n> O **🔗 Contexto Adicional** serve para incluir referências, cheat sheets, observações, links relevantes, conexão com outras issues etc.\n\n- Utilizar integração com repositório Git  \n- Garantir que builds falhem em caso de erro  \n- Automatizar o máximo possível do fluxo  \n- Considerar rollback em caso de falha no deploy  \n- Garantir segurança no uso de secrets  \n\n",
+    "body": "[DOCS] Pesquisa Técnica e Planejamento de CI/CD\n## 📋 Descrição\n\nEsta issue documenta o estudo sobre a implementação de um pipeline de CI/CD (Integração Contínua e Entrega Contínua) para o projeto SafeStreets. O foco é automatizar a validação do código Python/FastAPI e garantir que as novas funcionalidades, como a extração de dados via IA, não quebrem o sistema.\n\nO pipeline visa transformar o fluxo de trabalho manual em um processo automatizado, desde o envio do código ao GitHub até a disponibilização em um ambiente de execução controlado.\n## ✅ Tarefas\n\n    [x] Documentar o fluxo de CI/CD para o Squad 01.\n\n    [ ] Configurar GitHub Actions para rodar o pytest automaticamente em cada Push.\n\n    [ ] Implementar validação de linting (Flake8 ou Black) para padronização do código.\n\n    [ ] Configurar GitHub Secrets para gerenciar a GOOGLE_API_KEY de forma segura.\n\n    [ ] Criar pipeline de Build para a imagem Docker do backend.\n\n## 🔗 Contexto Adicional (Estudo Técnico)\n### 1. Integração Contínua (CI) no SafeStreets\n\nA Integração Contínua é a prática de mesclar o código dos desenvolvedores em um repositório compartilhado várias vezes ao dia para detectar erros precocemente.\n\n    Pipeline de Testes: Utilizaremos o pytest e o httpx para validar endpoints críticos como o /health.\n\n    Fail Fast: O pipeline será configurado para falhar imediatamente caso os testes unitários falhem, impedindo que bugs cheguem à branch main.\n\n### 2. Entrega e Implantação Contínua (CD)\n\nO CD automatiza a entrega do software em ambientes de teste ou produção após a fase de build.\n\n    Docker: O uso de contêineres garante que o pipeline execute o software em um ambiente idêntico ao de desenvolvimento, eliminando conflitos de infraestrutura.\n\n### 3. Segurança e Gerenciamento de Secrets\n\nPara o funcionamento da extração de crimes, o projeto utiliza a chave de API do Gemini.\n\n    GitHub Secrets: Nenhuma credencial ou chave (como a GOOGLE_API_KEY) deve ser escrita diretamente no código ou no pipeline.\n\n    Proteção de Dados: Utilizaremos o recurso de Secrets do GitHub para injetar essas variáveis de forma segura apenas durante a execução do pipeline, mantendo a conformidade com o arquivo .gitignore já implementado no projeto.\n\n## 📌 Referências Técnicas\n\n   * [Arquitetura Miro/C4](https://miro.com/app/board/uXjVGgEjnnc=/?share_link_id=911856631523) — Diagramas de Containers e Componentes.\n\n   * [PR #26 - Setup Backend](https://github.com/unb-mds/2026-1-SafeStreets/pull/26) — Estrutura inicial do FastAPI e Routers.\n\n   * [Guia de Infraestrutura (Docker & FastAPI)](https://claude.ai/share/a3ef942c-6d89-451a-a521-cfdc1905607a) — Roteiro prático de implementação do Squad.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/24/reactions",
@@ -483,16 +483,16 @@
         "site_admin": false
       },
       "open_issues": 4,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-21T23:55:20Z",
-      "updated_at": "2026-04-24T01:19:17Z",
+      "updated_at": "2026-04-24T22:18:17Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-24T01:13:18Z",
-    "updated_at": "2026-04-24T01:13:18Z",
+    "updated_at": "2026-04-24T18:36:07Z",
     "closed_at": null,
     "assignee": {
       "login": "jorgevasquez25",
@@ -666,10 +666,10 @@
         "site_admin": false
       },
       "open_issues": 4,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-21T23:55:20Z",
-      "updated_at": "2026-04-24T01:19:17Z",
+      "updated_at": "2026-04-24T22:18:17Z",
       "due_on": null,
       "closed_at": null
     },
