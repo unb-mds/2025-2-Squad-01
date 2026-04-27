@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-26T06:54:39.345546",
+      "extracted_at": "2026-04-27T07:30:34.064117",
       "file_path": "data/bronze/issues_2026-1-SafeStreets.json",
       "record_count": 26
     }
@@ -288,7 +288,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-24T01:19:17Z",
-    "updated_at": "2026-04-24T01:19:17Z",
+    "updated_at": "2026-04-26T14:14:25Z",
     "closed_at": null,
     "assignee": {
       "login": "EdsonToppzera",
@@ -334,7 +334,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição  \n\n> A **📋 Descrição** deve esclarecer o objetivo da issue e explicar ela.\n\nRealizar um estudo sobre **TypeScript**, compreendendo seus conceitos fundamentais e como aplicá-lo no desenvolvimento de aplicações modernas.  \nO objetivo é aprender tipagem estática, melhorar a qualidade do código e reduzir erros em tempo de desenvolvimento.\n\n---\n\n## ✅ Tarefas *(Opcional para documentação e estudos)*  \n\n> As **✅ Tarefas** servem para estabelecer uma trajetória/guia claro antes da implementação, evitando confusão e facilitando feedback.\n\n- [ ] Entender o que é TypeScript e suas vantagens  \n- [ ] Configurar ambiente (Node.js + TypeScript)  \n- [ ] Aprender tipos básicos (string, number, boolean, etc.)  \n- [ ] Trabalhar com interfaces e types  \n- [ ] Entender funções tipadas  \n- [ ] Trabalhar com generics  \n- [ ] Entender enums e unions  \n- [ ] Integrar TypeScript com projetos JavaScript existentes  \n- [ ] Criar pequenos exemplos práticos  \n\n**EX1:** Criar função tipada de soma  \n**EX2:** Criar interface para um objeto `User`  \n\n---\n\n## 🔗 Contexto Adicional  \n\n\n> O **🔗 Contexto Adicional** serve para incluir referências, cheat sheets, observações, links relevantes, conexão com outras issues etc.\n\n- ...  \n",
+    "body": "## 📋 Descrição  \n\nRealizar um estudo sobre **TypeScript**, compreendendo seus conceitos fundamentais e como aplicá-lo no desenvolvimento de aplicações modernas.  \nO objetivo é aprender tipagem estática, melhorar a qualidade do código e reduzir erros em tempo de desenvolvimento.\n\nO TypeScript é um superconjunto (superset) sintático estrito do JavaScript. Isso significa que ele adiciona recursos extras à linguagem base, sendo o principal deles a tipagem estática. Todo código JavaScript válido também é um código TypeScript válido, mas o TypeScript permite definir os formatos exatos (tipos) dos dados que o sistema irá processar.\n\nComo o Node.js nativo não entendem TypeScript diretamente, o código escrito em TypeScript passa por um processo de compilação (transpilação) onde é convertido em JavaScript puro antes de ser executado, permitindo que erros sejam descobertos antes mesmo de chegar no user. O Node.js é um ambiente de execução (runtime) que permite rodar código JavaScript no lado do servidor (Backend), ou seja, diretamente no computador, sem precisar de um navegador aberto.\n\nExemplo da tipagem estática do TypeScript:\n```\nfunction somar(a: number, b: number): number {\n  return a + b;\n}\n\nlet resultado = somar(10, 5); \n\nconsole.log(resultado); // Vai compilar com sucesso e imprimir 15.\n```\nEssa tipagem estática da mais segurança ao código, deixa ele mais previsível ao deixar claro o que ele quer.\n\n---\n\n## ✅ Tarefas\n\n- [ ] Entender o que é TypeScript e suas vantagens  \n- [ ] Configurar ambiente (Node.js + TypeScript)  \n- [ ] Aprender tipos básicos (string, number, boolean, etc.)  \n- [ ] Trabalhar com interfaces e types  \n- [ ] Entender funções tipadas  \n- [ ] Trabalhar com generics  \n- [ ] Entender enums e unions  \n- [ ] Integrar TypeScript com projetos JavaScript existentes  \n- [ ] Criar pequenos exemplos práticos  \n\n**EX1:** Criar função tipada de soma  \n**EX2:** Criar interface para um objeto `User`  \n\n---\n\n## 🔗 Contexto Adicional  \n\n\n> O **🔗 Contexto Adicional** serve para incluir referências, cheat sheets, observações, links relevantes, conexão com outras issues etc.\n\n- ...  \n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/25/reactions",

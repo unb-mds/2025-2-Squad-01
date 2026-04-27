@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-26T06:54:48.919911",
+      "extracted_at": "2026-04-27T07:30:43.667933",
       "file_path": "data/bronze/issues_2026-1-Squad08.json",
       "record_count": 33
     }
@@ -134,11 +134,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -308,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -447,7 +447,7 @@
         "description": "New feature or request"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -502,18 +502,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-04-21T13:33:57Z",
-    "updated_at": "2026-04-25T20:58:50Z",
-    "closed_at": null,
+    "updated_at": "2026-04-26T19:08:33Z",
+    "closed_at": "2026-04-26T19:08:33Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -558,8 +558,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# Melhorar código de consumo de API (aprendizado)\n\n## Contexto\nEstou iniciando estudos sobre consumo de APIs em Python e implementei uma função básica para buscar proposições na API da Câmara dos Deputados.\n\nO código já realiza requisição, tratamento simples de erro (504) e retorno dos dados, mas ainda pode ser melhorado para fins de aprendizado.\n\n## Objetivo\nEvoluir o código gradualmente para aprender boas práticas de consumo de API, mantendo a simplicidade.\n\n## Escopo\n- Melhorar o código atual sem deixar complexo\n- Aprender conceitos básicos de APIs\n- Tornar o código mais flexível e organizado\n\n## Melhorias propostas\n\n### 🟢 Nível 1 — Organização básica\n- [x] Adicionar comentários explicando cada parte do código\n- [x] Melhorar nomes de variáveis (mais claros)\n- [x] Adicionar print formatado dos resultados\n\n### 🟡 Nível 2 — Parâmetros na requisição\n- [x] Permitir alterar a quantidade de itens (`itens`)\n- [x] Criar parâmetro na função para isso:\n  def listar_proposicoes(qtd=5):\n Testar com diferentes valores\n\n### 🟠 Nível 3 — Filtros simples\n- [ ]  Adicionar filtro por ano\n- [ ]  Adicionar filtro por tipo (ex: PL, PEC)\n- [ ]  Entender como a API recebe parâmetros\n\n### 🔵 Nível 4 — Tratamento de erro\n- [ ]  Explicar melhor quando a API falha\n- [ ]  Melhorar mensagens de erro\n- [ ]  Testar comportamento sem internet",
-    "closed_by": null,
+    "body": "# Melhorar código de consumo de API (aprendizado)\n\n## Contexto\nEstou iniciando estudos sobre consumo de APIs em Python e implementei uma função básica para buscar proposições na API da Câmara dos Deputados.\n\nO código já realiza requisição, tratamento simples de erro (504) e retorno dos dados, mas ainda pode ser melhorado para fins de aprendizado.\n\n## Objetivo\nEvoluir o código gradualmente para aprender boas práticas de consumo de API, mantendo a simplicidade.\n\n## Escopo\n- Melhorar o código atual sem deixar complexo\n- Aprender conceitos básicos de APIs\n- Tornar o código mais flexível e organizado\n\n## Melhorias propostas\n\n### 🟢 Nível 1 — Organização básica\n- [x] Adicionar comentários explicando cada parte do código\n- [x] Melhorar nomes de variáveis (mais claros)\n- [x] Adicionar print formatado dos resultados\n\n### 🟡 Nível 2 — Parâmetros na requisição\n- [x] Permitir alterar a quantidade de itens (`itens`)\n- [x] Criar parâmetro na função para isso:\n  def listar_proposicoes(qtd=5):\n Testar com diferentes valores\n\n### 🟠 Nível 3 — Filtros simples\n- [x]  Adicionar filtro por ano\n- [x]  Adicionar filtro por tipo (ex: PL, PEC)\n- [x]  Entender como a API recebe parâmetros\n\n### 🔵 Nível 4 — Tratamento de erro\n- [x]  Explicar melhor quando a API falha\n- [x]  Melhorar mensagens de erro\n- [x]  Testar comportamento sem internet",
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/33/reactions",
       "total_count": 0,
@@ -574,7 +594,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/33/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad08"
   },
@@ -676,11 +696,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -912,11 +932,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1086,11 +1106,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1280,11 +1300,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -1428,7 +1448,7 @@
         "description": "Inclui definição e melhoria de práticas, fluxos, cerimônias, organização e regras do projeto."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1504,18 +1524,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-21T00:08:43Z",
-    "updated_at": "2026-04-21T00:08:43Z",
-    "closed_at": null,
+    "updated_at": "2026-04-26T20:18:45Z",
+    "closed_at": "2026-04-26T20:18:45Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -1561,7 +1581,27 @@
       "total_blocking": 0
     },
     "body": "## Objetivo\n\nAnalisar e definir qual banco de dados será utilizado no projeto, garantindo compatibilidade com a arquitetura escolhida, com o backend e com as necessidades futuras do sistema.\n\n## Descrição\n\nAntes de iniciar a implementação da persistência de dados, é necessário estudar as opções de banco de dados disponíveis para identificar a solução mais adequada ao projeto.\n\nA escolha do banco deve considerar:\n\n- compatibilidade com Python\n- integração com Flask\n- armazenamento de dados estruturados\n- desempenho\n- escalabilidade\n- facilidade de manutenção\n- suporte à futura integração com IA\n- facilidade de uso pela equipe\n\nA definição correta do banco de dados reduz riscos de:\n\n- retrabalho futuro\n- problemas de performance\n- limitações de modelagem\n- dificuldades de integração\n\n---\n\n## Tarefas\n\n- Levantar opções de banco de dados relacionais\n- Comparar PostgreSQL com outras alternativas possíveis\n- Verificar compatibilidade com Flask\n- Verificar compatibilidade com SQLAlchemy\n- Verificar compatibilidade com psycopg\n- Avaliar suporte para armazenamento de dados textuais\n- Avaliar desempenho para consultas futuras\n- Identificar limitações técnicas\n- Documentar a decisão final\n- Registrar a tecnologia escolhida no repositório\n\n---\n\n## Tecnologias a avaliar\n\nPossíveis opções:\n\n- PostgreSQL\n- MySQL\n- SQLite *(apenas para testes locais)*\n\n## Pontos de análise\n\nA avaliação deverá considerar:\n\n### Compatibilidade\n- Python\n- Flask\n- SQLAlchemy\n- psycopg\n\n### Funcionalidades\n- consultas complexas\n- integridade relacional\n- suporte a JSON\n- indexação\n- performance\n\n### Manutenção\n- facilidade de configuração\n- curva de aprendizado\n- documentação\n- suporte da comunidade\n\n## Critérios de Aceitação\n\n- O banco de dados foi definido\n- A escolha está documentada\n- A compatibilidade com o backend foi validada\n- As vantagens e limitações foram registradas\n- A equipe entende a decisão tomada\n\n## Definição de Pronto (DoD)\n\n- Estudo concluído\n- Banco definido\n- Justificativa documentada\n- Compatibilidade validada\n- Documentação adicionada ao repositório",
-    "closed_by": null,
+    "closed_by": {
+      "login": "thatsrenan",
+      "id": 161871698,
+      "node_id": "U_kgDOCaX3Ug",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thatsrenan",
+      "html_url": "https://github.com/thatsrenan",
+      "followers_url": "https://api.github.com/users/thatsrenan/followers",
+      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
+      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
+      "repos_url": "https://api.github.com/users/thatsrenan/repos",
+      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/28/reactions",
       "total_count": 0,
@@ -1576,7 +1616,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad08/issues/28/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad08"
   },
@@ -1678,11 +1718,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -2580,11 +2620,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 12,
+      "open_issues": 2,
+      "closed_issues": 14,
       "state": "open",
       "created_at": "2026-04-20T16:24:26Z",
-      "updated_at": "2026-04-25T14:13:46Z",
+      "updated_at": "2026-04-26T20:18:45Z",
       "due_on": "2026-04-26T00:00:00Z",
       "closed_at": null
     },
@@ -3373,9 +3413,9 @@
       "due_on": "2026-04-19T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-04-13T18:01:10Z",
-    "updated_at": "2026-04-19T18:25:48Z",
+    "updated_at": "2026-04-26T19:11:34Z",
     "closed_at": "2026-04-19T18:25:48Z",
     "assignee": {
       "login": "thatsrenan",
