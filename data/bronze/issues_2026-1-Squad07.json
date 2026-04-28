@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-04-27T07:30:42.004876",
+      "extracted_at": "2026-04-28T07:27:12.475010",
       "file_path": "data/bronze/issues_2026-1-Squad07.json",
       "record_count": 45
     }
@@ -152,11 +152,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
@@ -1945,14 +1945,14 @@
         "description": "Primeira release"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-23T19:26:06Z",
-    "updated_at": "2026-04-23T19:26:18Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T00:24:35Z",
+    "closed_at": "2026-04-28T00:24:35Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "type": null,
@@ -1969,7 +1969,27 @@
       "total_blocking": 0
     },
     "body": "Criar e configurar a estrutura básica dos repositórios para garantir o início do desenvolvimento.\n\n[ ] Repositório criado no GitHub com .gitignore adequado.\n\n[ ] Frontend inicializado com Vite + React + TypeScript.\n\n[ ] Backend inicializado com FastAPI.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/35/reactions",
       "total_count": 0,
@@ -1984,7 +2004,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/35/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2049,7 +2069,7 @@
         "description": "Definições estruturais, padrões de projeto e tecnologias base."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2104,18 +2124,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-23T02:37:37Z",
-    "updated_at": "2026-04-23T02:37:37Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T05:35:39Z",
+    "closed_at": "2026-04-28T05:35:39Z",
     "assignee": {
       "login": "ViniciusA05",
       "id": 227692461,
@@ -2152,7 +2172,27 @@
       "total_blocking": 0
     },
     "body": "**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nSempre fico frustrado quando ocorre o problema \"na minha máquina funciona\", devido a versões diferentes de bancos e dependências, ou quando um código quebrado é \"mergeado\" na branch principal.\n\n**Descreva a solução desejada**\nCriar um arquivo docker-compose.yml para levantar o banco de dados e a aplicação simultaneamente. Além disso, criar um workflow no GitHub Actions (CI/CD) para rodar verificações de código automaticamente a cada Pull Request.\n\n**Descreva as alternativas que você considerou**\nInstalar o PostgreSQL localmente na máquina de cada desenvolvedor, o que consome muito tempo de setup e gera conflitos de portas/ambientes.\n\n**Contexto adicional**\n- [ ] Arquivo docker-compose.yml funcional (Banco de Dados disponível).\n\n- [ ] Arquivo .github/workflows/main.yml criado.\n\n- [ ] Ação de lint/formatação (ex: flake8 ou black para Python) ativada no pipeline.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/33/reactions",
       "total_count": 0,
@@ -2167,7 +2207,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/33/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2223,7 +2263,7 @@
         "description": "Urgente / O sistema quebrou ou está travando o trabalho."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2278,18 +2318,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-23T02:34:35Z",
-    "updated_at": "2026-04-23T02:37:44Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T00:24:34Z",
+    "closed_at": "2026-04-28T00:24:34Z",
     "assignee": {
       "login": "Paulodemczuk",
       "id": 226184285,
@@ -2326,7 +2366,27 @@
       "total_blocking": 0
     },
     "body": "**Descreva o erro**\nO Product Backlog oficial do projeto está incompleto e não reflete o User Story Mapping atualizado, deixando a equipe de engenharia sem visibilidade detalhada das tarefas (dívida técnica da sprint passada). #21 #22 \nhttps://miro.com/app/board/uXjVHdj61Cg=/?share_link_id=206476112755\n\n**Correção**\nRevisar a documentação do projeto e o board de gestão, cadastrando todas as histórias de usuário mapeadas, priorizando o que é MVP (Release 1) e o que fica para o final do semestre (Release 2). Além disso, deve ser realizado uma atualização dos documentos de estudos no repositório.\n\n**Especificações**\nO erro pode ser verificado diretamente no Board de Gestão do projeto, que carece da transcrição das Sprints e das definições oficiais de cada Épico.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/32/reactions",
       "total_count": 0,
@@ -2341,7 +2401,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/32/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2406,7 +2466,7 @@
         "description": "Telas e interface (HTML, CSS, React, etc)."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2461,18 +2521,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-23T02:31:15Z",
-    "updated_at": "2026-04-24T20:50:42Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T00:24:34Z",
+    "closed_at": "2026-04-28T00:24:34Z",
     "assignee": {
       "login": "Jonathan-Carpaneda",
       "id": 102928460,
@@ -2509,7 +2569,27 @@
       "total_blocking": 0
     },
     "body": "**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nInicializar o projeto base utilizando Next.js, configurando as pastas principais e instalando a biblioteca de estilos Tailwind CSS para agilizar a criação dos componentes.\n\n**Descreva a solução desejada**\nInicializar o projeto base utilizando Next.js, configurando as pastas principais e instalando a biblioteca de estilos Tailwind CSS para agilizar a criação dos componentes. Conferir de acordo com os estudos da issue #3 #14 e #19 .\n\n**Descreva as alternativas que você considerou**\nUtilizar React puro (Create React App/Vite), porém o Next.js foi a tecnologia validada nos estudos anteriores (Sprint 01) devido ao seu sistema de roteamento simplificado.\n\n**Contexto adicional**\nCritérios de Aceite para a tarefa:\n\n- [x] Projeto Next.js criado.\n\n- [x] Tailwind CSS instalado e configurado globalmente.\n\n- [x] Arquitetura básica de pastas (components, pages ou app) criada.\n\n- [x] Projeto rodando localmente sem erros na porta padrão (ex: localhost:3000).\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/31/reactions",
       "total_count": 0,
@@ -2524,7 +2604,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/31/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2589,7 +2669,7 @@
         "description": "Servidor e regras de negócio."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2644,18 +2724,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-23T02:27:54Z",
-    "updated_at": "2026-04-23T02:27:54Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T00:24:34Z",
+    "closed_at": "2026-04-28T00:24:34Z",
     "assignee": {
       "login": "pedrolrm",
       "id": 141690806,
@@ -2692,7 +2772,27 @@
       "total_blocking": 0
     },
     "body": "**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nO time de front-end fica travado pois não temos um servidor rodando para aceitar conexões e a aplicação de IA não tem um ambiente Python configurado para criar os scripts.\n\n**Descreva a solução desejada**\nInicializar o repositório base com Python, configurando o ambiente virtual (venv), instalando o FastAPI, criando a estrutura base e dependências. O desenvolvedor também deve prestar apoio inicial ao Front-end para garantir a integração básica via CORS.\n\n**Descreva as alternativas que você considerou**\nIniciarmos com Flask ou Django, mas os estudos de arquitetura da Sprint 02 definiram o FastAPI como framework principal devido à sua velocidade e geração de documentação automática (Swagger).\n\n**Contexto adicional**\nCritérios de Aceite para a tarefa:\n\n- [ ] Arquivo requirements.txt criado.\n\n- [ ] Arquivo .gitignore configurado para Python.\n\n- [ ] Servidor FastAPI rodando e retornando status 200 na rota GET /health.\n\n- [ ] CORS configurado para permitir acesso local do Front-end.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/30/reactions",
       "total_count": 0,
@@ -2707,7 +2807,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/30/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2827,11 +2927,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
@@ -3010,11 +3110,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
@@ -3351,7 +3451,7 @@
         "description": "Urgente / O sistema quebrou ou está travando o trabalho."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -3406,18 +3506,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-23T02:18:30Z",
-      "updated_at": "2026-04-26T23:57:21Z",
+      "updated_at": "2026-04-28T05:35:39Z",
       "due_on": "2026-04-27T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-16T01:35:08Z",
-    "updated_at": "2026-04-23T02:37:59Z",
-    "closed_at": null,
+    "updated_at": "2026-04-28T00:24:33Z",
+    "closed_at": "2026-04-28T00:24:33Z",
     "assignee": {
       "login": "Paulodemczuk",
       "id": 226184285,
@@ -3454,7 +3554,27 @@
       "total_blocking": 0
     },
     "body": "Descrição:\nCom o User Story Map validado, precisamos pegar as histórias mapeadas para a primeira entrega (MVP) e transformá-las em itens acionáveis no nosso backlog. Isso garantirá que a equipe tenha tarefas prontas e priorizadas para puxar durante as Sprints.\n\nTarefas / Critérios de Aceite:\n\n[ ] Criar as epics ou categorias baseadas na espinha dorsal do projeto.\n\n[ ] Cadastrar as histórias de usuário da Release 1 no nosso quadro de gestão (Backlog).\n\n[ ] Escrever uma breve descrição e critérios de aceite preliminares para os itens mais prioritários.\n\n[ ] Ordenar a lista por prioridade de desenvolvimento.\n\nContexto / Links:\n\n[Figma](https://www.figma.com/board/36xgX88dsxdaDOt55acXei/ContraDito--Squad7-?node-id=0-1&p=f&t=7pPZWHO8cyXj9HcM-0)",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/22/reactions",
       "total_count": 0,
@@ -3469,7 +3589,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/22/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
