@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2025-1-NoFluxoUNB",
   "branch": "main",
-  "sha": "7ce30d9d5629f6cfa2f71618683b4af63ae050da",
+  "sha": "5130ddfec85e384393a742fb46433013f8f0c32b",
   "tree": [
     {
       "name": ".dockerignore",
@@ -250,7 +250,7 @@
       "name": "DBA",
       "path": "DBA",
       "type": "directory",
-      "sha": "23afe06b6a55d31455a3497d0da85efd7623f28c",
+      "sha": "11721462446d701805f1a9c73562030f1af2ff35",
       "mode": "040000",
       "children": []
     },
@@ -412,7 +412,7 @@
       "name": "scraping",
       "path": "DBA/scraping",
       "type": "directory",
-      "sha": "bd8eb646ceed349e00e00a0280b71855a032c68b",
+      "sha": "33c9a7ffc5eb7c2d4c5e077b400c6e3a16414c39",
       "mode": "040000",
       "children": []
     },
@@ -530,10 +530,10 @@
       "name": "scraping_ementa.py",
       "path": "DBA/scraping/scraping_ementa.py",
       "type": "file",
-      "sha": "529f3d0b8020a137d6754c726a081f379e925469",
+      "sha": "cdec01547607477d7a73e840a0b5aaaab63b7020",
       "mode": "100644",
       "extension": ".py",
-      "size": 18186,
+      "size": 20624,
       "is_binary": false
     },
     {
@@ -6644,7 +6644,7 @@
       "name": "no_fluxo_frontend_svelte",
       "path": "no_fluxo_frontend_svelte",
       "type": "directory",
-      "sha": "bfb6b1059d58cfa3764c9adf527c188e94caffd2",
+      "sha": "18b5efaf44d0d0d12543f162a667240e436613fc",
       "mode": "040000",
       "children": []
     },
@@ -6780,7 +6780,7 @@
       "name": "src",
       "path": "no_fluxo_frontend_svelte/src",
       "type": "directory",
-      "sha": "01da4b808cd8f427bdfa987db2d7ed0dab706c79",
+      "sha": "030fbf7f17760ebfc3d37cdeb331e51c18423c47",
       "mode": "040000",
       "children": []
     },
@@ -6828,7 +6828,7 @@
       "name": "lib",
       "path": "no_fluxo_frontend_svelte/src/lib",
       "type": "directory",
-      "sha": "3223b31543f928ae16c6f46673321c4b53f29664",
+      "sha": "91d968c137872f97af6489f9788c537771eaed6b",
       "mode": "040000",
       "children": []
     },
@@ -6884,7 +6884,7 @@
       "name": "components",
       "path": "no_fluxo_frontend_svelte/src/lib/components",
       "type": "directory",
-      "sha": "55ed7f77e47836870d521753ffa6058ff6c15517",
+      "sha": "dea8a4ee225bd38275a1d8a5c5798b20fcf79a15",
       "mode": "040000",
       "children": []
     },
@@ -7016,7 +7016,7 @@
       "name": "fluxograma",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma",
       "type": "directory",
-      "sha": "f5c1b77c4345c31d69b0edb5a365a82986e4fb73",
+      "sha": "f8143b9aefb01297f3d9e51554806582b0993f4f",
       "mode": "040000",
       "children": []
     },
@@ -7104,10 +7104,10 @@
       "name": "MudancaCursoModal.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/MudancaCursoModal.svelte",
       "type": "file",
-      "sha": "094b54032b49d8d8fcb6255189e4e17ccd0a66f3",
+      "sha": "52e2add0677ca010e4f054349b10b1f4eeb829e4",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 8294,
+      "size": 9175,
       "is_binary": false
     },
     {
@@ -7178,6 +7178,16 @@
       "mode": "100644",
       "extension": ".svelte",
       "size": 1501,
+      "is_binary": false
+    },
+    {
+      "name": "RequisitosMudancaCursoBanner.svelte",
+      "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/RequisitosMudancaCursoBanner.svelte",
+      "type": "file",
+      "sha": "c3161b3983ab0f465308924d17bcfeeeed0b40df",
+      "mode": "100644",
+      "extension": ".svelte",
+      "size": 6471,
       "is_binary": false
     },
     {
@@ -8660,7 +8670,7 @@
       "name": "services",
       "path": "no_fluxo_frontend_svelte/src/lib/services",
       "type": "directory",
-      "sha": "91d9f70a8c0d0884b1a281a72dd5cd47e914f80d",
+      "sha": "adfae914f06a6398388f3f20f4963fb6e7d6302d",
       "mode": "040000",
       "children": []
     },
@@ -8708,10 +8718,20 @@
       "name": "integralizacao.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/integralizacao.service.ts",
       "type": "file",
-      "sha": "14812cfb2403710f3a06d45ac6be6c76b0acb8a5",
+      "sha": "bd5a1c160fb20a7d1a85e870c715721d038c14a4",
       "mode": "100644",
       "extension": ".ts",
-      "size": 6403,
+      "size": 7404,
+      "is_binary": false
+    },
+    {
+      "name": "mudanca-curso-requisitos.service.ts",
+      "path": "no_fluxo_frontend_svelte/src/lib/services/mudanca-curso-requisitos.service.ts",
+      "type": "file",
+      "sha": "5a37da8e424bc9368208fc98512cc840e3653420",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 4792,
       "is_binary": false
     },
     {
@@ -9186,7 +9206,7 @@
       "name": "routes",
       "path": "no_fluxo_frontend_svelte/src/routes",
       "type": "directory",
-      "sha": "781c8810f1e4de57d3c6fbe00c8c0d0950a46985",
+      "sha": "7844259a793323f08b1a3e8b2157e26af390f5e5",
       "mode": "040000",
       "children": []
     },
@@ -9460,7 +9480,7 @@
       "name": "meu-fluxograma",
       "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma",
       "type": "directory",
-      "sha": "e37e4ca695dfb05ef8befc7e46c8b4ed5587d276",
+      "sha": "f94c73370ff501efdda781a290cdd9ba2133827f",
       "mode": "040000",
       "children": []
     },
@@ -9478,7 +9498,7 @@
       "name": "[courseName]",
       "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/[courseName]",
       "type": "directory",
-      "sha": "0d13648c9c212b22e434ada37dab9164d680f600",
+      "sha": "259e82eb70a8de1e604852a27ac6c52611df47af",
       "mode": "040000",
       "children": []
     },
@@ -9486,10 +9506,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/[courseName]/+page.svelte",
       "type": "file",
-      "sha": "ee62895281271d17485ec862cf28e5a794c93167",
+      "sha": "0de3ec294e44c440955cb9bd64b636140ce59d8f",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 12008,
+      "size": 12540,
       "is_binary": false
     },
     {
@@ -10126,7 +10146,7 @@
       "name": "prototipo",
       "path": "prototipo",
       "type": "directory",
-      "sha": "3c08bf1ff57a15f63abafadc657835837abfa45e",
+      "sha": "62dcbd29eaf087385024fa02b6445267039dbe1d",
       "mode": "040000",
       "children": []
     },
@@ -10210,6 +10230,24 @@
       "mode": "100644",
       "extension": ".css",
       "size": 1754,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo-identidade-unb",
+      "path": "prototipo/prototipo-identidade-unb",
+      "type": "directory",
+      "sha": "2695c7bc69ae0ea98a7b00a49f9852fb4631c126",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "prototipo/prototipo-identidade-unb/index.html",
+      "type": "file",
+      "sha": "f4ee3b36d3640715c0a6e6ce67659724f47896d5",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 9418,
       "is_binary": false
     },
     {
@@ -11472,17 +11510,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-04-30T08:07:52.357659",
+  "extracted_at": "2026-05-01T08:04:39.220923",
   "method": "rest",
-  "total_items": 1199,
+  "total_items": 1203,
   "repository_metadata": {
     "id": 957040204,
     "full_name": "unb-mds/2025-1-NoFluxoUNB",
     "description": "Fluxograma interativo com chat-bot que auxilia na escolha e visualização da sua estrutura curricular da UnB.",
     "created_at": "2025-03-29T12:09:56Z",
-    "updated_at": "2026-04-19T21:31:40Z",
+    "updated_at": "2026-04-30T21:51:13Z",
     "language": "JavaScript",
-    "size": 114608,
+    "size": 114622,
     "stars": 12,
     "forks": 4,
     "open_issues": 12
