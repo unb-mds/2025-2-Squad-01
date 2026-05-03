@@ -2,8 +2,18 @@
   "owner": "unb-mds",
   "repository": "2026-1-ProtectKids",
   "branch": "main",
-  "sha": "1a1dcb93d68192c68d8afa1881d120fe0944f790",
+  "sha": "87156166d1f9ea324a152a6e60c39db4438a8f3e",
   "tree": [
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "28398197cb10812fb3301e39c5339ed2825d7675",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 305,
+      "is_binary": false
+    },
     {
       "name": "LICENSE",
       "path": "LICENSE",
@@ -28,7 +38,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "51a91ababad38e8e414155dfb817ca9725535a7c",
+      "sha": "e4edde43f5123c1969bcb6d6ca57694f87e2f090",
       "mode": "040000",
       "children": []
     },
@@ -46,7 +56,7 @@
       "name": "__pycache__",
       "path": "backend/__pycache__",
       "type": "directory",
-      "sha": "aab3aef0670ddfbd87231bb5ecd975b6d8acb94d",
+      "sha": "a82ac74cb79068a08c58c899fc69b918352680d6",
       "mode": "040000",
       "children": []
     },
@@ -54,20 +64,40 @@
       "name": "main.cpython-311.pyc",
       "path": "backend/__pycache__/main.cpython-311.pyc",
       "type": "file",
-      "sha": "49b12aa0d4ea2b020b13b1e39686b369f54a9df9",
+      "sha": "a119913e16759ff323235a98ae9678bc0883abb7",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 513,
+      "size": 2583,
+      "is_binary": false
+    },
+    {
+      "name": "database.py",
+      "path": "backend/database.py",
+      "type": "file",
+      "sha": "de5928bbf907e4d59db3181864a1b75e943c332a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 477,
       "is_binary": false
     },
     {
       "name": "main.py",
       "path": "backend/main.py",
       "type": "file",
-      "sha": "bb97c4148b20a0065e693f01540827bbcdcb6862",
+      "sha": "3407147418cfd984e3fc085d12b178fb12bc5eae",
       "mode": "100644",
       "extension": ".py",
-      "size": 172,
+      "size": 1496,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "backend/models.py",
+      "type": "file",
+      "sha": "79f5d86ed6ef0b66a891eac2231e7e02ab11c0e9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 248,
       "is_binary": false
     },
     {
@@ -112,7 +142,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "3a4becfc0e0fd8626a82d2cdd7ec524e5b154625",
+      "sha": "d19797888083e148a09a3a949429996473e53d4e",
       "mode": "040000",
       "children": []
     },
@@ -135,10 +165,50 @@
       "is_binary": false
     },
     {
+      "name": "c4_1_contexto.drawio",
+      "path": "docs/c4_1_contexto.drawio",
+      "type": "file",
+      "sha": "0660e89af39ff265753a2968000de8e907610add",
+      "mode": "100644",
+      "extension": ".drawio",
+      "size": 67573,
+      "is_binary": false
+    },
+    {
+      "name": "c4_1_contexto.png",
+      "path": "docs/c4_1_contexto.png",
+      "type": "file",
+      "sha": "0660e89af39ff265753a2968000de8e907610add",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 67573,
+      "is_binary": false
+    },
+    {
+      "name": "c4_2_container.drawio",
+      "path": "docs/c4_2_container.drawio",
+      "type": "file",
+      "sha": "f95be8c8fa8422e96778b70db54ea021f3384551",
+      "mode": "100644",
+      "extension": ".drawio",
+      "size": 135445,
+      "is_binary": false
+    },
+    {
+      "name": "c4_2_container.png",
+      "path": "docs/c4_2_container.png",
+      "type": "file",
+      "sha": "f95be8c8fa8422e96778b70db54ea021f3384551",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 135445,
+      "is_binary": false
+    },
+    {
       "name": "estudos",
       "path": "docs/estudos",
       "type": "directory",
-      "sha": "6b7848ec6768ac35b94be20b72982de63ac30423",
+      "sha": "6f310c296624b1be5bf6a4fa8cd64144efd60d91",
       "mode": "040000",
       "children": []
     },
@@ -146,7 +216,7 @@
       "name": "arquitetura",
       "path": "docs/estudos/arquitetura",
       "type": "directory",
-      "sha": "601d03d479a613e3723be5be40b3b6683cd13148",
+      "sha": "a3cab594e0a2f0b81bc9271496ccebf4c4896a47",
       "mode": "040000",
       "children": []
     },
@@ -158,26 +228,6 @@
       "mode": "100644",
       "extension": ".md",
       "size": 3364,
-      "is_binary": false
-    },
-    {
-      "name": "container.drawio.svg",
-      "path": "docs/estudos/arquitetura/container.drawio.svg",
-      "type": "file",
-      "sha": "3523f7add6bdc4a98fbbd1865a1ecba7db6c1053",
-      "mode": "100644",
-      "extension": ".svg",
-      "size": 32902,
-      "is_binary": false
-    },
-    {
-      "name": "contexto.drawio.svg",
-      "path": "docs/estudos/arquitetura/contexto.drawio.svg",
-      "type": "file",
-      "sha": "88afb0e96d0c3688a3b11853807feeef857fc004",
-      "mode": "100644",
-      "extension": ".svg",
-      "size": 6132,
       "is_binary": false
     },
     {
@@ -314,19 +364,9 @@
       "name": "frontend",
       "path": "frontend",
       "type": "directory",
-      "sha": "b0f799a2fce4dc26b64ee5dc4d1b2db79cdbfba9",
+      "sha": "d6e93f94ad64de176e1706af6a3439a1c151aaa5",
       "mode": "040000",
       "children": []
-    },
-    {
-      "name": ".gitignore",
-      "path": "frontend/.gitignore",
-      "type": "file",
-      "sha": "a547bf36d8d11a4f89c59c144f24795749086dd1",
-      "mode": "100644",
-      "extension": ".gitignore",
-      "size": 253,
-      "is_binary": false
     },
     {
       "name": "Base.md",
@@ -342,10 +382,10 @@
       "name": "Dockerfile",
       "path": "frontend/Dockerfile",
       "type": "file",
-      "sha": "3f3aa8b1531f63fdf7675d3ce88635b27c331ebc",
+      "sha": "cce07aaa4747b08c1f375753009bdaa66d065aef",
       "mode": "100644",
       "extension": "",
-      "size": 70,
+      "size": 69,
       "is_binary": false
     },
     {
@@ -486,18 +526,18 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-02T07:37:05.451314",
+  "extracted_at": "2026-05-03T07:58:23.486138",
   "method": "rest",
-  "total_items": 51,
+  "total_items": 55,
   "repository_metadata": {
     "id": 1196216020,
     "full_name": "unb-mds/2026-1-ProtectKids",
     "description": null,
     "created_at": "2026-03-30T13:37:41Z",
-    "updated_at": "2026-04-29T15:30:05Z",
-    "language": "CSS",
-    "size": 110,
-    "stars": 1,
+    "updated_at": "2026-05-02T20:25:12Z",
+    "language": "Python",
+    "size": 859,
+    "stars": 2,
     "forks": 0,
     "open_issues": 5
   }
