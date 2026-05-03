@@ -2,19 +2,65 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-02T07:37:05.451314",
+  "analyzed_at": "2026-05-03T07:58:23.486138",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 36,
-  "total_bytes": 208864,
+  "total_files": 40,
+  "total_bytes": 580036,
   "languages": [
+    {
+      "language": "Unknown",
+      "file_count": 3,
+      "total_bytes": 205601,
+      "percentage": 35.45,
+      "files": [
+        {
+          "path": "docs/c4_2_container.drawio",
+          "name": "c4_2_container.drawio",
+          "size": 135445,
+          "extension": ".drawio"
+        },
+        {
+          "path": "docs/c4_1_contexto.drawio",
+          "name": "c4_1_contexto.drawio",
+          "size": 67573,
+          "extension": ".drawio"
+        },
+        {
+          "path": "backend/__pycache__/main.cpython-311.pyc",
+          "name": "main.cpython-311.pyc",
+          "size": 2583,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 203018,
+      "percentage": 35.0,
+      "files": [
+        {
+          "path": "docs/c4_2_container.png",
+          "name": "c4_2_container.png",
+          "size": 135445,
+          "extension": ".png"
+        },
+        {
+          "path": "docs/c4_1_contexto.png",
+          "name": "c4_1_contexto.png",
+          "size": 67573,
+          "extension": ".png"
+        }
+      ]
+    },
     {
       "language": "JSON",
       "file_count": 2,
       "total_bytes": 91758,
-      "percentage": 43.93,
+      "percentage": 15.82,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -34,7 +80,7 @@
       "language": "Markdown",
       "file_count": 14,
       "total_bytes": 54766,
-      "percentage": 26.22,
+      "percentage": 9.44,
       "files": [
         {
           "path": "docs/estudos/requisitos/requisitos.md",
@@ -100,26 +146,14 @@
     },
     {
       "language": "SVG Image",
-      "file_count": 4,
-      "total_bytes": 53587,
-      "percentage": 25.66,
+      "file_count": 2,
+      "total_bytes": 14553,
+      "percentage": 2.51,
       "files": [
-        {
-          "path": "docs/estudos/arquitetura/container.drawio.svg",
-          "name": "container.drawio.svg",
-          "size": 32902,
-          "extension": ".svg"
-        },
         {
           "path": "frontend/public/favicon.svg",
           "name": "favicon.svg",
           "size": 9522,
-          "extension": ".svg"
-        },
-        {
-          "path": "docs/estudos/arquitetura/contexto.drawio.svg",
-          "name": "contexto.drawio.svg",
-          "size": 6132,
           "extension": ".svg"
         },
         {
@@ -131,10 +165,36 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 3,
+      "total_bytes": 2221,
+      "percentage": 0.38,
+      "files": [
+        {
+          "path": "backend/main.py",
+          "name": "main.py",
+          "size": 1496,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/database.py",
+          "name": "database.py",
+          "size": 477,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/models.py",
+          "name": "models.py",
+          "size": 248,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 2170,
-      "percentage": 1.04,
+      "percentage": 0.37,
       "files": [
         {
           "path": "frontend/src/index.css",
@@ -154,7 +214,7 @@
       "language": "SQL",
       "file_count": 1,
       "total_bytes": 1646,
-      "percentage": 0.79,
+      "percentage": 0.28,
       "files": [
         {
           "path": "backend/scripts/init.sql",
@@ -167,8 +227,8 @@
     {
       "language": "No Extension",
       "file_count": 3,
-      "total_bytes": 1564,
-      "percentage": 0.75,
+      "total_bytes": 1563,
+      "percentage": 0.27,
       "files": [
         {
           "path": "LICENSE",
@@ -185,7 +245,7 @@
         {
           "path": "frontend/Dockerfile",
           "name": "Dockerfile",
-          "size": 70,
+          "size": 69,
           "extension": ""
         }
       ]
@@ -194,7 +254,7 @@
       "language": "JavaScript",
       "file_count": 4,
       "total_bytes": 1149,
-      "percentage": 0.55,
+      "percentage": 0.2,
       "files": [
         {
           "path": "frontend/eslint.config.js",
@@ -226,7 +286,7 @@
       "language": "YAML",
       "file_count": 1,
       "total_bytes": 768,
-      "percentage": 0.37,
+      "percentage": 0.13,
       "files": [
         {
           "path": "docker-compose.yml",
@@ -237,24 +297,10 @@
       ]
     },
     {
-      "language": "Unknown",
-      "file_count": 1,
-      "total_bytes": 513,
-      "percentage": 0.25,
-      "files": [
-        {
-          "path": "backend/__pycache__/main.cpython-311.pyc",
-          "name": "main.cpython-311.pyc",
-          "size": 513,
-          "extension": ".pyc"
-        }
-      ]
-    },
-    {
       "language": "HTML",
       "file_count": 1,
       "total_bytes": 360,
-      "percentage": 0.17,
+      "percentage": 0.06,
       "files": [
         {
           "path": "frontend/index.html",
@@ -267,28 +313,14 @@
     {
       "language": "Git Ignore",
       "file_count": 1,
-      "total_bytes": 253,
-      "percentage": 0.12,
+      "total_bytes": 305,
+      "percentage": 0.05,
       "files": [
         {
-          "path": "frontend/.gitignore",
+          "path": ".gitignore",
           "name": ".gitignore",
-          "size": 253,
+          "size": 305,
           "extension": ".gitignore"
-        }
-      ]
-    },
-    {
-      "language": "Python",
-      "file_count": 1,
-      "total_bytes": 172,
-      "percentage": 0.08,
-      "files": [
-        {
-          "path": "backend/main.py",
-          "name": "main.py",
-          "size": 172,
-          "extension": ".py"
         }
       ]
     },
@@ -296,7 +328,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 158,
-      "percentage": 0.08,
+      "percentage": 0.03,
       "files": [
         {
           "path": "backend/requirements.txt",
@@ -308,7 +340,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-02T07:39:25.552745",
+    "extracted_at": "2026-05-03T08:00:54.171385",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }
