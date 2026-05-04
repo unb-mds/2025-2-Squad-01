@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-03T07:14:32.116383",
+      "extracted_at": "2026-05-04T07:43:02.965166",
       "file_path": "data/bronze/prs_2026-1-SafeStreets.json",
       "record_count": 2
     }
@@ -94,7 +94,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -150,17 +150,17 @@
         "site_admin": false
       },
       "open_issues": 5,
-      "closed_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-02T21:03:29Z",
+      "updated_at": "2026-05-03T23:00:52Z",
       "due_on": "2026-05-02T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-02T19:32:15Z",
-    "updated_at": "2026-05-02T19:32:16Z",
-    "closed_at": null,
+    "updated_at": "2026-05-03T13:23:50Z",
+    "closed_at": "2026-05-03T13:23:50Z",
     "assignee": {
       "login": "EdsonToppzera",
       "id": 157309764,
@@ -191,10 +191,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/31",
       "diff_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/31.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/31.patch",
-      "merged_at": null
+      "merged_at": "2026-05-03T13:23:50Z"
     },
     "body": "## Descrição\r\nEste PR implementa a infraestrutura inicial do banco de dados para o backend do SafeStreets. \r\nO que foi feito:\r\n- Configuração do contêiner PostgreSQL local utilizando `docker-compose.yml`.\r\n- Adição das bibliotecas `sqlalchemy` e `psycopg2-binary` no `requirements.txt`.\r\n- Criação do arquivo `database.py` para estabelecer a conexão do SQLAlchemy com o banco usando ORM.\r\n- Criação do arquivo `models.py` com o esquema inicial da tabela `Ocorrencia` (preparado para receber os dados do Web Scraping).\r\n- Criação de um script `teste.py` para validar a criação automática da tabela e inserção de dados falsos.\r\n\r\n## Tipo de mudança\r\n<!-- Marque com um \"x\" -->\r\n- [ ] Bug fix\r\n- [x] Nova funcionalidade\r\n- [ ] Refatoração\r\n- [ ] Documentação\r\n- [ ] Melhoria de performance\r\n- [ ] Testes\r\n\r\n## Issue relacionada\r\n #28  \r\n\r\n## Como testar\r\nPasso a passo para validar:\r\n1. Faça o checkout para esta branch (`feat/banco_inicial`) e abra o terminal na pasta `backend`.\r\n2. Rode o comando `docker-compose up -d` para iniciar o servidor do PostgreSQL em segundo plano.\r\n3. Ative o seu ambiente virtual (`.venv`) e atualize as dependências rodando: `pip install -r requirements.txt`.\r\n4. Rode o script de teste para popular o banco: `python teste.py`.\r\n5. Verifique no terminal a mensagem de sucesso ou acesse o banco via extensão (ex: Database Client) na porta `5432` com usuário `admin` e senha `123` para confirmar a criação da tabela `ocorrencias`.\r\n\r\n## Evidências\r\n<img width=\"932\" height=\"253\" alt=\"image\" src=\"https://github.com/user-attachments/assets/226d963b-276c-4d20-9069-bc6660115f05\" />\r\n\r\n## Impactos e riscos\r\nComo esta é uma configuração inteiramente baseada em um ambiente isolado (Docker) para o ambiente de desenvolvimento local, não há risco de quebrar o sistema atual. Nenhuma rota do FastAPI foi alterada até o momento.\r\n\r\n## Checklist\r\n- [x] Código segue o padrão do projeto\r\n- [x] Testes adicionados/atualizados (se necessário)\r\n- [x] Testado localmente\r\n- [ ] Documentação atualizada (se necessário)\r\n\r\n## Observações adicionais\r\n- Irei criar uma issue adicional detalhando como utilizar o docker\r\n\r\n- As credenciais do banco de dados (usuário/senha) estão temporariamente definidas diretamente no `docker-compose.yml` e `database.py` para facilitar os testes iniciais da equipe. Na próxima etapa do backend, deveremos extrair isso para variáveis de ambiente (arquivos `.env`) por questões de segurança.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "jorgevasquez25",
+      "id": 247237551,
+      "node_id": "U_kgDODryLrw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/247237551?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jorgevasquez25",
+      "html_url": "https://github.com/jorgevasquez25",
+      "followers_url": "https://api.github.com/users/jorgevasquez25/followers",
+      "following_url": "https://api.github.com/users/jorgevasquez25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jorgevasquez25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jorgevasquez25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jorgevasquez25/subscriptions",
+      "organizations_url": "https://api.github.com/users/jorgevasquez25/orgs",
+      "repos_url": "https://api.github.com/users/jorgevasquez25/repos",
+      "events_url": "https://api.github.com/users/jorgevasquez25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jorgevasquez25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/31/reactions",
       "total_count": 0,

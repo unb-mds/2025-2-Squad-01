@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "8ce6c8e46958e4af3ee7b0eab2230cf4d97ff5a9",
+  "sha": "f7c18a0d3166673f2cc0f9f236b5a08c93b25ce3",
   "tree": [
     {
       "name": "Docs",
       "path": "Docs",
       "type": "directory",
-      "sha": "0932b53f3a529054c7492ba848246c5101383170",
+      "sha": "502a2854e1a1b24e6cce88e225e368bf2d60b5a7",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "Milestone",
       "path": "Docs/Milestone",
       "type": "directory",
-      "sha": "d2ff13e7edb86a213652f44b5cd464fed730e957",
+      "sha": "cc6c19e1b7cb16f5cdf716a3bc7ea6c59e7d9d07",
       "mode": "040000",
       "children": []
     },
@@ -254,7 +254,7 @@
       "name": "Sprint-5",
       "path": "Docs/Milestone/Sprint-5",
       "type": "directory",
-      "sha": "ea029bfa072ab94795dee8c692c6c6f2c828311f",
+      "sha": "b7aa03f45f73a7745e3e4369b1b0ad444a101425",
       "mode": "040000",
       "children": []
     },
@@ -266,6 +266,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 1795,
+      "is_binary": false
+    },
+    {
+      "name": "estudo-fastapi.md",
+      "path": "Docs/Milestone/Sprint-5/estudo-fastapi.md",
+      "type": "file",
+      "sha": "4f68d6dbe99ef823aa66dbf446c47c26edbc970f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2574,
       "is_binary": false
     },
     {
@@ -330,7 +340,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "5becf16829e227d86e723c2373cae04eda2ecc50",
+      "sha": "15a63c59796e155fe7398f3379b9b4e4fcdf8dc2",
       "mode": "040000",
       "children": []
     },
@@ -348,9 +358,19 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "ae122bad772b25242591f5a026428f7b0f7e866d",
+      "sha": "6fd534c97d8ac1e58ddb46c1a4f22f247ae917db",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "database.py",
+      "path": "backend/app/database.py",
+      "type": "file",
+      "sha": "d7632e3391b96dbfd23dd7d21f34238079d9b3b5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 518,
+      "is_binary": false
     },
     {
       "name": "main.py",
@@ -360,6 +380,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 198,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "backend/app/models.py",
+      "type": "file",
+      "sha": "cc300056d32b408035921f89d36f6dcc4f0284cc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 374,
       "is_binary": false
     },
     {
@@ -391,28 +421,48 @@
       "is_binary": false
     },
     {
+      "name": "docker-compose.yml",
+      "path": "backend/docker-compose.yml",
+      "type": "file",
+      "sha": "2823e66299eab15066f44fae7104bfdbdcb7140d",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 616,
+      "is_binary": false
+    },
+    {
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "48eac0b754acccb26a0cacd206bff7ca3e9dc435",
+      "sha": "ad595b2a5c29b54be7bb3fbc3c959589fdf1c507",
       "mode": "100644",
       "extension": ".txt",
-      "size": 43,
+      "size": 95,
+      "is_binary": false
+    },
+    {
+      "name": "teste.py",
+      "path": "backend/teste.py",
+      "type": "file",
+      "sha": "b006c7478aab6a69e79c8f4d7e42073e0341aa0a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 722,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-03T07:58:16.311435",
+  "extracted_at": "2026-05-04T08:26:06.703111",
   "method": "rest",
-  "total_items": 42,
+  "total_items": 47,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": null,
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-05-02T20:54:55Z",
+    "updated_at": "2026-05-03T23:07:30Z",
     "language": "Python",
-    "size": 71,
+    "size": 67,
     "stars": 1,
     "forks": 0,
     "open_issues": 5
