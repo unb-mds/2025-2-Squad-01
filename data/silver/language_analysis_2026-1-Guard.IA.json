@@ -2,19 +2,33 @@
   "repository": "2026-1-Guard.IA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-04T08:26:08.225184",
+  "analyzed_at": "2026-05-05T07:57:10.418750",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 10,
-  "total_bytes": 11185,
+  "total_files": 12,
+  "total_bytes": 21254,
   "languages": [
     {
+      "language": "Python",
+      "file_count": 1,
+      "total_bytes": 8098,
+      "percentage": 38.1,
+      "files": [
+        {
+          "path": "dashboard/app.py",
+          "name": "app.py",
+          "size": 8098,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
-      "file_count": 5,
-      "total_bytes": 6574,
-      "percentage": 58.78,
+      "file_count": 6,
+      "total_bytes": 7434,
+      "percentage": 34.98,
       "files": [
         {
           "path": "docs/sprint_02/prototipo.md",
@@ -35,6 +49,12 @@
           "extension": ".md"
         },
         {
+          "path": "docs/sprint_04/melhoria-dashboard.md",
+          "name": "melhoria-dashboard.md",
+          "size": 860,
+          "extension": ".md"
+        },
+        {
           "path": "dashboard/README.md",
           "name": "README.md",
           "size": 392,
@@ -49,16 +69,16 @@
       ]
     },
     {
-      "language": "Python",
+      "language": "HTML",
       "file_count": 1,
-      "total_bytes": 2497,
-      "percentage": 22.32,
+      "total_bytes": 3608,
+      "percentage": 16.98,
       "files": [
         {
-          "path": "dashboard/app.py",
-          "name": "app.py",
-          "size": 2497,
-          "extension": ".py"
+          "path": "docs/index.html",
+          "name": "index.html",
+          "size": 3608,
+          "extension": ".html"
         }
       ]
     },
@@ -66,7 +86,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 9.48,
+      "percentage": 4.99,
       "files": [
         {
           "path": "LICENSE",
@@ -80,7 +100,7 @@
       "language": "Unknown",
       "file_count": 3,
       "total_bytes": 1054,
-      "percentage": 9.42,
+      "percentage": 4.96,
       "files": [
         {
           "path": "dashboard/data_fake.csv",
@@ -104,7 +124,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-04T08:28:36.074985",
+    "extracted_at": "2026-05-05T07:59:55.735534",
     "file_path": "data/silver/language_analysis_2026-1-Guard.IA.json"
   }
 }
