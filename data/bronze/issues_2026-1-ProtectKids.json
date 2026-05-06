@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-05T07:10:36.459229",
+      "extracted_at": "2026-05-06T07:31:25.360034",
       "file_path": "data/bronze/issues_2026-1-ProtectKids.json",
       "record_count": 33
     }
@@ -123,7 +123,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-02T19:24:31Z",
-    "updated_at": "2026-05-02T19:24:32Z",
+    "updated_at": "2026-05-05T20:43:32Z",
     "closed_at": null,
     "assignee": {
       "login": "Danielly-Mendes",
@@ -169,7 +169,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição\nDesenvolver a camada de extração de dados (Pipeline ETL) do sistema. O objetivo é criar um script em Python capaz de consultar a API de Dados Abertos da Câmara dos Deputados, buscar proposições legislativas relacionadas à proteção infantil, transformar esses dados no formato esperado pelo nosso sistema e salvá-los no nosso banco de dados PostgreSQL utilizando as configurações já estabelecidas.\n\n## ⚠️ Prioridade\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Criar a pasta crawler/ dentro do diretório backend/.\n\n- [ ] Criar o script camara_api.py utilizando a biblioteca requests (ou Scrapy).\n\n- [ ] Mapear o endpoint correto da API da Câmara (ex: /api/v2/proposicoes) e definir os parâmetros de busca (palavras-chave como \"criança\", \"infância\", \"ECA\").\n\n- [ ] Tratar os dados retornados no formato JSON, extraindo os campos necessários (título, descrição, etc.).\n\n- [ ] Importar o módulo de conexão com o banco de dados (backend.database) e o modelo (backend.models.Proposicao).\n\n- [ ] Implementar o loop de salvamento para inserir as proposições baixadas na nossa tabela do PostgreSQL usando uma sessão do SQLModel.\n\n## 🧠 Notas Adicionais\nRecomendação de arquitetura: Mantenha a função de busca (fetch) separada da função de salvamento (save). Isso facilita futuros testes e manutenções.\n\nSe tiver dúvidas sobre a estrutura da injeção de dependência do banco, revise o arquivo main.py para entender como a conexão está sendo gerenciada atualmente.",
+    "body": "## 📋 Descrição\nDesenvolver a camada de extração de dados (Pipeline ETL) do sistema. O objetivo é criar um script em Python capaz de consultar a API de Dados Abertos da Câmara dos Deputados, buscar proposições legislativas relacionadas à proteção infantil, transformar esses dados no formato esperado pelo nosso sistema e salvá-los no nosso banco de dados PostgreSQL utilizando as configurações já estabelecidas.\n\n## ⚠️ Prioridade\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [x] Criar a pasta crawler/ dentro do diretório backend/.\n\n- [ ] Criar o script camara_api.py utilizando a biblioteca requests (ou Scrapy).\n\n- [ ] Mapear o endpoint correto da API da Câmara (ex: /api/v2/proposicoes) e definir os parâmetros de busca (palavras-chave como \"criança\", \"infância\", \"ECA\").\n\n- [ ] Tratar os dados retornados no formato JSON, extraindo os campos necessários (título, descrição, etc.).\n\n- [ ] Importar o módulo de conexão com o banco de dados (backend.database) e o modelo (backend.models.Proposicao).\n\n- [ ] Implementar o loop de salvamento para inserir as proposições baixadas na nossa tabela do PostgreSQL usando uma sessão do SQLModel.\n\n## 🧠 Notas Adicionais\nRecomendação de arquitetura: Mantenha a função de busca (fetch) separada da função de salvamento (save). Isso facilita futuros testes e manutenções.\n\nSe tiver dúvidas sobre a estrutura da injeção de dependência do banco, revise o arquivo main.py para entender como a conexão está sendo gerenciada atualmente.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/37/reactions",

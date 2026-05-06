@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-05T07:10:22.717861",
+      "extracted_at": "2026-05-06T07:31:12.111425",
       "file_path": "data/bronze/issues_2026-1-SafeStreets.json",
       "record_count": 31
     }
@@ -67,7 +67,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -143,18 +143,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 6,
+      "state": "closed",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-03T23:00:52Z",
+      "updated_at": "2026-05-05T21:51:37Z",
       "due_on": "2026-05-02T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-05T21:51:37Z"
     },
     "comments": 1,
     "created_at": "2026-05-03T23:00:51Z",
-    "updated_at": "2026-05-03T23:01:51Z",
-    "closed_at": null,
+    "updated_at": "2026-05-05T21:50:58Z",
+    "closed_at": "2026-05-05T21:50:58Z",
     "assignee": {
       "login": "matheusqsa",
       "id": 123829013,
@@ -200,7 +200,27 @@
       "total_blocking": 0
     },
     "body": "# [DOCS] Estudo Técnico: Fundamentos e Implementação de FastAPI\n\n##  📋 Descrição\n\nEsta issue tem como objetivo documentar o estudo técnico sobre o framework `FastAPI`, detalhando sua arquitetura assíncrona, validação de dados e integração no projeto **SafeStreets**. O objetivo é capacitar os membros do backend na criação de rotas performáticas e garantir a padronização das respostas da API utilizando `Pydantic` e `Uvicorn`.\n\n---\n\n##  ✅ Tarefas\n\n- [x] Documentar os fundamentos do `FastAPI` e seus diferenciais técnicos.\n- [ ] Implementar a estrutura modular utilizando `APIRouter`.\n- [ ] Validar modelos de dados com `Pydantic` para a extração de crimes.\n- [ ] Configurar e testar a documentação automática (`/docs`).\n- [ ] Integrar testes unitários com `TestClient` para as novas rotas.\n\n---\n\n##  🔗 Contexto Adicional\n\n###  1. Fundamentos Técnicos\nO `FastAPI` é construído sobre o `Starlette` (web) e o `Pydantic` (dados). Sua principal vantagem é o uso de `Type Hints` para automação de tarefas.\n\n*   **Desempenho:** Suporte nativo a `async/await`, permitindo alta concorrência.\n*   **Segurança:** Validação rigorosa que reduz erros humanos em tempo de execução.\n*   **Documentação:** Geração automática de interfaces `Swagger UI` e `ReDoc`.\n\n###  2. Exemplo Prático de Implementação\nAbaixo, a estrutura básica de uma rota funcional conforme já estabelecido no projeto:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/health\")\nasync def health_check():\n    return {\"status\": \"ok\", \"message\": \"API está rodando!\"}\n```\n\nAo receber uma chamada no endpoint `/health`, o framework processa a função assíncrona e converte o retorno em `JSON` automaticamente. A validação ocorre em tempo real, e o desenvolvedor pode testar a rota diretamente via `/docs`.\n\n###  3. Aplicação no SafeStreets\n*   **Modularidade:** Uso de `APIRouter` para separar lógicas de negócio.\n*   **Docker:** Execução sobre `Uvicorn` em ambiente isolado para evitar conflitos de dependências.\n*   **IA:** Preparação da arquitetura para receber chamadas não-bloqueantes da API do `Gemini`.\n\n###  📌 Referências\n*   [PR #26 - Setup Backend](https://github.com/unb-mds/2026-1-SafeStreets/pull/26) — Configuração inicial e rotas.\n*   [requirements.txt](https://github.com/unb-mds/2026-1-SafeStreets/blob/main/backend/requirements.txt) — Dependências do servidor.\n*   [Guia de Infraestrutura](https://claude.ai/share/a3ef942c-6d89-451a-a521-cfdc1905607a) — Arquitetura de Sistemas com `FastAPI` e `Docker`.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/33/reactions",
       "total_count": 0,
@@ -215,7 +235,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/33/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },
@@ -289,7 +309,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -365,18 +385,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 6,
+      "state": "closed",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-03T23:00:52Z",
+      "updated_at": "2026-05-05T21:51:37Z",
       "due_on": "2026-05-02T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-05T21:51:37Z"
     },
     "comments": 0,
     "created_at": "2026-05-02T21:03:29Z",
-    "updated_at": "2026-05-02T21:03:29Z",
-    "closed_at": null,
+    "updated_at": "2026-05-05T21:51:01Z",
+    "closed_at": "2026-05-05T21:51:01Z",
     "assignee": {
       "login": "EdsonToppzera",
       "id": 157309764,
@@ -422,7 +442,27 @@
       "total_blocking": 0
     },
     "body": "## 📋 Descrição\n\nEsta issue serve como um guia prático e documentação para que qualquer membro da equipe do SafeStreets consiga levantar, testar e interagir com o banco de dados PostgreSQL localmente. O objetivo é garantir que todos saibam como utilizar o Docker para rodar o banco de forma padronizada e como visualizar os dados usando ferramentas integradas ao VS Code, sem depender de um frontend ou de instalações complexas.\n\n## ✅ Tarefas\n\n- [ ] **Instalar o Docker Desktop:** Baixar e instalar o Docker Desktop (garantir que a opção WSL 2 esteja marcada no Windows).\n- [ ] **Iniciar o Docker:** Abrir o aplicativo Docker Desktop e aguardar até que o status mostre \"Engine running\" (ícone verde).\n- [ ] **Subir o Banco de Dados:** No terminal do VS Code, navegar até a pasta `backend` e executar o comando `docker-compose up -d` (ou `docker compose up -d` em versões mais novas).\n- [ ] **Preparar o Ambiente Python:** Criar/ativar o ambiente virtual (`.venv`) e instalar as dependências rodando `pip install -r requirements.txt`.\n- [ ] **Executar o Teste via Código:** Rodar o comando `python teste.py` para que o SQLAlchemy crie a tabela no banco e insira um dado mockado (falso) para simular o Web Scraping.\n- [ ] **Instalar Extensão de SGBD:** Procurar e instalar a extensão **Database Client** (autor: cweijan) na aba de extensões do VS Code.\n- [ ] **Conectar ao Banco Visualmente:** Clicar no ícone da extensão, criar uma nova conexão PostgreSQL e preencher com as credenciais locais.\n- [ ] **Validar os Dados:** Navegar por `safestreets > public > tables > ocorrencias` e verificar se a notícia teste está lá.\n\n## 🔗 Contexto Adicional\n\n- Issue relacionada: #28 \n- PR relacionado: #31 \n\n- **Download Docker Desktop:** [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)\n- **Credenciais de Desenvolvimento Local:**\n  - Host: `localhost`\n  - Porta: `5432`\n  - User: `admin`\n  - Password: `123`\n  - Database: `safestreets`\n- **Comandos Úteis do Docker:**\n  - `docker compose-up -d` (Liga o banco de dados em segundo plano).\n  - `docker compose down` (Desliga e destrói o contêiner - os dados do banco ficam salvos no volume gerenciado).\n  - `docker ps` (Lista os contêineres que estão rodando no momento).\n- **Extensão VS Code recomendada:** Database Client (ID: `cweijan.vscode-database-client2`).\n- Esta documentação é um complemento direto à Issue de Implementação Inicial do Banco de Dados.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/32/reactions",
       "total_count": 0,
@@ -437,7 +477,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/32/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },
@@ -493,7 +533,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -548,18 +588,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 6,
+      "state": "closed",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-03T23:00:52Z",
+      "updated_at": "2026-05-05T21:51:37Z",
       "due_on": "2026-05-02T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-05T21:51:37Z"
     },
     "comments": 0,
     "created_at": "2026-05-02T18:37:52Z",
-    "updated_at": "2026-05-02T18:37:52Z",
-    "closed_at": null,
+    "updated_at": "2026-05-05T21:51:04Z",
+    "closed_at": "2026-05-05T21:51:04Z",
     "assignee": {
       "login": "IsraelSoares-25",
       "id": 242254122,
@@ -605,7 +645,27 @@
       "total_blocking": 0
     },
     "body": "## 📋 Descrição  \nRefinar o **Story Map** do projeto, garantindo que as funcionalidades estejam organizadas de forma clara, priorizada e alinhada com os objetivos do produto.  \n\nO refinamento deve melhorar a compreensão das jornadas do usuário, detalhar melhor as histórias e identificar possíveis lacunas ou melhorias no fluxo atual.  \nAlém disso, busca-se preparar o Story Map para futuras implementações, facilitando o planejamento das próximas sprints.\n\n---\n\n## ✅ Tarefas  \n- Revisar o Story Map atual  \n- Identificar e corrigir inconsistências nas histórias  \n- Refinar descrições das user stories  \n- Priorizar funcionalidades com base no valor de negócio  \n- Organizar as histórias em jornadas do usuário  \n- Validar o Story Map com a equipe  \n- Atualizar documentação, se necessário  \n\n---\n\n## 🔗 Contexto Adicional  \nO Story Map é uma ferramenta essencial para visualizar o produto de forma estratégica, ajudando a equipe a entender o fluxo completo do usuário e a definir entregas incrementais.  ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/30/reactions",
       "total_count": 0,
@@ -620,7 +680,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/30/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },
@@ -676,7 +736,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -731,18 +791,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 6,
+      "state": "closed",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-03T23:00:52Z",
+      "updated_at": "2026-05-05T21:51:37Z",
       "due_on": "2026-05-02T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-05T21:51:37Z"
     },
     "comments": 0,
     "created_at": "2026-05-01T22:14:24Z",
-    "updated_at": "2026-05-01T22:14:46Z",
-    "closed_at": null,
+    "updated_at": "2026-05-05T21:51:07Z",
+    "closed_at": "2026-05-05T21:51:07Z",
     "assignee": {
       "login": "Nic0laslc",
       "id": 240096349,
@@ -788,7 +848,27 @@
       "total_blocking": 0
     },
     "body": "#  Stack Front-end – SafeStreets\n\nEste documento define as tecnologias utilizadas no desenvolvimento do front-end do **SafeStreets**, bem como as justificativas para cada escolha. O foco é garantir um sistema **moderno, escalável e de fácil manutenção**, sem adicionar complexidade desnecessária.\n\n---\n\n##  Framework Principal: Next.js\n\n**Definição:**\nFramework baseado em React que oferece estrutura pronta para aplicações web modernas.\n\n**Por que utilizar:**\n\n* Renderização otimizada (SSR e SSG)\n* Melhor performance e SEO\n* Estrutura de projeto organizada\n* Suporte nativo a rotas\n* Otimizações automáticas (imagens, carregamento)\n\n---\n\n##  Linguagem: TypeScript + JSX\n\n**Definição:**\nO projeto utiliza TypeScript para lógica e tipagem, juntamente com JSX, uma sintaxe que permite escrever estruturas semelhantes a HTML diretamente no código.\n\n**Por que utilizar:**\n\n* Redução de erros em tempo de desenvolvimento\n* Melhor organização do código\n* Facilita manutenção e escalabilidade\n* Integração direta com Next.js\n* Permite construir interfaces de forma declarativa usando JSX\n\n---\n\n##  Estilização: CSS \n\n**Definição:**\nUso de CSS tradicional com escopo local através de CSS Modules (suportado nativamente pelo Next.js).\n\n**Por que utilizar:**\n\n* Escopo local evita conflitos de classes\n* Código mais organizado e previsível\n* Fácil manutenção e refatoração\n* Sem dependência de frameworks de estilo\n\n---\n\n##  Boas Práticas Utilizadas\n\n* Componentização da interface\n* Separação de responsabilidades\n* Código limpo e reutilizável\n* Tratamento de erros e feedback visual\n\n---\n\nLinks relacionados: \n\nhttps://www.youtube.com/watch?v=fX5WCe3d8WU\n\nhttps://www.youtube.com/watch?v=QsSUbuYeEFk\n\nhttps://www.youtube.com/watch?v=sW-yibnl1tQ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/29/reactions",
       "total_count": 0,
@@ -803,7 +883,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/29/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },
@@ -868,7 +948,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -944,18 +1024,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 1,
-      "state": "open",
+      "open_issues": 0,
+      "closed_issues": 6,
+      "state": "closed",
       "created_at": "2026-05-01T11:02:33Z",
-      "updated_at": "2026-05-03T23:00:52Z",
+      "updated_at": "2026-05-05T21:51:37Z",
       "due_on": "2026-05-02T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-05T21:51:37Z"
     },
     "comments": 0,
     "created_at": "2026-05-01T19:24:26Z",
-    "updated_at": "2026-05-03T13:25:42Z",
-    "closed_at": null,
+    "updated_at": "2026-05-05T21:51:22Z",
+    "closed_at": "2026-05-05T21:51:22Z",
     "assignee": {
       "login": "jorgevasquez25",
       "id": 247237551,
@@ -1001,7 +1081,27 @@
       "total_blocking": 0
     },
     "body": "# Issue: Implementação do Banco de Dados com PostgreSQL + FastAPI \n\n## Descrição\nConfiguração e implementação da infraestrutura de banco de dados do projeto SafeStreets utilizando PostgreSQL em ambiente isolado (Docker). A integração com o backend foi estabelecida utilizando SQLAlchemy (ORM) e o driver Psycopg2, garantindo a persistência e manipulação estruturada dos dados de ocorrências que serão consumidos pelo FastAPI.\n\n## Objetivos\n- [x] Configurar ambiente PostgreSQL padronizado para a equipe\n- [x] Integrar banco de dados com backend Python\n- [x] Definir modelos de tabelas iniciais usando ORM\n- [ ] Preparar estrutura para futuras migrations (Ex: Alembic - *Próximo passo*)\n\n## Tarefas\n- [x] Configurar infraestrutura via contêiner (`docker-compose.yml` com a imagem `postgres:15-alpine` e volume persistente).\n- [x] Criar ambiente virtual (`.venv`) e mapear dependências no `requirements.txt`:\n  - `fastapi`\n  - `sqlalchemy`\n  - `psycopg2-binary` (Driver de comunicação)\n- [x] Configurar o motor de conexão e credenciais com o banco (`database.py`).\n- [x] Criar sessão de comunicação do banco (`SessionLocal`).\n- [x] Definir modelos iniciais com SQLAlchemy (`models.py` -> Tabela `Ocorrencia` contendo título, latitude e longitude).\n- [x] Criar script de teste e povoamento inicial (`teste.py`) para validar a geração das tabelas via `Base.metadata.create_all`.\n- [x] Validar persistência inserindo dados simulados e acessando via Client SGBD.\n- [ ] Criar endpoint no FastAPI (ex: `GET /ocorrencias`) para expor os dados salvos.\n\n## Tecnologias Envolvidas\n- PostgreSQL 15\n- Docker / Docker Compose\n- Python / FastAPI\n- SQLAlchemy\n- Psycopg2\n\n## Observações\n- A escolha pelo Docker garante que todos os membros da equipe subam o banco de dados localmente sem conflitos de versão ou problemas de sistema operacional.\n- O padrão de organização modular já está sendo seguido (separação entre conexão e modelagem).\n- **Atenção:** As credenciais atuais de desenvolvimento estão temporariamente fixadas no código para facilitar o setup inicial da equipe. Devemos migrar esses dados sensíveis para um arquivo `.env` antes do deploy em produção.\n\n### Responsável\nJorge e Edson\n\n### Prazo\n- 02/05/2026",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/28/reactions",
       "total_count": 0,
@@ -1016,7 +1116,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/28/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },

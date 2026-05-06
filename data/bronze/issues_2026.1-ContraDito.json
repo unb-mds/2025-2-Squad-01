@@ -1,10 +1,86 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-05T07:10:33.715583",
+      "extracted_at": "2026-05-06T07:31:22.971490",
       "file_path": "data/bronze/issues_2026.1-ContraDito.json",
-      "record_count": 50
+      "record_count": 51
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91/events",
+    "html_url": "https://github.com/unb-mds/2026.1-ContraDito/issues/91",
+    "id": 4388125319,
+    "node_id": "I_kwDORypDns8AAAABBY16hw",
+    "number": 91,
+    "title": "[Docs/Infra] Elaboração do Manual de Sobrevivência e Requisitos de DevOps",
+    "user": {
+      "login": "lucasaraujoszz",
+      "id": 168549878,
+      "node_id": "U_kgDOCgvd9g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/168549878?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lucasaraujoszz",
+      "html_url": "https://github.com/lucasaraujoszz",
+      "followers_url": "https://api.github.com/users/lucasaraujoszz/followers",
+      "following_url": "https://api.github.com/users/lucasaraujoszz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lucasaraujoszz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lucasaraujoszz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lucasaraujoszz/subscriptions",
+      "organizations_url": "https://api.github.com/users/lucasaraujoszz/orgs",
+      "repos_url": "https://api.github.com/users/lucasaraujoszz/repos",
+      "events_url": "https://api.github.com/users/lucasaraujoszz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lucasaraujoszz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-06T01:29:45Z",
+    "updated_at": "2026-05-06T01:29:45Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## Descrição\nElaboração da documentação completa da infraestrutura e DevOps do projeto ContraDito para a Sprint 6. A tarefa envolveu a criação do \"Manual de Sobrevivência\" (`execucao.md`), detalhando as diretrizes de execução do ambiente local via Docker Compose e a consolidação dos Requisitos Não-Funcionais (RNFs) relacionados à arquitetura de contêineres e performance.\n\n## Objetivo\nGarantir que qualquer pessoa consiga provisionar o ambiente local de forma replicável e compreender as decisões arquiteturais de infraestrutura tomadas (isolamento de contêineres, cache e build multi-arquitetura), alinhando-se com a meta de organização e planejamento da Sprint 6.\n\n## Requisitos (Critérios de Aceite)\n- [x] Documento base da infraestrutura (`execucao.md`) gerado em Markdown.\n- [x] Passo a passo detalhado de como subir a infraestrutura local documentado.\n- [x] Variáveis de ambiente (`.env`) necessárias mapeadas.\n- [x] Separação obrigatória entre o contêiner do roteador (FastAPI Principal) e o Worker NLP documentada e justificada.\n- [x] Estratégia de resolução de build para diferenças de arquitetura (ARM64 Mac vs. AMD64) e uso de Layer Caching explicada.\n- [x] Implementação do Cache em Memória no FastAPI documentada.\n- [x] Requisitos Não-Funcionais (RNFs) validados e padronizados para a documentação geral (RNF04, RNF08, RNF16, RNF17, RNF18).\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [x] Validar os requisitos do Figma (Epic 2, Epic 6) que dependem da infraestrutura Docker.\n- [x] Estruturar a documentação dos serviços orquestrados (`banco_dados`, `api`, `worker`, `frontend`).\n- [x] Redigir explicações técnicas sobre as restrições do `.dockerignore` e da imagem `python:3.12-slim`.\n- [x] Redigir a explicação técnica sobre a persistência vetorial local com `pgvector` e Hot-Reload.\n- [x] Gerar e revisar o arquivo final (`execucao.md`) para integração com o MkDocs do projeto.\n\n## Responsável\n- @lucasaraujoszz ",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/91/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026.1-ContraDito"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/89",
