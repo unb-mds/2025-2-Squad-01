@@ -2,30 +2,50 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-05T07:57:13.746431",
+  "analyzed_at": "2026-05-06T08:17:09.059386",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 16,
-  "total_bytes": 57507,
+  "total_files": 20,
+  "total_bytes": 308648,
   "languages": [
+    {
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 244519,
+      "percentage": 79.22,
+      "files": [
+        {
+          "path": "backend/uv.lock",
+          "name": "uv.lock",
+          "size": 244519,
+          "extension": ".lock"
+        }
+      ]
+    },
     {
       "language": "Markdown",
       "file_count": 15,
-      "total_bytes": 56447,
-      "percentage": 98.16,
+      "total_bytes": 59936,
+      "percentage": 19.42,
       "files": [
         {
           "path": "ARCHITECTURE.md",
           "name": "ARCHITECTURE.md",
-          "size": 17198,
+          "size": 18072,
           "extension": ".md"
         },
         {
           "path": "docs/SRS.md",
           "name": "SRS.md",
-          "size": 9119,
+          "size": 9669,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/adr/ADR-005-adapter-pattern.md",
+          "name": "ADR-005-adapter-pattern.md",
+          "size": 4075,
           "extension": ".md"
         },
         {
@@ -37,25 +57,19 @@
         {
           "path": "docs/tech-stack.md",
           "name": "tech-stack.md",
-          "size": 3610,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/adr/ADR-005-adapter-pattern.md",
-          "name": "ADR-005-adapter-pattern.md",
-          "size": 2748,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/adr/ADR-006-redis-cache.md",
-          "name": "ADR-006-redis-cache.md",
-          "size": 2634,
+          "size": 3630,
           "extension": ".md"
         },
         {
           "path": "docs/adr/ADR-004-batch-coleta.md",
           "name": "ADR-004-batch-coleta.md",
-          "size": 2527,
+          "size": 3186,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/adr/ADR-006-redis-cache.md",
+          "name": "ADR-006-redis-cache.md",
+          "size": 2665,
           "extension": ".md"
         },
         {
@@ -73,8 +87,22 @@
         {
           "path": "docs/adr/ADR-001-layered-architecture.md",
           "name": "ADR-001-layered-architecture.md",
-          "size": 2158,
+          "size": 2169,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 1,
+      "total_bytes": 2187,
+      "percentage": 0.71,
+      "files": [
+        {
+          "path": "backend/src/main.py",
+          "name": "main.py",
+          "size": 2187,
+          "extension": ".py"
         }
       ]
     },
@@ -82,7 +110,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 1.84,
+      "percentage": 0.34,
       "files": [
         {
           "path": "LICENSE",
@@ -91,10 +119,38 @@
           "extension": ""
         }
       ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 619,
+      "percentage": 0.2,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 619,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "TOML",
+      "file_count": 1,
+      "total_bytes": 327,
+      "percentage": 0.11,
+      "files": [
+        {
+          "path": "backend/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 327,
+          "extension": ".toml"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-05T07:59:54.388081",
+    "extracted_at": "2026-05-06T08:19:34.421793",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }
