@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-06T07:31:25.360034",
+      "extracted_at": "2026-05-07T07:37:55.730491",
       "file_path": "data/bronze/issues_2026-1-ProtectKids.json",
       "record_count": 33
     }
@@ -113,17 +113,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-02T19:24:31Z",
-    "updated_at": "2026-05-05T20:43:32Z",
+    "updated_at": "2026-05-06T13:39:35Z",
     "closed_at": null,
     "assignee": {
       "login": "Danielly-Mendes",
@@ -169,7 +169,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição\nDesenvolver a camada de extração de dados (Pipeline ETL) do sistema. O objetivo é criar um script em Python capaz de consultar a API de Dados Abertos da Câmara dos Deputados, buscar proposições legislativas relacionadas à proteção infantil, transformar esses dados no formato esperado pelo nosso sistema e salvá-los no nosso banco de dados PostgreSQL utilizando as configurações já estabelecidas.\n\n## ⚠️ Prioridade\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [x] Criar a pasta crawler/ dentro do diretório backend/.\n\n- [ ] Criar o script camara_api.py utilizando a biblioteca requests (ou Scrapy).\n\n- [ ] Mapear o endpoint correto da API da Câmara (ex: /api/v2/proposicoes) e definir os parâmetros de busca (palavras-chave como \"criança\", \"infância\", \"ECA\").\n\n- [ ] Tratar os dados retornados no formato JSON, extraindo os campos necessários (título, descrição, etc.).\n\n- [ ] Importar o módulo de conexão com o banco de dados (backend.database) e o modelo (backend.models.Proposicao).\n\n- [ ] Implementar o loop de salvamento para inserir as proposições baixadas na nossa tabela do PostgreSQL usando uma sessão do SQLModel.\n\n## 🧠 Notas Adicionais\nRecomendação de arquitetura: Mantenha a função de busca (fetch) separada da função de salvamento (save). Isso facilita futuros testes e manutenções.\n\nSe tiver dúvidas sobre a estrutura da injeção de dependência do banco, revise o arquivo main.py para entender como a conexão está sendo gerenciada atualmente.",
+    "body": "## 📋 Descrição\nDesenvolver a camada de extração de dados (Pipeline ETL) do sistema. O objetivo é criar um script em Python capaz de consultar a API de Dados Abertos da Câmara dos Deputados, buscar proposições legislativas relacionadas à proteção infantil, transformar esses dados no formato esperado pelo nosso sistema e salvá-los no nosso banco de dados PostgreSQL utilizando as configurações já estabelecidas.\n\n## ⚠️ Prioridade\n[ ] Baixa\n\n[ ] Média\n\n[x] Alta\n\n[ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [x] Criar a pasta crawler/ dentro do diretório backend/.\n\n- [x] Criar o script camara_api.py utilizando a biblioteca requests (ou Scrapy).\n\n- [ ] Mapear o endpoint correto da API da Câmara (ex: /api/v2/proposicoes) e definir os parâmetros de busca (palavras-chave como \"criança\", \"infância\", \"ECA\").\n\n- [ ] Tratar os dados retornados no formato JSON, extraindo os campos necessários (título, descrição, etc.).\n\n- [ ] Importar o módulo de conexão com o banco de dados (backend.database) e o modelo (backend.models.Proposicao).\n\n- [ ] Implementar o loop de salvamento para inserir as proposições baixadas na nossa tabela do PostgreSQL usando uma sessão do SQLModel.\n\n## 🧠 Notas Adicionais\nRecomendação de arquitetura: Mantenha a função de busca (fetch) separada da função de salvamento (save). Isso facilita futuros testes e manutenções.\n\nSe tiver dúvidas sobre a estrutura da injeção de dependência do banco, revise o arquivo main.py para entender como a conexão está sendo gerenciada atualmente.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/37/reactions",
@@ -287,11 +287,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -461,11 +461,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -665,11 +665,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -813,7 +813,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -889,18 +889,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-02T17:39:10Z",
-    "updated_at": "2026-05-02T18:00:56Z",
-    "closed_at": null,
+    "updated_at": "2026-05-06T15:11:01Z",
+    "closed_at": "2026-05-06T15:11:01Z",
     "assignee": {
       "login": "Golira12",
       "id": 174129200,
@@ -946,7 +946,27 @@
       "total_blocking": 0
     },
     "body": "## 📋 Descrição\nRealizar os ajustes necessários na infraestrutura e nos arquivos base do projeto React/Vite para que o frontend consiga rodar corretamente dentro do nosso ambiente Docker. Atualmente, faltam permissões de rede no Vite, o Dockerfile está travado em um loop de espera e o componente principal (App.jsx) está vazio, o que causa erro de compilação. O objetivo é aplicar essas correções para que a tela inicial do \"ProtectKids\" seja exibida com sucesso na porta 3000.\n\n## ⚠️ Prioridade\n- [ ] Baixa\n\n- [x] Média\n\n- [ ] Alta\n\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Corrigir o Dockerfile do frontend: Substituir o comando de sleep infinito pelas etapas reais de build (Copiar package.json, rodar npm install, expor a porta 3000 e usar o CMD [\"npm\", \"run\", \"dev\"]).\n\n- [ ] Configurar o vite.config.js: Adicionar o bloco server: { port: 3000, host: true } para forçar o Vite a rodar na porta correta e permitir que o Docker exponha a interface.\n\n- [ ] Preencher o src/App.jsx: Inserir um código funcional básico no arquivo (que está vazio), contendo o título \"ProtectKids\" e um texto de confirmação, para que o main.jsx consiga renderizar a tela sem quebrar.\n\n- [ ] Atualizar o index.html: Alterar a tag <title>frontend</title> para <title>ProtectKids - Monitoramento Legislativo</title>.\n\n- [ ] Testar a integração: Rodar docker-compose up --build e verificar se a aplicação abre corretamente no navegador em http://localhost:3000.\n\n## 🧠 Notas Adicionais\nAtenção ao Docker: Após modificar o arquivo Dockerfile, é obrigatório rodar o comando do docker-compose com a flag --build (docker-compose up --build). Se rodar apenas up, o Docker usará a imagem antiga que está quebrada em cache.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "augustogmedeiros",
+      "id": 75932316,
+      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/augustogmedeiros",
+      "html_url": "https://github.com/augustogmedeiros",
+      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
+      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
+      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
+      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
+      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
+      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/32/reactions",
       "total_count": 0,
@@ -961,7 +981,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/32/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   },
@@ -1063,11 +1083,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -1257,11 +1277,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 3,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-02T20:25:08Z",
+      "updated_at": "2026-05-06T15:11:01Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
