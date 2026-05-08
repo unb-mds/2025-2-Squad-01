@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.256465",
+      "extracted_at": "2026-05-08T07:14:40.065556",
       "file_path": "data/silver/language_analysis_all.json",
       "record_count": 95
     }
@@ -10,19 +10,453 @@
     "repository": "2026-1-Squad13",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:55.409126",
+    "analyzed_at": "2026-05-08T07:12:14.231860",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 20,
-    "total_bytes": 308196,
+    "total_files": 14703,
+    "total_bytes": 149851710,
     "languages": [
+      {
+        "language": "Unknown",
+        "file_count": 4631,
+        "total_bytes": 65916767,
+        "percentage": 43.99,
+        "files": [
+          {
+            "path": "frontend/node_modules/@esbuild/win32-x64/esbuild.exe",
+            "name": "esbuild.exe",
+            "size": 9913856,
+            "extension": ".exe"
+          },
+          {
+            "path": "frontend/node_modules/lucide-react/dist/umd/lucide-react.js.map",
+            "name": "lucide-react.js.map",
+            "size": 4157608,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/lucide-react/dist/cjs/lucide-react.js.map",
+            "name": "lucide-react.js.map",
+            "size": 4093084,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/lucide-react/dist/umd/lucide-react.min.js.map",
+            "name": "lucide-react.min.js.map",
+            "size": 3655149,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/.vite/deps/lucide-react.js.map",
+            "name": "lucide-react.js.map",
+            "size": 2607948,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node",
+            "name": "rollup.win32-x64-msvc.node",
+            "size": 2546176,
+            "extension": ".node"
+          },
+          {
+            "path": "frontend/node_modules/.vite/deps/recharts.js.map",
+            "name": "recharts.js.map",
+            "size": 2393242,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/date-fns/locale/cdn.js.map",
+            "name": "cdn.js.map",
+            "size": 2212540,
+            "extension": ".map"
+          },
+          {
+            "path": "frontend/node_modules/@rollup/rollup-win32-x64-gnu/rollup.win32-x64-gnu.node",
+            "name": "rollup.win32-x64-gnu.node",
+            "size": 1978368,
+            "extension": ".node"
+          },
+          {
+            "path": "frontend/node_modules/.vite/deps/date-fns_locale.js.map",
+            "name": "date-fns_locale.js.map",
+            "size": 1843205,
+            "extension": ".map"
+          }
+        ]
+      },
+      {
+        "language": "JavaScript",
+        "file_count": 7357,
+        "total_bytes": 63350813,
+        "percentage": 42.28,
+        "files": [
+          {
+            "path": "frontend/node_modules/typescript/lib/typescript.js",
+            "name": "typescript.js",
+            "size": 9112572,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/_tsc.js",
+            "name": "_tsc.js",
+            "size": 6213092,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/peers/index.js",
+            "name": "index.js",
+            "size": 4501254,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js",
+            "name": "dep-BK3b2jBa.js",
+            "size": 2086035,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/jiti/dist/babel.js",
+            "name": "babel.js",
+            "size": 1736792,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/.vite/deps/recharts.js",
+            "name": "recharts.js",
+            "size": 1260068,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/.vite/deps/lucide-react.js",
+            "name": "lucide-react.js",
+            "size": 1098460,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/react-dom/umd/react-dom.development.js",
+            "name": "react-dom.development.js",
+            "size": 1080227,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/react-dom/cjs/react-dom.development.js",
+            "name": "react-dom.development.js",
+            "size": 1029622,
+            "extension": ".js"
+          },
+          {
+            "path": "frontend/node_modules/date-fns/locale/cdn.js",
+            "name": "cdn.js",
+            "size": 1010783,
+            "extension": ".js"
+          }
+        ]
+      },
+      {
+        "language": "TypeScript",
+        "file_count": 1780,
+        "total_bytes": 12154079,
+        "percentage": 8.11,
+        "files": [
+          {
+            "path": "frontend/node_modules/typescript/lib/lib.dom.d.ts",
+            "name": "lib.dom.d.ts",
+            "size": 1874901,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/lucide-react/dist/lucide-react.d.ts",
+            "name": "lucide-react.d.ts",
+            "size": 1856977,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/lucide-react/dynamicIconImports.d.ts",
+            "name": "dynamicIconImports.d.ts",
+            "size": 1814622,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/csstype/index.d.ts",
+            "name": "index.d.ts",
+            "size": 894969,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/@babel/types/lib/index.d.ts",
+            "name": "index.d.ts",
+            "size": 666005,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/lib.webworker.d.ts",
+            "name": "lib.webworker.d.ts",
+            "size": 609557,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/typescript.d.ts",
+            "name": "typescript.d.ts",
+            "size": 588085,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/lib.es5.d.ts",
+            "name": "lib.es5.d.ts",
+            "size": 218439,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/@types/react/index.d.ts",
+            "name": "index.d.ts",
+            "size": 195388,
+            "extension": ".ts"
+          },
+          {
+            "path": "frontend/node_modules/@types/react/ts5.0/index.d.ts",
+            "name": "index.d.ts",
+            "size": 194542,
+            "extension": ".ts"
+          }
+        ]
+      },
+      {
+        "language": "JSON",
+        "file_count": 401,
+        "total_bytes": 5400962,
+        "percentage": 3.6,
+        "files": [
+          {
+            "path": "frontend/node_modules/typescript/lib/ru/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 443587,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/ja/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 381398,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/ko/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 346139,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/fr/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 346016,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/de/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 344426,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/pl/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 342111,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/es/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 340054,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/it/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 339409,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/tr/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 330684,
+            "extension": ".json"
+          },
+          {
+            "path": "frontend/node_modules/typescript/lib/pt-br/diagnosticMessages.generated.json",
+            "name": "diagnosticMessages.generated.json",
+            "size": 330482,
+            "extension": ".json"
+          }
+        ]
+      },
+      {
+        "language": "Markdown",
+        "file_count": 251,
+        "total_bytes": 1947107,
+        "percentage": 1.3,
+        "files": [
+          {
+            "path": "frontend/node_modules/vite/LICENSE.md",
+            "name": "LICENSE.md",
+            "size": 162419,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/date-fns/CHANGELOG.md",
+            "name": "CHANGELOG.md",
+            "size": 116305,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/d3-shape/README.md",
+            "name": "README.md",
+            "size": 94916,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/d3-scale/README.md",
+            "name": "README.md",
+            "size": 91532,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/d3-array/README.md",
+            "name": "README.md",
+            "size": 62983,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/@remix-run/router/CHANGELOG.md",
+            "name": "CHANGELOG.md",
+            "size": 53539,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/recharts/CHANGELOG.md",
+            "name": "CHANGELOG.md",
+            "size": 45897,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/react-router-dom/CHANGELOG.md",
+            "name": "CHANGELOG.md",
+            "size": 42809,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/micromatch/README.md",
+            "name": "README.md",
+            "size": 38962,
+            "extension": ".md"
+          },
+          {
+            "path": "frontend/node_modules/@babel/parser/CHANGELOG.md",
+            "name": "CHANGELOG.md",
+            "size": 38238,
+            "extension": ".md"
+          }
+        ]
+      },
+      {
+        "language": "HTML",
+        "file_count": 3,
+        "total_bytes": 399922,
+        "percentage": 0.27,
+        "files": [
+          {
+            "path": "frontend/node_modules/recharts/umd/report.html",
+            "name": "report.html",
+            "size": 348549,
+            "extension": ".html"
+          },
+          {
+            "path": "frontend/node_modules/decimal.js-light/doc/API.html",
+            "name": "API.html",
+            "size": 50593,
+            "extension": ".html"
+          },
+          {
+            "path": "frontend/index.html",
+            "name": "index.html",
+            "size": 780,
+            "extension": ".html"
+          }
+        ]
+      },
+      {
+        "language": "No Extension",
+        "file_count": 207,
+        "total_bytes": 322538,
+        "percentage": 0.22,
+        "files": [
+          {
+            "path": "frontend/node_modules/rollup/dist/bin/rollup",
+            "name": "rollup",
+            "size": 82199,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/caniuse-lite/LICENSE",
+            "name": "LICENSE",
+            "size": 18651,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/ts-interface-checker/LICENSE",
+            "name": "LICENSE",
+            "size": 11357,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/esbuild/bin/esbuild",
+            "name": "esbuild",
+            "size": 9200,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/jsesc/bin/jsesc",
+            "name": "jsesc",
+            "size": 3833,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/cssesc/bin/cssesc",
+            "name": "cssesc",
+            "size": 3103,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/victory-vendor/lib-vendor/d3-voronoi/LICENSE",
+            "name": "LICENSE",
+            "size": 2656,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/lodash/LICENSE",
+            "name": "LICENSE",
+            "size": 1952,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/react-transition-group/LICENSE",
+            "name": "LICENSE",
+            "size": 1608,
+            "extension": ""
+          },
+          {
+            "path": "frontend/node_modules/resolve/bin/resolve",
+            "name": "resolve",
+            "size": 1535,
+            "extension": ""
+          }
+        ]
+      },
       {
         "language": "Lock File",
         "file_count": 1,
         "total_bytes": 244519,
-        "percentage": 79.34,
+        "percentage": 0.16,
         "files": [
           {
             "path": "backend/uv.lock",
@@ -33,98 +467,182 @@
         ]
       },
       {
-        "language": "Markdown",
-        "file_count": 15,
-        "total_bytes": 59484,
-        "percentage": 19.3,
+        "language": "Text",
+        "file_count": 7,
+        "total_bytes": 60691,
+        "percentage": 0.04,
         "files": [
           {
-            "path": "ARCHITECTURE.md",
-            "name": "ARCHITECTURE.md",
-            "size": 17956,
-            "extension": ".md"
+            "path": "frontend/node_modules/typescript/ThirdPartyNoticeText.txt",
+            "name": "ThirdPartyNoticeText.txt",
+            "size": 37631,
+            "extension": ".txt"
           },
           {
-            "path": "docs/SRS.md",
-            "name": "SRS.md",
-            "size": 9703,
-            "extension": ".md"
+            "path": "frontend/node_modules/baseline-browser-mapping/LICENSE.txt",
+            "name": "LICENSE.txt",
+            "size": 11357,
+            "extension": ".txt"
           },
           {
-            "path": "docs/adr/ADR-005-adapter-pattern.md",
-            "name": "ADR-005-adapter-pattern.md",
-            "size": 3799,
-            "extension": ".md"
+            "path": "frontend/node_modules/typescript/LICENSE.txt",
+            "name": "LICENSE.txt",
+            "size": 9142,
+            "extension": ".txt"
           },
           {
-            "path": "Estudos/git_e_gitHub.md",
-            "name": "git_e_gitHub.md",
-            "size": 3744,
-            "extension": ".md"
+            "path": "frontend/node_modules/cssesc/LICENSE-MIT.txt",
+            "name": "LICENSE-MIT.txt",
+            "size": 1077,
+            "extension": ".txt"
           },
           {
-            "path": "docs/tech-stack.md",
-            "name": "tech-stack.md",
-            "size": 3610,
-            "extension": ".md"
+            "path": "frontend/node_modules/jsesc/LICENSE-MIT.txt",
+            "name": "LICENSE-MIT.txt",
+            "size": 1077,
+            "extension": ".txt"
           },
           {
-            "path": "docs/adr/ADR-004-batch-coleta.md",
-            "name": "ADR-004-batch-coleta.md",
-            "size": 3171,
-            "extension": ".md"
+            "path": "frontend/node_modules/recharts/umd/Recharts.js.LICENSE.txt",
+            "name": "Recharts.js.LICENSE.txt",
+            "size": 324,
+            "extension": ".txt"
           },
           {
-            "path": "docs/adr/ADR-006-redis-cache.md",
-            "name": "ADR-006-redis-cache.md",
-            "size": 2634,
-            "extension": ".md"
-          },
-          {
-            "path": "docs/story-maps/story-map-autenticacao.md",
-            "name": "story-map-autenticacao.md",
-            "size": 2342,
-            "extension": ".md"
-          },
-          {
-            "path": "docs/adr/ADR-003-fastapi.md",
-            "name": "ADR-003-fastapi.md",
-            "size": 2200,
-            "extension": ".md"
-          },
-          {
-            "path": "docs/adr/ADR-001-layered-architecture.md",
-            "name": "ADR-001-layered-architecture.md",
-            "size": 2158,
-            "extension": ".md"
+            "path": "frontend/node_modules/recharts-scale/umd/RechartsScale.min.js.LICENSE.txt",
+            "name": "RechartsScale.min.js.LICENSE.txt",
+            "size": 83,
+            "extension": ".txt"
           }
         ]
       },
       {
-        "language": "Python",
-        "file_count": 1,
-        "total_bytes": 2187,
-        "percentage": 0.71,
+        "language": "PowerShell",
+        "file_count": 22,
+        "total_bytes": 17850,
+        "percentage": 0.01,
         "files": [
           {
-            "path": "backend/src/main.py",
-            "name": "main.py",
-            "size": 2187,
-            "extension": ".py"
+            "path": "frontend/node_modules/.bin/baseline-browser-mapping.ps1",
+            "name": "baseline-browser-mapping.ps1",
+            "size": 873,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/parser.ps1",
+            "name": "parser.ps1",
+            "size": 857,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/autoprefixer.ps1",
+            "name": "autoprefixer.ps1",
+            "size": 841,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/update-browserslist-db.ps1",
+            "name": "update-browserslist-db.ps1",
+            "size": 841,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/sucrase-node.ps1",
+            "name": "sucrase-node.ps1",
+            "size": 821,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tsserver.ps1",
+            "name": "tsserver.ps1",
+            "size": 817,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/rollup.ps1",
+            "name": "rollup.ps1",
+            "size": 813,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tailwind.ps1",
+            "name": "tailwind.ps1",
+            "size": 813,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tailwindcss.ps1",
+            "name": "tailwindcss.ps1",
+            "size": 813,
+            "extension": ".ps1"
+          },
+          {
+            "path": "frontend/node_modules/.bin/nanoid.ps1",
+            "name": "nanoid.ps1",
+            "size": 809,
+            "extension": ".ps1"
           }
         ]
       },
       {
-        "language": "No Extension",
-        "file_count": 1,
-        "total_bytes": 1060,
-        "percentage": 0.34,
+        "language": "CSS",
+        "file_count": 9,
+        "total_bytes": 16623,
+        "percentage": 0.01,
         "files": [
           {
-            "path": "LICENSE",
-            "name": "LICENSE",
-            "size": 1060,
-            "extension": ""
+            "path": "frontend/node_modules/tailwindcss/lib/css/preflight.css",
+            "name": "preflight.css",
+            "size": 7805,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/src/css/preflight.css",
+            "name": "preflight.css",
+            "size": 7805,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/src/index.css",
+            "name": "index.css",
+            "size": 854,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/tailwind.css",
+            "name": "tailwind.css",
+            "size": 61,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/components.css",
+            "name": "components.css",
+            "size": 22,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/utilities.css",
+            "name": "utilities.css",
+            "size": 21,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/variants.css",
+            "name": "variants.css",
+            "size": 20,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/screens.css",
+            "name": "screens.css",
+            "size": 19,
+            "extension": ".css"
+          },
+          {
+            "path": "frontend/node_modules/tailwindcss/base.css",
+            "name": "base.css",
+            "size": 16,
+            "extension": ".css"
           }
         ]
       },
@@ -132,7 +650,7 @@
         "language": "Git Ignore",
         "file_count": 1,
         "total_bytes": 619,
-        "percentage": 0.2,
+        "percentage": 0.0,
         "files": [
           {
             "path": ".gitignore",
@@ -146,7 +664,7 @@
         "language": "TOML",
         "file_count": 1,
         "total_bytes": 327,
-        "percentage": 0.11,
+        "percentage": 0.0,
         "files": [
           {
             "path": "backend/pyproject.toml",
@@ -155,10 +673,162 @@
             "extension": ".toml"
           }
         ]
+      },
+      {
+        "language": "Python",
+        "file_count": 1,
+        "total_bytes": 2187,
+        "percentage": 0.0,
+        "files": [
+          {
+            "path": "backend/src/main.py",
+            "name": "main.py",
+            "size": 2187,
+            "extension": ".py"
+          }
+        ]
+      },
+      {
+        "language": "Batch",
+        "file_count": 22,
+        "total_bytes": 6811,
+        "percentage": 0.0,
+        "files": [
+          {
+            "path": "frontend/node_modules/.bin/baseline-browser-mapping.cmd",
+            "name": "baseline-browser-mapping.cmd",
+            "size": 325,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/parser.cmd",
+            "name": "parser.cmd",
+            "size": 321,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/autoprefixer.cmd",
+            "name": "autoprefixer.cmd",
+            "size": 317,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/update-browserslist-db.cmd",
+            "name": "update-browserslist-db.cmd",
+            "size": 317,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/sucrase-node.cmd",
+            "name": "sucrase-node.cmd",
+            "size": 312,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tsserver.cmd",
+            "name": "tsserver.cmd",
+            "size": 311,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/rollup.cmd",
+            "name": "rollup.cmd",
+            "size": 310,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tailwind.cmd",
+            "name": "tailwind.cmd",
+            "size": 310,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/tailwindcss.cmd",
+            "name": "tailwindcss.cmd",
+            "size": 310,
+            "extension": ".cmd"
+          },
+          {
+            "path": "frontend/node_modules/.bin/nanoid.cmd",
+            "name": "nanoid.cmd",
+            "size": 309,
+            "extension": ".cmd"
+          }
+        ]
+      },
+      {
+        "language": "SVG Image",
+        "file_count": 2,
+        "total_bytes": 5125,
+        "percentage": 0.0,
+        "files": [
+          {
+            "path": "frontend/node_modules/date-fns/docs/logotype.svg",
+            "name": "logotype.svg",
+            "size": 2694,
+            "extension": ".svg"
+          },
+          {
+            "path": "frontend/node_modules/date-fns/docs/logo.svg",
+            "name": "logo.svg",
+            "size": 2431,
+            "extension": ".svg"
+          }
+        ]
+      },
+      {
+        "language": "YAML",
+        "file_count": 7,
+        "total_bytes": 4770,
+        "percentage": 0.0,
+        "files": [
+          {
+            "path": "frontend/node_modules/reusify/.github/workflows/ci.yml",
+            "name": "ci.yml",
+            "size": 1775,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/supports-preserve-symlinks-flag/.github/FUNDING.yml",
+            "name": "FUNDING.yml",
+            "size": 601,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/function-bind/.github/FUNDING.yml",
+            "name": "FUNDING.yml",
+            "size": 584,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/resolve/.github/FUNDING.yml",
+            "name": "FUNDING.yml",
+            "size": 578,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/es-errors/.github/FUNDING.yml",
+            "name": "FUNDING.yml",
+            "size": 555,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/hasown/.github/FUNDING.yml",
+            "name": "FUNDING.yml",
+            "size": 552,
+            "extension": ".yml"
+          },
+          {
+            "path": "frontend/node_modules/reusify/.github/dependabot.yml",
+            "name": "dependabot.yml",
+            "size": 125,
+            "extension": ".yml"
+          }
+        ]
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.663722",
+      "extracted_at": "2026-05-08T07:14:37.318811",
       "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
     }
   },
@@ -166,7 +836,7 @@
     "repository": "2024-2-ChamaControl",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:25.282792",
+    "analyzed_at": "2026-05-08T07:11:48.876134",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -706,7 +1376,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.665531",
+      "extracted_at": "2026-05-08T07:14:37.496988",
       "file_path": "data/silver/language_analysis_2024-2-ChamaControl.json"
     }
   },
@@ -714,7 +1384,7 @@
     "repository": "2026.1-ContraDito",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:54.834849",
+    "analyzed_at": "2026-05-08T07:12:13.381122",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -1136,7 +1806,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.668979",
+      "extracted_at": "2026-05-08T07:14:37.501416",
       "file_path": "data/silver/language_analysis_2026.1-ContraDito.json"
     }
   },
@@ -1144,7 +1814,7 @@
     "repository": ".github",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:48.353026",
+    "analyzed_at": "2026-05-08T07:12:07.720826",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -1168,7 +1838,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.670633",
+      "extracted_at": "2026-05-08T07:14:37.503005",
       "file_path": "data/silver/language_analysis_.github.json"
     }
   },
@@ -1176,7 +1846,7 @@
     "repository": "Squad09-UnBHUB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:15.439182",
+    "analyzed_at": "2026-05-08T07:11:40.533392",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -1662,7 +2332,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.672542",
+      "extracted_at": "2026-05-08T07:14:37.504876",
       "file_path": "data/silver/language_analysis_Squad09-UnBHUB.json"
     }
   },
@@ -1670,7 +2340,7 @@
     "repository": "2023-2-Squad09-Gotinha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:02.902714",
+    "analyzed_at": "2026-05-08T07:11:30.202839",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -2246,7 +2916,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.677819",
+      "extracted_at": "2026-05-08T07:14:37.510029",
       "file_path": "data/silver/language_analysis_2023-2-Squad09-Gotinha.json"
     }
   },
@@ -2254,7 +2924,7 @@
     "repository": "2023-2-Squad02-Desmatazonia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:55.173192",
+    "analyzed_at": "2026-05-08T07:11:24.496485",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -2820,7 +3490,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.682336",
+      "extracted_at": "2026-05-08T07:14:37.514482",
       "file_path": "data/silver/language_analysis_2023-2-Squad02-Desmatazonia.json"
     }
   },
@@ -3166,7 +3836,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.685560",
+      "extracted_at": "2026-05-08T07:14:37.517605",
       "file_path": "data/silver/language_analysis_2026-1-Squad2.json"
     }
   },
@@ -3174,7 +3844,7 @@
     "repository": "2024-1-Gastos-DF-Doc-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:18.979814",
+    "analyzed_at": "2026-05-08T07:11:43.486885",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -4166,7 +4836,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:26.793416",
+      "extracted_at": "2026-05-08T07:14:37.625102",
       "file_path": "data/silver/language_analysis_2024-1-Gastos-DF-Doc-Squad12.json"
     }
   },
@@ -4174,7 +4844,7 @@
     "repository": "2023-2-Squad05-TesouroMineiro",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:59.613287",
+    "analyzed_at": "2026-05-08T07:11:27.535217",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -4850,7 +5520,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.024857",
+      "extracted_at": "2026-05-08T07:14:37.854935",
       "file_path": "data/silver/language_analysis_2023-2-Squad05-TesouroMineiro.json"
     }
   },
@@ -4858,7 +5528,7 @@
     "repository": "LicitaBSB-24.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:11.369506",
+    "analyzed_at": "2026-05-08T07:11:37.230675",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -5754,7 +6424,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.070018",
+      "extracted_at": "2026-05-08T07:14:37.900071",
       "file_path": "data/silver/language_analysis_LicitaBSB-24.1.json"
     }
   },
@@ -5762,19 +6432,19 @@
     "repository": "2023-2-Squad04",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:58.831286",
+    "analyzed_at": "2026-05-08T07:11:26.806955",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
     "total_files": 113,
-    "total_bytes": 35884186,
+    "total_bytes": 35898518,
     "languages": [
       {
         "language": "GIF Image",
         "file_count": 1,
         "total_bytes": 21145831,
-        "percentage": 58.93,
+        "percentage": 58.9,
         "files": [
           {
             "path": "docs/assets/imgs/transicaoEscuroClaro.gif",
@@ -5787,19 +6457,19 @@
       {
         "language": "JSON",
         "file_count": 2,
-        "total_bytes": 7382427,
-        "percentage": 20.57,
+        "total_bytes": 7396889,
+        "percentage": 20.6,
         "files": [
           {
             "path": "src/dados/data.json",
             "name": "data.json",
-            "size": 7322697,
+            "size": 7336979,
             "extension": ".json"
           },
           {
             "path": "src/dados/counter.json",
             "name": "counter.json",
-            "size": 59730,
+            "size": 59910,
             "extension": ".json"
           }
         ]
@@ -5876,7 +6546,7 @@
         "language": "PDF",
         "file_count": 11,
         "total_bytes": 2363700,
-        "percentage": 6.59,
+        "percentage": 6.58,
         "files": [
           {
             "path": "docs/arquivos/manual-de-design-0910.pdf",
@@ -6133,13 +6803,13 @@
       {
         "language": "Text",
         "file_count": 3,
-        "total_bytes": 255,
+        "total_bytes": 125,
         "percentage": 0.0,
         "files": [
           {
             "path": "src/lista_pdfs.txt",
             "name": "lista_pdfs.txt",
-            "size": 194,
+            "size": 64,
             "extension": ".txt"
           },
           {
@@ -6158,7 +6828,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.077371",
+      "extracted_at": "2026-05-08T07:14:37.907293",
       "file_path": "data/silver/language_analysis_2023-2-Squad04.json"
     }
   },
@@ -6166,7 +6836,7 @@
     "repository": "2025-2-Lumina",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:43.245444",
+    "analyzed_at": "2026-05-08T07:12:03.889961",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -6784,7 +7454,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.081203",
+      "extracted_at": "2026-05-08T07:14:37.911016",
       "file_path": "data/silver/language_analysis_2025-2-Lumina.json"
     }
   },
@@ -6792,7 +7462,7 @@
     "repository": "2026-1-Squad14",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:56.094515",
+    "analyzed_at": "2026-05-08T07:12:14.908849",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -6830,7 +7500,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.085249",
+      "extracted_at": "2026-05-08T07:14:37.914965",
       "file_path": "data/silver/language_analysis_2026-1-Squad14.json"
     }
   },
@@ -6838,7 +7508,7 @@
     "repository": "2023-2-SuaGradeUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:04.995957",
+    "analyzed_at": "2026-05-08T07:11:31.894381",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -7454,7 +8124,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.087245",
+      "extracted_at": "2026-05-08T07:14:37.916986",
       "file_path": "data/silver/language_analysis_2023-2-SuaGradeUnB.json"
     }
   },
@@ -7462,7 +8132,7 @@
     "repository": "2023.2_DeOlhoRS",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:02.125958",
+    "analyzed_at": "2026-05-08T07:11:29.528051",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -8628,7 +9298,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.171523",
+      "extracted_at": "2026-05-08T07:14:38.001741",
       "file_path": "data/silver/language_analysis_2023.2_DeOlhoRS.json"
     }
   },
@@ -8636,7 +9306,7 @@
     "repository": "2025-2-InfoSchool",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:41.768045",
+    "analyzed_at": "2026-05-08T07:12:02.646306",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -9254,7 +9924,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.336087",
+      "extracted_at": "2026-05-08T07:14:38.168029",
       "file_path": "data/silver/language_analysis_2025-2-InfoSchool.json"
     }
   },
@@ -9262,7 +9932,7 @@
     "repository": "2024-2-AcheiUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:21.302239",
+    "analyzed_at": "2026-05-08T07:11:45.314933",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -10078,7 +10748,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.342232",
+      "extracted_at": "2026-05-08T07:14:38.174623",
       "file_path": "data/silver/language_analysis_2024-2-AcheiUnB.json"
     }
   },
@@ -10086,7 +10756,7 @@
     "repository": "Gastos-DF-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:16.953840",
+    "analyzed_at": "2026-05-08T07:11:41.823166",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -10818,7 +11488,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.367640",
+      "extracted_at": "2026-05-08T07:14:38.200023",
       "file_path": "data/silver/language_analysis_Gastos-DF-Squad12.json"
     }
   },
@@ -10826,7 +11496,7 @@
     "repository": "2024-1-MinasDeCultura",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:13.917110",
+    "analyzed_at": "2026-05-08T07:11:39.274134",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -11756,7 +12426,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.412547",
+      "extracted_at": "2026-05-08T07:14:38.244358",
       "file_path": "data/silver/language_analysis_2024-1-MinasDeCultura.json"
     }
   },
@@ -11764,7 +12434,7 @@
     "repository": "2026-1-Squad4-Dito_e_Feito",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:51.621952",
+    "analyzed_at": "2026-05-08T07:12:10.612860",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -12164,7 +12834,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.418165",
+      "extracted_at": "2026-05-08T07:14:38.249980",
       "file_path": "data/silver/language_analysis_2026-1-Squad4-Dito_e_Feito.json"
     }
   },
@@ -12172,7 +12842,7 @@
     "repository": "MDS-MonitoraBSB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:24.664969",
+    "analyzed_at": "2026-05-08T07:11:48.412625",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -12776,7 +13446,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.421679",
+      "extracted_at": "2026-05-08T07:14:38.253434",
       "file_path": "data/silver/language_analysis_MDS-MonitoraBSB.json"
     }
   },
@@ -12784,7 +13454,7 @@
     "repository": "2025-2-Integralizei_UnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:40.097127",
+    "analyzed_at": "2026-05-08T07:12:01.364864",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -13746,7 +14416,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.427472",
+      "extracted_at": "2026-05-08T07:14:38.258535",
       "file_path": "data/silver/language_analysis_2025-2-Integralizei_UnB.json"
     }
   },
@@ -13754,7 +14424,7 @@
     "repository": "2024-2-Squad06",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:23.310454",
+    "analyzed_at": "2026-05-08T07:11:47.380470",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -14298,7 +14968,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.434720",
+      "extracted_at": "2026-05-08T07:14:38.265418",
       "file_path": "data/silver/language_analysis_2024-2-Squad06.json"
     }
   },
@@ -14374,7 +15044,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.437222",
+      "extracted_at": "2026-05-08T07:14:38.267836",
       "file_path": "data/silver/language_analysis_2026-1-Squad01.json"
     }
   },
@@ -14382,7 +15052,7 @@
     "repository": "2024-2-SuaFinanca",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:27.402443",
+    "analyzed_at": "2026-05-08T07:11:50.556135",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -15722,7 +16392,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.561962",
+      "extracted_at": "2026-05-08T07:14:38.396575",
       "file_path": "data/silver/language_analysis_2024-2-SuaFinanca.json"
     }
   },
@@ -15730,7 +16400,7 @@
     "repository": "Qualifying-Software-Engineers-Undergraduates-in-DevOps",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:53.881035",
+    "analyzed_at": "2026-05-08T07:11:23.408929",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -17608,7 +18278,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.856055",
+      "extracted_at": "2026-05-08T07:14:38.684297",
       "file_path": "data/silver/language_analysis_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
     }
   },
@@ -17616,7 +18286,7 @@
     "repository": "VIDAProject",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:35.474998",
+    "analyzed_at": "2026-05-08T07:11:57.231950",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -18142,7 +18812,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.941182",
+      "extracted_at": "2026-05-08T07:14:38.768537",
       "file_path": "data/silver/language_analysis_VIDAProject.json"
     }
   },
@@ -18150,7 +18820,7 @@
     "repository": "2025-2-Eh_Fake",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:39.391009",
+    "analyzed_at": "2026-05-08T07:12:00.600218",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -18748,7 +19418,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.945463",
+      "extracted_at": "2026-05-08T07:14:38.772872",
       "file_path": "data/silver/language_analysis_2025-2-Eh_Fake.json"
     }
   },
@@ -18820,7 +19490,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.949235",
+      "extracted_at": "2026-05-08T07:14:38.776513",
       "file_path": "data/silver/language_analysis_2026-2-Squad03.json"
     }
   },
@@ -18828,7 +19498,7 @@
     "repository": "2024-2-Urbanize",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:20.555629",
+    "analyzed_at": "2026-05-08T07:11:44.724967",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -19888,7 +20558,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:27.970607",
+      "extracted_at": "2026-05-08T07:14:38.797765",
       "file_path": "data/silver/language_analysis_2024-2-Urbanize.json"
     }
   },
@@ -19896,7 +20566,7 @@
     "repository": "2023-2-Squad10",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:04.241227",
+    "analyzed_at": "2026-05-08T07:11:31.282126",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -20378,7 +21048,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.040298",
+      "extracted_at": "2026-05-08T07:14:38.866051",
       "file_path": "data/silver/language_analysis_2023-2-Squad10.json"
     }
   },
@@ -20386,7 +21056,7 @@
     "repository": "2026-1-Guard.IA",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:52.197106",
+    "analyzed_at": "2026-05-08T07:12:11.115961",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -20508,7 +21178,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.092332",
+      "extracted_at": "2026-05-08T07:14:38.917661",
       "file_path": "data/silver/language_analysis_2026-1-Guard.IA.json"
     }
   },
@@ -20516,7 +21186,7 @@
     "repository": "2025-2-OncoMap",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:40.881564",
+    "analyzed_at": "2026-05-08T07:12:01.977718",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -21276,7 +21946,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.097718",
+      "extracted_at": "2026-05-08T07:14:38.923142",
       "file_path": "data/silver/language_analysis_2025-2-OncoMap.json"
     }
   },
@@ -21284,7 +21954,7 @@
     "repository": "Avalia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:48.977379",
+    "analyzed_at": "2026-05-08T07:12:08.210763",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -21388,7 +22058,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.108674",
+      "extracted_at": "2026-05-08T07:14:38.933617",
       "file_path": "data/silver/language_analysis_Avalia.json"
     }
   },
@@ -21396,7 +22066,7 @@
     "repository": "2025-2-Synapse",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:44.783788",
+    "analyzed_at": "2026-05-08T07:12:05.001896",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -21966,7 +22636,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.110495",
+      "extracted_at": "2026-05-08T07:14:38.935391",
       "file_path": "data/silver/language_analysis_2025-2-Synapse.json"
     }
   },
@@ -21974,7 +22644,7 @@
     "repository": "teste",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:05.574891",
+    "analyzed_at": "2026-05-08T07:11:32.435938",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -22038,7 +22708,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.113836",
+      "extracted_at": "2026-05-08T07:14:38.938663",
       "file_path": "data/silver/language_analysis_teste.json"
     }
   },
@@ -22046,7 +22716,7 @@
     "repository": "2024-2-Agio",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:21.978132",
+    "analyzed_at": "2026-05-08T07:11:46.316937",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -22490,7 +23160,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.115049",
+      "extracted_at": "2026-05-08T07:14:38.939912",
       "file_path": "data/silver/language_analysis_2024-2-Agio.json"
     }
   },
@@ -22498,7 +23168,7 @@
     "repository": "2026-1-Squad08",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:53.562914",
+    "analyzed_at": "2026-05-08T07:12:12.286255",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -22834,7 +23504,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.118127",
+      "extracted_at": "2026-05-08T07:14:38.942928",
       "file_path": "data/silver/language_analysis_2026-1-Squad08.json"
     }
   },
@@ -22842,7 +23512,7 @@
     "repository": "2023.2-LicitaX",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:06.872057",
+    "analyzed_at": "2026-05-08T07:11:33.468109",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -23140,7 +23810,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.120656",
+      "extracted_at": "2026-05-08T07:14:38.945374",
       "file_path": "data/silver/language_analysis_2023.2-LicitaX.json"
     }
   },
@@ -23148,7 +23818,7 @@
     "repository": "2024-1-EducaMinas-frontend",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:12.638038",
+    "analyzed_at": "2026-05-08T07:11:38.241534",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -23740,7 +24410,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.123083",
+      "extracted_at": "2026-05-08T07:14:38.947693",
       "file_path": "data/silver/language_analysis_2024-1-EducaMinas-frontend.json"
     }
   },
@@ -23748,7 +24418,7 @@
     "repository": "2025-2-Mural-UnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:42.487428",
+    "analyzed_at": "2026-05-08T07:12:03.235425",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -24626,7 +25296,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.130266",
+      "extracted_at": "2026-05-08T07:14:38.955092",
       "file_path": "data/silver/language_analysis_2025-2-Mural-UnB.json"
     }
   },
@@ -24634,7 +25304,7 @@
     "repository": "2026-1-P.R.I.S.M.A",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:57.443540",
+    "analyzed_at": "2026-05-08T07:12:15.902924",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -24740,7 +25410,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.139686",
+      "extracted_at": "2026-05-08T07:14:38.964198",
       "file_path": "data/silver/language_analysis_2026-1-P.R.I.S.M.A.json"
     }
   },
@@ -24748,7 +25418,7 @@
     "repository": "2026-1-squad0x",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:54.199440",
+    "analyzed_at": "2026-05-08T07:12:12.879142",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -24786,7 +25456,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.140453",
+      "extracted_at": "2026-05-08T07:14:38.964939",
       "file_path": "data/silver/language_analysis_2026-1-squad0x.json"
     }
   },
@@ -24794,7 +25464,7 @@
     "repository": "2025-1-NoFluxoUNB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:30.586797",
+    "analyzed_at": "2026-05-08T07:11:52.916728",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -26316,7 +26986,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.147053",
+      "extracted_at": "2026-05-08T07:14:38.971561",
       "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
     }
   },
@@ -26324,7 +26994,7 @@
     "repository": "ParticipeMais",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:29.816073",
+    "analyzed_at": "2026-05-08T07:11:52.413349",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -26904,7 +27574,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.163597",
+      "extracted_at": "2026-05-08T07:14:38.988207",
       "file_path": "data/silver/language_analysis_ParticipeMais.json"
     }
   },
@@ -26912,7 +27582,7 @@
     "repository": "2023-2-Squad01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:54.543246",
+    "analyzed_at": "2026-05-08T07:11:23.984876",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -27004,7 +27674,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.168480",
+      "extracted_at": "2026-05-08T07:14:38.992927",
       "file_path": "data/silver/language_analysis_2023-2-Squad01.json"
     }
   },
@@ -27012,18 +27682,18 @@
     "repository": "2025-2-Squad-01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:37.407105",
+    "analyzed_at": "2026-05-08T07:11:59.034157",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 1253,
-    "total_bytes": 358051552,
+    "total_files": 1261,
+    "total_bytes": 358535922,
     "languages": [
       {
         "language": "JSON",
-        "file_count": 911,
-        "total_bytes": 352352585,
+        "file_count": 919,
+        "total_bytes": 352836955,
         "percentage": 98.41,
         "files": [
           {
@@ -27035,13 +27705,13 @@
           {
             "path": "data/bronze/issues_all.json",
             "name": "issues_all.json",
-            "size": 30920082,
+            "size": 30952174,
             "extension": ".json"
           },
           {
             "path": "data/bronze/prs_all.json",
             "name": "prs_all.json",
-            "size": 18932210,
+            "size": 18950107,
             "extension": ".json"
           },
           {
@@ -27053,7 +27723,7 @@
           {
             "path": "data/bronze/commits_all.json",
             "name": "commits_all.json",
-            "size": 10380649,
+            "size": 10387058,
             "extension": ".json"
           },
           {
@@ -27071,7 +27741,7 @@
           {
             "path": "data/silver/temporal_events.json",
             "name": "temporal_events.json",
-            "size": 7090162,
+            "size": 7095888,
             "extension": ".json"
           },
           {
@@ -27676,7 +28346,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.181500",
+      "extracted_at": "2026-05-08T07:14:39.001663",
       "file_path": "data/silver/language_analysis_2025-2-Squad-01.json"
     }
   },
@@ -27684,7 +28354,7 @@
     "repository": "2025-2-Portal-dos-Professores",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:38.689766",
+    "analyzed_at": "2026-05-08T07:12:00.094819",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -28468,7 +29138,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.199474",
+      "extracted_at": "2026-05-08T07:14:39.019621",
       "file_path": "data/silver/language_analysis_2025-2-Portal-dos-Professores.json"
     }
   },
@@ -28476,7 +29146,7 @@
     "repository": "2024-1-EducaMinas-backend",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:17.662973",
+    "analyzed_at": "2026-05-08T07:11:42.380071",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -28822,7 +29492,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.204548",
+      "extracted_at": "2026-05-08T07:14:39.024583",
       "file_path": "data/silver/language_analysis_2024-1-EducaMinas-backend.json"
     }
   },
@@ -28830,7 +29500,7 @@
     "repository": "2024-1-Squad-10",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:16.048218",
+    "analyzed_at": "2026-05-08T07:11:41.044631",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -29276,7 +29946,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.206897",
+      "extracted_at": "2026-05-08T07:14:39.026850",
       "file_path": "data/silver/language_analysis_2024-1-Squad-10.json"
     }
   },
@@ -29284,7 +29954,7 @@
     "repository": "2026-1-Mapa_L.I.L.A.S",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:50.291726",
+    "analyzed_at": "2026-05-08T07:12:09.378523",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -29836,7 +30506,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.209835",
+      "extracted_at": "2026-05-08T07:14:39.029691",
       "file_path": "data/silver/language_analysis_2026-1-Mapa_L.I.L.A.S.json"
     }
   },
@@ -29844,7 +30514,7 @@
     "repository": "2025_1-Jakebot",
     "owner": "unb-mds",
     "branch": "master",
-    "analyzed_at": "2026-05-07T08:25:36.106431",
+    "analyzed_at": "2026-05-08T07:11:57.833055",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -30324,7 +30994,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.213539",
+      "extracted_at": "2026-05-08T07:14:39.033398",
       "file_path": "data/silver/language_analysis_2025_1-Jakebot.json"
     }
   },
@@ -30332,7 +31002,7 @@
     "repository": "hugoplate",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:36.742722",
+    "analyzed_at": "2026-05-08T07:11:58.512553",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -30968,7 +31638,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.216386",
+      "extracted_at": "2026-05-08T07:14:39.036098",
       "file_path": "data/silver/language_analysis_hugoplate.json"
     }
   },
@@ -30976,7 +31646,7 @@
     "repository": "2024-1-forUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:10.142108",
+    "analyzed_at": "2026-05-08T07:11:36.204659",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -31784,7 +32454,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.223792",
+      "extracted_at": "2026-05-08T07:14:39.043432",
       "file_path": "data/silver/language_analysis_2024-1-forUnB.json"
     }
   },
@@ -31792,7 +32462,7 @@
     "repository": "2025-1-Eletta",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:33.381036",
+    "analyzed_at": "2026-05-08T07:11:55.644857",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -32642,7 +33312,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.235779",
+      "extracted_at": "2026-05-08T07:14:39.055383",
       "file_path": "data/silver/language_analysis_2025-1-Eletta.json"
     }
   },
@@ -32650,7 +33320,7 @@
     "repository": "2024-2-Datazonia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:25.885158",
+    "analyzed_at": "2026-05-08T07:11:49.345998",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -32978,7 +33648,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.241502",
+      "extracted_at": "2026-05-08T07:14:39.060547",
       "file_path": "data/silver/language_analysis_2024-2-Datazonia.json"
     }
   },
@@ -32986,7 +33656,7 @@
     "repository": "2023-2-Squad07",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:00.961084",
+    "analyzed_at": "2026-05-08T07:11:28.674577",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -33420,7 +34090,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.244072",
+      "extracted_at": "2026-05-08T07:14:39.063109",
       "file_path": "data/silver/language_analysis_2023-2-Squad07.json"
     }
   },
@@ -33428,7 +34098,7 @@
     "repository": "2026-1-SafeStreets",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:49.675362",
+    "analyzed_at": "2026-05-08T07:12:08.852761",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -33612,7 +34282,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.247544",
+      "extracted_at": "2026-05-08T07:14:39.066618",
       "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
     }
   },
@@ -33926,7 +34596,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.248922",
+      "extracted_at": "2026-05-08T07:14:39.068089",
       "file_path": "data/silver/language_analysis_2026-1-Squad10.json"
     }
   },
@@ -33934,7 +34604,7 @@
     "repository": "2023-2-Squad03-LicitAL",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:24:57.897871",
+    "analyzed_at": "2026-05-08T07:11:26.012558",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -35500,7 +36170,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.501205",
+      "extracted_at": "2026-05-08T07:14:39.310938",
       "file_path": "data/silver/language_analysis_2023-2-Squad03-LicitAL.json"
     }
   },
@@ -35508,7 +36178,7 @@
     "repository": "DFemObras-2025.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:34.748316",
+    "analyzed_at": "2026-05-08T07:11:56.663633",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -36134,7 +36804,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.977646",
+      "extracted_at": "2026-05-08T07:14:39.824151",
       "file_path": "data/silver/language_analysis_DFemObras-2025.1.json"
     }
   },
@@ -36230,7 +36900,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.985656",
+      "extracted_at": "2026-05-08T07:14:39.833215",
       "file_path": "data/silver/language_analysis_2026-1-Squad11.json"
     }
   },
@@ -36238,7 +36908,7 @@
     "repository": "2023.2_Gotinha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:08.130201",
+    "analyzed_at": "2026-05-08T07:11:34.530803",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -36490,7 +37160,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.986489",
+      "extracted_at": "2026-05-08T07:14:39.834052",
       "file_path": "data/silver/language_analysis_2023.2_Gotinha.json"
     }
   },
@@ -36550,7 +37220,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.987569",
+      "extracted_at": "2026-05-08T07:14:39.835085",
       "file_path": "data/silver/language_analysis_ContraDito.json"
     }
   },
@@ -36558,7 +37228,7 @@
     "repository": "2024-1-Squad08",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:14.650300",
+    "analyzed_at": "2026-05-08T07:11:39.958504",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -36892,7 +37562,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.988366",
+      "extracted_at": "2026-05-08T07:14:39.835913",
       "file_path": "data/silver/language_analysis_2024-1-Squad08.json"
     }
   },
@@ -36944,7 +37614,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.989729",
+      "extracted_at": "2026-05-08T07:14:39.837267",
       "file_path": "data/silver/language_analysis_2026-1-Squad09.json"
     }
   },
@@ -36952,7 +37622,7 @@
     "repository": "2024-2-Lumina",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:22.593389",
+    "analyzed_at": "2026-05-08T07:11:46.786320",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -37612,7 +38282,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.991575",
+      "extracted_at": "2026-05-08T07:14:39.839027",
       "file_path": "data/silver/language_analysis_2024-2-Lumina.json"
     }
   },
@@ -37620,7 +38290,7 @@
     "repository": "2026-1-ProtectKids",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:56.738120",
+    "analyzed_at": "2026-05-08T07:12:15.362339",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -38130,7 +38800,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.995689",
+      "extracted_at": "2026-05-08T07:14:39.843034",
       "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
     }
   },
@@ -38230,7 +38900,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.998122",
+      "extracted_at": "2026-05-08T07:14:39.845442",
       "file_path": "data/silver/language_analysis_2026-1-Squad4.json"
     }
   },
@@ -38238,7 +38908,7 @@
     "repository": "2023-2-JuizVirtual",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:00.299317",
+    "analyzed_at": "2026-05-08T07:11:28.121872",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -38804,7 +39474,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:28.999761",
+      "extracted_at": "2026-05-08T07:14:39.847037",
       "file_path": "data/silver/language_analysis_2023-2-JuizVirtual.json"
     }
   },
@@ -38812,7 +39482,7 @@
     "repository": "Sonorus-2025.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:31.266948",
+    "analyzed_at": "2026-05-08T07:11:53.534125",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -39370,7 +40040,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.003919",
+      "extracted_at": "2026-05-08T07:14:39.851045",
       "file_path": "data/silver/language_analysis_Sonorus-2025.1.json"
     }
   },
@@ -39378,7 +40048,7 @@
     "repository": "mapadaacessibilidade",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:29.050715",
+    "analyzed_at": "2026-05-08T07:11:51.901909",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -40224,7 +40894,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.062859",
+      "extracted_at": "2026-05-08T07:14:39.877503",
       "file_path": "data/silver/language_analysis_mapadaacessibilidade.json"
     }
   },
@@ -40232,7 +40902,7 @@
     "repository": "DFemObras",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:24.036985",
+    "analyzed_at": "2026-05-08T07:11:47.938411",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -40892,7 +41562,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.114025",
+      "extracted_at": "2026-05-08T07:14:39.925685",
       "file_path": "data/silver/language_analysis_DFemObras.json"
     }
   },
@@ -40900,7 +41570,7 @@
     "repository": "Projeto-P.I.T.E.R",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:38.028154",
+    "analyzed_at": "2026-05-08T07:11:59.569631",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -41380,7 +42050,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.122718",
+      "extracted_at": "2026-05-08T07:14:39.931727",
       "file_path": "data/silver/language_analysis_Projeto-P.I.T.E.R.json"
     }
   },
@@ -41388,7 +42058,7 @@
     "repository": "carlarocha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:08.810327",
+    "analyzed_at": "2026-05-08T07:11:35.161014",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -42186,7 +42856,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.129285",
+      "extracted_at": "2026-05-08T07:14:39.938302",
       "file_path": "data/silver/language_analysis_carlarocha.json"
     }
   },
@@ -42194,7 +42864,7 @@
     "repository": "Gastos-DF-2024-02",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:28.166537",
+    "analyzed_at": "2026-05-08T07:11:51.238928",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -42848,7 +43518,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.136839",
+      "extracted_at": "2026-05-08T07:14:39.945845",
       "file_path": "data/silver/language_analysis_Gastos-DF-2024-02.json"
     }
   },
@@ -42856,7 +43526,7 @@
     "repository": "2025-2-SeLiga",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:43.984936",
+    "analyzed_at": "2026-05-08T07:12:04.412308",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -43440,7 +44110,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.141190",
+      "extracted_at": "2026-05-08T07:14:39.950449",
       "file_path": "data/silver/language_analysis_2025-2-SeLiga.json"
     }
   },
@@ -43448,7 +44118,7 @@
     "repository": "2025-2-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:47.695825",
+    "analyzed_at": "2026-05-08T07:12:07.179463",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -43828,7 +44498,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.144183",
+      "extracted_at": "2026-05-08T07:14:39.953443",
       "file_path": "data/silver/language_analysis_2025-2-Squad12.json"
     }
   },
@@ -43836,7 +44506,7 @@
     "repository": "2026-2-VeritasIA",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:50.962054",
+    "analyzed_at": "2026-05-08T07:12:10.009968",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -43900,7 +44570,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.145996",
+      "extracted_at": "2026-05-08T07:14:39.955314",
       "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
     }
   },
@@ -43908,7 +44578,7 @@
     "repository": "2023.2_Licitaiba",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:07.563464",
+    "analyzed_at": "2026-05-08T07:11:34.048588",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -44180,7 +44850,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.146796",
+      "extracted_at": "2026-05-08T07:14:39.956137",
       "file_path": "data/silver/language_analysis_2023.2_Licitaiba.json"
     }
   },
@@ -44188,7 +44858,7 @@
     "repository": "2025-1-GovInsights",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:32.686483",
+    "analyzed_at": "2026-05-08T07:11:55.000576",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -44658,7 +45328,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.148997",
+      "extracted_at": "2026-05-08T07:14:39.958403",
       "file_path": "data/silver/language_analysis_2025-1-GovInsights.json"
     }
   },
@@ -44666,7 +45336,7 @@
     "repository": "portfolio-MDS",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:09.453951",
+    "analyzed_at": "2026-05-08T07:11:35.655419",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -45212,7 +45882,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.152688",
+      "extracted_at": "2026-05-08T07:14:39.962081",
       "file_path": "data/silver/language_analysis_portfolio-MDS.json"
     }
   },
@@ -45220,7 +45890,7 @@
     "repository": "2025.1-RelatoriosInteligentesBCB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:31.952061",
+    "analyzed_at": "2026-05-08T07:11:54.439856",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -45434,7 +46104,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.155019",
+      "extracted_at": "2026-05-08T07:14:39.964426",
       "file_path": "data/silver/language_analysis_2025.1-RelatoriosInteligentesBCB.json"
     }
   },
@@ -45442,7 +46112,7 @@
     "repository": "2025-1-RelatAI",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:34.115000",
+    "analyzed_at": "2026-05-08T07:11:56.166607",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -45958,7 +46628,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.156971",
+      "extracted_at": "2026-05-08T07:14:39.966382",
       "file_path": "data/silver/language_analysis_2025-1-RelatAI.json"
     }
   },
@@ -45966,7 +46636,7 @@
     "repository": "2024-1-Squad02-CulturaTransparente",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:10.739860",
+    "analyzed_at": "2026-05-08T07:11:36.691528",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -46594,7 +47264,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.161210",
+      "extracted_at": "2026-05-08T07:14:39.970554",
       "file_path": "data/silver/language_analysis_2024-1-Squad02-CulturaTransparente.json"
     }
   },
@@ -46602,7 +47272,7 @@
     "repository": "FixIt",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:47.051776",
+    "analyzed_at": "2026-05-08T07:12:06.697373",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -47658,7 +48328,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.186953",
+      "extracted_at": "2026-05-08T07:14:39.996422",
       "file_path": "data/silver/language_analysis_FixIt.json"
     }
   },
@@ -47666,7 +48336,7 @@
     "repository": "Mds-ArenaPesadelo",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:13.275048",
+    "analyzed_at": "2026-05-08T07:11:38.722040",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -48334,7 +49004,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.228992",
+      "extracted_at": "2026-05-08T07:14:40.039119",
       "file_path": "data/silver/language_analysis_Mds-ArenaPesadelo.json"
     }
   },
@@ -48342,7 +49012,7 @@
     "repository": "2024-1-squad04",
     "owner": "unb-mds",
     "branch": "dev",
-    "analyzed_at": "2026-05-07T08:25:12.009946",
+    "analyzed_at": "2026-05-08T07:11:37.731635",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -48878,7 +49548,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.236180",
+      "extracted_at": "2026-05-08T07:14:40.046245",
       "file_path": "data/silver/language_analysis_2024-1-squad04.json"
     }
   },
@@ -48886,7 +49556,7 @@
     "repository": "exemplogitpage",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:46.229421",
+    "analyzed_at": "2026-05-08T07:12:06.036960",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -48924,7 +49594,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.240164",
+      "extracted_at": "2026-05-08T07:14:40.049801",
       "file_path": "data/silver/language_analysis_exemplogitpage.json"
     }
   },
@@ -48932,7 +49602,7 @@
     "repository": "2024-2-Squad01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:19.741883",
+    "analyzed_at": "2026-05-08T07:11:44.105550",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -49750,7 +50420,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.242117",
+      "extracted_at": "2026-05-08T07:14:40.051702",
       "file_path": "data/silver/language_analysis_2024-2-Squad01.json"
     }
   },
@@ -49758,7 +50428,7 @@
     "repository": "2026-1-Squad07",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:52.867231",
+    "analyzed_at": "2026-05-08T07:12:11.760248",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -50056,7 +50726,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.246745",
+      "extracted_at": "2026-05-08T07:14:40.056146",
       "file_path": "data/silver/language_analysis_2026-1-Squad07.json"
     }
   },
@@ -50064,7 +50734,7 @@
     "repository": "squad03-r2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:06.179407",
+    "analyzed_at": "2026-05-08T07:11:32.954618",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -50298,7 +50968,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.248430",
+      "extracted_at": "2026-05-08T07:14:40.057810",
       "file_path": "data/silver/language_analysis_squad03-r2.json"
     }
   },
@@ -50484,7 +51154,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.249829",
+      "extracted_at": "2026-05-08T07:14:40.059139",
       "file_path": "data/silver/language_analysis_2026-1-Squad06.json"
     }
   },
@@ -50492,7 +51162,7 @@
     "repository": "2025-2-GuiaDev",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-05-07T08:25:45.530629",
+    "analyzed_at": "2026-05-08T07:12:05.516118",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -51210,7 +51880,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-05-07T08:28:29.252356",
+      "extracted_at": "2026-05-08T07:14:40.061614",
       "file_path": "data/silver/language_analysis_2025-2-GuiaDev.json"
     }
   }
