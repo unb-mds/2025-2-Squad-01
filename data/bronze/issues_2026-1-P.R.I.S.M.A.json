@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-10T07:20:45.078693",
+      "extracted_at": "2026-05-11T08:21:18.389529",
       "file_path": "data/bronze/issues_2026-1-P.R.I.S.M.A.json",
       "record_count": 30
     }
@@ -922,7 +922,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -950,8 +950,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-04T16:18:15Z",
-    "updated_at": "2026-05-08T14:03:01Z",
-    "closed_at": null,
+    "updated_at": "2026-05-11T00:34:35Z",
+    "closed_at": "2026-05-11T00:34:35Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -987,8 +987,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 🚀 Implementação de GitHub Pages nos Padrões Estabelecidos\n\nEsta issue visa a configuração e padronização do ambiente de hospedagem estática via GitHub Pages, assegurando que o deploy automático e a estrutura de arquivos sigam as diretrizes técnicas do projeto.\n\n### 📋 Checklist de Atividades\n\n- [x] **Configuração de Repositório**\n    - [x] Habilitar o GitHub Pages em `Settings > Pages`.\n    - [x] Definir a branch de origem (ex: `main` ou `gh-pages`).\n    - [x] Configurar a pasta de build (ex: `/root` ou `/docs`).\n\n- [x] **Padronização Estrutural**\n    - [x] Validar a existência do `index.html` no diretório de entrada.\n    - [x] Corrigir caminhos de assets (CSS, JS, Imagens) para referências relativas.\n    - [x] Incluir arquivo `.nojekyll` (necessário se houver pastas iniciadas com `_`).\n    - [x] Configurar Favicon e metadados de SEO básicos.\n\n- [ ] **Automação (CI/CD)**\n    - [ ] Criar ou atualizar o arquivo `.github/workflows/static.yml`.\n    - [ ] Configurar as permissões de `contents: read` e `pages: write`.\n    - [ ] Testar o disparo do deploy automático após o Merge.\n\n- [ ] **Validação e Entrega**\n    - [x] Verificar se a URL gerada está acessível.\n    - [ ] Testar responsividade e carregamento de fontes.\n    - [ ] Validar links internos e navegação.\n\n---\n\n### 🛠️ Especificações Técnicas\n- **Tecnologia de Build:** [Inserir ex: Jekyll / React / HTML estático]\n- **Branch de Deploy:** `gh-pages`\n- **Ambiente:** Produção\n\n---\n*Assigned to: @delvale412 *\n*Labels: `documentation`, `infrastructure`, `enhancement`*",
-    "closed_by": null,
+    "body": "## 🚀 Implementação de GitHub Pages nos Padrões Estabelecidos\n\nEsta issue visa a configuração e padronização do ambiente de hospedagem estática via GitHub Pages, assegurando que o deploy automático e a estrutura de arquivos sigam as diretrizes técnicas do projeto.\n\n### 📋 Checklist de Atividades\n\n- [x] **Configuração de Repositório**\n    - [x] Habilitar o GitHub Pages em `Settings > Pages`.\n    - [x] Definir a branch de origem (ex: `main` ou `gh-pages`).\n    - [x] Configurar a pasta de build (ex: `/root` ou `/docs`).\n\n- [x] **Padronização Estrutural**\n    - [x] Validar a existência do `index.html` no diretório de entrada.\n    - [x] Corrigir caminhos de assets (CSS, JS, Imagens) para referências relativas.\n    - [x] Incluir arquivo `.nojekyll` (necessário se houver pastas iniciadas com `_`).\n    - [x] Configurar Favicon e metadados de SEO básicos.\n\n- [x] **Automação (CI/CD)**\n    - [x] Criar ou atualizar o arquivo `.github/workflows/static.yml`.\n    - [x] Configurar as permissões de `contents: read` e `pages: write`.\n    - [x] Testar o disparo do deploy automático após o Merge.\n\n- [x] **Validação e Entrega**\n    - [x] Verificar se a URL gerada está acessível.\n    - [x] Testar responsividade e carregamento de fontes.\n    - [x] Validar links internos e navegação.\n\n---\n\n### 🛠️ Especificações Técnicas\n- **Tecnologia de Build:** [Inserir ex: Jekyll / React / HTML estático]\n- **Branch de Deploy:** `gh-pages`\n- **Ambiente:** Produção\n\n---\n*Assigned to: @delvale412 *\n*Labels: `documentation`, `infrastructure`, `enhancement`*",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/26/reactions",
       "total_count": 0,
@@ -1003,7 +1023,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/26/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -1059,7 +1079,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1114,18 +1134,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-29T16:59:24Z",
-      "updated_at": "2026-04-29T16:59:25Z",
+      "updated_at": "2026-05-11T00:33:15Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-29T16:58:10Z",
-    "updated_at": "2026-05-06T11:01:55Z",
-    "closed_at": null,
+    "updated_at": "2026-05-11T00:33:15Z",
+    "closed_at": "2026-05-11T00:33:14Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -1162,7 +1182,27 @@
       "total_blocking": 0
     },
     "body": "https://miro.com/app/board/uXjVGl_MXxU=/\n\nExemplo:\n\n<img width=\"836\" height=\"378\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c38ac7fc-dff6-47a1-b405-da1acac79a09\" />",
-    "closed_by": null,
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/22/reactions",
       "total_count": 0,
@@ -1177,7 +1217,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/22/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -1913,9 +1953,9 @@
       {
         "id": 10822412937,
         "node_id": "LA_kwDOR7SjFM8AAAAChRDqiQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/timeline",
-        "name": "timeline",
-        "color": "22c40e",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/%E2%8F%B3timeline",
+        "name": "⏳timeline",
+        "color": "8d139b",
         "default": false,
         "description": ""
       }
@@ -2008,9 +2048,9 @@
       {
         "id": 10822412937,
         "node_id": "LA_kwDOR7SjFM8AAAAChRDqiQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/timeline",
-        "name": "timeline",
-        "color": "22c40e",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/%E2%8F%B3timeline",
+        "name": "⏳timeline",
+        "color": "8d139b",
         "default": false,
         "description": ""
       },
@@ -2433,11 +2473,11 @@
       {
         "id": 10822462405,
         "node_id": "LA_kwDOR7SjFM8AAAAChRGrxQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/views",
-        "name": "views",
-        "color": "aaaaaa",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/%F0%9F%91%81%EF%B8%8Fviews",
+        "name": "👁️views",
+        "color": "31c7fc",
         "default": false,
-        "description": null
+        "description": ""
       },
       {
         "id": 10822497255,
@@ -2546,11 +2586,11 @@
       {
         "id": 10822462405,
         "node_id": "LA_kwDOR7SjFM8AAAAChRGrxQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/views",
-        "name": "views",
-        "color": "aaaaaa",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/%F0%9F%91%81%EF%B8%8Fviews",
+        "name": "👁️views",
+        "color": "31c7fc",
         "default": false,
-        "description": null
+        "description": ""
       },
       {
         "id": 10822497255,
@@ -3025,11 +3065,11 @@
       {
         "id": 10822462405,
         "node_id": "LA_kwDOR7SjFM8AAAAChRGrxQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/views",
-        "name": "views",
-        "color": "aaaaaa",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/%F0%9F%91%81%EF%B8%8Fviews",
+        "name": "👁️views",
+        "color": "31c7fc",
         "default": false,
-        "description": null
+        "description": ""
       },
       {
         "id": 10878053349,
