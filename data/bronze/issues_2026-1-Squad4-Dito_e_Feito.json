@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-11T08:21:06.915537",
+      "extracted_at": "2026-05-12T07:37:26.090772",
       "file_path": "data/bronze/issues_2026-1-Squad4-Dito_e_Feito.json",
       "record_count": 17
     }
@@ -67,7 +67,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -122,18 +122,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 0,
+      "open_issues": 0,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-04-23T22:13:22Z",
-      "updated_at": "2026-04-23T22:15:20Z",
+      "updated_at": "2026-05-11T20:08:31Z",
       "due_on": "2026-04-30T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-23T22:15:20Z",
-    "updated_at": "2026-04-23T22:15:28Z",
-    "closed_at": null,
+    "updated_at": "2026-05-11T20:08:31Z",
+    "closed_at": "2026-05-11T20:08:31Z",
     "assignee": {
       "login": "gus-ant",
       "id": 176245725,
@@ -170,7 +170,27 @@
       "total_blocking": 0
     },
     "body": "# Estudo de Arquitetura para Deploy de Modelos de IA\n\n## 1. Model-as-a-Service (Serverless Inference)\n\nEm vez de configurar um servidor inteiro, poderemos usar APIs de provedores que já mantêm o modelo rodando. É a opção mais rápida para escalar.\n\n- **Hugging Face Inference Endpoints**: Você \"sobe\" o BERTimbau para a infraestrutura deles com dois cliques. Eles gerenciam a GPU e são pagos por hora de uso. É ótimo porque você não precisa configurar drivers de GPU ou Docker.\n\n- **Groq ou Replicate**: São plataformas focadas em velocidade. ë feitoaz o deploy do modelo e paga apenas pelo tempo de processamento ou por milhão de tokens.\n\n- **Vantagem**: Zero manutenção de servidor.\n\n- **Desvantagem**: Pode ficar caro se o volume de requisições for absurdamente alto e constante.\n\n## 2. Serverless Functions com GPU (Cloud)\n\nSe o app não tiver um fluxo constante de usuários (ex: picos quando sai uma votação no Congresso), usar instâncias fixas é desperdício de dinheiro.\n\n- **RunPod ou Lambda Labs**: Permitem rodar \"containers\" de IA que escalam conforme a demanda. Pode configurar para que, se ninguém estiver usando, o custo seja zero ou mínimo, e a máquina ligue apenas quando chegar uma requisição.\n\n- **Google Cloud Run (com suporte a GPU)**: Recentemente o Google liberou suporte a GPUs no Cloud Run, permitindo rodar modelos de NLP em containers sem gerenciar máquinas virtuais (VMs).\n\n- **Vantagem**: Custo-benefício excelente para tráfego variável.\n\n- **Desvantagem**: O \"Cold Start\" (o tempo que a IA leva para \"acordar\" na primeira requisição) pode incomodar o usuário.\n\n## 3. Orquestração via LLMs Comerciais (RAG)\n\nDado que o site lidará com discursos políticos (textos longos e complexos), talvez ele não precise rodar o BERTimbau \"na mão\".\n\n- **Uso de APIs (OpenAI/Anthropic/Gemini)**: enviar o discurso e a ementa da votação para um modelo como o Gemini 1.5 Flash ou GPT-4o-mini via API.\n\n- **Por que considerar?** Esses modelos já são excelentes em português e muito bons em entender ironia e contexto político (que modelos menores às vezes perdem). O custo por token caiu drasticamente, sendo muitas vezes mais barato que manter um servidor com GPU própria.\n\n- **Vantagem**: Implementação em minutos.\n\n- **Desvantagem**: ficar dependente dos termos de uso e preços dessas empresas.\n\n## Resumo Comparativo para o painel\n\n| Opção | Esforço de Dev | Custo Inicial | Escalabilidade |\n|-------|----------------|---------------|----------------|\n| Servidor Próprio (VPS/EC2) | Alto | Fixo (Caro) | Manual/Difícil |\n| Inference Endpoints (Hugging Face) | Baixo | Variável (Médio) | Automática |\n| Serverless GPU (RunPod/Lambda) | Médio | Baixo (Pay-per-use) | Alta |\n| APIs de LLM (Gemini/GPT) | Mínimo | Baixíssimo (Tokens) | Infinita |\n\n## Recomendação Do Gemini Pro\n\nPara um MVP de monitoramento legislativo, podemos começar com a **Opção 3 (APIs de LLM)** ou a **Opção 1 (Hugging Face)**. Isso permite que a gente foque na lógica de captura de dados das APIs da Câmara e do Senado (que já é um trabalho considerável) sem se preocupar se o servidor de IA caiu ou se a memória estourou.\n\n> **Nota importante**: Considerando que queremos a coerência, o uso de Embeddings (via API da OpenAI ou Google) salvos em um banco de vetores (como Pinecone ou Supabase Vector) seria a arquitetura mais moderna e barata para comparar discursos e votos sem precisar \"rodar\" o modelo toda hora.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "gus-ant",
+      "id": 176245725,
+      "node_id": "U_kgDOCoFL3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/176245725?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gus-ant",
+      "html_url": "https://github.com/gus-ant",
+      "followers_url": "https://api.github.com/users/gus-ant/followers",
+      "following_url": "https://api.github.com/users/gus-ant/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gus-ant/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gus-ant/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gus-ant/subscriptions",
+      "organizations_url": "https://api.github.com/users/gus-ant/orgs",
+      "repos_url": "https://api.github.com/users/gus-ant/repos",
+      "events_url": "https://api.github.com/users/gus-ant/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gus-ant/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/17/reactions",
       "total_count": 0,
@@ -185,7 +205,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad4-Dito_e_Feito/issues/17/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad4-Dito_e_Feito"
   },
