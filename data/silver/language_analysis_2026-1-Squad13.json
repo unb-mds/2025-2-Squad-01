@@ -2,33 +2,19 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-12T08:27:45.102836",
+  "analyzed_at": "2026-05-13T08:36:21.343934",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 159,
-  "total_bytes": 964670,
+  "total_files": 187,
+  "total_bytes": 1187429,
   "languages": [
-    {
-      "language": "Lock File",
-      "file_count": 1,
-      "total_bytes": 345318,
-      "percentage": 35.8,
-      "files": [
-        {
-          "path": "backend/uv.lock",
-          "name": "uv.lock",
-          "size": 345318,
-          "extension": ".lock"
-        }
-      ]
-    },
     {
       "language": "JSON",
       "file_count": 9,
-      "total_bytes": 310466,
-      "percentage": 32.18,
+      "total_bytes": 430618,
+      "percentage": 36.26,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -39,7 +25,13 @@
         {
           "path": "squad-dashboard/package-lock.json",
           "name": "package-lock.json",
-          "size": 106850,
+          "size": 193819,
+          "extension": ".json"
+        },
+        {
+          "path": "squad-dashboard/public/data/github-stats.json",
+          "name": "github-stats.json",
+          "size": 33051,
           "extension": ".json"
         },
         {
@@ -51,19 +43,19 @@
         {
           "path": "squad-dashboard/package.json",
           "name": "package.json",
-          "size": 660,
+          "size": 954,
           "extension": ".json"
         },
         {
           "path": "frontend/tsconfig.json",
           "name": "tsconfig.json",
-          "size": 631,
+          "size": 611,
           "extension": ".json"
         },
         {
           "path": "squad-dashboard/tsconfig.json",
           "name": "tsconfig.json",
-          "size": 629,
+          "size": 609,
           "extension": ".json"
         },
         {
@@ -77,31 +69,51 @@
           "name": "tsconfig.node.json",
           "size": 213,
           "extension": ".json"
-        },
+        }
+      ]
+    },
+    {
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 345318,
+      "percentage": 29.08,
+      "files": [
         {
-          "path": "squad-dashboard/public/data/github-stats.json",
-          "name": "github-stats.json",
-          "size": 122,
-          "extension": ".json"
+          "path": "backend/uv.lock",
+          "name": "uv.lock",
+          "size": 345318,
+          "extension": ".lock"
         }
       ]
     },
     {
       "language": "TypeScript",
-      "file_count": 66,
-      "total_bytes": 164511,
-      "percentage": 17.05,
+      "file_count": 76,
+      "total_bytes": 195715,
+      "percentage": 16.48,
       "files": [
         {
           "path": "frontend/src/shared/lib/mock-data.ts",
           "name": "mock-data.ts",
-          "size": 14247,
+          "size": 14549,
           "extension": ".ts"
+        },
+        {
+          "path": "squad-dashboard/src/pages/board-page.tsx",
+          "name": "board-page.tsx",
+          "size": 12399,
+          "extension": ".tsx"
         },
         {
           "path": "squad-dashboard/src/mocks/tasks.ts",
           "name": "tasks.ts",
           "size": 10332,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/src/shared/lib/api.ts",
+          "name": "api.ts",
+          "size": 8574,
           "extension": ".ts"
         },
         {
@@ -129,47 +141,47 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/src/shared/lib/api.ts",
-          "name": "api.ts",
-          "size": 6819,
-          "extension": ".ts"
-        },
-        {
-          "path": "squad-dashboard/src/pages/roadmap-page.tsx",
-          "name": "roadmap-page.tsx",
-          "size": 4874,
+          "path": "squad-dashboard/src/pages/dashboard-page.tsx",
+          "name": "dashboard-page.tsx",
+          "size": 6534,
           "extension": ".tsx"
         },
         {
           "path": "frontend/src/features/auth/LoginForm.tsx",
           "name": "LoginForm.tsx",
-          "size": 4519,
-          "extension": ".tsx"
-        },
-        {
-          "path": "squad-dashboard/src/pages/dashboard-page.tsx",
-          "name": "dashboard-page.tsx",
-          "size": 3999,
+          "size": 4518,
           "extension": ".tsx"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 20,
-      "total_bytes": 80446,
-      "percentage": 8.34,
+      "file_count": 26,
+      "total_bytes": 126848,
+      "percentage": 10.68,
       "files": [
         {
-          "path": "docs/SRS.md",
-          "name": "SRS.md",
-          "size": 9712,
+          "path": "CLAUDE.md",
+          "name": "CLAUDE.md",
+          "size": 20751,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/story-map.md",
+          "name": "story-map.md",
+          "size": 19144,
           "extension": ".md"
         },
         {
           "path": "ARCHITECTURE.md",
           "name": "ARCHITECTURE.md",
-          "size": 9691,
+          "size": 9897,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/SRS.md",
+          "name": "SRS.md",
+          "size": 9712,
           "extension": ".md"
         },
         {
@@ -191,6 +203,12 @@
           "extension": ".md"
         },
         {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 5259,
+          "extension": ".md"
+        },
+        {
           "path": "docs/tech-stack.md",
           "name": "tech-stack.md",
           "size": 3866,
@@ -201,32 +219,14 @@
           "name": "ADR-005-adapter-pattern.md",
           "size": 3853,
           "extension": ".md"
-        },
-        {
-          "path": "Estudos/git_e_gitHub.md",
-          "name": "git_e_gitHub.md",
-          "size": 3744,
-          "extension": ".md"
-        },
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 3698,
-          "extension": ".md"
-        },
-        {
-          "path": "CONTRIBUTING.md",
-          "name": "CONTRIBUTING.md",
-          "size": 3322,
-          "extension": ".md"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 38,
-      "total_bytes": 37210,
-      "percentage": 3.86,
+      "file_count": 44,
+      "total_bytes": 51743,
+      "percentage": 4.36,
       "files": [
         {
           "path": "backend/src/infrastructure/adapters/camara_mock_adapter.py",
@@ -243,13 +243,13 @@
         {
           "path": "backend/src/presentation/controllers/proposicao_controller.py",
           "name": "proposicao_controller.py",
-          "size": 3388,
+          "size": 3808,
           "extension": ".py"
         },
         {
           "path": "backend/src/infrastructure/adapters/senado_adapter.py",
           "name": "senado_adapter.py",
-          "size": 3231,
+          "size": 3230,
           "extension": ".py"
         },
         {
@@ -259,33 +259,33 @@
           "extension": ".py"
         },
         {
-          "path": "backend/src/infrastructure/adapters/camara_adapter.py",
-          "name": "camara_adapter.py",
-          "size": 2486,
+          "path": "backend/src/application/services/dashboard_service.py",
+          "name": "dashboard_service.py",
+          "size": 2725,
           "extension": ".py"
         },
         {
-          "path": "backend/src/application/services/buscar_proposicoes_service.py",
-          "name": "buscar_proposicoes_service.py",
-          "size": 1736,
+          "path": "backend/src/infrastructure/adapters/camara_adapter.py",
+          "name": "camara_adapter.py",
+          "size": 2485,
           "extension": ".py"
         },
         {
           "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py",
           "name": "sql_proposicao_repository.py",
-          "size": 1665,
+          "size": 2374,
           "extension": ".py"
         },
         {
-          "path": "backend/tests/conftest.py",
-          "name": "conftest.py",
-          "size": 1553,
+          "path": "backend/tests/unit/test_repository_filtering.py",
+          "name": "test_repository_filtering.py",
+          "size": 2172,
           "extension": ".py"
         },
         {
-          "path": "backend/tests/integration/conftest.py",
-          "name": "conftest.py",
-          "size": 1405,
+          "path": "backend/tests/unit/test_camara_adapter.py",
+          "name": "test_camara_adapter.py",
+          "size": 2047,
           "extension": ".py"
         }
       ]
@@ -293,20 +293,20 @@
     {
       "language": "Unknown",
       "file_count": 6,
-      "total_bytes": 13242,
-      "percentage": 1.37,
+      "total_bytes": 18083,
+      "percentage": 1.52,
       "files": [
+        {
+          "path": "squad-dashboard/scripts/generate-github-data.mjs",
+          "name": "generate-github-data.mjs",
+          "size": 9606,
+          "extension": ".mjs"
+        },
         {
           "path": "backend/test_db.db",
           "name": "test_db.db",
           "size": 8192,
           "extension": ".db"
-        },
-        {
-          "path": "squad-dashboard/scripts/generate-github-data.mjs",
-          "name": "generate-github-data.mjs",
-          "size": 4765,
-          "extension": ".mjs"
         },
         {
           "path": "backend/.env.example",
@@ -335,10 +335,54 @@
       ]
     },
     {
+      "language": "YAML",
+      "file_count": 6,
+      "total_bytes": 4824,
+      "percentage": 0.41,
+      "files": [
+        {
+          "path": ".github/workflows/deploy-squad-dashboard.yml",
+          "name": "deploy-squad-dashboard.yml",
+          "size": 1268,
+          "extension": ".yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 1178,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/squad-dashboard-ci.yml",
+          "name": "squad-dashboard-ci.yml",
+          "size": 865,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/frontend.yml",
+          "name": "frontend.yml",
+          "size": 558,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/backend.yml",
+          "name": "backend.yml",
+          "size": 555,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/update-squad-dashboard-data.yml",
+          "name": "update-squad-dashboard-data.yml",
+          "size": 400,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
       "language": "JavaScript",
       "file_count": 5,
       "total_bytes": 4024,
-      "percentage": 0.42,
+      "percentage": 0.34,
       "files": [
         {
           "path": "frontend/tailwind.config.js",
@@ -373,40 +417,48 @@
       ]
     },
     {
-      "language": "YAML",
-      "file_count": 5,
-      "total_bytes": 3578,
-      "percentage": 0.37,
+      "language": "Shell",
+      "file_count": 2,
+      "total_bytes": 3033,
+      "percentage": 0.26,
       "files": [
         {
-          "path": ".github/workflows/deploy-squad-dashboard.yml",
-          "name": "deploy-squad-dashboard.yml",
-          "size": 1247,
-          "extension": ".yml"
+          "path": "test_all.sh",
+          "name": "test_all.sh",
+          "size": 1719,
+          "extension": ".sh"
         },
         {
-          "path": ".github/workflows/update-squad-dashboard-data.yml",
-          "name": "update-squad-dashboard-data.yml",
-          "size": 890,
-          "extension": ".yml"
+          "path": "start_dev.sh",
+          "name": "start_dev.sh",
+          "size": 1314,
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 3,
+      "total_bytes": 2095,
+      "percentage": 0.18,
+      "files": [
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
         },
         {
-          "path": ".github/workflows/frontend.yml",
-          "name": "frontend.yml",
-          "size": 522,
-          "extension": ".yml"
+          "path": "backend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 608,
+          "extension": ""
         },
         {
-          "path": ".github/workflows/backend.yml",
-          "name": "backend.yml",
-          "size": 478,
-          "extension": ".yml"
-        },
-        {
-          "path": "docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 441,
-          "extension": ".yml"
+          "path": "frontend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 427,
+          "extension": ""
         }
       ]
     },
@@ -414,7 +466,7 @@
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 1871,
-      "percentage": 0.19,
+      "percentage": 0.16,
       "files": [
         {
           "path": "squad-dashboard/src/index.css",
@@ -434,7 +486,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 1163,
-      "percentage": 0.12,
+      "percentage": 0.1,
       "files": [
         {
           "path": "frontend/index.html",
@@ -451,24 +503,10 @@
       ]
     },
     {
-      "language": "No Extension",
-      "file_count": 1,
-      "total_bytes": 1060,
-      "percentage": 0.11,
-      "files": [
-        {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
-        }
-      ]
-    },
-    {
       "language": "Git Ignore",
       "file_count": 2,
       "total_bytes": 814,
-      "percentage": 0.08,
+      "percentage": 0.07,
       "files": [
         {
           "path": ".gitignore",
@@ -488,7 +526,7 @@
       "language": "TOML",
       "file_count": 1,
       "total_bytes": 817,
-      "percentage": 0.08,
+      "percentage": 0.07,
       "files": [
         {
           "path": "backend/pyproject.toml",
@@ -499,10 +537,24 @@
       ]
     },
     {
+      "language": "Environment",
+      "file_count": 1,
+      "total_bytes": 313,
+      "percentage": 0.03,
+      "files": [
+        {
+          "path": "backend/.env",
+          "name": ".env",
+          "size": 313,
+          "extension": ".env"
+        }
+      ]
+    },
+    {
       "language": "INI",
       "file_count": 1,
       "total_bytes": 150,
-      "percentage": 0.02,
+      "percentage": 0.01,
       "files": [
         {
           "path": "backend/pytest.ini",
@@ -514,7 +566,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-12T08:30:19.670975",
+    "extracted_at": "2026-05-13T08:38:54.591893",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }

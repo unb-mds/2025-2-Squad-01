@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-12T08:27:39.020837",
+  "analyzed_at": "2026-05-13T08:36:15.258176",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 38,
-  "total_bytes": 102663,
+  "total_files": 44,
+  "total_bytes": 134491,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 27,
-      "total_bytes": 95455,
-      "percentage": 92.98,
+      "file_count": 29,
+      "total_bytes": 99053,
+      "percentage": 73.65,
       "files": [
         {
           "path": "Docs/Milestone/Sprint-3/analise-de-linguagens.md",
@@ -79,31 +79,31 @@
       ]
     },
     {
-      "language": "No Extension",
-      "file_count": 2,
-      "total_bytes": 4227,
-      "percentage": 4.12,
+      "language": "HTML",
+      "file_count": 1,
+      "total_bytes": 17574,
+      "percentage": 13.07,
       "files": [
         {
-          "path": "Docs/Milestone/Sprint-2/estudo-de-agentes-de-IA",
-          "name": "estudo-de-agentes-de-IA",
-          "size": 3167,
-          "extension": ""
-        },
-        {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
+          "path": "docs/productivity/index.html",
+          "name": "index.html",
+          "size": 17574,
+          "extension": ".html"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 6,
-      "total_bytes": 2247,
-      "percentage": 2.19,
+      "file_count": 7,
+      "total_bytes": 6304,
+      "percentage": 4.69,
       "files": [
+        {
+          "path": "docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 4057,
+          "extension": ".py"
+        },
         {
           "path": "backend/teste.py",
           "name": "teste.py",
@@ -143,11 +143,51 @@
       ]
     },
     {
-      "language": "YAML",
+      "language": "JSON",
       "file_count": 1,
-      "total_bytes": 616,
-      "percentage": 0.6,
+      "total_bytes": 5422,
+      "percentage": 4.03,
       "files": [
+        {
+          "path": "docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 5422,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 2,
+      "total_bytes": 4227,
+      "percentage": 3.14,
+      "files": [
+        {
+          "path": "Docs/Milestone/Sprint-2/estudo-de-agentes-de-IA",
+          "name": "estudo-de-agentes-de-IA",
+          "size": 3167,
+          "extension": ""
+        },
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 2,
+      "total_bytes": 1793,
+      "percentage": 1.33,
+      "files": [
+        {
+          "path": ".github/workflows/metrics.yml",
+          "name": "metrics.yml",
+          "size": 1177,
+          "extension": ".yml"
+        },
         {
           "path": "backend/docker-compose.yml",
           "name": "docker-compose.yml",
@@ -160,7 +200,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 95,
-      "percentage": 0.09,
+      "percentage": 0.07,
       "files": [
         {
           "path": "backend/requirements.txt",
@@ -186,7 +226,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-12T08:30:21.361929",
+    "extracted_at": "2026-05-13T08:38:56.186373",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }

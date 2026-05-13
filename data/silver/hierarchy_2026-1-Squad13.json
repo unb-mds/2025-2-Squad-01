@@ -2,7 +2,7 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-12T08:27:45.102836",
+  "extracted_at": "2026-05-13T08:36:21.343934",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -14,6 +14,36 @@
         "children": []
       },
       {
+        "name": "ISSUE_TEMPLATE",
+        "type": "directory",
+        "path": ".github/ISSUE_TEMPLATE",
+        "children": []
+      },
+      {
+        "name": "bug_report.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 920,
+        "extension": ".md",
+        "path": ".github/ISSUE_TEMPLATE/bug_report.md"
+      },
+      {
+        "name": "feature.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1465,
+        "extension": ".md",
+        "path": ".github/ISSUE_TEMPLATE/feature.md"
+      },
+      {
+        "name": "task.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1086,
+        "extension": ".md",
+        "path": ".github/ISSUE_TEMPLATE/task.md"
+      },
+      {
         "name": "workflows",
         "type": "directory",
         "path": ".github/workflows",
@@ -23,7 +53,7 @@
         "name": "backend.yml",
         "type": "file",
         "language": "YAML",
-        "size": 478,
+        "size": 555,
         "extension": ".yml",
         "path": ".github/workflows/backend.yml"
       },
@@ -31,7 +61,7 @@
         "name": "deploy-squad-dashboard.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1247,
+        "size": 1268,
         "extension": ".yml",
         "path": ".github/workflows/deploy-squad-dashboard.yml"
       },
@@ -39,15 +69,23 @@
         "name": "frontend.yml",
         "type": "file",
         "language": "YAML",
-        "size": 522,
+        "size": 558,
         "extension": ".yml",
         "path": ".github/workflows/frontend.yml"
+      },
+      {
+        "name": "squad-dashboard-ci.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 865,
+        "extension": ".yml",
+        "path": ".github/workflows/squad-dashboard-ci.yml"
       },
       {
         "name": "update-squad-dashboard-data.yml",
         "type": "file",
         "language": "YAML",
-        "size": 890,
+        "size": 400,
         "extension": ".yml",
         "path": ".github/workflows/update-squad-dashboard-data.yml"
       },
@@ -63,9 +101,17 @@
         "name": "ARCHITECTURE.md",
         "type": "file",
         "language": "Markdown",
-        "size": 9691,
+        "size": 9897,
         "extension": ".md",
         "path": "ARCHITECTURE.md"
+      },
+      {
+        "name": "CLAUDE.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 20751,
+        "extension": ".md",
+        "path": "CLAUDE.md"
       },
       {
         "name": "CONTRIBUTING.md",
@@ -109,7 +155,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3698,
+        "size": 5259,
         "extension": ".md",
         "path": "README.md"
       },
@@ -120,12 +166,28 @@
         "children": []
       },
       {
+        "name": ".env",
+        "type": "file",
+        "language": "Environment",
+        "size": 313,
+        "extension": ".env",
+        "path": "backend/.env"
+      },
+      {
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
         "size": 285,
         "extension": ".example",
         "path": "backend/.env.example"
+      },
+      {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 608,
+        "extension": "",
+        "path": "backend/Dockerfile"
       },
       {
         "name": "pyproject.toml",
@@ -189,9 +251,17 @@
         "name": "buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1736,
+        "size": 1833,
         "extension": ".py",
         "path": "backend/src/application/services/buscar_proposicoes_service.py"
+      },
+      {
+        "name": "dashboard_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2725,
+        "extension": ".py",
+        "path": "backend/src/application/services/dashboard_service.py"
       },
       {
         "name": "domain",
@@ -225,7 +295,7 @@
         "name": "proposicao.py",
         "type": "file",
         "language": "Python",
-        "size": 1223,
+        "size": 1411,
         "extension": ".py",
         "path": "backend/src/domain/entities/proposicao.py"
       },
@@ -285,7 +355,7 @@
         "name": "camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 2486,
+        "size": 2485,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/camara_adapter.py"
       },
@@ -301,7 +371,7 @@
         "name": "senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 3231,
+        "size": 3230,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/senado_adapter.py"
       },
@@ -377,7 +447,7 @@
         "name": "sql_proposicao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 1665,
+        "size": 2374,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py"
       },
@@ -407,7 +477,7 @@
         "name": "init_db.py",
         "type": "file",
         "language": "Python",
-        "size": 309,
+        "size": 200,
         "extension": ".py",
         "path": "backend/src/init_db.py"
       },
@@ -415,7 +485,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 660,
+        "size": 1098,
         "extension": ".py",
         "path": "backend/src/main.py"
       },
@@ -448,10 +518,18 @@
         "path": "backend/src/presentation/controllers/__init__.py"
       },
       {
+        "name": "dashboard_controller.py",
+        "type": "file",
+        "language": "Python",
+        "size": 863,
+        "extension": ".py",
+        "path": "backend/src/presentation/controllers/dashboard_controller.py"
+      },
+      {
         "name": "proposicao_controller.py",
         "type": "file",
         "language": "Python",
-        "size": 3388,
+        "size": 3808,
         "extension": ".py",
         "path": "backend/src/presentation/controllers/proposicao_controller.py"
       },
@@ -511,7 +589,7 @@
         "name": "test_camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1140,
+        "size": 1147,
         "extension": ".py",
         "path": "backend/tests/integration/test_camara_adapter.py"
       },
@@ -519,7 +597,7 @@
         "name": "test_proposicao_api.py",
         "type": "file",
         "language": "Python",
-        "size": 732,
+        "size": 1393,
         "extension": ".py",
         "path": "backend/tests/integration/test_proposicao_api.py"
       },
@@ -527,7 +605,7 @@
         "name": "test_senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1013,
+        "size": 1018,
         "extension": ".py",
         "path": "backend/tests/integration/test_senado_adapter.py"
       },
@@ -557,9 +635,41 @@
         "name": "test_buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 920,
+        "size": 1793,
         "extension": ".py",
         "path": "backend/tests/unit/test_buscar_proposicoes_service.py"
+      },
+      {
+        "name": "test_camara_adapter.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2047,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_camara_adapter.py"
+      },
+      {
+        "name": "test_dashboard_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1812,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_dashboard_service.py"
+      },
+      {
+        "name": "test_repository_filtering.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2172,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_repository_filtering.py"
+      },
+      {
+        "name": "test_senado_adapter.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1627,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_senado_adapter.py"
       },
       {
         "name": "test_sql_repository.py",
@@ -581,7 +691,7 @@
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 441,
+        "size": 1178,
         "extension": ".yml",
         "path": "docker-compose.yml"
       },
@@ -590,6 +700,14 @@
         "type": "directory",
         "path": "docs",
         "children": []
+      },
+      {
+        "name": "BACKLOG.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1885,
+        "extension": ".md",
+        "path": "docs/BACKLOG.md"
       },
       {
         "name": "SRS.md",
@@ -694,18 +812,12 @@
         "path": "docs/cheat-sheet.md"
       },
       {
-        "name": "story-maps",
-        "type": "directory",
-        "path": "docs/story-maps",
-        "children": []
-      },
-      {
-        "name": "story-map-autenticacao.md",
+        "name": "story-map.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2342,
+        "size": 19144,
         "extension": ".md",
-        "path": "docs/story-maps/story-map-autenticacao.md"
+        "path": "docs/story-map.md"
       },
       {
         "name": "tech-stack.md",
@@ -720,6 +832,14 @@
         "type": "directory",
         "path": "frontend",
         "children": []
+      },
+      {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 427,
+        "extension": "",
+        "path": "frontend/Dockerfile"
       },
       {
         "name": "eslint.config.js",
@@ -783,7 +903,7 @@
         "name": "AppLayout.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3843,
+        "size": 3842,
         "extension": ".tsx",
         "path": "frontend/src/app/layouts/AppLayout.tsx"
       },
@@ -794,10 +914,18 @@
         "children": []
       },
       {
+        "name": "AuthContext.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 529,
+        "extension": ".tsx",
+        "path": "frontend/src/app/providers/AuthContext.tsx"
+      },
+      {
         "name": "AuthProvider.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2217,
+        "size": 2028,
         "extension": ".tsx",
         "path": "frontend/src/app/providers/AuthProvider.tsx"
       },
@@ -811,7 +939,7 @@
         "name": "index.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1715,
+        "size": 1714,
         "extension": ".tsx",
         "path": "frontend/src/app/router/index.tsx"
       },
@@ -831,7 +959,7 @@
         "name": "CadastroForm.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3465,
+        "size": 3464,
         "extension": ".tsx",
         "path": "frontend/src/features/auth/CadastroForm.tsx"
       },
@@ -839,7 +967,7 @@
         "name": "LoginForm.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4519,
+        "size": 4518,
         "extension": ".tsx",
         "path": "frontend/src/features/auth/LoginForm.tsx"
       },
@@ -889,7 +1017,7 @@
         "name": "ProposicaoCard.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3664,
+        "size": 3898,
         "extension": ".tsx",
         "path": "frontend/src/features/proposicoes/ProposicaoCard.tsx"
       },
@@ -1037,7 +1165,7 @@
         "name": "api.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6819,
+        "size": 8574,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/api.ts"
       },
@@ -1045,7 +1173,7 @@
         "name": "mock-data.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14247,
+        "size": 14549,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/mock-data.ts"
       },
@@ -1053,7 +1181,7 @@
         "name": "utils.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3680,
+        "size": 2323,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/utils.ts"
       },
@@ -1067,7 +1195,7 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2240,
+        "size": 2265,
         "extension": ".ts",
         "path": "frontend/src/shared/types/index.ts"
       },
@@ -1092,6 +1220,30 @@
         "children": []
       },
       {
+        "name": "ProposicaoCard.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1972,
+        "extension": ".tsx",
+        "path": "frontend/src/test/ProposicaoCard.test.tsx"
+      },
+      {
+        "name": "badge.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 847,
+        "extension": ".tsx",
+        "path": "frontend/src/test/badge.test.tsx"
+      },
+      {
+        "name": "empty-state.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 956,
+        "extension": ".tsx",
+        "path": "frontend/src/test/empty-state.test.tsx"
+      },
+      {
         "name": "setup.test.ts",
         "type": "file",
         "language": "TypeScript",
@@ -1103,9 +1255,17 @@
         "name": "setup.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 42,
+        "size": 146,
         "extension": ".ts",
         "path": "frontend/src/test/setup.ts"
+      },
+      {
+        "name": "utils.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1854,
+        "extension": ".ts",
+        "path": "frontend/src/test/utils.test.ts"
       },
       {
         "name": "vite-env.d.ts",
@@ -1127,7 +1287,7 @@
         "name": "tsconfig.json",
         "type": "file",
         "language": "JSON",
-        "size": 631,
+        "size": 611,
         "extension": ".json",
         "path": "frontend/tsconfig.json"
       },
@@ -1162,6 +1322,14 @@
         "path": "squad-dashboard/.gitignore"
       },
       {
+        "name": "AUTOMATION.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1726,
+        "extension": ".md",
+        "path": "squad-dashboard/AUTOMATION.md"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
@@ -1181,7 +1349,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 106850,
+        "size": 193819,
         "extension": ".json",
         "path": "squad-dashboard/package-lock.json"
       },
@@ -1189,7 +1357,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 660,
+        "size": 954,
         "extension": ".json",
         "path": "squad-dashboard/package.json"
       },
@@ -1217,7 +1385,7 @@
         "name": "github-stats.json",
         "type": "file",
         "language": "JSON",
-        "size": 122,
+        "size": 33051,
         "extension": ".json",
         "path": "squad-dashboard/public/data/github-stats.json"
       },
@@ -1231,7 +1399,7 @@
         "name": "generate-github-data.mjs",
         "type": "file",
         "language": "Unknown",
-        "size": 4765,
+        "size": 9606,
         "extension": ".mjs",
         "path": "squad-dashboard/scripts/generate-github-data.mjs"
       },
@@ -1273,7 +1441,7 @@
         "name": "github-data.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 827,
+        "size": 1376,
         "extension": ".ts",
         "path": "squad-dashboard/src/entities/github-data.ts"
       },
@@ -1281,7 +1449,7 @@
         "name": "member.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 428,
+        "size": 433,
         "extension": ".ts",
         "path": "squad-dashboard/src/entities/member.ts"
       },
@@ -1297,7 +1465,7 @@
         "name": "task.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 460,
+        "size": 475,
         "extension": ".ts",
         "path": "squad-dashboard/src/entities/task.ts"
       },
@@ -1317,7 +1485,7 @@
         "name": "kanban-column.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1105,
+        "size": 1770,
         "extension": ".tsx",
         "path": "squad-dashboard/src/features/board/kanban-column.tsx"
       },
@@ -1325,7 +1493,7 @@
         "name": "task-card.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1955,
+        "size": 3872,
         "extension": ".tsx",
         "path": "squad-dashboard/src/features/board/task-card.tsx"
       },
@@ -1415,7 +1583,7 @@
         "name": "team.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2346,
+        "size": 1370,
         "extension": ".ts",
         "path": "squad-dashboard/src/mocks/team.ts"
       },
@@ -1426,10 +1594,40 @@
         "children": []
       },
       {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "squad-dashboard/src/pages/__tests__",
+        "children": []
+      },
+      {
+        "name": "dashboard-page.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1914,
+        "extension": ".tsx",
+        "path": "squad-dashboard/src/pages/__tests__/dashboard-page.test.tsx"
+      },
+      {
+        "name": "roadmap-page.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1533,
+        "extension": ".tsx",
+        "path": "squad-dashboard/src/pages/__tests__/roadmap-page.test.tsx"
+      },
+      {
+        "name": "team-page.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1563,
+        "extension": ".tsx",
+        "path": "squad-dashboard/src/pages/__tests__/team-page.test.tsx"
+      },
+      {
         "name": "board-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2937,
+        "size": 12399,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/board-page.tsx"
       },
@@ -1437,7 +1635,7 @@
         "name": "dashboard-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3999,
+        "size": 6534,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/dashboard-page.tsx"
       },
@@ -1453,7 +1651,7 @@
         "name": "roadmap-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4874,
+        "size": 3882,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/roadmap-page.tsx"
       },
@@ -1461,7 +1659,7 @@
         "name": "team-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2441,
+        "size": 4329,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/team-page.tsx"
       },
@@ -1481,7 +1679,7 @@
         "name": "github-data-service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 809,
+        "size": 919,
         "extension": ".ts",
         "path": "squad-dashboard/src/shared/api/github-data-service.ts"
       },
@@ -1498,6 +1696,20 @@
         "size": 2205,
         "extension": ".ts",
         "path": "squad-dashboard/src/shared/lib/utils.ts"
+      },
+      {
+        "name": "test",
+        "type": "directory",
+        "path": "squad-dashboard/src/shared/test",
+        "children": []
+      },
+      {
+        "name": "setup.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 371,
+        "extension": ".ts",
+        "path": "squad-dashboard/src/shared/test/setup.ts"
       },
       {
         "name": "ui",
@@ -1525,7 +1737,7 @@
         "name": "empty-state.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 596,
+        "size": 689,
         "extension": ".tsx",
         "path": "squad-dashboard/src/shared/ui/empty-state.tsx"
       },
@@ -1563,7 +1775,7 @@
         "name": "burndown-chart.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1625,
+        "size": 2320,
         "extension": ".tsx",
         "path": "squad-dashboard/src/widgets/burndown-chart.tsx"
       },
@@ -1571,7 +1783,7 @@
         "name": "commits-chart.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1526,
+        "size": 2054,
         "extension": ".tsx",
         "path": "squad-dashboard/src/widgets/commits-chart.tsx"
       },
@@ -1579,7 +1791,7 @@
         "name": "kpi-card.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1746,
+        "size": 2075,
         "extension": ".tsx",
         "path": "squad-dashboard/src/widgets/kpi-card.tsx"
       },
@@ -1587,7 +1799,7 @@
         "name": "productivity-chart.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1075,
+        "size": 1929,
         "extension": ".tsx",
         "path": "squad-dashboard/src/widgets/productivity-chart.tsx"
       },
@@ -1603,7 +1815,7 @@
         "name": "weekly-chart.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2181,
+        "size": 2843,
         "extension": ".tsx",
         "path": "squad-dashboard/src/widgets/weekly-chart.tsx"
       },
@@ -1619,7 +1831,7 @@
         "name": "tsconfig.json",
         "type": "file",
         "language": "JSON",
-        "size": 629,
+        "size": 609,
         "extension": ".json",
         "path": "squad-dashboard/tsconfig.json"
       },
@@ -1638,11 +1850,35 @@
         "size": 268,
         "extension": ".ts",
         "path": "squad-dashboard/vite.config.ts"
+      },
+      {
+        "name": "vitest.config.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 456,
+        "extension": ".ts",
+        "path": "squad-dashboard/vitest.config.ts"
+      },
+      {
+        "name": "start_dev.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1314,
+        "extension": ".sh",
+        "path": "start_dev.sh"
+      },
+      {
+        "name": "test_all.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1719,
+        "extension": ".sh",
+        "path": "test_all.sh"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-12T08:30:19.673138",
+    "extracted_at": "2026-05-13T08:38:54.593706",
     "file_path": "data/silver/hierarchy_2026-1-Squad13.json"
   }
 }
