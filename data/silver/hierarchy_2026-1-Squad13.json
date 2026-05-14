@@ -2,7 +2,7 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-13T08:36:21.343934",
+  "extracted_at": "2026-05-14T08:23:03.022517",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -53,7 +53,7 @@
         "name": "backend.yml",
         "type": "file",
         "language": "YAML",
-        "size": 555,
+        "size": 598,
         "extension": ".yml",
         "path": ".github/workflows/backend.yml"
       },
@@ -69,7 +69,7 @@
         "name": "frontend.yml",
         "type": "file",
         "language": "YAML",
-        "size": 558,
+        "size": 567,
         "extension": ".yml",
         "path": ".github/workflows/frontend.yml"
       },
@@ -93,7 +93,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 642,
+        "size": 666,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -109,7 +109,7 @@
         "name": "CLAUDE.md",
         "type": "file",
         "language": "Markdown",
-        "size": 20751,
+        "size": 21921,
         "extension": ".md",
         "path": "CLAUDE.md"
       },
@@ -144,6 +144,14 @@
         "path": "Estudos/requisitos.md"
       },
       {
+        "name": "GEMINI.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2119,
+        "extension": ".md",
+        "path": "GEMINI.md"
+      },
+      {
         "name": "LICENSE",
         "type": "file",
         "language": "No Extension",
@@ -166,14 +174,6 @@
         "children": []
       },
       {
-        "name": ".env",
-        "type": "file",
-        "language": "Environment",
-        "size": 313,
-        "extension": ".env",
-        "path": "backend/.env"
-      },
-      {
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
@@ -193,17 +193,9 @@
         "name": "pyproject.toml",
         "type": "file",
         "language": "TOML",
-        "size": 817,
+        "size": 951,
         "extension": ".toml",
         "path": "backend/pyproject.toml"
-      },
-      {
-        "name": "pytest.ini",
-        "type": "file",
-        "language": "INI",
-        "size": 150,
-        "extension": ".ini",
-        "path": "backend/pytest.ini"
       },
       {
         "name": "src",
@@ -251,7 +243,7 @@
         "name": "buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1833,
+        "size": 1906,
         "extension": ".py",
         "path": "backend/src/application/services/buscar_proposicoes_service.py"
       },
@@ -262,6 +254,14 @@
         "size": 2725,
         "extension": ".py",
         "path": "backend/src/application/services/dashboard_service.py"
+      },
+      {
+        "name": "detalhe_proposicao_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1821,
+        "extension": ".py",
+        "path": "backend/src/application/services/detalhe_proposicao_service.py"
       },
       {
         "name": "domain",
@@ -295,7 +295,7 @@
         "name": "proposicao.py",
         "type": "file",
         "language": "Python",
-        "size": 1411,
+        "size": 2352,
         "extension": ".py",
         "path": "backend/src/domain/entities/proposicao.py"
       },
@@ -355,7 +355,7 @@
         "name": "camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 2485,
+        "size": 2539,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/camara_adapter.py"
       },
@@ -371,7 +371,7 @@
         "name": "senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 3230,
+        "size": 3647,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/senado_adapter.py"
       },
@@ -447,7 +447,7 @@
         "name": "sql_proposicao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 2374,
+        "size": 4293,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py"
       },
@@ -529,17 +529,9 @@
         "name": "proposicao_controller.py",
         "type": "file",
         "language": "Python",
-        "size": 3808,
+        "size": 4660,
         "extension": ".py",
         "path": "backend/src/presentation/controllers/proposicao_controller.py"
-      },
-      {
-        "name": "test_db.db",
-        "type": "file",
-        "language": "Unknown",
-        "size": 8192,
-        "extension": ".db",
-        "path": "backend/test_db.db"
       },
       {
         "name": "tests",
@@ -559,7 +551,7 @@
         "name": "conftest.py",
         "type": "file",
         "language": "Python",
-        "size": 1553,
+        "size": 1518,
         "extension": ".py",
         "path": "backend/tests/conftest.py"
       },
@@ -586,6 +578,14 @@
         "path": "backend/tests/integration/conftest.py"
       },
       {
+        "name": "test_app.py",
+        "type": "file",
+        "language": "Python",
+        "size": 258,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_app.py"
+      },
+      {
         "name": "test_camara_adapter.py",
         "type": "file",
         "language": "Python",
@@ -597,9 +597,17 @@
         "name": "test_proposicao_api.py",
         "type": "file",
         "language": "Python",
-        "size": 1393,
+        "size": 1990,
         "extension": ".py",
         "path": "backend/tests/integration/test_proposicao_api.py"
+      },
+      {
+        "name": "test_proposicao_detalhe.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2906,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_proposicao_detalhe.py"
       },
       {
         "name": "test_senado_adapter.py",
@@ -627,7 +635,7 @@
         "name": "conftest.py",
         "type": "file",
         "language": "Python",
-        "size": 686,
+        "size": 647,
         "extension": ".py",
         "path": "backend/tests/unit/conftest.py"
       },
@@ -635,7 +643,7 @@
         "name": "test_buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1793,
+        "size": 2394,
         "extension": ".py",
         "path": "backend/tests/unit/test_buscar_proposicoes_service.py"
       },
@@ -659,7 +667,7 @@
         "name": "test_repository_filtering.py",
         "type": "file",
         "language": "Python",
-        "size": 2172,
+        "size": 3634,
         "extension": ".py",
         "path": "backend/tests/unit/test_repository_filtering.py"
       },
@@ -667,7 +675,7 @@
         "name": "test_senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1627,
+        "size": 3132,
         "extension": ".py",
         "path": "backend/tests/unit/test_senado_adapter.py"
       },
@@ -675,7 +683,7 @@
         "name": "test_sql_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 1168,
+        "size": 1967,
         "extension": ".py",
         "path": "backend/tests/unit/test_sql_repository.py"
       },
@@ -804,6 +812,28 @@
         "path": "docs/adr/ADR-008-github-actions-data-pipeline.md"
       },
       {
+        "name": "ai",
+        "type": "directory",
+        "path": "docs/ai",
+        "children": []
+      },
+      {
+        "name": "project-context.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3164,
+        "extension": ".md",
+        "path": "docs/ai/project-context.md"
+      },
+      {
+        "name": "project-memory.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4496,
+        "extension": ".md",
+        "path": "docs/ai/project-memory.md"
+      },
+      {
         "name": "cheat-sheet.md",
         "type": "file",
         "language": "Markdown",
@@ -834,6 +864,14 @@
         "children": []
       },
       {
+        "name": ".env.example",
+        "type": "file",
+        "language": "Unknown",
+        "size": 35,
+        "extension": ".example",
+        "path": "frontend/.env.example"
+      },
+      {
         "name": "Dockerfile",
         "type": "file",
         "language": "No Extension",
@@ -845,7 +883,7 @@
         "name": "eslint.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 842,
+        "size": 854,
         "extension": ".js",
         "path": "frontend/eslint.config.js"
       },
@@ -861,7 +899,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 200065,
+        "size": 222372,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -869,7 +907,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 1083,
+        "size": 1166,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -1165,7 +1203,7 @@
         "name": "api.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 8574,
+        "size": 8493,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/api.ts"
       },
@@ -1209,7 +1247,7 @@
         "name": "index.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 7888,
+        "size": 7926,
         "extension": ".tsx",
         "path": "frontend/src/shared/ui/index.tsx"
       },
@@ -1236,6 +1274,14 @@
         "path": "frontend/src/test/badge.test.tsx"
       },
       {
+        "name": "button.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 816,
+        "extension": ".tsx",
+        "path": "frontend/src/test/button.test.tsx"
+      },
+      {
         "name": "empty-state.test.tsx",
         "type": "file",
         "language": "TypeScript",
@@ -1258,6 +1304,14 @@
         "size": 146,
         "extension": ".ts",
         "path": "frontend/src/test/setup.ts"
+      },
+      {
+        "name": "spinner.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 631,
+        "extension": ".tsx",
+        "path": "frontend/src/test/spinner.test.tsx"
       },
       {
         "name": "utils.test.ts",
@@ -1303,7 +1357,7 @@
         "name": "vite.config.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 355,
+        "size": 520,
         "extension": ".ts",
         "path": "frontend/vite.config.ts"
       },
@@ -1385,7 +1439,7 @@
         "name": "github-stats.json",
         "type": "file",
         "language": "JSON",
-        "size": 33051,
+        "size": 32482,
         "extension": ".json",
         "path": "squad-dashboard/public/data/github-stats.json"
       },
@@ -1399,9 +1453,17 @@
         "name": "generate-github-data.mjs",
         "type": "file",
         "language": "Unknown",
-        "size": 9606,
+        "size": 11071,
         "extension": ".mjs",
         "path": "squad-dashboard/scripts/generate-github-data.mjs"
+      },
+      {
+        "name": "sync-github-metadata.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1517,
+        "extension": ".sh",
+        "path": "squad-dashboard/scripts/sync-github-metadata.sh"
       },
       {
         "name": "src",
@@ -1482,6 +1544,20 @@
         "children": []
       },
       {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "squad-dashboard/src/features/board/__tests__",
+        "children": []
+      },
+      {
+        "name": "task-card.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1823,
+        "extension": ".tsx",
+        "path": "squad-dashboard/src/features/board/__tests__/task-card.test.tsx"
+      },
+      {
         "name": "kanban-column.tsx",
         "type": "file",
         "language": "TypeScript",
@@ -1493,7 +1569,7 @@
         "name": "task-card.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3872,
+        "size": 3688,
         "extension": ".tsx",
         "path": "squad-dashboard/src/features/board/task-card.tsx"
       },
@@ -1603,7 +1679,7 @@
         "name": "dashboard-page.test.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1914,
+        "size": 2614,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/__tests__/dashboard-page.test.tsx"
       },
@@ -1635,7 +1711,7 @@
         "name": "dashboard-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 6534,
+        "size": 4922,
         "extension": ".tsx",
         "path": "squad-dashboard/src/pages/dashboard-page.tsx"
       },
@@ -1878,7 +1954,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-13T08:38:54.593706",
+    "extracted_at": "2026-05-14T08:25:34.395852",
     "file_path": "data/silver/hierarchy_2026-1-Squad13.json"
   }
 }

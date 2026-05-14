@@ -2,24 +2,24 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-13T08:36:21.343934",
+  "analyzed_at": "2026-05-14T08:23:03.022517",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 187,
-  "total_bytes": 1187429,
+  "total_files": 195,
+  "total_bytes": 1231210,
   "languages": [
     {
       "language": "JSON",
       "file_count": 9,
-      "total_bytes": 430618,
-      "percentage": 36.26,
+      "total_bytes": 452439,
+      "percentage": 36.75,
       "files": [
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 200065,
+          "size": 222372,
           "extension": ".json"
         },
         {
@@ -31,13 +31,13 @@
         {
           "path": "squad-dashboard/public/data/github-stats.json",
           "name": "github-stats.json",
-          "size": 33051,
+          "size": 32482,
           "extension": ".json"
         },
         {
           "path": "frontend/package.json",
           "name": "package.json",
-          "size": 1083,
+          "size": 1166,
           "extension": ".json"
         },
         {
@@ -76,7 +76,7 @@
       "language": "Lock File",
       "file_count": 1,
       "total_bytes": 345318,
-      "percentage": 29.08,
+      "percentage": 28.05,
       "files": [
         {
           "path": "backend/uv.lock",
@@ -88,9 +88,9 @@
     },
     {
       "language": "TypeScript",
-      "file_count": 76,
-      "total_bytes": 195715,
-      "percentage": 16.48,
+      "file_count": 79,
+      "total_bytes": 198011,
+      "percentage": 16.08,
       "files": [
         {
           "path": "frontend/src/shared/lib/mock-data.ts",
@@ -113,7 +113,7 @@
         {
           "path": "frontend/src/shared/lib/api.ts",
           "name": "api.ts",
-          "size": 8574,
+          "size": 8493,
           "extension": ".ts"
         },
         {
@@ -125,7 +125,7 @@
         {
           "path": "frontend/src/shared/ui/index.tsx",
           "name": "index.tsx",
-          "size": 7888,
+          "size": 7926,
           "extension": ".tsx"
         },
         {
@@ -143,7 +143,7 @@
         {
           "path": "squad-dashboard/src/pages/dashboard-page.tsx",
           "name": "dashboard-page.tsx",
-          "size": 6534,
+          "size": 4922,
           "extension": ".tsx"
         },
         {
@@ -156,14 +156,14 @@
     },
     {
       "language": "Markdown",
-      "file_count": 26,
-      "total_bytes": 126848,
-      "percentage": 10.68,
+      "file_count": 29,
+      "total_bytes": 137797,
+      "percentage": 11.19,
       "files": [
         {
           "path": "CLAUDE.md",
           "name": "CLAUDE.md",
-          "size": 20751,
+          "size": 21921,
           "extension": ".md"
         },
         {
@@ -209,29 +209,41 @@
           "extension": ".md"
         },
         {
-          "path": "docs/tech-stack.md",
-          "name": "tech-stack.md",
-          "size": 3866,
+          "path": "docs/ai/project-memory.md",
+          "name": "project-memory.md",
+          "size": 4496,
           "extension": ".md"
         },
         {
-          "path": "docs/adr/ADR-005-adapter-pattern.md",
-          "name": "ADR-005-adapter-pattern.md",
-          "size": 3853,
+          "path": "docs/tech-stack.md",
+          "name": "tech-stack.md",
+          "size": 3866,
           "extension": ".md"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 44,
-      "total_bytes": 51743,
-      "percentage": 4.36,
+      "file_count": 47,
+      "total_bytes": 65874,
+      "percentage": 5.35,
       "files": [
         {
           "path": "backend/src/infrastructure/adapters/camara_mock_adapter.py",
           "name": "camara_mock_adapter.py",
           "size": 4884,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/presentation/controllers/proposicao_controller.py",
+          "name": "proposicao_controller.py",
+          "size": 4660,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py",
+          "name": "sql_proposicao_repository.py",
+          "size": 4293,
           "extension": ".py"
         },
         {
@@ -241,15 +253,27 @@
           "extension": ".py"
         },
         {
-          "path": "backend/src/presentation/controllers/proposicao_controller.py",
-          "name": "proposicao_controller.py",
-          "size": 3808,
+          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
+          "name": "senado_adapter.py",
+          "size": 3647,
           "extension": ".py"
         },
         {
-          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
-          "name": "senado_adapter.py",
-          "size": 3230,
+          "path": "backend/tests/unit/test_repository_filtering.py",
+          "name": "test_repository_filtering.py",
+          "size": 3634,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_senado_adapter.py",
+          "name": "test_senado_adapter.py",
+          "size": 3132,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/integration/test_proposicao_detalhe.py",
+          "name": "test_proposicao_detalhe.py",
+          "size": 2906,
           "extension": ".py"
         },
         {
@@ -263,55 +287,31 @@
           "name": "dashboard_service.py",
           "size": 2725,
           "extension": ".py"
-        },
-        {
-          "path": "backend/src/infrastructure/adapters/camara_adapter.py",
-          "name": "camara_adapter.py",
-          "size": 2485,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py",
-          "name": "sql_proposicao_repository.py",
-          "size": 2374,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_repository_filtering.py",
-          "name": "test_repository_filtering.py",
-          "size": 2172,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_camara_adapter.py",
-          "name": "test_camara_adapter.py",
-          "size": 2047,
-          "extension": ".py"
         }
       ]
     },
     {
       "language": "Unknown",
       "file_count": 6,
-      "total_bytes": 18083,
-      "percentage": 1.52,
+      "total_bytes": 11391,
+      "percentage": 0.93,
       "files": [
         {
           "path": "squad-dashboard/scripts/generate-github-data.mjs",
           "name": "generate-github-data.mjs",
-          "size": 9606,
+          "size": 11071,
           "extension": ".mjs"
-        },
-        {
-          "path": "backend/test_db.db",
-          "name": "test_db.db",
-          "size": 8192,
-          "extension": ".db"
         },
         {
           "path": "backend/.env.example",
           "name": ".env.example",
           "size": 285,
+          "extension": ".example"
+        },
+        {
+          "path": "frontend/.env.example",
+          "name": ".env.example",
+          "size": 35,
           "extension": ".example"
         },
         {
@@ -337,8 +337,8 @@
     {
       "language": "YAML",
       "file_count": 6,
-      "total_bytes": 4824,
-      "percentage": 0.41,
+      "total_bytes": 4876,
+      "percentage": 0.4,
       "files": [
         {
           "path": ".github/workflows/deploy-squad-dashboard.yml",
@@ -359,15 +359,15 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/frontend.yml",
-          "name": "frontend.yml",
-          "size": 558,
+          "path": ".github/workflows/backend.yml",
+          "name": "backend.yml",
+          "size": 598,
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/backend.yml",
-          "name": "backend.yml",
-          "size": 555,
+          "path": ".github/workflows/frontend.yml",
+          "name": "frontend.yml",
+          "size": 567,
           "extension": ".yml"
         },
         {
@@ -379,10 +379,36 @@
       ]
     },
     {
+      "language": "Shell",
+      "file_count": 3,
+      "total_bytes": 4550,
+      "percentage": 0.37,
+      "files": [
+        {
+          "path": "test_all.sh",
+          "name": "test_all.sh",
+          "size": 1719,
+          "extension": ".sh"
+        },
+        {
+          "path": "squad-dashboard/scripts/sync-github-metadata.sh",
+          "name": "sync-github-metadata.sh",
+          "size": 1517,
+          "extension": ".sh"
+        },
+        {
+          "path": "start_dev.sh",
+          "name": "start_dev.sh",
+          "size": 1314,
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
       "language": "JavaScript",
       "file_count": 5,
-      "total_bytes": 4024,
-      "percentage": 0.34,
+      "total_bytes": 4036,
+      "percentage": 0.33,
       "files": [
         {
           "path": "frontend/tailwind.config.js",
@@ -399,7 +425,7 @@
         {
           "path": "frontend/eslint.config.js",
           "name": "eslint.config.js",
-          "size": 842,
+          "size": 854,
           "extension": ".js"
         },
         {
@@ -417,30 +443,10 @@
       ]
     },
     {
-      "language": "Shell",
-      "file_count": 2,
-      "total_bytes": 3033,
-      "percentage": 0.26,
-      "files": [
-        {
-          "path": "test_all.sh",
-          "name": "test_all.sh",
-          "size": 1719,
-          "extension": ".sh"
-        },
-        {
-          "path": "start_dev.sh",
-          "name": "start_dev.sh",
-          "size": 1314,
-          "extension": ".sh"
-        }
-      ]
-    },
-    {
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 2095,
-      "percentage": 0.18,
+      "percentage": 0.17,
       "files": [
         {
           "path": "LICENSE",
@@ -466,7 +472,7 @@
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 1871,
-      "percentage": 0.16,
+      "percentage": 0.15,
       "files": [
         {
           "path": "squad-dashboard/src/index.css",
@@ -486,7 +492,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 1163,
-      "percentage": 0.1,
+      "percentage": 0.09,
       "files": [
         {
           "path": "frontend/index.html",
@@ -503,15 +509,29 @@
       ]
     },
     {
+      "language": "TOML",
+      "file_count": 1,
+      "total_bytes": 951,
+      "percentage": 0.08,
+      "files": [
+        {
+          "path": "backend/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 951,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
       "language": "Git Ignore",
       "file_count": 2,
-      "total_bytes": 814,
+      "total_bytes": 838,
       "percentage": 0.07,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 642,
+          "size": 666,
           "extension": ".gitignore"
         },
         {
@@ -521,52 +541,10 @@
           "extension": ".gitignore"
         }
       ]
-    },
-    {
-      "language": "TOML",
-      "file_count": 1,
-      "total_bytes": 817,
-      "percentage": 0.07,
-      "files": [
-        {
-          "path": "backend/pyproject.toml",
-          "name": "pyproject.toml",
-          "size": 817,
-          "extension": ".toml"
-        }
-      ]
-    },
-    {
-      "language": "Environment",
-      "file_count": 1,
-      "total_bytes": 313,
-      "percentage": 0.03,
-      "files": [
-        {
-          "path": "backend/.env",
-          "name": ".env",
-          "size": 313,
-          "extension": ".env"
-        }
-      ]
-    },
-    {
-      "language": "INI",
-      "file_count": 1,
-      "total_bytes": 150,
-      "percentage": 0.01,
-      "files": [
-        {
-          "path": "backend/pytest.ini",
-          "name": "pytest.ini",
-          "size": 150,
-          "extension": ".ini"
-        }
-      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-13T08:38:54.591893",
+    "extracted_at": "2026-05-14T08:25:34.393815",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }

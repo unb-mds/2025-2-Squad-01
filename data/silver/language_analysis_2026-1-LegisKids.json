@@ -1,21 +1,27 @@
 {
-  "repository": "2026-1-Squad08",
+  "repository": "2026-1-LegisKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-13T08:36:19.226100",
+  "analyzed_at": "2026-05-14T08:23:01.763824",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 127,
-  "total_bytes": 4258677,
+  "total_files": 142,
+  "total_bytes": 4616462,
   "languages": [
     {
       "language": "HTML",
       "file_count": 32,
-      "total_bytes": 792727,
-      "percentage": 18.61,
+      "total_bytes": 952789,
+      "percentage": 20.64,
       "files": [
+        {
+          "path": "docs/performance/index.html",
+          "name": "index.html",
+          "size": 165782,
+          "extension": ".html"
+        },
         {
           "path": "site/estudos/requisitos/estudo_requisitos_software/index.html",
           "name": "index.html",
@@ -69,12 +75,6 @@
           "name": "index.html",
           "size": 29568,
           "extension": ".html"
-        },
-        {
-          "path": "site/estudos/requisitos/requisitos_de_software/index.html",
-          "name": "index.html",
-          "size": 28181,
-          "extension": ".html"
         }
       ]
     },
@@ -82,7 +82,7 @@
       "language": "TrueType Font",
       "file_count": 4,
       "total_bytes": 706528,
-      "percentage": 16.59,
+      "percentage": 15.3,
       "files": [
         {
           "path": "site/webfonts/fa-solid-900.ttf",
@@ -114,7 +114,7 @@
       "language": "JPEG Image",
       "file_count": 2,
       "total_bytes": 647878,
-      "percentage": 15.21,
+      "percentage": 14.03,
       "files": [
         {
           "path": "assets/images/team/caio-bechepeche.jpg",
@@ -133,8 +133,8 @@
     {
       "language": "JSON",
       "file_count": 3,
-      "total_bytes": 510630,
-      "percentage": 11.99,
+      "total_bytes": 628926,
+      "percentage": 13.62,
       "files": [
         {
           "path": "site/search/search_index.json",
@@ -145,7 +145,7 @@
         {
           "path": "docs/performance/metrics.json",
           "name": "metrics.json",
-          "size": 53012,
+          "size": 171308,
           "extension": ".json"
         },
         {
@@ -160,7 +160,7 @@
       "language": "Unknown",
       "file_count": 6,
       "total_bytes": 421388,
-      "percentage": 9.89,
+      "percentage": 9.13,
       "files": [
         {
           "path": "site/js/bootstrap.bundle.min.js.map",
@@ -204,7 +204,7 @@
       "language": "CSS",
       "file_count": 7,
       "total_bytes": 347028,
-      "percentage": 8.15,
+      "percentage": 7.52,
       "files": [
         {
           "path": "site/css/bootstrap.min.css",
@@ -251,42 +251,10 @@
       ]
     },
     {
-      "language": "WOFF2 Font",
-      "file_count": 4,
-      "total_bytes": 304112,
-      "percentage": 7.14,
-      "files": [
-        {
-          "path": "site/webfonts/fa-solid-900.woff2",
-          "name": "fa-solid-900.woff2",
-          "size": 156496,
-          "extension": ".woff2"
-        },
-        {
-          "path": "site/webfonts/fa-brands-400.woff2",
-          "name": "fa-brands-400.woff2",
-          "size": 117372,
-          "extension": ".woff2"
-        },
-        {
-          "path": "site/webfonts/fa-regular-400.woff2",
-          "name": "fa-regular-400.woff2",
-          "size": 25452,
-          "extension": ".woff2"
-        },
-        {
-          "path": "site/webfonts/fa-v4compatibility.woff2",
-          "name": "fa-v4compatibility.woff2",
-          "size": 4792,
-          "extension": ".woff2"
-        }
-      ]
-    },
-    {
       "language": "Markdown",
-      "file_count": 47,
-      "total_bytes": 294008,
-      "percentage": 6.9,
+      "file_count": 60,
+      "total_bytes": 343467,
+      "percentage": 7.44,
       "files": [
         {
           "path": "docs/estudos/requisitos/estudo_requisitos_software.md",
@@ -331,6 +299,12 @@
           "extension": ".md"
         },
         {
+          "path": ".codex/skills/openspec-explore/SKILL.md",
+          "name": "SKILL.md",
+          "size": 10738,
+          "extension": ".md"
+        },
+        {
           "path": "docs/estudos/arquitetura/estudo_fluxo_de_dados.md",
           "name": "estudo_fluxo_de_dados.md",
           "size": 9397,
@@ -341,12 +315,38 @@
           "name": "diagrama_arquitetura_v1.md",
           "size": 9354,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "WOFF2 Font",
+      "file_count": 4,
+      "total_bytes": 304112,
+      "percentage": 6.59,
+      "files": [
+        {
+          "path": "site/webfonts/fa-solid-900.woff2",
+          "name": "fa-solid-900.woff2",
+          "size": 156496,
+          "extension": ".woff2"
         },
         {
-          "path": "docs/estudos/banco_de_dados/definicao_banco_de_dados.md",
-          "name": "definicao_banco_de_dados.md",
-          "size": 7039,
-          "extension": ".md"
+          "path": "site/webfonts/fa-brands-400.woff2",
+          "name": "fa-brands-400.woff2",
+          "size": 117372,
+          "extension": ".woff2"
+        },
+        {
+          "path": "site/webfonts/fa-regular-400.woff2",
+          "name": "fa-regular-400.woff2",
+          "size": 25452,
+          "extension": ".woff2"
+        },
+        {
+          "path": "site/webfonts/fa-v4compatibility.woff2",
+          "name": "fa-v4compatibility.woff2",
+          "size": 4792,
+          "extension": ".woff2"
         }
       ]
     },
@@ -354,7 +354,7 @@
       "language": "JavaScript",
       "file_count": 7,
       "total_bytes": 198292,
-      "percentage": 4.66,
+      "percentage": 4.3,
       "files": [
         {
           "path": "site/search/lunr.js",
@@ -403,13 +403,13 @@
     {
       "language": "Python",
       "file_count": 5,
-      "total_bytes": 26922,
-      "percentage": 0.63,
+      "total_bytes": 56788,
+      "percentage": 1.23,
       "files": [
         {
           "path": "scripts/generate_performance_report.py",
           "name": "generate_performance_report.py",
-          "size": 14568,
+          "size": 44434,
           "extension": ".py"
         },
         {
@@ -440,8 +440,8 @@
     },
     {
       "language": "YAML",
-      "file_count": 5,
-      "total_bytes": 5260,
+      "file_count": 7,
+      "total_bytes": 5362,
       "percentage": 0.12,
       "files": [
         {
@@ -459,7 +459,7 @@
         {
           "path": ".github/workflows/performance-report.yml",
           "name": "performance-report.yml",
-          "size": 1113,
+          "size": 1135,
           "extension": ".yml"
         },
         {
@@ -469,24 +469,22 @@
           "extension": ".yaml"
         },
         {
+          "path": "openspec/changes/fix-performance-dashboard-rendering/.openspec.yaml",
+          "name": ".openspec.yaml",
+          "size": 40,
+          "extension": ".yaml"
+        },
+        {
           "path": "openspec/changes/github-actions-performance-metrics/.openspec.yaml",
           "name": ".openspec.yaml",
           "size": 40,
           "extension": ".yaml"
-        }
-      ]
-    },
-    {
-      "language": "Icon",
-      "file_count": 1,
-      "total_bytes": 1150,
-      "percentage": 0.03,
-      "files": [
+        },
         {
-          "path": "site/img/favicon.ico",
-          "name": "favicon.ico",
-          "size": 1150,
-          "extension": ".ico"
+          "path": "openspec/changes/improve-github-productivity-dashboard/.openspec.yaml",
+          "name": ".openspec.yaml",
+          "size": 40,
+          "extension": ".yaml"
         }
       ]
     },
@@ -515,6 +513,20 @@
           "name": "LICENSE",
           "size": 1060,
           "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "Icon",
+      "file_count": 1,
+      "total_bytes": 1150,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "site/img/favicon.ico",
+          "name": "favicon.ico",
+          "size": 1150,
+          "extension": ".ico"
         }
       ]
     },
@@ -548,7 +560,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-14T08:25:36.303383",
-    "file_path": "data/silver/language_analysis_2026-1-Squad08.json"
+    "extracted_at": "2026-05-14T08:25:37.345400",
+    "file_path": "data/silver/language_analysis_2026-1-LegisKids.json"
   }
 }
