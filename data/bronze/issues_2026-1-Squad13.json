@@ -1,10 +1,134 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-14T07:38:00.448239",
+      "extracted_at": "2026-05-15T07:49:16.802933",
       "file_path": "data/bronze/issues_2026-1-Squad13.json",
-      "record_count": 47
+      "record_count": 48
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/102",
+    "id": 4448598411,
+    "node_id": "I_kwDORypFlc8AAAABCSg5iw",
+    "number": 102,
+    "title": "chore: Corrigir init_db para registrar entidades antes de criar tabelas",
+    "user": {
+      "login": "kaiky-yun",
+      "id": 127952063,
+      "node_id": "U_kgDOB6Bkvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaiky-yun",
+      "html_url": "https://github.com/kaiky-yun",
+      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "ededed",
+        "default": false,
+        "description": "Item pronto para iniciar"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-14T19:14:35Z",
+    "updated_at": "2026-05-14T19:58:53Z",
+    "closed_at": "2026-05-14T19:58:53Z",
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## Contexto\n\nDurante o teste local da integração frontend-backend, o ambiente Docker subiu corretamente, mas o endpoint `GET /proposicoes` retornou erro 500 inicialmente porque a tabela `proposicao` não existia no PostgreSQL.\n\nAo executar `src/init_db.py`, o script exibiu \"Tabelas criadas com sucesso\", porém nenhuma tabela foi criada. A tabela só foi criada após importar explicitamente a entidade `Proposicao` antes de chamar `SQLModel.metadata.create_all(engine)`.\n\n## Problema\n\nO `init_db.py` chama `SQLModel.metadata.create_all(engine)` sem garantir que as entidades SQLModel estejam importadas/registradas no metadata.\n\n## Objetivo\n\nCorrigir o bootstrap do banco para que `init_db.py` crie corretamente a tabela `proposicao` ao ser executado em ambiente local/Docker.\n\n## Critérios de aceitação\n\n- `python src/init_db.py` deve criar a tabela `proposicao` em banco limpo.\n- O script deve importar/registrar as entidades necessárias antes do `create_all`.\n- A execução deve continuar idempotente.\n- Não alterar arquitetura.\n- Não misturar com frontend, CI ou documentação.\n- Adicionar ou ajustar teste se houver cobertura adequada para isso.",
+    "closed_by": {
+      "login": "kaiky-yun",
+      "id": 127952063,
+      "node_id": "U_kgDOB6Bkvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaiky-yun",
+      "html_url": "https://github.com/kaiky-yun",
+      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/timeline",
+    "performed_via_github_app": null,
+    "state_reason": "completed",
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/97",
@@ -4715,7 +4839,7 @@
         "description": "Item no backlog"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -4743,8 +4867,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:26Z",
-    "updated_at": "2026-05-14T01:26:13Z",
-    "closed_at": null,
+    "updated_at": "2026-05-14T20:15:26Z",
+    "closed_at": "2026-05-14T20:15:26Z",
     "assignee": {
       "login": "kaiky-yun",
       "id": 127952063,
@@ -4781,7 +4905,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Motivação\nFacilitar o setup do ambiente e demonstrações garantindo que o banco tenha dados reais das APIs da Câmara e Senado.\n\n## ✅ Critérios de Aceitação (DoD)\n- [ ] Script `init_db.py` funcional.\n- [ ] Uso de UPSERT para evitar duplicidade em execuções repetidas.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaiky-yun",
+      "id": 127952063,
+      "node_id": "U_kgDOB6Bkvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaiky-yun",
+      "html_url": "https://github.com/kaiky-yun",
+      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/45/reactions",
       "total_count": 0,
@@ -4796,7 +4940,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/45/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad13"
   },

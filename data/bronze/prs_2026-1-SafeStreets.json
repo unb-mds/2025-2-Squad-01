@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-14T07:37:50.959047",
+      "extracted_at": "2026-05-15T07:49:04.612353",
       "file_path": "data/bronze/prs_2026-1-SafeStreets.json",
       "record_count": 6
     }
@@ -131,11 +131,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 0,
+      "open_issues": 3,
       "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-13T09:57:37Z",
-      "updated_at": "2026-05-13T15:12:45Z",
+      "updated_at": "2026-05-15T00:16:18Z",
       "due_on": null,
       "closed_at": null
     },
@@ -501,11 +501,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-05-06T21:13:11Z",
-      "updated_at": "2026-05-13T01:52:19Z",
+      "updated_at": "2026-05-14T19:36:13Z",
       "due_on": "2026-05-09T00:00:00Z",
       "closed_at": null
     },
@@ -643,7 +643,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -698,18 +698,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 4,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-05-06T21:13:11Z",
-      "updated_at": "2026-05-13T01:52:19Z",
+      "updated_at": "2026-05-14T19:36:13Z",
       "due_on": "2026-05-09T00:00:00Z",
       "closed_at": null
     },
     "comments": 3,
     "created_at": "2026-05-11T00:03:05Z",
-    "updated_at": "2026-05-13T01:56:13Z",
-    "closed_at": null,
+    "updated_at": "2026-05-14T19:36:13Z",
+    "closed_at": "2026-05-14T19:36:13Z",
     "assignee": {
       "login": "EdsonToppzera",
       "id": 157309764,
@@ -740,10 +740,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/39",
       "diff_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/39.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/39.patch",
-      "merged_at": null
+      "merged_at": "2026-05-14T19:36:13Z"
     },
     "body": "## Descrição\r\nEste PR implementa a infraestrutura inicial de documentação do projeto Safe Streets seguindo o padrão \"Docs as Code\". \r\nFoi configurado o gerador de sites estáticos MkDocs com o tema Material, permitindo que a equipe escreva a documentação em arquivos Markdown simples e obtenha uma interface web profissional. Além disso, foi criada uma rotina de CI/CD via GitHub Actions para publicar automaticamente o site no GitHub Pages sempre que houver integração na branch principal.\r\n\r\n**Principais adições:**\r\n- Criação do arquivo de configuração base `mkdocs.yml` com abas de navegação.\r\n- Renomeei a pasta `Docs/` para `docs/`\r\n- Criação do workflow `.github/workflows/docs.yml` para automação do deploy.\r\n\r\n## Tipo de mudança\r\n- [ ] Bug fix\r\n- [x] Nova funcionalidade\r\n- [ ] Refatoração\r\n- [x] Documentação\r\n- [ ] Melhoria de performance\r\n- [ ] Testes\r\n\r\n## Issue relacionada\r\n#37 \r\n\r\n## Como testar\r\nPasso a passo para validar localmente antes de aprovar:\r\n\r\n1. **Puxe a branch do PR:**\r\n   ```bash\r\n   git fetch\r\n   git checkout feat/gitpage\r\n   ```\r\n2. **Instale a ferramenta diretamente (assumindo que já tenha Python instalado):**\r\n   ```bash\r\n   pip install mkdocs-material\r\n   ```\r\n3. **Inicie o servidor:**\r\n   ```bash\r\n   mkdocs serve\r\n   ```\r\n   Ou se der erro:\r\n   ```bash\r\n   python -m mkdocs serve\r\n   ```\r\n4. Acesse `http://127.0.0.1:8000` no seu navegador. Navegue pelo menu, teste o modo escuro/claro e verifique se a formatação dos textos está correta.\r\n\r\n## Evidências (se aplicável)\r\n<img width=\"735\" height=\"421\" alt=\"teste1\" src=\"https://github.com/user-attachments/assets/e2cfed16-836a-4fe0-837c-15e1b50daf29\" />\r\n<img width=\"1903\" height=\"883\" alt=\"image\" src=\"https://github.com/user-attachments/assets/29a97d23-da38-4008-a824-52e95dfc8b62\" />\r\n\r\n\r\n## Impactos e riscos\r\n**Risco Baixo.** As alterações estão estritamente contidas na pasta `docs/` e na pasta oculta `.github/`. Não há nenhuma modificação no código-fonte do backend (FastAPI/PostgreSQL) ou do frontend, portanto, não afeta o funcionamento da aplicação.\r\n\r\n## Checklist\r\n- [x] Código segue o padrão do projeto\r\n- [ ] Testes adicionados/atualizados (se necessário)\r\n- [x] Testado localmente\r\n- [x] Documentação atualizada (se necessário)\r\n\r\n## Observações adicionais\r\n- Leia a issue relacionada para uma explicação mais detalhada e teorica\r\n- Implementação bem simples, é preciso organizar mais os documentos",
-    "closed_by": null,
+    "closed_by": {
+      "login": "EdsonToppzera",
+      "id": 157309764,
+      "node_id": "U_kgDOCWBbRA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/157309764?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/EdsonToppzera",
+      "html_url": "https://github.com/EdsonToppzera",
+      "followers_url": "https://api.github.com/users/EdsonToppzera/followers",
+      "following_url": "https://api.github.com/users/EdsonToppzera/following{/other_user}",
+      "gists_url": "https://api.github.com/users/EdsonToppzera/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/EdsonToppzera/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/EdsonToppzera/subscriptions",
+      "organizations_url": "https://api.github.com/users/EdsonToppzera/orgs",
+      "repos_url": "https://api.github.com/users/EdsonToppzera/repos",
+      "events_url": "https://api.github.com/users/EdsonToppzera/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/EdsonToppzera/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/39/reactions",
       "total_count": 0,
