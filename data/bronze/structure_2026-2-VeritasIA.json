@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-2-VeritasIA",
   "branch": "main",
-  "sha": "ee3250b497edb866f298386f9b98f40abf31436d",
+  "sha": "88a6492b7cc00dcfed1ef2c754ebf1f7b717c3c6",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "54dc4959fb311ced2d1b1f2b7d1f1ee87d52afa8",
+      "sha": "7c9e409e003c5520489c775a185fa1a7ab773d7a",
       "mode": "040000",
       "children": []
     },
@@ -16,18 +16,28 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "00501f20a5c2093eb88d14bafcbab79134f210ac",
+      "sha": "5e4aa22c4ba34c369a3b633d9e665332aa8bee45",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "deploy.yml",
-      "path": ".github/workflows/deploy.yml",
+      "name": "deploy-docs.yml",
+      "path": ".github/workflows/deploy-docs.yml",
       "type": "file",
-      "sha": "19874e10ed884066d7665139ff0a98cad7ee0074",
+      "sha": "9d391c3b947d07e9c7d53ca93522b892e6cbc2c9",
       "mode": "100644",
       "extension": ".yml",
-      "size": 627,
+      "size": 905,
+      "is_binary": false
+    },
+    {
+      "name": "metrics.yml",
+      "path": ".github/workflows/metrics.yml",
+      "type": "file",
+      "sha": "50d2142101e535436277462969452bc75610cd19",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1626,
       "is_binary": false
     },
     {
@@ -54,7 +64,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "ff39bccac47b641d0f30e547fc268bc3382d4ed7",
+      "sha": "f36c8672e80eddd1c1fdaf55430f263b90e1fc5c",
       "mode": "040000",
       "children": []
     },
@@ -98,7 +108,7 @@
       "name": "mkdocs",
       "path": "docs/mkdocs",
       "type": "directory",
-      "sha": "7d0acb59c0a323f2d1ebe11e7694e6fe5d3c63a9",
+      "sha": "056fd77c2e7dec73af50fa17c35a81378ba2e687",
       "mode": "040000",
       "children": []
     },
@@ -106,69 +116,9 @@
       "name": "docs",
       "path": "docs/mkdocs/docs",
       "type": "directory",
-      "sha": "5f7c8571f93b23dfdd45f8364ab26ccd9b68cd9c",
+      "sha": "6010319dace2efdaf1dfcc829b6374d6e6276837",
       "mode": "040000",
       "children": []
-    },
-    {
-      "name": "Backend.md",
-      "path": "docs/mkdocs/docs/Backend.md",
-      "type": "file",
-      "sha": "408acc000ecb144c25ef539aa4984cdaccddc890",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 43,
-      "is_binary": false
-    },
-    {
-      "name": "FastAPI.md",
-      "path": "docs/mkdocs/docs/FastAPI.md",
-      "type": "file",
-      "sha": "55d949f49b90080bed20cba8823a1b438fd9cea9",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 8402,
-      "is_binary": false
-    },
-    {
-      "name": "LangChain.md",
-      "path": "docs/mkdocs/docs/LangChain.md",
-      "type": "file",
-      "sha": "e1e62498cfd006eb1e563b44dbdc65fad4704d1a",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 7867,
-      "is_binary": false
-    },
-    {
-      "name": "React.md",
-      "path": "docs/mkdocs/docs/React.md",
-      "type": "file",
-      "sha": "08efd39bedec1d297c001e1f081c7c365a597a92",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 4074,
-      "is_binary": false
-    },
-    {
-      "name": "Requisitos.md",
-      "path": "docs/mkdocs/docs/Requisitos.md",
-      "type": "file",
-      "sha": "77020c381e7e0ce2ba428299e18dd8f949ed832d",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1307,
-      "is_binary": false
-    },
-    {
-      "name": "Scrapy.md",
-      "path": "docs/mkdocs/docs/Scrapy.md",
-      "type": "file",
-      "sha": "d464f9ccffaca01915d8838ba3af6b02b80fa826",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 4137,
-      "is_binary": false
     },
     {
       "name": "assets",
@@ -209,48 +159,248 @@
       "is_binary": false
     },
     {
-      "name": "index.md",
-      "path": "docs/mkdocs/docs/index.md",
-      "type": "file",
-      "sha": "b849b8b845d11ae83ff2ba19bb6eafab96a119d0",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1237,
-      "is_binary": false
-    },
-    {
-      "name": "overrides",
-      "path": "docs/mkdocs/docs/overrides",
+      "name": "backend",
+      "path": "docs/mkdocs/docs/backend",
       "type": "directory",
-      "sha": "797863e0b0b34f3e8b3c0115f2599281d01a4f54",
+      "sha": "854f8836f48e1cdcaf5b708b9d9131ab1aa13854",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "main.html",
-      "path": "docs/mkdocs/docs/overrides/main.html",
+      "name": "FastAPI.md",
+      "path": "docs/mkdocs/docs/backend/FastAPI.md",
       "type": "file",
-      "sha": "463661cd5103d6b559f0269b822a11113b51e81b",
+      "sha": "55d949f49b90080bed20cba8823a1b438fd9cea9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8402,
+      "is_binary": false
+    },
+    {
+      "name": "LangChain.md",
+      "path": "docs/mkdocs/docs/backend/LangChain.md",
+      "type": "file",
+      "sha": "e1e62498cfd006eb1e563b44dbdc65fad4704d1a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7867,
+      "is_binary": false
+    },
+    {
+      "name": "Scrapy.md",
+      "path": "docs/mkdocs/docs/backend/Scrapy.md",
+      "type": "file",
+      "sha": "d464f9ccffaca01915d8838ba3af6b02b80fa826",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4137,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard",
+      "path": "docs/mkdocs/docs/dashboard",
+      "type": "directory",
+      "sha": "6d2cb7239055acae63ccc888aaf092309d4654b9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/mkdocs/docs/dashboard/index.html",
+      "type": "file",
+      "sha": "e53cbdb3f4ec631cb251e0ada3d1abfc1d66eaf8",
       "mode": "100644",
       "extension": ".html",
-      "size": 468,
+      "size": 22273,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "docs/mkdocs/docs/frontend",
+      "type": "directory",
+      "sha": "4e577df63ba0294247a4298166c0c1fb6624c953",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Prototipagem.md",
+      "path": "docs/mkdocs/docs/frontend/Prototipagem.md",
+      "type": "file",
+      "sha": "e8b00ffce1a460679f6e474bf1350890a76f2316",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 231,
+      "is_binary": false
+    },
+    {
+      "name": "React.md",
+      "path": "docs/mkdocs/docs/frontend/React.md",
+      "type": "file",
+      "sha": "08efd39bedec1d297c001e1f081c7c365a597a92",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4074,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/mkdocs/docs/index.md",
+      "type": "file",
+      "sha": "c0a56508a1c87b9bfd82e8db0e06dbc1f402637b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1311,
+      "is_binary": false
+    },
+    {
+      "name": "productivity",
+      "path": "docs/mkdocs/docs/productivity",
+      "type": "directory",
+      "sha": "6fb56398ee7212fb9fd6fd002981d995583bac11",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "docs/mkdocs/docs/productivity/__pycache__",
+      "type": "directory",
+      "sha": "4484215af0b132353e2b301df70d654c13c0b34c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "collect_metrics.cpython-314.pyc",
+      "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
+      "type": "file",
+      "sha": "bdd3c3e6eabed359b0dee6d87fcea95a526b5b8f",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 17416,
+      "is_binary": false
+    },
+    {
+      "name": "collect_metrics.py",
+      "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
+      "type": "file",
+      "sha": "5ee15b3964bba387c896fc8d699d217ad91b61ff",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11773,
+      "is_binary": false
+    },
+    {
+      "name": "metrics.json",
+      "path": "docs/mkdocs/docs/productivity/metrics.json",
+      "type": "file",
+      "sha": "2631494968c7117b42504a7bfc63405bd35f3546",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 5637,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "docs/mkdocs/docs/productivity/requirements.txt",
+      "type": "file",
+      "sha": "f5df19e8110b887ba454830dc7cc6c46957f2b28",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 17,
+      "is_binary": false
+    },
+    {
+      "name": "style.css",
+      "path": "docs/mkdocs/docs/productivity/style.css",
+      "type": "file",
+      "sha": "08fca925d8cd9bb48683171952384664c21aa29a",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2847,
+      "is_binary": false
+    },
+    {
+      "name": "projeto",
+      "path": "docs/mkdocs/docs/projeto",
+      "type": "directory",
+      "sha": "714bbbec90a774177350a67afa0a8e9e60a31514",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Requisitos.md",
+      "path": "docs/mkdocs/docs/projeto/Requisitos.md",
+      "type": "file",
+      "sha": "20ee4a0ca1fcf915f6bca54f282d6c748115eb70",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3488,
+      "is_binary": false
+    },
+    {
+      "name": "product-backlog.md",
+      "path": "docs/mkdocs/docs/projeto/product-backlog.md",
+      "type": "file",
+      "sha": "7c85b05073f74cf50f42d4a54e169a33459e3b58",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1123,
+      "is_binary": false
+    },
+    {
+      "name": "sprint0.md",
+      "path": "docs/mkdocs/docs/projeto/sprint0.md",
+      "type": "file",
+      "sha": "41ea17d136a93d91d71c5795dd81622c063a712f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 911,
+      "is_binary": false
+    },
+    {
+      "name": "sprint1.md",
+      "path": "docs/mkdocs/docs/projeto/sprint1.md",
+      "type": "file",
+      "sha": "369f52b73e1423675f6e47ad819d6a880b8c6006",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1372,
+      "is_binary": false
+    },
+    {
+      "name": "sprint2.md",
+      "path": "docs/mkdocs/docs/projeto/sprint2.md",
+      "type": "file",
+      "sha": "99cf6389506d6c0a495b6019ae2267c2db73ac51",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 757,
+      "is_binary": false
+    },
+    {
+      "name": "sprint3.md",
+      "path": "docs/mkdocs/docs/projeto/sprint3.md",
+      "type": "file",
+      "sha": "1cc1ea599e1711735c9c7b12ddeea9c65bcf7ac5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1746,
       "is_binary": false
     },
     {
       "name": "sobrenos.md",
       "path": "docs/mkdocs/docs/sobrenos.md",
       "type": "file",
-      "sha": "c0afb038f9c7fabd79d38cb350b61e4455632f97",
+      "sha": "ba23f1c3699e80a142de127119262c0ceed64af4",
       "mode": "100644",
       "extension": ".md",
-      "size": 395,
+      "size": 1620,
       "is_binary": false
     },
     {
       "name": "stylesheets",
       "path": "docs/mkdocs/docs/stylesheets",
       "type": "directory",
-      "sha": "d1be22e7cbfba925decc326871b2e58338e8fd29",
+      "sha": "a854a457bce30340520c3ffcade3ed81fbebd926",
       "mode": "040000",
       "children": []
     },
@@ -258,20 +408,38 @@
       "name": "extra.css",
       "path": "docs/mkdocs/docs/stylesheets/extra.css",
       "type": "file",
-      "sha": "6bed7dd017124d63752d7b1b48a496408a7dbdc4",
+      "sha": "7a73ac157d07e06b98c79a6a5d276b967f276e77",
       "mode": "100644",
       "extension": ".css",
-      "size": 394,
+      "size": 2171,
       "is_binary": false
     },
     {
       "name": "mkdocs.yml",
       "path": "docs/mkdocs/mkdocs.yml",
       "type": "file",
-      "sha": "e2a90fe4a672d76e88022f5fb129a59ee1837253",
+      "sha": "aadec9ac594dab6c94cc208425dc3643d08a907b",
       "mode": "100644",
       "extension": ".yml",
-      "size": 913,
+      "size": 880,
+      "is_binary": false
+    },
+    {
+      "name": "overrides",
+      "path": "docs/mkdocs/overrides",
+      "type": "directory",
+      "sha": "1dc9b17f1f6ffa6bbf5b2b66eac5a1f0e549aced",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "main.html",
+      "path": "docs/mkdocs/overrides/main.html",
+      "type": "file",
+      "sha": "e319aff7c1382ea2b113464182cfc586475ff9bd",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 468,
       "is_binary": false
     },
     {
@@ -364,19 +532,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-15T08:37:11.704048",
+  "extracted_at": "2026-05-16T07:57:50.440971",
   "method": "rest",
-  "total_items": 38,
+  "total_items": 56,
   "repository_metadata": {
     "id": 1185581019,
     "full_name": "unb-mds/2026-2-VeritasIA",
     "description": "Monitoramento de noticias sobre feminicídio utilizando IA",
     "created_at": "2026-03-18T18:25:01Z",
-    "updated_at": "2026-05-13T15:58:43Z",
+    "updated_at": "2026-05-15T20:09:37Z",
     "language": null,
-    "size": 2678,
+    "size": 2734,
     "stars": 4,
     "forks": 0,
-    "open_issues": 7
+    "open_issues": 8
   }
 }
