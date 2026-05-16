@@ -2,7 +2,7 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-15T08:37:11.704048",
+  "extracted_at": "2026-05-16T07:57:50.440971",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -20,12 +20,20 @@
         "children": []
       },
       {
-        "name": "deploy.yml",
+        "name": "deploy-docs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 627,
+        "size": 905,
         "extension": ".yml",
-        "path": ".github/workflows/deploy.yml"
+        "path": ".github/workflows/deploy-docs.yml"
+      },
+      {
+        "name": "metrics.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1626,
+        "extension": ".yml",
+        "path": ".github/workflows/metrics.yml"
       },
       {
         "name": "LICENSE",
@@ -90,54 +98,6 @@
         "children": []
       },
       {
-        "name": "Backend.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 43,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/Backend.md"
-      },
-      {
-        "name": "FastAPI.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 8402,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/FastAPI.md"
-      },
-      {
-        "name": "LangChain.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 7867,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/LangChain.md"
-      },
-      {
-        "name": "React.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 4074,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/React.md"
-      },
-      {
-        "name": "Requisitos.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1307,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/Requisitos.md"
-      },
-      {
-        "name": "Scrapy.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 4137,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/Scrapy.md"
-      },
-      {
         "name": "assets",
         "type": "directory",
         "path": "docs/mkdocs/docs/assets",
@@ -168,32 +128,190 @@
         "path": "docs/mkdocs/docs/assets/texto.png"
       },
       {
+        "name": "backend",
+        "type": "directory",
+        "path": "docs/mkdocs/docs/backend",
+        "children": []
+      },
+      {
+        "name": "FastAPI.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8402,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/backend/FastAPI.md"
+      },
+      {
+        "name": "LangChain.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7867,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/backend/LangChain.md"
+      },
+      {
+        "name": "Scrapy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4137,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/backend/Scrapy.md"
+      },
+      {
+        "name": "dashboard",
+        "type": "directory",
+        "path": "docs/mkdocs/docs/dashboard",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 22273,
+        "extension": ".html",
+        "path": "docs/mkdocs/docs/dashboard/index.html"
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "docs/mkdocs/docs/frontend",
+        "children": []
+      },
+      {
+        "name": "Prototipagem.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 231,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/frontend/Prototipagem.md"
+      },
+      {
+        "name": "React.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4074,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/frontend/React.md"
+      },
+      {
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1237,
+        "size": 1311,
         "extension": ".md",
         "path": "docs/mkdocs/docs/index.md"
       },
       {
-        "name": "overrides",
+        "name": "productivity",
         "type": "directory",
-        "path": "docs/mkdocs/docs/overrides",
+        "path": "docs/mkdocs/docs/productivity",
         "children": []
       },
       {
-        "name": "main.html",
+        "name": "__pycache__",
+        "type": "directory",
+        "path": "docs/mkdocs/docs/productivity/__pycache__",
+        "children": []
+      },
+      {
+        "name": "collect_metrics.cpython-314.pyc",
         "type": "file",
-        "language": "HTML",
-        "size": 468,
-        "extension": ".html",
-        "path": "docs/mkdocs/docs/overrides/main.html"
+        "language": "Unknown",
+        "size": 17416,
+        "extension": ".pyc",
+        "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc"
+      },
+      {
+        "name": "collect_metrics.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11773,
+        "extension": ".py",
+        "path": "docs/mkdocs/docs/productivity/collect_metrics.py"
+      },
+      {
+        "name": "metrics.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 5637,
+        "extension": ".json",
+        "path": "docs/mkdocs/docs/productivity/metrics.json"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 17,
+        "extension": ".txt",
+        "path": "docs/mkdocs/docs/productivity/requirements.txt"
+      },
+      {
+        "name": "style.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 2847,
+        "extension": ".css",
+        "path": "docs/mkdocs/docs/productivity/style.css"
+      },
+      {
+        "name": "projeto",
+        "type": "directory",
+        "path": "docs/mkdocs/docs/projeto",
+        "children": []
+      },
+      {
+        "name": "Requisitos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3488,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/Requisitos.md"
+      },
+      {
+        "name": "product-backlog.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1123,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/product-backlog.md"
+      },
+      {
+        "name": "sprint0.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 911,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/sprint0.md"
+      },
+      {
+        "name": "sprint1.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1372,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/sprint1.md"
+      },
+      {
+        "name": "sprint2.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 757,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/sprint2.md"
+      },
+      {
+        "name": "sprint3.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1746,
+        "extension": ".md",
+        "path": "docs/mkdocs/docs/projeto/sprint3.md"
       },
       {
         "name": "sobrenos.md",
         "type": "file",
         "language": "Markdown",
-        "size": 395,
+        "size": 1620,
         "extension": ".md",
         "path": "docs/mkdocs/docs/sobrenos.md"
       },
@@ -207,7 +325,7 @@
         "name": "extra.css",
         "type": "file",
         "language": "CSS",
-        "size": 394,
+        "size": 2171,
         "extension": ".css",
         "path": "docs/mkdocs/docs/stylesheets/extra.css"
       },
@@ -215,9 +333,23 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 913,
+        "size": 880,
         "extension": ".yml",
         "path": "docs/mkdocs/mkdocs.yml"
+      },
+      {
+        "name": "overrides",
+        "type": "directory",
+        "path": "docs/mkdocs/overrides",
+        "children": []
+      },
+      {
+        "name": "main.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 468,
+        "extension": ".html",
+        "path": "docs/mkdocs/overrides/main.html"
       },
       {
         "name": "projeto",
@@ -292,7 +424,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-15T08:40:02.245073",
+    "extracted_at": "2026-05-16T08:00:34.596666",
     "file_path": "data/silver/hierarchy_2026-2-VeritasIA.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-15T08:37:11.704048",
+  "analyzed_at": "2026-05-16T07:57:50.440971",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 27,
-  "total_bytes": 148518,
+  "total_files": 39,
+  "total_bytes": 221706,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 3,
       "total_bytes": 104513,
-      "percentage": 70.37,
+      "percentage": 47.14,
       "files": [
         {
           "path": "docs/mkdocs/docs/assets/LogoBlack.png",
@@ -38,32 +38,38 @@
     },
     {
       "language": "Markdown",
-      "file_count": 19,
-      "total_bytes": 40543,
-      "percentage": 27.3,
+      "file_count": 24,
+      "total_bytes": 50120,
+      "percentage": 22.61,
       "files": [
         {
-          "path": "docs/mkdocs/docs/FastAPI.md",
+          "path": "docs/mkdocs/docs/backend/FastAPI.md",
           "name": "FastAPI.md",
           "size": 8402,
           "extension": ".md"
         },
         {
-          "path": "docs/mkdocs/docs/LangChain.md",
+          "path": "docs/mkdocs/docs/backend/LangChain.md",
           "name": "LangChain.md",
           "size": 7867,
           "extension": ".md"
         },
         {
-          "path": "docs/mkdocs/docs/Scrapy.md",
+          "path": "docs/mkdocs/docs/backend/Scrapy.md",
           "name": "Scrapy.md",
           "size": 4137,
           "extension": ".md"
         },
         {
-          "path": "docs/mkdocs/docs/React.md",
+          "path": "docs/mkdocs/docs/frontend/React.md",
           "name": "React.md",
           "size": 4074,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/mkdocs/docs/projeto/Requisitos.md",
+          "name": "Requisitos.md",
+          "size": 3488,
           "extension": ".md"
         },
         {
@@ -79,6 +85,12 @@
           "extension": ".md"
         },
         {
+          "path": "docs/mkdocs/docs/projeto/sprint3.md",
+          "name": "sprint3.md",
+          "size": 1746,
+          "extension": ".md"
+        },
+        {
           "path": "docs/projeto/sprint3.md",
           "name": "sprint3.md",
           "size": 1746,
@@ -89,37 +101,113 @@
           "name": "README.md",
           "size": 1654,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 2,
+      "total_bytes": 22741,
+      "percentage": 10.26,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/dashboard/index.html",
+          "name": "index.html",
+          "size": 22273,
+          "extension": ".html"
         },
         {
-          "path": "docs/projeto/sprint1.md",
-          "name": "sprint1.md",
-          "size": 1372,
-          "extension": ".md"
+          "path": "docs/mkdocs/overrides/main.html",
+          "name": "main.html",
+          "size": 468,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 17416,
+      "percentage": 7.86,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
+          "name": "collect_metrics.cpython-314.pyc",
+          "size": 17416,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 1,
+      "total_bytes": 11773,
+      "percentage": 5.31,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 11773,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 1,
+      "total_bytes": 5637,
+      "percentage": 2.54,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 5637,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 5018,
+      "percentage": 2.26,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/productivity/style.css",
+          "name": "style.css",
+          "size": 2847,
+          "extension": ".css"
         },
         {
-          "path": "docs/mkdocs/docs/Requisitos.md",
-          "name": "Requisitos.md",
-          "size": 1307,
-          "extension": ".md"
+          "path": "docs/mkdocs/docs/stylesheets/extra.css",
+          "name": "extra.css",
+          "size": 2171,
+          "extension": ".css"
         }
       ]
     },
     {
       "language": "YAML",
-      "file_count": 2,
-      "total_bytes": 1540,
-      "percentage": 1.04,
+      "file_count": 3,
+      "total_bytes": 3411,
+      "percentage": 1.54,
       "files": [
         {
-          "path": "docs/mkdocs/mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 913,
+          "path": ".github/workflows/metrics.yml",
+          "name": "metrics.yml",
+          "size": 1626,
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/deploy.yml",
-          "name": "deploy.yml",
-          "size": 627,
+          "path": ".github/workflows/deploy-docs.yml",
+          "name": "deploy-docs.yml",
+          "size": 905,
+          "extension": ".yml"
+        },
+        {
+          "path": "docs/mkdocs/mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 880,
           "extension": ".yml"
         }
       ]
@@ -128,7 +216,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.71,
+      "percentage": 0.48,
       "files": [
         {
           "path": "LICENSE",
@@ -139,36 +227,22 @@
       ]
     },
     {
-      "language": "HTML",
+      "language": "Text",
       "file_count": 1,
-      "total_bytes": 468,
-      "percentage": 0.32,
+      "total_bytes": 17,
+      "percentage": 0.01,
       "files": [
         {
-          "path": "docs/mkdocs/docs/overrides/main.html",
-          "name": "main.html",
-          "size": 468,
-          "extension": ".html"
-        }
-      ]
-    },
-    {
-      "language": "CSS",
-      "file_count": 1,
-      "total_bytes": 394,
-      "percentage": 0.27,
-      "files": [
-        {
-          "path": "docs/mkdocs/docs/stylesheets/extra.css",
-          "name": "extra.css",
-          "size": 394,
-          "extension": ".css"
+          "path": "docs/mkdocs/docs/productivity/requirements.txt",
+          "name": "requirements.txt",
+          "size": 17,
+          "extension": ".txt"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-15T08:40:02.244578",
+    "extracted_at": "2026-05-16T08:00:34.596057",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }
