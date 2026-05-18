@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-17T07:30:52.535100",
+      "extracted_at": "2026-05-18T08:40:52.613669",
       "file_path": "data/bronze/issues_2026-1-ProtectKids.json",
       "record_count": 37
     }
@@ -915,11 +915,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -1034,7 +1034,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1089,18 +1089,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-02T19:23:12Z",
-    "updated_at": "2026-05-02T19:23:12Z",
-    "closed_at": null,
+    "updated_at": "2026-05-18T05:29:17Z",
+    "closed_at": "2026-05-18T05:29:17Z",
     "assignee": {
       "login": "marispmorais",
       "id": 211054600,
@@ -1145,8 +1145,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição\nPara garantirmos a confiabilidade do ProtectKids e atendermos aos requisitos da disciplina, precisamos estabelecer a fundação para a escrita de testes automatizados. Esta tarefa não exige a criação de testes complexos ainda, mas sim a instalação das bibliotecas corretas e a criação de testes simples (\"Hello World\") para validar que o ambiente de QA está operante em ambas as camadas do projeto.\n\n⚠️ Prioridade\n- [ ] Baixa\n\n- [ ] Média\n\n- [x] Alta\n\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [ ] Backend: Instalar a biblioteca pytest no requirements.txt.\n\n- [ ] Backend: Criar o diretório backend/tests/ com o arquivo __init__.py.\n\n- [ ] Backend: Escrever um teste simples (test_main.py) que valide a rota de status GET / do nosso FastAPI.\n\n- [ ] Frontend: Instalar e configurar o vitest e a React Testing Library no package.json.\n\n- [ ] Frontend: Escrever um teste simples (App.test.jsx) para validar que o componente principal <App/> renderiza sem quebrar a tela.\n\n- [ ] Documentar no README.md os comandos locais para rodar os testes (pytest e npm test).\n\n## 🧠 Notas Adicionais\nAo testar rotas que envolvem banco de dados (FastAPI), utilize o TestClient do FastAPI para mockar as requisições, sem poluir o banco do contêiner.",
-    "closed_by": null,
+    "body": "## 📋 Descrição\nPara garantirmos a confiabilidade do ProtectKids e atendermos aos requisitos da disciplina, precisamos estabelecer a fundação para a escrita de testes automatizados. Esta tarefa não exige a criação de testes complexos ainda, mas sim a instalação das bibliotecas corretas e a criação de testes simples (\"Hello World\") para validar que o ambiente de QA está operante em ambas as camadas do projeto.\n\n⚠️ Prioridade\n- [ ] Baixa\n\n- [ ] Média\n\n- [x] Alta\n\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [x] Backend: Instalar a biblioteca pytest no requirements.txt.\n\n- [x] Backend: Criar o diretório backend/tests/ com o arquivo __init__.py.\n\n- [x] Backend: Escrever um teste simples (test_main.py) que valide a rota de status GET / do nosso FastAPI.\n\n- [x] Frontend: Instalar e configurar o vitest e a React Testing Library no package.json.\n\n- [x] Frontend: Escrever um teste simples (App.test.jsx) para validar que o componente principal <App/> renderiza sem quebrar a tela.\n\n- [x] Documentar no README.md os comandos locais para rodar os testes (pytest e npm test).\n\n## 🧠 Notas Adicionais\nAo testar rotas que envolvem banco de dados (FastAPI), utilize o TestClient do FastAPI para mockar as requisições, sem poluir o banco do contêiner.",
+    "closed_by": {
+      "login": "marispmorais",
+      "id": 211054600,
+      "node_id": "U_kgDODJRwCA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211054600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/marispmorais",
+      "html_url": "https://github.com/marispmorais",
+      "followers_url": "https://api.github.com/users/marispmorais/followers",
+      "following_url": "https://api.github.com/users/marispmorais/following{/other_user}",
+      "gists_url": "https://api.github.com/users/marispmorais/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/marispmorais/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/marispmorais/subscriptions",
+      "organizations_url": "https://api.github.com/users/marispmorais/orgs",
+      "repos_url": "https://api.github.com/users/marispmorais/repos",
+      "events_url": "https://api.github.com/users/marispmorais/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/marispmorais/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/36/reactions",
       "total_count": 0,
@@ -1161,7 +1181,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/36/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   },
@@ -1263,11 +1283,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -1467,11 +1487,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -1691,11 +1711,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -1885,11 +1905,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },
@@ -2079,11 +2099,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 5,
+      "open_issues": 2,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-06T15:11:01Z",
+      "updated_at": "2026-05-18T05:29:17Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": null
     },

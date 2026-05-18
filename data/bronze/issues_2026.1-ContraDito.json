@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-17T07:30:49.532910",
+      "extracted_at": "2026-05-18T08:40:49.623875",
       "file_path": "data/bronze/issues_2026.1-ContraDito.json",
       "record_count": 48
     }
@@ -238,7 +238,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-15T02:24:55Z",
-    "updated_at": "2026-05-15T04:10:12Z",
+    "updated_at": "2026-05-17T19:53:38Z",
     "closed_at": null,
     "assignee": {
       "login": "luizhtmoreira",
@@ -275,7 +275,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\nDesenvolvimento conjunto (Pair Programming) do pipeline do Motor IA, NLP e RAG para a Sprint 08. O escopo abrange a orquestração de prompts cruzando textos de leis com discursos recuperados, além da aplicação de regras de negócio estritas para viés temporal, prevenção de falhas no LLM e processamento de textos extensos.\n\n## Objetivo\nGarantir que o modelo de Inteligência Artificial receba o contexto exato e seguro para gerar o veredito de coerência, evitando alucinações (checagem de vetores vazios), respeitando a linha do tempo (viés temporal) e lidando bem com leis muito longas (chunking).\n\n## Requisitos (Critérios de Aceite)\n- [ ] O prompt RAG deve concatenar com sucesso o Texto da Lei com os Top-k Discursos recuperados do banco [RF30, RF31].\n- [ ] A busca de discursos deve respeitar o limite de viés temporal definido nas regras de negócio [RN01].\n- [ ] O sistema deve possuir uma \"trava\" que aborte a chamada ao LLM (evitando custos e alucinações) caso a busca vetorial não retorne resultados [RN02].\n- [ ] Leis e matérias legislativas muito longas devem passar por uma estratégia de Chunking e resumo (summarization) antes de entrarem no prompt RAG [RF35].\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint e no cálculo principal do produto.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [ ] Configurar lógica de concatenação RAG (Lei + Top-k Discursos).\n- [ ] Implementar filtro de viés temporal na query do banco vetorial.\n- [ ] Criar validação de *early return* (aborto) para arrays vetoriais vazios.\n- [ ] Desenvolver função de Chunking text split e resumo de contexto longo.\n- [ ] Testar integração do fluxo completo em Pair Programming.\n\n## Responsáveis\n@matheus0346 e @luizhtmoreira\n\n## Anexo\n- Documentação de Requisitos (RF30, RF31, RF35, RN01, RN02).\n- Link: https://unb-mds.github.io/2026.1-ContraDito/requisitos/\n\nRF30 – Recuperação de Contexto (Busca Semântica Interna): Para cada parlamentar que registrou voto, o sistema deve executar uma busca vetorial recuperando os chunks de discursos do próprio parlamentar que estejam mais próximos semanticamente do texto da matéria em votação.\n\nRF31 – Orquestração de Prompt (Filter): O sistema deve concatenar o texto da matéria legislativa com os top-k chunks recuperados no RF30, montando dinamicamente o prompt de contexto que será enviado ao LLM.\n\nRF35 – Processamento de Matérias Extensas: Para matérias cujo texto integral exceda o limite de contexto do modelo de embedding, o sistema deve priorizar a vetorização da Ementa ou gerar um Resumo Global via LLM antes da persistência vetorial.\n\nRN01 – Restrição de Viés Temporal: A recuperação de contexto deve considerar apenas discursos proferidos em datas anteriores ou iguais à data da votação. É estritamente proibido utilizar discursos futuros para julgar um voto passado.\n\nRN02 – Aborto por Dados Insuficientes: Se a busca vetorial não retornar nenhum discurso que respeite o limite rigoroso estipulado, o acionamento do LLM deve ser abortado e o voto não entrará no denominador de cálculo do Score.",
+    "body": "## Descrição\nDesenvolvimento conjunto (Pair Programming) do pipeline do Motor IA, NLP e RAG para a Sprint 08. O escopo abrange a orquestração de prompts cruzando textos de leis com discursos recuperados, além da aplicação de regras de negócio estritas para viés temporal, prevenção de falhas no LLM e processamento de textos extensos.\n\n## Objetivo\nGarantir que o modelo de Inteligência Artificial receba o contexto exato e seguro para gerar o veredito de coerência, evitando alucinações (checagem de vetores vazios), respeitando a linha do tempo (viés temporal) e lidando bem com leis muito longas (chunking).\n\n## Requisitos (Critérios de Aceite)\n- [ ] O prompt RAG deve concatenar com sucesso o Texto da Lei com os Top-k Discursos recuperados do banco [RF30, RF31].\n- [ ] A busca de discursos deve respeitar o limite de viés temporal definido nas regras de negócio [RN01].\n- [ ] O sistema deve possuir uma \"trava\" que aborte a chamada ao LLM (evitando custos e alucinações) caso a busca vetorial não retorne resultados [RN02].\n- [ ] Leis e matérias legislativas muito longas devem passar por uma estratégia de Chunking e resumo (summarization) antes de entrarem no prompt RAG [RF35].\n- [ ] Estudar a troca do modelo Llama pelo modelo maritaca\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint e no cálculo principal do produto.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [ ] Configurar lógica de concatenação RAG (Lei + Top-k Discursos).\n- [ ] Implementar filtro de viés temporal na query do banco vetorial.\n- [ ] Criar validação de *early return* (aborto) para arrays vetoriais vazios.\n- [ ] Desenvolver função de Chunking text split e resumo de contexto longo.\n- [ ] **Spike de Implementação (Maritaca AI):** Analisar a documentação da API MariTalk, mapear o esforço para substituir o LLaMA no código atual e estruturar o novo fluxo de chamadas (autenticação, rate limits e adaptação do prompt RAG).\n- [ ] Testar integração do fluxo completo em Pair Programming.\n\n## Responsáveis\n@matheus0346 e @luizhtmoreira\n\n## Anexo\n- Documentação de Requisitos (RF30, RF31, RF35, RN01, RN02).\n- Link: https://unb-mds.github.io/2026.1-ContraDito/requisitos/\n\nRF30 – Recuperação de Contexto (Busca Semântica Interna): Para cada parlamentar que registrou voto, o sistema deve executar uma busca vetorial recuperando os chunks de discursos do próprio parlamentar que estejam mais próximos semanticamente do texto da matéria em votação.\n\nRF31 – Orquestração de Prompt (Filter): O sistema deve concatenar o texto da matéria legislativa com os top-k chunks recuperados no RF30, montando dinamicamente o prompt de contexto que será enviado ao LLM.\n\nRF35 – Processamento de Matérias Extensas: Para matérias cujo texto integral exceda o limite de contexto do modelo de embedding, o sistema deve priorizar a vetorização da Ementa ou gerar um Resumo Global via LLM antes da persistência vetorial.\n\nRN01 – Restrição de Viés Temporal: A recuperação de contexto deve considerar apenas discursos proferidos em datas anteriores ou iguais à data da votação. É estritamente proibido utilizar discursos futuros para julgar um voto passado.\n\nRN02 – Aborto por Dados Insuficientes: Se a busca vetorial não retornar nenhum discurso que respeite o limite rigoroso estipulado, o acionamento do LLM deve ser abortado e o voto não entrará no denominador de cálculo do Score.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/119/reactions",
@@ -796,11 +796,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1200,11 +1200,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1374,11 +1374,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1537,11 +1537,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1680,11 +1680,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1845,11 +1845,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 7,
       "state": "open",
       "created_at": "2026-05-06T10:01:10Z",
-      "updated_at": "2026-05-16T22:04:16Z",
+      "updated_at": "2026-05-17T17:37:54Z",
       "due_on": null,
       "closed_at": null
     },
