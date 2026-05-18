@@ -2,24 +2,500 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-17T08:15:59.055256",
+  "analyzed_at": "2026-05-18T09:30:13.024479",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 44,
-  "total_bytes": 223756,
+  "total_files": 4595,
+  "total_bytes": 199225074,
   "languages": [
     {
+      "language": "Unknown",
+      "file_count": 673,
+      "total_bytes": 94452168,
+      "percentage": 47.41,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/numpy.libs/libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+          "name": "libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+          "size": 38168576,
+          "extension": ".dll"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/blis/py.cp312-win_amd64.pyd",
+          "name": "py.cp312-win_amd64.pyd",
+          "size": 11901952,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/blis/cy.cp312-win_amd64.pyd",
+          "name": "cy.cp312-win_amd64.pyd",
+          "size": 11719680,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/pydantic_core/_pydantic_core.cp312-win_amd64.pyd",
+          "name": "_pydantic_core.cp312-win_amd64.pyd",
+          "size": 5050880,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/_multiarray_umath.cp312-win_amd64.pyd",
+          "name": "_multiarray_umath.cp312-win_amd64.pyd",
+          "size": 2842624,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/psycopg2/_psycopg.cp312-win_amd64.pyd",
+          "name": "_psycopg.cp312-win_amd64.pyd",
+          "size": 2418688,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/_simd.cp312-win_amd64.pyd",
+          "name": "_simd.cp312-win_amd64.pyd",
+          "size": 2236928,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/random/_generator.cp312-win_amd64.pyd",
+          "name": "_generator.cp312-win_amd64.pyd",
+          "size": 689152,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/random/mtrand.cp312-win_amd64.pyd",
+          "name": "mtrand.cp312-win_amd64.pyd",
+          "size": 582656,
+          "extension": ".pyd"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tokens/doc.cp312-win_amd64.pyd",
+          "name": "doc.cp312-win_amd64.pyd",
+          "size": 523264,
+          "extension": ".pyd"
+        }
+      ]
+    },
+    {
+      "language": "C++",
+      "file_count": 70,
+      "total_bytes": 63073145,
+      "percentage": 31.66,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tokens/doc.cpp",
+          "name": "doc.cpp",
+          "size": 3155604,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/thinc/backends/numpy_ops.cpp",
+          "name": "numpy_ops.cpp",
+          "size": 2501501,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/matcher/matcher.cpp",
+          "name": "matcher.cpp",
+          "size": 2457098,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/pipeline/transition_parser.cpp",
+          "name": "transition_parser.cpp",
+          "size": 2203621,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/pipeline/_parser_internals/arc_eager.cpp",
+          "name": "arc_eager.cpp",
+          "size": 2114030,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/training/example.cpp",
+          "name": "example.cpp",
+          "size": 1979180,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tokenizer.cpp",
+          "name": "tokenizer.cpp",
+          "size": 1860764,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tokens/span.cpp",
+          "name": "span.cpp",
+          "size": 1819494,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/pipeline/_parser_internals/ner.cpp",
+          "name": "ner.cpp",
+          "size": 1787030,
+          "extension": ".cpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/ml/parser_model.cpp",
+          "name": "parser_model.cpp",
+          "size": 1768503,
+          "extension": ".cpp"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 3303,
+      "total_bytes": 37936918,
+      "percentage": 19.04,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/tests/test_multiarray.py",
+          "name": "test_multiarray.py",
+          "size": 380106,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/config/_validate_pyproject/fastjsonschema_validations.py",
+          "name": "fastjsonschema_validations.py",
+          "size": 365819,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/lang/fr/_tokenizer_exceptions_list.py",
+          "name": "_tokenizer_exceptions_list.py",
+          "size": 360608,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/ma/core.py",
+          "name": "core.py",
+          "size": 278213,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/sqlalchemy/sql/compiler.py",
+          "name": "compiler.py",
+          "size": 273097,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/sqlalchemy/sql/selectable.py",
+          "name": "selectable.py",
+          "size": 232848,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/sqlalchemy/sql/schema.py",
+          "name": "schema.py",
+          "size": 228262,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/pip/_vendor/pyparsing/core.py",
+          "name": "core.py",
+          "size": 224445,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/ma/tests/test_core.py",
+          "name": "test_core.py",
+          "size": 215100,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/_add_newdocs.py",
+          "name": "_add_newdocs.py",
+          "size": 208972,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 308,
+      "total_bytes": 1522534,
+      "percentage": 0.76,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/spacy-3.7.4.dist-info/RECORD",
+          "name": "RECORD",
+          "size": 140914,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy-1.26.4.dist-info/RECORD",
+          "name": "RECORD",
+          "size": 99086,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/pydantic-2.6.3.dist-info/METADATA",
+          "name": "METADATA",
+          "size": 84448,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/pip-24.0.dist-info/RECORD",
+          "name": "RECORD",
+          "size": 77936,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools-82.0.1.dist-info/RECORD",
+          "name": "RECORD",
+          "size": 63850,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy-1.26.4.dist-info/METADATA",
+          "name": "METADATA",
+          "size": 61040,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/tqdm-4.67.3.dist-info/METADATA",
+          "name": "METADATA",
+          "size": 57679,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/charset_normalizer-3.4.7.dist-info/METADATA",
+          "name": "METADATA",
+          "size": 40931,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/SQLAlchemy-2.0.28.dist-info/RECORD",
+          "name": "RECORD",
+          "size": 39779,
+          "extension": ""
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/_vendor/more_itertools-10.8.0.dist-info/METADATA",
+          "name": "METADATA",
+          "size": 39413,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 79,
+      "total_bytes": 818869,
+      "percentage": 0.41,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/langcodes/data/language-subtag-registry.txt",
+          "name": "language-subtag-registry.txt",
+          "size": 715867,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy-1.26.4.dist-info/LICENSE.txt",
+          "name": "LICENSE.txt",
+          "size": 47720,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/pip-24.0.dist-info/AUTHORS.txt",
+          "name": "AUTHORS.txt",
+          "size": 10388,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt",
+          "name": "type_migration_guidelines.txt",
+          "size": 8239,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/ma/API_CHANGES.txt",
+          "name": "API_CHANGES.txt",
+          "size": 3405,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tests/tokenizer/sun.txt",
+          "name": "sun.txt",
+          "size": 2591,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools-82.0.1.dist-info/entry_points.txt",
+          "name": "entry_points.txt",
+          "size": 2449,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/thinc/tests/mypy/outputs/fail-plugin.txt",
+          "name": "fail-plugin.txt",
+          "size": 2416,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/tests/config/setupcfg_examples.txt",
+          "name": "setupcfg_examples.txt",
+          "size": 1912,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy_legacy-3.0.12.dist-info/entry_points.txt",
+          "name": "entry_points.txt",
+          "size": 1557,
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "language": "C/C++ Header",
+      "file_count": 67,
+      "total_bytes": 549813,
+      "percentage": 0.28,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/random/libdivide.h",
+          "name": "libdivide.h",
+          "size": 80138,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+          "name": "ndarraytypes.h",
+          "size": 68009,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/__multiarray_api.h",
+          "name": "__multiarray_api.h",
+          "size": 61450,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/npy_common.h",
+          "name": "npy_common.h",
+          "size": 37746,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/npy_math.h",
+          "name": "npy_math.h",
+          "size": 18945,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/msgpack/pack_template.h",
+          "name": "pack_template.h",
+          "size": 16762,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/_dtype_api.h",
+          "name": "_dtype_api.h",
+          "size": 16697,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/npy_3kcompat.h",
+          "name": "npy_3kcompat.h",
+          "size": 15883,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/experimental_dtype_api.h",
+          "name": "experimental_dtype_api.h",
+          "size": 15532,
+          "extension": ".h"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/msgpack/unpack_template.h",
+          "name": "unpack_template.h",
+          "size": 13722,
+          "extension": ".h"
+        }
+      ]
+    },
+    {
+      "language": "C",
+      "file_count": 14,
+      "total_bytes": 384904,
+      "percentage": 0.19,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/matcher/levenshtein.c",
+          "name": "levenshtein.c",
+          "size": 214161,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/f2py/src/fortranobject.c",
+          "name": "fortranobject.c",
+          "size": 46017,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/ujson/lib/ultrajsonenc.c",
+          "name": "ultrajsonenc.c",
+          "size": 26333,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/ujson/objToJSON.c",
+          "name": "objToJSON.c",
+          "size": 22961,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/ujson/lib/ultrajsondec.c",
+          "name": "ultrajsondec.c",
+          "size": 21708,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/include/numpy/__multiarray_api.c",
+          "name": "__multiarray_api.c",
+          "size": 12116,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/matcher/polyleven.c",
+          "name": "polyleven.c",
+          "size": 9571,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/f2py/tests/src/array_from_pyobj/wrapmodule.c",
+          "name": "wrapmodule.c",
+          "size": 7299,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/tests/_test_extension.c",
+          "name": "_test_extension.c",
+          "size": 7244,
+          "extension": ".c"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/srsly/ujson/JSONtoObj.c",
+          "name": "JSONtoObj.c",
+          "size": 6361,
+          "extension": ".c"
+        }
+      ]
+    },
+    {
       "language": "JSON",
-      "file_count": 3,
-      "total_bytes": 129127,
-      "percentage": 57.71,
+      "file_count": 6,
+      "total_bytes": 215982,
+      "percentage": 0.11,
       "files": [
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 91154,
+          "size": 131491,
           "extension": ".json"
         },
         {
@@ -29,18 +505,104 @@
           "extension": ".json"
         },
         {
+          "path": "backend/venv/Lib/site-packages/srsly/tests/ujson/334-reproducer.json",
+          "name": "334-reproducer.json",
+          "size": 29345,
+          "extension": ".json"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/config/setuptools.schema.json",
+          "name": "setuptools.schema.json",
+          "size": 16047,
+          "extension": ".json"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/config/distutils.schema.json",
+          "name": "distutils.schema.json",
+          "size": 972,
+          "extension": ".json"
+        },
+        {
           "path": "frontend/package.json",
           "name": "package.json",
-          "size": 604,
+          "size": 758,
           "extension": ".json"
         }
       ]
     },
     {
+      "language": "C++ Header",
+      "file_count": 13,
+      "total_bytes": 119598,
+      "percentage": 0.06,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_refs.hpp",
+          "name": "greenlet_refs.hpp",
+          "size": 38067,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/TGreenlet.hpp",
+          "name": "TGreenlet.hpp",
+          "size": 29262,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/TThreadState.hpp",
+          "name": "TThreadState.hpp",
+          "size": 23902,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_exceptions.hpp",
+          "name": "greenlet_exceptions.hpp",
+          "size": 4503,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_compiler_compat.hpp",
+          "name": "greenlet_compiler_compat.hpp",
+          "size": 4346,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_cpython_compat.hpp",
+          "name": "greenlet_cpython_compat.hpp",
+          "size": 3325,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_slp_switch.hpp",
+          "name": "greenlet_slp_switch.hpp",
+          "size": 3298,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_msvc_compat.hpp",
+          "name": "greenlet_msvc_compat.hpp",
+          "size": 3195,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/greenlet_internal.hpp",
+          "name": "greenlet_internal.hpp",
+          "size": 2768,
+          "extension": ".hpp"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/TThreadStateCreator.hpp",
+          "name": "TThreadStateCreator.hpp",
+          "size": 2767,
+          "extension": ".hpp"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
-      "file_count": 16,
-      "total_bytes": 48476,
-      "percentage": 21.66,
+      "file_count": 22,
+      "total_bytes": 59144,
+      "percentage": 0.03,
       "files": [
         {
           "path": "doc/estudos/requisitos/requisitos.md",
@@ -73,6 +635,12 @@
           "extension": ".md"
         },
         {
+          "path": "backend/venv/Lib/site-packages/numpy/random/LICENSE.md",
+          "name": "LICENSE.md",
+          "size": 3511,
+          "extension": ".md"
+        },
+        {
           "path": "doc/estudos/frontend/typescript.md",
           "name": "typescript.md",
           "size": 2632,
@@ -85,22 +653,30 @@
           "extension": ".md"
         },
         {
-          "path": "doc/estudos/backend/fastapi.md",
-          "name": "fastapi.md",
-          "size": 1528,
-          "extension": ".md"
-        },
-        {
           "path": "README.md",
           "name": "README.md",
-          "size": 1248,
+          "size": 2053,
           "extension": ".md"
         },
         {
-          "path": "frontend/README.md",
-          "name": "README.md",
-          "size": 1027,
+          "path": "backend/venv/Lib/site-packages/idna-3.15.dist-info/licenses/LICENSE.md",
+          "name": "LICENSE.md",
+          "size": 1541,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "PowerShell",
+      "file_count": 1,
+      "total_bytes": 25697,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "backend/venv/Scripts/Activate.ps1",
+          "name": "Activate.ps1",
+          "size": 25697,
+          "extension": ".ps1"
         }
       ]
     },
@@ -108,7 +684,7 @@
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 14553,
-      "percentage": 6.5,
+      "percentage": 0.01,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -125,42 +701,200 @@
       ]
     },
     {
-      "language": "Python",
+      "language": "YAML",
       "file_count": 4,
-      "total_bytes": 10014,
-      "percentage": 4.48,
+      "total_bytes": 8446,
+      "percentage": 0.0,
       "files": [
         {
-          "path": "scripts/coletor_metricas.py",
-          "name": "coletor_metricas.py",
-          "size": 7793,
-          "extension": ".py"
+          "path": "backend/venv/Lib/site-packages/spacy/cli/templates/quickstart_training_recommendations.yml",
+          "name": "quickstart_training_recommendations.yml",
+          "size": 6294,
+          "extension": ".yml"
         },
         {
-          "path": "backend/main.py",
-          "name": "main.py",
-          "size": 1496,
-          "extension": ".py"
+          "path": ".github/workflows/metricas_e_docs.yml",
+          "name": "metricas_e_docs.yml",
+          "size": 865,
+          "extension": ".yml"
         },
         {
-          "path": "backend/database.py",
-          "name": "database.py",
-          "size": 477,
-          "extension": ".py"
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 768,
+          "extension": ".yml"
         },
         {
-          "path": "backend/models.py",
-          "name": "models.py",
-          "size": 248,
-          "extension": ".py"
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 519,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 340,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 340,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "Batch",
+      "file_count": 3,
+      "total_bytes": 1481,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Scripts/activate.bat",
+          "name": "activate.bat",
+          "size": 969,
+          "extension": ".bat"
+        },
+        {
+          "path": "backend/venv/Scripts/deactivate.bat",
+          "name": "deactivate.bat",
+          "size": 371,
+          "extension": ".bat"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/greenlet/platform/setup_switch_x64_masm.cmd",
+          "name": "setup_switch_x64_masm.cmd",
+          "size": 141,
+          "extension": ".cmd"
+        }
+      ]
+    },
+    {
+      "language": "INI",
+      "file_count": 5,
+      "total_bytes": 1024,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/lib/npy-pkg-config/npymath.ini",
+          "name": "npymath.ini",
+          "size": 360,
+          "extension": ".ini"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/thinc/tests/mypy/configs/mypy-plugin.ini",
+          "name": "mypy-plugin.ini",
+          "size": 217,
+          "extension": ".ini"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/thinc/tests/mypy/configs/mypy-default.ini",
+          "name": "mypy-default.ini",
+          "size": 195,
+          "extension": ".ini"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/core/lib/npy-pkg-config/mlib.ini",
+          "name": "mlib.ini",
+          "size": 144,
+          "extension": ".ini"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/typing/tests/data/mypy.ini",
+          "name": "mypy.ini",
+          "size": 108,
+          "extension": ".ini"
+        }
+      ]
+    },
+    {
+      "language": "Config",
+      "file_count": 5,
+      "total_bytes": 9461,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/default_config.cfg",
+          "name": "default_config.cfg",
+          "size": 4395,
+          "extension": ".cfg"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/tests/package/setup.cfg",
+          "name": "setup.cfg",
+          "size": 3939,
+          "extension": ".cfg"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/spacy/default_config_pretraining.cfg",
+          "name": "default_config_pretraining.cfg",
+          "size": 738,
+          "extension": ".cfg"
+        },
+        {
+          "path": "backend/venv/pyvenv.cfg",
+          "name": "pyvenv.cfg",
+          "size": 341,
+          "extension": ".cfg"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/f2py/setup.cfg",
+          "name": "setup.cfg",
+          "size": 48,
+          "extension": ".cfg"
+        }
+      ]
+    },
+    {
+      "language": "reStructuredText",
+      "file_count": 1,
+      "total_bytes": 9872,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/numpy/ma/README.rst",
+          "name": "README.rst",
+          "size": 9872,
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 0,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/_vendor/.lock",
+          "name": ".lock",
+          "size": 0,
+          "extension": ".lock"
+        }
+      ]
+    },
+    {
+      "language": "XML",
+      "file_count": 1,
+      "total_bytes": 628,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/launcher manifest.xml",
+          "name": "launcher manifest.xml",
+          "size": 628,
+          "extension": ".xml"
         }
       ]
     },
     {
       "language": "HTML",
-      "file_count": 2,
-      "total_bytes": 9355,
-      "percentage": 4.18,
+      "file_count": 4,
+      "total_bytes": 9621,
+      "percentage": 0.0,
       "files": [
         {
           "path": "docs/dashboard/index.html",
@@ -173,20 +907,90 @@
           "name": "index.html",
           "size": 391,
           "extension": ".html"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/tests/indexes/test_links_priority/simple/foobar/index.html",
+          "name": "index.html",
+          "size": 174,
+          "extension": ".html"
+        },
+        {
+          "path": "backend/venv/Lib/site-packages/setuptools/tests/indexes/test_links_priority/external.html",
+          "name": "external.html",
+          "size": 92,
+          "extension": ".html"
         }
       ]
     },
     {
-      "language": "Unknown",
+      "language": "TOML",
       "file_count": 1,
-      "total_bytes": 2583,
-      "percentage": 1.15,
+      "total_bytes": 352,
+      "percentage": 0.0,
       "files": [
         {
-          "path": "backend/__pycache__/main.cpython-311.pyc",
-          "name": "main.cpython-311.pyc",
-          "size": 2583,
-          "extension": ".pyc"
+          "path": "backend/venv/Lib/site-packages/spacy/tests/package/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 352,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
+      "language": "Shell",
+      "file_count": 1,
+      "total_bytes": 946,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/tqdm/completion.sh",
+          "name": "completion.sh",
+          "size": 946,
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "file_count": 6,
+      "total_bytes": 5690,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/venv/Lib/site-packages/urllib3/contrib/emscripten/emscripten_fetch_worker.js",
+          "name": "emscripten_fetch_worker.js",
+          "size": 3677,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/eslint.config.js",
+          "name": "eslint.config.js",
+          "size": 758,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/src/App.test.jsx",
+          "name": "App.test.jsx",
+          "size": 469,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/vite.config.js",
+          "name": "vite.config.js",
+          "size": 331,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/src/main.jsx",
+          "name": "main.jsx",
+          "size": 229,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/src/App.jsx",
+          "name": "App.jsx",
+          "size": 226,
+          "extension": ".jsx"
         }
       ]
     },
@@ -194,7 +998,7 @@
       "language": "CSS",
       "file_count": 3,
       "total_bytes": 2242,
-      "percentage": 1.0,
+      "percentage": 0.0,
       "files": [
         {
           "path": "frontend/src/index.css",
@@ -217,62 +1021,10 @@
       ]
     },
     {
-      "language": "YAML",
-      "file_count": 3,
-      "total_bytes": 2152,
-      "percentage": 0.96,
-      "files": [
-        {
-          "path": ".github/workflows/metricas_e_docs.yml",
-          "name": "metricas_e_docs.yml",
-          "size": 865,
-          "extension": ".yml"
-        },
-        {
-          "path": "docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 768,
-          "extension": ".yml"
-        },
-        {
-          "path": "mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 519,
-          "extension": ".yml"
-        }
-      ]
-    },
-    {
-      "language": "No Extension",
-      "file_count": 3,
-      "total_bytes": 1670,
-      "percentage": 0.75,
-      "files": [
-        {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
-        },
-        {
-          "path": "backend/Dockerfile",
-          "name": "Dockerfile",
-          "size": 434,
-          "extension": ""
-        },
-        {
-          "path": "frontend/Dockerfile",
-          "name": "Dockerfile",
-          "size": 176,
-          "extension": ""
-        }
-      ]
-    },
-    {
       "language": "SQL",
       "file_count": 1,
       "total_bytes": 1646,
-      "percentage": 0.74,
+      "percentage": 0.0,
       "files": [
         {
           "path": "scripts/init.sql",
@@ -281,70 +1033,10 @@
           "extension": ".sql"
         }
       ]
-    },
-    {
-      "language": "JavaScript",
-      "file_count": 4,
-      "total_bytes": 1440,
-      "percentage": 0.64,
-      "files": [
-        {
-          "path": "frontend/eslint.config.js",
-          "name": "eslint.config.js",
-          "size": 758,
-          "extension": ".js"
-        },
-        {
-          "path": "frontend/src/main.jsx",
-          "name": "main.jsx",
-          "size": 229,
-          "extension": ".jsx"
-        },
-        {
-          "path": "frontend/vite.config.js",
-          "name": "vite.config.js",
-          "size": 227,
-          "extension": ".js"
-        },
-        {
-          "path": "frontend/src/App.jsx",
-          "name": "App.jsx",
-          "size": 226,
-          "extension": ".jsx"
-        }
-      ]
-    },
-    {
-      "language": "Git Ignore",
-      "file_count": 1,
-      "total_bytes": 340,
-      "percentage": 0.15,
-      "files": [
-        {
-          "path": ".gitignore",
-          "name": ".gitignore",
-          "size": 340,
-          "extension": ".gitignore"
-        }
-      ]
-    },
-    {
-      "language": "Text",
-      "file_count": 1,
-      "total_bytes": 158,
-      "percentage": 0.07,
-      "files": [
-        {
-          "path": "backend/requirements.txt",
-          "name": "requirements.txt",
-          "size": 158,
-          "extension": ".txt"
-        }
-      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-17T08:18:36.133505",
+    "extracted_at": "2026-05-18T09:33:02.753538",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }
