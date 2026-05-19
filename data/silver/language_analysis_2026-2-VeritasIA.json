@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-18T09:30:06.371823",
+  "analyzed_at": "2026-05-19T09:10:29.717697",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 39,
-  "total_bytes": 226586,
+  "total_files": 51,
+  "total_bytes": 304462,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 3,
       "total_bytes": 104513,
-      "percentage": 46.13,
+      "percentage": 34.33,
       "files": [
         {
           "path": "docs/mkdocs/docs/assets/LogoBlack.png",
@@ -37,10 +37,54 @@
       ]
     },
     {
+      "language": "JSON",
+      "file_count": 6,
+      "total_bytes": 69795,
+      "percentage": 22.92,
+      "files": [
+        {
+          "path": "scrapers/resultados/resultados.json",
+          "name": "resultados.json",
+          "size": 62654,
+          "extension": ".json"
+        },
+        {
+          "path": "docs/mkdocs/docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 7125,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/cnn.json",
+          "name": "cnn.json",
+          "size": 4,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/g1.json",
+          "name": "g1.json",
+          "size": 4,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/metropoles.json",
+          "name": "metropoles.json",
+          "size": 4,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/r7.json",
+          "name": "r7.json",
+          "size": 4,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
       "file_count": 24,
       "total_bytes": 50120,
-      "percentage": 22.12,
+      "percentage": 16.46,
       "files": [
         {
           "path": "docs/mkdocs/docs/backend/FastAPI.md",
@@ -108,7 +152,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 25485,
-      "percentage": 11.25,
+      "percentage": 8.37,
       "files": [
         {
           "path": "docs/mkdocs/docs/dashboard/index.html",
@@ -125,10 +169,60 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 7,
+      "total_bytes": 25013,
+      "percentage": 8.22,
+      "files": [
+        {
+          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 11773,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/g1Spider.py",
+          "name": "g1Spider.py",
+          "size": 3292,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/metropoles.py",
+          "name": "metropoles.py",
+          "size": 2966,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/r7spider.py",
+          "name": "r7spider.py",
+          "size": 2682,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/cnnspider.py",
+          "name": "cnnspider.py",
+          "size": 2034,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/salvarscrapys.py",
+          "name": "salvarscrapys.py",
+          "size": 1514,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/executarSpiders.py",
+          "name": "executarSpiders.py",
+          "size": 752,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "Unknown",
       "file_count": 1,
       "total_bytes": 17416,
-      "percentage": 7.69,
+      "percentage": 5.72,
       "files": [
         {
           "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
@@ -139,38 +233,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 1,
-      "total_bytes": 11773,
-      "percentage": 5.2,
-      "files": [
-        {
-          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 11773,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
-      "language": "JSON",
-      "file_count": 1,
-      "total_bytes": 6415,
-      "percentage": 2.83,
-      "files": [
-        {
-          "path": "docs/mkdocs/docs/productivity/metrics.json",
-          "name": "metrics.json",
-          "size": 6415,
-          "extension": ".json"
-        }
-      ]
-    },
-    {
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 6376,
-      "percentage": 2.81,
+      "percentage": 2.09,
       "files": [
         {
           "path": "docs/mkdocs/docs/productivity/style.css",
@@ -188,14 +254,20 @@
     },
     {
       "language": "YAML",
-      "file_count": 3,
-      "total_bytes": 3411,
-      "percentage": 1.51,
+      "file_count": 4,
+      "total_bytes": 4667,
+      "percentage": 1.53,
       "files": [
         {
           "path": ".github/workflows/metrics.yml",
           "name": "metrics.yml",
           "size": 1626,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/execute-scrapy.yml",
+          "name": "execute-scrapy.yml",
+          "size": 1256,
           "extension": ".yml"
         },
         {
@@ -216,7 +288,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.47,
+      "percentage": 0.35,
       "files": [
         {
           "path": "LICENSE",
@@ -242,7 +314,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-18T09:33:04.856654",
+    "extracted_at": "2026-05-19T09:13:18.636243",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }

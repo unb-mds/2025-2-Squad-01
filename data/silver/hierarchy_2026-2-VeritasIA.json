@@ -2,7 +2,7 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-18T09:30:06.371823",
+  "extracted_at": "2026-05-19T09:10:29.717697",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -26,6 +26,14 @@
         "size": 905,
         "extension": ".yml",
         "path": ".github/workflows/deploy-docs.yml"
+      },
+      {
+        "name": "execute-scrapy.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1256,
+        "extension": ".yml",
+        "path": ".github/workflows/execute-scrapy.yml"
       },
       {
         "name": "metrics.yml",
@@ -233,7 +241,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 6415,
+        "size": 7125,
         "extension": ".json",
         "path": "docs/mkdocs/docs/productivity/metrics.json"
       },
@@ -420,11 +428,117 @@
         "size": 0,
         "extension": ".md",
         "path": "docs/projeto/team.md"
+      },
+      {
+        "name": "scrapers",
+        "type": "directory",
+        "path": "scrapers",
+        "children": []
+      },
+      {
+        "name": "executarSpiders.py",
+        "type": "file",
+        "language": "Python",
+        "size": 752,
+        "extension": ".py",
+        "path": "scrapers/executarSpiders.py"
+      },
+      {
+        "name": "resultados",
+        "type": "directory",
+        "path": "scrapers/resultados",
+        "children": []
+      },
+      {
+        "name": "cnn.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4,
+        "extension": ".json",
+        "path": "scrapers/resultados/cnn.json"
+      },
+      {
+        "name": "g1.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4,
+        "extension": ".json",
+        "path": "scrapers/resultados/g1.json"
+      },
+      {
+        "name": "metropoles.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4,
+        "extension": ".json",
+        "path": "scrapers/resultados/metropoles.json"
+      },
+      {
+        "name": "r7.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4,
+        "extension": ".json",
+        "path": "scrapers/resultados/r7.json"
+      },
+      {
+        "name": "resultados.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 62654,
+        "extension": ".json",
+        "path": "scrapers/resultados/resultados.json"
+      },
+      {
+        "name": "salvarscrapys.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1514,
+        "extension": ".py",
+        "path": "scrapers/salvarscrapys.py"
+      },
+      {
+        "name": "spiders",
+        "type": "directory",
+        "path": "scrapers/spiders",
+        "children": []
+      },
+      {
+        "name": "cnnspider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2034,
+        "extension": ".py",
+        "path": "scrapers/spiders/cnnspider.py"
+      },
+      {
+        "name": "g1Spider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3292,
+        "extension": ".py",
+        "path": "scrapers/spiders/g1Spider.py"
+      },
+      {
+        "name": "metropoles.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2966,
+        "extension": ".py",
+        "path": "scrapers/spiders/metropoles.py"
+      },
+      {
+        "name": "r7spider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2682,
+        "extension": ".py",
+        "path": "scrapers/spiders/r7spider.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-18T09:33:04.857184",
+    "extracted_at": "2026-05-19T09:13:18.636965",
     "file_path": "data/silver/hierarchy_2026-2-VeritasIA.json"
   }
 }
