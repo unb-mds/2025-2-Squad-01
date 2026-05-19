@@ -1,22 +1,971 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-18T08:40:51.000535",
+      "extracted_at": "2026-05-19T08:20:38.798134",
       "file_path": "data/bronze/issues_2026-1-Squad13.json",
-      "record_count": 48
+      "record_count": 47
     }
   },
   {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102",
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135",
     "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/102",
-    "id": 4448598411,
-    "node_id": "I_kwDORypFlc8AAAABCSg5iw",
-    "number": 102,
-    "title": "chore: Corrigir init_db para registrar entidades antes de criar tabelas",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/135",
+    "id": 4473302178,
+    "node_id": "I_kwDORypFlc8AAAABCqEsog",
+    "number": 135,
+    "title": "refactor: desacoplar entidades de domínio da dependência direta de table=True do SQLModel",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842371,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
+        "name": "feat:f6",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F6"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      },
+      {
+        "id": 10937715067,
+        "node_id": "LA_kwDORypFlc8AAAACi_BJew",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:low",
+        "name": "prio:low",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Se sobrar tempo"
+      },
+      {
+        "id": 10946853737,
+        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
+        "name": "status:backlog",
+        "color": "1d76db",
+        "default": false,
+        "description": "Na fila, nao planejado"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:37:31Z",
+    "updated_at": "2026-05-18T23:41:05Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "Isolar a lógica de negócio em classes que não herdam diretamente da estrutura de tabela do banco. Criar Schemas de Domínio puros e mover as anotações de tabela para a camada de Infraestrutura, garantindo que o Domínio seja agnóstico à persistência.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/135/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/134",
+    "id": 4473301607,
+    "node_id": "I_kwDORypFlc8AAAABCqEqZw",
+    "number": 134,
+    "title": "perf: implementar cache no Redis com assinatura (hash) de filtros dinâmicos",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      },
+      {
+        "id": 10942226201,
+        "node_id": "LA_kwDORypFlc8AAAACjDUfGQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f3",
+        "name": "feat:f3",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F3"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:37:25Z",
+    "updated_at": "2026-05-18T23:37:25Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "Em vez de desabilitar o cache quando filtros estão ativos, gerar um hash único para cada combinação de filtros (ex: dashboard:hash_params). Isso permitirá servir dados filtrados do Redis, aumentando drasticamente a performance de resposta do dashboard.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/134/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/133",
+    "id": 4473301109,
+    "node_id": "I_kwDORypFlc8AAAABCqEodQ",
+    "number": 133,
+    "title": "chore: implementar logging estruturado e remover prints dos adaptadores",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842371,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
+        "name": "feat:f6",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F6"
+      },
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:37:18Z",
+    "updated_at": "2026-05-18T23:40:58Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "Substituir o uso de print() em CamaraAdapter e SenadoAdapter por um sistema de logging estruturado (Python logging). Configurar o log global no main.py para facilitar a observabilidade em containers.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/133/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/132",
+    "id": 4473248132,
+    "node_id": "I_kwDORypFlc8AAAABCqBZhA",
+    "number": 132,
+    "title": "chore: Refatorar injeção de dependência nos serviços de aplicação (Inversão de Dependência)",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842371,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
+        "name": "feat:f6",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F6"
+      },
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:24:24Z",
+    "updated_at": "2026-05-18T23:24:24Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 📝 Motivação Técnica\nDurante a revisão da PR #121 (Release v0.1.0), identificou-se um débito técnico arquitetural (\"meia-migração\") nos Application Services. Apesar da correta criação das `ports` (interfaces) em `backend/src/application/ports`, serviços centrais como `AuthService`, `ListarMovimentacoesService` e `DashboardService` continuam importando e tipando classes concretas de `infrastructure/adapters` e `infrastructure/repositories` em seus construtores.\nEssa refatoração é um *enabler* crítico para a Release 2, garantindo a verdadeira Inversão de Dependência (Dependency Inversion) e permitindo trocar repositórios ou adaptadores sem alterar a camada de aplicação.\n\n## 🛠️ Plano de Execução\n- [ ] **Fase 1: Preparação**: Revisar as interfaces em `application/ports` para garantir que abrangem todos os métodos necessários pelos serviços (se faltarem as `ports` para os adaptadores da Câmara/Senado e repositórios SQL, elas devem ser criadas).\n- [ ] **Fase 2: Implementação**: Alterar as tipagens nos métodos `__init__` de `AuthService`, `ListarMovimentacoesService`, `DashboardService` (e outros serviços de aplicação, se necessário) para utilizarem exclusivamente as classes abstratas / `Protocols` de `application/ports`. Remover qualquer importação que comece com `infrastructure.` de dentro desses arquivos.\n- [ ] **Fase 3: Validação**: Ajustar dependências e mocks na suíte de testes unitários/integração e conferir no linter/type-checker se não há violações de acoplamento.\n\n## 🏗️ Impacto no Sistema\nTrata-se de uma refatoração estrita (Layered Architecture). Nenhuma regra de negócio deve ser alterada e não há impacto no ambiente de produção. O impacto positivo imediato será a plena conformidade com a ADR-005 e maior facilidade em testar serviços com mocks puros.\n\n## ✅ Definição de Pronto (DoD)\n- [ ] Linting e Type-checking passando sem warnings.\n- [ ] Testes automatizados passando (pytest).\n- [ ] Nenhuma classe/módulo do pacote `infrastructure.*` deve estar importada dentro do pacote `application.*`.\n- [ ] CI/CD Green (passando 100%).\n\n## 🔗 Rastreabilidade\n- **Release**: R2\n- **Issue Relacionada**: PR #121\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/132/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/131",
+    "id": 4473187838,
+    "node_id": "I_kwDORypFlc8AAAABCp9t_g",
+    "number": 131,
+    "title": "feat: Suporte ao query param modo no endpoint de movimentações",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937590228,
+        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
+        "name": "type:feature",
+        "color": "a2eeef",
+        "default": false,
+        "description": "Nova funcionalidade"
+      },
+      {
+        "id": 10942234796,
+        "node_id": "LA_kwDORypFlc8AAAACjDVArA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f2",
+        "name": "feat:f2",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F2"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:09:34Z",
+    "updated_at": "2026-05-18T23:09:34Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 🎯 Objetivo / Contexto\nO endpoint `GET /proposicoes/{id}/movimentacoes` precisa retornar a visão agregada como padrão, mas ainda suportar a visualização completa ou apenas relevante.\n\n## 🏗️ Impacto Arquitetural & Técnico\n### Camadas Afetadas:\n- [ ] **Domain**\n- [ ] **Application**: `ListarMovimentacoesService` usará a regra do parâmetro `modo`.\n- [ ] **Infrastructure**\n- [ ] **Presentation**: Atualizar controller com query parameter e novos schemas.\n- [ ] **Frontend**: Adaptação para o novo formato `PeriodoFaseResponse`.\n\n### Detalhes de Implementação:\n- Criar o enum `ModoMovimentacao` (resumido, completo, relevante).\n- Criar schemas `PeriodoFaseResponse` e `EventoResumoResponse`.\n- Atualizar controller para receber o parâmetro (default: resumido).\n- Frontend adaptado ao novo formato resumido da timeline.\n\n## ✅ Critérios de Aceitação (DoD)\n- [ ] Modos implementados corretamente.\n- [ ] Novos Schemas devolvidos pelo FastAPI.\n- [ ] Testes de integração na API.\n\n## 🔗 Rastreabilidade\n- **Release**: R2\n- **Depende de**: SPEC-02\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/131/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/130",
+    "id": 4473187406,
+    "node_id": "I_kwDORypFlc8AAAABCp9sTg",
+    "number": 130,
+    "title": "feat: Criar AgregarPorFaseService para períodos de fase",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937590228,
+        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
+        "name": "type:feature",
+        "color": "a2eeef",
+        "default": false,
+        "description": "Nova funcionalidade"
+      },
+      {
+        "id": 10942234796,
+        "node_id": "LA_kwDORypFlc8AAAACjDVArA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f2",
+        "name": "feat:f2",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F2"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:09:27Z",
+    "updated_at": "2026-05-18T23:09:27Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 🎯 Objetivo / Contexto\nPrecisamos expor os eventos da proposição agregados por **período de fase** (blocos contínuos de mesma fase) para o frontend renderizar uma timeline funcional.\n\n## 🏗️ Impacto Arquitetural & Técnico\n### Camadas Afetadas:\n- [ ] **Domain**: Criação do Value Object `PeriodoFase`.\n- [ ] **Application**: Novo serviço `AgregarPorFaseService`.\n- [ ] **Infrastructure**\n- [ ] **Presentation**\n- [ ] **Frontend**\n\n### Detalhes de Implementação:\n- Criar `PeriodoFase` em `domain/value_objects/`.\n- Criar `AgregarPorFaseService` que processa uma lista de eventos e retorna blocos de fase, calculando dias corridos e selecionando apenas os eventos relevantes (via propriedade persistida).\n\n## ✅ Critérios de Aceitação (DoD)\n- [ ] `PeriodoFase` e serviço de agregação criados.\n- [ ] Serviço stateless, injetando `FaseAnaliticaRepository` apenas para leitura de nomes e ordens.\n- [ ] Cobertura de testes unitários para o agrupamento cronológico.\n\n## 🔗 Rastreabilidade\n- **Release**: R2\n- **Depende de**: SPEC-01\n- **Bloqueia**: SPEC-03\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/130/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/129",
+    "id": 4473186992,
+    "node_id": "I_kwDORypFlc8AAAABCp9qsA",
+    "number": 129,
+    "title": "feat: Adicionar campo relevante em EventoTramitacao",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842369,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
+        "name": "prio:high",
+        "color": "d93f0b",
+        "default": false,
+        "description": "Fazer nesta sprint impreterivelmente"
+      },
+      {
+        "id": 10937590228,
+        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
+        "name": "type:feature",
+        "color": "a2eeef",
+        "default": false,
+        "description": "Nova funcionalidade"
+      },
+      {
+        "id": 10942234796,
+        "node_id": "LA_kwDORypFlc8AAAACjDVArA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f2",
+        "name": "feat:f2",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F2"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T23:09:20Z",
+    "updated_at": "2026-05-18T23:09:20Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 🎯 Objetivo / Contexto\nO histórico de proposições extensas tem muito ruído (ex: notificações, encaminhamentos). A solução é persistir todos os eventos mas adicionar uma coluna `relevante` (bool) calculada no momento do upsert via `NormalizarTramitacaoService`. Isso evita o problema N+1 ao consultar o dashboard.\n\n## 🏗️ Impacto Arquitetural & Técnico\n### Camadas Afetadas:\n- [ ] **Domain**: Adição da propriedade `eh_relevante` contendo a regra de negócio.\n- [ ] **Application**: `NormalizarTramitacaoService` chamará a propriedade.\n- [ ] **Infrastructure**: Nova coluna `relevante: bool` na tabela `evento_tramitacao`.\n- [ ] **Presentation**\n- [ ] **Frontend**\n\n### Detalhes de Implementação:\n- Atualizar a entidade de domínio `EventoTramitacao` com a `@property eh_relevante`.\n- Modificar o service de normalização para definir `evento.relevante = evento.eh_relevante`.\n- Criar a migration de banco de dados.\n\n## ✅ Critérios de Aceitação (DoD)\n- [ ] Coluna `relevante` adicionada.\n- [ ] Testes unitários com todos os cenários da regra cobertos.\n- [ ] Validação com `pl_4015_2023.json` funcionando como esperado.\n\n## 🔗 Rastreabilidade\n- **Release**: R2\n- **Depende de**: Nenhuma\n- **Bloqueia**: SPEC-02 e SPEC-03\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/129/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/125",
+    "id": 4472355425,
+    "node_id": "I_kwDORypFlc8AAAABCpK6YQ",
+    "number": 125,
+    "title": "chore: Refinamento do sistema de testes e otimização de performance",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      },
+      {
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
+        "default": false,
+        "description": "Com Pull Request aberto"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T20:29:56Z",
+    "updated_at": "2026-05-18T22:17:34Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## 📝 Motivação Técnica\nCom o crescimento da base de código e a adição de novas entidades analíticas (#88, #122), a execução da suíte de testes do Backend atingiu a marca de ~55 segundos. O processo atual sofre com o overhead de recriação de tabelas no SQLite para cada teste e execução estritamente serial, o que impacta a produtividade do desenvolvedor e o tempo de feedback do CI.\n\n## 🛠️ Plano de Execução\n- [ ] **Fase 1: Paralelização**:\n    - [ ] Adicionar dependência `pytest-xdist`.\n    - [ ] Configurar `pytest.ini` para utilizar múltiplos núcleos (`-n auto`) por padrão em ambiente local.\n- [ ] **Fase 2: Otimização de Fixtures**:\n    - [ ] Refatorar fixtures de banco de dados no `conftest.py` para escopo de `session` onde a mutação de dados não for crítica.\n    - [ ] Implementar estratégia de `rollback` para testes de integração em vez de recriação completa de esquema.\n- [ ] **Fase 3: Validação**:\n    - [ ] Medir a redução do tempo total (alvo: < 25 segundos).\n    - [ ] Ajustar workflows do GitHub Actions para suportar execução paralela eficiente.\n\n## 🏗️ Impacto no Sistema\n- Redução significativa no tempo de espera do ciclo `Red-Green-Refactor`.\n- Mudança na configuração do ambiente de teste (necessário reinstalar dependências via `uv sync`).\n\n## ✅ Definição de Pronto (DoD)\n- [ ] Tempo total de execução da suíte de testes reduzido em pelo menos 40%.\n- [ ] CI/CD operando com execução paralela sem condições de corrida (race conditions).\n- [ ] Documentação de como rodar testes otimizados adicionada ao README.\n\n## 🔗 Rastreabilidade\n- **Release**: R1 (Estabilização)\n- **Issue Relacionada**: #88, #122",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/125/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/124",
+    "id": 4472046461,
+    "node_id": "I_kwDORypFlc8AAAABCo4DfQ",
+    "number": 124,
+    "title": "chore: preparar deploy Docker Compose em instância GCP",
     "user": {
       "login": "kaiky-yun",
       "id": 127952063,
@@ -67,13 +1016,159 @@
         "description": "Pronto para puxar nesta sprint"
       }
     ],
+    "state": "open",
+    "locked": false,
+    "assignees": [
+      {
+        "login": "kaiky-yun",
+        "id": 127952063,
+        "node_id": "U_kgDOB6Bkvw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/kaiky-yun",
+        "html_url": "https://github.com/kaiky-yun",
+        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-05-18T19:41:50Z",
+    "updated_at": "2026-05-18T19:41:54Z",
+    "closed_at": null,
+    "assignee": {
+      "login": "kaiky-yun",
+      "id": 127952063,
+      "node_id": "U_kgDOB6Bkvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaiky-yun",
+      "html_url": "https://github.com/kaiky-yun",
+      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "author_association": "COLLABORATOR",
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "# Objetivo\n\nPreparar o projeto para execução em uma instância Linux da Google Cloud Platform (GCP) utilizando Docker Compose, permitindo rodar frontend, backend, PostgreSQL e Redis em ambiente remoto de desenvolvimento/homologação.\n\n# Escopo\n\n* Configurar ambiente para execução em VM Linux na GCP;\n* Garantir funcionamento do `docker compose up`;\n* Validar comunicação entre frontend, backend, PostgreSQL e Redis;\n* Ajustar variáveis de ambiente necessárias;\n* Garantir exposição correta das portas:\n\n  * 5173;\n  * 8000;\n* Documentar comandos mínimos de inicialização.\n\n# Fora do escopo\n\n* Kubernetes;\n* CI/CD automatizado;\n* domínio próprio;\n* HTTPS/SSL;\n* balanceador;\n* autoscaling;\n* monitoramento;\n* Terraform/Ansible;\n* deploy production-grade.\n\n# Critérios de aceite\n\n* VM GCP sobe corretamente;\n* Docker e Docker Compose funcionam;\n* `docker compose up -d` sobe todos os serviços;\n* Frontend acessível externamente;\n* Backend acessível externamente;\n* Frontend consegue consumir backend remotamente;\n* Banco inicializa corretamente;\n* Seed consegue rodar na VM;\n* Healthcheck do backend responde corretamente.\n\n# Sugestão técnica\n\n* VM Ubuntu 22.04 LTS;\n* Docker Engine;\n* Docker Compose Plugin;\n* Firewall GCP liberando:\n\n  * TCP 5173;\n  * TCP 8000;\n* Redis e PostgreSQL acessíveis apenas internamente.\n\n# Possíveis entregas técnicas\n\n* ajustes em `.env`;\n* documentação de deploy;\n* script de bootstrap;\n* revisão do `docker-compose.yml`;\n* revisão do `start_dev.sh`;\n* configuração de host/IP para frontend consumir backend remoto.\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/124/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/102/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/102",
+    "id": 4448598411,
+    "node_id": "I_kwDORypFlc8AAAABCSg5iw",
+    "number": 102,
+    "title": "chore: Corrigir init_db para registrar entidades antes de criar tabelas",
+    "user": {
+      "login": "kaiky-yun",
+      "id": 127952063,
+      "node_id": "U_kgDOB6Bkvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaiky-yun",
+      "html_url": "https://github.com/kaiky-yun",
+      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
+      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
+      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
+      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588883,
+        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
+        "name": "type:chore",
+        "color": "ededed",
+        "default": false,
+        "description": "Trabalhos tecnicos, docs, CI/CD"
+      }
+    ],
     "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T19:14:35Z",
-    "updated_at": "2026-05-14T19:58:53Z",
+    "updated_at": "2026-05-18T11:58:47Z",
     "closed_at": "2026-05-14T19:58:53Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -164,6 +1259,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -180,15 +1284,6 @@
         "color": "a2eeef",
         "default": false,
         "description": "Nova funcionalidade"
-      },
-      {
-        "id": 10946854167,
-        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
-        "name": "status:todo",
-        "color": "0052cc",
-        "default": false,
-        "description": "Pronto para puxar nesta sprint"
       }
     ],
     "state": "closed",
@@ -219,7 +1314,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-14T01:49:53Z",
-    "updated_at": "2026-05-16T15:29:51Z",
+    "updated_at": "2026-05-18T11:58:54Z",
     "closed_at": "2026-05-16T15:29:51Z",
     "assignee": {
       "login": "caioflmjr",
@@ -348,13 +1443,13 @@
         "description": "Se sobrar tempo"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -381,7 +1476,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:14:19Z",
-    "updated_at": "2026-05-16T15:23:40Z",
+    "updated_at": "2026-05-18T12:08:15Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -479,13 +1574,13 @@
         "description": "Se sobrar tempo"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -503,7 +1598,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:14:12Z",
-    "updated_at": "2026-05-16T15:24:20Z",
+    "updated_at": "2026-05-18T12:08:23Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -610,13 +1705,13 @@
         "description": "Pertence a feature F3"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -634,7 +1729,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:14:05Z",
-    "updated_at": "2026-05-16T15:24:15Z",
+    "updated_at": "2026-05-18T12:08:31Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -732,13 +1827,13 @@
         "description": "Pertence a feature F5"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -756,7 +1851,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:57Z",
-    "updated_at": "2026-05-16T15:23:41Z",
+    "updated_at": "2026-05-18T12:08:39Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -854,13 +1949,13 @@
         "description": "Pertence a feature F5"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -878,7 +1973,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:50Z",
-    "updated_at": "2026-05-16T15:23:42Z",
+    "updated_at": "2026-05-18T12:08:47Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -985,13 +2080,13 @@
         "description": "Pertence a feature F3"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Pronto para puxar nesta sprint"
       },
       {
         "id": 10946856200,
@@ -1009,7 +2104,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:43Z",
-    "updated_at": "2026-05-16T15:23:42Z",
+    "updated_at": "2026-05-18T12:09:12Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1080,6 +2175,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842369,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
@@ -1107,15 +2211,6 @@
         "description": "Pertence a feature F3"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
         "id": 10946856200,
         "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
@@ -1131,7 +2226,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:36Z",
-    "updated_at": "2026-05-16T15:41:05Z",
+    "updated_at": "2026-05-18T11:59:02Z",
     "closed_at": "2026-05-16T15:41:05Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1249,13 +2344,13 @@
         "description": "Nova funcionalidade"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946854774,
+        "node_id": "LA_kwDORypFlc8AAAACjHu_dg",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:in_progress",
+        "name": "status:in_progress",
+        "color": "fbca04",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Alguem esta codando"
       },
       {
         "id": 10946856200,
@@ -1273,7 +2368,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:29Z",
-    "updated_at": "2026-05-16T15:23:44Z",
+    "updated_at": "2026-05-18T12:09:04Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1344,6 +2439,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842369,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
@@ -1371,15 +2475,6 @@
         "description": "Nova funcionalidade"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
         "id": 10946856200,
         "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
@@ -1395,7 +2490,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:13:22Z",
-    "updated_at": "2026-05-16T15:41:05Z",
+    "updated_at": "2026-05-18T12:01:46Z",
     "closed_at": "2026-05-16T15:41:05Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1644,13 +2739,13 @@
         "description": "Pertence a feature F5"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Na fila, nao planejado"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -1668,7 +2763,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T01:11:59Z",
-    "updated_at": "2026-05-16T15:23:45Z",
+    "updated_at": "2026-05-18T12:08:55Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1739,6 +2834,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -1766,15 +2870,6 @@
         "description": "Nova funcionalidade"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
         "id": 10946863600,
         "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
@@ -1790,7 +2885,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T00:32:20Z",
-    "updated_at": "2026-05-16T15:41:07Z",
+    "updated_at": "2026-05-18T12:01:54Z",
     "closed_at": "2026-05-16T15:41:07Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1881,6 +2976,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842369,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
@@ -1908,15 +3012,6 @@
         "description": "Nova funcionalidade"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
         "id": 10946863600,
         "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
@@ -1932,7 +3027,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T00:32:13Z",
-    "updated_at": "2026-05-16T15:41:06Z",
+    "updated_at": "2026-05-18T12:02:02Z",
     "closed_at": "2026-05-16T15:41:06Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -2023,6 +3118,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842369,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
@@ -2057,15 +3161,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F5"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -2074,7 +3169,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T00:32:05Z",
-    "updated_at": "2026-05-16T15:41:06Z",
+    "updated_at": "2026-05-18T12:02:10Z",
     "closed_at": "2026-05-16T15:41:06Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -2165,6 +3260,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842369,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
@@ -2199,15 +3303,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F5"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -2216,7 +3311,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-14T00:31:58Z",
-    "updated_at": "2026-05-16T15:41:06Z",
+    "updated_at": "2026-05-18T12:02:17Z",
     "closed_at": "2026-05-16T15:41:06Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -2307,6 +3402,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -2334,15 +3438,6 @@
         "description": "Pertence a feature F2"
       },
       {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
         "id": 10946856200,
         "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
@@ -2358,7 +3453,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T23:59:30Z",
-    "updated_at": "2026-05-14T01:24:44Z",
+    "updated_at": "2026-05-18T12:02:25Z",
     "closed_at": "2026-05-14T00:44:11Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -2449,6 +3544,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -2474,15 +3578,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -2531,7 +3626,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T04:28:03Z",
-    "updated_at": "2026-05-14T01:24:51Z",
+    "updated_at": "2026-05-18T12:02:33Z",
     "closed_at": "2026-05-13T05:06:20Z",
     "assignee": {
       "login": "caioflmjr",
@@ -2642,6 +3737,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -2658,15 +3762,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -2706,7 +3801,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T04:26:12Z",
-    "updated_at": "2026-05-14T01:24:57Z",
+    "updated_at": "2026-05-18T12:02:41Z",
     "closed_at": "2026-05-13T05:06:23Z",
     "assignee": {
       "login": "caioflmjr",
@@ -2817,6 +3912,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -2842,15 +3946,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -2890,7 +3985,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T04:26:11Z",
-    "updated_at": "2026-05-14T01:25:04Z",
+    "updated_at": "2026-05-18T12:02:50Z",
     "closed_at": "2026-05-13T05:06:27Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3001,6 +4096,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3026,15 +4130,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -3074,7 +4169,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T04:26:09Z",
-    "updated_at": "2026-05-14T01:25:11Z",
+    "updated_at": "2026-05-18T12:02:58Z",
     "closed_at": "2026-05-13T05:06:31Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3185,6 +4280,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3201,15 +4305,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -3249,7 +4344,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T04:04:36Z",
-    "updated_at": "2026-05-14T01:25:18Z",
+    "updated_at": "2026-05-18T12:03:24Z",
     "closed_at": "2026-05-13T05:14:40Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3360,6 +4455,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3376,15 +4480,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -3424,7 +4519,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:54:26Z",
-    "updated_at": "2026-05-14T01:25:25Z",
+    "updated_at": "2026-05-18T12:03:34Z",
     "closed_at": "2026-05-13T05:06:34Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3535,6 +4630,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3551,15 +4655,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -3599,7 +4694,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:54:24Z",
-    "updated_at": "2026-05-14T01:25:31Z",
+    "updated_at": "2026-05-18T12:03:43Z",
     "closed_at": "2026-05-13T05:06:37Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3710,6 +4805,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3726,15 +4830,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946856200,
@@ -3774,7 +4869,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:12:56Z",
-    "updated_at": "2026-05-14T01:25:39Z",
+    "updated_at": "2026-05-18T12:03:51Z",
     "closed_at": "2026-05-13T05:06:40Z",
     "assignee": {
       "login": "caioflmjr",
@@ -3885,6 +4980,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -3910,15 +5014,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -3949,7 +5044,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:12:55Z",
-    "updated_at": "2026-05-14T01:25:46Z",
+    "updated_at": "2026-05-18T12:03:59Z",
     "closed_at": "2026-05-13T05:14:42Z",
     "assignee": {
       "login": "caioflmjr",
@@ -4060,6 +5155,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -4094,15 +5198,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -4133,7 +5228,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:12:53Z",
-    "updated_at": "2026-05-14T01:25:53Z",
+    "updated_at": "2026-05-18T12:04:07Z",
     "closed_at": "2026-05-13T05:06:44Z",
     "assignee": {
       "login": "caioflmjr",
@@ -4244,6 +5339,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -4287,15 +5391,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F3"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -4326,7 +5421,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:12:52Z",
-    "updated_at": "2026-05-14T01:25:59Z",
+    "updated_at": "2026-05-18T12:04:16Z",
     "closed_at": "2026-05-13T05:06:47Z",
     "assignee": {
       "login": "caioflmjr",
@@ -4437,6 +5532,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -4471,15 +5575,6 @@
         "color": "d73a4a",
         "default": false,
         "description": "Erro/Falha no sistema"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -4510,7 +5605,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:28Z",
-    "updated_at": "2026-05-16T15:41:07Z",
+    "updated_at": "2026-05-18T12:04:25Z",
     "closed_at": "2026-05-16T15:41:07Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -4621,6 +5716,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842371,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
@@ -4655,15 +5759,6 @@
         "color": "5319e7",
         "default": false,
         "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -4694,7 +5789,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:26Z",
-    "updated_at": "2026-05-14T20:15:26Z",
+    "updated_at": "2026-05-18T12:04:33Z",
     "closed_at": "2026-05-14T20:15:26Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -4805,6 +5900,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -4839,15 +5943,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F5"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -4878,7 +5973,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:25Z",
-    "updated_at": "2026-05-16T15:41:05Z",
+    "updated_at": "2026-05-18T12:04:41Z",
     "closed_at": "2026-05-16T15:41:05Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -4989,6 +6084,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -5023,15 +6127,6 @@
         "color": "bfd4f2",
         "default": false,
         "description": "Pertence a feature F2"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -5062,7 +6157,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:23Z",
-    "updated_at": "2026-05-16T15:41:07Z",
+    "updated_at": "2026-05-18T12:04:56Z",
     "closed_at": "2026-05-16T15:41:07Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -5173,6 +6268,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842371,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
@@ -5198,15 +6302,6 @@
         "color": "5319e7",
         "default": false,
         "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       },
       {
         "id": 10946863600,
@@ -5246,7 +6341,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-05-13T03:00:21Z",
-    "updated_at": "2026-05-14T01:26:34Z",
+    "updated_at": "2026-05-18T12:05:04Z",
     "closed_at": "2026-05-14T00:31:51Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -5357,6 +6452,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842371,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
@@ -5391,15 +6495,6 @@
         "color": "5319e7",
         "default": false,
         "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -5430,7 +6525,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:20Z",
-    "updated_at": "2026-05-14T01:26:41Z",
+    "updated_at": "2026-05-18T12:05:12Z",
     "closed_at": "2026-05-13T22:30:45Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -5541,6 +6636,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -5575,15 +6679,6 @@
         "color": "a2eeef",
         "default": false,
         "description": "Nova funcionalidade"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -5614,7 +6709,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T03:00:18Z",
-    "updated_at": "2026-05-14T01:54:14Z",
+    "updated_at": "2026-05-18T12:05:20Z",
     "closed_at": "2026-05-14T01:54:14Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -5725,6 +6820,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842681,
         "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
@@ -5750,15 +6854,6 @@
         "color": "5319e7",
         "default": false,
         "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -5789,7 +6884,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T00:42:48Z",
-    "updated_at": "2026-05-14T01:26:55Z",
+    "updated_at": "2026-05-18T12:05:28Z",
     "closed_at": "2026-05-13T00:42:48Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -5900,6 +6995,15 @@
     },
     "labels": [
       {
+        "id": 10936842367,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
+        "name": "status:done",
+        "color": "0e8a16",
+        "default": false,
+        "description": "Finalizado e mergeado"
+      },
+      {
         "id": 10936842371,
         "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
@@ -5934,15 +7038,6 @@
         "color": "d73a4a",
         "default": false,
         "description": "Erro/Falha no sistema"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
       }
     ],
     "state": "closed",
@@ -5973,7 +7068,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-13T00:42:45Z",
-    "updated_at": "2026-05-14T01:21:45Z",
+    "updated_at": "2026-05-18T12:05:37Z",
     "closed_at": "2026-05-13T00:42:46Z",
     "assignee": {
       "login": "kaiky-yun",
@@ -6045,1804 +7140,6 @@
       "eyes": 0
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/38/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/37",
-    "id": 4433650339,
-    "node_id": "I_kwDORypFlc8AAAABCEQiow",
-    "number": 37,
-    "title": "feat: implementar feedbacks visuais de loading e estados de erro na Consulta",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842367,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4fw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:done",
-        "name": "status:done",
-        "color": "0e8a16",
-        "default": false,
-        "description": "Finalizado e mergeado"
-      },
-      {
-        "id": 10936842369,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
-        "name": "prio:high",
-        "color": "d93f0b",
-        "default": false,
-        "description": "Fazer nesta sprint impreterivelmente"
-      },
-      {
-        "id": 10936843272,
-        "node_id": "LA_kwDORypFlc8AAAACi-L8CA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f1",
-        "name": "feat:f1",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F1"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10937590228,
-        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
-        "name": "type:feature",
-        "color": "a2eeef",
-        "default": false,
-        "description": "Nova funcionalidade"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:43Z",
-    "updated_at": "2026-05-14T01:21:53Z",
-    "closed_at": "2026-05-13T00:42:44Z",
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 🎯 Objetivo / Contexto\nMelhorar a experiência do usuário durante o consumo da API, garantindo que o sistema comunique claramente quando os dados estão sendo carregados ou quando ocorre uma falha de conexão.\n\n## ✅ Definição de Pronto (DoD)\n- [x] Componente de loading (spinner/skeleton) visível durante o fetch.\n- [x] Tratamento de erros HTTP (4xx/5xx) com mensagens amigáveis.\n- [x] UI resiliente a falhas no backend.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/37/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/36",
-    "id": 4433650222,
-    "node_id": "I_kwDORypFlc8AAAABCEQiLg",
-    "number": 36,
-    "title": "feat: integrar componente de listagem de proposições com os serviços da API real",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936843272,
-        "node_id": "LA_kwDORypFlc8AAAACi-L8CA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f1",
-        "name": "feat:f1",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F1"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10937590228,
-        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
-        "name": "type:feature",
-        "color": "a2eeef",
-        "default": false,
-        "description": "Nova funcionalidade"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:41Z",
-    "updated_at": "2026-05-14T01:22:00Z",
-    "closed_at": "2026-05-13T00:42:42Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 🎯 Objetivo / Contexto\nConectar a interface de usuário aos serviços de backend, substituindo o uso de constantes locais por chamadas assíncronas ao servidor.\n\n## ✅ Entregáveis\n- [x] Hook `useProposicoes` ou serviço equivalente conectado.\n- [x] Mapeamento de dados do backend para as props dos cards de UI.\n- [x] Validação de integração em ambiente de desenvolvimento.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/36/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/35",
-    "id": 4433650102,
-    "node_id": "I_kwDORypFlc8AAAABCEQhtg",
-    "number": 35,
-    "title": "infra: implementar adapters de infraestrutura com suporte a mocks normalizados",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842371,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
-        "name": "feat:f6",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F6"
-      },
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936843272,
-        "node_id": "LA_kwDORypFlc8AAAACi-L8CA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f1",
-        "name": "feat:f1",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F1"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:39Z",
-    "updated_at": "2026-05-14T01:22:07Z",
-    "closed_at": "2026-05-13T00:42:40Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Motivação Técnica\nEstabelecer o padrão de design Adapter (ADR-005) para isolar a aplicação das APIs externas, utilizando mocks iniciais que espelham o contrato real da Câmara e Senado.\n\n## ✅ Implementação\n- [x] `CamaraMockAdapter` e `SenadoMockAdapter` funcionais.\n- [x] Normalização de dados para a entidade de domínio `Proposicao`.\n- [x] Testabilidade garantida via injeção de dependência.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/35/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/34",
-    "id": 4433649988,
-    "node_id": "I_kwDORypFlc8AAAABCEQhRA",
-    "number": 34,
-    "title": "feat: expor endpoint de busca paginada com suporte a filtros cumulativos",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936843272,
-        "node_id": "LA_kwDORypFlc8AAAACi-L8CA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f1",
-        "name": "feat:f1",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F1"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10937590228,
-        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
-        "name": "type:feature",
-        "color": "a2eeef",
-        "default": false,
-        "description": "Nova funcionalidade"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:37Z",
-    "updated_at": "2026-05-14T01:22:15Z",
-    "closed_at": "2026-05-13T00:42:37Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 🎯 Objetivo / Contexto\nDesenvolver a API principal de consulta de proposições, permitindo filtragem por tipo, status e órgão, além de suporte nativo a paginação.\n\n## ✅ Detalhes Técnicos\n- [x] Endpoint `GET /proposicoes` implementado no FastAPI.\n- [x] Suporte a parâmetros `tipo`, `status`, `orgaoOrigem` e `busca`.\n- [x] Retorno em conformidade com o schema Pydantic definido.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/34/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/33",
-    "id": 4433649874,
-    "node_id": "I_kwDORypFlc8AAAABCEQg0g",
-    "number": 33,
-    "title": "chore: estabelecer regras de proteção e revisão obrigatória na branch main",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936842819,
-        "node_id": "LA_kwDORypFlc8AAAACi-L6Qw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f7",
-        "name": "feat:f7",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F7"
-      },
-      {
-        "id": 10937588883,
-        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
-        "name": "type:chore",
-        "color": "ededed",
-        "default": false,
-        "description": "Trabalhos tecnicos, docs, CI/CD"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
-        "id": 10946863600,
-        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
-        "name": "feat:f4",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F4"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:35Z",
-    "updated_at": "2026-05-14T01:22:22Z",
-    "closed_at": "2026-05-13T00:42:35Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Motivação Técnica\nImplementar governança de código para garantir que nenhuma alteração chegue à `main` sem passar por CI e revisão por pares.\n\n## ✅ Configurações Aplicadas\n- [x] \"Require a pull request before merging\" ativado.\n- [x] \"Require status checks to pass before merging\" (Frontend/Backend CI) vinculado.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/33/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/32",
-    "id": 4433649766,
-    "node_id": "I_kwDORypFlc8AAAABCEQgZg",
-    "number": 32,
-    "title": "ci: automatizar linting, type-checking e build do Frontend via GitHub Actions",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936842819,
-        "node_id": "LA_kwDORypFlc8AAAACi-L6Qw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f7",
-        "name": "feat:f7",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F7"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
-        "id": 10946863600,
-        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
-        "name": "feat:f4",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F4"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:33Z",
-    "updated_at": "2026-05-14T01:22:30Z",
-    "closed_at": "2026-05-13T00:42:33Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Descrição\nCriação do pipeline automatizado para garantir a qualidade do código TypeScript/React.\n\n## ✅ Verificações\n- [x] `npm ci` (instalação limpa).\n- [x] `tsc` (type-checking).\n- [x] `vite build` (validação de bundling).",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/32/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/31",
-    "id": 4433649640,
-    "node_id": "I_kwDORypFlc8AAAABCEQf6A",
-    "number": 31,
-    "title": "ci: automatizar validação de sintaxe, linting (Ruff) e testes do Backend",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842371,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
-        "name": "feat:f6",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F6"
-      },
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10936842819,
-        "node_id": "LA_kwDORypFlc8AAAACi-L6Qw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f7",
-        "name": "feat:f7",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F7"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:30Z",
-    "updated_at": "2026-05-14T01:22:37Z",
-    "closed_at": "2026-05-13T00:42:31Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Descrição\nCriação do pipeline de integração contínua para o backend Python.\n\n## ✅ Verificações\n- [x] Instalação via `uv`.\n- [x] Linting com `Ruff`.\n- [x] Testes automatizados com `Pytest`.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/31/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/30",
-    "id": 4433649525,
-    "node_id": "I_kwDORypFlc8AAAABCEQfdQ",
-    "number": 30,
-    "title": "docs: formalizar padrões de arquitetura em camadas na ADR-001",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842371,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
-        "name": "feat:f6",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F6"
-      },
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:28Z",
-    "updated_at": "2026-05-14T01:22:44Z",
-    "closed_at": "2026-05-13T00:42:29Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 🎯 Objetivo\nRegistrar a decisão arquitetural de utilizar **Layered Architecture** para garantir o desacoplamento entre domínio e infraestrutura.\n\n## 🔗 Referência\n`docs/adr/ADR-001-layered-architecture.md`",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/30/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/29",
-    "id": 4433649417,
-    "node_id": "I_kwDORypFlc8AAAABCEQfCQ",
-    "number": 29,
-    "title": "refactor: decompor backend em camadas de Domain, Application e Infrastructure",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842371,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
-        "name": "feat:f6",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F6"
-      },
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:26Z",
-    "updated_at": "2026-05-14T01:22:52Z",
-    "closed_at": "2026-05-13T00:42:26Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 🎯 Objetivo\nMigrar o código inicial monolítico para uma estrutura desacoplada seguindo a ADR-001.\n\n## 🏗️ Estrutura Implementada\n- `domain/`: Entidades e regras de negócio puras.\n- `application/`: Orquestração de serviços.\n- `infrastructure/`: Implementações de persistência e adapters.\n- `presentation/`: Endpoints e roteamento.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/29/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/28",
-    "id": 4433649287,
-    "node_id": "I_kwDORypFlc8AAAABCEQehw",
-    "number": 28,
-    "title": "chore: inicializar projeto FastAPI com gerenciamento de dependências via uv",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10936842371,
-        "node_id": "LA_kwDORypFlc8AAAACi-L4gw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f6",
-        "name": "feat:f6",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F6"
-      },
-      {
-        "id": 10936842681,
-        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
-        "name": "prio:medium",
-        "color": "fbca04",
-        "default": false,
-        "description": "Desejavel"
-      },
-      {
-        "id": 10937588883,
-        "node_id": "LA_kwDORypFlc8AAAACi-5ckw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:chore",
-        "name": "type:chore",
-        "color": "ededed",
-        "default": false,
-        "description": "Trabalhos tecnicos, docs, CI/CD"
-      },
-      {
-        "id": 10937588884,
-        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
-        "name": "release:R1",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 1 - MVP"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
-        "id": 10946863600,
-        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
-        "name": "feat:f4",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F4"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "kaiky-yun",
-        "id": 127952063,
-        "node_id": "U_kgDOB6Bkvw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaiky-yun",
-        "html_url": "https://github.com/kaiky-yun",
-        "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-        "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-        "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-        "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T00:42:24Z",
-    "updated_at": "2026-05-14T01:22:59Z",
-    "closed_at": "2026-05-13T00:42:24Z",
-    "assignee": {
-      "login": "kaiky-yun",
-      "id": 127952063,
-      "node_id": "U_kgDOB6Bkvw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/127952063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaiky-yun",
-      "html_url": "https://github.com/kaiky-yun",
-      "followers_url": "https://api.github.com/users/kaiky-yun/followers",
-      "following_url": "https://api.github.com/users/kaiky-yun/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaiky-yun/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaiky-yun/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaiky-yun/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaiky-yun/orgs",
-      "repos_url": "https://api.github.com/users/kaiky-yun/repos",
-      "events_url": "https://api.github.com/users/kaiky-yun/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaiky-yun/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## 📝 Motivação\nSetup técnico inicial do backend utilizando Python 3.12 e o gerenciador de pacotes `uv` para máxima performance.\n\n## ✅ Entregáveis\n- `pyproject.toml` configurado.\n- Estrutura base de pastas.\n- Healthcheck endpoint funcional.",
-    "closed_by": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/28/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
     "pinned_comment": null,

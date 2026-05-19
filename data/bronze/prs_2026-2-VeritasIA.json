@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-18T08:40:42.571924",
+      "extracted_at": "2026-05-19T08:20:30.527489",
       "file_path": "data/bronze/prs_2026-2-VeritasIA.json",
       "record_count": 3
     }
@@ -49,7 +49,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -98,8 +98,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-05-15T21:14:28Z",
-    "updated_at": "2026-05-17T02:16:00Z",
-    "closed_at": null,
+    "updated_at": "2026-05-18T21:47:22Z",
+    "closed_at": "2026-05-18T21:47:22Z",
     "assignee": {
       "login": "jadsonRleandro",
       "id": 160337733,
@@ -130,10 +130,30 @@
       "html_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/32",
       "diff_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/32.diff",
       "patch_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/32.patch",
-      "merged_at": null
+      "merged_at": "2026-05-18T21:47:22Z"
     },
     "body": " ## O que foi feito\r\n- Adicionado sistema de login\r\n- Criada integração com OAuth\r\n- Atualizado layout da tela\r\n\r\n## Motivo\r\nColeta de portais de notícias sobre feminicídio.\r\n\r\n## Como testar\r\n1. Baixar dependências:\r\n``` python\r\npip install scrapy\r\npip install playwright\r\nplaywright install\r\n```\r\n3. Executar: ``` python execute_scrapy.py ```\r\n\r\n\r\n## Critérios de Aceitação:\r\n- Gerar 4 arquivos json\r\n\r\n``` json\r\nr7spiders.json\r\ng1spiders.json\r\nmetropolesspiders.json\r\ncnnspiders.json\r\n```\r\n\r\n## Checklist\r\n- [ ] Código testado\r\n- [ ] Sem conflitos\r\n- [ ] Documentação atualizada ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Daniel241025",
+      "id": 215087737,
+      "node_id": "U_kgDODNH6eQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/215087737?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Daniel241025",
+      "html_url": "https://github.com/Daniel241025",
+      "followers_url": "https://api.github.com/users/Daniel241025/followers",
+      "following_url": "https://api.github.com/users/Daniel241025/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Daniel241025/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Daniel241025/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Daniel241025/subscriptions",
+      "organizations_url": "https://api.github.com/users/Daniel241025/orgs",
+      "repos_url": "https://api.github.com/users/Daniel241025/repos",
+      "events_url": "https://api.github.com/users/Daniel241025/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Daniel241025/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/32/reactions",
       "total_count": 0,

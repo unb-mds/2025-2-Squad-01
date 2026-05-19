@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-2-VeritasIA",
   "branch": "main",
-  "sha": "a88366e0c30dc3ac961fc33adf0038d44a35710a",
+  "sha": "c04765ee2b63e55f1917ad5a6fa5fa1814b9d62b",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "7c9e409e003c5520489c775a185fa1a7ab773d7a",
+      "sha": "a5385cb6c65fd8b6d6f01e854580cceae759fb1a",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "5e4aa22c4ba34c369a3b633d9e665332aa8bee45",
+      "sha": "f3624ddf47ca543927c439f20d30ad0edff8db91",
       "mode": "040000",
       "children": []
     },
@@ -28,6 +28,16 @@
       "mode": "100644",
       "extension": ".yml",
       "size": 905,
+      "is_binary": false
+    },
+    {
+      "name": "execute-scrapy.yml",
+      "path": ".github/workflows/execute-scrapy.yml",
+      "type": "file",
+      "sha": "91e7aae80470984e7bb94b93e29ace58b1d711a2",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1256,
       "is_binary": false
     },
     {
@@ -64,7 +74,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "951c24118f096a5820811c8027007b29c8951c13",
+      "sha": "c5b81057748e3428d56fe004eddcb0e460405548",
       "mode": "040000",
       "children": []
     },
@@ -108,7 +118,7 @@
       "name": "mkdocs",
       "path": "docs/mkdocs",
       "type": "directory",
-      "sha": "37698ce267958686fcb166c661d460ee4616c1d8",
+      "sha": "22a8771581907b83d5fb1e49299a38a1ac21ab11",
       "mode": "040000",
       "children": []
     },
@@ -116,7 +126,7 @@
       "name": "docs",
       "path": "docs/mkdocs/docs",
       "type": "directory",
-      "sha": "b929a1b3dcb1ca319af9f1d90dfc3e550243bd68",
+      "sha": "99f3a3605cfa44585c89e2023c5dc07135125771",
       "mode": "040000",
       "children": []
     },
@@ -256,7 +266,7 @@
       "name": "productivity",
       "path": "docs/mkdocs/docs/productivity",
       "type": "directory",
-      "sha": "7de7a82572fa873c1e70705036dad9251ba1a818",
+      "sha": "e63463d3de9edecff168033750f8dafa7791fbe6",
       "mode": "040000",
       "children": []
     },
@@ -292,10 +302,10 @@
       "name": "metrics.json",
       "path": "docs/mkdocs/docs/productivity/metrics.json",
       "type": "file",
-      "sha": "f169b6e72763dff1e484696db2fe0eac313d6e1d",
+      "sha": "6160b44d18f16f6c2743dde56da4afc31b83c013",
       "mode": "100644",
       "extension": ".json",
-      "size": 6415,
+      "size": 7125,
       "is_binary": false
     },
     {
@@ -529,22 +539,156 @@
       "extension": ".md",
       "size": 0,
       "is_binary": false
+    },
+    {
+      "name": "scrapers",
+      "path": "scrapers",
+      "type": "directory",
+      "sha": "7a5f4be4e5924d669a69e3ec51ecea64ec5b92fb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "executarSpiders.py",
+      "path": "scrapers/executarSpiders.py",
+      "type": "file",
+      "sha": "d421fb303c6a488fbe56afcaeafe6cae4dc78052",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 752,
+      "is_binary": false
+    },
+    {
+      "name": "resultados",
+      "path": "scrapers/resultados",
+      "type": "directory",
+      "sha": "ab60408a108fb1f364eb30db20b8ef93faa9650d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "cnn.json",
+      "path": "scrapers/resultados/cnn.json",
+      "type": "file",
+      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4,
+      "is_binary": false
+    },
+    {
+      "name": "g1.json",
+      "path": "scrapers/resultados/g1.json",
+      "type": "file",
+      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4,
+      "is_binary": false
+    },
+    {
+      "name": "metropoles.json",
+      "path": "scrapers/resultados/metropoles.json",
+      "type": "file",
+      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4,
+      "is_binary": false
+    },
+    {
+      "name": "r7.json",
+      "path": "scrapers/resultados/r7.json",
+      "type": "file",
+      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4,
+      "is_binary": false
+    },
+    {
+      "name": "resultados.json",
+      "path": "scrapers/resultados/resultados.json",
+      "type": "file",
+      "sha": "ca80d76d1b14c795f5e780f88437115e036f854a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 62654,
+      "is_binary": false
+    },
+    {
+      "name": "salvarscrapys.py",
+      "path": "scrapers/salvarscrapys.py",
+      "type": "file",
+      "sha": "c4ee6a8e147aeb638ae2aa7d46a454e029bf6932",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1514,
+      "is_binary": false
+    },
+    {
+      "name": "spiders",
+      "path": "scrapers/spiders",
+      "type": "directory",
+      "sha": "cbd268e655038b1df508bf16e6d374773e15e08b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "cnnspider.py",
+      "path": "scrapers/spiders/cnnspider.py",
+      "type": "file",
+      "sha": "6e21d250d69cf6dede8ecd7db3b676983b8c5939",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2034,
+      "is_binary": false
+    },
+    {
+      "name": "g1Spider.py",
+      "path": "scrapers/spiders/g1Spider.py",
+      "type": "file",
+      "sha": "26d799dfeca22d905af2ad0bab2016e15a1bbaea",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3292,
+      "is_binary": false
+    },
+    {
+      "name": "metropoles.py",
+      "path": "scrapers/spiders/metropoles.py",
+      "type": "file",
+      "sha": "c28025ae15cd99b5bcc18a0dde872237f9b9fe44",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2966,
+      "is_binary": false
+    },
+    {
+      "name": "r7spider.py",
+      "path": "scrapers/spiders/r7spider.py",
+      "type": "file",
+      "sha": "324b9f4c2a940feb8c70e2be77f79f08dd48cad8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2682,
+      "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-18T09:30:06.371823",
+  "extracted_at": "2026-05-19T09:10:29.717697",
   "method": "rest",
-  "total_items": 56,
+  "total_items": 71,
   "repository_metadata": {
     "id": 1185581019,
     "full_name": "unb-mds/2026-2-VeritasIA",
     "description": "Monitoramento de noticias sobre feminicídio utilizando IA",
     "created_at": "2026-03-18T18:25:01Z",
-    "updated_at": "2026-05-17T23:37:44Z",
-    "language": null,
-    "size": 2700,
+    "updated_at": "2026-05-19T01:51:41Z",
+    "language": "Python",
+    "size": 2759,
     "stars": 4,
     "forks": 0,
-    "open_issues": 8
+    "open_issues": 6
   }
 }

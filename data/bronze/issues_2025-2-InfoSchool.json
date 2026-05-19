@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-18T08:40:28.257547",
+      "extracted_at": "2026-05-19T08:20:16.457362",
       "file_path": "data/bronze/issues_2025-2-InfoSchool.json",
       "record_count": 50
     }
@@ -744,11 +744,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 3,
+      "open_issues": 0,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2025-11-26T15:39:18Z",
-      "updated_at": "2025-12-02T16:56:45Z",
+      "updated_at": "2026-05-18T16:30:22Z",
       "due_on": "2025-11-30T00:00:00Z",
       "closed_at": "2025-12-02T14:25:47Z"
     },
@@ -883,7 +883,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -938,18 +938,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 3,
+      "open_issues": 0,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2025-11-26T15:39:18Z",
-      "updated_at": "2025-12-02T16:56:45Z",
+      "updated_at": "2026-05-18T16:30:22Z",
       "due_on": "2025-11-30T00:00:00Z",
       "closed_at": "2025-12-02T14:25:47Z"
     },
     "comments": 1,
     "created_at": "2025-11-29T13:23:21Z",
-    "updated_at": "2025-12-01T19:16:08Z",
-    "closed_at": null,
+    "updated_at": "2026-05-18T16:30:22Z",
+    "closed_at": "2026-05-18T16:30:22Z",
     "assignee": {
       "login": "DaviUrsulino",
       "id": 187406144,
@@ -995,7 +995,27 @@
       "total_blocking": 0
     },
     "body": "## 🎯 Descrição\nImplementar a nova rota /gitpages para servir como a Visão de Produto do projeto InfoSchool. Esta página funcionará como uma apresentação interativa da Release 2.0, contendo demonstrações visuais (GIFs), histórico de evolução, casos de uso e detalhes técnicos da solução (RAG/IA), tudo com animações de scroll.\n---\n\n## ✅ Objetivo\nDocumentar e apresentar o valor do projeto de forma visual e centrada no usuário. Diferente do README técnico, esta página tem o objetivo de mostrar a aplicação em ação, destacar as diferenças entre a versão 1.0 e a atual 2.0, e explicar os problemas que o InfoSchool resolve no cenário de dados educacionais brasileiros.\n---\n\n## 📝 Detalhes da Implementação\nRota: Criar arquivo src/app/gitpages/page.tsx.\nComponentes: Utilizar o ScrollAnimation para revelar as seções conforme o usuário desce a página.\nSeções Principais:\nHero: Logo, Título e CTAs (\"Ver Demonstração\", \"Como Acessar\").\n\nDemonstração: Grid de cards com GIFs/Vídeos das funcionalidades (Home, Mapa, Busca, IA).\nEvolução (Timeline): Comparativo visual entre a Versão Inicial (1.0) e a Versão Atual (2.0).\nProblema & Solução: Explicação sobre a complexidade do Censo Escolar e como resolvemos.\n\nCasos de Uso: Cards para Pais, Pesquisadores e Gestores.\nIA/RAG: Seção dedicada explicando o chatbot \"Aluno\" e a geração de PDFs.\nFuncionalidades:\n\nBotão \"Voltar ao Topo\" fixo.\nScroll suave (smooth scroll) para âncoras (#demonstracao, #acesso, etc.).\nDetecção automática de tema (Dark/Light mode).\n\n---\n\n## 📊 Critérios de Aceitação\nQuais pontos devem estar presentes para considerar a feature concluída?  \nex.\n- [ ] A rota /gitpages carrega corretamente com animações de entrada (fade-up).\n- [ ] A seção \"Evolução do Produto\" exibe claramente as melhorias da versão 2.0.  \n- [ ] Os 4 cards de demonstração (Home, Mapa, Busca, IA) estão exibindo as mídias/GIFs corretamente.\n- [ ] O botão \"Voltar ao Topo\" aparece ao rolar a página e funciona.\n- [ ] A página é totalmente responsiva (elementos se ajustam de grid para coluna única no mobile).\n- [ ] As fontes personalizadas (Harys World, Rammetto One, Sansita) estão aplicadas corretamente nos títulos e textos.\n- [ ] O link de contato e as instruções de acesso (localhost) estão visíveis no rodapé.\n\n---\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "DaviUrsulino",
+      "id": 187406144,
+      "node_id": "U_kgDOCyuXQA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/187406144?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaviUrsulino",
+      "html_url": "https://github.com/DaviUrsulino",
+      "followers_url": "https://api.github.com/users/DaviUrsulino/followers",
+      "following_url": "https://api.github.com/users/DaviUrsulino/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaviUrsulino/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaviUrsulino/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaviUrsulino/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaviUrsulino/orgs",
+      "repos_url": "https://api.github.com/users/DaviUrsulino/repos",
+      "events_url": "https://api.github.com/users/DaviUrsulino/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaviUrsulino/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-2-InfoSchool/issues/113/reactions",
       "total_count": 0,
@@ -1010,7 +1030,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-2-InfoSchool/issues/113/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2025-2-InfoSchool"
   },
@@ -1121,11 +1141,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 3,
+      "open_issues": 0,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2025-11-26T15:39:18Z",
-      "updated_at": "2025-12-02T16:56:45Z",
+      "updated_at": "2026-05-18T16:30:22Z",
       "due_on": "2025-11-30T00:00:00Z",
       "closed_at": "2025-12-02T14:25:47Z"
     },
