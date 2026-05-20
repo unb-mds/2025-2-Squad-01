@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-19T09:10:34.673105",
+  "analyzed_at": "2026-05-20T09:10:44.745348",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 237,
-  "total_bytes": 1530755,
+  "total_files": 292,
+  "total_bytes": 1744445,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 9,
-      "total_bytes": 487880,
-      "percentage": 31.87,
+      "file_count": 11,
+      "total_bytes": 562306,
+      "percentage": 32.23,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -32,6 +32,18 @@
           "path": "squad-dashboard/public/data/github-stats.json",
           "name": "github-stats.json",
           "size": 67923,
+          "extension": ".json"
+        },
+        {
+          "path": "issues_all.json",
+          "name": "issues_all.json",
+          "size": 64432,
+          "extension": ".json"
+        },
+        {
+          "path": "issue_mapping.json",
+          "name": "issue_mapping.json",
+          "size": 9994,
           "extension": ".json"
         },
         {
@@ -63,93 +75,87 @@
           "name": "tsconfig.node.json",
           "size": 213,
           "extension": ".json"
-        },
-        {
-          "path": "squad-dashboard/tsconfig.node.json",
-          "name": "tsconfig.node.json",
-          "size": 213,
-          "extension": ".json"
         }
       ]
     },
     {
       "language": "Lock File",
       "file_count": 1,
-      "total_bytes": 405149,
-      "percentage": 26.47,
+      "total_bytes": 408334,
+      "percentage": 23.41,
       "files": [
         {
           "path": "backend/uv.lock",
           "name": "uv.lock",
-          "size": 405149,
+          "size": 408334,
           "extension": ".lock"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 83,
-      "total_bytes": 233039,
-      "percentage": 15.22,
+      "file_count": 113,
+      "total_bytes": 318902,
+      "percentage": 18.28,
       "files": [
         {
           "path": "backend/src/application/services/dashboard_service.py",
           "name": "dashboard_service.py",
-          "size": 14545,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
-          "name": "senado_adapter.py",
-          "size": 13143,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_classificar_evento.py",
-          "name": "test_classificar_evento.py",
-          "size": 10060,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/domain/classificar_evento.py",
-          "name": "classificar_evento.py",
-          "size": 8507,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_sql_evento_tramitacao_repository.py",
-          "name": "test_sql_evento_tramitacao_repository.py",
-          "size": 8096,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/presentation/controllers/proposicao_controller.py",
-          "name": "proposicao_controller.py",
-          "size": 7498,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/seed.py",
-          "name": "seed.py",
-          "size": 7196,
+          "size": 22471,
           "extension": ".py"
         },
         {
           "path": "backend/tests/unit/test_dashboard_service_extended.py",
           "name": "test_dashboard_service_extended.py",
-          "size": 6592,
+          "size": 12754,
           "extension": ".py"
         },
         {
-          "path": "backend/tests/unit/test_evento_tramitacao_entity.py",
-          "name": "test_evento_tramitacao_entity.py",
-          "size": 6401,
+          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
+          "name": "senado_adapter.py",
+          "size": 12420,
           "extension": ".py"
         },
         {
-          "path": "backend/src/domain/entities/evento_tramitacao.py",
-          "name": "evento_tramitacao.py",
-          "size": 6315,
+          "path": "backend/tests/unit/test_classificar_evento.py",
+          "name": "test_classificar_evento.py",
+          "size": 9742,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/presentation/controllers/proposicao_controller.py",
+          "name": "proposicao_controller.py",
+          "size": 9468,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/domain/classificar_evento.py",
+          "name": "classificar_evento.py",
+          "size": 8604,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_sql_evento_tramitacao_repository.py",
+          "name": "test_sql_evento_tramitacao_repository.py",
+          "size": 8405,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/seed.py",
+          "name": "seed.py",
+          "size": 7340,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py",
+          "name": "sql_proposicao_repository.py",
+          "size": 7255,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/application/services/normalizar_tramitacao_service.py",
+          "name": "normalizar_tramitacao_service.py",
+          "size": 7163,
           "extension": ".py"
         }
       ]
@@ -157,8 +163,8 @@
     {
       "language": "TypeScript",
       "file_count": 81,
-      "total_bytes": 213142,
-      "percentage": 13.92,
+      "total_bytes": 214759,
+      "percentage": 12.31,
       "files": [
         {
           "path": "frontend/src/shared/lib/mock-data.ts",
@@ -187,7 +193,7 @@
         {
           "path": "frontend/src/features/dashboard/DashboardComponents.tsx",
           "name": "DashboardComponents.tsx",
-          "size": 9074,
+          "size": 9350,
           "extension": ".tsx"
         },
         {
@@ -199,7 +205,7 @@
         {
           "path": "frontend/src/pages/detalhe-proposicao-page.tsx",
           "name": "detalhe-proposicao-page.tsx",
-          "size": 7559,
+          "size": 7607,
           "extension": ".tsx"
         },
         {
@@ -215,18 +221,18 @@
           "extension": ".tsx"
         },
         {
-          "path": "squad-dashboard/src/pages/dashboard-page.tsx",
-          "name": "dashboard-page.tsx",
-          "size": 6437,
-          "extension": ".tsx"
+          "path": "frontend/src/shared/lib/api.ts",
+          "name": "api.ts",
+          "size": 6552,
+          "extension": ".ts"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 33,
-      "total_bytes": 153608,
-      "percentage": 10.03,
+      "file_count": 49,
+      "total_bytes": 193868,
+      "percentage": 11.11,
       "files": [
         {
           "path": "CLAUDE.md",
@@ -238,6 +244,12 @@
           "path": "docs/story-map.md",
           "name": "story-map.md",
           "size": 19153,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/adr/ADR-005-adapter-pattern.md",
+          "name": "ADR-005-adapter-pattern.md",
+          "size": 14617,
           "extension": ".md"
         },
         {
@@ -265,6 +277,12 @@
           "extension": ".md"
         },
         {
+          "path": ".gemini/skills/pr-reviewer/references/project-memory.md",
+          "name": "project-memory.md",
+          "size": 5840,
+          "extension": ".md"
+        },
+        {
           "path": "docs/ai/project-memory.md",
           "name": "project-memory.md",
           "size": 5840,
@@ -275,26 +293,14 @@
           "name": "ADR-009-squad-dashboard-ghpages.md",
           "size": 5654,
           "extension": ".md"
-        },
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 5608,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/MIGRATION_SCOPE.md",
-          "name": "MIGRATION_SCOPE.md",
-          "size": 5584,
-          "extension": ".md"
         }
       ]
     },
     {
       "language": "Unknown",
       "file_count": 6,
-      "total_bytes": 14849,
-      "percentage": 0.97,
+      "total_bytes": 15141,
+      "percentage": 0.87,
       "files": [
         {
           "path": "squad-dashboard/scripts/generate-github-data.mjs",
@@ -305,7 +311,7 @@
         {
           "path": "backend/.env.example",
           "name": ".env.example",
-          "size": 366,
+          "size": 658,
           "extension": ".example"
         },
         {
@@ -336,14 +342,20 @@
     },
     {
       "language": "Shell",
-      "file_count": 3,
-      "total_bytes": 6848,
-      "percentage": 0.45,
+      "file_count": 8,
+      "total_bytes": 11231,
+      "percentage": 0.64,
       "files": [
         {
           "path": "start_dev.sh",
           "name": "start_dev.sh",
-          "size": 2803,
+          "size": 2896,
+          "extension": ".sh"
+        },
+        {
+          "path": "start_gcp.sh",
+          "name": "start_gcp.sh",
+          "size": 2805,
           "extension": ".sh"
         },
         {
@@ -357,15 +369,45 @@
           "name": "sync-github-metadata.sh",
           "size": 1517,
           "extension": ".sh"
+        },
+        {
+          "path": ".gemini/skills/pr-reviewer/scripts/review-pr.sh",
+          "name": "review-pr.sh",
+          "size": 933,
+          "extension": ".sh"
+        },
+        {
+          "path": ".gemini/skills/github-issue-governor/scripts/validate-labels.sh",
+          "name": "validate-labels.sh",
+          "size": 278,
+          "extension": ".sh"
+        },
+        {
+          "path": ".gemini/skills/github-issue-governor/scripts/create-issue.sh",
+          "name": "create-issue.sh",
+          "size": 166,
+          "extension": ".sh"
+        },
+        {
+          "path": ".gemini/skills/github-issue-governor/scripts/list-open-issues.sh",
+          "name": "list-open-issues.sh",
+          "size": 108,
+          "extension": ".sh"
         }
       ]
     },
     {
       "language": "YAML",
-      "file_count": 6,
-      "total_bytes": 4918,
-      "percentage": 0.32,
+      "file_count": 7,
+      "total_bytes": 6546,
+      "percentage": 0.38,
       "files": [
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 1673,
+          "extension": ".yml"
+        },
         {
           "path": ".github/workflows/deploy-squad-dashboard.yml",
           "name": "deploy-squad-dashboard.yml",
@@ -373,9 +415,9 @@
           "extension": ".yml"
         },
         {
-          "path": "docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 1220,
+          "path": "docker-compose.gcp.yml",
+          "name": "docker-compose.gcp.yml",
+          "size": 932,
           "extension": ".yml"
         },
         {
@@ -387,7 +429,7 @@
         {
           "path": ".github/workflows/backend.yml",
           "name": "backend.yml",
-          "size": 598,
+          "size": 841,
           "extension": ".yml"
         },
         {
@@ -408,7 +450,7 @@
       "language": "JavaScript",
       "file_count": 5,
       "total_bytes": 4036,
-      "percentage": 0.26,
+      "percentage": 0.23,
       "files": [
         {
           "path": "frontend/tailwind.config.js",
@@ -446,7 +488,7 @@
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 2406,
-      "percentage": 0.16,
+      "percentage": 0.14,
       "files": [
         {
           "path": "LICENSE",
@@ -472,7 +514,7 @@
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 1871,
-      "percentage": 0.12,
+      "percentage": 0.11,
       "files": [
         {
           "path": "squad-dashboard/src/index.css",
@@ -489,10 +531,24 @@
       ]
     },
     {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 1951,
+      "percentage": 0.11,
+      "files": [
+        {
+          "path": "pr_body.txt",
+          "name": "pr_body.txt",
+          "size": 1951,
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 1163,
-      "percentage": 0.08,
+      "percentage": 0.07,
       "files": [
         {
           "path": "frontend/index.html",
@@ -511,13 +567,13 @@
     {
       "language": "TOML",
       "file_count": 1,
-      "total_bytes": 1008,
-      "percentage": 0.07,
+      "total_bytes": 1091,
+      "percentage": 0.06,
       "files": [
         {
           "path": "backend/pyproject.toml",
           "name": "pyproject.toml",
-          "size": 1008,
+          "size": 1091,
           "extension": ".toml"
         }
       ]
@@ -525,13 +581,13 @@
     {
       "language": "Git Ignore",
       "file_count": 2,
-      "total_bytes": 838,
+      "total_bytes": 840,
       "percentage": 0.05,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 666,
+          "size": 668,
           "extension": ".gitignore"
         },
         {
@@ -544,7 +600,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-19T09:13:16.647022",
+    "extracted_at": "2026-05-20T09:13:22.990193",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }
