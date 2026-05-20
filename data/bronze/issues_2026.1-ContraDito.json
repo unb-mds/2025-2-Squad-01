@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-19T08:20:37.483132",
+      "extracted_at": "2026-05-20T08:20:53.459295",
       "file_path": "data/bronze/issues_2026.1-ContraDito.json",
       "record_count": 48
     }
@@ -72,11 +72,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-13T13:51:20Z",
-      "updated_at": "2026-05-15T21:16:29Z",
+      "updated_at": "2026-05-20T02:16:46Z",
       "due_on": "2026-05-19T00:00:00Z",
       "closed_at": null
     },
@@ -86,6 +86,7 @@
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -152,7 +153,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -228,18 +229,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-13T13:51:20Z",
-      "updated_at": "2026-05-15T21:16:29Z",
+      "updated_at": "2026-05-20T02:16:46Z",
       "due_on": "2026-05-19T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-15T02:24:55Z",
-    "updated_at": "2026-05-17T19:53:38Z",
-    "closed_at": null,
+    "updated_at": "2026-05-20T02:16:46Z",
+    "closed_at": "2026-05-20T02:16:46Z",
     "assignee": {
       "login": "luizhtmoreira",
       "id": 210590632,
@@ -262,6 +263,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -275,8 +277,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\nDesenvolvimento conjunto (Pair Programming) do pipeline do Motor IA, NLP e RAG para a Sprint 08. O escopo abrange a orquestração de prompts cruzando textos de leis com discursos recuperados, além da aplicação de regras de negócio estritas para viés temporal, prevenção de falhas no LLM e processamento de textos extensos.\n\n## Objetivo\nGarantir que o modelo de Inteligência Artificial receba o contexto exato e seguro para gerar o veredito de coerência, evitando alucinações (checagem de vetores vazios), respeitando a linha do tempo (viés temporal) e lidando bem com leis muito longas (chunking).\n\n## Requisitos (Critérios de Aceite)\n- [ ] O prompt RAG deve concatenar com sucesso o Texto da Lei com os Top-k Discursos recuperados do banco [RF30, RF31].\n- [ ] A busca de discursos deve respeitar o limite de viés temporal definido nas regras de negócio [RN01].\n- [ ] O sistema deve possuir uma \"trava\" que aborte a chamada ao LLM (evitando custos e alucinações) caso a busca vetorial não retorne resultados [RN02].\n- [ ] Leis e matérias legislativas muito longas devem passar por uma estratégia de Chunking e resumo (summarization) antes de entrarem no prompt RAG [RF35].\n- [ ] Estudar a troca do modelo Llama pelo modelo maritaca\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint e no cálculo principal do produto.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [ ] Configurar lógica de concatenação RAG (Lei + Top-k Discursos).\n- [ ] Implementar filtro de viés temporal na query do banco vetorial.\n- [ ] Criar validação de *early return* (aborto) para arrays vetoriais vazios.\n- [ ] Desenvolver função de Chunking text split e resumo de contexto longo.\n- [ ] **Spike de Implementação (Maritaca AI):** Analisar a documentação da API MariTalk, mapear o esforço para substituir o LLaMA no código atual e estruturar o novo fluxo de chamadas (autenticação, rate limits e adaptação do prompt RAG).\n- [ ] Testar integração do fluxo completo em Pair Programming.\n\n## Responsáveis\n@matheus0346 e @luizhtmoreira\n\n## Anexo\n- Documentação de Requisitos (RF30, RF31, RF35, RN01, RN02).\n- Link: https://unb-mds.github.io/2026.1-ContraDito/requisitos/\n\nRF30 – Recuperação de Contexto (Busca Semântica Interna): Para cada parlamentar que registrou voto, o sistema deve executar uma busca vetorial recuperando os chunks de discursos do próprio parlamentar que estejam mais próximos semanticamente do texto da matéria em votação.\n\nRF31 – Orquestração de Prompt (Filter): O sistema deve concatenar o texto da matéria legislativa com os top-k chunks recuperados no RF30, montando dinamicamente o prompt de contexto que será enviado ao LLM.\n\nRF35 – Processamento de Matérias Extensas: Para matérias cujo texto integral exceda o limite de contexto do modelo de embedding, o sistema deve priorizar a vetorização da Ementa ou gerar um Resumo Global via LLM antes da persistência vetorial.\n\nRN01 – Restrição de Viés Temporal: A recuperação de contexto deve considerar apenas discursos proferidos em datas anteriores ou iguais à data da votação. É estritamente proibido utilizar discursos futuros para julgar um voto passado.\n\nRN02 – Aborto por Dados Insuficientes: Se a busca vetorial não retornar nenhum discurso que respeite o limite rigoroso estipulado, o acionamento do LLM deve ser abortado e o voto não entrará no denominador de cálculo do Score.",
-    "closed_by": null,
+    "body": "## Descrição\nDesenvolvimento conjunto (Pair Programming) do pipeline do Motor IA, NLP e RAG para a Sprint 08. O escopo abrange a orquestração de prompts cruzando textos de leis com discursos recuperados, além da aplicação de regras de negócio estritas para viés temporal, prevenção de falhas no LLM e processamento de textos extensos.\n\n## Objetivo\nGarantir que o modelo de Inteligência Artificial receba o contexto exato e seguro para gerar o veredito de coerência, evitando alucinações (checagem de vetores vazios), respeitando a linha do tempo (viés temporal) e lidando bem com leis muito longas (chunking).\n\n## Requisitos (Critérios de Aceite)\n- [ ] O prompt RAG deve concatenar com sucesso o Texto da Lei com os Top-k Discursos recuperados do banco [RF30, RF31].\n- [ ] A busca de discursos deve respeitar o limite de viés temporal definido nas regras de negócio [RN01].\n- [ ] O sistema deve possuir uma \"trava\" que aborte a chamada ao LLM (evitando custos e alucinações) caso a busca vetorial não retorne resultados [RN02].\n- [ ] Leis e matérias legislativas muito longas devem passar por uma estratégia de Chunking e resumo (summarization) antes de entrarem no prompt RAG [RF35].\n- [x] Estudar a troca do modelo Llama pelo modelo maritaca\n\n## Prioridade\n- [ ] **Baixa:** Não impacta o fluxo principal.\n- [ ] **Média:** Necessária para a continuidade do projeto.\n- [x] **Alta:** Impacto direto na entrega da sprint e no cálculo principal do produto.\n- [ ] **Urgente:** Bloqueia o time ou produção.\n\n## Checklist de Tarefas\n- [ ] Configurar lógica de concatenação RAG (Lei + Top-k Discursos).\n- [ ] Implementar filtro de viés temporal na query do banco vetorial.\n- [ ] Criar validação de *early return* (aborto) para arrays vetoriais vazios.\n- [ ] Desenvolver função de Chunking text split e resumo de contexto longo.\n- [ ] **Spike de Implementação (Maritaca AI):** Analisar a documentação da API MariTalk, mapear o esforço para substituir o LLaMA no código atual e estruturar o novo fluxo de chamadas (autenticação, rate limits e adaptação do prompt RAG).\n- [ ] Testar integração do fluxo completo em Pair Programming.\n\n## Responsáveis\n@matheus0346 e @luizhtmoreira\n\n## Anexo\n- Documentação de Requisitos (RF30, RF31, RF35, RN01, RN02).\n- Link: https://unb-mds.github.io/2026.1-ContraDito/requisitos/\n\nRF30 – Recuperação de Contexto (Busca Semântica Interna): Para cada parlamentar que registrou voto, o sistema deve executar uma busca vetorial recuperando os chunks de discursos do próprio parlamentar que estejam mais próximos semanticamente do texto da matéria em votação.\n\nRF31 – Orquestração de Prompt (Filter): O sistema deve concatenar o texto da matéria legislativa com os top-k chunks recuperados no RF30, montando dinamicamente o prompt de contexto que será enviado ao LLM.\n\nRF35 – Processamento de Matérias Extensas: Para matérias cujo texto integral exceda o limite de contexto do modelo de embedding, o sistema deve priorizar a vetorização da Ementa ou gerar um Resumo Global via LLM antes da persistência vetorial.\n\nRN01 – Restrição de Viés Temporal: A recuperação de contexto deve considerar apenas discursos proferidos em datas anteriores ou iguais à data da votação. É estritamente proibido utilizar discursos futuros para julgar um voto passado.\n\nRN02 – Aborto por Dados Insuficientes: Se a busca vetorial não retornar nenhum discurso que respeite o limite rigoroso estipulado, o acionamento do LLM deve ser abortado e o voto não entrará no denominador de cálculo do Score.",
+    "closed_by": {
+      "login": "luizhtmoreira",
+      "id": 210590632,
+      "node_id": "U_kgDODI1bqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/210590632?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/luizhtmoreira",
+      "html_url": "https://github.com/luizhtmoreira",
+      "followers_url": "https://api.github.com/users/luizhtmoreira/followers",
+      "following_url": "https://api.github.com/users/luizhtmoreira/following{/other_user}",
+      "gists_url": "https://api.github.com/users/luizhtmoreira/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/luizhtmoreira/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/luizhtmoreira/subscriptions",
+      "organizations_url": "https://api.github.com/users/luizhtmoreira/orgs",
+      "repos_url": "https://api.github.com/users/luizhtmoreira/repos",
+      "events_url": "https://api.github.com/users/luizhtmoreira/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/luizhtmoreira/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/119/reactions",
       "total_count": 0,
@@ -291,7 +313,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/119/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026.1-ContraDito"
   },
@@ -393,17 +415,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-13T13:51:20Z",
-      "updated_at": "2026-05-15T21:16:29Z",
+      "updated_at": "2026-05-20T02:16:46Z",
       "due_on": "2026-05-19T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-14T22:24:23Z",
-    "updated_at": "2026-05-14T22:24:23Z",
+    "updated_at": "2026-05-20T01:42:46Z",
     "closed_at": null,
     "assignee": {
       "login": "G2SBiell",
@@ -427,6 +449,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193716,
       "node_id": "IT_kwDOCH8E_c4BNCG0",
@@ -449,7 +472,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "###  Descrição\nEsta issue foca na melhoria da experiência do usuário (UX) e no refinamento da interface do \"Raio-X Parlamentar\". O objetivo é tornar a visualização das contradições mais intuitiva, suavizar o tempo de espera da API e garantir que o sistema forneça feedbacks claros em caso de erros ou buscas sem resultados.\n\n###  Tarefas \n\n- [ ] **Refatoração do Dossiê (RF08 - Provas da Contradição):** - Ajustar a página `politico/[id]/page.tsx`.\n  - Criar componente de tabela ou cards comparativos para contrastar o trecho do discurso vs. o voto oficial (Sim/Não).\n- [ ] **Feedback de Carregamento (RF36):**\n  - Remover o texto estático \"Montando dossiê...\".\n  - Implementar animações de **Skeleton Screen** para simular o carregamento dos cards de políticos e dados do dossiê.\n- [ ] **Tratamento de Estados (RF38 e RF39):**\n  - **Empty States:** Criar interface amigável para quando não houver contradições encontradas.\n  - **Error States:** Implementar mensagens de erro claras para falhas de comunicação com a API (ex: timeout ou erro 503 do Worker).\n\n###  Informações Técnicas\n- **Tecnologia:** Next.js / Tailwind CSS.\n- **Consumo de API:** Endpoints via Swagger.\n- **Arquivos principais:** `frontend/app/politico/[id]/page.tsx`.\n\n###  Resultados Esperados\n- Interface mais limpa e de fácil leitura para o jornalista investigativo.\n- Percepção de performance melhorada através de feedbacks visuais.\n- Redução da frustração do usuário em cenários de erro ou busca vazia.",
+    "body": "###  Descrição\nEsta issue foca na melhoria da experiência do usuário (UX) e no refinamento da interface do \"Raio-X Parlamentar\". O objetivo é tornar a visualização das contradições mais intuitiva, suavizar o tempo de espera da API e garantir que o sistema forneça feedbacks claros em caso de erros ou buscas sem resultados.\n\n###  Tarefas \n\n- [x] **Refatoração do Dossiê (RF08 - Provas da Contradição):** - Ajustar a página `politico/[id]/page.tsx`.\n  - Criar componente de tabela ou cards comparativos para contrastar o trecho do discurso vs. o voto oficial (Sim/Não).\n- [x] **Feedback de Carregamento (RF36):**\n  - Remover o texto estático \"Montando dossiê...\".\n  - Implementar animações de **Skeleton Screen** para simular o carregamento dos cards de políticos e dados do dossiê.\n- [x] **Tratamento de Estados (RF38 e RF39):**\n  - **Empty States:** Criar interface amigável para quando não houver contradições encontradas.\n  - **Error States:** Implementar mensagens de erro claras para falhas de comunicação com a API (ex: timeout ou erro 503 do Worker).\n\n###  Informações Técnicas\n- **Tecnologia:** Next.js / Tailwind CSS.\n- **Consumo de API:** Endpoints via Swagger.\n- **Arquivos principais:** `frontend/app/politico/[id]/page.tsx`.\n\n###  Resultados Esperados\n- Interface mais limpa e de fácil leitura para o jornalista investigativo.\n- Percepção de performance melhorada através de feedbacks visuais.\n- Redução da frustração do usuário em cenários de erro ou busca vazia.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/118/reactions",
@@ -578,11 +601,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-13T13:51:20Z",
-      "updated_at": "2026-05-15T21:16:29Z",
+      "updated_at": "2026-05-20T02:16:46Z",
       "due_on": "2026-05-19T00:00:00Z",
       "closed_at": null
     },
@@ -612,6 +635,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -697,6 +721,7 @@
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -810,6 +835,7 @@
     "closed_at": "2026-05-13T08:57:05Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -943,6 +969,7 @@
     "closed_at": "2026-05-12T04:23:20Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -1091,6 +1118,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -1214,6 +1242,7 @@
     "closed_at": "2026-05-13T08:56:59Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -1408,6 +1437,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -1551,6 +1581,7 @@
     "closed_at": "2026-05-13T08:56:45Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -1694,6 +1725,7 @@
     "closed_at": "2026-05-11T15:30:08Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -1879,6 +1911,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -2073,6 +2106,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193716,
       "node_id": "IT_kwDOCH8E_c4BNCG0",
@@ -2178,6 +2212,7 @@
     "closed_at": "2026-05-13T08:56:29Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -2321,6 +2356,7 @@
     "closed_at": "2026-05-11T15:30:07Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -2464,6 +2500,7 @@
     "closed_at": "2026-05-11T15:30:06Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -2607,6 +2644,7 @@
     "closed_at": "2026-05-03T21:23:56Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -2792,6 +2830,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -2944,6 +2983,7 @@
     "closed_at": "2026-05-11T15:30:04Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -3049,6 +3089,7 @@
     "closed_at": "2026-05-06T09:59:49Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -3182,6 +3223,7 @@
     "closed_at": "2026-04-29T21:15:00Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -3315,6 +3357,7 @@
     "closed_at": "2026-04-29T21:14:50Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -3500,6 +3543,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193716,
       "node_id": "IT_kwDOCH8E_c4BNCG0",
@@ -3642,6 +3686,7 @@
     "closed_at": "2026-04-29T21:14:41Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -3827,6 +3872,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -3960,6 +4006,7 @@
     "closed_at": "2026-04-29T21:14:36Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -4144,6 +4191,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -4240,6 +4288,7 @@
     "closed_at": "2026-04-22T09:39:32Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193713,
       "node_id": "IT_kwDOCH8E_c4BNCGx",
@@ -4345,6 +4394,7 @@
     "closed_at": "2026-04-29T21:15:22Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -4441,6 +4491,7 @@
     "closed_at": "2026-04-29T21:15:08Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -4574,6 +4625,7 @@
     "closed_at": "2026-04-21T19:20:46Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193716,
       "node_id": "IT_kwDOCH8E_c4BNCG0",
@@ -4777,6 +4829,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -4920,6 +4973,7 @@
     "closed_at": "2026-04-21T19:20:16Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -5104,6 +5158,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -5298,6 +5353,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193716,
       "node_id": "IT_kwDOCH8E_c4BNCG0",
@@ -5440,6 +5496,7 @@
     "closed_at": "2026-04-20T23:57:31Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -5573,6 +5630,7 @@
     "closed_at": "2026-04-21T19:20:03Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -5669,6 +5727,7 @@
     "closed_at": "2026-04-15T23:07:26Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -5802,6 +5861,7 @@
     "closed_at": "2026-04-20T23:57:30Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -5944,6 +6004,7 @@
     "closed_at": "2026-04-16T13:30:36Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6138,6 +6199,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6332,6 +6394,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6474,6 +6537,7 @@
     "closed_at": "2026-04-17T23:43:59Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6668,6 +6732,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6810,6 +6875,7 @@
     "closed_at": "2026-04-17T23:43:53Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
@@ -6915,6 +6981,7 @@
     "closed_at": "2026-04-09T20:49:03Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": null,
     "active_lock_reason": null,
     "sub_issues_summary": {
@@ -7100,6 +7167,7 @@
       "site_admin": false
     },
     "author_association": "COLLABORATOR",
+    "issue_field_values": [],
     "type": {
       "id": 20193710,
       "node_id": "IT_kwDOCH8E_c4BNCGu",
