@@ -2,16 +2,44 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-20T09:10:36.385105",
+  "extracted_at": "2026-05-21T09:20:58.188998",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
       {
+        "name": ".claude",
+        "type": "directory",
+        "path": ".claude",
+        "children": []
+      },
+      {
+        "name": "CLAUDE_MapaLILAS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 21618,
+        "extension": ".md",
+        "path": ".claude/CLAUDE_MapaLILAS.md"
+      },
+      {
         "name": ".github",
         "type": "directory",
         "path": ".github",
         "children": []
+      },
+      {
+        "name": "ISSUE_TEMPLATE",
+        "type": "directory",
+        "path": ".github/ISSUE_TEMPLATE",
+        "children": []
+      },
+      {
+        "name": "issue-padrao.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1964,
+        "extension": ".md",
+        "path": ".github/ISSUE_TEMPLATE/issue-padrao.md"
       },
       {
         "name": "workflows",
@@ -66,6 +94,14 @@
         "path": "backend/.env"
       },
       {
+        "name": "alembic.ini",
+        "type": "file",
+        "language": "INI",
+        "size": 740,
+        "extension": ".ini",
+        "path": "backend/alembic.ini"
+      },
+      {
         "name": "app",
         "type": "directory",
         "path": "backend/app",
@@ -75,7 +111,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 24,
+        "size": 29,
         "extension": ".gitignore",
         "path": "backend/app/.gitignore"
       },
@@ -94,6 +130,14 @@
         "path": "backend/app/__pycache__/main.cpython-311.pyc"
       },
       {
+        "name": "database.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1355,
+        "extension": ".py",
+        "path": "backend/app/database.py"
+      },
+      {
         "name": "main.py",
         "type": "file",
         "language": "Python",
@@ -102,18 +146,70 @@
         "path": "backend/app/main.py"
       },
       {
+        "name": "migrations",
+        "type": "directory",
+        "path": "backend/app/migrations",
+        "children": []
+      },
+      {
+        "name": "env.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2251,
+        "extension": ".py",
+        "path": "backend/app/migrations/env.py"
+      },
+      {
+        "name": "script.py.mako",
+        "type": "file",
+        "language": "Unknown",
+        "size": 643,
+        "extension": ".mako",
+        "path": "backend/app/migrations/script.py.mako"
+      },
+      {
+        "name": "ver",
+        "type": "directory",
+        "path": "backend/app/migrations/ver",
+        "children": []
+      },
+      {
+        "name": "001_ini_schema.py",
+        "type": "file",
+        "language": "Python",
+        "size": 10237,
+        "extension": ".py",
+        "path": "backend/app/migrations/ver/001_ini_schema.py"
+      },
+      {
+        "name": "models.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7675,
+        "extension": ".py",
+        "path": "backend/app/models.py"
+      },
+      {
         "name": "dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 628,
+        "size": 615,
         "extension": "",
         "path": "backend/dockerfile"
+      },
+      {
+        "name": "entrypoint.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 187,
+        "extension": ".sh",
+        "path": "backend/entrypoint.sh"
       },
       {
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 42,
+        "size": 66,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -121,7 +217,7 @@
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 355,
+        "size": 732,
         "extension": ".yml",
         "path": "docker-compose.yml"
       },
@@ -203,9 +299,31 @@
         "name": "Arquitetura_Tecnica.md",
         "type": "file",
         "language": "Markdown",
-        "size": 12627,
+        "size": 12469,
         "extension": ".md",
         "path": "docs/Arquitetura/Arquitetura_Tecnica.md"
+      },
+      {
+        "name": "Banco de Dados",
+        "type": "directory",
+        "path": "docs/Banco de Dados",
+        "children": []
+      },
+      {
+        "name": "image.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 162969,
+        "extension": ".png",
+        "path": "docs/Banco de Dados/image.png"
+      },
+      {
+        "name": "tables.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5746,
+        "extension": ".md",
+        "path": "docs/Banco de Dados/tables.md"
       },
       {
         "name": "Estudos",
@@ -643,7 +761,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 355,
+        "size": 380,
         "extension": ".html",
         "path": "frontend/index.html"
       },
@@ -651,7 +769,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 83696,
+        "size": 95481,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -659,7 +777,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 600,
+        "size": 699,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -673,7 +791,7 @@
         "name": "favicon.svg",
         "type": "file",
         "language": "SVG Image",
-        "size": 9522,
+        "size": 281,
         "extension": ".svg",
         "path": "frontend/public/favicon.svg"
       },
@@ -695,7 +813,7 @@
         "name": "App.css",
         "type": "file",
         "language": "CSS",
-        "size": 2891,
+        "size": 0,
         "extension": ".css",
         "path": "frontend/src/App.css"
       },
@@ -703,7 +821,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 3646,
+        "size": 349,
         "extension": ".jsx",
         "path": "frontend/src/App.jsx"
       },
@@ -738,10 +856,104 @@
         "path": "frontend/src/assets/vite.svg"
       },
       {
+        "name": "components",
+        "type": "directory",
+        "path": "frontend/src/components",
+        "children": []
+      },
+      {
+        "name": "Footer",
+        "type": "directory",
+        "path": "frontend/src/components/Footer",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1078,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Footer/index.jsx"
+      },
+      {
+        "name": "NavBar",
+        "type": "directory",
+        "path": "frontend/src/components/NavBar",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1290,
+        "extension": ".jsx",
+        "path": "frontend/src/components/NavBar/index.jsx"
+      },
+      {
+        "name": "ProjetosLei",
+        "type": "directory",
+        "path": "frontend/src/components/ProjetosLei",
+        "children": []
+      },
+      {
+        "name": "CardPL.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2377,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ProjetosLei/CardPL.jsx"
+      },
+      {
+        "name": "CardPLSkeleton.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1076,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ProjetosLei/CardPLSkeleton.jsx"
+      },
+      {
+        "name": "FiltrosBar.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3645,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ProjetosLei/FiltrosBar.jsx"
+      },
+      {
+        "name": "ListagemPL.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1636,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ProjetosLei/ListagemPL.jsx"
+      },
+      {
+        "name": "Paginacao.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1984,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ProjetosLei/Paginacao.jsx"
+      },
+      {
+        "name": "hooks",
+        "type": "directory",
+        "path": "frontend/src/hooks",
+        "children": []
+      },
+      {
+        "name": "useProjetosLei.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2124,
+        "extension": ".js",
+        "path": "frontend/src/hooks/useProjetosLei.js"
+      },
+      {
         "name": "index.css",
         "type": "file",
         "language": "CSS",
-        "size": 2169,
+        "size": 22,
         "extension": ".css",
         "path": "frontend/src/index.css"
       },
@@ -754,10 +966,58 @@
         "path": "frontend/src/main.jsx"
       },
       {
+        "name": "mocks",
+        "type": "directory",
+        "path": "frontend/src/mocks",
+        "children": []
+      },
+      {
+        "name": "projetosLei.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2908,
+        "extension": ".js",
+        "path": "frontend/src/mocks/projetosLei.js"
+      },
+      {
+        "name": "pages",
+        "type": "directory",
+        "path": "frontend/src/pages",
+        "children": []
+      },
+      {
+        "name": "ProjetosLei",
+        "type": "directory",
+        "path": "frontend/src/pages/ProjetosLei",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2882,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/ProjetosLei/index.jsx"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "frontend/src/services",
+        "children": []
+      },
+      {
+        "name": "api.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2352,
+        "extension": ".js",
+        "path": "frontend/src/services/api.js"
+      },
+      {
         "name": "vite.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 161,
+        "size": 281,
         "extension": ".js",
         "path": "frontend/vite.config.js"
       },
@@ -1718,7 +1978,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-20T09:13:22.043548",
+    "extracted_at": "2026-05-21T09:23:50.250236",
     "file_path": "data/silver/hierarchy_2026-1-Mapa_L.I.L.A.S.json"
   }
 }
