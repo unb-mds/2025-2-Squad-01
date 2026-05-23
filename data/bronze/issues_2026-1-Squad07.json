@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-22T08:17:26.785425",
+      "extracted_at": "2026-05-23T07:25:41.283133",
       "file_path": "data/bronze/issues_2026-1-Squad07.json",
       "record_count": 64
     }
@@ -49,7 +49,7 @@
         "description": "Telas e interface (HTML, CSS, React, etc)."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -104,18 +104,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-21T04:12:36Z",
-      "updated_at": "2026-05-22T00:24:58Z",
+      "updated_at": "2026-05-22T17:25:48Z",
       "due_on": "2026-05-25T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-22T00:24:42Z",
-    "updated_at": "2026-05-22T00:25:10Z",
-    "closed_at": null,
+    "updated_at": "2026-05-22T14:34:31Z",
+    "closed_at": "2026-05-22T14:34:31Z",
     "assignee": {
       "login": "Jonathan-Carpaneda",
       "id": 102928460,
@@ -153,7 +153,27 @@
       "total_blocking": 0
     },
     "body": "# Solicitação de Funcionalidade\n\n**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nAtualmente, temos o design e o fluxo de interação completamente definidos no Figma, mas os utilizadores e a equipe de desenvolvimento não conseguem testar ou interagir com o sistema na prática. A ausência da interface em código (frontend) impede-nos de ligar a aplicação à API do backend e validar as regras de negócio diretamente no navegador.\n\n**Descreva a solução desejada**\nA implementação completa em código do protótipo desenvolvido no Figma. A solução envolve a tradução dos ecrãs e componentes visuais para o frontend utilizando o ecossistema e os padrões definidos para o projeto. O resultado deve ser uma interface totalmente responsiva, que respeite fielmente o *design system* estipulado e que já conte com a arquitetura de componentes base pronta para a posterior integração de dados.\n\n**Descreva as alternativas que você considerou**\n* **Exportação automatizada de código:** Foi considerada a utilização de plugins do Figma (como Locofy ou Anima) para gerar o código frontend de forma automática. No entanto, esta abordagem foi descartada porque o código gerado costuma ser de difícil manutenção, não reutilizável e foge dos padrões estabelecidos na nossa arquitetura de software.\n* **Desenvolvimento de ecrãs monolíticos:** Em vez de codificar cada ecrã de forma isolada do zero, optou-se pela alternativa de construir primeiro uma estrutura sólida de componentes reutilizáveis (botões, inputs, modais) para só depois montar as páginas completas, garantindo a consistência global.\n\n**Contexto adicional**\n* **Link do Figma:** `[Inserir o link do protótipo aqui]`\n* **Prioridade de Entrega:** Os ecrãs prioritários para esta etapa são: `[Ex: Login, Dashboard Principal, Listagens]`.\n* **Nota de Arquitetura:** É fundamental garantir que a estrutura de pastas, a componentização e a gestão de estados sigam rigorosamente as diretrizes arquiteturais definidas para o projeto, assegurando a manutenibilidade e a escalabilidade à medida que o sistema cresce.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "pedrolrm",
+      "id": 141690806,
+      "node_id": "U_kgDOCHIHtg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141690806?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pedrolrm",
+      "html_url": "https://github.com/pedrolrm",
+      "followers_url": "https://api.github.com/users/pedrolrm/followers",
+      "following_url": "https://api.github.com/users/pedrolrm/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pedrolrm/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pedrolrm/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pedrolrm/subscriptions",
+      "organizations_url": "https://api.github.com/users/pedrolrm/orgs",
+      "repos_url": "https://api.github.com/users/pedrolrm/repos",
+      "events_url": "https://api.github.com/users/pedrolrm/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pedrolrm/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/90/reactions",
       "total_count": 0,
@@ -168,7 +188,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/90/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -288,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-21T04:12:36Z",
-      "updated_at": "2026-05-22T00:24:58Z",
+      "updated_at": "2026-05-22T17:25:48Z",
       "due_on": "2026-05-25T00:00:00Z",
       "closed_at": null
     },
@@ -472,11 +492,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -676,11 +696,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-21T04:12:36Z",
-      "updated_at": "2026-05-22T00:24:58Z",
+      "updated_at": "2026-05-22T17:25:48Z",
       "due_on": "2026-05-25T00:00:00Z",
       "closed_at": null
     },
@@ -878,11 +898,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -1027,6 +1047,15 @@
         "description": "Telas e interface (HTML, CSS, React, etc)."
       },
       {
+        "id": 10472763181,
+        "node_id": "LA_kwDORqqPns8AAAACcDmvLQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/area:%20backend%20%E2%9A%99%EF%B8%8F",
+        "name": "area: backend ⚙️",
+        "color": "5319e7",
+        "default": false,
+        "description": "Servidor e regras de negócio."
+      },
+      {
         "id": 10772372486,
         "node_id": "LA_kwDORqqPns8AAAACghVcBg",
         "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/release:%20mvp",
@@ -1091,17 +1120,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-14T01:05:53Z",
-    "updated_at": "2026-05-18T20:16:05Z",
+    "updated_at": "2026-05-22T17:30:34Z",
     "closed_at": null,
     "assignee": {
       "login": "Pedrop06",
@@ -1139,7 +1168,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\nCriar a tela mínima de submissão de texto legislativo para a Release 1, permitindo que o usuário envie uma proposição/lei para o backend.\n\n## Objetivo na Sprint 8\nConectar o fluxo visual do protótipo ao endpoint de submissão da issue #40, formando o primeiro fluxo funcional do produto.\n\n## Critérios de aceite\n- [ ] A tela possui formulário com campos mínimos de título e texto legislativo.\n- [ ] O frontend valida campos obrigatórios antes do envio.\n- [ ] O formulário envia os dados para o endpoint definido na issue #40.\n- [ ] A interface exibe feedback de sucesso ou erro para o usuário.\n- [ ] A implementação segue o protótipo de alta fidelidade da issue #65, quando aplicável.\n\n## Dependências\n- #40\n- #65",
+    "body": "## Descrição\nCriar a tela mínima de submissão de texto legislativo para a Release 1, permitindo que o usuário envie uma proposição/lei para o backend.\n\n## Objetivo na Sprint 8\nConectar o fluxo visual do protótipo ao endpoint de submissão da issue #40, formando o primeiro fluxo funcional do produto.\n\n## Critérios de aceite\n- [x] A tela possui formulário com campos mínimos de título e texto legislativo.\n- [x] O frontend valida campos obrigatórios antes do envio.\n- [ ] O formulário envia os dados para o endpoint definido na issue #40.\n- [ ] A interface exibe feedback de sucesso ou erro para o usuário.\n- [x] A implementação segue o protótipo de alta fidelidade da issue #65, quando aplicável.\n\n## Dependências\n- #40\n- #65",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/75/reactions",
@@ -1284,11 +1313,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -1488,11 +1517,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -1981,7 +2010,7 @@
         "description": "Primeira release"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2036,18 +2065,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-05-07T21:10:56Z",
-    "updated_at": "2026-05-21T23:19:17Z",
-    "closed_at": null,
+    "updated_at": "2026-05-22T17:28:32Z",
+    "closed_at": "2026-05-22T17:28:32Z",
     "assignee": {
       "login": "Pedrop06",
       "id": 163420259,
@@ -2085,7 +2114,27 @@
       "total_blocking": 0
     },
     "body": "**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nSempre fico frustrado quando o design visual não reflete fielmente as regras de negócio e os requisitos aprovados, gerando retrabalho na codificação do front-end.\n\n**Descreva a solução desejada**\nConcluir o protótipo de alta fidelidade no Figma, garantindo que todos os fluxos, componentes e interações correspondam estritamente aos requisitos funcionais refinados.\n\n**Descreva as alternativas que você considerou**\nUma descrição clara e concisa de quaisquer soluções ou recursos alternativos que você tenha considerado.\n\n**Contexto adicional**\nO protótipo deve servir como o guia visual absoluto para a implementação da próxima sprint.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/65/reactions",
       "total_count": 0,
@@ -2100,7 +2149,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/65/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2424,11 +2473,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -2633,11 +2682,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-21T04:12:36Z",
-      "updated_at": "2026-05-22T00:24:58Z",
+      "updated_at": "2026-05-22T17:25:48Z",
       "due_on": "2026-05-25T00:00:00Z",
       "closed_at": null
     },
@@ -3277,11 +3326,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -3461,11 +3510,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -3619,7 +3668,7 @@
         "description": "Código feito, aguardando revisão."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -3674,18 +3723,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-29T02:43:18Z",
-    "updated_at": "2026-05-12T14:36:04Z",
-    "closed_at": null,
+    "updated_at": "2026-05-22T17:28:06Z",
+    "closed_at": "2026-05-22T17:28:06Z",
     "assignee": {
       "login": "Pedrop06",
       "id": 163420259,
@@ -3723,7 +3772,27 @@
       "total_blocking": 0
     },
     "body": "**A sua solicitação de funcionalidade está relacionada a um problema? Por favor, descreva.**\nSempre fico frustrado quando começo a desenvolver telas e não tenho um guia centralizado de cores e fontes, gerando inconsistências visuais e retrabalho no CSS.\n\n**Descreva a solução desejada**\nExtrair todas as variáveis de design (cores primárias, secundárias, tamanhos de fontes e espaçamentos) do Figma e configurá-las globalmente no arquivo tailwind.config.js e no arquivo CSS base do projeto.\n\n**Descreva as alternativas que você considerou**\nInserir cores hexadecimais de forma \"hardcoded\" em cada componente individualmente, o que dificultaria mudanças de tema no futuro.\n\n**Contexto adicional**\nEsta tarefa é um bloqueio para as demais tarefas de front-end. Precisa ser a primeira a ser configurada no Next.js.\n\n\n**Adições:** \n\n- [x] Parte da identidade visual adicionada no figma com as cores, padronizações e tamanhos\n- [x] Organização das pastas do frontend\n- [x] Criação do arquivo css \"globals.css\" para os atributos globais de frontend do site\n- [x] Criação dos arquivos .tpx \"layout.tpx\" e \"page.tpx\" para definição de layout de páginas e a página inicial do projeto\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/55/reactions",
       "total_count": 0,
@@ -3738,7 +3807,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/55/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -3812,7 +3881,7 @@
         "description": "Requisitos funcionais ou nao funcionais"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -3888,18 +3957,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-26T23:57:21Z",
-    "updated_at": "2026-05-12T14:36:03Z",
-    "closed_at": null,
+    "updated_at": "2026-05-22T17:26:55Z",
+    "closed_at": "2026-05-22T17:26:55Z",
     "assignee": {
       "login": "Pedrop06",
       "id": 163420259,
@@ -3938,7 +4007,27 @@
       "total_blocking": 0
     },
     "body": "Descrição:\nDescrição do Problema:\nPara garantir o padrão de documentação do Squad 07 e facilitar a manutenção futura, foi realizada a estruturação inicial do arquivo no Figma e a definição da estratégia de usuário.\n\nTarefas Realizadas:\n\nConfiguração de Template: Preenchimento dos dados institucionais do grupo (Nome, Squad 07, Semestre/Ano).\n\nDefinição de Funções: Atualização da seção de membros com a atribuição das funções de cada integrante (Arquitetura, Front-end, Back-end, etc.).\n\nCriação de Persona: Elaboração da persona básica focada no Político/Assessor Estratégico, alinhando o propósito técnico do site (avaliação de leis) com a necessidade do usuário final.\n\nIntegração de Wireframe: Inserção e organização dos wireframes iniciais dentro das páginas padronizadas do Figma para consulta da equipe de desenvolvimento.\n\nEntregáveis:\n\n- [ ]  Capa e Status do Projeto atualizados.\n\n- [ ] Seção de Documentação preenchida.\n\n- [ ] Página de Persona configurada.\n\n- [ ] Fluxo de telas organizado para Handoff.\n\nLinks Relacionados:\n(https://www.figma.com/board/36xgX88dsxdaDOt55acXei/Squad7?node-id=0-1&p=f&t=6UIDk8p5TeC0C5Fi-0)",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/53/reactions",
       "total_count": 0,
@@ -3953,7 +4042,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/53/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -5464,11 +5553,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -7352,11 +7441,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 8,
+      "open_issues": 3,
+      "closed_issues": 11,
       "state": "open",
       "created_at": "2026-05-12T14:35:03Z",
-      "updated_at": "2026-05-22T01:36:05Z",
+      "updated_at": "2026-05-22T17:28:32Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": null
     },
@@ -7510,7 +7599,7 @@
         "description": "Código feito, aguardando revisão."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -7565,18 +7654,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-21T04:12:36Z",
-      "updated_at": "2026-05-22T00:24:58Z",
+      "updated_at": "2026-05-22T17:25:48Z",
       "due_on": "2026-05-25T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-22T01:50:51Z",
-    "updated_at": "2026-05-21T04:13:25Z",
-    "closed_at": null,
+    "updated_at": "2026-05-22T17:25:48Z",
+    "closed_at": "2026-05-22T17:25:48Z",
     "assignee": {
       "login": "Pedrop06",
       "id": 163420259,
@@ -7604,8 +7693,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 1,
-      "completed": 0,
-      "percent_completed": 0
+      "completed": 1,
+      "percent_completed": 100
     },
     "parent_issue_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/20",
     "issue_dependencies_summary": {
@@ -7615,7 +7704,27 @@
       "total_blocking": 0
     },
     "body": "**Descrição do Problema:**\n\nEmbora os fluxos e ecrãs já estejam desenhados, o ficheiro de design ainda não segue os padrões de documentação e organização interna da equipe, o que pode dificultar a manutenção futura e o *handoff* para outros programadores.\n\n**Tarefas Pendentes:**\n\n* \\[ \\] **Configuração do Template:** Duplicar e preencher as informações iniciais do template oficial (Capa, Status do Projeto). ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/27/reactions",
       "total_count": 0,
@@ -7630,7 +7739,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/27/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -8443,8 +8552,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 1,
-      "completed": 0,
-      "percent_completed": 0
+      "completed": 1,
+      "percent_completed": 100
     },
     "issue_dependencies_summary": {
       "blocked_by": 0,
