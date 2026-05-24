@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad4-Dito_e_Feito",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-23T08:09:45.716245",
+  "analyzed_at": "2026-05-24T08:31:00.413306",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 42,
-  "total_bytes": 201512,
+  "total_files": 46,
+  "total_bytes": 214727,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 28,
-      "total_bytes": 113334,
-      "percentage": 56.24,
+      "file_count": 31,
+      "total_bytes": 123932,
+      "percentage": 57.72,
       "files": [
         {
           "path": "docs/estudos/pln_ia/arquitetura_ia.md",
@@ -59,6 +59,12 @@
           "extension": ".md"
         },
         {
+          "path": "backend/database/Migrations.md",
+          "name": "Migrations.md",
+          "size": 5111,
+          "extension": ".md"
+        },
+        {
           "path": "docs/estudos/banco_de_dados/tipos_dados.md",
           "name": "tipos_dados.md",
           "size": 4969,
@@ -69,12 +75,6 @@
           "name": "introducao_postgresql.md",
           "size": 4820,
           "extension": ".md"
-        },
-        {
-          "path": "docs/tecnologias/conexao_banco.md",
-          "name": "conexao_banco.md",
-          "size": 4069,
-          "extension": ".md"
         }
       ]
     },
@@ -82,7 +82,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 42056,
-      "percentage": 20.87,
+      "percentage": 19.59,
       "files": [
         {
           "path": "analytics/index.html",
@@ -102,7 +102,7 @@
       "language": "Python",
       "file_count": 2,
       "total_bytes": 25477,
-      "percentage": 12.64,
+      "percentage": 11.86,
       "files": [
         {
           "path": "backend/pesquisa_deputados.py",
@@ -119,10 +119,30 @@
       ]
     },
     {
+      "language": "SQL",
+      "file_count": 2,
+      "total_bytes": 6329,
+      "percentage": 2.95,
+      "files": [
+        {
+          "path": "backend/database/schema.sql",
+          "name": "schema.sql",
+          "size": 3712,
+          "extension": ".sql"
+        },
+        {
+          "path": "backend/database/Migrations.sql",
+          "name": "Migrations.sql",
+          "size": 2617,
+          "extension": ".sql"
+        }
+      ]
+    },
+    {
       "language": "YAML",
       "file_count": 3,
       "total_bytes": 6322,
-      "percentage": 3.14,
+      "percentage": 2.94,
       "files": [
         {
           "path": "mkdocs.yml",
@@ -148,7 +168,7 @@
       "language": "JavaScript",
       "file_count": 1,
       "total_bytes": 5665,
-      "percentage": 2.81,
+      "percentage": 2.64,
       "files": [
         {
           "path": "scripts/collect.js",
@@ -159,24 +179,10 @@
       ]
     },
     {
-      "language": "SQL",
-      "file_count": 1,
-      "total_bytes": 3712,
-      "percentage": 1.84,
-      "files": [
-        {
-          "path": "backend/database/schema.sql",
-          "name": "schema.sql",
-          "size": 3712,
-          "extension": ".sql"
-        }
-      ]
-    },
-    {
       "language": "JSON",
       "file_count": 2,
       "total_bytes": 3530,
-      "percentage": 1.75,
+      "percentage": 1.64,
       "files": [
         {
           "path": "metrics.json",
@@ -196,7 +202,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.53,
+      "percentage": 0.49,
       "files": [
         {
           "path": "LICENSE",
@@ -210,7 +216,7 @@
       "language": "Git Ignore",
       "file_count": 1,
       "total_bytes": 296,
-      "percentage": 0.15,
+      "percentage": 0.14,
       "files": [
         {
           "path": ".gitignore",
@@ -236,7 +242,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-23T08:12:23.515784",
+    "extracted_at": "2026-05-24T08:33:43.854929",
     "file_path": "data/silver/language_analysis_2026-1-Squad4-Dito_e_Feito.json"
   }
 }
