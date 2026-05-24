@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-23T07:25:44.162032",
+      "extracted_at": "2026-05-24T07:45:50.356728",
       "file_path": "data/bronze/prs_2026.1-ContraDito.json",
       "record_count": 52
     }
@@ -39,7 +39,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -94,18 +94,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-05-20T22:20:04Z",
-      "updated_at": "2026-05-22T21:43:55Z",
+      "updated_at": "2026-05-23T11:13:35Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-05-22T21:43:10Z",
-    "updated_at": "2026-05-22T21:43:10Z",
-    "closed_at": null,
+    "updated_at": "2026-05-23T11:13:35Z",
+    "closed_at": "2026-05-23T11:13:35Z",
     "assignee": {
       "login": "luizhtmoreira",
       "id": 210590632,
@@ -137,10 +137,30 @@
       "html_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/129",
       "diff_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/129.diff",
       "patch_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/129.patch",
-      "merged_at": null
+      "merged_at": "2026-05-23T11:13:35Z"
     },
     "body": "## O que este PR faz?\r\nAdiciona os scripts, dados de teste e resultados do *Spike* de validação da stack de LLM para inferência de postura parlamentar.\r\n\r\n## Mudanças Principais\r\n- **Scripts de Teste (`00` a `04`):** Fluxo completo de extração, geração de resumos e inferência de postura comparando 5 modelos diferentes.\r\n- **Otimização em Nuvem:** Adição do notebook `benchmark_llama31_8b_colab.ipynb` contendo o pipeline otimizado para o Google Colab (GPU T4, processamento em *batching*, *Chain of Thought* e extração blindada por Regex).\r\n- **Mocks e Resultados:** Inclusão dos textos de 4 PLs reais, 8 discursos mockados utilizados na validação e os JSONs de saída gerados por cada modelo testado.\r\n\r\n## Contexto Adicional\r\nEste PR consolida e documenta a decisão técnica de seguirmos com o modelo **Llama 3.1 8B** para produção. O pipeline local se mostrou inviável para o volume de carga real (~220h estimadas para 42.5k inferências), obstáculo contornado com a refatoração do processamento para a GPU na nuvem, reduzindo o tempo de resposta de ~19s para ~3s por item.\r\n\r\n**Relacionado à Issue:** #124 ",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/129/reactions",
       "total_count": 0,
