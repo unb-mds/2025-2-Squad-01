@@ -2,18 +2,26 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-24T08:31:05.566428",
+  "extracted_at": "2026-05-25T09:37:58.756721",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
       {
-        "name": ".env.example",
+        "name": ".env_docker.exemplo",
         "type": "file",
         "language": "Unknown",
-        "size": 445,
-        "extension": ".example",
-        "path": ".env.example"
+        "size": 485,
+        "extension": ".exemplo",
+        "path": ".env_docker.exemplo"
+      },
+      {
+        "name": ".env_local.exemplo",
+        "type": "file",
+        "language": "Unknown",
+        "size": 450,
+        "extension": ".exemplo",
+        "path": ".env_local.exemplo"
       },
       {
         "name": ".github",
@@ -39,9 +47,17 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 73,
+        "size": 3611,
         "extension": ".gitignore",
         "path": ".gitignore"
+      },
+      {
+        "name": ".python-version",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5,
+        "extension": ".python-version",
+        "path": ".python-version"
       },
       {
         "name": "LICENSE",
@@ -52,26 +68,48 @@
         "path": "LICENSE"
       },
       {
-        "name": "PROJECT_SPEC.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 4686,
-        "extension": ".md",
-        "path": "PROJECT_SPEC.md"
-      },
-      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1868,
+        "size": 2722,
         "extension": ".md",
         "path": "README.md"
+      },
+      {
+        "name": "compose.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 869,
+        "extension": ".yml",
+        "path": "compose.yml"
+      },
+      {
+        "name": "dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 797,
+        "extension": "",
+        "path": "dockerfile"
       },
       {
         "name": "docs",
         "type": "directory",
         "path": "docs",
         "children": []
+      },
+      {
+        "name": "releases",
+        "type": "directory",
+        "path": "docs/releases",
+        "children": []
+      },
+      {
+        "name": "release_note_v0.1.0.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2124,
+        "extension": ".md",
+        "path": "docs/releases/release_note_v0.1.0.md"
       },
       {
         "name": "sprint-0.md",
@@ -224,36 +262,132 @@
         "path": "estudo/estudo_requisitos.md"
       },
       {
-        "name": "index.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 485,
-        "extension": ".html",
-        "path": "index.html"
+        "name": "figma",
+        "type": "directory",
+        "path": "figma",
+        "children": []
       },
       {
-        "name": "metadata.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 217,
-        "extension": ".json",
-        "path": "metadata.json"
+        "name": "print1",
+        "type": "directory",
+        "path": "figma/print1",
+        "children": []
       },
       {
-        "name": "package-lock.json",
+        "name": "concepcao_inicial.png",
         "type": "file",
-        "language": "JSON",
-        "size": 166494,
-        "extension": ".json",
-        "path": "package-lock.json"
+        "language": "PNG Image",
+        "size": 93716,
+        "extension": ".png",
+        "path": "figma/print1/concepcao_inicial.png"
       },
       {
-        "name": "package.json",
+        "name": "print2",
+        "type": "directory",
+        "path": "figma/print2",
+        "children": []
+      },
+      {
+        "name": "concepcao_modificada.png",
         "type": "file",
-        "language": "JSON",
-        "size": 917,
-        "extension": ".json",
-        "path": "package.json"
+        "language": "PNG Image",
+        "size": 511060,
+        "extension": ".png",
+        "path": "figma/print2/concepcao_modificada.png"
+      },
+      {
+        "name": "print3",
+        "type": "directory",
+        "path": "figma/print3",
+        "children": []
+      },
+      {
+        "name": "alertas_novo.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 499464,
+        "extension": ".png",
+        "path": "figma/print3/alertas_novo.png"
+      },
+      {
+        "name": "print4",
+        "type": "directory",
+        "path": "figma/print4",
+        "children": []
+      },
+      {
+        "name": "central_user.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 469520,
+        "extension": ".png",
+        "path": "figma/print4/central_user.png"
+      },
+      {
+        "name": "print5",
+        "type": "directory",
+        "path": "figma/print5",
+        "children": []
+      },
+      {
+        "name": "favoritos.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 373750,
+        "extension": ".png",
+        "path": "figma/print5/favoritos.png"
+      },
+      {
+        "name": "print6",
+        "type": "directory",
+        "path": "figma/print6",
+        "children": []
+      },
+      {
+        "name": "mapa.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 475205,
+        "extension": ".png",
+        "path": "figma/print6/mapa.png"
+      },
+      {
+        "name": "print7",
+        "type": "directory",
+        "path": "figma/print7",
+        "children": []
+      },
+      {
+        "name": "aprovadad.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 617214,
+        "extension": ".png",
+        "path": "figma/print7/aprovadad.png"
+      },
+      {
+        "name": "manage.py",
+        "type": "file",
+        "language": "Python",
+        "size": 662,
+        "extension": ".py",
+        "path": "manage.py"
+      },
+      {
+        "name": "pyproject.toml",
+        "type": "file",
+        "language": "TOML",
+        "size": 283,
+        "extension": ".toml",
+        "path": "pyproject.toml"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 62,
+        "extension": ".txt",
+        "path": "requirements.txt"
       },
       {
         "name": "src",
@@ -262,141 +396,71 @@
         "children": []
       },
       {
-        "name": "App.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 16290,
-        "extension": ".tsx",
-        "path": "src/App.tsx"
-      },
-      {
-        "name": "components",
+        "name": "config",
         "type": "directory",
-        "path": "src/components",
+        "path": "src/config",
         "children": []
       },
       {
-        "name": "ActivityHeatmap.tsx",
+        "name": "__init__.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 2973,
-        "extension": ".tsx",
-        "path": "src/components/ActivityHeatmap.tsx"
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "src/config/__init__.py"
       },
       {
-        "name": "Charts.tsx",
+        "name": "asgi.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 5785,
-        "extension": ".tsx",
-        "path": "src/components/Charts.tsx"
+        "language": "Python",
+        "size": 389,
+        "extension": ".py",
+        "path": "src/config/asgi.py"
       },
       {
-        "name": "CollaboratorStats.tsx",
+        "name": "settings.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 5064,
-        "extension": ".tsx",
-        "path": "src/components/CollaboratorStats.tsx"
+        "language": "Python",
+        "size": 3559,
+        "extension": ".py",
+        "path": "src/config/settings.py"
       },
       {
-        "name": "CommitLog.tsx",
+        "name": "urls.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 2889,
-        "extension": ".tsx",
-        "path": "src/components/CommitLog.tsx"
+        "language": "Python",
+        "size": 762,
+        "extension": ".py",
+        "path": "src/config/urls.py"
       },
       {
-        "name": "DiffSection.tsx",
+        "name": "wsgi.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 7298,
-        "extension": ".tsx",
-        "path": "src/components/DiffSection.tsx"
+        "language": "Python",
+        "size": 389,
+        "extension": ".py",
+        "path": "src/config/wsgi.py"
       },
       {
-        "name": "LandingPage.tsx",
+        "name": "manage.py",
         "type": "file",
-        "language": "TypeScript",
-        "size": 18660,
-        "extension": ".tsx",
-        "path": "src/components/LandingPage.tsx"
+        "language": "Python",
+        "size": 662,
+        "extension": ".py",
+        "path": "src/manage.py"
       },
       {
-        "name": "WeeklyTimeline.tsx",
+        "name": "uv.lock",
         "type": "file",
-        "language": "TypeScript",
-        "size": 5898,
-        "extension": ".tsx",
-        "path": "src/components/WeeklyTimeline.tsx"
-      },
-      {
-        "name": "index.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 1112,
-        "extension": ".css",
-        "path": "src/index.css"
-      },
-      {
-        "name": "lib",
-        "type": "directory",
-        "path": "src/lib",
-        "children": []
-      },
-      {
-        "name": "github.ts",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 2562,
-        "extension": ".ts",
-        "path": "src/lib/github.ts"
-      },
-      {
-        "name": "types.ts",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 680,
-        "extension": ".ts",
-        "path": "src/lib/types.ts"
-      },
-      {
-        "name": "utils.ts",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 392,
-        "extension": ".ts",
-        "path": "src/lib/utils.ts"
-      },
-      {
-        "name": "main.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 231,
-        "extension": ".tsx",
-        "path": "src/main.tsx"
-      },
-      {
-        "name": "tsconfig.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 508,
-        "extension": ".json",
-        "path": "tsconfig.json"
-      },
-      {
-        "name": "vite.config.ts",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 721,
-        "extension": ".ts",
-        "path": "vite.config.ts"
+        "language": "Lock File",
+        "size": 17370,
+        "extension": ".lock",
+        "path": "uv.lock"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-24T08:33:46.348224",
+    "extracted_at": "2026-05-25T09:40:42.459696",
     "file_path": "data/silver/hierarchy_2026-1-P.R.I.S.M.A.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-24T08:30:59.082387",
+  "analyzed_at": "2026-05-25T09:37:51.740924",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 87,
-  "total_bytes": 1009516,
+  "total_files": 89,
+  "total_bytes": 1313243,
   "languages": [
     {
       "language": "JPEG Image",
       "file_count": 4,
       "total_bytes": 753797,
-      "percentage": 74.67,
+      "percentage": 57.4,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -43,10 +43,30 @@
       ]
     },
     {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 294805,
+      "percentage": 22.45,
+      "files": [
+        {
+          "path": "docs/imagens/logo-nome.png",
+          "name": "logo-nome.png",
+          "size": 188130,
+          "extension": ".png"
+        },
+        {
+          "path": "docs/imagens/logo-escudo.PNG",
+          "name": "logo-escudo.PNG",
+          "size": 106675,
+          "extension": ".PNG"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
       "file_count": 61,
-      "total_bytes": 218553,
-      "percentage": 21.65,
+      "total_bytes": 225963,
+      "percentage": 17.21,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -85,6 +105,12 @@
           "extension": ".md"
         },
         {
+          "path": "docs/index.md",
+          "name": "index.md",
+          "size": 7633,
+          "extension": ".md"
+        },
+        {
           "path": "docs/Estudos/estudo_rss.md",
           "name": "estudo_rss.md",
           "size": 6753,
@@ -101,53 +127,33 @@
           "name": "spec-dashboard.md",
           "size": 6552,
           "extension": ".md"
-        },
-        {
-          "path": "CODE_OF_CONDUCT.md",
-          "name": "CODE_OF_CONDUCT.md",
-          "size": 6112,
-          "extension": ".md"
         }
       ]
     },
     {
       "language": "HTML",
       "file_count": 1,
-      "total_bytes": 15987,
-      "percentage": 1.58,
+      "total_bytes": 16261,
+      "percentage": 1.24,
       "files": [
         {
           "path": "docs/productivity/index.html",
           "name": "index.html",
-          "size": 15987,
+          "size": 16261,
           "extension": ".html"
-        }
-      ]
-    },
-    {
-      "language": "JSON",
-      "file_count": 1,
-      "total_bytes": 6474,
-      "percentage": 0.64,
-      "files": [
-        {
-          "path": "docs/productivity/metrics.json",
-          "name": "metrics.json",
-          "size": 6474,
-          "extension": ".json"
         }
       ]
     },
     {
       "language": "Python",
       "file_count": 7,
-      "total_bytes": 6306,
-      "percentage": 0.62,
+      "total_bytes": 7149,
+      "percentage": 0.54,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
           "name": "collect_metrics.py",
-          "size": 3946,
+          "size": 4789,
           "extension": ".py"
         },
         {
@@ -189,10 +195,24 @@
       ]
     },
     {
+      "language": "JSON",
+      "file_count": 1,
+      "total_bytes": 6809,
+      "percentage": 0.52,
+      "files": [
+        {
+          "path": "docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 6809,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
       "language": "No Extension",
       "file_count": 2,
       "total_bytes": 4227,
-      "percentage": 0.42,
+      "percentage": 0.32,
       "files": [
         {
           "path": "docs/Estudos/estudo-de-agentes-de-IA",
@@ -211,13 +231,13 @@
     {
       "language": "YAML",
       "file_count": 4,
-      "total_bytes": 4053,
-      "percentage": 0.4,
+      "total_bytes": 4113,
+      "percentage": 0.31,
       "files": [
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 1521,
+          "size": 1622,
           "extension": ".yml"
         },
         {
@@ -229,7 +249,7 @@
         {
           "path": ".github/workflows/docs.yml",
           "name": "docs.yml",
-          "size": 808,
+          "size": 767,
           "extension": ".yml"
         },
         {
@@ -308,7 +328,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-24T08:33:45.861903",
+    "extracted_at": "2026-05-25T09:40:41.991494",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }
