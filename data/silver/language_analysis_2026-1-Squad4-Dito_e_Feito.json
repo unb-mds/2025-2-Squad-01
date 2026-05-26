@@ -2,24 +2,30 @@
   "repository": "2026-1-Squad4-Dito_e_Feito",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-25T09:37:53.204353",
+  "analyzed_at": "2026-05-26T09:17:40.893252",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 82,
-  "total_bytes": 480228,
+  "total_files": 91,
+  "total_bytes": 645376,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 6,
-      "total_bytes": 173703,
-      "percentage": 36.17,
+      "file_count": 7,
+      "total_bytes": 226727,
+      "percentage": 35.13,
       "files": [
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
           "size": 126730,
+          "extension": ".json"
+        },
+        {
+          "path": "backend/dashboard_metrics.json",
+          "name": "dashboard_metrics.json",
+          "size": 53024,
           "extension": ".json"
         },
         {
@@ -56,9 +62,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 32,
-      "total_bytes": 124983,
-      "percentage": 26.03,
+      "file_count": 34,
+      "total_bytes": 134189,
+      "percentage": 20.79,
       "files": [
         {
           "path": "docs/estudos/pln_ia/arquitetura_ia.md",
@@ -82,6 +88,12 @@
           "path": "docs/estudos/banco_de_dados/modelagem_entidades.md",
           "name": "modelagem_entidades.md",
           "size": 6564,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/fluxo_pipeline_dashboard.md",
+          "name": "fluxo_pipeline_dashboard.md",
+          "size": 6210,
           "extension": ".md"
         },
         {
@@ -113,20 +125,66 @@
           "name": "tipos_dados.md",
           "size": 4969,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 3,
+      "total_bytes": 80655,
+      "percentage": 12.5,
+      "files": [
+        {
+          "path": "backend/dashboard.html",
+          "name": "dashboard.html",
+          "size": 57283,
+          "extension": ".html"
         },
         {
-          "path": "docs/estudos/banco_de_dados/introducao_postgresql.md",
-          "name": "introducao_postgresql.md",
-          "size": 4820,
-          "extension": ".md"
+          "path": "analytics/index.html",
+          "name": "index.html",
+          "size": 22668,
+          "extension": ".html"
+        },
+        {
+          "path": "frontend/index.html",
+          "name": "index.html",
+          "size": 704,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 3,
+      "total_bytes": 77254,
+      "percentage": 11.97,
+      "files": [
+        {
+          "path": "backend/scan_senators.py",
+          "name": "scan_senators.py",
+          "size": 40387,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/api.py",
+          "name": "api.py",
+          "size": 24204,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/pipe.py",
+          "name": "pipe.py",
+          "size": 12663,
+          "extension": ".py"
         }
       ]
     },
     {
       "language": "JavaScript",
       "file_count": 22,
-      "total_bytes": 54808,
-      "percentage": 11.41,
+      "total_bytes": 55971,
+      "percentage": 8.67,
       "files": [
         {
           "path": "frontend/src/pages/Comparacao.jsx",
@@ -143,7 +201,7 @@
         {
           "path": "scripts/collect.js",
           "name": "collect.js",
-          "size": 5665,
+          "size": 6828,
           "extension": ".js"
         },
         {
@@ -191,36 +249,10 @@
       ]
     },
     {
-      "language": "HTML",
-      "file_count": 3,
-      "total_bytes": 42760,
-      "percentage": 8.9,
-      "files": [
-        {
-          "path": "analytics/index.html",
-          "name": "index.html",
-          "size": 22668,
-          "extension": ".html"
-        },
-        {
-          "path": "index.html",
-          "name": "index.html",
-          "size": 19388,
-          "extension": ".html"
-        },
-        {
-          "path": "frontend/index.html",
-          "name": "index.html",
-          "size": 704,
-          "extension": ".html"
-        }
-      ]
-    },
-    {
       "language": "SVG Image",
       "file_count": 4,
       "total_bytes": 27388,
-      "percentage": 5.7,
+      "percentage": 4.24,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -249,30 +281,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 2,
-      "total_bytes": 25477,
-      "percentage": 5.31,
-      "files": [
-        {
-          "path": "backend/pesquisa_deputados.py",
-          "name": "pesquisa_deputados.py",
-          "size": 14568,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/api.py",
-          "name": "api.py",
-          "size": 10909,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "PNG Image",
       "file_count": 1,
       "total_bytes": 13057,
-      "percentage": 2.72,
+      "percentage": 2.02,
       "files": [
         {
           "path": "frontend/src/assets/hero.png",
@@ -283,15 +295,41 @@
       ]
     },
     {
+      "language": "SQL",
+      "file_count": 3,
+      "total_bytes": 8659,
+      "percentage": 1.34,
+      "files": [
+        {
+          "path": "backend/database/Migrations.sql",
+          "name": "Migrations.sql",
+          "size": 4152,
+          "extension": ".sql"
+        },
+        {
+          "path": "backend/database/schema.sql",
+          "name": "schema.sql",
+          "size": 3712,
+          "extension": ".sql"
+        },
+        {
+          "path": "backend/database/001_add_tipo_parlamentar.sql",
+          "name": "001_add_tipo_parlamentar.sql",
+          "size": 795,
+          "extension": ".sql"
+        }
+      ]
+    },
+    {
       "language": "YAML",
       "file_count": 3,
-      "total_bytes": 6322,
-      "percentage": 1.32,
+      "total_bytes": 6451,
+      "percentage": 1.0,
       "files": [
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 3048,
+          "size": 3177,
           "extension": ".yml"
         },
         {
@@ -309,22 +347,42 @@
       ]
     },
     {
-      "language": "SQL",
+      "language": "No Extension",
       "file_count": 2,
-      "total_bytes": 6329,
-      "percentage": 1.32,
+      "total_bytes": 5714,
+      "percentage": 0.89,
       "files": [
         {
-          "path": "backend/database/schema.sql",
-          "name": "schema.sql",
-          "size": 3712,
-          "extension": ".sql"
+          "path": "docs/backend_v2",
+          "name": "backend_v2",
+          "size": 4654,
+          "extension": ""
         },
         {
-          "path": "backend/database/Migrations.sql",
-          "name": "Migrations.sql",
-          "size": 2617,
-          "extension": ".sql"
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 2,
+      "total_bytes": 4265,
+      "percentage": 0.66,
+      "files": [
+        {
+          "path": "temp_req.txt",
+          "name": "temp_req.txt",
+          "size": 4194,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 71,
+          "extension": ".txt"
         }
       ]
     },
@@ -332,7 +390,7 @@
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 3082,
-      "percentage": 0.64,
+      "percentage": 0.48,
       "files": [
         {
           "path": "frontend/src/App.css",
@@ -349,25 +407,17 @@
       ]
     },
     {
-      "language": "No Extension",
-      "file_count": 1,
-      "total_bytes": 1060,
-      "percentage": 0.22,
+      "language": "Unknown",
+      "file_count": 2,
+      "total_bytes": 1370,
+      "percentage": 0.21,
       "files": [
         {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
-        }
-      ]
-    },
-    {
-      "language": "Unknown",
-      "file_count": 1,
-      "total_bytes": 650,
-      "percentage": 0.14,
-      "files": [
+          "path": "backend/.env.example",
+          "name": ".env.example",
+          "size": 720,
+          "extension": ".example"
+        },
         {
           "path": "frontend/tailwind.config.cjs",
           "name": "tailwind.config.cjs",
@@ -378,14 +428,14 @@
     },
     {
       "language": "Git Ignore",
-      "file_count": 2,
-      "total_bytes": 549,
-      "percentage": 0.11,
+      "file_count": 3,
+      "total_bytes": 594,
+      "percentage": 0.09,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 296,
+          "size": 328,
           "extension": ".gitignore"
         },
         {
@@ -393,26 +443,18 @@
           "name": ".gitignore",
           "size": 253,
           "extension": ".gitignore"
-        }
-      ]
-    },
-    {
-      "language": "Text",
-      "file_count": 1,
-      "total_bytes": 60,
-      "percentage": 0.01,
-      "files": [
+        },
         {
-          "path": "backend/requirements.txt",
-          "name": "requirements.txt",
-          "size": 60,
-          "extension": ".txt"
+          "path": "backend/.gitignore",
+          "name": ".gitignore",
+          "size": 13,
+          "extension": ".gitignore"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-25T09:40:40.037409",
+    "extracted_at": "2026-05-26T09:20:28.983728",
     "file_path": "data/silver/language_analysis_2026-1-Squad4-Dito_e_Feito.json"
   }
 }
