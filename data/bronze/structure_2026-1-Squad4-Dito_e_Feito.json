@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-Squad4-Dito_e_Feito",
   "branch": "main",
-  "sha": "d6aec1ddc4c2f3bda1712a9837b0271eccd94293",
+  "sha": "460d192f56f897d375c0b8c3232589923bb3fe4e",
   "tree": [
     {
       "name": ".github",
@@ -44,10 +44,10 @@
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
-      "sha": "21a9d56c99ac38c256795872ecfb781cc0af8ca5",
+      "sha": "8deb8cc5c48250ea241aa88bb072e49c475c81e0",
       "mode": "100644",
       "extension": ".gitignore",
-      "size": 296,
+      "size": 328,
       "is_binary": false
     },
     {
@@ -120,27 +120,77 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "230c58b26fff666161f303bc03ff39794b75ae48",
+      "sha": "4e4a9608bab1523ff5cb2ca23e5ca91659002487",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": ".env.example",
+      "path": "backend/.env.example",
+      "type": "file",
+      "sha": "c8cd0e18a197348e14bb2f27bd8ea67979199b0f",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 720,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/.gitignore",
+      "type": "file",
+      "sha": "4be494d464ccbdb08be15afc3d761a6fb0d2504b",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 13,
+      "is_binary": false
     },
     {
       "name": "api.py",
       "path": "backend/api.py",
       "type": "file",
-      "sha": "8f85c06052db37804c26f48bc53fe8a1b67a7dad",
+      "sha": "b77dea4b678eeac3bac904ff8676ff1961941dba",
       "mode": "100644",
       "extension": ".py",
-      "size": 10909,
+      "size": 24204,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard.html",
+      "path": "backend/dashboard.html",
+      "type": "file",
+      "sha": "f8195d5dac15e7e66643b6d2a900aed11a261bba",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 57283,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard_metrics.json",
+      "path": "backend/dashboard_metrics.json",
+      "type": "file",
+      "sha": "9cb8cfcad6b6df6ed80446f0755b579332bd8a92",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 53024,
       "is_binary": false
     },
     {
       "name": "database",
       "path": "backend/database",
       "type": "directory",
-      "sha": "621968ef52c5ca33871a745f1d57dd73fca2fa6c",
+      "sha": "fbe226bef58550805e27514d7f18cfa98b40371f",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "001_add_tipo_parlamentar.sql",
+      "path": "backend/database/001_add_tipo_parlamentar.sql",
+      "type": "file",
+      "sha": "9aaccafaddfda81a1a445f29a5a1e53bfbfa023c",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 795,
+      "is_binary": false
     },
     {
       "name": "Conexão.md",
@@ -166,10 +216,10 @@
       "name": "Migrations.sql",
       "path": "backend/database/Migrations.sql",
       "type": "file",
-      "sha": "724fad0f1623f57a1e085af5f35ad027493c69d2",
+      "sha": "33d8cb6b91b3bdd1216cc4ae1402d9a96ef56eca",
       "mode": "100644",
       "extension": ".sql",
-      "size": 2617,
+      "size": 4152,
       "is_binary": false
     },
     {
@@ -183,32 +233,52 @@
       "is_binary": false
     },
     {
-      "name": "pesquisa_deputados.py",
-      "path": "backend/pesquisa_deputados.py",
+      "name": "pipe.py",
+      "path": "backend/pipe.py",
       "type": "file",
-      "sha": "ec5e28c91784ac688081a92f262e0bc885793cb2",
+      "sha": "8c5110fdd91805a88d2ef8d9f9f6c9a0ae2aa2c1",
       "mode": "100644",
       "extension": ".py",
-      "size": 14568,
+      "size": 12663,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "bd17d1f9eb7269507c25e411fe4319e22d033cba",
+      "sha": "73ecc2d56854a8738b17b9f8d6b1d6af72621725",
       "mode": "100644",
       "extension": ".txt",
-      "size": 60,
+      "size": 71,
+      "is_binary": false
+    },
+    {
+      "name": "scan_senators.py",
+      "path": "backend/scan_senators.py",
+      "type": "file",
+      "sha": "9d4709ce50a12e7ea3e641e17633b27929b5ab58",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 40387,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "534406025f14231ca1590918f94f6bc571a0eb8e",
+      "sha": "61f106b9a1ea57105815a058e906e344c24a3d4c",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "backend_v2",
+      "path": "docs/backend_v2",
+      "type": "file",
+      "sha": "e150ccdc9cf06f3c3a8ff2fe50205b6874c36c8b",
+      "mode": "100644",
+      "extension": "",
+      "size": 4654,
+      "is_binary": false
     },
     {
       "name": "design",
@@ -232,7 +302,7 @@
       "name": "estudos",
       "path": "docs/estudos",
       "type": "directory",
-      "sha": "75826919f15750aecd74ea81deb7401b58971ec0",
+      "sha": "bcd8ca9d36933b70a136773195a78ab8f69bfcca",
       "mode": "040000",
       "children": []
     },
@@ -338,10 +408,10 @@
       "name": "manual_da_marca.md",
       "path": "docs/estudos/manual_da_marca.md",
       "type": "file",
-      "sha": "1417bedd03a2bfef8353e00061501a69fb1df8ef",
+      "sha": "936a26295ee17611d34b6f0eeaa4848f88dd7ca0",
       "mode": "100644",
       "extension": ".md",
-      "size": 3615,
+      "size": 3878,
       "is_binary": false
     },
     {
@@ -413,6 +483,16 @@
       "is_binary": false
     },
     {
+      "name": "fluxo_pipeline_dashboard.md",
+      "path": "docs/fluxo_pipeline_dashboard.md",
+      "type": "file",
+      "sha": "9736806daa7855dce2036a3f5094e61ada439e08",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6210,
+      "is_binary": false
+    },
+    {
       "name": "index.md",
       "path": "docs/index.md",
       "type": "file",
@@ -472,7 +552,7 @@
       "name": "sprints",
       "path": "docs/sprints",
       "type": "directory",
-      "sha": "32f6623d29368cf8ecf773fca093316194824764",
+      "sha": "536d111092d2c48289bd0c67d4c4332a9da647e9",
       "mode": "040000",
       "children": []
     },
@@ -514,6 +594,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 1400,
+      "is_binary": false
+    },
+    {
+      "name": "sprint05.md",
+      "path": "docs/sprints/sprint05.md",
+      "type": "file",
+      "sha": "e3bb9a3d03bb7364f489929b699c9e21771a8bf1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2733,
       "is_binary": false
     },
     {
@@ -931,16 +1021,6 @@
       "is_binary": false
     },
     {
-      "name": "index.html",
-      "path": "index.html",
-      "type": "file",
-      "sha": "a3b540e2eb9b5773c74d5c65d8b8938ae00b5ef7",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 19388,
-      "is_binary": false
-    },
-    {
       "name": "metrics.json",
       "path": "metrics.json",
       "type": "file",
@@ -954,10 +1034,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "f292366fb23cb624e84837c83b5f4d5cc26340f5",
+      "sha": "d812b2fdc1cf4b0a55ce7616c1998e0ac787bdf2",
       "mode": "100644",
       "extension": ".yml",
-      "size": 3048,
+      "size": 3177,
       "is_binary": false
     },
     {
@@ -984,7 +1064,7 @@
       "name": "scripts",
       "path": "scripts",
       "type": "directory",
-      "sha": "bb6ba7b31a88d649351495739cd552a539a10de3",
+      "sha": "ac7afea448b3c0f5469b82e32b61339019daa8ff",
       "mode": "040000",
       "children": []
     },
@@ -992,10 +1072,10 @@
       "name": "collect.js",
       "path": "scripts/collect.js",
       "type": "file",
-      "sha": "e66d02d3350ab4f881693c4ab8adfa25cf9fe64c",
+      "sha": "2727e659a397f47b7d444e44bdb23dcc75d24219",
       "mode": "100644",
       "extension": ".js",
-      "size": 5665,
+      "size": 6828,
       "is_binary": false
     },
     {
@@ -1007,22 +1087,32 @@
       "extension": ".js",
       "size": 128,
       "is_binary": false
+    },
+    {
+      "name": "temp_req.txt",
+      "path": "temp_req.txt",
+      "type": "file",
+      "sha": "e23c052f1b504d0e7e51c078034abbc60bcea3b2",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 4194,
+      "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-25T09:37:53.204353",
+  "extracted_at": "2026-05-26T09:17:40.893252",
   "method": "rest",
-  "total_items": 105,
+  "total_items": 114,
   "repository_metadata": {
     "id": 1185581846,
     "full_name": "unb-mds/2026-1-Squad4-Dito_e_Feito",
     "description": "O Dito e Feito é um sistema de análise de coerência política que compara discursos de parlamentares com seus votos reais em plenário. O objetivo do projeto é promover transparência e apoiar a análise de comportamento legislativo por meio de dados e inteligência artificial.",
     "created_at": "2026-03-18T18:26:06Z",
-    "updated_at": "2026-05-24T12:58:40Z",
-    "language": "JavaScript",
-    "size": 3127,
+    "updated_at": "2026-05-26T00:57:08Z",
+    "language": "HTML",
+    "size": 3202,
     "stars": 3,
     "forks": 0,
-    "open_issues": 7
+    "open_issues": 10
   }
 }
