@@ -2,23 +2,49 @@
   "owner": "unb-mds",
   "repository": "2026.1-ContraDito",
   "branch": "main",
-  "sha": "220a640789fffd22ffbb8b6f63b8e3f411764148",
+  "sha": "8602c931518f03e9db585b515504bf2010794ac1",
   "tree": [
+    {
+      "name": ".antigravity",
+      "path": ".antigravity",
+      "type": "directory",
+      "sha": "3ae47e070c208595f657069d482cc94360f47c0f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "skills",
+      "path": ".antigravity/skills",
+      "type": "directory",
+      "sha": "473943f007f03ce7811ac1d9caf6f5b4e6bd90fa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "grill-with-docs.md",
+      "path": ".antigravity/skills/grill-with-docs.md",
+      "type": "file",
+      "sha": "9cb37c9e94329dea8b0da75cf90c3c8c34e39d45",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3638,
+      "is_binary": false
+    },
     {
       "name": ".dockerignore",
       "path": ".dockerignore",
       "type": "file",
-      "sha": "2de517c5b688e0276f84ad9cecee4abb8d51265f",
+      "sha": "479aab0011483ac64b9b97d16f9858801d3a088f",
       "mode": "100644",
       "extension": ".dockerignore",
-      "size": 127,
+      "size": 191,
       "is_binary": false
     },
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "663675228a286a96cb38c4677de39b0dc2e48707",
+      "sha": "d896da8dcdab3f6691251cb48a32b6493c5a6c53",
       "mode": "040000",
       "children": []
     },
@@ -44,7 +70,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "c2242d476b8826a06fa53604802ab7e53def31cc",
+      "sha": "bda57229a86dd879ecbbd73c39dfd55178520d22",
       "mode": "040000",
       "children": []
     },
@@ -59,6 +85,26 @@
       "is_binary": false
     },
     {
+      "name": "metrics.yml",
+      "path": ".github/workflows/metrics.yml",
+      "type": "file",
+      "sha": "e6bdf4747ddd74b3039e2ef3c4d8e55fd4e96817",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1170,
+      "is_binary": false
+    },
+    {
+      "name": "update-metrics.yml",
+      "path": ".github/workflows/update-metrics.yml",
+      "type": "file",
+      "sha": "89480024bfa91b9da9e9307d78d4a103d914f6d3",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1043,
+      "is_binary": false
+    },
+    {
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
@@ -69,13 +115,33 @@
       "is_binary": false
     },
     {
-      "name": "Dockerfile",
-      "path": "Dockerfile",
+      "name": "CONTEXT_MKDOCS.md",
+      "path": "CONTEXT_MKDOCS.md",
       "type": "file",
-      "sha": "0d9cf5a3609158d188eee78756dfcaf56069e0ed",
+      "sha": "f472825f57307609d23a1ab272a00ce80d9fd905",
       "mode": "100644",
-      "extension": "",
-      "size": 207,
+      "extension": ".md",
+      "size": 4566,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile.api",
+      "path": "Dockerfile.api",
+      "type": "file",
+      "sha": "78d401943f60fe2983c608f2867ddc5634b721a4",
+      "mode": "100644",
+      "extension": ".api",
+      "size": 290,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile.worker",
+      "path": "Dockerfile.worker",
+      "type": "file",
+      "sha": "a5a164939d5d5caa15b23612a175aaa47ff769a0",
+      "mode": "100644",
+      "extension": ".worker",
+      "size": 223,
       "is_binary": false
     },
     {
@@ -89,13 +155,503 @@
       "is_binary": false
     },
     {
+      "name": "LLM_validation",
+      "path": "LLM_validation",
+      "type": "directory",
+      "sha": "bf44dd09aff1570002905779e12d60c6e9c6b9a8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "00_teste_conexao.py",
+      "path": "LLM_validation/00_teste_conexao.py",
+      "type": "file",
+      "sha": "e03424b71fa9c30e340d704435b1c595bfa323c7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6988,
+      "is_binary": false
+    },
+    {
+      "name": "01_extrair_texto.py",
+      "path": "LLM_validation/01_extrair_texto.py",
+      "type": "file",
+      "sha": "da6e8acc32243be31e214a22f9c509d950acc251",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9026,
+      "is_binary": false
+    },
+    {
+      "name": "02_gerar_resumo.py",
+      "path": "LLM_validation/02_gerar_resumo.py",
+      "type": "file",
+      "sha": "ae597a0f1f5d97f47e0a4e30e47dbda56ca95134",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9150,
+      "is_binary": false
+    },
+    {
+      "name": "03_avaliar_postura.py",
+      "path": "LLM_validation/03_avaliar_postura.py",
+      "type": "file",
+      "sha": "78a16eae8f5e9e6a0b5713e4195481e0d3494705",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 13114,
+      "is_binary": false
+    },
+    {
+      "name": "03b_avaliar_ementa.py",
+      "path": "LLM_validation/03b_avaliar_ementa.py",
+      "type": "file",
+      "sha": "56f06a253ac0bdde3879c19f91007177c0a5e14e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 10634,
+      "is_binary": false
+    },
+    {
+      "name": "04_comparar.py",
+      "path": "LLM_validation/04_comparar.py",
+      "type": "file",
+      "sha": "566508055f4c436f8e52e930b2b03429b4507fd3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 10772,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "LLM_validation/README.md",
+      "type": "file",
+      "sha": "70f3538933e8f703450e0acc5943a62101436f57",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2518,
+      "is_binary": false
+    },
+    {
+      "name": "auditar_estimativas.py",
+      "path": "LLM_validation/auditar_estimativas.py",
+      "type": "file",
+      "sha": "4c54b7a9d7bfc60c5c5aa3325a9bafe7edc50683",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 16314,
+      "is_binary": false
+    },
+    {
+      "name": "auditoria_resultado.json",
+      "path": "LLM_validation/auditoria_resultado.json",
+      "type": "file",
+      "sha": "3b5dc4c66bddfd5e2b5851140b93b1e18b4dff12",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 860,
+      "is_binary": false
+    },
+    {
+      "name": "benchmark_llama31_8b_colab.ipynb",
+      "path": "LLM_validation/benchmark_llama31_8b_colab.ipynb",
+      "type": "file",
+      "sha": "35e26fe70b47dfef113849d918375c034986fe6d",
+      "mode": "100644",
+      "extension": ".ipynb",
+      "size": 12471,
+      "is_binary": false
+    },
+    {
+      "name": "comparar_justificativas.py",
+      "path": "LLM_validation/comparar_justificativas.py",
+      "type": "file",
+      "sha": "c65efc1f7f3ecf1330b0eee4f11ed6fc121b1554",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3964,
+      "is_binary": false
+    },
+    {
+      "name": "diagnostico_api.py",
+      "path": "LLM_validation/diagnostico_api.py",
+      "type": "file",
+      "sha": "81a93061cd9d179b6fd7a9635fb454d271c88c9d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2935,
+      "is_binary": false
+    },
+    {
+      "name": "discursos",
+      "path": "LLM_validation/discursos",
+      "type": "directory",
+      "sha": "6869dd4e062c502fd210d339493e460d6ce06d59",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "pl_001_a_favor.txt",
+      "path": "LLM_validation/discursos/pl_001_a_favor.txt",
+      "type": "file",
+      "sha": "66ee7fc46d7af33d232aa456619a6b9c319a44fe",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 948,
+      "is_binary": false
+    },
+    {
+      "name": "pl_001_contra.txt",
+      "path": "LLM_validation/discursos/pl_001_contra.txt",
+      "type": "file",
+      "sha": "c29cf8092b25e8f0f63e7bc3974fc41c581b3312",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1020,
+      "is_binary": false
+    },
+    {
+      "name": "pl_002_a_favor.txt",
+      "path": "LLM_validation/discursos/pl_002_a_favor.txt",
+      "type": "file",
+      "sha": "564e102164c117813f7b678af37470a9de21e2ea",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1105,
+      "is_binary": false
+    },
+    {
+      "name": "pl_002_contra.txt",
+      "path": "LLM_validation/discursos/pl_002_contra.txt",
+      "type": "file",
+      "sha": "9ac370f4768dfc4fac701cae3bbb5b0ba5221848",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "pl_003_a_favor.txt",
+      "path": "LLM_validation/discursos/pl_003_a_favor.txt",
+      "type": "file",
+      "sha": "3d2090275875fe3af9626fc91729877d4c0a7b15",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 923,
+      "is_binary": false
+    },
+    {
+      "name": "pl_003_contra.txt",
+      "path": "LLM_validation/discursos/pl_003_contra.txt",
+      "type": "file",
+      "sha": "6a0fa5b9c26e3e72cf7531c90c244e390c13743f",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 985,
+      "is_binary": false
+    },
+    {
+      "name": "pl_004_a_favor.txt",
+      "path": "LLM_validation/discursos/pl_004_a_favor.txt",
+      "type": "file",
+      "sha": "671a5101b40fa81bb23fad35a2b16301663b2cc6",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1060,
+      "is_binary": false
+    },
+    {
+      "name": "pl_004_contra.txt",
+      "path": "LLM_validation/discursos/pl_004_contra.txt",
+      "type": "file",
+      "sha": "2d783ce321adade6e8696057a456fa8bf61c4c0c",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1099,
+      "is_binary": false
+    },
+    {
+      "name": "inspecionar_bulk.py",
+      "path": "LLM_validation/inspecionar_bulk.py",
+      "type": "file",
+      "sha": "512ab9a9e63f20ab6d37df726116ff1f21dd12d8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1630,
+      "is_binary": false
+    },
+    {
+      "name": "proposicoes",
+      "path": "LLM_validation/proposicoes",
+      "type": "directory",
+      "sha": "cfea19fc58d8885b7d23259b82396c99ebfc9d27",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "pl_001.pdf",
+      "path": "LLM_validation/proposicoes/pl_001.pdf",
+      "type": "file",
+      "sha": "eca1af8596dcae5dc96cb97bc4607ad7e2efb3b9",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 105409,
+      "is_binary": false
+    },
+    {
+      "name": "pl_002.pdf",
+      "path": "LLM_validation/proposicoes/pl_002.pdf",
+      "type": "file",
+      "sha": "ba862b04f8f60374571fdfe6c154da181790263e",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 372962,
+      "is_binary": false
+    },
+    {
+      "name": "pl_003.pdf",
+      "path": "LLM_validation/proposicoes/pl_003.pdf",
+      "type": "file",
+      "sha": "01467407dab7eacd1127ac72ed7cd70d3c93ea5c",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 129717,
+      "is_binary": false
+    },
+    {
+      "name": "pl_004.pdf",
+      "path": "LLM_validation/proposicoes/pl_004.pdf",
+      "type": "file",
+      "sha": "08af9b1ac91e109c75ef35853c9c4de32699ef3c",
+      "mode": "100644",
+      "extension": ".pdf",
+      "size": 175106,
+      "is_binary": false
+    },
+    {
+      "name": "textos",
+      "path": "LLM_validation/proposicoes/textos",
+      "type": "directory",
+      "sha": "83f3ab37087865c241a22dfe1cf73c1a99e8fd7b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "pl_001.txt",
+      "path": "LLM_validation/proposicoes/textos/pl_001.txt",
+      "type": "file",
+      "sha": "002d0eba667923595d746c7e1667904ed3645b03",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 5550,
+      "is_binary": false
+    },
+    {
+      "name": "pl_002.txt",
+      "path": "LLM_validation/proposicoes/textos/pl_002.txt",
+      "type": "file",
+      "sha": "f89bf48364ef0a817850ecf2b9533d62cd21aae3",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 5005,
+      "is_binary": false
+    },
+    {
+      "name": "pl_003.txt",
+      "path": "LLM_validation/proposicoes/textos/pl_003.txt",
+      "type": "file",
+      "sha": "85f76c507c56006a3ad0ee87dbd1fc61821b6027",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 1881,
+      "is_binary": false
+    },
+    {
+      "name": "pl_004.txt",
+      "path": "LLM_validation/proposicoes/textos/pl_004.txt",
+      "type": "file",
+      "sha": "e9ce04c5dc8c8981e9420f886aa61816530e776e",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 5069,
+      "is_binary": false
+    },
+    {
+      "name": "resultados",
+      "path": "LLM_validation/resultados",
+      "type": "directory",
+      "sha": "ff3feea9c117fae0a75e6a2ff1a4d777e16f04c3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "benchmark_final.json",
+      "path": "LLM_validation/resultados/benchmark_final.json",
+      "type": "file",
+      "sha": "aa211fac48de7ad96fd70757c0ec385ab5b54f98",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1629,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_ementa_gemma2_9b.json",
+      "path": "LLM_validation/resultados/posturas_ementa_gemma2_9b.json",
+      "type": "file",
+      "sha": "a7e8cf94b29ac58b8dd1accd5439bde0488011da",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3229,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_ementa_groq_llama33_70b.json",
+      "path": "LLM_validation/resultados/posturas_ementa_groq_llama33_70b.json",
+      "type": "file",
+      "sha": "1e410f744da83bd67048a0d1859005e5aa930311",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4562,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_ementa_groq_qwen3_32b.json",
+      "path": "LLM_validation/resultados/posturas_ementa_groq_qwen3_32b.json",
+      "type": "file",
+      "sha": "606252a3e7fa5af8b9b19c9748cdb31c1db01e3a",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3269,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_ementa_llama31_8b.json",
+      "path": "LLM_validation/resultados/posturas_ementa_llama31_8b.json",
+      "type": "file",
+      "sha": "ab2646aa31fd120654373b902b279c32c5d686b1",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3229,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_ementa_qwen25_7b.json",
+      "path": "LLM_validation/resultados/posturas_ementa_qwen25_7b.json",
+      "type": "file",
+      "sha": "1a7035b310ed94acd90a696f0299773bd484fff2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3508,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_gemma2_9b.json",
+      "path": "LLM_validation/resultados/posturas_gemma2_9b.json",
+      "type": "file",
+      "sha": "8f6ecd7808a2d88620b62fccefb46f1c3b425946",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3164,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_groq_llama33_70b.json",
+      "path": "LLM_validation/resultados/posturas_groq_llama33_70b.json",
+      "type": "file",
+      "sha": "b193a18de96d58dfb98ca9c236ce490bb35a2efb",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4374,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_groq_qwen3_32b.json",
+      "path": "LLM_validation/resultados/posturas_groq_qwen3_32b.json",
+      "type": "file",
+      "sha": "dbf7c7c423513e3b4b4be12b361875df44d3f226",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3329,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_llama31_8b.json",
+      "path": "LLM_validation/resultados/posturas_llama31_8b.json",
+      "type": "file",
+      "sha": "0c18d7e7af748542ac84a56f457bf291ad39a9c1",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3104,
+      "is_binary": false
+    },
+    {
+      "name": "posturas_qwen25_7b.json",
+      "path": "LLM_validation/resultados/posturas_qwen25_7b.json",
+      "type": "file",
+      "sha": "9ecc93cc9dff36c5788e90e2b4c5ebe6d4163e0e",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3885,
+      "is_binary": false
+    },
+    {
+      "name": "resumos_gemma2_9b.json",
+      "path": "LLM_validation/resultados/resumos_gemma2_9b.json",
+      "type": "file",
+      "sha": "bfd42abbb2bf17efe8531bab473fd4f5f89e659c",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 5303,
+      "is_binary": false
+    },
+    {
+      "name": "resumos_groq_llama33_70b.json",
+      "path": "LLM_validation/resultados/resumos_groq_llama33_70b.json",
+      "type": "file",
+      "sha": "aeb6cad80f069f0d3e3bb165c032bd247fa7b220",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 6374,
+      "is_binary": false
+    },
+    {
+      "name": "resumos_groq_qwen3_32b.json",
+      "path": "LLM_validation/resultados/resumos_groq_qwen3_32b.json",
+      "type": "file",
+      "sha": "0e535d4f9a4b402fc220e35d26d8d6c7d3dc4674",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 9709,
+      "is_binary": false
+    },
+    {
+      "name": "resumos_llama31_8b.json",
+      "path": "LLM_validation/resultados/resumos_llama31_8b.json",
+      "type": "file",
+      "sha": "fa309a51b05da6137760aaf9cd1ea92d3c7b4ae8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 6233,
+      "is_binary": false
+    },
+    {
+      "name": "resumos_qwen25_7b.json",
+      "path": "LLM_validation/resultados/resumos_qwen25_7b.json",
+      "type": "file",
+      "sha": "1cfbca634ce1fe3a1285d3aa56e58c814f4e896d",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 4387,
+      "is_binary": false
+    },
+    {
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "34b55f2024f6bccc5ad3036374efc9ade7723b05",
+      "sha": "4d702f3215648c610d28bd874fbab40f7e5292ad",
       "mode": "100644",
       "extension": ".md",
-      "size": 3389,
+      "size": 5845,
       "is_binary": false
     },
     {
@@ -140,7 +696,7 @@
       "name": "app",
       "path": "app",
       "type": "directory",
-      "sha": "31b527e4fd9ee3608518dc7b10b790bfe0229f10",
+      "sha": "0994176d732551450c4047d50a1bc7bc955b82a0",
       "mode": "040000",
       "children": []
     },
@@ -176,17 +732,17 @@
       "name": "main.py",
       "path": "app/main.py",
       "type": "file",
-      "sha": "9f87aa71b695f2924282964df41a87cef48c908e",
+      "sha": "051b57df1f92400ff4b6177b887adc0dcf37d84b",
       "mode": "100644",
       "extension": ".py",
-      "size": 970,
+      "size": 1722,
       "is_binary": false
     },
     {
       "name": "modelos",
       "path": "app/modelos",
       "type": "directory",
-      "sha": "e27665207fa575c9cdbbc98ecfaa78c6b400f73f",
+      "sha": "e36762917743592ae41292d2d52bcc5c2a8ad0d8",
       "mode": "040000",
       "children": []
     },
@@ -194,17 +750,17 @@
       "name": "schemas.py",
       "path": "app/modelos/schemas.py",
       "type": "file",
-      "sha": "3e640fb08f0757251e7ea70b7d260e3a2468b8e3",
+      "sha": "3bc0d8bbfd273dafbcd30d6e83841e81b4427783",
       "mode": "100644",
       "extension": ".py",
-      "size": 1401,
+      "size": 3484,
       "is_binary": false
     },
     {
       "name": "rotas",
       "path": "app/rotas",
       "type": "directory",
-      "sha": "58591732af00b166237fba1bbe0506637cc61264",
+      "sha": "55f9a8cdb6966cc244320edb4efed6ae5d1acda5",
       "mode": "040000",
       "children": []
     },
@@ -222,27 +778,27 @@
       "name": "politicos.py",
       "path": "app/rotas/politicos.py",
       "type": "file",
-      "sha": "12cd2c592b2ecf39c26bbc9ac666415c72670ca8",
+      "sha": "ba39171cf922673a3dbe54a6dbdf92c54dcf334b",
       "mode": "100644",
       "extension": ".py",
-      "size": 4377,
+      "size": 10569,
       "is_binary": false
     },
     {
       "name": "docker-compose.yml",
       "path": "docker-compose.yml",
       "type": "file",
-      "sha": "bf7c5427afa40d877620d0fbeaf00749894da758",
+      "sha": "08f6cead750941f5d61f5fbd19e719ecdca3c3c8",
       "mode": "100644",
       "extension": ".yml",
-      "size": 359,
+      "size": 1458,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "714a3056069c573d0dad25aa89114f8326a76eeb",
+      "sha": "2a226f400cb85d09e0f9c637e78093694575ae17",
       "mode": "040000",
       "children": []
     },
@@ -250,75 +806,339 @@
       "name": "docs",
       "path": "docs/docs",
       "type": "directory",
-      "sha": "761cdd7240c7b15d89c2f53b3ffaadbdcb4ec725",
+      "sha": "216438339e4a9d09c49e71dc4dfee97920d8b7a0",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "api.md",
-      "path": "docs/docs/api.md",
+      "name": "adrs",
+      "path": "docs/docs/adrs",
+      "type": "directory",
+      "sha": "f4d1cf4ac12dc327494f7c036a9cbfca31be9f05",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "adr-001.md",
+      "path": "docs/docs/adrs/adr-001.md",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "a404ccc46f1286e977591b45ee91db66f8d82b56",
       "mode": "100644",
       "extension": ".md",
-      "size": 0,
+      "size": 2505,
+      "is_binary": false
+    },
+    {
+      "name": "adr-002.md",
+      "path": "docs/docs/adrs/adr-002.md",
+      "type": "file",
+      "sha": "95c195f5662148bdc807f01e6147a4d470e6a00e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4179,
+      "is_binary": false
+    },
+    {
+      "name": "index.md",
+      "path": "docs/docs/adrs/index.md",
+      "type": "file",
+      "sha": "a30019f124067d146def96a6863c53368975eebc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 489,
       "is_binary": false
     },
     {
       "name": "arquitetura.md",
       "path": "docs/docs/arquitetura.md",
       "type": "file",
-      "sha": "9e1d3d66eab81ab8e58a90daf0cd4b58be2b5b3e",
+      "sha": "d954a27d76718dea674c58c44cc2f0a8d722cca0",
       "mode": "100644",
       "extension": ".md",
-      "size": 3223,
+      "size": 10059,
+      "is_binary": false
+    },
+    {
+      "name": "avaliacao.md",
+      "path": "docs/docs/avaliacao.md",
+      "type": "file",
+      "sha": "7c6b2d896f36aa569d9f8660852dddc31a32999b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2458,
       "is_binary": false
     },
     {
       "name": "calculo-score.md",
       "path": "docs/docs/calculo-score.md",
       "type": "file",
-      "sha": "a40843b53458072f7331d278f4087a8881178f86",
+      "sha": "613a9d5173c5288fd7e1a2668fb1a298567a44f3",
       "mode": "100644",
       "extension": ".md",
-      "size": 4632,
+      "size": 1951,
+      "is_binary": false
+    },
+    {
+      "name": "escopo.md",
+      "path": "docs/docs/escopo.md",
+      "type": "file",
+      "sha": "a47167662a0044d6b99841c23819050dc4c248a0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2725,
+      "is_binary": false
+    },
+    {
+      "name": "etl-dados.md",
+      "path": "docs/docs/etl-dados.md",
+      "type": "file",
+      "sha": "cd8f3ec3f31c7864c3c26e71a8da13cbd7ee56f1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4017,
       "is_binary": false
     },
     {
       "name": "execucao.md",
       "path": "docs/docs/execucao.md",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "6c4614c5728c69d0ac6e369a26ddf7e3ba344122",
       "mode": "100644",
       "extension": ".md",
-      "size": 0,
+      "size": 10057,
+      "is_binary": false
+    },
+    {
+      "name": "frontend.md",
+      "path": "docs/docs/frontend.md",
+      "type": "file",
+      "sha": "f0984663589d685128639bcc50311b41b6d9f287",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5806,
+      "is_binary": false
+    },
+    {
+      "name": "imagens",
+      "path": "docs/docs/imagens",
+      "type": "directory",
+      "sha": "03b6b25ee6737a874aaf28d89fc97b8944cb6d63",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Dossiê_CD.jpeg",
+      "path": "docs/docs/imagens/Dossiê_CD.jpeg",
+      "type": "file",
+      "sha": "4cef6ee2b1a501daa3474b89fd21d7864076f2f5",
+      "mode": "100644",
+      "extension": ".jpeg",
+      "size": 60460,
+      "is_binary": false
+    },
+    {
+      "name": "FacetoFace_CD.jpeg",
+      "path": "docs/docs/imagens/FacetoFace_CD.jpeg",
+      "type": "file",
+      "sha": "3073c82384bcd7e1e9777cc9d38f330914b801b9",
+      "mode": "100644",
+      "extension": ".jpeg",
+      "size": 77250,
+      "is_binary": false
+    },
+    {
+      "name": "Homepage_CD.jpeg",
+      "path": "docs/docs/imagens/Homepage_CD.jpeg",
+      "type": "file",
+      "sha": "bb90feb060e5b393e94806b45a786e5c1a639892",
+      "mode": "100644",
+      "extension": ".jpeg",
+      "size": 85474,
+      "is_binary": false
+    },
+    {
+      "name": "Persona.png.jpg",
+      "path": "docs/docs/imagens/Persona.png.jpg",
+      "type": "file",
+      "sha": "3d25cbe913297c22e5e2a90ce941df5380cbc229",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 67176,
+      "is_binary": false
+    },
+    {
+      "name": "Storymap.jpg",
+      "path": "docs/docs/imagens/Storymap.jpg",
+      "type": "file",
+      "sha": "598dfe08c59996af44b4c6b6d2815097e03f582b",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 55751,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo_comparacao.jpg",
+      "path": "docs/docs/imagens/prototipo_comparacao.jpg",
+      "type": "file",
+      "sha": "245f5000f9e536838884092a32294b20f3961b72",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 39465,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo_home.jpg",
+      "path": "docs/docs/imagens/prototipo_home.jpg",
+      "type": "file",
+      "sha": "8c9b1d13178688873436d904a2aec8d5558a7317",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 76856,
+      "is_binary": false
+    },
+    {
+      "name": "prototipo_raio_x.jpg",
+      "path": "docs/docs/imagens/prototipo_raio_x.jpg",
+      "type": "file",
+      "sha": "09568c131685b9c56b02a3f8db77dccbced7603d",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 162176,
       "is_binary": false
     },
     {
       "name": "index.md",
       "path": "docs/docs/index.md",
       "type": "file",
-      "sha": "e791e50b5a44533b0e8d46a14551c81fbcaa78de",
+      "sha": "53cd4856034ad44d196c7bc0c8b34296328ebb5c",
       "mode": "100644",
       "extension": ".md",
-      "size": 2522,
+      "size": 76,
+      "is_binary": false
+    },
+    {
+      "name": "integracaoapi.md",
+      "path": "docs/docs/integracaoapi.md",
+      "type": "file",
+      "sha": "a902de101156c08d43a5fe9d9853ab90cbce2af9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2364,
       "is_binary": false
     },
     {
       "name": "lgpd.md",
       "path": "docs/docs/lgpd.md",
       "type": "file",
-      "sha": "7a687621e91088b8b21c2c341180d404af7c23b8",
+      "sha": "08e6f49450e93d8b72458aaea619460651544554",
       "mode": "100644",
       "extension": ".md",
-      "size": 3215,
+      "size": 2552,
+      "is_binary": false
+    },
+    {
+      "name": "links.md",
+      "path": "docs/docs/links.md",
+      "type": "file",
+      "sha": "5ccf477eb9d2549ab040c5d75a98ec96391aa9f2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 493,
+      "is_binary": false
+    },
+    {
+      "name": "manual.md",
+      "path": "docs/docs/manual.md",
+      "type": "file",
+      "sha": "7536e5bd4b6ef95b941ddc2dc46ee1f8d0f5f9ce",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2224,
+      "is_binary": false
+    },
+    {
+      "name": "metodologia.md",
+      "path": "docs/docs/metodologia.md",
+      "type": "file",
+      "sha": "9ae89f477a56f5f17beb9b55b5b10af94654c776",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2615,
+      "is_binary": false
+    },
+    {
+      "name": "motor-nlp.md",
+      "path": "docs/docs/motor-nlp.md",
+      "type": "file",
+      "sha": "63650e5a5b3630dc3aa4e58b668c329ab8078e36",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7339,
+      "is_binary": false
+    },
+    {
+      "name": "productivity",
+      "path": "docs/docs/productivity",
+      "type": "directory",
+      "sha": "cff6649c0043123f3debd5251ecc64ba39f039f2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/docs/productivity/index.html",
+      "type": "file",
+      "sha": "79729e35c522a60d18c28ff2e9e0d0a3c72bf11f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 28046,
+      "is_binary": false
+    },
+    {
+      "name": "metrics.json",
+      "path": "docs/docs/productivity/metrics.json",
+      "type": "file",
+      "sha": "f03cb645e2cd8f789672eace220128f5a060ad3f",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 14680,
+      "is_binary": false
+    },
+    {
+      "name": "qualidade.md",
+      "path": "docs/docs/qualidade.md",
+      "type": "file",
+      "sha": "2b54d50cbfc672a834e6859eeabf05cde624adbe",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 640,
+      "is_binary": false
+    },
+    {
+      "name": "requisitos.md",
+      "path": "docs/docs/requisitos.md",
+      "type": "file",
+      "sha": "f0b8ad5f5a4588dacc7432780a1ace942de1522e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10705,
+      "is_binary": false
+    },
+    {
+      "name": "roadmap.md",
+      "path": "docs/docs/roadmap.md",
+      "type": "file",
+      "sha": "9afed6927123a5f2b2246048e7ae15fc1a1d25db",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1655,
       "is_binary": false
     },
     {
       "name": "sprints",
       "path": "docs/docs/sprints",
       "type": "directory",
-      "sha": "e5a6229fdbd30f2b11a29691b8a4942e9523a6bc",
+      "sha": "6af38cb53eab8c2fbfca0216d06110144cb8c697",
       "mode": "040000",
       "children": []
     },
@@ -326,47 +1146,107 @@
       "name": "sprint-0.md",
       "path": "docs/docs/sprints/sprint-0.md",
       "type": "file",
-      "sha": "18f16277f7c0b7afc731750830e1e4dbcfd445e1",
+      "sha": "d3efb3f4f27b3ac22c3f39f5a5b24c82540659c6",
       "mode": "100644",
       "extension": ".md",
-      "size": 2112,
+      "size": 2152,
       "is_binary": false
     },
     {
       "name": "sprint-1.md",
       "path": "docs/docs/sprints/sprint-1.md",
       "type": "file",
-      "sha": "9c8facf56d52b14dcedbbbc0c10c3e6b07ab8887",
+      "sha": "7c8111e882be5e9e06c21eabacb1bb770f926ffb",
       "mode": "100644",
       "extension": ".md",
-      "size": 2420,
+      "size": 2452,
       "is_binary": false
     },
     {
       "name": "sprint-2.md",
       "path": "docs/docs/sprints/sprint-2.md",
       "type": "file",
-      "sha": "cefda4330cfe16610246d91e43a1ddcaa0f5256a",
+      "sha": "75e7f5536a38f717c342f27eb3ddf29f2e8d7728",
       "mode": "100644",
       "extension": ".md",
-      "size": 2482,
+      "size": 2522,
       "is_binary": false
     },
     {
       "name": "sprint-3.md",
       "path": "docs/docs/sprints/sprint-3.md",
       "type": "file",
-      "sha": "44a167f1247880865c53757e28c93015b20299e8",
+      "sha": "0e7bbf0ba5fa8e328b204bb18ab65bab630b7b0a",
       "mode": "100644",
       "extension": ".md",
-      "size": 3213,
+      "size": 3286,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-4.md",
+      "path": "docs/docs/sprints/sprint-4.md",
+      "type": "file",
+      "sha": "df38b50bde3816f5d762fe633978a3c096f07986",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3988,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-5.md",
+      "path": "docs/docs/sprints/sprint-5.md",
+      "type": "file",
+      "sha": "d40ad5e22453f2609dd36ee787878d6e42a2e1c0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1847,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-6.md",
+      "path": "docs/docs/sprints/sprint-6.md",
+      "type": "file",
+      "sha": "9df24634e9c2ba85ac0e7648c4f1b93c794f0e6f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2463,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-7.md",
+      "path": "docs/docs/sprints/sprint-7.md",
+      "type": "file",
+      "sha": "3ee6ed6ec6b4735e23d23b6eae37aef58c85a102",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1420,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-8.md",
+      "path": "docs/docs/sprints/sprint-8.md",
+      "type": "file",
+      "sha": "b669927d1ccf88048cf2dcda149406f3205760fd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1985,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-9.md",
+      "path": "docs/docs/sprints/sprint-9.md",
+      "type": "file",
+      "sha": "433a21f38cf543a54d2fab5cb336faf1894ff541",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1515,
       "is_binary": false
     },
     {
       "name": "stylesheets",
       "path": "docs/docs/stylesheets",
       "type": "directory",
-      "sha": "efe6197838f97601f9fb2d7af433e9ba5ad99684",
+      "sha": "72178ad7b7c9e16ae6e20288fda9481e65a4fe46",
       "mode": "040000",
       "children": []
     },
@@ -374,37 +1254,141 @@
       "name": "extra.css",
       "path": "docs/docs/stylesheets/extra.css",
       "type": "file",
-      "sha": "5980f65e42308795bd929ae9eb3911b1f0b48ec4",
+      "sha": "4a56fece61728d7870fc867453313ae616478210",
       "mode": "100644",
       "extension": ".css",
-      "size": 223,
+      "size": 5459,
+      "is_binary": false
+    },
+    {
+      "name": "landing.css",
+      "path": "docs/docs/stylesheets/landing.css",
+      "type": "file",
+      "sha": "f293cb20ab854c83531950262195b2dd0b100825",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 7430,
+      "is_binary": false
+    },
+    {
+      "name": "supabase.md",
+      "path": "docs/docs/supabase.md",
+      "type": "file",
+      "sha": "cb6fe05149024a187a8fd83b9737b0976b0a41e8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3454,
+      "is_binary": false
+    },
+    {
+      "name": "ux",
+      "path": "docs/docs/ux",
+      "type": "directory",
+      "sha": "e1dfe2a9938ddce918314e070cda60bc3e812d2a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "personas.md",
+      "path": "docs/docs/ux/personas.md",
+      "type": "file",
+      "sha": "abd27fdf3e64995ea468ec83c3b0826cc51bdc4a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1473,
+      "is_binary": false
+    },
+    {
+      "name": "prototipos.md",
+      "path": "docs/docs/ux/prototipos.md",
+      "type": "file",
+      "sha": "384056d9aff117171dd4e50a876730f0d83ffe70",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 527,
       "is_binary": false
     },
     {
       "name": "mkdocs.yml",
       "path": "docs/mkdocs.yml",
       "type": "file",
-      "sha": "5bada0c3831106e7a653af35383d5a8b67a6e6d1",
+      "sha": "6d80160c161b28748e389997dc96345bc2ea4d51",
       "mode": "100644",
       "extension": ".yml",
-      "size": 768,
+      "size": 2719,
+      "is_binary": false
+    },
+    {
+      "name": "overrides",
+      "path": "docs/overrides",
+      "type": "directory",
+      "sha": "97166abaa3bbcbe12cba406a62bd118e83e7190e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "home.html",
+      "path": "docs/overrides/home.html",
+      "type": "file",
+      "sha": "162f6574830cf77b9fb1a2fb402fd3ad29665742",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 9781,
+      "is_binary": false
+    },
+    {
+      "name": "productivity",
+      "path": "docs/productivity",
+      "type": "directory",
+      "sha": "32bb628aca50ab069f493c6dca9bcfc3083b7723",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "collect_metrics.py",
+      "path": "docs/productivity/collect_metrics.py",
+      "type": "file",
+      "sha": "fcf5a1a59cc9246d6e974ec473f4ea3ac37adf72",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 10503,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "docs/productivity/requirements.txt",
+      "type": "file",
+      "sha": "24915bc34598d13e7e9a31c6ef7935e5d4121708",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 39,
+      "is_binary": false
+    },
+    {
+      "name": "extractor.py",
+      "path": "extractor.py",
+      "type": "file",
+      "sha": "55003e5ccf0b369baf624ec6f07a0a8bb8631313",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3110,
       "is_binary": false
     },
     {
       "name": "extrair_amostras.py",
       "path": "extrair_amostras.py",
       "type": "file",
-      "sha": "43fad8a17a413f4c158ac70387bcfded58bd008a",
+      "sha": "4fb4b48abbd78f847a2c2b734200641a689c32d9",
       "mode": "100644",
       "extension": ".py",
-      "size": 1003,
+      "size": 1006,
       "is_binary": false
     },
     {
       "name": "frontend",
       "path": "frontend",
       "type": "directory",
-      "sha": "f217c49329e74ebdfa22da4ddd25dea23b1bc431",
+      "sha": "93a312705e0c629fb6e9a4ba9f9f86fbd634c48b",
       "mode": "040000",
       "children": []
     },
@@ -449,6 +1433,16 @@
       "is_binary": false
     },
     {
+      "name": "README-FRONTEND.md",
+      "path": "frontend/README-FRONTEND.md",
+      "type": "file",
+      "sha": "7a32c409850c90f699031869b1a74db5c82dbd43",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1619,
+      "is_binary": false
+    },
+    {
       "name": "README.md",
       "path": "frontend/README.md",
       "type": "file",
@@ -462,9 +1456,27 @@
       "name": "app",
       "path": "frontend/app",
       "type": "directory",
-      "sha": "88f74de13c99e430673ed0ebf93833044b0f79f5",
+      "sha": "2360ddd5ace05ae2431f3a8ce1348ec0aebf5c44",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "comparacao",
+      "path": "frontend/app/comparacao",
+      "type": "directory",
+      "sha": "2a966e9ffcf119cb47b727315b7703e27f5dd194",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "page.tsx",
+      "path": "frontend/app/comparacao/page.tsx",
+      "type": "file",
+      "sha": "4326959406513a1a6e5ab1bcd2f40783969d9610",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 8950,
+      "is_binary": false
     },
     {
       "name": "favicon.ico",
@@ -490,27 +1502,27 @@
       "name": "layout.tsx",
       "path": "frontend/app/layout.tsx",
       "type": "file",
-      "sha": "976eb90df142ef2c4f3f39cee8b0e4c4f4771b62",
+      "sha": "68e8e6a4134ee7c0536e3ea8f1921d38a4528b8f",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 719,
+      "size": 1036,
       "is_binary": false
     },
     {
       "name": "page.tsx",
       "path": "frontend/app/page.tsx",
       "type": "file",
-      "sha": "d32852d899475635520be402d76a44bc428f8bec",
+      "sha": "9a3dc7b9b389f844bcb0144dda6d2994fb214220",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 13870,
+      "size": 13972,
       "is_binary": false
     },
     {
       "name": "politico",
       "path": "frontend/app/politico",
       "type": "directory",
-      "sha": "353234cb3553f350a96bb2fdf057aea1359ff434",
+      "sha": "ddf7c94cf7a231b11f00f7d7fb6d24dd4efc18b8",
       "mode": "040000",
       "children": []
     },
@@ -518,7 +1530,7 @@
       "name": "[id]",
       "path": "frontend/app/politico/[id]",
       "type": "directory",
-      "sha": "3950a420af4f179983dc51a98dbafafbf96ac306",
+      "sha": "f1332c1b20dbcf847c4f08997582fdb1fd2a3d10",
       "mode": "040000",
       "children": []
     },
@@ -526,10 +1538,10 @@
       "name": "page.tsx",
       "path": "frontend/app/politico/[id]/page.tsx",
       "type": "file",
-      "sha": "740a7faad6f24b6ae5ea91261bb6c3995cf93d0a",
+      "sha": "2d30877b9208b2f9f14cf6c183877a72c63fbefe",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 4649,
+      "size": 16347,
       "is_binary": false
     },
     {
@@ -654,17 +1666,17 @@
       "name": "parsear_amostras.py",
       "path": "parsear_amostras.py",
       "type": "file",
-      "sha": "8f1d2b26b8e47b61474b5012218b708687b47a26",
+      "sha": "35fcceada1dff42ffc0b63a191689c28ca9547e8",
       "mode": "100644",
       "extension": ".py",
-      "size": 1155,
+      "size": 1145,
       "is_binary": false
     },
     {
       "name": "pocs",
       "path": "pocs",
       "type": "directory",
-      "sha": "7534009ad14d9dcbd5040a797e072677387cabcb",
+      "sha": "a957efa0cd31c0411206b5e3297ab5ba1b2f6752",
       "mode": "040000",
       "children": []
     },
@@ -672,17 +1684,17 @@
       "name": "lote_nlp.py",
       "path": "pocs/lote_nlp.py",
       "type": "file",
-      "sha": "3e1d483a5df3ce37dd5f019e1dea159eac3779b0",
+      "sha": "827db6a62e09df0eedf8a13557d3477650bd2706",
       "mode": "100644",
       "extension": ".py",
-      "size": 6997,
+      "size": 7765,
       "is_binary": false
     },
     {
       "name": "motor_nlp",
       "path": "pocs/motor_nlp",
       "type": "directory",
-      "sha": "b67f142c4e527c9fe4c0dd227d96c21c54370d45",
+      "sha": "450d9f7ee4a7ec114e49a5158afdf3f8edfd991b",
       "mode": "040000",
       "children": []
     },
@@ -690,55 +1702,113 @@
       "name": "poc_npl.py",
       "path": "pocs/motor_nlp/poc_npl.py",
       "type": "file",
-      "sha": "4293bc69aa5d95acf09ab5cb8f36f7cf298e7199",
+      "sha": "e4821ca05e21c5d2640b7495ab093cbd795a5aad",
       "mode": "100644",
       "extension": ".py",
-      "size": 1554,
+      "size": 1543,
       "is_binary": false
     },
     {
-      "name": "requirements.txt",
-      "path": "requirements.txt",
+      "name": "teste_motor_embeddings.py",
+      "path": "pocs/teste_motor_embeddings.py",
       "type": "file",
-      "sha": "a26ad969c6f3d0febe5ff2c9c5af5e4deadfb9f6",
+      "sha": "c65f36ecc97f3698a26b31ed8ae4ee9490ab7699",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2455,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.api.txt",
+      "path": "requirements.api.txt",
+      "type": "file",
+      "sha": "a81e889c21f32ed209d92277b47fa3ca6c29c9f1",
       "mode": "100644",
       "extension": ".txt",
-      "size": 98,
+      "size": 145,
       "is_binary": false
     },
     {
-      "name": "seeder_camara.py",
-      "path": "seeder_camara.py",
+      "name": "requirements.worker.txt",
+      "path": "requirements.worker.txt",
       "type": "file",
-      "sha": "beb5fca1a61f7e95e55d62d8a826507921607eeb",
+      "sha": "269ac02dab260b5df998c874ae5a7adddf0cae1a",
       "mode": "100644",
-      "extension": ".py",
-      "size": 4375,
+      "extension": ".txt",
+      "size": 80,
       "is_binary": false
     },
     {
       "name": "seeder_parlamentares.py",
       "path": "seeder_parlamentares.py",
       "type": "file",
-      "sha": "7aa436e4f5e58e0659992bfd74e30f7ef4e47250",
+      "sha": "426e2a823283b99a661491a6d33393e32782d120",
       "mode": "100644",
       "extension": ".py",
-      "size": 9633,
+      "size": 11328,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "utils",
+      "type": "directory",
+      "sha": "3c4bb1c049565da38c7daaa98ec37e8e210e46c7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "utils/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "cleaner.py",
+      "path": "utils/cleaner.py",
+      "type": "file",
+      "sha": "48a342610f61cb24e5ec42521a6cf7e0444a198c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1235,
+      "is_binary": false
+    },
+    {
+      "name": "motor_nlp.py",
+      "path": "utils/motor_nlp.py",
+      "type": "file",
+      "sha": "ae0bc175c211dfe2c7c7ce27f63fe9ab9cafee17",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 608,
+      "is_binary": false
+    },
+    {
+      "name": "worker_api.py",
+      "path": "worker_api.py",
+      "type": "file",
+      "sha": "3f73d6eb333bbe3d2ebeaf5933f666a702a428e0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 573,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-26T09:17:45.008691",
+  "extracted_at": "2026-05-27T09:25:04.244086",
   "method": "rest",
-  "total_items": 76,
+  "total_items": 186,
   "repository_metadata": {
     "id": 1193952158,
     "full_name": "unb-mds/2026.1-ContraDito",
     "description": null,
     "created_at": "2026-03-27T18:55:34Z",
-    "updated_at": "2026-04-27T15:41:09Z",
+    "updated_at": "2026-05-27T04:43:37Z",
     "language": "Python",
-    "size": 3692,
+    "size": 3701,
     "stars": 2,
     "forks": 0,
     "open_issues": 7
