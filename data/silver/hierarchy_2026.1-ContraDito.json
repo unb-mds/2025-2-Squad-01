@@ -2,16 +2,36 @@
   "repository": "2026.1-ContraDito",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-26T09:17:45.008691",
+  "extracted_at": "2026-05-27T09:25:04.244086",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
       {
+        "name": ".antigravity",
+        "type": "directory",
+        "path": ".antigravity",
+        "children": []
+      },
+      {
+        "name": "skills",
+        "type": "directory",
+        "path": ".antigravity/skills",
+        "children": []
+      },
+      {
+        "name": "grill-with-docs.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3638,
+        "extension": ".md",
+        "path": ".antigravity/skills/grill-with-docs.md"
+      },
+      {
         "name": ".dockerignore",
         "type": "file",
         "language": "Docker Ignore",
-        "size": 127,
+        "size": 191,
         "extension": ".dockerignore",
         "path": ".dockerignore"
       },
@@ -50,6 +70,22 @@
         "path": ".github/workflows/linter.yml"
       },
       {
+        "name": "metrics.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1170,
+        "extension": ".yml",
+        "path": ".github/workflows/metrics.yml"
+      },
+      {
+        "name": "update-metrics.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1043,
+        "extension": ".yml",
+        "path": ".github/workflows/update-metrics.yml"
+      },
+      {
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
@@ -58,12 +94,28 @@
         "path": ".gitignore"
       },
       {
-        "name": "Dockerfile",
+        "name": "CONTEXT_MKDOCS.md",
         "type": "file",
-        "language": "No Extension",
-        "size": 207,
-        "extension": "",
-        "path": "Dockerfile"
+        "language": "Markdown",
+        "size": 4566,
+        "extension": ".md",
+        "path": "CONTEXT_MKDOCS.md"
+      },
+      {
+        "name": "Dockerfile.api",
+        "type": "file",
+        "language": "Unknown",
+        "size": 290,
+        "extension": ".api",
+        "path": "Dockerfile.api"
+      },
+      {
+        "name": "Dockerfile.worker",
+        "type": "file",
+        "language": "Unknown",
+        "size": 223,
+        "extension": ".worker",
+        "path": "Dockerfile.worker"
       },
       {
         "name": "LICENSE",
@@ -74,10 +126,400 @@
         "path": "LICENSE"
       },
       {
+        "name": "LLM_validation",
+        "type": "directory",
+        "path": "LLM_validation",
+        "children": []
+      },
+      {
+        "name": "00_teste_conexao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6988,
+        "extension": ".py",
+        "path": "LLM_validation/00_teste_conexao.py"
+      },
+      {
+        "name": "01_extrair_texto.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9026,
+        "extension": ".py",
+        "path": "LLM_validation/01_extrair_texto.py"
+      },
+      {
+        "name": "02_gerar_resumo.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9150,
+        "extension": ".py",
+        "path": "LLM_validation/02_gerar_resumo.py"
+      },
+      {
+        "name": "03_avaliar_postura.py",
+        "type": "file",
+        "language": "Python",
+        "size": 13114,
+        "extension": ".py",
+        "path": "LLM_validation/03_avaliar_postura.py"
+      },
+      {
+        "name": "03b_avaliar_ementa.py",
+        "type": "file",
+        "language": "Python",
+        "size": 10634,
+        "extension": ".py",
+        "path": "LLM_validation/03b_avaliar_ementa.py"
+      },
+      {
+        "name": "04_comparar.py",
+        "type": "file",
+        "language": "Python",
+        "size": 10772,
+        "extension": ".py",
+        "path": "LLM_validation/04_comparar.py"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3389,
+        "size": 2518,
+        "extension": ".md",
+        "path": "LLM_validation/README.md"
+      },
+      {
+        "name": "auditar_estimativas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 16314,
+        "extension": ".py",
+        "path": "LLM_validation/auditar_estimativas.py"
+      },
+      {
+        "name": "auditoria_resultado.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 860,
+        "extension": ".json",
+        "path": "LLM_validation/auditoria_resultado.json"
+      },
+      {
+        "name": "benchmark_llama31_8b_colab.ipynb",
+        "type": "file",
+        "language": "Unknown",
+        "size": 12471,
+        "extension": ".ipynb",
+        "path": "LLM_validation/benchmark_llama31_8b_colab.ipynb"
+      },
+      {
+        "name": "comparar_justificativas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3964,
+        "extension": ".py",
+        "path": "LLM_validation/comparar_justificativas.py"
+      },
+      {
+        "name": "diagnostico_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2935,
+        "extension": ".py",
+        "path": "LLM_validation/diagnostico_api.py"
+      },
+      {
+        "name": "discursos",
+        "type": "directory",
+        "path": "LLM_validation/discursos",
+        "children": []
+      },
+      {
+        "name": "pl_001_a_favor.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 948,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_001_a_favor.txt"
+      },
+      {
+        "name": "pl_001_contra.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1020,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_001_contra.txt"
+      },
+      {
+        "name": "pl_002_a_favor.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1105,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_002_a_favor.txt"
+      },
+      {
+        "name": "pl_002_contra.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1060,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_002_contra.txt"
+      },
+      {
+        "name": "pl_003_a_favor.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 923,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_003_a_favor.txt"
+      },
+      {
+        "name": "pl_003_contra.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 985,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_003_contra.txt"
+      },
+      {
+        "name": "pl_004_a_favor.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1060,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_004_a_favor.txt"
+      },
+      {
+        "name": "pl_004_contra.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1099,
+        "extension": ".txt",
+        "path": "LLM_validation/discursos/pl_004_contra.txt"
+      },
+      {
+        "name": "inspecionar_bulk.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1630,
+        "extension": ".py",
+        "path": "LLM_validation/inspecionar_bulk.py"
+      },
+      {
+        "name": "proposicoes",
+        "type": "directory",
+        "path": "LLM_validation/proposicoes",
+        "children": []
+      },
+      {
+        "name": "pl_001.pdf",
+        "type": "file",
+        "language": "PDF",
+        "size": 105409,
+        "extension": ".pdf",
+        "path": "LLM_validation/proposicoes/pl_001.pdf"
+      },
+      {
+        "name": "pl_002.pdf",
+        "type": "file",
+        "language": "PDF",
+        "size": 372962,
+        "extension": ".pdf",
+        "path": "LLM_validation/proposicoes/pl_002.pdf"
+      },
+      {
+        "name": "pl_003.pdf",
+        "type": "file",
+        "language": "PDF",
+        "size": 129717,
+        "extension": ".pdf",
+        "path": "LLM_validation/proposicoes/pl_003.pdf"
+      },
+      {
+        "name": "pl_004.pdf",
+        "type": "file",
+        "language": "PDF",
+        "size": 175106,
+        "extension": ".pdf",
+        "path": "LLM_validation/proposicoes/pl_004.pdf"
+      },
+      {
+        "name": "textos",
+        "type": "directory",
+        "path": "LLM_validation/proposicoes/textos",
+        "children": []
+      },
+      {
+        "name": "pl_001.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 5550,
+        "extension": ".txt",
+        "path": "LLM_validation/proposicoes/textos/pl_001.txt"
+      },
+      {
+        "name": "pl_002.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 5005,
+        "extension": ".txt",
+        "path": "LLM_validation/proposicoes/textos/pl_002.txt"
+      },
+      {
+        "name": "pl_003.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1881,
+        "extension": ".txt",
+        "path": "LLM_validation/proposicoes/textos/pl_003.txt"
+      },
+      {
+        "name": "pl_004.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 5069,
+        "extension": ".txt",
+        "path": "LLM_validation/proposicoes/textos/pl_004.txt"
+      },
+      {
+        "name": "resultados",
+        "type": "directory",
+        "path": "LLM_validation/resultados",
+        "children": []
+      },
+      {
+        "name": "benchmark_final.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 1629,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/benchmark_final.json"
+      },
+      {
+        "name": "posturas_ementa_gemma2_9b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3229,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_ementa_gemma2_9b.json"
+      },
+      {
+        "name": "posturas_ementa_groq_llama33_70b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4562,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_ementa_groq_llama33_70b.json"
+      },
+      {
+        "name": "posturas_ementa_groq_qwen3_32b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3269,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_ementa_groq_qwen3_32b.json"
+      },
+      {
+        "name": "posturas_ementa_llama31_8b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3229,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_ementa_llama31_8b.json"
+      },
+      {
+        "name": "posturas_ementa_qwen25_7b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3508,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_ementa_qwen25_7b.json"
+      },
+      {
+        "name": "posturas_gemma2_9b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3164,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_gemma2_9b.json"
+      },
+      {
+        "name": "posturas_groq_llama33_70b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4374,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_groq_llama33_70b.json"
+      },
+      {
+        "name": "posturas_groq_qwen3_32b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3329,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_groq_qwen3_32b.json"
+      },
+      {
+        "name": "posturas_llama31_8b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3104,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_llama31_8b.json"
+      },
+      {
+        "name": "posturas_qwen25_7b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3885,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/posturas_qwen25_7b.json"
+      },
+      {
+        "name": "resumos_gemma2_9b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 5303,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/resumos_gemma2_9b.json"
+      },
+      {
+        "name": "resumos_groq_llama33_70b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 6374,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/resumos_groq_llama33_70b.json"
+      },
+      {
+        "name": "resumos_groq_qwen3_32b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 9709,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/resumos_groq_qwen3_32b.json"
+      },
+      {
+        "name": "resumos_llama31_8b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 6233,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/resumos_llama31_8b.json"
+      },
+      {
+        "name": "resumos_qwen25_7b.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 4387,
+        "extension": ".json",
+        "path": "LLM_validation/resultados/resumos_qwen25_7b.json"
+      },
+      {
+        "name": "README.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5845,
         "extension": ".md",
         "path": "README.md"
       },
@@ -143,7 +585,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 970,
+        "size": 1722,
         "extension": ".py",
         "path": "app/main.py"
       },
@@ -157,7 +599,7 @@
         "name": "schemas.py",
         "type": "file",
         "language": "Python",
-        "size": 1401,
+        "size": 3484,
         "extension": ".py",
         "path": "app/modelos/schemas.py"
       },
@@ -179,7 +621,7 @@
         "name": "politicos.py",
         "type": "file",
         "language": "Python",
-        "size": 4377,
+        "size": 10569,
         "extension": ".py",
         "path": "app/rotas/politicos.py"
       },
@@ -187,7 +629,7 @@
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 359,
+        "size": 1458,
         "extension": ".yml",
         "path": "docker-compose.yml"
       },
@@ -204,52 +646,262 @@
         "children": []
       },
       {
-        "name": "api.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 0,
-        "extension": ".md",
-        "path": "docs/docs/api.md"
+        "name": "adrs",
+        "type": "directory",
+        "path": "docs/docs/adrs",
+        "children": []
       },
       {
-        "name": "arquitetura.md",
+        "name": "adr-001.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3223,
+        "size": 2505,
         "extension": ".md",
-        "path": "docs/docs/arquitetura.md"
+        "path": "docs/docs/adrs/adr-001.md"
       },
       {
-        "name": "calculo-score.md",
+        "name": "adr-002.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4632,
+        "size": 4179,
         "extension": ".md",
-        "path": "docs/docs/calculo-score.md"
-      },
-      {
-        "name": "execucao.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 0,
-        "extension": ".md",
-        "path": "docs/docs/execucao.md"
+        "path": "docs/docs/adrs/adr-002.md"
       },
       {
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2522,
+        "size": 489,
+        "extension": ".md",
+        "path": "docs/docs/adrs/index.md"
+      },
+      {
+        "name": "arquitetura.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10059,
+        "extension": ".md",
+        "path": "docs/docs/arquitetura.md"
+      },
+      {
+        "name": "avaliacao.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2458,
+        "extension": ".md",
+        "path": "docs/docs/avaliacao.md"
+      },
+      {
+        "name": "calculo-score.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1951,
+        "extension": ".md",
+        "path": "docs/docs/calculo-score.md"
+      },
+      {
+        "name": "escopo.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2725,
+        "extension": ".md",
+        "path": "docs/docs/escopo.md"
+      },
+      {
+        "name": "etl-dados.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4017,
+        "extension": ".md",
+        "path": "docs/docs/etl-dados.md"
+      },
+      {
+        "name": "execucao.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10057,
+        "extension": ".md",
+        "path": "docs/docs/execucao.md"
+      },
+      {
+        "name": "frontend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5806,
+        "extension": ".md",
+        "path": "docs/docs/frontend.md"
+      },
+      {
+        "name": "imagens",
+        "type": "directory",
+        "path": "docs/docs/imagens",
+        "children": []
+      },
+      {
+        "name": "Dossiê_CD.jpeg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 60460,
+        "extension": ".jpeg",
+        "path": "docs/docs/imagens/Dossiê_CD.jpeg"
+      },
+      {
+        "name": "FacetoFace_CD.jpeg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 77250,
+        "extension": ".jpeg",
+        "path": "docs/docs/imagens/FacetoFace_CD.jpeg"
+      },
+      {
+        "name": "Homepage_CD.jpeg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 85474,
+        "extension": ".jpeg",
+        "path": "docs/docs/imagens/Homepage_CD.jpeg"
+      },
+      {
+        "name": "Persona.png.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 67176,
+        "extension": ".jpg",
+        "path": "docs/docs/imagens/Persona.png.jpg"
+      },
+      {
+        "name": "Storymap.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 55751,
+        "extension": ".jpg",
+        "path": "docs/docs/imagens/Storymap.jpg"
+      },
+      {
+        "name": "prototipo_comparacao.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 39465,
+        "extension": ".jpg",
+        "path": "docs/docs/imagens/prototipo_comparacao.jpg"
+      },
+      {
+        "name": "prototipo_home.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 76856,
+        "extension": ".jpg",
+        "path": "docs/docs/imagens/prototipo_home.jpg"
+      },
+      {
+        "name": "prototipo_raio_x.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 162176,
+        "extension": ".jpg",
+        "path": "docs/docs/imagens/prototipo_raio_x.jpg"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 76,
         "extension": ".md",
         "path": "docs/docs/index.md"
+      },
+      {
+        "name": "integracaoapi.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2364,
+        "extension": ".md",
+        "path": "docs/docs/integracaoapi.md"
       },
       {
         "name": "lgpd.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3215,
+        "size": 2552,
         "extension": ".md",
         "path": "docs/docs/lgpd.md"
+      },
+      {
+        "name": "links.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 493,
+        "extension": ".md",
+        "path": "docs/docs/links.md"
+      },
+      {
+        "name": "manual.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2224,
+        "extension": ".md",
+        "path": "docs/docs/manual.md"
+      },
+      {
+        "name": "metodologia.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2615,
+        "extension": ".md",
+        "path": "docs/docs/metodologia.md"
+      },
+      {
+        "name": "motor-nlp.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7339,
+        "extension": ".md",
+        "path": "docs/docs/motor-nlp.md"
+      },
+      {
+        "name": "productivity",
+        "type": "directory",
+        "path": "docs/docs/productivity",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 28046,
+        "extension": ".html",
+        "path": "docs/docs/productivity/index.html"
+      },
+      {
+        "name": "metrics.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 14680,
+        "extension": ".json",
+        "path": "docs/docs/productivity/metrics.json"
+      },
+      {
+        "name": "qualidade.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 640,
+        "extension": ".md",
+        "path": "docs/docs/qualidade.md"
+      },
+      {
+        "name": "requisitos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10705,
+        "extension": ".md",
+        "path": "docs/docs/requisitos.md"
+      },
+      {
+        "name": "roadmap.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1655,
+        "extension": ".md",
+        "path": "docs/docs/roadmap.md"
       },
       {
         "name": "sprints",
@@ -261,7 +913,7 @@
         "name": "sprint-0.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2112,
+        "size": 2152,
         "extension": ".md",
         "path": "docs/docs/sprints/sprint-0.md"
       },
@@ -269,7 +921,7 @@
         "name": "sprint-1.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2420,
+        "size": 2452,
         "extension": ".md",
         "path": "docs/docs/sprints/sprint-1.md"
       },
@@ -277,7 +929,7 @@
         "name": "sprint-2.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2482,
+        "size": 2522,
         "extension": ".md",
         "path": "docs/docs/sprints/sprint-2.md"
       },
@@ -285,9 +937,57 @@
         "name": "sprint-3.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3213,
+        "size": 3286,
         "extension": ".md",
         "path": "docs/docs/sprints/sprint-3.md"
+      },
+      {
+        "name": "sprint-4.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3988,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-4.md"
+      },
+      {
+        "name": "sprint-5.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1847,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-5.md"
+      },
+      {
+        "name": "sprint-6.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2463,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-6.md"
+      },
+      {
+        "name": "sprint-7.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1420,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-7.md"
+      },
+      {
+        "name": "sprint-8.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1985,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-8.md"
+      },
+      {
+        "name": "sprint-9.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1515,
+        "extension": ".md",
+        "path": "docs/docs/sprints/sprint-9.md"
       },
       {
         "name": "stylesheets",
@@ -299,23 +999,105 @@
         "name": "extra.css",
         "type": "file",
         "language": "CSS",
-        "size": 223,
+        "size": 5459,
         "extension": ".css",
         "path": "docs/docs/stylesheets/extra.css"
+      },
+      {
+        "name": "landing.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 7430,
+        "extension": ".css",
+        "path": "docs/docs/stylesheets/landing.css"
+      },
+      {
+        "name": "supabase.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3454,
+        "extension": ".md",
+        "path": "docs/docs/supabase.md"
+      },
+      {
+        "name": "ux",
+        "type": "directory",
+        "path": "docs/docs/ux",
+        "children": []
+      },
+      {
+        "name": "personas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1473,
+        "extension": ".md",
+        "path": "docs/docs/ux/personas.md"
+      },
+      {
+        "name": "prototipos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 527,
+        "extension": ".md",
+        "path": "docs/docs/ux/prototipos.md"
       },
       {
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 768,
+        "size": 2719,
         "extension": ".yml",
         "path": "docs/mkdocs.yml"
+      },
+      {
+        "name": "overrides",
+        "type": "directory",
+        "path": "docs/overrides",
+        "children": []
+      },
+      {
+        "name": "home.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 9781,
+        "extension": ".html",
+        "path": "docs/overrides/home.html"
+      },
+      {
+        "name": "productivity",
+        "type": "directory",
+        "path": "docs/productivity",
+        "children": []
+      },
+      {
+        "name": "collect_metrics.py",
+        "type": "file",
+        "language": "Python",
+        "size": 10503,
+        "extension": ".py",
+        "path": "docs/productivity/collect_metrics.py"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 39,
+        "extension": ".txt",
+        "path": "docs/productivity/requirements.txt"
+      },
+      {
+        "name": "extractor.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3110,
+        "extension": ".py",
+        "path": "extractor.py"
       },
       {
         "name": "extrair_amostras.py",
         "type": "file",
         "language": "Python",
-        "size": 1003,
+        "size": 1006,
         "extension": ".py",
         "path": "extrair_amostras.py"
       },
@@ -358,6 +1140,14 @@
         "path": "frontend/Dockerfile"
       },
       {
+        "name": "README-FRONTEND.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1619,
+        "extension": ".md",
+        "path": "frontend/README-FRONTEND.md"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
@@ -370,6 +1160,20 @@
         "type": "directory",
         "path": "frontend/app",
         "children": []
+      },
+      {
+        "name": "comparacao",
+        "type": "directory",
+        "path": "frontend/app/comparacao",
+        "children": []
+      },
+      {
+        "name": "page.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 8950,
+        "extension": ".tsx",
+        "path": "frontend/app/comparacao/page.tsx"
       },
       {
         "name": "favicon.ico",
@@ -391,7 +1195,7 @@
         "name": "layout.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 719,
+        "size": 1036,
         "extension": ".tsx",
         "path": "frontend/app/layout.tsx"
       },
@@ -399,7 +1203,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 13870,
+        "size": 13972,
         "extension": ".tsx",
         "path": "frontend/app/page.tsx"
       },
@@ -419,7 +1223,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4649,
+        "size": 16347,
         "extension": ".tsx",
         "path": "frontend/app/politico/[id]/page.tsx"
       },
@@ -521,7 +1325,7 @@
         "name": "parsear_amostras.py",
         "type": "file",
         "language": "Python",
-        "size": 1155,
+        "size": 1145,
         "extension": ".py",
         "path": "parsear_amostras.py"
       },
@@ -535,7 +1339,7 @@
         "name": "lote_nlp.py",
         "type": "file",
         "language": "Python",
-        "size": 6997,
+        "size": 7765,
         "extension": ".py",
         "path": "pocs/lote_nlp.py"
       },
@@ -549,38 +1353,84 @@
         "name": "poc_npl.py",
         "type": "file",
         "language": "Python",
-        "size": 1554,
+        "size": 1543,
         "extension": ".py",
         "path": "pocs/motor_nlp/poc_npl.py"
       },
       {
-        "name": "requirements.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 98,
-        "extension": ".txt",
-        "path": "requirements.txt"
-      },
-      {
-        "name": "seeder_camara.py",
+        "name": "teste_motor_embeddings.py",
         "type": "file",
         "language": "Python",
-        "size": 4375,
+        "size": 2455,
         "extension": ".py",
-        "path": "seeder_camara.py"
+        "path": "pocs/teste_motor_embeddings.py"
+      },
+      {
+        "name": "requirements.api.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 145,
+        "extension": ".txt",
+        "path": "requirements.api.txt"
+      },
+      {
+        "name": "requirements.worker.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 80,
+        "extension": ".txt",
+        "path": "requirements.worker.txt"
       },
       {
         "name": "seeder_parlamentares.py",
         "type": "file",
         "language": "Python",
-        "size": 9633,
+        "size": 11328,
         "extension": ".py",
         "path": "seeder_parlamentares.py"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "utils",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "utils/__init__.py"
+      },
+      {
+        "name": "cleaner.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1235,
+        "extension": ".py",
+        "path": "utils/cleaner.py"
+      },
+      {
+        "name": "motor_nlp.py",
+        "type": "file",
+        "language": "Python",
+        "size": 608,
+        "extension": ".py",
+        "path": "utils/motor_nlp.py"
+      },
+      {
+        "name": "worker_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 573,
+        "extension": ".py",
+        "path": "worker_api.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-26T09:20:29.873072",
+    "extracted_at": "2026-05-27T09:27:51.172865",
     "file_path": "data/silver/hierarchy_2026.1-ContraDito.json"
   }
 }

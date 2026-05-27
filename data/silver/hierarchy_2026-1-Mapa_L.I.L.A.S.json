@@ -2,7 +2,7 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-26T09:17:39.723741",
+  "extracted_at": "2026-05-27T09:24:58.421195",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -20,6 +20,46 @@
         "size": 21618,
         "extension": ".md",
         "path": ".claude/CLAUDE_MapaLILAS.md"
+      },
+      {
+        "name": "SPEC_Backend_LILAS (4).md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12737,
+        "extension": ".md",
+        "path": ".claude/SPEC_Backend_LILAS (4).md"
+      },
+      {
+        "name": "SPEC_Backend_LILAS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12737,
+        "extension": ".md",
+        "path": ".claude/SPEC_Backend_LILAS.md"
+      },
+      {
+        "name": "SPEC_Front_Pagina_Projetos_de_Lei.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12526,
+        "extension": ".md",
+        "path": ".claude/SPEC_Front_Pagina_Projetos_de_Lei.md"
+      },
+      {
+        "name": "SPEC_attMetrics.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 13657,
+        "extension": ".md",
+        "path": ".claude/SPEC_attMetrics.md"
+      },
+      {
+        "name": ".gitattributes",
+        "type": "file",
+        "language": "Unknown",
+        "size": 28,
+        "extension": ".gitattributes",
+        "path": ".gitattributes"
       },
       {
         "name": ".github",
@@ -51,7 +91,7 @@
         "name": "scrum metrics.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1273,
+        "size": 1132,
         "extension": ".yml",
         "path": ".github/workflows/scrum metrics.yml"
       },
@@ -59,9 +99,17 @@
         "name": "static.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1264,
+        "size": 1701,
         "extension": ".yml",
         "path": ".github/workflows/static.yml"
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 183,
+        "extension": ".gitignore",
+        "path": ".gitignore"
       },
       {
         "name": "LICENSE",
@@ -75,7 +123,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3956,
+        "size": 3890,
         "extension": ".md",
         "path": "README.md"
       },
@@ -86,12 +134,12 @@
         "children": []
       },
       {
-        "name": ".env",
+        "name": "Dockerfile",
         "type": "file",
-        "language": "Environment",
-        "size": 0,
-        "extension": ".env",
-        "path": "backend/.env"
+        "language": "No Extension",
+        "size": 798,
+        "extension": "",
+        "path": "backend/Dockerfile"
       },
       {
         "name": "alembic.ini",
@@ -111,9 +159,17 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 29,
+        "size": 30,
         "extension": ".gitignore",
         "path": "backend/app/.gitignore"
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/__init__.py"
       },
       {
         "name": "__pycache__",
@@ -133,7 +189,7 @@
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 1355,
+        "size": 1639,
         "extension": ".py",
         "path": "backend/app/database.py"
       },
@@ -141,7 +197,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 116,
+        "size": 608,
         "extension": ".py",
         "path": "backend/app/main.py"
       },
@@ -168,18 +224,18 @@
         "path": "backend/app/migrations/script.py.mako"
       },
       {
-        "name": "ver",
+        "name": "versions",
         "type": "directory",
-        "path": "backend/app/migrations/ver",
+        "path": "backend/app/migrations/versions",
         "children": []
       },
       {
-        "name": "001_ini_schema.py",
+        "name": "baf79178346c_criando_tabelas_iniciais.py",
         "type": "file",
         "language": "Python",
-        "size": 10237,
+        "size": 6255,
         "extension": ".py",
-        "path": "backend/app/migrations/ver/001_ini_schema.py"
+        "path": "backend/app/migrations/versions/baf79178346c_criando_tabelas_iniciais.py"
       },
       {
         "name": "models.py",
@@ -190,12 +246,78 @@
         "path": "backend/app/models.py"
       },
       {
-        "name": "dockerfile",
+        "name": "routers",
+        "type": "directory",
+        "path": "backend/app/routers",
+        "children": []
+      },
+      {
+        "name": "projeto.py",
         "type": "file",
-        "language": "No Extension",
-        "size": 615,
-        "extension": "",
-        "path": "backend/dockerfile"
+        "language": "Python",
+        "size": 8903,
+        "extension": ".py",
+        "path": "backend/app/routers/projeto.py"
+      },
+      {
+        "name": "schemas",
+        "type": "directory",
+        "path": "backend/app/schemas",
+        "children": []
+      },
+      {
+        "name": "camara.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4289,
+        "extension": ".py",
+        "path": "backend/app/schemas/camara.py"
+      },
+      {
+        "name": "senado.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7252,
+        "extension": ".py",
+        "path": "backend/app/schemas/senado.py"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "backend/app/services",
+        "children": []
+      },
+      {
+        "name": "camara_client.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2896,
+        "extension": ".py",
+        "path": "backend/app/services/camara_client.py"
+      },
+      {
+        "name": "collector.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6011,
+        "extension": ".py",
+        "path": "backend/app/services/collector.py"
+      },
+      {
+        "name": "normalizer.py",
+        "type": "file",
+        "language": "Python",
+        "size": 14127,
+        "extension": ".py",
+        "path": "backend/app/services/normalizer.py"
+      },
+      {
+        "name": "senado_client.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2464,
+        "extension": ".py",
+        "path": "backend/app/services/senado_client.py"
       },
       {
         "name": "entrypoint.sh",
@@ -206,10 +328,18 @@
         "path": "backend/entrypoint.sh"
       },
       {
+        "name": "popular_banco.py",
+        "type": "file",
+        "language": "Python",
+        "size": 939,
+        "extension": ".py",
+        "path": "backend/popular_banco.py"
+      },
+      {
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 66,
+        "size": 83,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -288,6 +418,14 @@
         "children": []
       },
       {
+        "name": "ADRs.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3264,
+        "extension": ".md",
+        "path": "docs/Arquitetura/ADRs.md"
+      },
+      {
         "name": "Arquitetura C4 (1).pdf",
         "type": "file",
         "language": "PDF",
@@ -304,6 +442,30 @@
         "path": "docs/Arquitetura/Arquitetura_Tecnica.md"
       },
       {
+        "name": "C4_Model.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2842,
+        "extension": ".md",
+        "path": "docs/Arquitetura/C4_Model.md"
+      },
+      {
+        "name": "Seguranca_Escalabilidade.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4199,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Seguranca_Escalabilidade.md"
+      },
+      {
+        "name": "Visao_Geral.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3408,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Visao_Geral.md"
+      },
+      {
         "name": "Banco de Dados",
         "type": "directory",
         "path": "docs/Banco de Dados",
@@ -318,10 +480,18 @@
         "path": "docs/Banco de Dados/image.png"
       },
       {
+        "name": "relacionamento_tabelas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7455,
+        "extension": ".md",
+        "path": "docs/Banco de Dados/relacionamento_tabelas.md"
+      },
+      {
         "name": "tables.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5746,
+        "size": 5980,
         "extension": ".md",
         "path": "docs/Banco de Dados/tables.md"
       },
@@ -432,6 +602,14 @@
         "path": "docs/Estudos/Sprint01/API RESTful Cheat Sheet.pdf"
       },
       {
+        "name": "API_RESTful_Cheat_Sheet.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5830,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint01/API_RESTful_Cheat_Sheet.md"
+      },
+      {
         "name": "Docker.md",
         "type": "file",
         "language": "Markdown",
@@ -448,6 +626,14 @@
         "path": "docs/Estudos/Sprint01/Estudo.de.Figma.+.Integracao.com.GitHub.pdf"
       },
       {
+        "name": "Estudo_MkDocs.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3779,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint01/Estudo_MkDocs.md"
+      },
+      {
         "name": "Estudo_MkDocs.pdf",
         "type": "file",
         "language": "PDF",
@@ -456,12 +642,28 @@
         "path": "docs/Estudos/Sprint01/Estudo_MkDocs.pdf"
       },
       {
+        "name": "Estudo_de_Figma_Integracao_com_GitHub.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5169,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint01/Estudo_de_Figma_Integracao_com_GitHub.md"
+      },
+      {
         "name": "estudo.de.XP.pdf",
         "type": "file",
         "language": "PDF",
         "size": 779485,
         "extension": ".pdf",
         "path": "docs/Estudos/Sprint01/estudo.de.XP.pdf"
+      },
+      {
+        "name": "estudo_de_XP.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 16009,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint01/estudo_de_XP.md"
       },
       {
         "name": "Sprint02",
@@ -478,12 +680,28 @@
         "path": "docs/Estudos/Sprint02/Estudo.de.React.e.Tailwind.CSS.pdf"
       },
       {
+        "name": "EstudoFastApi.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4398,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint02/EstudoFastApi.md"
+      },
+      {
         "name": "EstudoFastApi.pdf",
         "type": "file",
         "language": "PDF",
         "size": 103225,
         "extension": ".pdf",
         "path": "docs/Estudos/Sprint02/EstudoFastApi.pdf"
+      },
+      {
+        "name": "Estudo_de_React_e_Tailwind_CSS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3804,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint02/Estudo_de_React_e_Tailwind_CSS.md"
       },
       {
         "name": "midia",
@@ -614,12 +832,12 @@
         "path": "docs/Estudos/Sprint04/Estudo API da Câmara do Senado.md"
       },
       {
-        "name": "Implementação_Dashboard.pdf",
+        "name": "Implementacao_Dashboard.md",
         "type": "file",
-        "language": "PDF",
-        "size": 184128,
-        "extension": ".pdf",
-        "path": "docs/Estudos/Sprint04/Implementação_Dashboard.pdf"
+        "language": "Markdown",
+        "size": 4284,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint04/Implementacao_Dashboard.md"
       },
       {
         "name": "Pesquisa Legislativa - Monitoramento de PLs (API do Senado).md",
@@ -638,14 +856,6 @@
         "path": "docs/Estudos/Sprint04/StoryMap-figma.md"
       },
       {
-        "name": "Wireframe.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 919,
-        "extension": ".md",
-        "path": "docs/Estudos/Sprint04/Wireframe.md"
-      },
-      {
         "name": "Requisitos",
         "type": "directory",
         "path": "docs/Requisitos",
@@ -660,18 +870,130 @@
         "path": "docs/Requisitos/Criterios de aceitacao.md"
       },
       {
+        "name": "Persona.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3222,
+        "extension": ".md",
+        "path": "docs/Requisitos/Persona.md"
+      },
+      {
+        "name": "Protótipo Alta Fidelidade.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3144,
+        "extension": ".md",
+        "path": "docs/Requisitos/Protótipo Alta Fidelidade.md"
+      },
+      {
+        "name": "StoryMap.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 612,
+        "extension": ".md",
+        "path": "docs/Requisitos/StoryMap.md"
+      },
+      {
         "name": "Visão de produto.md",
         "type": "file",
         "language": "Markdown",
-        "size": 513,
+        "size": 4005,
         "extension": ".md",
         "path": "docs/Requisitos/Visão de produto.md"
+      },
+      {
+        "name": "Wireframe.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2231,
+        "extension": ".md",
+        "path": "docs/Requisitos/Wireframe.md"
       },
       {
         "name": "imagens",
         "type": "directory",
         "path": "docs/Requisitos/imagens",
         "children": []
+      },
+      {
+        "name": "Dashboard - Gráfico de Barras Horizontais.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 154159,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/Dashboard - Gráfico de Barras Horizontais.png"
+      },
+      {
+        "name": "Dashboard - Gráfico de Colunas.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 153648,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/Dashboard - Gráfico de Colunas.png"
+      },
+      {
+        "name": "Dashboard - Gráfico de Pizza.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 175249,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/Dashboard - Gráfico de Pizza.png"
+      },
+      {
+        "name": "Dashboard - Gráfico de Rosca.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 165788,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/Dashboard - Gráfico de Rosca.png"
+      },
+      {
+        "name": "GRÁFICOS.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 493883,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/GRÁFICOS.png"
+      },
+      {
+        "name": "INÍCIO.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 430176,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/INÍCIO.png"
+      },
+      {
+        "name": "PARLAMENTARES DETALHADO.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 149791,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/PARLAMENTARES DETALHADO.png"
+      },
+      {
+        "name": "PL DETALHADO.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 180875,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/PL DETALHADO.png"
+      },
+      {
+        "name": "PL.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 225919,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/PL.png"
+      },
+      {
+        "name": "RANKING PARLAMENTARES.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 143637,
+        "extension": ".png",
+        "path": "docs/Requisitos/imagens/RANKING PARLAMENTARES.png"
       },
       {
         "name": "image-1.png",
@@ -733,7 +1055,7 @@
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1916,
+        "size": 2895,
         "extension": ".md",
         "path": "docs/index.md"
       },
@@ -747,25 +1069,17 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 12784,
+        "size": 15147,
         "extension": ".html",
         "path": "docs/scrum/index.html"
       },
       {
-        "name": "script.js",
+        "name": "metrics.json",
         "type": "file",
-        "language": "JavaScript",
-        "size": 5449,
-        "extension": ".js",
-        "path": "docs/scrum/script.js"
-      },
-      {
-        "name": "style.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 1912,
-        "extension": ".css",
-        "path": "docs/scrum/style.css"
+        "language": "JSON",
+        "size": 7107,
+        "extension": ".json",
+        "path": "docs/scrum/metrics.json"
       },
       {
         "name": "frontend",
@@ -782,20 +1096,20 @@
         "path": "frontend/.gitignore"
       },
       {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 426,
+        "extension": "",
+        "path": "frontend/Dockerfile"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
         "size": 1027,
         "extension": ".md",
         "path": "frontend/README.md"
-      },
-      {
-        "name": "dockerfile",
-        "type": "file",
-        "language": "No Extension",
-        "size": 426,
-        "extension": "",
-        "path": "frontend/dockerfile"
       },
       {
         "name": "eslint.config.js",
@@ -817,7 +1131,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 95481,
+        "size": 67978,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -869,7 +1183,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 349,
+        "size": 380,
         "extension": ".jsx",
         "path": "frontend/src/App.jsx"
       },
@@ -1034,6 +1348,20 @@
         "children": []
       },
       {
+        "name": "Inicio",
+        "type": "directory",
+        "path": "frontend/src/pages/Inicio",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 5459,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/Inicio/index.jsx"
+      },
+      {
         "name": "ProjetosLei",
         "type": "directory",
         "path": "frontend/src/pages/ProjetosLei",
@@ -1057,7 +1385,7 @@
         "name": "api.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 2352,
+        "size": 2353,
         "extension": ".js",
         "path": "frontend/src/services/api.js"
       },
@@ -1079,39 +1407,31 @@
         "name": "analyzer.py",
         "type": "file",
         "language": "Python",
-        "size": 7508,
+        "size": 10562,
         "extension": ".py",
         "path": "metrics/analyzer.py"
-      },
-      {
-        "name": "output",
-        "type": "directory",
-        "path": "metrics/output",
-        "children": []
-      },
-      {
-        "name": "index.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 12091,
-        "extension": ".html",
-        "path": "metrics/output/index.html"
-      },
-      {
-        "name": "template.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 9562,
-        "extension": ".html",
-        "path": "metrics/template.html"
       },
       {
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 618,
+        "size": 2822,
         "extension": ".yml",
         "path": "mkdocs.yml"
+      },
+      {
+        "name": "overrides",
+        "type": "directory",
+        "path": "overrides",
+        "children": []
+      },
+      {
+        "name": "main.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 48385,
+        "extension": ".html",
+        "path": "overrides/main.html"
       },
       {
         "name": "site",
@@ -2022,11 +2342,25 @@
         "size": 127,
         "extension": ".gz",
         "path": "site/sitemap.xml.gz"
+      },
+      {
+        "name": "stylesheets",
+        "type": "directory",
+        "path": "stylesheets",
+        "children": []
+      },
+      {
+        "name": "extra.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 9668,
+        "extension": ".css",
+        "path": "stylesheets/extra.css"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-26T09:20:28.978964",
+    "extracted_at": "2026-05-27T09:27:50.248472",
     "file_path": "data/silver/hierarchy_2026-1-Mapa_L.I.L.A.S.json"
   }
 }

@@ -2,24 +2,44 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-26T09:17:46.842440",
+  "analyzed_at": "2026-05-27T09:25:06.124979",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 49,
-  "total_bytes": 290480,
+  "total_files": 58,
+  "total_bytes": 481233,
   "languages": [
+    {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 203018,
+      "percentage": 42.19,
+      "files": [
+        {
+          "path": "docs/assets/images/c4_container.png",
+          "name": "c4_container.png",
+          "size": 135445,
+          "extension": ".png"
+        },
+        {
+          "path": "docs/assets/images/c4_contexto.png",
+          "name": "c4_contexto.png",
+          "size": 67573,
+          "extension": ".png"
+        }
+      ]
+    },
     {
       "language": "JSON",
       "file_count": 3,
-      "total_bytes": 169618,
-      "percentage": 58.39,
+      "total_bytes": 122816,
+      "percentage": 25.52,
       "files": [
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 131491,
+          "size": 84420,
           "extension": ".json"
         },
         {
@@ -31,16 +51,16 @@
         {
           "path": "frontend/package.json",
           "name": "package.json",
-          "size": 758,
+          "size": 1027,
           "extension": ".json"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 17,
-      "total_bytes": 52577,
-      "percentage": 18.1,
+      "file_count": 16,
+      "total_bytes": 57537,
+      "percentage": 11.96,
       "files": [
         {
           "path": "estudos_iniciais/estudos/requisitos/requisitos.md",
@@ -73,9 +93,27 @@
           "extension": ".md"
         },
         {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 2890,
+          "extension": ".md"
+        },
+        {
           "path": "estudos_iniciais/estudos/frontend/typescript.md",
           "name": "typescript.md",
           "size": 2632,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/arquitetura.md",
+          "name": "arquitetura.md",
+          "size": 2293,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/visao-geral.md",
+          "name": "visao-geral.md",
+          "size": 2293,
           "extension": ".md"
         },
         {
@@ -83,32 +121,82 @@
           "name": "postgreSQL.md",
           "size": 2275,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "file_count": 14,
+      "total_bytes": 39047,
+      "percentage": 8.11,
+      "files": [
+        {
+          "path": "frontend/src/pages/Inicio.jsx",
+          "name": "Inicio.jsx",
+          "size": 8044,
+          "extension": ".jsx"
         },
         {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 2053,
-          "extension": ".md"
+          "path": "frontend/src/pages/Estatisticas.jsx",
+          "name": "Estatisticas.jsx",
+          "size": 7908,
+          "extension": ".jsx"
         },
         {
-          "path": "docs/estudos/fast API/fastapi.md",
-          "name": "fastapi.md",
-          "size": 1528,
-          "extension": ".md"
+          "path": "frontend/src/pages/DetalhesLei.jsx",
+          "name": "DetalhesLei.jsx",
+          "size": 6309,
+          "extension": ".jsx"
         },
         {
-          "path": "estudos_iniciais/estudos/backend/fastapi.md",
-          "name": "fastapi.md",
-          "size": 1528,
-          "extension": ".md"
+          "path": "frontend/src/pages/TodasAsLeis.jsx",
+          "name": "TodasAsLeis.jsx",
+          "size": 4443,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/src/pages/Sobre.jsx",
+          "name": "Sobre.jsx",
+          "size": 3713,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/src/components/Footer.jsx",
+          "name": "Footer.jsx",
+          "size": 3328,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/src/App.jsx",
+          "name": "App.jsx",
+          "size": 1853,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "name": "tailwind.config.js",
+          "size": 851,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/src/api.js",
+          "name": "api.js",
+          "size": 767,
+          "extension": ".js"
+        },
+        {
+          "path": "frontend/eslint.config.js",
+          "name": "eslint.config.js",
+          "size": 758,
+          "extension": ".js"
         }
       ]
     },
     {
       "language": "Python",
       "file_count": 7,
-      "total_bytes": 28228,
-      "percentage": 9.72,
+      "total_bytes": 28938,
+      "percentage": 6.01,
       "files": [
         {
           "path": "backend/crawler/camara_api.py",
@@ -125,7 +213,7 @@
         {
           "path": "backend/main.py",
           "name": "main.py",
-          "size": 4215,
+          "size": 4858,
           "extension": ".py"
         },
         {
@@ -143,7 +231,7 @@
         {
           "path": "backend/database.py",
           "name": "database.py",
-          "size": 477,
+          "size": 544,
           "extension": ".py"
         },
         {
@@ -158,7 +246,7 @@
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 14553,
-      "percentage": 5.01,
+      "percentage": 3.02,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -178,7 +266,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 9355,
-      "percentage": 3.22,
+      "percentage": 1.94,
       "files": [
         {
           "path": "docs/dashboard/index.html",
@@ -195,24 +283,10 @@
       ]
     },
     {
-      "language": "Unknown",
-      "file_count": 1,
-      "total_bytes": 6854,
-      "percentage": 2.36,
-      "files": [
-        {
-          "path": "backend/__pycache__/main.cpython-311.pyc",
-          "name": "main.cpython-311.pyc",
-          "size": 6854,
-          "extension": ".pyc"
-        }
-      ]
-    },
-    {
       "language": "YAML",
       "file_count": 4,
-      "total_bytes": 2672,
-      "percentage": 0.92,
+      "total_bytes": 2784,
+      "percentage": 0.58,
       "files": [
         {
           "path": ".github/workflows/metricas_e_docs.yml",
@@ -223,7 +297,7 @@
         {
           "path": "docker-compose.yml",
           "name": "docker-compose.yml",
-          "size": 708,
+          "size": 770,
           "extension": ".yml"
         },
         {
@@ -235,80 +309,16 @@
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 519,
+          "size": 569,
           "extension": ".yml"
-        }
-      ]
-    },
-    {
-      "language": "CSS",
-      "file_count": 3,
-      "total_bytes": 2242,
-      "percentage": 0.77,
-      "files": [
-        {
-          "path": "frontend/src/index.css",
-          "name": "index.css",
-          "size": 2169,
-          "extension": ".css"
-        },
-        {
-          "path": "docs/stylesheets/extra.css",
-          "name": "extra.css",
-          "size": 72,
-          "extension": ".css"
-        },
-        {
-          "path": "frontend/src/App.css",
-          "name": "App.css",
-          "size": 1,
-          "extension": ".css"
-        }
-      ]
-    },
-    {
-      "language": "JavaScript",
-      "file_count": 5,
-      "total_bytes": 2013,
-      "percentage": 0.69,
-      "files": [
-        {
-          "path": "frontend/eslint.config.js",
-          "name": "eslint.config.js",
-          "size": 758,
-          "extension": ".js"
-        },
-        {
-          "path": "frontend/src/App.test.jsx",
-          "name": "App.test.jsx",
-          "size": 469,
-          "extension": ".jsx"
-        },
-        {
-          "path": "frontend/vite.config.js",
-          "name": "vite.config.js",
-          "size": 331,
-          "extension": ".js"
-        },
-        {
-          "path": "frontend/src/main.jsx",
-          "name": "main.jsx",
-          "size": 229,
-          "extension": ".jsx"
-        },
-        {
-          "path": "frontend/src/App.jsx",
-          "name": "App.jsx",
-          "size": 226,
-          "extension": ".jsx"
         }
       ]
     },
     {
       "language": "No Extension",
       "file_count": 3,
-      "total_bytes": 1670,
-      "percentage": 0.57,
+      "total_bytes": 1714,
+      "percentage": 0.36,
       "files": [
         {
           "path": "LICENSE",
@@ -325,22 +335,48 @@
         {
           "path": "frontend/Dockerfile",
           "name": "Dockerfile",
-          "size": 176,
+          "size": 220,
           "extension": ""
         }
       ]
     },
     {
       "language": "Git Ignore",
-      "file_count": 1,
-      "total_bytes": 380,
+      "file_count": 2,
+      "total_bytes": 646,
       "percentage": 0.13,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 380,
+          "size": 416,
           "extension": ".gitignore"
+        },
+        {
+          "path": "frontend/.gitignore",
+          "name": ".gitignore",
+          "size": 230,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 507,
+      "percentage": 0.11,
+      "files": [
+        {
+          "path": "docs/stylesheets/extra.css",
+          "name": "extra.css",
+          "size": 379,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "name": "index.css",
+          "size": 128,
+          "extension": ".css"
         }
       ]
     },
@@ -348,7 +384,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 318,
-      "percentage": 0.11,
+      "percentage": 0.07,
       "files": [
         {
           "path": "backend/requirements.txt",
@@ -360,7 +396,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-26T09:20:29.664649",
+    "extracted_at": "2026-05-27T09:27:50.954092",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }

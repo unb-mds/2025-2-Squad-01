@@ -2,7 +2,7 @@
   "repository": "2026-1-LegisKids",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-26T09:17:43.922749",
+  "extracted_at": "2026-05-27T09:25:02.938228",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -224,12 +224,12 @@
         "path": ".github/workflows/performance-report.yml"
       },
       {
-        "name": ": padroniza documentação\"",
+        "name": "CLAUDE.md",
         "type": "file",
-        "language": "No Extension",
-        "size": 446354,
-        "extension": "",
-        "path": ": padroniza documentação\""
+        "language": "Markdown",
+        "size": 11474,
+        "extension": ".md",
+        "path": "CLAUDE.md"
       },
       {
         "name": "LICENSE",
@@ -243,27 +243,49 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4475,
+        "size": 5708,
         "extension": ".md",
         "path": "README.md"
       },
       {
+        "name": "docs",
+        "type": "directory",
+        "path": "docs",
+        "children": []
+      },
+      {
         "name": "assets",
         "type": "directory",
-        "path": "assets",
+        "path": "docs/assets",
         "children": []
       },
       {
         "name": "images",
         "type": "directory",
-        "path": "assets/images",
+        "path": "docs/assets/images",
         "children": []
+      },
+      {
+        "name": "logo-legiskids.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 2170425,
+        "extension": ".png",
+        "path": "docs/assets/images/logo-legiskids.png"
       },
       {
         "name": "team",
         "type": "directory",
-        "path": "assets/images/team",
+        "path": "docs/assets/images/team",
         "children": []
+      },
+      {
+        "name": "arthur-palhares.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 28587,
+        "extension": ".jpg",
+        "path": "docs/assets/images/team/arthur-palhares.jpg"
       },
       {
         "name": "caio-bechepeche.jpg",
@@ -271,7 +293,23 @@
         "language": "JPEG Image",
         "size": 325932,
         "extension": ".jpg",
-        "path": "assets/images/team/caio-bechepeche.jpg"
+        "path": "docs/assets/images/team/caio-bechepeche.jpg"
+      },
+      {
+        "name": "italo-lacerda.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 88779,
+        "extension": ".jpg",
+        "path": "docs/assets/images/team/italo-lacerda.jpg"
+      },
+      {
+        "name": "luis-henrique.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 22683,
+        "extension": ".jpg",
+        "path": "docs/assets/images/team/luis-henrique.jpg"
       },
       {
         "name": "renan-curione.jpg",
@@ -279,47 +317,7 @@
         "language": "JPEG Image",
         "size": 321946,
         "extension": ".jpg",
-        "path": "assets/images/team/renan-curione.jpg"
-      },
-      {
-        "name": "backend",
-        "type": "directory",
-        "path": "backend",
-        "children": []
-      },
-      {
-        "name": "src",
-        "type": "directory",
-        "path": "backend/src",
-        "children": []
-      },
-      {
-        "name": "main.py",
-        "type": "file",
-        "language": "Python",
-        "size": 5793,
-        "extension": ".py",
-        "path": "backend/src/main.py"
-      },
-      {
-        "name": "services",
-        "type": "directory",
-        "path": "backend/src/services",
-        "children": []
-      },
-      {
-        "name": "camara_api.py",
-        "type": "file",
-        "language": "Python",
-        "size": 3035,
-        "extension": ".py",
-        "path": "backend/src/services/camara_api.py"
-      },
-      {
-        "name": "docs",
-        "type": "directory",
-        "path": "docs",
-        "children": []
+        "path": "docs/assets/images/team/renan-curione.jpg"
       },
       {
         "name": "estudos",
@@ -367,7 +365,7 @@
         "name": "diagrama_arquitetura_v1.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5642,
+        "size": 5643,
         "extension": ".md",
         "path": "docs/estudos/arquitetura/diagrama_arquitetura_v1.md"
       },
@@ -375,7 +373,7 @@
         "name": "diagrama_arquitetura_v2.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4568,
+        "size": 4569,
         "extension": ".md",
         "path": "docs/estudos/arquitetura/diagrama_arquitetura_v2.md"
       },
@@ -420,6 +418,44 @@
         "path": "docs/estudos/arquitetura/index.md"
       },
       {
+        "name": "backend",
+        "type": "directory",
+        "path": "docs/estudos/backend",
+        "children": []
+      },
+      {
+        "name": "comparacao_stacks_backend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4476,
+        "extension": ".md",
+        "path": "docs/estudos/backend/comparacao_stacks_backend.md"
+      },
+      {
+        "name": "estudo_stack_backend_definida.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4766,
+        "extension": ".md",
+        "path": "docs/estudos/backend/estudo_stack_backend_definida.md"
+      },
+      {
+        "name": "estudo_tecnologias_backend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3994,
+        "extension": ".md",
+        "path": "docs/estudos/backend/estudo_tecnologias_backend.md"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 822,
+        "extension": ".md",
+        "path": "docs/estudos/backend/index.md"
+      },
+      {
         "name": "banco_de_dados",
         "type": "directory",
         "path": "docs/estudos/banco_de_dados",
@@ -432,6 +468,14 @@
         "size": 5333,
         "extension": ".md",
         "path": "docs/estudos/banco_de_dados/definicao_banco_de_dados.md"
+      },
+      {
+        "name": "definicao_campos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4588,
+        "extension": ".md",
+        "path": "docs/estudos/banco_de_dados/definicao_campos.md"
       },
       {
         "name": "definicao_dados.md",
@@ -448,6 +492,14 @@
         "size": 9431,
         "extension": ".md",
         "path": "docs/estudos/banco_de_dados/definicao_tabelas.md"
+      },
+      {
+        "name": "definicao_tratamento_dados.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7571,
+        "extension": ".md",
+        "path": "docs/estudos/banco_de_dados/definicao_tratamento_dados.md"
       },
       {
         "name": "estudo_banco_de_dados.md",
@@ -469,7 +521,7 @@
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 793,
+        "size": 931,
         "extension": ".md",
         "path": "docs/estudos/banco_de_dados/index.md"
       },
@@ -638,10 +690,32 @@
         "path": "docs/estudos/requisitos/requisitos_de_software.md"
       },
       {
+        "name": "sdd",
+        "type": "directory",
+        "path": "docs/estudos/sdd",
+        "children": []
+      },
+      {
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2419,
+        "size": 476,
+        "extension": ".md",
+        "path": "docs/estudos/sdd/index.md"
+      },
+      {
+        "name": "sddEstudo.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 13038,
+        "extension": ".md",
+        "path": "docs/estudos/sdd/sddEstudo.md"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2387,
         "extension": ".md",
         "path": "docs/index.md"
       },
@@ -706,12 +780,20 @@
         "children": []
       },
       {
-        "name": "index.html",
+        "name": "dashboard.html",
         "type": "file",
         "language": "HTML",
         "size": 165782,
         "extension": ".html",
-        "path": "docs/performance/index.html"
+        "path": "docs/performance/dashboard.html"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 546,
+        "extension": ".md",
+        "path": "docs/performance/index.md"
       },
       {
         "name": "metrics.json",
@@ -753,7 +835,7 @@
         "name": "dailies.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4645,
+        "size": 5835,
         "extension": ".md",
         "path": "docs/reunioes/dailies.md"
       },
@@ -777,7 +859,7 @@
         "name": "reviews_retrospectives.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2698,
+        "size": 2834,
         "extension": ".md",
         "path": "docs/reunioes/reviews_retrospectives.md"
       },
@@ -785,105 +867,15 @@
         "name": "sprint_plannings.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3439,
+        "size": 4415,
         "extension": ".md",
         "path": "docs/reunioes/sprint_plannings.md"
-      },
-      {
-        "name": "frontend",
-        "type": "directory",
-        "path": "frontend",
-        "children": []
-      },
-      {
-        "name": "css",
-        "type": "directory",
-        "path": "frontend/css",
-        "children": []
-      },
-      {
-        "name": "style.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 556,
-        "extension": ".css",
-        "path": "frontend/css/style.css"
-      },
-      {
-        "name": "js",
-        "type": "directory",
-        "path": "frontend/js",
-        "children": []
-      },
-      {
-        "name": "components",
-        "type": "directory",
-        "path": "frontend/js/components",
-        "children": []
-      },
-      {
-        "name": ".gitkeep",
-        "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/js/components/.gitkeep"
-      },
-      {
-        "name": "script.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 34,
-        "extension": ".js",
-        "path": "frontend/js/script.js"
-      },
-      {
-        "name": "services",
-        "type": "directory",
-        "path": "frontend/js/services",
-        "children": []
-      },
-      {
-        "name": ".gitkeep",
-        "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/js/services/.gitkeep"
-      },
-      {
-        "name": "utils",
-        "type": "directory",
-        "path": "frontend/js/utils",
-        "children": []
-      },
-      {
-        "name": ".gitkeep",
-        "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/js/utils/.gitkeep"
-      },
-      {
-        "name": "pages",
-        "type": "directory",
-        "path": "frontend/pages",
-        "children": []
-      },
-      {
-        "name": "index.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 1178,
-        "extension": ".html",
-        "path": "frontend/pages/index.html"
       },
       {
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 817,
+        "size": 4850,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -898,6 +890,168 @@
         "type": "directory",
         "path": "openspec/changes",
         "children": []
+      },
+      {
+        "name": "dashboard-pesquisa",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-pesquisa",
+        "children": []
+      },
+      {
+        "name": ".openspec.yaml",
+        "type": "file",
+        "language": "YAML",
+        "size": 40,
+        "extension": ".yaml",
+        "path": "openspec/changes/dashboard-pesquisa/.openspec.yaml"
+      },
+      {
+        "name": "design.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5573,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-pesquisa/design.md"
+      },
+      {
+        "name": "proposal.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2433,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-pesquisa/proposal.md"
+      },
+      {
+        "name": "specs",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-pesquisa/specs",
+        "children": []
+      },
+      {
+        "name": "spec.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 13912,
+        "extension": ".json",
+        "path": "openspec/changes/dashboard-pesquisa/specs/spec.json"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4506,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-pesquisa/tasks.md"
+      },
+      {
+        "name": "dashboard-principal",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-principal",
+        "children": []
+      },
+      {
+        "name": ".openspec.yaml",
+        "type": "file",
+        "language": "YAML",
+        "size": 40,
+        "extension": ".yaml",
+        "path": "openspec/changes/dashboard-principal/.openspec.yaml"
+      },
+      {
+        "name": "design.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4482,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-principal/design.md"
+      },
+      {
+        "name": "proposal.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2126,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-principal/proposal.md"
+      },
+      {
+        "name": "specs",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-principal/specs",
+        "children": []
+      },
+      {
+        "name": "dashboard",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-principal/specs/dashboard",
+        "children": []
+      },
+      {
+        "name": "spec.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 6587,
+        "extension": ".json",
+        "path": "openspec/changes/dashboard-principal/specs/dashboard/spec.json"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3391,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-principal/tasks.md"
+      },
+      {
+        "name": "dashboard-projeto-detalhado",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-projeto-detalhado",
+        "children": []
+      },
+      {
+        "name": "design.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7421,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-projeto-detalhado/design.md"
+      },
+      {
+        "name": "proposal.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3195,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-projeto-detalhado/proposal.md"
+      },
+      {
+        "name": "spec.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 32733,
+        "extension": ".json",
+        "path": "openspec/changes/dashboard-projeto-detalhado/spec.json"
+      },
+      {
+        "name": "specs",
+        "type": "directory",
+        "path": "openspec/changes/dashboard-projeto-detalhado/specs",
+        "children": []
+      },
+      {
+        "name": "SPEC-detalhe.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 34222,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-projeto-detalhado/specs/SPEC-detalhe.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8804,
+        "extension": ".md",
+        "path": "openspec/changes/dashboard-projeto-detalhado/tasks.md"
       },
       {
         "name": "fix-performance-dashboard-rendering",
@@ -1147,71 +1301,441 @@
         "name": "404.html",
         "type": "file",
         "language": "HTML",
-        "size": 8252,
+        "size": 50045,
         "extension": ".html",
         "path": "site/404.html"
       },
       {
-        "name": "css",
+        "name": "assets",
         "type": "directory",
-        "path": "site/css",
+        "path": "site/assets",
         "children": []
       },
       {
-        "name": "base.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 8461,
-        "extension": ".css",
-        "path": "site/css/base.css"
+        "name": "images",
+        "type": "directory",
+        "path": "site/assets/images",
+        "children": []
       },
       {
-        "name": "bootstrap.min.css",
+        "name": "favicon.png",
         "type": "file",
-        "language": "CSS",
-        "size": 235601,
-        "extension": ".css",
-        "path": "site/css/bootstrap.min.css"
+        "language": "PNG Image",
+        "size": 1870,
+        "extension": ".png",
+        "path": "site/assets/images/favicon.png"
       },
       {
-        "name": "bootstrap.min.css.map",
+        "name": "team",
+        "type": "directory",
+        "path": "site/assets/images/team",
+        "children": []
+      },
+      {
+        "name": "arthur-palhares.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 28587,
+        "extension": ".jpg",
+        "path": "site/assets/images/team/arthur-palhares.jpg"
+      },
+      {
+        "name": "caio-bechepeche.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 325932,
+        "extension": ".jpg",
+        "path": "site/assets/images/team/caio-bechepeche.jpg"
+      },
+      {
+        "name": "italo-lacerda.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 88779,
+        "extension": ".jpg",
+        "path": "site/assets/images/team/italo-lacerda.jpg"
+      },
+      {
+        "name": "luis-henrique.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 22683,
+        "extension": ".jpg",
+        "path": "site/assets/images/team/luis-henrique.jpg"
+      },
+      {
+        "name": "renan-curione.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 321946,
+        "extension": ".jpg",
+        "path": "site/assets/images/team/renan-curione.jpg"
+      },
+      {
+        "name": "javascripts",
+        "type": "directory",
+        "path": "site/assets/javascripts",
+        "children": []
+      },
+      {
+        "name": "bundle.79ae519e.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 114308,
+        "extension": ".js",
+        "path": "site/assets/javascripts/bundle.79ae519e.min.js"
+      },
+      {
+        "name": "bundle.79ae519e.min.js.map",
         "type": "file",
         "language": "Unknown",
-        "size": 88399,
+        "size": 1026989,
         "extension": ".map",
-        "path": "site/css/bootstrap.min.css.map"
+        "path": "site/assets/javascripts/bundle.79ae519e.min.js.map"
       },
       {
-        "name": "brands.min.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 19307,
-        "extension": ".css",
-        "path": "site/css/brands.min.css"
+        "name": "lunr",
+        "type": "directory",
+        "path": "site/assets/javascripts/lunr",
+        "children": []
       },
       {
-        "name": "fontawesome.min.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 80795,
-        "extension": ".css",
-        "path": "site/css/fontawesome.min.css"
+        "name": "min",
+        "type": "directory",
+        "path": "site/assets/javascripts/lunr/min",
+        "children": []
       },
       {
-        "name": "solid.min.css",
+        "name": "lunr.ar.min.js",
         "type": "file",
-        "language": "CSS",
-        "size": 572,
-        "extension": ".css",
-        "path": "site/css/solid.min.css"
+        "language": "JavaScript",
+        "size": 17074,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ar.min.js"
       },
       {
-        "name": "v4-font-face.min.css",
+        "name": "lunr.da.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 4654,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.da.min.js"
+      },
+      {
+        "name": "lunr.de.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 6119,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.de.min.js"
+      },
+      {
+        "name": "lunr.du.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 6208,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.du.min.js"
+      },
+      {
+        "name": "lunr.el.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 14950,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.el.min.js"
+      },
+      {
+        "name": "lunr.es.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 11499,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.es.min.js"
+      },
+      {
+        "name": "lunr.fi.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 9342,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.fi.min.js"
+      },
+      {
+        "name": "lunr.fr.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 10669,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.fr.min.js"
+      },
+      {
+        "name": "lunr.he.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 6882,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.he.min.js"
+      },
+      {
+        "name": "lunr.hi.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3383,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.hi.min.js"
+      },
+      {
+        "name": "lunr.hu.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 9437,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.hu.min.js"
+      },
+      {
+        "name": "lunr.hy.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1264,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.hy.min.js"
+      },
+      {
+        "name": "lunr.it.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 11232,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.it.min.js"
+      },
+      {
+        "name": "lunr.ja.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2313,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ja.min.js"
+      },
+      {
+        "name": "lunr.jp.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 36,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.jp.min.js"
+      },
+      {
+        "name": "lunr.kn.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3494,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.kn.min.js"
+      },
+      {
+        "name": "lunr.ko.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 7972,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ko.min.js"
+      },
+      {
+        "name": "lunr.multi.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 817,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.multi.min.js"
+      },
+      {
+        "name": "lunr.nl.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 6026,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.nl.min.js"
+      },
+      {
+        "name": "lunr.no.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 4754,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.no.min.js"
+      },
+      {
+        "name": "lunr.pt.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 10171,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.pt.min.js"
+      },
+      {
+        "name": "lunr.ro.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 10958,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ro.min.js"
+      },
+      {
+        "name": "lunr.ru.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 10331,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ru.min.js"
+      },
+      {
+        "name": "lunr.sa.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 4901,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.sa.min.js"
+      },
+      {
+        "name": "lunr.stemmer.support.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3647,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.stemmer.support.min.js"
+      },
+      {
+        "name": "lunr.sv.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 4523,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.sv.min.js"
+      },
+      {
+        "name": "lunr.ta.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2406,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.ta.min.js"
+      },
+      {
+        "name": "lunr.te.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2330,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.te.min.js"
+      },
+      {
+        "name": "lunr.th.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1031,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.th.min.js"
+      },
+      {
+        "name": "lunr.tr.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 15009,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.tr.min.js"
+      },
+      {
+        "name": "lunr.vi.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 784,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.vi.min.js"
+      },
+      {
+        "name": "lunr.zh.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2158,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/min/lunr.zh.min.js"
+      },
+      {
+        "name": "tinyseg.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 22878,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/tinyseg.js"
+      },
+      {
+        "name": "wordcut.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 677463,
+        "extension": ".js",
+        "path": "site/assets/javascripts/lunr/wordcut.js"
+      },
+      {
+        "name": "workers",
+        "type": "directory",
+        "path": "site/assets/javascripts/workers",
+        "children": []
+      },
+      {
+        "name": "search.2c215733.min.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 39481,
+        "extension": ".js",
+        "path": "site/assets/javascripts/workers/search.2c215733.min.js"
+      },
+      {
+        "name": "search.2c215733.min.js.map",
+        "type": "file",
+        "language": "Unknown",
+        "size": 216029,
+        "extension": ".map",
+        "path": "site/assets/javascripts/workers/search.2c215733.min.js.map"
+      },
+      {
+        "name": "stylesheets",
+        "type": "directory",
+        "path": "site/assets/stylesheets",
+        "children": []
+      },
+      {
+        "name": "main.484c7ddc.min.css",
         "type": "file",
         "language": "CSS",
-        "size": 1736,
+        "size": 139849,
         "extension": ".css",
-        "path": "site/css/v4-font-face.min.css"
+        "path": "site/assets/stylesheets/main.484c7ddc.min.css"
+      },
+      {
+        "name": "main.484c7ddc.min.css.map",
+        "type": "file",
+        "language": "Unknown",
+        "size": 47588,
+        "extension": ".map",
+        "path": "site/assets/stylesheets/main.484c7ddc.min.css.map"
+      },
+      {
+        "name": "palette.ab4e12ef.min.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 12641,
+        "extension": ".css",
+        "path": "site/assets/stylesheets/palette.ab4e12ef.min.css"
+      },
+      {
+        "name": "palette.ab4e12ef.min.css.map",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3670,
+        "extension": ".map",
+        "path": "site/assets/stylesheets/palette.ab4e12ef.min.css.map"
       },
       {
         "name": "estudos",
@@ -1229,7 +1753,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10531,
+        "size": 51507,
         "extension": ".html",
         "path": "site/estudos/API/index.html"
       },
@@ -1243,7 +1767,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 14888,
+        "size": 62096,
         "extension": ".html",
         "path": "site/estudos/API/levantamento_api/index.html"
       },
@@ -1263,7 +1787,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 25753,
+        "size": 86885,
         "extension": ".html",
         "path": "site/estudos/arquitetura/checando_tecnologias/index.html"
       },
@@ -1277,7 +1801,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 18398,
+        "size": 76323,
         "extension": ".html",
         "path": "site/estudos/arquitetura/diagrama_arquitetura_v1/index.html"
       },
@@ -1291,7 +1815,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 16874,
+        "size": 71971,
         "extension": ".html",
         "path": "site/estudos/arquitetura/diagrama_arquitetura_v2/index.html"
       },
@@ -1305,7 +1829,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 18033,
+        "size": 59038,
         "extension": ".html",
         "path": "site/estudos/arquitetura/escolha_arquitetura/index.html"
       },
@@ -1319,7 +1843,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 24722,
+        "size": 80902,
         "extension": ".html",
         "path": "site/estudos/arquitetura/estudo_arquiteturas/index.html"
       },
@@ -1333,7 +1857,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 20081,
+        "size": 73712,
         "extension": ".html",
         "path": "site/estudos/arquitetura/estudo_fluxo_de_dados/index.html"
       },
@@ -1347,7 +1871,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13775,
+        "size": 55538,
         "extension": ".html",
         "path": "site/estudos/arquitetura/estudo_login/index.html"
       },
@@ -1355,9 +1879,65 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10878,
+        "size": 51728,
         "extension": ".html",
         "path": "site/estudos/arquitetura/index.html"
+      },
+      {
+        "name": "backend",
+        "type": "directory",
+        "path": "site/estudos/backend",
+        "children": []
+      },
+      {
+        "name": "comparacao_stacks_backend",
+        "type": "directory",
+        "path": "site/estudos/backend/comparacao_stacks_backend",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 60952,
+        "extension": ".html",
+        "path": "site/estudos/backend/comparacao_stacks_backend/index.html"
+      },
+      {
+        "name": "estudo_stack_backend_definida",
+        "type": "directory",
+        "path": "site/estudos/backend/estudo_stack_backend_definida",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 74163,
+        "extension": ".html",
+        "path": "site/estudos/backend/estudo_stack_backend_definida/index.html"
+      },
+      {
+        "name": "estudo_tecnologias_backend",
+        "type": "directory",
+        "path": "site/estudos/backend/estudo_tecnologias_backend",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 60298,
+        "extension": ".html",
+        "path": "site/estudos/backend/estudo_tecnologias_backend/index.html"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 51773,
+        "extension": ".html",
+        "path": "site/estudos/backend/index.html"
       },
       {
         "name": "banco_de_dados",
@@ -1375,9 +1955,23 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 18246,
+        "size": 66709,
         "extension": ".html",
         "path": "site/estudos/banco_de_dados/definicao_banco_de_dados/index.html"
+      },
+      {
+        "name": "definicao_campos",
+        "type": "directory",
+        "path": "site/estudos/banco_de_dados/definicao_campos",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 63232,
+        "extension": ".html",
+        "path": "site/estudos/banco_de_dados/definicao_campos/index.html"
       },
       {
         "name": "definicao_dados",
@@ -1389,9 +1983,37 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 22885,
+        "size": 62219,
         "extension": ".html",
         "path": "site/estudos/banco_de_dados/definicao_dados/index.html"
+      },
+      {
+        "name": "definicao_tabelas",
+        "type": "directory",
+        "path": "site/estudos/banco_de_dados/definicao_tabelas",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 73084,
+        "extension": ".html",
+        "path": "site/estudos/banco_de_dados/definicao_tabelas/index.html"
+      },
+      {
+        "name": "definicao_tratamento_dados",
+        "type": "directory",
+        "path": "site/estudos/banco_de_dados/definicao_tratamento_dados",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 70983,
+        "extension": ".html",
+        "path": "site/estudos/banco_de_dados/definicao_tratamento_dados/index.html"
       },
       {
         "name": "estudo_banco_de_dados",
@@ -1403,7 +2025,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 20522,
+        "size": 71734,
         "extension": ".html",
         "path": "site/estudos/banco_de_dados/estudo_banco_de_dados/index.html"
       },
@@ -1417,7 +2039,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 17704,
+        "size": 66683,
         "extension": ".html",
         "path": "site/estudos/banco_de_dados/hospedagem_banco_de_dados/index.html"
       },
@@ -1425,7 +2047,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10718,
+        "size": 51810,
         "extension": ".html",
         "path": "site/estudos/banco_de_dados/index.html"
       },
@@ -1445,7 +2067,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 19135,
+        "size": 60376,
         "extension": ".html",
         "path": "site/estudos/design/definicao_dashboards/index.html"
       },
@@ -1459,7 +2081,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 25083,
+        "size": 95155,
         "extension": ".html",
         "path": "site/estudos/design/identidade_visual/index.html"
       },
@@ -1467,7 +2089,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10524,
+        "size": 51441,
         "extension": ".html",
         "path": "site/estudos/design/index.html"
       },
@@ -1481,7 +2103,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 9190,
+        "size": 51133,
         "extension": ".html",
         "path": "site/estudos/design/prototipo_interativo/index.html"
       },
@@ -1495,7 +2117,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10395,
+        "size": 51340,
         "extension": ".html",
         "path": "site/estudos/frontend/index.html"
       },
@@ -1509,7 +2131,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 12799,
+        "size": 56284,
         "extension": ".html",
         "path": "site/estudos/frontend/tecnologias_estrutura/index.html"
       },
@@ -1529,7 +2151,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 14350,
+        "size": 57522,
         "extension": ".html",
         "path": "site/estudos/git_github/estudo_github/index.html"
       },
@@ -1537,7 +2159,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10512,
+        "size": 51370,
         "extension": ".html",
         "path": "site/estudos/git_github/index.html"
       },
@@ -1551,7 +2173,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13221,
+        "size": 57461,
         "extension": ".html",
         "path": "site/estudos/git_github/labels_tamanho_issue/index.html"
       },
@@ -1571,7 +2193,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13863,
+        "size": 57909,
         "extension": ".html",
         "path": "site/estudos/inteligencia_artificial/estudo_ia/index.html"
       },
@@ -1579,7 +2201,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10416,
+        "size": 51308,
         "extension": ".html",
         "path": "site/estudos/inteligencia_artificial/index.html"
       },
@@ -1593,7 +2215,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10377,
+        "size": 51273,
         "extension": ".html",
         "path": "site/estudos/metodos_ageis/index.html"
       },
@@ -1607,7 +2229,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10588,
+        "size": 53286,
         "extension": ".html",
         "path": "site/estudos/metodos_ageis/metodos_ageis/index.html"
       },
@@ -1627,7 +2249,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 27710,
+        "size": 77754,
         "extension": ".html",
         "path": "site/estudos/requisitos/estudo_requisitos_software/index.html"
       },
@@ -1635,7 +2257,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10440,
+        "size": 51361,
         "extension": ".html",
         "path": "site/estudos/requisitos/index.html"
       },
@@ -1649,77 +2271,45 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 42840,
+        "size": 96718,
         "extension": ".html",
         "path": "site/estudos/requisitos/requisitos_de_software/index.html"
       },
       {
-        "name": "img",
+        "name": "sdd",
         "type": "directory",
-        "path": "site/img",
+        "path": "site/estudos/sdd",
         "children": []
-      },
-      {
-        "name": "favicon.ico",
-        "type": "file",
-        "language": "Icon",
-        "size": 1150,
-        "extension": ".ico",
-        "path": "site/img/favicon.ico"
-      },
-      {
-        "name": "grid.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 1458,
-        "extension": ".png",
-        "path": "site/img/grid.png"
       },
       {
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13549,
+        "size": 51252,
         "extension": ".html",
-        "path": "site/index.html"
+        "path": "site/estudos/sdd/index.html"
       },
       {
-        "name": "js",
+        "name": "sddEstudo",
         "type": "directory",
-        "path": "site/js",
+        "path": "site/estudos/sdd/sddEstudo",
         "children": []
       },
       {
-        "name": "base.js",
+        "name": "index.html",
         "type": "file",
-        "language": "JavaScript",
-        "size": 8242,
-        "extension": ".js",
-        "path": "site/js/base.js"
+        "language": "HTML",
+        "size": 90855,
+        "extension": ".html",
+        "path": "site/estudos/sdd/sddEstudo/index.html"
       },
       {
-        "name": "bootstrap.bundle.min.js",
+        "name": "index.html",
         "type": "file",
-        "language": "JavaScript",
-        "size": 80663,
-        "extension": ".js",
-        "path": "site/js/bootstrap.bundle.min.js"
-      },
-      {
-        "name": "bootstrap.bundle.min.js.map",
-        "type": "file",
-        "language": "Unknown",
-        "size": 331886,
-        "extension": ".map",
-        "path": "site/js/bootstrap.bundle.min.js.map"
-      },
-      {
-        "name": "darkmode.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 2618,
-        "extension": ".js",
-        "path": "site/js/darkmode.js"
+        "language": "HTML",
+        "size": 56181,
+        "extension": ".html",
+        "path": "site/index.html"
       },
       {
         "name": "padrao_organizacao",
@@ -1731,7 +2321,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10711,
+        "size": 51765,
         "extension": ".html",
         "path": "site/padrao_organizacao/index.html"
       },
@@ -1745,7 +2335,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10290,
+        "size": 53607,
         "extension": ".html",
         "path": "site/padrao_organizacao/organizacao_geral/index.html"
       },
@@ -1759,7 +2349,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 15767,
+        "size": 67959,
         "extension": ".html",
         "path": "site/padrao_organizacao/padrao_PR/index.html"
       },
@@ -1773,7 +2363,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 11726,
+        "size": 55755,
         "extension": ".html",
         "path": "site/padrao_organizacao/padrao_commits/index.html"
       },
@@ -1787,7 +2377,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13136,
+        "size": 59479,
         "extension": ".html",
         "path": "site/padrao_organizacao/padrao_kanban/index.html"
       },
@@ -1801,9 +2391,39 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10295,
+        "size": 53758,
         "extension": ".html",
         "path": "site/padrao_organizacao/padrao_nomes_arquivos/index.html"
+      },
+      {
+        "name": "performance",
+        "type": "directory",
+        "path": "site/performance",
+        "children": []
+      },
+      {
+        "name": "dashboard.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 165782,
+        "extension": ".html",
+        "path": "site/performance/dashboard.html"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 51846,
+        "extension": ".html",
+        "path": "site/performance/index.html"
+      },
+      {
+        "name": "metrics.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 171308,
+        "extension": ".json",
+        "path": "site/performance/metrics.json"
       },
       {
         "name": "projeto",
@@ -1821,7 +2441,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 16347,
+        "size": 65198,
         "extension": ".html",
         "path": "site/projeto/ideia_escolhida_projeto/index.html"
       },
@@ -1829,7 +2449,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10159,
+        "size": 51269,
         "extension": ".html",
         "path": "site/projeto/index.html"
       },
@@ -1849,7 +2469,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 18191,
+        "size": 71695,
         "extension": ".html",
         "path": "site/reunioes/dailies/index.html"
       },
@@ -1863,7 +2483,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10415,
+        "size": 54151,
         "extension": ".html",
         "path": "site/reunioes/horarios/index.html"
       },
@@ -1871,7 +2491,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 10560,
+        "size": 51655,
         "extension": ".html",
         "path": "site/reunioes/index.html"
       },
@@ -1885,7 +2505,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 13510,
+        "size": 57201,
         "extension": ".html",
         "path": "site/reunioes/reviews_retrospectives/index.html"
       },
@@ -1899,7 +2519,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 15120,
+        "size": 63430,
         "extension": ".html",
         "path": "site/reunioes/sprint_plannings/index.html"
       },
@@ -1910,42 +2530,18 @@
         "children": []
       },
       {
-        "name": "lunr.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 99805,
-        "extension": ".js",
-        "path": "site/search/lunr.js"
-      },
-      {
-        "name": "main.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 3206,
-        "extension": ".js",
-        "path": "site/search/main.js"
-      },
-      {
         "name": "search_index.json",
         "type": "file",
         "language": "JSON",
-        "size": 430826,
+        "size": 359194,
         "extension": ".json",
         "path": "site/search/search_index.json"
-      },
-      {
-        "name": "worker.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 3724,
-        "extension": ".js",
-        "path": "site/search/worker.js"
       },
       {
         "name": "sitemap.xml",
         "type": "file",
         "language": "XML",
-        "size": 109,
+        "size": 8644,
         "extension": ".xml",
         "path": "site/sitemap.xml"
       },
@@ -1953,79 +2549,9 @@
         "name": "sitemap.xml.gz",
         "type": "file",
         "language": "GZIP Archive",
-        "size": 127,
+        "size": 691,
         "extension": ".gz",
         "path": "site/sitemap.xml.gz"
-      },
-      {
-        "name": "webfonts",
-        "type": "directory",
-        "path": "site/webfonts",
-        "children": []
-      },
-      {
-        "name": "fa-brands-400.ttf",
-        "type": "file",
-        "language": "TrueType Font",
-        "size": 207972,
-        "extension": ".ttf",
-        "path": "site/webfonts/fa-brands-400.ttf"
-      },
-      {
-        "name": "fa-brands-400.woff2",
-        "type": "file",
-        "language": "WOFF2 Font",
-        "size": 117372,
-        "extension": ".woff2",
-        "path": "site/webfonts/fa-brands-400.woff2"
-      },
-      {
-        "name": "fa-regular-400.ttf",
-        "type": "file",
-        "language": "TrueType Font",
-        "size": 68004,
-        "extension": ".ttf",
-        "path": "site/webfonts/fa-regular-400.ttf"
-      },
-      {
-        "name": "fa-regular-400.woff2",
-        "type": "file",
-        "language": "WOFF2 Font",
-        "size": 25452,
-        "extension": ".woff2",
-        "path": "site/webfonts/fa-regular-400.woff2"
-      },
-      {
-        "name": "fa-solid-900.ttf",
-        "type": "file",
-        "language": "TrueType Font",
-        "size": 419720,
-        "extension": ".ttf",
-        "path": "site/webfonts/fa-solid-900.ttf"
-      },
-      {
-        "name": "fa-solid-900.woff2",
-        "type": "file",
-        "language": "WOFF2 Font",
-        "size": 156496,
-        "extension": ".woff2",
-        "path": "site/webfonts/fa-solid-900.woff2"
-      },
-      {
-        "name": "fa-v4compatibility.ttf",
-        "type": "file",
-        "language": "TrueType Font",
-        "size": 10832,
-        "extension": ".ttf",
-        "path": "site/webfonts/fa-v4compatibility.ttf"
-      },
-      {
-        "name": "fa-v4compatibility.woff2",
-        "type": "file",
-        "language": "WOFF2 Font",
-        "size": 4792,
-        "extension": ".woff2",
-        "path": "site/webfonts/fa-v4compatibility.woff2"
       },
       {
         "name": "src",
@@ -2034,51 +2560,209 @@
         "children": []
       },
       {
-        "name": "back-end",
+        "name": "backend",
         "type": "directory",
-        "path": "src/back-end",
+        "path": "src/backend",
         "children": []
       },
       {
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 2406,
+        "size": 5809,
         "extension": ".py",
-        "path": "src/back-end/main.py"
+        "path": "src/backend/main.py"
       },
       {
         "name": "services",
         "type": "directory",
-        "path": "src/back-end/services",
+        "path": "src/backend/services",
         "children": []
-      },
-      {
-        "name": "__pycache__",
-        "type": "directory",
-        "path": "src/back-end/services/__pycache__",
-        "children": []
-      },
-      {
-        "name": "camara_api.cpython-312.pyc",
-        "type": "file",
-        "language": "Unknown",
-        "size": 1103,
-        "extension": ".pyc",
-        "path": "src/back-end/services/__pycache__/camara_api.cpython-312.pyc"
       },
       {
         "name": "camara_api.py",
         "type": "file",
         "language": "Python",
-        "size": 1120,
+        "size": 3035,
         "extension": ".py",
-        "path": "src/back-end/services/camara_api.py"
+        "path": "src/backend/services/camara_api.py"
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "src/frontend",
+        "children": []
+      },
+      {
+        "name": "assets",
+        "type": "directory",
+        "path": "src/frontend/assets",
+        "children": []
+      },
+      {
+        "name": "images",
+        "type": "directory",
+        "path": "src/frontend/assets/images",
+        "children": []
+      },
+      {
+        "name": "logo-legiskids.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 2170425,
+        "extension": ".png",
+        "path": "src/frontend/assets/images/logo-legiskids.png"
+      },
+      {
+        "name": "css",
+        "type": "directory",
+        "path": "src/frontend/css",
+        "children": []
+      },
+      {
+        "name": "detalhe.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 17938,
+        "extension": ".css",
+        "path": "src/frontend/css/detalhe.css"
+      },
+      {
+        "name": "pesquisa.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 9139,
+        "extension": ".css",
+        "path": "src/frontend/css/pesquisa.css"
+      },
+      {
+        "name": "style.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 14201,
+        "extension": ".css",
+        "path": "src/frontend/css/style.css"
+      },
+      {
+        "name": "js",
+        "type": "directory",
+        "path": "src/frontend/js",
+        "children": []
+      },
+      {
+        "name": "components",
+        "type": "directory",
+        "path": "src/frontend/js/components",
+        "children": []
+      },
+      {
+        "name": ".gitkeep",
+        "type": "file",
+        "language": "Unknown",
+        "size": 0,
+        "extension": ".gitkeep",
+        "path": "src/frontend/js/components/.gitkeep"
+      },
+      {
+        "name": "detalhe.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 6934,
+        "extension": ".js",
+        "path": "src/frontend/js/detalhe.js"
+      },
+      {
+        "name": "pesquisa.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 9117,
+        "extension": ".js",
+        "path": "src/frontend/js/pesquisa.js"
+      },
+      {
+        "name": "script.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3673,
+        "extension": ".js",
+        "path": "src/frontend/js/script.js"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "src/frontend/js/services",
+        "children": []
+      },
+      {
+        "name": ".gitkeep",
+        "type": "file",
+        "language": "Unknown",
+        "size": 0,
+        "extension": ".gitkeep",
+        "path": "src/frontend/js/services/.gitkeep"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "src/frontend/js/utils",
+        "children": []
+      },
+      {
+        "name": ".gitkeep",
+        "type": "file",
+        "language": "Unknown",
+        "size": 0,
+        "extension": ".gitkeep",
+        "path": "src/frontend/js/utils/.gitkeep"
+      },
+      {
+        "name": "pages",
+        "type": "directory",
+        "path": "src/frontend/pages",
+        "children": []
+      },
+      {
+        "name": "detalhe-projeto.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 35180,
+        "extension": ".html",
+        "path": "src/frontend/pages/detalhe-projeto.html"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 17944,
+        "extension": ".html",
+        "path": "src/frontend/pages/index.html"
+      },
+      {
+        "name": "pesquisa.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 7998,
+        "extension": ".html",
+        "path": "src/frontend/pages/pesquisa.html"
+      },
+      {
+        "name": "src",
+        "type": "directory",
+        "path": "src/src",
+        "children": []
+      },
+      {
+        "name": "main.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5809,
+        "extension": ".py",
+        "path": "src/src/main.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-26T09:20:28.996294",
+    "extracted_at": "2026-05-27T09:27:50.267582",
     "file_path": "data/silver/hierarchy_2026-1-LegisKids.json"
   }
 }
