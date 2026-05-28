@@ -2,19 +2,19 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-05-27T09:25:06.807552",
+  "analyzed_at": "2026-05-28T09:30:20.250581",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 44,
-  "total_bytes": 3140787,
+  "total_files": 76,
+  "total_bytes": 3271545,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 7,
       "total_bytes": 3039929,
-      "percentage": 96.79,
+      "percentage": 92.92,
       "files": [
         {
           "path": "figma/print7/aprovadad.png",
@@ -62,14 +62,32 @@
     },
     {
       "language": "Markdown",
-      "file_count": 20,
-      "total_bytes": 69436,
-      "percentage": 2.21,
+      "file_count": 34,
+      "total_bytes": 115696,
+      "percentage": 3.54,
       "files": [
+        {
+          "path": "docs/Arquitetura/documento-c4.md",
+          "name": "documento-c4.md",
+          "size": 8217,
+          "extension": ".md"
+        },
         {
           "path": "estudo/estudo_djangofilters.md",
           "name": "estudo_djangofilters.md",
           "size": 8217,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/documentacao-padroes-commits-branches.md",
+          "name": "documentacao-padroes-commits-branches.md",
+          "size": 8045,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/CODE_OF_CONDUCT.md",
+          "name": "CODE_OF_CONDUCT.md",
+          "size": 6973,
           "extension": ".md"
         },
         {
@@ -97,34 +115,78 @@
           "extension": ".md"
         },
         {
+          "path": "docs/CONTRIBUTING.md",
+          "name": "CONTRIBUTING.md",
+          "size": 4250,
+          "extension": ".md"
+        },
+        {
           "path": "estudo/estudo_figma_caua.md",
           "name": "estudo_figma_caua.md",
           "size": 3897,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 9,
+      "total_bytes": 82474,
+      "percentage": 2.52,
+      "files": [
+        {
+          "path": "src/home/templates/home/proposicoes.html",
+          "name": "proposicoes.html",
+          "size": 16753,
+          "extension": ".html"
         },
         {
-          "path": "estudo/estudo_django_caua.md",
-          "name": "estudo_django_caua.md",
-          "size": 3834,
-          "extension": ".md"
+          "path": "src/home/templates/home/dashboard.html",
+          "name": "dashboard.html",
+          "size": 13789,
+          "extension": ".html"
         },
         {
-          "path": "estudo/estudo_frontend.md",
-          "name": "estudo_frontend.md",
-          "size": 3814,
-          "extension": ".md"
+          "path": "src/home/templates/home/usuario.html",
+          "name": "usuario.html",
+          "size": 13503,
+          "extension": ".html"
         },
         {
-          "path": "estudo/estudo_requisitos.md",
-          "name": "estudo_requisitos.md",
-          "size": 3480,
-          "extension": ".md"
+          "path": "src/home/templates/home/favoritos.html",
+          "name": "favoritos.html",
+          "size": 12668,
+          "extension": ".html"
         },
         {
-          "path": "estudo/estudo_backend.md",
-          "name": "estudo_backend.md",
-          "size": 3388,
-          "extension": ".md"
+          "path": "src/home/templates/home/alertas.html",
+          "name": "alertas.html",
+          "size": 10191,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/votacoes.html",
+          "name": "votacoes.html",
+          "size": 9723,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/components/sidebar.html",
+          "name": "sidebar.html",
+          "size": 3502,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/components/header.html",
+          "name": "header.html",
+          "size": 1336,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/base.html",
+          "name": "base.html",
+          "size": 1009,
+          "extension": ".html"
         }
       ]
     },
@@ -132,7 +194,7 @@
       "language": "Lock File",
       "file_count": 1,
       "total_bytes": 17370,
-      "percentage": 0.55,
+      "percentage": 0.53,
       "files": [
         {
           "path": "uv.lock",
@@ -144,32 +206,32 @@
     },
     {
       "language": "Python",
-      "file_count": 7,
-      "total_bytes": 6423,
-      "percentage": 0.2,
+      "file_count": 13,
+      "total_bytes": 7459,
+      "percentage": 0.23,
       "files": [
         {
           "path": "src/config/settings.py",
           "name": "settings.py",
-          "size": 3559,
+          "size": 3629,
           "extension": ".py"
         },
         {
-          "path": "src/config/urls.py",
-          "name": "urls.py",
-          "size": 762,
-          "extension": ".py"
-        },
-        {
-          "path": "manage.py",
-          "name": "manage.py",
-          "size": 662,
+          "path": "src/home/views.py",
+          "name": "views.py",
+          "size": 1495,
           "extension": ".py"
         },
         {
           "path": "src/manage.py",
           "name": "manage.py",
           "size": 662,
+          "extension": ".py"
+        },
+        {
+          "path": "src/config/urls.py",
+          "name": "urls.py",
+          "size": 632,
           "extension": ".py"
         },
         {
@@ -185,9 +247,27 @@
           "extension": ".py"
         },
         {
-          "path": "src/config/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
+          "path": "src/home/apps.py",
+          "name": "apps.py",
+          "size": 83,
+          "extension": ".py"
+        },
+        {
+          "path": "src/home/admin.py",
+          "name": "admin.py",
+          "size": 63,
+          "extension": ".py"
+        },
+        {
+          "path": "src/home/tests.py",
+          "name": "tests.py",
+          "size": 60,
+          "extension": ".py"
+        },
+        {
+          "path": "src/home/models.py",
+          "name": "models.py",
+          "size": 57,
           "extension": ".py"
         }
       ]
@@ -267,6 +347,26 @@
       ]
     },
     {
+      "language": "JavaScript",
+      "file_count": 2,
+      "total_bytes": 670,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "src/home/static/home/js/tailwind-config.js",
+          "name": "tailwind-config.js",
+          "size": 586,
+          "extension": ".js"
+        },
+        {
+          "path": "src/home/static/home/js/app.js",
+          "name": "app.js",
+          "size": 84,
+          "extension": ".js"
+        }
+      ]
+    },
+    {
       "language": "TOML",
       "file_count": 1,
       "total_bytes": 283,
@@ -277,6 +377,20 @@
           "name": "pyproject.toml",
           "size": 283,
           "extension": ".toml"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 1,
+      "total_bytes": 318,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "src/home/static/home/css/global.css",
+          "name": "global.css",
+          "size": 318,
+          "extension": ".css"
         }
       ]
     },
@@ -296,7 +410,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-05-27T09:27:52.756116",
+    "extracted_at": "2026-05-28T09:33:07.906126",
     "file_path": "data/silver/language_analysis_2026-1-P.R.I.S.M.A.json"
   }
 }
