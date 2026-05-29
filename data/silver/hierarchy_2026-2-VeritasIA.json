@@ -2,7 +2,7 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-05-28T09:30:13.563109",
+  "extracted_at": "2026-05-29T09:30:38.784136",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -20,28 +20,20 @@
         "children": []
       },
       {
-        "name": "deploy-docs.yml",
-        "type": "file",
-        "language": "YAML",
-        "size": 905,
-        "extension": ".yml",
-        "path": ".github/workflows/deploy-docs.yml"
-      },
-      {
         "name": "execute-scrapy.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1256,
+        "size": 1349,
         "extension": ".yml",
         "path": ".github/workflows/execute-scrapy.yml"
       },
       {
-        "name": "metrics.yml",
+        "name": "metrics-with-pages.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1626,
+        "size": 2070,
         "extension": ".yml",
-        "path": ".github/workflows/metrics.yml"
+        "path": ".github/workflows/metrics-with-pages.yml"
       },
       {
         "name": ".gitignore",
@@ -614,10 +606,64 @@
         "children": []
       },
       {
+        "name": "assets",
+        "type": "directory",
+        "path": "docs/assets",
+        "children": []
+      },
+      {
+        "name": "Logo.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 17490,
+        "extension": ".png",
+        "path": "docs/assets/Logo.png"
+      },
+      {
+        "name": "LogoBlack.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 65544,
+        "extension": ".png",
+        "path": "docs/assets/LogoBlack.png"
+      },
+      {
+        "name": "texto.png",
+        "type": "file",
+        "language": "PNG Image",
+        "size": 21479,
+        "extension": ".png",
+        "path": "docs/assets/texto.png"
+      },
+      {
         "name": "backend",
         "type": "directory",
         "path": "docs/backend",
         "children": []
+      },
+      {
+        "name": "FastAPI.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8402,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI.md"
+      },
+      {
+        "name": "LangChain.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7867,
+        "extension": ".md",
+        "path": "docs/backend/LangChain.md"
+      },
+      {
+        "name": "Scrapy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4137,
+        "extension": ".md",
+        "path": "docs/backend/Scrapy.md"
       },
       {
         "name": "scrapy",
@@ -642,12 +688,72 @@
         "path": "docs/backend/scrapy/scrapyBaseG1.md"
       },
       {
+        "name": "dashboard",
+        "type": "directory",
+        "path": "docs/dashboard",
+        "children": []
+      },
+      {
+        "name": "dashboard.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 25017,
+        "extension": ".html",
+        "path": "docs/dashboard/dashboard.html"
+      },
+      {
+        "name": "dashboard.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 301,
+        "extension": ".md",
+        "path": "docs/dashboard/dashboard.md"
+      },
+      {
         "name": "deploy.md",
         "type": "file",
         "language": "Markdown",
         "size": 694,
         "extension": ".md",
         "path": "docs/deploy.md"
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "docs/frontend",
+        "children": []
+      },
+      {
+        "name": "Prototipagem.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 231,
+        "extension": ".md",
+        "path": "docs/frontend/Prototipagem.md"
+      },
+      {
+        "name": "React.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4074,
+        "extension": ".md",
+        "path": "docs/frontend/React.md"
+      },
+      {
+        "name": "auth-frontend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 635,
+        "extension": ".md",
+        "path": "docs/frontend/auth-frontend.md"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2259,
+        "extension": ".md",
+        "path": "docs/index.md"
       },
       {
         "name": "mkdocs",
@@ -932,10 +1038,64 @@
         "path": "docs/mkdocs/overrides/main.html"
       },
       {
+        "name": "productivity",
+        "type": "directory",
+        "path": "docs/productivity",
+        "children": []
+      },
+      {
+        "name": "collect_metrics.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11773,
+        "extension": ".py",
+        "path": "docs/productivity/collect_metrics.py"
+      },
+      {
+        "name": "metrics.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 8157,
+        "extension": ".json",
+        "path": "docs/productivity/metrics.json"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 17,
+        "extension": ".txt",
+        "path": "docs/productivity/requirements.txt"
+      },
+      {
+        "name": "style.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 4205,
+        "extension": ".css",
+        "path": "docs/productivity/style.css"
+      },
+      {
         "name": "projeto",
         "type": "directory",
         "path": "docs/projeto",
         "children": []
+      },
+      {
+        "name": "Arquitetura.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 34,
+        "extension": ".md",
+        "path": "docs/projeto/Arquitetura.md"
+      },
+      {
+        "name": "Requisitos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3569,
+        "extension": ".md",
+        "path": "docs/projeto/Requisitos.md"
       },
       {
         "name": "product-backlog.md",
@@ -965,7 +1125,7 @@
         "name": "sprint0.md",
         "type": "file",
         "language": "Markdown",
-        "size": 911,
+        "size": 879,
         "extension": ".md",
         "path": "docs/projeto/sprint0.md"
       },
@@ -973,7 +1133,7 @@
         "name": "sprint1.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1372,
+        "size": 1326,
         "extension": ".md",
         "path": "docs/projeto/sprint1.md"
       },
@@ -989,7 +1149,7 @@
         "name": "sprint3.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1746,
+        "size": 1732,
         "extension": ".md",
         "path": "docs/projeto/sprint3.md"
       },
@@ -1000,6 +1160,28 @@
         "size": 0,
         "extension": ".md",
         "path": "docs/projeto/team.md"
+      },
+      {
+        "name": "sobre-nos.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1620,
+        "extension": ".md",
+        "path": "docs/sobre-nos.md"
+      },
+      {
+        "name": "stylesheets",
+        "type": "directory",
+        "path": "docs/stylesheets",
+        "children": []
+      },
+      {
+        "name": "extra.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 2171,
+        "extension": ".css",
+        "path": "docs/stylesheets/extra.css"
       },
       {
         "name": "frontend",
@@ -1112,6 +1294,28 @@
         "size": 1056,
         "extension": ".py",
         "path": "gerar_arvore.py"
+      },
+      {
+        "name": "mkdocs.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1042,
+        "extension": ".yml",
+        "path": "mkdocs.yml"
+      },
+      {
+        "name": "overrides",
+        "type": "directory",
+        "path": "overrides",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 478,
+        "extension": ".html",
+        "path": "overrides/index.html"
       },
       {
         "name": "package-lock.json",
@@ -1246,7 +1450,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-05-28T09:33:08.354922",
+    "extracted_at": "2026-05-29T09:33:30.405271",
     "file_path": "data/silver/hierarchy_2026-2-VeritasIA.json"
   }
 }
