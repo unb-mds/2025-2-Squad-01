@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-05-29T08:37:31.490757",
+      "extracted_at": "2026-05-30T07:35:07.730305",
       "file_path": "data/bronze/issues_2026-2-VeritasIA.json",
       "record_count": 35
     }
@@ -42,10 +42,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -113,11 +113,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 0,
+      "open_issues": 1,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-22T00:21:13Z",
-      "updated_at": "2026-05-24T19:51:49Z",
+      "updated_at": "2026-05-29T11:46:39Z",
       "due_on": "2026-05-26T00:00:00Z",
       "closed_at": null
     },
@@ -226,10 +226,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -410,14 +410,14 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -577,18 +577,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 0,
+      "open_issues": 1,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-05-22T00:21:13Z",
-      "updated_at": "2026-05-24T19:51:49Z",
+      "updated_at": "2026-05-29T11:46:39Z",
       "due_on": "2026-05-26T00:00:00Z",
       "closed_at": null
     },
     "comments": 2,
     "created_at": "2026-05-22T00:21:34Z",
-    "updated_at": "2026-05-26T22:53:25Z",
-    "closed_at": null,
+    "updated_at": "2026-05-29T11:46:39Z",
+    "closed_at": "2026-05-29T11:46:39Z",
     "assignee": {
       "login": "Daniel241025",
       "id": 215087737,
@@ -635,7 +635,27 @@
       "total_blocking": 0
     },
     "body": "# Roteiro de Apresentação – Release 1\n\n**Duração total:** 5 minutos  \n**Objetivo:** Mostrar como a equipe enfrentou o desafio inicial e validou a viabilidade do escopo, arquitetura e tecnologias por meio das primeiras implementações do projeto VeritasIA.\n\n---\n\n## 1. Contexto e Desafio Inicial (1 minuto)\n- **Quem fala:** 1 pessoa  \n- Apresentar a equipe.  \n- Apresentar o projeto e seu objetivo.  \n- Explicar o objetivo da Release 1:\n  - validar escopo;\n  - validar arquitetura;\n  - validar tecnologias escolhidas.\n- Explicar os desafios iniciais:\n  - compreender o problema;\n  - definir o escopo do sistema;\n  - estruturar a arquitetura;\n  - escolher tecnologias adequadas;\n  - organizar o fluxo inicial do projeto.\n- Concluir:\n  > “Nosso desafio foi transformar essas incertezas em entregas concretas.”\n\n---\n\n## 2. Implementação Realizada (2 minutos)\n- **Quem fala:** 2 pessoas  \n- Mostrar as implementações desenvolvidas pela equipe:\n  - protótipo inicial aprovado;\n  - estrutura inicial do frontend;\n  - organização inicial do backend;\n  - arquitetura do sistema documentada;\n  - tecnologias testadas com código funcional;\n  - estruturação do repositório;\n  - primeiras integrações e pipelines.\n- Exibir:\n  - protótipo;\n  - prints do sistema;\n  - repositório;\n  - trechos de código;\n  - organização das issues e branches.\n\n---\n\n## 3. Evidências de Viabilidade (1 minuto)\n- **Quem fala:** 1 pessoa  \n- Relacionar as entregas com os objetivos da Release:\n  - Story Map e issues demonstram organização do desenvolvimento;\n  - documentação OSS publicada;\n  - Release Notes registradas;\n  - protótipo funcionando;\n  - arquitetura validada pelas implementações iniciais;\n  - tecnologias escolhidas funcionando na prática.\n- Mostrar evidências reais da evolução do projeto.\n\n---\n\n## 4. Encerramento (1 minuto)\n- **Quem fala:** mesma pessoa da abertura  \n- Retomar o objetivo da Release 1.  \n- Concluir que a equipe conseguiu validar a base do projeto.  \n- Apresentar próximos passos:\n  - evolução das funcionalidades;\n  - expansão das integrações;\n  - desenvolvimento da Release 2.\n- Agradecer.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "danilofns",
+      "id": 190551570,
+      "node_id": "U_kgDOC1uWEg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190551570?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/danilofns",
+      "html_url": "https://github.com/danilofns",
+      "followers_url": "https://api.github.com/users/danilofns/followers",
+      "following_url": "https://api.github.com/users/danilofns/following{/other_user}",
+      "gists_url": "https://api.github.com/users/danilofns/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/danilofns/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/danilofns/subscriptions",
+      "organizations_url": "https://api.github.com/users/danilofns/orgs",
+      "repos_url": "https://api.github.com/users/danilofns/repos",
+      "events_url": "https://api.github.com/users/danilofns/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/danilofns/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/36/reactions",
       "total_count": 0,
@@ -650,7 +670,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/36/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-2-VeritasIA"
   },
@@ -690,10 +710,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       }
     ],
@@ -885,10 +905,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -1110,10 +1130,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -2524,11 +2544,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-05-11T22:44:22Z",
-      "updated_at": "2026-05-26T22:19:51Z",
+      "updated_at": "2026-05-29T11:47:07Z",
       "due_on": "2026-05-14T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-29T11:47:07Z"
     },
     "comments": 1,
     "created_at": "2026-05-14T23:36:18Z",
@@ -2656,10 +2676,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       }
     ],
@@ -2851,10 +2871,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -3055,10 +3075,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -3259,10 +3279,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -3463,10 +3483,10 @@
       {
         "id": 10462529955,
         "node_id": "LA_kwDORqqH288AAAACb52Jow",
-        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/documentation",
-        "name": "documentation",
+        "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/labels/Documenta%C3%A7%C3%A3o",
+        "name": "Documentação",
         "color": "0075ca",
-        "default": true,
+        "default": false,
         "description": "Improvements or additions to documentation"
       },
       {
@@ -3752,11 +3772,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-05-11T22:44:22Z",
-      "updated_at": "2026-05-26T22:19:51Z",
+      "updated_at": "2026-05-29T11:47:07Z",
       "due_on": "2026-05-14T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-29T11:47:07Z"
     },
     "comments": 5,
     "created_at": "2026-05-12T22:36:07Z",
@@ -4226,11 +4246,11 @@
       },
       "open_issues": 0,
       "closed_issues": 3,
-      "state": "open",
+      "state": "closed",
       "created_at": "2026-05-11T22:44:22Z",
-      "updated_at": "2026-05-26T22:19:51Z",
+      "updated_at": "2026-05-29T11:47:07Z",
       "due_on": "2026-05-14T00:00:00Z",
-      "closed_at": null
+      "closed_at": "2026-05-29T11:47:07Z"
     },
     "comments": 2,
     "created_at": "2026-05-11T22:48:18Z",
