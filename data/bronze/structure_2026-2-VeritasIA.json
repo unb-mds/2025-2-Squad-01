@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-2-VeritasIA",
   "branch": "main",
-  "sha": "d66807dc0c228b4ee0c3f7eb8d73d76c60335f3b",
+  "sha": "019e64b185891aaa93d1387452b43efe95108f54",
   "tree": [
     {
       "name": ".github",
@@ -108,7 +108,7 @@
       "name": "Frontend",
       "path": "Frontend",
       "type": "directory",
-      "sha": "46a3a5859d72fb3411e37abd6c571e8701fc55bf",
+      "sha": "8c1a05bb6ecbc87a0a3f8a666645b474bdb6c998",
       "mode": "040000",
       "children": []
     },
@@ -249,30 +249,60 @@
       "is_binary": false
     },
     {
+      "name": "eslint.config.js",
+      "path": "Frontend/eslint.config.js",
+      "type": "file",
+      "sha": "4e22725f54b96b45b4b77b3eb45d3d61482ca62e",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1041,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "Frontend/index.html",
+      "type": "file",
+      "sha": "22ec9e79b5281c3bd6aa31b17ebdeb237b16473c",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 360,
+      "is_binary": false
+    },
+    {
       "name": "package-lock.json",
       "path": "Frontend/package-lock.json",
       "type": "file",
-      "sha": "b3843fddc2640d0ff44ccbedcc39c48700f8d7e3",
+      "sha": "3d5c1609d810b41edfbe6dff7bc04be8e5115b5a",
       "mode": "100644",
       "extension": ".json",
-      "size": 201125,
+      "size": 215618,
       "is_binary": false
     },
     {
       "name": "package.json",
       "path": "Frontend/package.json",
       "type": "file",
-      "sha": "24851aee7c87fd527bef44f6404c247bd7b6467e",
+      "sha": "9fb38ede263308338cabbbb55ba271edd6fc89b1",
       "mode": "100644",
       "extension": ".json",
-      "size": 841,
+      "size": 867,
+      "is_binary": false
+    },
+    {
+      "name": "postcss.config.js",
+      "path": "Frontend/postcss.config.js",
+      "type": "file",
+      "sha": "e99ebc2c0e00cc37de4cefee2bf2a332abb73d8d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 79,
       "is_binary": false
     },
     {
       "name": "src",
       "path": "Frontend/src",
       "type": "directory",
-      "sha": "206cd0494bf0afd764054252d9ed94d770176c42",
+      "sha": "30909d2a453dc7e4be549891cea5f82d9fac9198",
       "mode": "040000",
       "children": []
     },
@@ -280,10 +310,10 @@
       "name": "App.css",
       "path": "Frontend/src/App.css",
       "type": "file",
-      "sha": "58d3d61189a04b6fb637ff26120f16ba37eb0768",
+      "sha": "a3209a25c3ffd2e3dd233ba29d1a6836454774ff",
       "mode": "100644",
       "extension": ".css",
-      "size": 13803,
+      "size": 13824,
       "is_binary": false
     },
     {
@@ -297,10 +327,58 @@
       "is_binary": false
     },
     {
+      "name": "assets",
+      "path": "Frontend/src/assets",
+      "type": "directory",
+      "sha": "9bc5c39154b9261ab0795fc321b93e12d56dcbf0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "logo.png",
+      "path": "Frontend/src/assets/logo.png",
+      "type": "file",
+      "sha": "124cd3ab867ee1783f65829aa0f7ad2054157f54",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 6216,
+      "is_binary": false
+    },
+    {
+      "name": "logo2.png",
+      "path": "Frontend/src/assets/logo2.png",
+      "type": "file",
+      "sha": "06def8a59402ba65619093618fbcc1299093bcd3",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1839412,
+      "is_binary": false
+    },
+    {
+      "name": "logo_white.png",
+      "path": "Frontend/src/assets/logo_white.png",
+      "type": "file",
+      "sha": "deffd3b9d34a2b3c1e7e337a1ec0b036300ee004",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 5677,
+      "is_binary": false
+    },
+    {
+      "name": "react.svg",
+      "path": "Frontend/src/assets/react.svg",
+      "type": "file",
+      "sha": "6c87de9bb3358469122cc991d5cf578927246184",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 4126,
+      "is_binary": false
+    },
+    {
       "name": "components",
       "path": "Frontend/src/components",
       "type": "directory",
-      "sha": "735cd4bebf7b60540fb42016908e1c48b3f161d2",
+      "sha": "1fabb4bdd8c457d8aa7f0eba5432171461c62546",
       "mode": "040000",
       "children": []
     },
@@ -358,10 +436,20 @@
       "name": "Sidebar.jsx",
       "path": "Frontend/src/components/Sidebar.jsx",
       "type": "file",
-      "sha": "8cf2bd5ad75faef4984b4cbff956ea0cc6f25f34",
+      "sha": "d63d6884d78d0fecdf702f6530b00d055fa7f078",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 550,
+      "size": 551,
+      "is_binary": false
+    },
+    {
+      "name": "StatCard.jsx",
+      "path": "Frontend/src/components/StatCard.jsx",
+      "type": "file",
+      "sha": "35b7b110b2db27de6705367c4d3aac233a47e4ed",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 209,
       "is_binary": false
     },
     {
@@ -372,6 +460,26 @@
       "mode": "100644",
       "extension": ".jsx",
       "size": 586,
+      "is_binary": false
+    },
+    {
+      "name": "index.css",
+      "path": "Frontend/src/index.css",
+      "type": "file",
+      "sha": "c7de518160f416c92bdc7a0ac62cc4ac43b2699d",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 1160,
+      "is_binary": false
+    },
+    {
+      "name": "main.jsx",
+      "path": "Frontend/src/main.jsx",
+      "type": "file",
+      "sha": "68ec1bc65f07666e4f42a1b5f70c4e4e5e2b0e02",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 228,
       "is_binary": false
     },
     {
@@ -440,6 +548,16 @@
       "mode": "100644",
       "extension": ".jsx",
       "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "tailwind.config.js",
+      "path": "Frontend/tailwind.config.js",
+      "type": "file",
+      "sha": "0793633a59f88bf95fb49eb00668d3ae71d92efe",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 169,
       "is_binary": false
     },
     {
@@ -760,7 +878,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "b20c67f94ae4f53b8ebb9b8132d5d148e5d1a09c",
+      "sha": "fdade38487fb70f732838ee9e4c171c71a2fa776",
       "mode": "040000",
       "children": []
     },
@@ -872,7 +990,7 @@
       "name": "dashboard",
       "path": "docs/dashboard",
       "type": "directory",
-      "sha": "e32fd1cb7d976830995c4a5ce278cfff3f37a1cc",
+      "sha": "f5052d27c3ea1b56ebcfc880f49f9d8dc8d168a7",
       "mode": "040000",
       "children": []
     },
@@ -890,10 +1008,10 @@
       "name": "dashboard.md",
       "path": "docs/dashboard/dashboard.md",
       "type": "file",
-      "sha": "4e10f7c8e1944ce3ae29df3ff7cbf97345bbc0cd",
+      "sha": "267d0284bfd7c12557d6c93628d64c2528d15c24",
       "mode": "100644",
       "extension": ".md",
-      "size": 311,
+      "size": 312,
       "is_binary": false
     },
     {
@@ -1316,7 +1434,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "bbbaf1ad788bd377d8ff3fad806a0184021238e1",
+      "sha": "7722a706705364905d70b6ba826186ee5809749e",
       "mode": "040000",
       "children": []
     },
@@ -1324,20 +1442,20 @@
       "name": "collect_metrics.py",
       "path": "docs/productivity/collect_metrics.py",
       "type": "file",
-      "sha": "5ee15b3964bba387c896fc8d699d217ad91b61ff",
+      "sha": "a33d900593c510e2ff3eb910aa9e3920f62d2a12",
       "mode": "100644",
       "extension": ".py",
-      "size": 11773,
+      "size": 11904,
       "is_binary": false
     },
     {
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "fec8d8fa0bb12c3c0d2e513f3b9dc76a4c78c466",
+      "sha": "68f975c560be74c345ea64f76af0a7e323193433",
       "mode": "100644",
       "extension": ".json",
-      "size": 8858,
+      "size": 6956,
       "is_binary": false
     },
     {
@@ -1364,7 +1482,7 @@
       "name": "projeto",
       "path": "docs/projeto",
       "type": "directory",
-      "sha": "67e0b5df74f74f7eb8f6c1e6ba45f9d958a15980",
+      "sha": "adc88148e79270262822bcf8842fc49170814da5",
       "mode": "040000",
       "children": []
     },
@@ -1459,6 +1577,16 @@
       "is_binary": false
     },
     {
+      "name": "sprint4.md",
+      "path": "docs/projeto/sprint4.md",
+      "type": "file",
+      "sha": "ac152cb0005136adb606c6517f8ab7d17f64f3f7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1172,
+      "is_binary": false
+    },
+    {
       "name": "team.md",
       "path": "docs/projeto/team.md",
       "type": "file",
@@ -1497,138 +1625,6 @@
       "is_binary": false
     },
     {
-      "name": "frontend",
-      "path": "frontend",
-      "type": "directory",
-      "sha": "a6704d55e50abb0745230c966e0e477c168de747",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "eslint.config.js",
-      "path": "frontend/eslint.config.js",
-      "type": "file",
-      "sha": "4e22725f54b96b45b4b77b3eb45d3d61482ca62e",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 1041,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "frontend/index.html",
-      "type": "file",
-      "sha": "22ec9e79b5281c3bd6aa31b17ebdeb237b16473c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 360,
-      "is_binary": false
-    },
-    {
-      "name": "postcss.config.js",
-      "path": "frontend/postcss.config.js",
-      "type": "file",
-      "sha": "e99ebc2c0e00cc37de4cefee2bf2a332abb73d8d",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 79,
-      "is_binary": false
-    },
-    {
-      "name": "src",
-      "path": "frontend/src",
-      "type": "directory",
-      "sha": "00f7e50ca4bf004f0189c1c8437679aae0d1a698",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "assets",
-      "path": "frontend/src/assets",
-      "type": "directory",
-      "sha": "dc349b5b809ed347b915a9deb30a30b14b2147db",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "logo-cadastro.png",
-      "path": "frontend/src/assets/logo-cadastro.png",
-      "type": "file",
-      "sha": "124cd3ab867ee1783f65829aa0f7ad2054157f54",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 6216,
-      "is_binary": false
-    },
-    {
-      "name": "logo.png",
-      "path": "frontend/src/assets/logo.png",
-      "type": "file",
-      "sha": "06def8a59402ba65619093618fbcc1299093bcd3",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 1839412,
-      "is_binary": false
-    },
-    {
-      "name": "react.svg",
-      "path": "frontend/src/assets/react.svg",
-      "type": "file",
-      "sha": "6c87de9bb3358469122cc991d5cf578927246184",
-      "mode": "100644",
-      "extension": ".svg",
-      "size": 4126,
-      "is_binary": false
-    },
-    {
-      "name": "components",
-      "path": "frontend/src/components",
-      "type": "directory",
-      "sha": "466abd3dc5117c18eb4468d8985dca73f2e83a0e",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "StatCard.jsx",
-      "path": "frontend/src/components/StatCard.jsx",
-      "type": "file",
-      "sha": "35b7b110b2db27de6705367c4d3aac233a47e4ed",
-      "mode": "100644",
-      "extension": ".jsx",
-      "size": 209,
-      "is_binary": false
-    },
-    {
-      "name": "index.css",
-      "path": "frontend/src/index.css",
-      "type": "file",
-      "sha": "c7de518160f416c92bdc7a0ac62cc4ac43b2699d",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 1160,
-      "is_binary": false
-    },
-    {
-      "name": "main.jsx",
-      "path": "frontend/src/main.jsx",
-      "type": "file",
-      "sha": "68ec1bc65f07666e4f42a1b5f70c4e4e5e2b0e02",
-      "mode": "100644",
-      "extension": ".jsx",
-      "size": 228,
-      "is_binary": false
-    },
-    {
-      "name": "tailwind.config.js",
-      "path": "frontend/tailwind.config.js",
-      "type": "file",
-      "sha": "0793633a59f88bf95fb49eb00668d3ae71d92efe",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 169,
-      "is_binary": false
-    },
-    {
       "name": "gerar_arvore.py",
       "path": "gerar_arvore.py",
       "type": "file",
@@ -1642,10 +1638,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "cddf2370ab613c98777d8b380f6072034d9721fd",
+      "sha": "e4f22c2b03270634c339bc482fce89b50540191a",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1042,
+      "size": 1079,
       "is_binary": false
     },
     {
@@ -1832,17 +1828,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-05-31T08:52:39.726592",
+  "extracted_at": "2026-06-01T10:49:55.213718",
   "method": "rest",
-  "total_items": 193,
+  "total_items": 192,
   "repository_metadata": {
     "id": 1185581019,
     "full_name": "unb-mds/2026-2-VeritasIA",
     "description": "Monitoramento de noticias sobre feminicídio utilizando IA",
     "created_at": "2026-03-18T18:25:01Z",
-    "updated_at": "2026-05-31T01:58:05Z",
+    "updated_at": "2026-05-31T17:22:21Z",
     "language": "Python",
-    "size": 3195,
+    "size": 3222,
     "stars": 4,
     "forks": 0,
     "open_issues": 5
