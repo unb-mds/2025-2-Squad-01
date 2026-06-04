@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-03T09:21:06.446213",
+      "extracted_at": "2026-06-04T08:44:23.055095",
       "file_path": "data/bronze/issues_2026-1-ProtectKids.json",
       "record_count": 48
     }
@@ -5009,7 +5009,7 @@
     },
     "comments": 1,
     "created_at": "2026-04-17T12:23:07Z",
-    "updated_at": "2026-04-22T15:13:26Z",
+    "updated_at": "2026-06-03T15:44:24Z",
     "closed_at": "2026-04-22T15:13:26Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -5056,7 +5056,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📋 Descrição\nDefinir e implementar a estrutura inicial das tabelas no PostgreSQL para suportar o armazenamento das proposições legislativas e dados dos parlamentares. O objetivo é criar um esquema que permita a persistência dos metadados extraídos da API e forneça a base para as consultas que serão realizadas pelo dashboard.\n\n## ⚠️ Prioridade\n\n- [ ] Baixa\n\n- [ ] Média\n\n- [ ] Alta\n\n- [x] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [ ] Definir os tipos de dados para a tabela proposicoes (ID, Título, Ementa, Texto Completo, Tema, Data).\n\n- [ ] Definir a tabela parlamentares (Nome, Partido, UF, ID da Câmara) e sua relação com as proposições.\n\n- [ ] Criar os scripts SQL iniciais de criação de tabelas (init.sql).\n\n- [ ] Configurar a persistência de dados utilizando volumes no Docker para evitar perda de informações ao reiniciar os contêineres.\n\n- [ ] Popular o banco com dados \"Mock\" (fictícios) para validar a integração com a API e o Frontend.\n\n- [ ] Validar a conexão entre o contêiner do Backend e o contêiner do Banco de Dados utilizando a variável de ambiente DATABASE_URL.\n\n## 🧠 Notas Adicionais\n\nPersistência: O volume postgres_data já está declarado no compose, certifique-se de que ele está apontando corretamente para /var/lib/postgresql/data.\n\nDica de Teste: Use ferramentas como o DBeaver ou o próprio terminal do Docker para rodar consultas de teste após a criação das tabelas.",
+    "body": "## 📋 Descrição\nDefinir e implementar a estrutura inicial das tabelas no PostgreSQL para suportar o armazenamento das proposições legislativas e dados dos parlamentares. O objetivo é criar um esquema que permita a persistência dos metadados extraídos da API e forneça a base para as consultas que serão realizadas pelo dashboard.\n\n## ⚠️ Prioridade\n\n- [ ] Baixa\n\n- [ ] Média\n\n- [ ] Alta\n\n- [x] Crítica\n\n## ✅ Checklist de Tarefas\n\n- [x] Definir os tipos de dados para a tabela proposicoes (ID, Título, Ementa, Texto Completo, Tema, Data).\n\n- [x] Definir a tabela parlamentares (Nome, Partido, UF, ID da Câmara) e sua relação com as proposições.\n\n- [x] Criar os scripts SQL iniciais de criação de tabelas (init.sql).\n\n- [x] Configurar a persistência de dados utilizando volumes no Docker para evitar perda de informações ao reiniciar os contêineres.\n\n- [x] Popular o banco com dados \"Mock\" (fictícios) para validar a integração com a API e o Frontend.\n\n- [x] Validar a conexão entre o contêiner do Backend e o contêiner do Banco de Dados utilizando a variável de ambiente DATABASE_URL.\n\n## 🧠 Notas Adicionais\n\nPersistência: O volume postgres_data já está declarado no compose, certifique-se de que ele está apontando corretamente para /var/lib/postgresql/data.\n\nDica de Teste: Use ferramentas como o DBeaver ou o próprio terminal do Docker para rodar consultas de teste após a criação das tabelas.",
     "closed_by": {
       "login": "augustogmedeiros",
       "id": 75932316,
