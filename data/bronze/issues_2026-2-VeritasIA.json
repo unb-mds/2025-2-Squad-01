@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-08T09:18:05.571555",
+      "extracted_at": "2026-06-09T08:26:13.031735",
       "file_path": "data/bronze/issues_2026-2-VeritasIA.json",
       "record_count": 36
     }
@@ -49,7 +49,7 @@
         "description": "Something isn't working"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -77,8 +77,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-01T12:25:10Z",
-    "updated_at": "2026-06-01T12:25:10Z",
-    "closed_at": null,
+    "updated_at": "2026-06-09T00:07:49Z",
+    "closed_at": "2026-06-09T00:07:49Z",
     "assignee": {
       "login": "SchneiderCode1",
       "id": 165057013,
@@ -125,7 +125,27 @@
       "total_blocking": 0
     },
     "body": "Ao tentar executar o projeto na branch main em ambiente Windows, o servidor não inicia ou apresenta erros de dependências no diretório frontend.\nComportamento Esperado\n\nO projeto deveria compilar e iniciar as dependências do frontend normalmente através do comando npm install na raiz ou no diretório específico.\nComportamento Atual\n\nO sistema apresenta falhas durante a inicialização/instalação das dependências, impossibilitando a execução do front-end.\nPasso a passo para reproduzir\n\n    Clonar o repositório na máquina Windows.\n\n    Tentar rodar os comandos de instalação de dependências.\n\n    O erro de conflito ou corrupção de pacotes ocorre.\n\nSolução Proposta\n\nPara corrigir o ambiente, siga os passos abaixo:\n\n    Navegue até o diretório frontend:\n    Bash\n\n    cd frontend\n\n    Remova os arquivos de bloqueio e de configuração de pacotes antigos:\n    Bash\n\n    del package-lock.json\n    del node_modules\n\n    Reinstale as dependências:\n    Bash\n\n    npm install\n\nContexto Adicional\n\nEste problema parece estar relacionado a inconsistências na resolução de pacotes entre sistemas operacionais (Windows vs Linux/macOS).",
-    "closed_by": null,
+    "closed_by": {
+      "login": "SchneiderCode1",
+      "id": 165057013,
+      "node_id": "U_kgDOCdaR9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165057013?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SchneiderCode1",
+      "html_url": "https://github.com/SchneiderCode1",
+      "followers_url": "https://api.github.com/users/SchneiderCode1/followers",
+      "following_url": "https://api.github.com/users/SchneiderCode1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SchneiderCode1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SchneiderCode1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SchneiderCode1/subscriptions",
+      "organizations_url": "https://api.github.com/users/SchneiderCode1/orgs",
+      "repos_url": "https://api.github.com/users/SchneiderCode1/repos",
+      "events_url": "https://api.github.com/users/SchneiderCode1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SchneiderCode1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/39/reactions",
       "total_count": 0,
@@ -140,7 +160,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/39/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-2-VeritasIA"
   },

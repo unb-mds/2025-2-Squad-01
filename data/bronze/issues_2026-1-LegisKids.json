@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-08T09:18:13.031047",
+      "extracted_at": "2026-06-09T08:26:17.937483",
       "file_path": "data/bronze/issues_2026-1-LegisKids.json",
       "record_count": 61
     }
@@ -49,7 +49,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -104,18 +104,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T20:58:51Z",
-    "updated_at": "2026-06-03T20:59:14Z",
-    "closed_at": null,
+    "updated_at": "2026-06-08T14:49:55Z",
+    "closed_at": "2026-06-08T14:49:55Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -162,7 +162,27 @@
       "total_blocking": 0
     },
     "body": "# Documentação de SPEC — Por que utilizar o framework OpenSpec no projeto\n\n## Contexto\n\nAtualmente, o projeto precisa de uma documentação mais clara sobre o uso do framework **OpenSpec** para organização das especificações técnicas.\n\nComo o projeto tende a crescer em funcionalidades, regras de negócio, fluxos e integrações, é importante justificar e padronizar o motivo pelo qual o OpenSpec será utilizado como base para documentar as decisões, requisitos e mudanças do sistema.\n\nO uso do OpenSpec ajuda a manter as especificações do projeto mais organizadas, versionadas e fáceis de consultar, evitando que regras importantes fiquem espalhadas em mensagens, documentos soltos ou apenas no conhecimento dos desenvolvedores.\n\n## Objetivo\n\nCriar uma documentação explicando **por que o framework OpenSpec está sendo utilizado no projeto**, destacando seus benefícios para organização, manutenção, comunicação entre a equipe e evolução do sistema.\n\n## Escopo da tarefa\n\nA documentação deve abordar:\n\n* O que é o OpenSpec dentro do contexto do projeto;\n* Por que o projeto precisa de uma documentação de especificações;\n* Como o OpenSpec ajuda na organização dos requisitos;\n* Benefícios para manutenção e evolução do código;\n* Benefícios para colaboração entre membros da equipe;\n* Como as SPECs devem ser utilizadas no fluxo de desenvolvimento;\n* Exemplos de situações em que uma SPEC deve ser criada ou atualizada.\n\n## Justificativa\n\nA adoção do OpenSpec permite que novas funcionalidades sejam planejadas antes da implementação, reduzindo retrabalho, bugs e conflitos de entendimento entre os membros da equipe.\n\nAlém disso, o uso de SPECs facilita a entrada de novos desenvolvedores no projeto, pois as decisões técnicas e funcionais passam a estar registradas de forma padronizada e acessível.\n\n## Benefícios esperados\n\n* Melhor organização dos requisitos do projeto;\n* Maior clareza sobre o funcionamento das funcionalidades;\n* Redução de retrabalho durante o desenvolvimento;\n* Facilidade para revisar mudanças antes da implementação;\n* Melhor comunicação entre os membros da equipe;\n* Registro das decisões técnicas e funcionais;\n* Maior facilidade para manutenção e evolução do sistema.\n\n## Critérios de aceitação\n\nA issue será considerada concluída quando:\n\n* Existir um documento explicando o motivo do uso do OpenSpec;\n* A documentação estiver clara e objetiva;\n* O texto apresentar os principais benefícios do framework;\n* O documento indicar como as SPECs devem ser usadas no projeto;\n* A documentação estiver disponível no repositório em local apropriado, como `docs/`, `specs/` ou `README.md`.\n\n## Sugestão de localização do documento\n\nO documento pode ser criado em um dos seguintes caminhos:\n\n```text\ndocs/openspec.md\n```\n\nou\n\n```text\nspecs/README.md\n```\n\n## Resultado esperado\n\nAo final da tarefa, o projeto deverá possuir uma documentação inicial explicando a importância do OpenSpec e orientando a equipe sobre como utilizar as SPECs durante o desenvolvimento.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/181/reactions",
       "total_count": 0,
@@ -177,7 +197,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/181/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -233,7 +253,7 @@
         "description": "Esforço de 1 a 2 dias."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -259,13 +279,13 @@
       }
     ],
     "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/11",
-      "html_url": "https://github.com/unb-mds/2026-1-LegisKids/milestone/11",
-      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/11/labels",
-      "id": 16169232,
-      "node_id": "MI_kwDORqqSCc4A9rkQ",
-      "number": 11,
-      "title": "Sprint 10",
+      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/12",
+      "html_url": "https://github.com/unb-mds/2026-1-LegisKids/milestone/12",
+      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/12/labels",
+      "id": 16259703,
+      "node_id": "MI_kwDORqqSCc4A-Bp3",
+      "number": 12,
+      "title": "Sprint 11",
       "description": "",
       "creator": {
         "login": "thatsrenan",
@@ -288,18 +308,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 0,
+      "closed_issues": 2,
       "state": "open",
-      "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
-      "due_on": "2026-06-07T00:00:00Z",
+      "created_at": "2026-06-08T16:26:35Z",
+      "updated_at": "2026-06-08T20:02:18Z",
+      "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T17:21:40Z",
-    "updated_at": "2026-06-04T19:11:30Z",
-    "closed_at": null,
+    "updated_at": "2026-06-08T18:58:43Z",
+    "closed_at": "2026-06-08T18:58:43Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -346,8 +366,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\n\nProvisionar um banco de dados PostgreSQL na plataforma **Neon** para ser usado \ncomo ambiente compartilhado de homologação/apresentação do LegisKids. \nCom isso, todos do time poderão visualizar os mesmos dados sem depender \nde banco local.\n\n## Contexto\n\nO banco local (Docker Compose) serve para desenvolvimento individual. \nO banco na nuvem serve para homologação, demos e apresentações — \ntodos apontando para a mesma base de dados.\n\n## Tarefas\n\n### Criação do banco\n- [ ] Criar conta gratuita em [neon.tech](https://neon.tech)\n- [ ] Criar um novo projeto chamado `legiskids`\n- [ ] Criar dois branches no Neon:\n  - `main` — ambiente de homologação/apresentação\n  - `dev` — ambiente de testes compartilhados (opcional)\n- [ ] Copiar a **Connection String** gerada pelo Neon:\npostgresql://usuario:senha@host.neon.tech/legiskids?sslmode=require\n\n### Configuração no projeto\n- [ ] Atualizar o `.env.example` com a nova variável:\nBanco local (Docker)\nDATABASE_URL=postgresql://postgres:postgres@localhost:5432/guardioes_da_lei\nBanco na nuvem (Neon) — substituir pela connection string real\nDATABASE_URL=postgresql://usuario:senha@host.neon.tech/legiskids?sslmode=require\n\n- [ ] Atualizar a configuração do SQLAlchemy no `app.py` para usar `DATABASE_URL`:\n```python\n  app.config[\"SQLALCHEMY_DATABASE_URI\"] = os.getenv(\"DATABASE_URL\")\n```\n- [ ] Garantir que `sslmode=require` está sendo respeitado na conexão\n\n### Aplicação do schema\n- [ ] Apontar o `.env` local para o banco Neon temporariamente\n- [ ] Rodar `flask db upgrade` para criar as tabelas no banco remoto\n- [ ] Rodar `python scripts/seed.py` para popular com dados iniciais\n- [ ] Verificar no painel do Neon se as tabelas foram criadas corretamente\n\n### Segurança\n- [ ] Compartilhar a connection string real com o time de forma segura\n  (não commitar no repositório — usar grupo do time ou GitHub Secrets)\n- [ ] Adicionar a connection string como **GitHub Secret** (`DATABASE_URL`)\n  para uso futuro no CI/CD\n\n### Documentação\n- [ ] Adicionar seção no README explicando os dois modos de banco:\nLocal (Docker) - Desenvolvimento diário - DATABASE_URL local\nNuvem (Neon) - Homologação/apresentação - DATABASE_URL do Neon\n\n## Critérios de Aceitação\n\n- [ ] Banco Neon criado e acessível pelo time\n- [ ] `flask db upgrade` aplicado com sucesso no banco remoto\n- [ ] Painel do Neon mostra as tabelas criadas corretamente\n- [ ] Connection string **não está** em nenhum arquivo commitado\n- [ ] README atualizado explicando os dois ambientes\n- [ ] Pelo menos um outro membro do time conseguiu conectar ao banco remoto\n\n## Referências\n\n- [Documentação do Neon](https://neon.tech/docs)\n- [Neon + SQLAlchemy](https://neon.tech/docs/guides/sqlalchemy)\n- [Free tier do Neon](https://neon.tech/pricing) — 0.5 GB de armazenamento gratuito",
-    "closed_by": null,
+    "body": "## Descrição\n\nProvisionar um banco de dados PostgreSQL na plataforma **Neon** para ser usado \ncomo ambiente compartilhado de homologação/apresentação do LegisKids. \nCom isso, todos do time poderão visualizar os mesmos dados sem depender \nde banco local.\n\n## Contexto\n\nO banco local (Docker Compose) serve para desenvolvimento individual. \nO banco na nuvem serve para homologação, demos e apresentações — \ntodos apontando para a mesma base de dados.\n\n## Tarefas\n\n### Criação do banco\n- [x] Criar conta gratuita em [neon.tech](https://neon.tech)\n- [x] Criar um novo projeto chamado `legiskids`\n- [x] Criar dois branches no Neon:\n  - `main` — ambiente de homologação/apresentação\n  - `dev` — ambiente de testes compartilhados (opcional)\n- [x] Copiar a **Connection String** gerada pelo Neon:\npostgresql://usuario:senha@host.neon.tech/legiskids?sslmode=require\n\n### Configuração no projeto\n- [x] Atualizar o `.env.example` com a nova variável:\nBanco local (Docker)\nDATABASE_URL=postgresql://postgres:postgres@localhost:5432/guardioes_da_lei\nBanco na nuvem (Neon) — substituir pela connection string real\nDATABASE_URL=postgresql://usuario:senha@host.neon.tech/legiskids?sslmode=require\n\n- [x] Atualizar a configuração do SQLAlchemy no `app.py` para usar `DATABASE_URL`:\n```python\n  app.config[\"SQLALCHEMY_DATABASE_URI\"] = os.getenv(\"DATABASE_URL\")\n```\n- [x] Garantir que `sslmode=require` está sendo respeitado na conexão\n\n### Aplicação do schema\n- [x] Apontar o `.env` local para o banco Neon temporariamente\n- [x] Rodar `flask db upgrade` para criar as tabelas no banco remoto\n- [x] Rodar `python scripts/seed.py` para popular com dados iniciais\n- [x] Verificar no painel do Neon se as tabelas foram criadas corretamente\n\n### Segurança\n- [x] Compartilhar a connection string real com o time de forma segura\n  (não commitar no repositório — usar grupo do time ou GitHub Secrets)\n- [x] Adicionar a connection string como **GitHub Secret** (`DATABASE_URL`)\n  para uso futuro no CI/CD\n\n### Documentação\n- [x] Adicionar seção no README explicando os dois modos de banco:\nLocal (Docker) - Desenvolvimento diário - DATABASE_URL local\nNuvem (Neon) - Homologação/apresentação - DATABASE_URL do Neon\n\n## Critérios de Aceitação\n\n- [x] Banco Neon criado e acessível pelo time\n- [ ] `flask db upgrade` aplicado com sucesso no banco remoto\n- [ ] Painel do Neon mostra as tabelas criadas corretamente\n- [ ] Connection string **não está** em nenhum arquivo commitado\n- [ ] README atualizado explicando os dois ambientes\n- [ ] Pelo menos um outro membro do time conseguiu conectar ao banco remoto\n\n## Referências\n\n- [Documentação do Neon](https://neon.tech/docs)\n- [Neon + SQLAlchemy](https://neon.tech/docs/guides/sqlalchemy)\n- [Free tier do Neon](https://neon.tech/pricing) — 0.5 GB de armazenamento gratuito",
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/180/reactions",
       "total_count": 0,
@@ -362,7 +402,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/180/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -473,11 +513,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -603,7 +643,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -629,13 +669,13 @@
       }
     ],
     "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/11",
-      "html_url": "https://github.com/unb-mds/2026-1-LegisKids/milestone/11",
-      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/11/labels",
-      "id": 16169232,
-      "node_id": "MI_kwDORqqSCc4A9rkQ",
-      "number": 11,
-      "title": "Sprint 10",
+      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/12",
+      "html_url": "https://github.com/unb-mds/2026-1-LegisKids/milestone/12",
+      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/12/labels",
+      "id": 16259703,
+      "node_id": "MI_kwDORqqSCc4A-Bp3",
+      "number": 12,
+      "title": "Sprint 11",
       "description": "",
       "creator": {
         "login": "thatsrenan",
@@ -658,18 +698,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 0,
+      "closed_issues": 2,
       "state": "open",
-      "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
-      "due_on": "2026-06-07T00:00:00Z",
+      "created_at": "2026-06-08T16:26:35Z",
+      "updated_at": "2026-06-08T20:02:18Z",
+      "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T17:11:37Z",
-    "updated_at": "2026-06-04T19:11:13Z",
-    "closed_at": null,
+    "updated_at": "2026-06-08T20:02:18Z",
+    "closed_at": "2026-06-08T20:02:18Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -716,8 +756,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\n\nDocumentar o esquema do banco de dados de forma clara para que toda a equipe \ne futuros contribuidores entendam a estrutura de dados do LegisKids.\n\n## Tarefas\n\n- [ ] Gerar o ERD (Diagrama Entidade-Relacionamento) — sugestão: [dbdiagram.io](https://dbdiagram.io)\n- [ ] Exportar o ERD como imagem `.png` e salvar em `/docs/db/erd.png`\n- [ ] Criar `/docs/db/schema.md` com:\n  - Descrição de cada tabela e seu propósito\n  - Descrição de cada coluna (nome, tipo, obrigatoriedade, descrição)\n  - Lista de índices e constraints importantes\n  - Decisões de design relevantes (ex: por que usar N:N em proposicao_categoria)\n- [ ] Linkar o `schema.md` no README principal\n- [ ] Revisar com ao menos um membro da equipe\n\n## Critérios de Aceitação\n\n- [ ] ERD disponível em `/docs/db/erd.png` e atualizado com o schema final\n- [ ] `schema.md` completo e revisado\n- [ ] README aponta para a documentação do banco",
-    "closed_by": null,
+    "body": "## Descrição\n\nDocumentar o esquema do banco de dados de forma clara para que toda a equipe \ne futuros contribuidores entendam a estrutura de dados do LegisKids.\n\n## Tarefas\n\n- [x] Gerar o ERD (Diagrama Entidade-Relacionamento) — sugestão: [dbdiagram.io](https://dbdiagram.io)\n- [x] Exportar o ERD como imagem `.png` e salvar em `/docs/db/erd.png`\n- [x] Criar `/docs/db/schema.md` com:\n  - Descrição de cada tabela e seu propósito\n  - Descrição de cada coluna (nome, tipo, obrigatoriedade, descrição)\n  - Lista de índices e constraints importantes\n  - Decisões de design relevantes (ex: por que usar N:N em proposicao_categoria)\n- [x] Linkar o `schema.md` no README principal\n- [x] Revisar com ao menos um membro da equipe\n\n## Critérios de Aceitação\n\n- [x] ERD disponível em `/docs/db/erd.png` e atualizado com o schema final\n- [x] `schema.md` completo e revisado\n- [x] README aponta para a documentação do banco",
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/178/reactions",
       "total_count": 0,
@@ -732,7 +792,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/178/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -843,11 +903,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1028,11 +1088,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1162,22 +1222,22 @@
     "locked": false,
     "assignees": [
       {
-        "login": "CaioMota16",
-        "id": 160689206,
-        "node_id": "U_kgDOCZPsNg",
-        "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+        "login": "italo-lm",
+        "id": 177414389,
+        "node_id": "U_kgDOCpMg9Q",
+        "avatar_url": "https://avatars.githubusercontent.com/u/177414389?v=4",
         "gravatar_id": "",
-        "url": "https://api.github.com/users/CaioMota16",
-        "html_url": "https://github.com/CaioMota16",
-        "followers_url": "https://api.github.com/users/CaioMota16/followers",
-        "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
-        "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
-        "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
-        "repos_url": "https://api.github.com/users/CaioMota16/repos",
-        "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+        "url": "https://api.github.com/users/italo-lm",
+        "html_url": "https://github.com/italo-lm",
+        "followers_url": "https://api.github.com/users/italo-lm/followers",
+        "following_url": "https://api.github.com/users/italo-lm/following{/other_user}",
+        "gists_url": "https://api.github.com/users/italo-lm/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/italo-lm/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/italo-lm/subscriptions",
+        "organizations_url": "https://api.github.com/users/italo-lm/orgs",
+        "repos_url": "https://api.github.com/users/italo-lm/repos",
+        "events_url": "https://api.github.com/users/italo-lm/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/italo-lm/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
@@ -1213,35 +1273,35 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T17:09:10Z",
-    "updated_at": "2026-06-04T19:10:44Z",
+    "updated_at": "2026-06-08T16:17:19Z",
     "closed_at": null,
     "assignee": {
-      "login": "CaioMota16",
-      "id": 160689206,
-      "node_id": "U_kgDOCZPsNg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "login": "italo-lm",
+      "id": 177414389,
+      "node_id": "U_kgDOCpMg9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177414389?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/CaioMota16",
-      "html_url": "https://github.com/CaioMota16",
-      "followers_url": "https://api.github.com/users/CaioMota16/followers",
-      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
-      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
-      "repos_url": "https://api.github.com/users/CaioMota16/repos",
-      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "url": "https://api.github.com/users/italo-lm",
+      "html_url": "https://github.com/italo-lm",
+      "followers_url": "https://api.github.com/users/italo-lm/followers",
+      "following_url": "https://api.github.com/users/italo-lm/following{/other_user}",
+      "gists_url": "https://api.github.com/users/italo-lm/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/italo-lm/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/italo-lm/subscriptions",
+      "organizations_url": "https://api.github.com/users/italo-lm/orgs",
+      "repos_url": "https://api.github.com/users/italo-lm/repos",
+      "events_url": "https://api.github.com/users/italo-lm/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/italo-lm/received_events",
       "type": "User",
       "user_view_type": "public",
       "site_admin": false
@@ -1398,11 +1458,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1583,11 +1643,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1788,11 +1848,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1993,11 +2053,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2189,11 +2249,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2373,11 +2433,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2586,11 +2646,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2715,7 +2775,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2770,18 +2830,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 4,
+      "open_issues": 8,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-05T21:40:24Z",
+      "updated_at": "2026-06-08T19:41:31Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-02T17:15:43Z",
-    "updated_at": "2026-06-02T17:15:43Z",
-    "closed_at": null,
+    "updated_at": "2026-06-08T16:30:41Z",
+    "closed_at": "2026-06-08T16:30:41Z",
     "assignee": {
       "login": "arthurpalhares1",
       "id": 193905735,
@@ -2828,7 +2888,27 @@
       "total_blocking": 0
     },
     "body": "## Contexto\n\nO README.md sofreu pequenas inconsistências e perda de informações durante alterações recentes no repositório, incluindo ajustes relacionados às imagens da equipe e organização da documentação.\n\n## Objetivos\n\n* Corrigir informações removidas ou inconsistentes\n* Validar caminhos das imagens no README\n* Revisar formatação Markdown\n* Garantir consistência visual e organizacional\n* Atualizar pequenas informações desatualizadas\n\n## Critérios de Aceitação\n\n* README renderizando corretamente\n* Imagens carregando sem erros\n* Estrutura Markdown válida\n* Informações principais preservadas\n* Sem links quebrados\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "arthurpalhares1",
+      "id": 193905735,
+      "node_id": "U_kgDOC47ERw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193905735?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/arthurpalhares1",
+      "html_url": "https://github.com/arthurpalhares1",
+      "followers_url": "https://api.github.com/users/arthurpalhares1/followers",
+      "following_url": "https://api.github.com/users/arthurpalhares1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arthurpalhares1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arthurpalhares1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arthurpalhares1/subscriptions",
+      "organizations_url": "https://api.github.com/users/arthurpalhares1/orgs",
+      "repos_url": "https://api.github.com/users/arthurpalhares1/repos",
+      "events_url": "https://api.github.com/users/arthurpalhares1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arthurpalhares1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/164/reactions",
       "total_count": 0,
@@ -2843,7 +2923,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/164/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
