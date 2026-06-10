@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-09T08:26:10.772578",
+      "extracted_at": "2026-06-10T08:42:33.163480",
       "file_path": "data/bronze/issues_2026-1-SafeStreets.json",
       "record_count": 58
     }
@@ -67,7 +67,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -122,18 +122,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 0,
+      "open_issues": 1,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-06-05T22:11:15Z",
-      "updated_at": "2026-06-07T15:44:40Z",
+      "updated_at": "2026-06-09T22:26:13Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-06-07T13:38:03Z",
-    "updated_at": "2026-06-08T13:26:25Z",
-    "closed_at": null,
+    "updated_at": "2026-06-09T22:26:13Z",
+    "closed_at": "2026-06-09T22:26:13Z",
     "assignee": {
       "login": "jorgevasquez25",
       "id": 247237551,
@@ -180,7 +180,27 @@
       "total_blocking": 0
     },
     "body": "# 🏷️ Test Driven Development (TDD)\n\n---\n\n## 🚀 Objetivo\nSerá realizado um estudo focado no desenvolvimento orientado a testes com a finalidade de utilizar esse método de desenvolvimento junto a outros métodos para os próximos passos de criação de código e programação do site SafeStreets dentro da equipe.\n\n## 📋 Descrição\nTDD (Test Driven Development) ou Desenvolvimento guiado por testes é uma prática em que você escreve os testes antes de escrever o código que os faz passar. A ideia inverte a ordem intuitiva: em vez de programar a funcionalidade e depois testá-la, você primeiro define o que o código deveria fazer na forma de um teste automatizado.\n- O ciclo central é conhecido como Red-Green-Refactor\n- É parte da metodologia Extreme Programming\n- Primeiro é criado o teste, o código vem depois\n\nAs ferramentas utilizadas pelo TDD são os testes unitários.\n\n- RED: Escrever um teste que falha, já que o código ainda não existe.\n- GREEN: Desenvolva primeiro a solução mais simples.\n- Refactor: Refatore o código, limpar e melhorar o código mantendo os testes passando, com a segurança de que se algo quebrar os testes vão avisar.\n\n## 👥 Responsáveis\n- Autor:  @jorgevasquez25 \n- Revisor: @ArthurFeitosa05  @EdsonToppzera @IsraelSoares-25 @matheusqsa @Nic0laslc \n\n\n## 🎯 Prioridade\nMarque uma caixinha de acordo com seu nível de importância\n- [ ] 🔴 Alta  \n- [x] 🟡 Média  \n- [ ] 🟢 Baixa  \n\n\n## 📌 Definition of Ready (DoR)\n---\n- [ ] Objetivo do estudo está claro e alinhado com a equipe\n- [ ] Escopo definido (ciclo Red-Green-Refactor, ferramentas de teste, integração com o fluxo SDD)\n- [ ] Autor e revisores atribuídos à issue\n- [ ] Referências/fontes sobre TDD levantadas\n- [ ] Prioridade definida no board\n\n## 📌 Definition of Done (DoD)\n---\n- [ ] Documento explica o ciclo Red-Green-Refactor \n- [ ] Ferramentas de teste recomendadas \n- [ ] Documentação integrada ao MkDocs do projeto\n- [ ] Sem erros de ortografia/formatação no Markdown\n- [ ] Issue movida para \"Concluído\" no board\n## 🔧 Tecnologias Utilizadas\n- Github\n- markdown\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "jorgevasquez25",
+      "id": 247237551,
+      "node_id": "U_kgDODryLrw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/247237551?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jorgevasquez25",
+      "html_url": "https://github.com/jorgevasquez25",
+      "followers_url": "https://api.github.com/users/jorgevasquez25/followers",
+      "following_url": "https://api.github.com/users/jorgevasquez25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jorgevasquez25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jorgevasquez25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jorgevasquez25/subscriptions",
+      "organizations_url": "https://api.github.com/users/jorgevasquez25/orgs",
+      "repos_url": "https://api.github.com/users/jorgevasquez25/repos",
+      "events_url": "https://api.github.com/users/jorgevasquez25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jorgevasquez25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/75/reactions",
       "total_count": 0,
@@ -195,7 +215,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/75/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-SafeStreets"
   },
