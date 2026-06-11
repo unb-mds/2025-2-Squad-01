@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-10T08:42:43.356568",
+      "extracted_at": "2026-06-11T09:08:00.145541",
       "file_path": "data/bronze/prs_2026.1-ContraDito.json",
       "record_count": 51
     }
@@ -112,7 +112,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -188,18 +188,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-03T09:34:18Z",
-      "updated_at": "2026-06-07T20:17:30Z",
+      "updated_at": "2026-06-11T01:29:21Z",
       "due_on": "2026-06-09T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-05T21:55:40Z",
-    "updated_at": "2026-06-05T22:05:43Z",
-    "closed_at": null,
+    "updated_at": "2026-06-11T01:29:21Z",
+    "closed_at": "2026-06-11T01:29:20Z",
     "assignee": {
       "login": "lucasaraujoszz",
       "id": 168549878,
@@ -231,10 +231,30 @@
       "html_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/139",
       "diff_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/139.diff",
       "patch_url": "https://github.com/unb-mds/2026.1-ContraDito/pull/139.patch",
-      "merged_at": null
+      "merged_at": "2026-06-11T01:29:20Z"
     },
     "body": "# Infraestrutura Docker Local — ContraDito\r\n\r\nEste PR introduz a nova fundação da infraestrutura Docker local do ContraDito. O objetivo principal foi alinhar os contêineres estritamente com o Manual de Arquitetura, implementando isolamento físico de redes (CQRS), otimização extrema de builds (Layer Caching) e contenção de hardware (para estabilidade em Apple Silicon/ARM64).\r\n\r\nA infraestrutura agora é **\"Plug & Play\"**, resiliente a falhas e pronta para absorver as próximas implementações de IA e Cache sem necessidade de alterações estruturais.\r\n\r\n---\r\n\r\n## O que foi feito (Mudanças na Infraestrutura)\r\n\r\n- **Novo `docker-compose.yml`:** Orquestração determinística de 4 serviços (`nextjs`, `fastapi`, `worker`, `redis`).\r\n\r\n- **Isolamento de Redes (CQRS):** Criação das redes internas `read` e `write`. A FastAPI e o Worker agora estão fisicamente isolados e não possuem rota de comunicação direta.\r\n\r\n- **Otimização Extrema do Worker (Layer Caching):** Refatoração do `Dockerfile.worker` para isolar a instalação do PyTorch (versão restrita a CPU para poupar +3GB) e modelos SBERT em camadas estáticas. O tempo de rebuild do Worker caiu drasticamente.\r\n\r\n- **Blindagem de Hardware (Apple Silicon):** Adição de limites rigorosos de processamento (`cpus: 2.0`, `memory: 4G`) e plataforma `linux/arm64` no Worker, evitando travamentos da máquina hospedeira durante a extração/vetorização.\r\n\r\n- **Segurança e Mapeamento de Portas:** Ajuste no Port Forwarding do Frontend e da API (`127.0.0.1:3000:3000` e `127.0.0.1:8001:8000`) para impedir acesso externo acidental na rede Wi-Fi local.\r\n\r\n- **Resiliência:** Implementação de healthchecks encadeados e políticas de `restart: unless-stopped`, garantindo a ordem correta de boot: `Redis → FastAPI → Next.js / Worker`.\r\n\r\n- **Limpeza Cirúrgica do `.dockerignore`:** Exclusão de pastas pesadas (como `.next`, `LLM_validation` e logs do npm), reduzindo o contexto de build e o tamanho final das imagens.\r\n\r\n---\r\n\r\n##  Handover para a Equipe de Desenvolvimento\r\n\r\nPara que o código da aplicação rode perfeitamente nesta nova infraestrutura isolada, a equipe de desenvolvimento precisará fazer dois ajustes simples no código em PRs futuros:\r\n\r\n### Frontend (Next.js)\r\nRefatorar o client HTTP para usar:\r\n- A rede interna do Docker (`process.env.API_INTERNAL_URL`) durante o **Server-Side Rendering (SSR)**\r\n- A URL pública (`process.env.NEXT_PUBLIC_API_URL`) durante o **Client-Side Rendering**\r\n\r\n### Backend (FastAPI)\r\nAdicionar o IP `http://127.0.0.1:3000` na lista de `allow_origins` do `CORSMiddleware` no arquivo `app/main.py`.\r\n\r\n> **Nota:** O contêiner do Redis já está rodando em background e as variáveis de ambiente já foram injetadas. Quando a equipe for implementar a invalidação de cache via Pub/Sub, a infraestrutura já está pronta para uso!\r\n\r\n---\r\n\r\n## Checklist de Revisão\r\n\r\n- [x] O ambiente sobe corretamente com `docker compose up --build`\r\n- [x] O tráfego do frontend legado foi acomodado via port forwarding (porta `8001`) sem alterar código-fonte\r\n- [x] Nenhuma alteração foi feita no código-fonte da aplicação (escopo 100% DevOps)\r\n- [x] Volumes do HuggingFace (`huggingface_cache`) configurados corretamente\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "henriquemendeselias",
+      "id": 181978205,
+      "node_id": "U_kgDOCtjEXQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181978205?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henriquemendeselias",
+      "html_url": "https://github.com/henriquemendeselias",
+      "followers_url": "https://api.github.com/users/henriquemendeselias/followers",
+      "following_url": "https://api.github.com/users/henriquemendeselias/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henriquemendeselias/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henriquemendeselias/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henriquemendeselias/subscriptions",
+      "organizations_url": "https://api.github.com/users/henriquemendeselias/orgs",
+      "repos_url": "https://api.github.com/users/henriquemendeselias/repos",
+      "events_url": "https://api.github.com/users/henriquemendeselias/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henriquemendeselias/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026.1-ContraDito/issues/139/reactions",
       "total_count": 0,

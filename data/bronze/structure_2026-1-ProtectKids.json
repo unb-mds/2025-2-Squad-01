@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-1-ProtectKids",
   "branch": "main",
-  "sha": "ad63bd85331ab2ad8956106c15cbb24a69ff80ce",
+  "sha": "d746643846a9b2d648dfdeeed5ba9a328448350f",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "5da467d944b5338ac285caeb79535587a17bb22f",
+      "sha": "cbf3777ec5119e254a3f904810678296270e4c5b",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "2822ddca706d424cc7020ce7f1f662ee1da6a416",
+      "sha": "84c692d66ec4a827267d96b2e71eec948852be8a",
       "mode": "040000",
       "children": []
     },
@@ -31,10 +31,20 @@
       "is_binary": false
     },
     {
+      "name": "docker-build.yml",
+      "path": ".github/workflows/docker-build.yml",
+      "type": "file",
+      "sha": "82cd5e26805e370079f326cfa5e7a30987655312",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1223,
+      "is_binary": false
+    },
+    {
       "name": "metricas_e_docs.yml",
       "path": ".github/workflows/metricas_e_docs.yml",
       "type": "file",
-      "sha": "3b562d699b3fc1103d11977c836482dffdb38d0c",
+      "sha": "8a44d40ff222247eae82319fd76ab374d96a8a6c",
       "mode": "100644",
       "extension": ".yml",
       "size": 865,
@@ -74,7 +84,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "ac6eecf1b521192fce152cf5714f80d2855ae8be",
+      "sha": "86b2b5fe9eb6fb79afaf57d30875e81a9700c149",
       "mode": "040000",
       "children": []
     },
@@ -82,7 +92,7 @@
       "name": "Dockerfile",
       "path": "backend/Dockerfile",
       "type": "file",
-      "sha": "66ee7871cab2199e29d8a4bdc4d53a4674c5ffcb",
+      "sha": "79099e91b7b0930a4266bef201f0e25d3e74799e",
       "mode": "100644",
       "extension": "",
       "size": 484,
@@ -92,7 +102,7 @@
       "name": "crawler",
       "path": "backend/crawler",
       "type": "directory",
-      "sha": "736c80e38c9c3a3043484555336fc2866384298c",
+      "sha": "c2a1256cd691dba0202e99e92e053a58c86e7f74",
       "mode": "040000",
       "children": []
     },
@@ -100,10 +110,20 @@
       "name": "camara_api.py",
       "path": "backend/crawler/camara_api.py",
       "type": "file",
-      "sha": "60176b3ea92aa58c8e5503bfab6f0f57b35d15a2",
+      "sha": "814c00f9c5dfc7d84cc5bd461e2e8dff62b3cfb5",
       "mode": "100644",
       "extension": ".py",
-      "size": 13652,
+      "size": 13751,
+      "is_binary": false
+    },
+    {
+      "name": "senado_api.py",
+      "path": "backend/crawler/senado_api.py",
+      "type": "file",
+      "sha": "e800d81349cdc4d4622cdd95b41cbe72e9e7a4f0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5613,
       "is_binary": false
     },
     {
@@ -130,10 +150,10 @@
       "name": "models.py",
       "path": "backend/models.py",
       "type": "file",
-      "sha": "babb30b6f4a92ddcf2bf40a1385f7865a48ef0de",
+      "sha": "02fc58560451ea6b5c06e5327610dcc6e0018187",
       "mode": "100644",
       "extension": ".py",
-      "size": 1482,
+      "size": 1630,
       "is_binary": false
     },
     {
@@ -178,10 +198,10 @@
       "name": "docker-compose.yml",
       "path": "docker-compose.yml",
       "type": "file",
-      "sha": "ecbfbb02f0c67ec3e6f67ce9dfb3625fd4fdd6c6",
+      "sha": "e8bc07af8f6360e1f40563b95931f279559780d8",
       "mode": "100644",
       "extension": ".yml",
-      "size": 770,
+      "size": 813,
       "is_binary": false
     },
     {
@@ -750,10 +770,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "571eb7196f1bdfc5f529f28dbda8703adc544d52",
+      "sha": "f1e2c883698ccf90ef3467f4fc1fcc378b46e831",
       "mode": "100644",
       "extension": ".yml",
-      "size": 569,
+      "size": 553,
       "is_binary": false
     },
     {
@@ -786,17 +806,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-10T09:34:46.904905",
+  "extracted_at": "2026-06-11T09:58:53.323544",
   "method": "rest",
-  "total_items": 83,
+  "total_items": 85,
   "repository_metadata": {
     "id": 1196216020,
     "full_name": "unb-mds/2026-1-ProtectKids",
     "description": null,
     "created_at": "2026-03-30T13:37:41Z",
-    "updated_at": "2026-06-08T17:56:01Z",
+    "updated_at": "2026-06-11T01:41:19Z",
     "language": "JavaScript",
-    "size": 39246,
+    "size": 39287,
     "stars": 2,
     "forks": 0,
     "open_issues": 6
