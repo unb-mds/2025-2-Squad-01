@@ -2,19 +2,19 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-10T09:34:46.904905",
+  "analyzed_at": "2026-06-11T09:58:53.323544",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 58,
-  "total_bytes": 481283,
+  "total_files": 60,
+  "total_bytes": 488393,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 2,
       "total_bytes": 203018,
-      "percentage": 42.18,
+      "percentage": 41.57,
       "files": [
         {
           "path": "docs/assets/images/c4_container.png",
@@ -34,7 +34,7 @@
       "language": "JSON",
       "file_count": 3,
       "total_bytes": 122816,
-      "percentage": 25.52,
+      "percentage": 25.15,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -60,7 +60,7 @@
       "language": "Markdown",
       "file_count": 16,
       "total_bytes": 57537,
-      "percentage": 11.95,
+      "percentage": 11.78,
       "files": [
         {
           "path": "estudos_iniciais/estudos/requisitos/requisitos.md",
@@ -128,7 +128,7 @@
       "language": "JavaScript",
       "file_count": 14,
       "total_bytes": 39047,
-      "percentage": 8.11,
+      "percentage": 7.99,
       "files": [
         {
           "path": "frontend/src/pages/Inicio.jsx",
@@ -194,20 +194,26 @@
     },
     {
       "language": "Python",
-      "file_count": 7,
-      "total_bytes": 28938,
-      "percentage": 6.01,
+      "file_count": 8,
+      "total_bytes": 34798,
+      "percentage": 7.12,
       "files": [
         {
           "path": "backend/crawler/camara_api.py",
           "name": "camara_api.py",
-          "size": 13652,
+          "size": 13751,
           "extension": ".py"
         },
         {
           "path": "scripts/coletor_metricas.py",
           "name": "coletor_metricas.py",
           "size": 7793,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/crawler/senado_api.py",
+          "name": "senado_api.py",
+          "size": 5613,
           "extension": ".py"
         },
         {
@@ -219,7 +225,7 @@
         {
           "path": "backend/models.py",
           "name": "models.py",
-          "size": 1482,
+          "size": 1630,
           "extension": ".py"
         },
         {
@@ -246,7 +252,7 @@
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 14553,
-      "percentage": 3.02,
+      "percentage": 2.98,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -266,7 +272,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 9355,
-      "percentage": 1.94,
+      "percentage": 1.92,
       "files": [
         {
           "path": "docs/dashboard/index.html",
@@ -284,10 +290,16 @@
     },
     {
       "language": "YAML",
-      "file_count": 4,
-      "total_bytes": 2784,
-      "percentage": 0.58,
+      "file_count": 5,
+      "total_bytes": 4034,
+      "percentage": 0.83,
       "files": [
+        {
+          "path": ".github/workflows/docker-build.yml",
+          "name": "docker-build.yml",
+          "size": 1223,
+          "extension": ".yml"
+        },
         {
           "path": ".github/workflows/metricas_e_docs.yml",
           "name": "metricas_e_docs.yml",
@@ -297,7 +309,7 @@
         {
           "path": "docker-compose.yml",
           "name": "docker-compose.yml",
-          "size": 770,
+          "size": 813,
           "extension": ".yml"
         },
         {
@@ -309,7 +321,7 @@
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 569,
+          "size": 553,
           "extension": ".yml"
         }
       ]
@@ -318,7 +330,7 @@
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 1764,
-      "percentage": 0.37,
+      "percentage": 0.36,
       "files": [
         {
           "path": "LICENSE",
@@ -364,7 +376,7 @@
       "language": "CSS",
       "file_count": 2,
       "total_bytes": 507,
-      "percentage": 0.11,
+      "percentage": 0.1,
       "files": [
         {
           "path": "docs/stylesheets/extra.css",
@@ -396,7 +408,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-10T09:37:42.050182",
+    "extracted_at": "2026-06-11T10:01:16.938703",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }

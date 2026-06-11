@@ -2,19 +2,75 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-10T09:34:39.055598",
+  "analyzed_at": "2026-06-11T09:58:46.571443",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 93,
-  "total_bytes": 1586730,
+  "total_files": 132,
+  "total_bytes": 2924860,
   "languages": [
+    {
+      "language": "PNG Image",
+      "file_count": 8,
+      "total_bytes": 1556150,
+      "percentage": 53.2,
+      "files": [
+        {
+          "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
+          "name": "pagina_inicial_com_menu.png",
+          "size": 290257,
+          "extension": ".png"
+        },
+        {
+          "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_parte2.png",
+          "name": "pagina_inicial_parte2.png",
+          "size": 278223,
+          "extension": ".png"
+        },
+        {
+          "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_parte1.png",
+          "name": "pagina_inicial_parte1.png",
+          "size": 209930,
+          "extension": ".png"
+        },
+        {
+          "path": "docs/imagens/logo-nome.png",
+          "name": "logo-nome.png",
+          "size": 188130,
+          "extension": ".png"
+        },
+        {
+          "path": "frontend/Specs/Specs_pg_inicial/imagens/logo-original.png",
+          "name": "logo-original.png",
+          "size": 188130,
+          "extension": ".png"
+        },
+        {
+          "path": "frontend/public/logo-original.png",
+          "name": "logo-original.png",
+          "size": 188130,
+          "extension": ".png"
+        },
+        {
+          "path": "docs/imagens/logo-escudo.PNG",
+          "name": "logo-escudo.PNG",
+          "size": 106675,
+          "extension": ".PNG"
+        },
+        {
+          "path": "frontend/public/logo-escudo.png",
+          "name": "logo-escudo.png",
+          "size": 106675,
+          "extension": ".png"
+        }
+      ]
+    },
     {
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 63.27,
+      "percentage": 34.32,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -55,30 +111,10 @@
       ]
     },
     {
-      "language": "PNG Image",
-      "file_count": 2,
-      "total_bytes": 294805,
-      "percentage": 18.58,
-      "files": [
-        {
-          "path": "docs/imagens/logo-nome.png",
-          "name": "logo-nome.png",
-          "size": 188130,
-          "extension": ".png"
-        },
-        {
-          "path": "docs/imagens/logo-escudo.PNG",
-          "name": "logo-escudo.PNG",
-          "size": 106675,
-          "extension": ".PNG"
-        }
-      ]
-    },
-    {
       "language": "Markdown",
-      "file_count": 63,
-      "total_bytes": 248786,
-      "percentage": 15.68,
+      "file_count": 67,
+      "total_bytes": 265914,
+      "percentage": 9.09,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -143,10 +179,42 @@
       ]
     },
     {
+      "language": "JSON",
+      "file_count": 4,
+      "total_bytes": 41394,
+      "percentage": 1.42,
+      "files": [
+        {
+          "path": "frontend/package-lock.json",
+          "name": "package-lock.json",
+          "size": 32712,
+          "extension": ".json"
+        },
+        {
+          "path": "docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 7608,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "name": "tsconfig.json",
+          "size": 666,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/package.json",
+          "name": "package.json",
+          "size": 408,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
       "language": "HTML",
       "file_count": 1,
       "total_bytes": 16261,
-      "percentage": 1.02,
+      "percentage": 0.56,
       "files": [
         {
           "path": "docs/productivity/index.html",
@@ -157,16 +225,138 @@
       ]
     },
     {
-      "language": "JSON",
-      "file_count": 1,
-      "total_bytes": 7352,
-      "percentage": 0.46,
+      "language": "TypeScript",
+      "file_count": 14,
+      "total_bytes": 15737,
+      "percentage": 0.54,
       "files": [
         {
-          "path": "docs/productivity/metrics.json",
-          "name": "metrics.json",
-          "size": 7352,
-          "extension": ".json"
+          "path": "frontend/components/icons/index.tsx",
+          "name": "index.tsx",
+          "size": 3178,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/Drawer/Drawer.tsx",
+          "name": "Drawer.tsx",
+          "size": 3152,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/data/noticias.ts",
+          "name": "noticias.ts",
+          "size": 2182,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/components/NewsCard/NewsCard.tsx",
+          "name": "NewsCard.tsx",
+          "size": 1363,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/app/layout.tsx",
+          "name": "layout.tsx",
+          "size": 1220,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/Header/Header.tsx",
+          "name": "Header.tsx",
+          "size": 1020,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/NewsFeed/NewsFeed.tsx",
+          "name": "NewsFeed.tsx",
+          "size": 686,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/Hero/Hero.tsx",
+          "name": "Hero.tsx",
+          "size": 646,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/Chrome/Chrome.tsx",
+          "name": "Chrome.tsx",
+          "size": 644,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/Logo/Logo.tsx",
+          "name": "Logo.tsx",
+          "size": 539,
+          "extension": ".tsx"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 11,
+      "total_bytes": 9535,
+      "percentage": 0.33,
+      "files": [
+        {
+          "path": "frontend/components/NewsCard/NewsCard.module.css",
+          "name": "NewsCard.module.css",
+          "size": 2253,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Drawer/Drawer.module.css",
+          "name": "Drawer.module.css",
+          "size": 2126,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/app/globals.css",
+          "name": "globals.css",
+          "size": 1676,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Header/Header.module.css",
+          "name": "Header.module.css",
+          "size": 1089,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Hero/Hero.module.css",
+          "name": "Hero.module.css",
+          "size": 737,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/NewsFeed/NewsFeed.module.css",
+          "name": "NewsFeed.module.css",
+          "size": 552,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/app/mapa/page.module.css",
+          "name": "page.module.css",
+          "size": 494,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Logo/Logo.module.css",
+          "name": "Logo.module.css",
+          "size": 310,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Footer/Footer.module.css",
+          "name": "Footer.module.css",
+          "size": 186,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/app/page.module.css",
+          "name": "page.module.css",
+          "size": 68,
+          "extension": ".css"
         }
       ]
     },
@@ -174,7 +364,7 @@
       "language": "Python",
       "file_count": 7,
       "total_bytes": 7149,
-      "percentage": 0.45,
+      "percentage": 0.24,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
@@ -221,30 +411,10 @@
       ]
     },
     {
-      "language": "No Extension",
-      "file_count": 2,
-      "total_bytes": 4227,
-      "percentage": 0.27,
-      "files": [
-        {
-          "path": "docs/Estudos/estudo-de-agentes-de-IA",
-          "name": "estudo-de-agentes-de-IA",
-          "size": 3167,
-          "extension": ""
-        },
-        {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
-        }
-      ]
-    },
-    {
       "language": "YAML",
       "file_count": 4,
       "total_bytes": 4113,
-      "percentage": 0.26,
+      "percentage": 0.14,
       "files": [
         {
           "path": "mkdocs.yml",
@@ -273,30 +443,56 @@
       ]
     },
     {
+      "language": "No Extension",
+      "file_count": 2,
+      "total_bytes": 4227,
+      "percentage": 0.14,
+      "files": [
+        {
+          "path": "docs/Estudos/estudo-de-agentes-de-IA",
+          "name": "estudo-de-agentes-de-IA",
+          "size": 3167,
+          "extension": ""
+        },
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 2,
+      "total_bytes": 366,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "frontend/.gitignore",
+          "name": ".gitignore",
+          "size": 343,
+          "extension": ".gitignore"
+        },
+        {
+          "path": "backend/.gitignore",
+          "name": ".gitignore",
+          "size": 23,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
       "language": "Text",
       "file_count": 1,
       "total_bytes": 95,
-      "percentage": 0.01,
+      "percentage": 0.0,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
           "size": 95,
           "extension": ".txt"
-        }
-      ]
-    },
-    {
-      "language": "Git Ignore",
-      "file_count": 1,
-      "total_bytes": 23,
-      "percentage": 0.0,
-      "files": [
-        {
-          "path": "backend/.gitignore",
-          "name": ".gitignore",
-          "size": 23,
-          "extension": ".gitignore"
         }
       ]
     },
@@ -340,7 +536,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-10T09:37:40.943733",
+    "extracted_at": "2026-06-11T10:01:16.069159",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }
