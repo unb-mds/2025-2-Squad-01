@@ -2,7 +2,7 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-11T09:58:47.143212",
+  "extracted_at": "2026-06-12T09:48:19.599721",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -102,6 +102,14 @@
         "children": []
       },
       {
+        "name": "data-ingestion.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1525,
+        "extension": ".yml",
+        "path": ".github/workflows/data-ingestion.yml"
+      },
+      {
         "name": "scrum metrics.yml",
         "type": "file",
         "language": "YAML",
@@ -113,7 +121,7 @@
         "name": "static.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1701,
+        "size": 1869,
         "extension": ".yml",
         "path": ".github/workflows/static.yml"
       },
@@ -121,7 +129,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 266,
+        "size": 272,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -305,7 +313,7 @@
         "name": "camara_client.py",
         "type": "file",
         "language": "Python",
-        "size": 2896,
+        "size": 3129,
         "extension": ".py",
         "path": "backend/app/services/camara_client.py"
       },
@@ -313,7 +321,7 @@
         "name": "collector.py",
         "type": "file",
         "language": "Python",
-        "size": 6011,
+        "size": 6178,
         "extension": ".py",
         "path": "backend/app/services/collector.py"
       },
@@ -345,9 +353,17 @@
         "name": "popular_banco.py",
         "type": "file",
         "language": "Python",
-        "size": 939,
+        "size": 2545,
         "extension": ".py",
         "path": "backend/popular_banco.py"
+      },
+      {
+        "name": "requirements-dev.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 19,
+        "extension": ".txt",
+        "path": "backend/requirements-dev.txt"
       },
       {
         "name": "requirements.txt",
@@ -356,6 +372,44 @@
         "size": 83,
         "extension": ".txt",
         "path": "backend/requirements.txt"
+      },
+      {
+        "name": "tests",
+        "type": "directory",
+        "path": "backend/tests",
+        "children": []
+      },
+      {
+        "name": "test_dashboard.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2172,
+        "extension": ".py",
+        "path": "backend/tests/test_dashboard.py"
+      },
+      {
+        "name": "test_ingestion_cli.py",
+        "type": "file",
+        "language": "Python",
+        "size": 34,
+        "extension": ".py",
+        "path": "backend/tests/test_ingestion_cli.py"
+      },
+      {
+        "name": "test_merge_reports.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2100,
+        "extension": ".py",
+        "path": "backend/tests/test_merge_reports.py"
+      },
+      {
+        "name": "test_popular_banco.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1387,
+        "extension": ".py",
+        "path": "backend/tests/test_popular_banco.py"
       },
       {
         "name": "docker-compose.yml",
@@ -1134,6 +1188,28 @@
         "path": "docs/index.md"
       },
       {
+        "name": "ingestion",
+        "type": "directory",
+        "path": "docs/ingestion",
+        "children": []
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 9201,
+        "extension": ".html",
+        "path": "docs/ingestion/index.html"
+      },
+      {
+        "name": "ingestion-history.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 632,
+        "extension": ".json",
+        "path": "docs/ingestion/ingestion-history.json"
+      },
+      {
         "name": "issues_report.md",
         "type": "file",
         "language": "Markdown",
@@ -1589,7 +1665,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 3128,
+        "size": 3199,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -1606,6 +1682,28 @@
         "size": 47616,
         "extension": ".html",
         "path": "overrides/main.html"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": "scripts",
+        "children": []
+      },
+      {
+        "name": "carga_completa.py",
+        "type": "file",
+        "language": "Python",
+        "size": 382,
+        "extension": ".py",
+        "path": "scripts/carga_completa.py"
+      },
+      {
+        "name": "merge_reports.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1585,
+        "extension": ".py",
+        "path": "scripts/merge_reports.py"
       },
       {
         "name": "site",
@@ -2534,7 +2632,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-11T10:01:16.779983",
+    "extracted_at": "2026-06-12T09:51:22.340278",
     "file_path": "data/silver/hierarchy_2026-1-Mapa_L.I.L.A.S.json"
   }
 }

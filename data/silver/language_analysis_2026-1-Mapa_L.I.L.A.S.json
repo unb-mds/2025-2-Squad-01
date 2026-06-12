@@ -2,19 +2,19 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-11T09:58:47.143212",
+  "analyzed_at": "2026-06-12T09:48:19.599721",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 254,
-  "total_bytes": 19466400,
+  "total_files": 264,
+  "total_bytes": 19487688,
   "languages": [
     {
       "language": "PDF",
       "file_count": 25,
       "total_bytes": 10503188,
-      "percentage": 53.96,
+      "percentage": 53.9,
       "files": [
         {
           "path": "docs/Arquitetura/Arquitetura C4 (1).pdf",
@@ -82,7 +82,7 @@
       "language": "PNG Image",
       "file_count": 45,
       "total_bytes": 5562589,
-      "percentage": 28.58,
+      "percentage": 28.54,
       "files": [
         {
           "path": "docs/Requisitos/imagens/GRÁFICOS.png",
@@ -200,7 +200,7 @@
       "language": "JavaScript",
       "file_count": 62,
       "total_bytes": 1123425,
-      "percentage": 5.77,
+      "percentage": 5.76,
       "files": [
         {
           "path": "site/assets/javascripts/lunr/wordcut.js",
@@ -266,9 +266,9 @@
     },
     {
       "language": "HTML",
-      "file_count": 17,
-      "total_bytes": 326720,
-      "percentage": 1.68,
+      "file_count": 18,
+      "total_bytes": 335921,
+      "percentage": 1.72,
       "files": [
         {
           "path": "overrides/main.html",
@@ -440,8 +440,8 @@
     },
     {
       "language": "JSON",
-      "file_count": 4,
-      "total_bytes": 120942,
+      "file_count": 5,
+      "total_bytes": 121574,
       "percentage": 0.62,
       "files": [
         {
@@ -467,14 +467,20 @@
           "name": "package.json",
           "size": 699,
           "extension": ".json"
+        },
+        {
+          "path": "docs/ingestion/ingestion-history.json",
+          "name": "ingestion-history.json",
+          "size": 632,
+          "extension": ".json"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 15,
-      "total_bytes": 75871,
-      "percentage": 0.39,
+      "file_count": 21,
+      "total_bytes": 85537,
+      "percentage": 0.44,
       "files": [
         {
           "path": "backend/app/services/normalizer.py",
@@ -515,7 +521,7 @@
         {
           "path": "backend/app/services/collector.py",
           "name": "collector.py",
-          "size": 6011,
+          "size": 6178,
           "extension": ".py"
         },
         {
@@ -527,13 +533,13 @@
         {
           "path": "backend/app/services/camara_client.py",
           "name": "camara_client.py",
-          "size": 2896,
+          "size": 3129,
           "extension": ".py"
         },
         {
-          "path": "backend/app/services/senado_client.py",
-          "name": "senado_client.py",
-          "size": 2464,
+          "path": "backend/popular_banco.py",
+          "name": "popular_banco.py",
+          "size": 2545,
           "extension": ".py"
         }
       ]
@@ -572,20 +578,26 @@
     },
     {
       "language": "YAML",
-      "file_count": 4,
-      "total_bytes": 6693,
-      "percentage": 0.03,
+      "file_count": 5,
+      "total_bytes": 8457,
+      "percentage": 0.04,
       "files": [
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 3128,
+          "size": 3199,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/static.yml",
           "name": "static.yml",
-          "size": 1701,
+          "size": 1869,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/data-ingestion.yml",
+          "name": "data-ingestion.yml",
+          "size": 1525,
           "extension": ".yml"
         },
         {
@@ -631,13 +643,13 @@
     {
       "language": "Git Ignore",
       "file_count": 3,
-      "total_bytes": 549,
+      "total_bytes": 555,
       "percentage": 0.0,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 266,
+          "size": 272,
           "extension": ".gitignore"
         },
         {
@@ -684,14 +696,20 @@
     },
     {
       "language": "Text",
-      "file_count": 1,
-      "total_bytes": 83,
+      "file_count": 2,
+      "total_bytes": 102,
       "percentage": 0.0,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
           "size": 83,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/requirements-dev.txt",
+          "name": "requirements-dev.txt",
+          "size": 19,
           "extension": ".txt"
         }
       ]
@@ -726,7 +744,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-11T10:01:16.778286",
+    "extracted_at": "2026-06-12T09:51:22.337643",
     "file_path": "data/silver/language_analysis_2026-1-Mapa_L.I.L.A.S.json"
   }
 }

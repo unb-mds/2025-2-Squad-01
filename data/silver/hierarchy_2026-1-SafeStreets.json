@@ -2,11 +2,31 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-11T09:58:46.571443",
+  "extracted_at": "2026-06-12T09:48:18.863208",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
+      {
+        "name": ".claude",
+        "type": "directory",
+        "path": ".claude",
+        "children": []
+      },
+      {
+        "name": "commands",
+        "type": "directory",
+        "path": ".claude/commands",
+        "children": []
+      },
+      {
+        "name": "endpoint.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3657,
+        "extension": ".md",
+        "path": ".claude/commands/endpoint.md"
+      },
       {
         "name": ".github",
         "type": "directory",
@@ -178,6 +198,46 @@
         "children": []
       },
       {
+        "name": "ADR-001-Gemini-Fallback-Strategy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2999,
+        "extension": ".md",
+        "path": "docs/Arquitetura/ADR-001-Gemini-Fallback-Strategy.md"
+      },
+      {
+        "name": "ADRs-PENDENTES.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3640,
+        "extension": ".md",
+        "path": "docs/Arquitetura/ADRs-PENDENTES.md"
+      },
+      {
+        "name": "API-Contract.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7181,
+        "extension": ".md",
+        "path": "docs/Arquitetura/API-Contract.md"
+      },
+      {
+        "name": "CONTEXT.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 9446,
+        "extension": ".md",
+        "path": "docs/Arquitetura/CONTEXT.md"
+      },
+      {
+        "name": "RSS-Integration.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 11649,
+        "extension": ".md",
+        "path": "docs/Arquitetura/RSS-Integration.md"
+      },
+      {
         "name": "analise-compatibilidade.md",
         "type": "file",
         "language": "Markdown",
@@ -197,7 +257,7 @@
         "name": "definicoes-front-end.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1795,
+        "size": 4197,
         "extension": ".md",
         "path": "docs/Arquitetura/definicoes-front-end.md"
       },
@@ -213,7 +273,7 @@
         "name": "definir-fluxo-de-dados.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5387,
+        "size": 10022,
         "extension": ".md",
         "path": "docs/Arquitetura/definir-fluxo-de-dados.md"
       },
@@ -221,7 +281,7 @@
         "name": "definições-de-back.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2605,
+        "size": 5886,
         "extension": ".md",
         "path": "docs/Arquitetura/definições-de-back.md"
       },
@@ -438,6 +498,14 @@
         "path": "docs/Estudos/git-github.md"
       },
       {
+        "name": "spec-driven-development.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6831,
+        "extension": ".md",
+        "path": "docs/Estudos/spec-driven-development.md"
+      },
+      {
         "name": "web-scraping.md",
         "type": "file",
         "language": "Markdown",
@@ -538,6 +606,14 @@
         "children": []
       },
       {
+        "name": "IMPLEMENTATION-CHECKLIST.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10882,
+        "extension": ".md",
+        "path": "docs/Implementacao/IMPLEMENTATION-CHECKLIST.md"
+      },
+      {
         "name": "implementacao-banco.md",
         "type": "file",
         "language": "Markdown",
@@ -569,7 +645,7 @@
         "name": "requisitos.md",
         "type": "file",
         "language": "Markdown",
-        "size": 8316,
+        "size": 8250,
         "extension": ".md",
         "path": "docs/Requisitos/requisitos.md"
       },
@@ -713,7 +789,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 7608,
+        "size": 7865,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -835,7 +911,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 343,
+        "size": 362,
         "extension": ".gitignore",
         "path": "frontend/.gitignore"
       },
@@ -906,6 +982,20 @@
         "path": "frontend/Specs/Specs_pg_inicial/plan.md"
       },
       {
+        "name": "run-frontend-tests",
+        "type": "directory",
+        "path": "frontend/Specs/Specs_pg_inicial/run-frontend-tests",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5210,
+        "extension": ".md",
+        "path": "frontend/Specs/Specs_pg_inicial/run-frontend-tests/SKILL.md"
+      },
+      {
         "name": "spec.md",
         "type": "file",
         "language": "Markdown",
@@ -922,24 +1012,114 @@
         "path": "frontend/Specs/Specs_pg_inicial/tasks.md"
       },
       {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "frontend/__tests__",
+        "children": []
+      },
+      {
+        "name": "components",
+        "type": "directory",
+        "path": "frontend/__tests__/components",
+        "children": []
+      },
+      {
+        "name": "Chrome.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3283,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Chrome.test.tsx"
+      },
+      {
+        "name": "Drawer.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5114,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Drawer.test.tsx"
+      },
+      {
+        "name": "Footer.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1875,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Footer.test.tsx"
+      },
+      {
+        "name": "Header.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2186,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Header.test.tsx"
+      },
+      {
+        "name": "Hero.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1815,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Hero.test.tsx"
+      },
+      {
+        "name": "Logo.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1913,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/Logo.test.tsx"
+      },
+      {
+        "name": "NewsCard.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4031,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/NewsCard.test.tsx"
+      },
+      {
+        "name": "NewsFeed.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3049,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/NewsFeed.test.tsx"
+      },
+      {
+        "name": "icons.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2643,
+        "extension": ".tsx",
+        "path": "frontend/__tests__/components/icons.test.tsx"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "frontend/__tests__/utils",
+        "children": []
+      },
+      {
+        "name": "noticias.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2999,
+        "extension": ".ts",
+        "path": "frontend/__tests__/utils/noticias.test.ts"
+      },
+      {
         "name": "app",
         "type": "directory",
         "path": "frontend/app",
         "children": []
       },
       {
-        "name": "globals.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 1676,
-        "extension": ".css",
-        "path": "frontend/app/globals.css"
-      },
-      {
         "name": "layout.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1220,
+        "size": 1226,
         "extension": ".tsx",
         "path": "frontend/app/layout.tsx"
       },
@@ -950,34 +1130,18 @@
         "children": []
       },
       {
-        "name": "page.module.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 494,
-        "extension": ".css",
-        "path": "frontend/app/mapa/page.module.css"
-      },
-      {
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 382,
+        "size": 96,
         "extension": ".tsx",
         "path": "frontend/app/mapa/page.tsx"
       },
       {
-        "name": "page.module.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 68,
-        "extension": ".css",
-        "path": "frontend/app/page.module.css"
-      },
-      {
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 337,
+        "size": 96,
         "extension": ".tsx",
         "path": "frontend/app/page.tsx"
       },
@@ -986,14 +1150,6 @@
         "type": "directory",
         "path": "frontend/components",
         "children": []
-      },
-      {
-        "name": ".gitkeep",
-        "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/components/.gitkeep"
       },
       {
         "name": "Chrome",
@@ -1145,7 +1301,7 @@
         "name": "NewsCard.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1363,
+        "size": 1364,
         "extension": ".tsx",
         "path": "frontend/components/NewsCard/NewsCard.tsx"
       },
@@ -1167,7 +1323,7 @@
         "name": "NewsFeed.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 686,
+        "size": 687,
         "extension": ".tsx",
         "path": "frontend/components/NewsFeed/NewsFeed.tsx"
       },
@@ -1186,18 +1342,28 @@
         "path": "frontend/components/icons/index.tsx"
       },
       {
-        "name": "data",
-        "type": "directory",
-        "path": "frontend/data",
-        "children": []
-      },
-      {
-        "name": "noticias.ts",
+        "name": "custom.d.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2182,
+        "size": 24,
         "extension": ".ts",
-        "path": "frontend/data/noticias.ts"
+        "path": "frontend/custom.d.ts"
+      },
+      {
+        "name": "jest.config.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 384,
+        "extension": ".ts",
+        "path": "frontend/jest.config.ts"
+      },
+      {
+        "name": "jest.setup.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 36,
+        "extension": ".ts",
+        "path": "frontend/jest.setup.ts"
       },
       {
         "name": "next.config.ts",
@@ -1211,7 +1377,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 32712,
+        "size": 230366,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -1219,7 +1385,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 408,
+        "size": 726,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -1252,12 +1418,12 @@
         "children": []
       },
       {
-        "name": ".gitkeep",
+        "name": "globals.css",
         "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/style/.gitkeep"
+        "language": "CSS",
+        "size": 1676,
+        "extension": ".css",
+        "path": "frontend/style/globals.css"
       },
       {
         "name": "tsconfig.json",
@@ -1274,12 +1440,12 @@
         "children": []
       },
       {
-        "name": ".gitkeep",
+        "name": "noticias.ts",
         "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/utils/.gitkeep"
+        "language": "TypeScript",
+        "size": 2182,
+        "extension": ".ts",
+        "path": "frontend/utils/noticias.ts"
       },
       {
         "name": "view",
@@ -1288,12 +1454,48 @@
         "children": []
       },
       {
-        "name": ".gitkeep",
+        "name": "Home",
+        "type": "directory",
+        "path": "frontend/view/Home",
+        "children": []
+      },
+      {
+        "name": "Home.module.css",
         "type": "file",
-        "language": "Unknown",
-        "size": 0,
-        "extension": ".gitkeep",
-        "path": "frontend/view/.gitkeep"
+        "language": "CSS",
+        "size": 68,
+        "extension": ".css",
+        "path": "frontend/view/Home/Home.module.css"
+      },
+      {
+        "name": "Home.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 334,
+        "extension": ".tsx",
+        "path": "frontend/view/Home/Home.tsx"
+      },
+      {
+        "name": "Mapa",
+        "type": "directory",
+        "path": "frontend/view/Mapa",
+        "children": []
+      },
+      {
+        "name": "Mapa.module.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 494,
+        "extension": ".css",
+        "path": "frontend/view/Mapa/Mapa.module.css"
+      },
+      {
+        "name": "Mapa.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 378,
+        "extension": ".tsx",
+        "path": "frontend/view/Mapa/Mapa.tsx"
       },
       {
         "name": "mkdocs.yml",
@@ -1306,7 +1508,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-11T10:01:16.070217",
+    "extracted_at": "2026-06-12T09:51:21.913764",
     "file_path": "data/silver/hierarchy_2026-1-SafeStreets.json"
   }
 }
