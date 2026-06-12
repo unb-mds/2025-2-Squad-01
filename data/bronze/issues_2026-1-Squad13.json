@@ -1,10 +1,256 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-11T09:08:01.354550",
+      "extracted_at": "2026-06-12T08:53:57.661259",
       "file_path": "data/bronze/issues_2026-1-Squad13.json",
-      "record_count": 56
+      "record_count": 57
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/257",
+    "id": 4642957765,
+    "node_id": "I_kwDORypFlc8AAAABFL3pxQ",
+    "number": 257,
+    "title": "feat: arquitetura de worker e observabilidade para coleta de dados",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842369,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
+        "name": "prio:high",
+        "color": "d93f0b",
+        "default": false,
+        "description": "Fazer nesta sprint impreterivelmente"
+      },
+      {
+        "id": 10937590228,
+        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
+        "name": "type:feature",
+        "color": "a2eeef",
+        "default": false,
+        "description": "Nova funcionalidade"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      },
+      {
+        "id": 10946863600,
+        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
+        "name": "feat:f4",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F4"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-06-11T17:59:28Z",
+    "updated_at": "2026-06-11T17:59:28Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "**Descrição:**\nAnalisar, projetar e implementar um sistema de Worker para o LexTrack que seja inteligente, eficiente e dotado de observabilidade (logging e auditoria). O objetivo é transformar o processo de coleta e seed em uma operação de background robusta.\n\n**Racional Técnico:**\nAtualmente, a coleta de dados depende de execuções manuais ou scripts síncronos limitados. Para garantir que os dados estejam sempre atualizados sem comprometer a performance da API, precisamos de um sistema que suporte agendamento, retentativas inteligentes e logs estruturados que facilitem o diagnóstico de falhas em produção.\n\n**Critérios de Aceite:**\n- [ ] **Arquitetura de Worker:** Definição da tecnologia de background (ex: APScheduler, Celery ou integração com GitHub Actions).\n- [ ] **Logging Estruturado:** Migração de `print()` para `logging` estruturado (JSON/Contextual) em todos os processos de background.\n- [ ] **Tabela de Auditoria:** Criação de modelo no banco de dados para registrar histórico de execuções (`job_id`, `status`, `itens_processados`, `erros`).\n- [ ] **Mecanismo de Heartbeat:** Endpoint de saúde para verificar se a última coleta foi bem-sucedida.\n- [ ] **Tratamento de Erros:** Implementação de estratégias de backoff e alertas para falhas consecutivas.\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/257/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/256",
+    "id": 4642926658,
+    "node_id": "I_kwDORypFlc8AAAABFL1wQg",
+    "number": 256,
+    "title": "refactor: otimiza processo de seed e requisições às apis legislativas",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842681,
+        "node_id": "LA_kwDORypFlc8AAAACi-L5uQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:medium",
+        "name": "prio:medium",
+        "color": "fbca04",
+        "default": false,
+        "description": "Desejavel"
+      },
+      {
+        "id": 10937588884,
+        "node_id": "LA_kwDORypFlc8AAAACi-5clA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R1",
+        "name": "release:R1",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 1 - MVP"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946863600,
+        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
+        "name": "feat:f4",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F4"
+      },
+      {
+        "id": 11070513862,
+        "node_id": "LA_kwDORypFlc8AAAACk9qixg",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:refactor",
+        "name": "type:refactor",
+        "color": "ededed",
+        "default": false,
+        "description": "Melhorias de código sem mudança de comportamento"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-06-11T17:54:51Z",
+    "updated_at": "2026-06-11T17:54:51Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "**Descrição:**\nRealizar uma análise profunda e otimização do sistema de seed e da interação com as APIs da Câmara e do Senado para garantir máxima eficiência no carregamento de dados.\n\n**Racional Técnico:**\nO processo atual é sequencial e síncrono, o que limita a escalabilidade do LexTrack conforme o volume de dados cresce. A implementação de paginação real, concorrência (ThreadPool) e bulk inserts reduzirá drasticamente o tempo de inicialização do sistema e a carga sobre as APIs externas.\n\n**Critérios de Aceite:**\n- [ ] Implementação de suporte a paginação nos métodos de listagem dos Adapters.\n- [ ] Uso de `ThreadPoolExecutor` para paralelizar a busca de detalhes de proposições no `seed.py`.\n- [ ] Otimização das requisições internas nos adapters (paralelismo em detalhes/autores).\n- [ ] Implementação de lógica de \"Bulk Insert\" para persistência de dados no banco.\n- [ ] Deduplicação de IDs antes de realizar requisições externas.\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/256/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/253",
@@ -6826,129 +7072,6 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/162/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad13"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/156",
-    "id": 4480837875,
-    "node_id": "I_kwDORypFlc8AAAABCxQo8w",
-    "number": 156,
-    "title": "feat: integra modelo NLP leve para classificação semântica de eventos",
-    "user": {
-      "login": "caioflmjr",
-      "id": 67447767,
-      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/caioflmjr",
-      "html_url": "https://github.com/caioflmjr",
-      "followers_url": "https://api.github.com/users/caioflmjr/followers",
-      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
-      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
-      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
-      "repos_url": "https://api.github.com/users/caioflmjr/repos",
-      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10937590228,
-        "node_id": "LA_kwDORypFlc8AAAACi-5h1A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:feature",
-        "name": "type:feature",
-        "color": "a2eeef",
-        "default": false,
-        "description": "Nova funcionalidade"
-      },
-      {
-        "id": 10937715067,
-        "node_id": "LA_kwDORypFlc8AAAACi_BJew",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:low",
-        "name": "prio:low",
-        "color": "0e8a16",
-        "default": false,
-        "description": "Se sobrar tempo"
-      },
-      {
-        "id": 10946853737,
-        "node_id": "LA_kwDORypFlc8AAAACjHu7aQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:backlog",
-        "name": "status:backlog",
-        "color": "1d76db",
-        "default": false,
-        "description": "Na fila, nao planejado"
-      },
-      {
-        "id": 10946856200,
-        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
-        "name": "release:R2",
-        "color": "5319e7",
-        "default": false,
-        "description": "Release 2 - Produto Completo"
-      },
-      {
-        "id": 10946863600,
-        "node_id": "LA_kwDORypFlc8AAAACjHvh8A",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f4",
-        "name": "feat:f4",
-        "color": "bfd4f2",
-        "default": false,
-        "description": "Pertence a feature F4"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-19T20:34:04Z",
-    "updated_at": "2026-05-20T19:26:01Z",
-    "closed_at": null,
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## Descrição\nSubstituir as heurísticas estáticas (strings hardcoded e Regex) na função de classificação de `TipoEvento` por um modelo de Machine Learning/NLP leve especializado na semântica de textos do legislativo brasileiro.\n\n## Racional Técnico\nO processo legislativo brasileiro utiliza uma linguagem burocrática extensa e que frequentemente introduz variações na forma de descrever \"Despachos\", \"Votações\" e \"Arquivamentos\". As regras atuais (`domain.classificar_evento`) dependem de um dicionário estático rígido e estão sujeitas a classificar novos padrões como `NAO_CLASSIFICADO`. Isso empobrece as análises analíticas de relevância (que dependem de classificações precisas). Treinar um modelo de processamento de linguagem natural (NLP) simples (ex: fastText ou similar em tamanho reduzido) garantirá uma taxa de acerto mais resiliente ao tempo.\n\n## Critérios de Aceite\n- [ ] Definir um pipeline para extração e anotação manual de um dataset representativo de textos de movimentações (já extraídos da base do projeto).\n- [ ] Treinar o modelo e expor um micro-serviço (ou módulo integrável ao backend) de inferência.\n- [ ] Refatorar a pipeline de ingestão (`NormalizarTramitacaoService`) para enviar o texto original para inferência caso a heurística local (fallback) falhe, ou adotar a inferência como primária se o desempenho em ms permitir.\n- [ ] Monitorar a latência, dado que as inferências podem atrasar a carga da timeline caso feitas de modo síncrono.\n",
-    "closed_by": null,
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/156/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null,
     "pinned_comment": null,
     "repo_name": "2026-1-Squad13"
   }

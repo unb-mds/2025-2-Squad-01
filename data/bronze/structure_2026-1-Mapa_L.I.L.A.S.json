@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "branch": "main",
-  "sha": "de3c5810240ddca2e5d8323d22974651e48d7e54",
+  "sha": "985a4cf38a29e353db861b3672099cb778a3018a",
   "tree": [
     {
       "name": ".claude",
@@ -94,7 +94,7 @@
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "55ca0c5e1674c942855b452cd69b352a515781a2",
+      "sha": "7058307d62cb823cedca0fd09defda8ca83b4ad8",
       "mode": "040000",
       "children": []
     },
@@ -120,9 +120,19 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "2bfba72dce56809acb64bb1d1137a0d0b963e602",
+      "sha": "f7f053abc7ec7135bc015fd91588c81e659ba9ce",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "data-ingestion.yml",
+      "path": ".github/workflows/data-ingestion.yml",
+      "type": "file",
+      "sha": "e84579404a5d6521ad62580e80ffad423c2baf87",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1525,
+      "is_binary": false
     },
     {
       "name": "scrum metrics.yml",
@@ -138,20 +148,20 @@
       "name": "static.yml",
       "path": ".github/workflows/static.yml",
       "type": "file",
-      "sha": "11678973b7bf221e1fbca1028bdc68ed89f53a45",
+      "sha": "76266726b9676369d5e7880fefa25c9dbdb358c4",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1701,
+      "size": 1869,
       "is_binary": false
     },
     {
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
-      "sha": "2ab2b168fa4699960ad5d7e789c1ad12f9309339",
+      "sha": "888a46e09c3b3aa78df7c0cc78861fbc8e68159c",
       "mode": "100644",
       "extension": ".gitignore",
-      "size": 266,
+      "size": 272,
       "is_binary": false
     },
     {
@@ -178,7 +188,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "88fab23e8869cc61131a638860ab49689b2c8621",
+      "sha": "e62e5573e1d82f63953a1f6d91c516c3f07a3cd4",
       "mode": "040000",
       "children": []
     },
@@ -206,7 +216,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "c68ac4cb51d21ab11d0a7845104c67c6008c88b9",
+      "sha": "c67375015a2cd59a9a738cddcbd8c515c42023d3",
       "mode": "040000",
       "children": []
     },
@@ -374,7 +384,7 @@
       "name": "services",
       "path": "backend/app/services",
       "type": "directory",
-      "sha": "aa6cd297d94b449b29d15d64f0ca3044229a9264",
+      "sha": "a368f3279ba207c76be4bae188c3ad4b480c4295",
       "mode": "040000",
       "children": []
     },
@@ -382,20 +392,20 @@
       "name": "camara_client.py",
       "path": "backend/app/services/camara_client.py",
       "type": "file",
-      "sha": "46524ba0cc28e2a25ac88d2d01008a808bbfa588",
+      "sha": "bf09cc93b84a66de138d39e0679c601e167772cb",
       "mode": "100644",
       "extension": ".py",
-      "size": 2896,
+      "size": 3129,
       "is_binary": false
     },
     {
       "name": "collector.py",
       "path": "backend/app/services/collector.py",
       "type": "file",
-      "sha": "a75fa5007aebe177a0d76d7e4329e2140bfbcc3e",
+      "sha": "8ce4fb9c605cde7b1e658d85a9c6f7570f1e0000",
       "mode": "100644",
       "extension": ".py",
-      "size": 6011,
+      "size": 6178,
       "is_binary": false
     },
     {
@@ -432,10 +442,20 @@
       "name": "popular_banco.py",
       "path": "backend/popular_banco.py",
       "type": "file",
-      "sha": "3176ea4a72656a7f1e21aeb03fcc4b6309d0ed99",
+      "sha": "0433f15dfd63de7778fb6061a8e6ffdd5260b8ff",
       "mode": "100644",
       "extension": ".py",
-      "size": 939,
+      "size": 2545,
+      "is_binary": false
+    },
+    {
+      "name": "requirements-dev.txt",
+      "path": "backend/requirements-dev.txt",
+      "type": "file",
+      "sha": "121364943215803ea36b8aa45c1bfe6897b67f0f",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 19,
       "is_binary": false
     },
     {
@@ -446,6 +466,54 @@
       "mode": "100644",
       "extension": ".txt",
       "size": 83,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/tests",
+      "type": "directory",
+      "sha": "af77cd68ae73dd0e53464a58d9ea7bf98ec3a5a2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "test_dashboard.py",
+      "path": "backend/tests/test_dashboard.py",
+      "type": "file",
+      "sha": "5c45407b25726474ae60c8b8008eb57ae5e4915a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2172,
+      "is_binary": false
+    },
+    {
+      "name": "test_ingestion_cli.py",
+      "path": "backend/tests/test_ingestion_cli.py",
+      "type": "file",
+      "sha": "f4f53619168f8993841e5a85193b424a60085554",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 34,
+      "is_binary": false
+    },
+    {
+      "name": "test_merge_reports.py",
+      "path": "backend/tests/test_merge_reports.py",
+      "type": "file",
+      "sha": "822a562a0d00b8a8a140b67488c511bc75427247",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2100,
+      "is_binary": false
+    },
+    {
+      "name": "test_popular_banco.py",
+      "path": "backend/tests/test_popular_banco.py",
+      "type": "file",
+      "sha": "f271ca222b46926b1ff5e3023a6f13e6d6626579",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1387,
       "is_binary": false
     },
     {
@@ -462,7 +530,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "b70152fb0f5b989b786e9aa055c5779991ee71cb",
+      "sha": "896c6d846f1082a95c6cde815ff396875358619b",
       "mode": "040000",
       "children": []
     },
@@ -1427,6 +1495,34 @@
       "is_binary": false
     },
     {
+      "name": "ingestion",
+      "path": "docs/ingestion",
+      "type": "directory",
+      "sha": "6f77d7d80183495c06740d10f864174f66cd29c5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.html",
+      "path": "docs/ingestion/index.html",
+      "type": "file",
+      "sha": "fa643e1989873102f8d1aef89f8ccccefa043cdc",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 9201,
+      "is_binary": false
+    },
+    {
+      "name": "ingestion-history.json",
+      "path": "docs/ingestion/ingestion-history.json",
+      "type": "file",
+      "sha": "90c715c2cc489bbf0fe921a46d7ad8e1188ea106",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 632,
+      "is_binary": false
+    },
+    {
       "name": "issues_report.md",
       "path": "docs/issues_report.md",
       "type": "file",
@@ -2004,10 +2100,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "e572a4d619b1a0ea49d351ee29ec955aea26f4c7",
+      "sha": "b68953f1541be4c2e5b512062153df837a9d5ef0",
       "mode": "100644",
       "extension": ".yml",
-      "size": 3128,
+      "size": 3199,
       "is_binary": false
     },
     {
@@ -2026,6 +2122,34 @@
       "mode": "100644",
       "extension": ".html",
       "size": 47616,
+      "is_binary": false
+    },
+    {
+      "name": "scripts",
+      "path": "scripts",
+      "type": "directory",
+      "sha": "5e5c9edf3172480b2f1a26c59040c9ac13b38f5c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "carga_completa.py",
+      "path": "scripts/carga_completa.py",
+      "type": "file",
+      "sha": "04fcb264a7d065c2f7c8458fbaa60ff532016937",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 382,
+      "is_binary": false
+    },
+    {
+      "name": "merge_reports.py",
+      "path": "scripts/merge_reports.py",
+      "type": "file",
+      "sha": "3f51f6756e2f334ea254f688218f54b188e18fd0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1585,
       "is_binary": false
     },
     {
@@ -3202,19 +3326,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-11T09:58:47.143212",
+  "extracted_at": "2026-06-12T09:48:19.599721",
   "method": "rest",
-  "total_items": 336,
+  "total_items": 349,
   "repository_metadata": {
     "id": 1185580420,
     "full_name": "unb-mds/2026-1-Mapa_L.I.L.A.S",
     "description": null,
     "created_at": "2026-03-18T18:24:11Z",
-    "updated_at": "2026-06-07T06:59:11Z",
+    "updated_at": "2026-06-12T08:14:13Z",
     "language": "HTML",
-    "size": 10698,
+    "size": 10716,
     "stars": 4,
     "forks": 0,
-    "open_issues": 19
+    "open_issues": 13
   }
 }
