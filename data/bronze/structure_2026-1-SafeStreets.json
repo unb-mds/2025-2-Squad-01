@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "a797fb6225de8203ad3b1daafe470afc9fac8e76",
+  "sha": "5933155cb235ad2581c4efbab0f2b681bd5ed8eb",
   "tree": [
     {
       "name": ".claude",
       "path": ".claude",
       "type": "directory",
-      "sha": "eb06dac571d80d893450f10c1cf3c39a2e8d14fc",
+      "sha": "033194fd0b5bec6eabef184f3b66761dfcced6e8",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "commands",
       "path": ".claude/commands",
       "type": "directory",
-      "sha": "7195d32e82374b2d9476bddaa9f05ec1d674d000",
+      "sha": "d6ee8fbb4dfab314488aad1e272f201c50a5fe4b",
       "mode": "040000",
       "children": []
     },
@@ -24,10 +24,54 @@
       "name": "endpoint.md",
       "path": ".claude/commands/endpoint.md",
       "type": "file",
-      "sha": "096fe124235d545e487170f5d9d75d98cd564fc0",
+      "sha": "b59fb12fe46308cf8c2d809f05c01a56e6e5324f",
       "mode": "100644",
       "extension": ".md",
-      "size": 3657,
+      "size": 3668,
+      "is_binary": false
+    },
+    {
+      "name": "skills",
+      "path": ".claude/skills",
+      "type": "directory",
+      "sha": "7e4f650f9d8134af31e29e34818d28dbf97dd30b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "safestreets-implement-feature",
+      "path": ".claude/skills/safestreets-implement-feature",
+      "type": "directory",
+      "sha": "264d9eac63261ffeac180fb177c8a5e61e9a9560",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/safestreets-implement-feature/SKILL.md",
+      "type": "file",
+      "sha": "eaafbe021ae12d723ebb0fc3da6bc6bc5a8917ca",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3939,
+      "is_binary": false
+    },
+    {
+      "name": "safestreets-run-frontend-tests",
+      "path": ".claude/skills/safestreets-run-frontend-tests",
+      "type": "directory",
+      "sha": "b38514e7032cfabfda51ec723a999e7886e1f29a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/safestreets-run-frontend-tests/SKILL.md",
+      "type": "file",
+      "sha": "982ea2b9c6666909a6030260a09d45b7ac4d172e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5222,
       "is_binary": false
     },
     {
@@ -120,7 +164,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "99dd08d1ea218afc7e8e359e38c8c83c9e9854cf",
+      "sha": "8ee44b3ffa86ee0dd1d00dd82e45013f9f5d5819",
       "mode": "040000",
       "children": []
     },
@@ -138,13 +182,21 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "9c029a3b6f85aa6859dc7b201852f86b2a9dca61",
+      "sha": "91da9c724f926ed48cb7d1d84ae6a65acb57567b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "core",
+      "path": "backend/app/core",
+      "type": "directory",
+      "sha": "c2540adb865332887827d5d061d16ff9217cf07c",
       "mode": "040000",
       "children": []
     },
     {
       "name": "database.py",
-      "path": "backend/app/database.py",
+      "path": "backend/app/core/database.py",
       "type": "file",
       "sha": "d7632e3391b96dbfd23dd7d21f34238079d9b3b5",
       "mode": "100644",
@@ -153,28 +205,72 @@
       "is_binary": false
     },
     {
+      "name": "integrations",
+      "path": "backend/app/integrations",
+      "type": "directory",
+      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/app/integrations/.gitignore",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 0,
+      "is_binary": false
+    },
+    {
       "name": "main.py",
       "path": "backend/app/main.py",
       "type": "file",
-      "sha": "65f4043f689f1028d15189b46aa48e93c54833de",
+      "sha": "ddeeaf8ef0b52a9e0d08e923d8db2d8ca7fc1084",
       "mode": "100644",
       "extension": ".py",
-      "size": 311,
+      "size": 310,
       "is_binary": false
     },
     {
-      "name": "models.py",
-      "path": "backend/app/models.py",
+      "name": "models",
+      "path": "backend/app/models",
+      "type": "directory",
+      "sha": "e4240e18034419c58aaacc6362a047c79988af43",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ocorrencia.py",
+      "path": "backend/app/models/ocorrencia.py",
       "type": "file",
-      "sha": "cc300056d32b408035921f89d36f6dcc4f0284cc",
+      "sha": "340bc93225e2804227b059bb93c16c59007b889d",
       "mode": "100644",
       "extension": ".py",
-      "size": 374,
+      "size": 379,
       "is_binary": false
     },
     {
-      "name": "routers",
-      "path": "backend/app/routers",
+      "name": "repositories",
+      "path": "backend/app/repositories",
+      "type": "directory",
+      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/app/repositories/.gitignore",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "routes",
+      "path": "backend/app/routes",
       "type": "directory",
       "sha": "99a386443c174eac8120bae8a6cc418911a1ea65",
       "mode": "040000",
@@ -182,7 +278,7 @@
     },
     {
       "name": "health.py",
-      "path": "backend/app/routers/health.py",
+      "path": "backend/app/routes/health.py",
       "type": "file",
       "sha": "cee2957c304bf3cebc79dbdcc87ec79e52670256",
       "mode": "100644",
@@ -191,13 +287,39 @@
       "is_binary": false
     },
     {
-      "name": "test_main.py",
-      "path": "backend/app/test_main.py",
+      "name": "schemas",
+      "path": "backend/app/schemas",
+      "type": "directory",
+      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/app/schemas/.gitignore",
       "type": "file",
-      "sha": "5b246f85a8f51c2a66b075fc1baa3e2471644d75",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
       "mode": "100644",
-      "extension": ".py",
-      "size": 279,
+      "extension": ".gitignore",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "backend/app/services",
+      "type": "directory",
+      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "backend/app/services/.gitignore",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 0,
       "is_binary": false
     },
     {
@@ -224,17 +346,35 @@
       "name": "teste.py",
       "path": "backend/teste.py",
       "type": "file",
-      "sha": "b006c7478aab6a69e79c8f4d7e42073e0341aa0a",
+      "sha": "22339115f4b9aa7e9bc0488d57b5159872d75a68",
       "mode": "100644",
       "extension": ".py",
-      "size": 722,
+      "size": 727,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/tests",
+      "type": "directory",
+      "sha": "3bf3cace3399ec9aacd3055f23afb8fbb923a511",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "test_main.py",
+      "path": "backend/tests/test_main.py",
+      "type": "file",
+      "sha": "5b246f85a8f51c2a66b075fc1baa3e2471644d75",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 279,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "53785162fa2e72178f771e7bc9385b493d8f7b95",
+      "sha": "dfcb92579e6d6d531b0892552534e6eaca8a4aa0",
       "mode": "040000",
       "children": []
     },
@@ -242,7 +382,7 @@
       "name": "Arquitetura",
       "path": "docs/Arquitetura",
       "type": "directory",
-      "sha": "f9c880231cc93c680857f2d31497b5333b2094eb",
+      "sha": "044ebc62121d1d3b0e939141ff39de1eaa138b1c",
       "mode": "040000",
       "children": []
     },
@@ -280,10 +420,10 @@
       "name": "CONTEXT.md",
       "path": "docs/Arquitetura/CONTEXT.md",
       "type": "file",
-      "sha": "854f28be38366cc92a167e6eeef08d069c262a4d",
+      "sha": "fbb08566a53668e6a78d749a96c56dbb9d45b70b",
       "mode": "100644",
       "extension": ".md",
-      "size": 9446,
+      "size": 9590,
       "is_binary": false
     },
     {
@@ -800,7 +940,7 @@
       "name": "Requisitos",
       "path": "docs/Requisitos",
       "type": "directory",
-      "sha": "31f5e39d84619625bd634082a6d90f1fc6e28039",
+      "sha": "64bbf546e87a0eb0169157c862cb79fbcb194a0a",
       "mode": "040000",
       "children": []
     },
@@ -808,10 +948,10 @@
       "name": "requisitos.md",
       "path": "docs/Requisitos/requisitos.md",
       "type": "file",
-      "sha": "f483c289a6ebbcbcd1b014dbf770a1752d8324c5",
+      "sha": "fdbfef201a49f25dc661276e2ac480fb914e23df",
       "mode": "100644",
       "extension": ".md",
-      "size": 8250,
+      "size": 15837,
       "is_binary": false
     },
     {
@@ -962,7 +1102,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "f43429d7c5cb2cf0422dadad72c92c4b2608d198",
+      "sha": "3abbd569a0920ab9e9b67e518ec76d65793756b9",
       "mode": "040000",
       "children": []
     },
@@ -990,10 +1130,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "e9ada6c33669ec6900d99188cebbb4c2011cd2db",
+      "sha": "3b59a9fc66492937b9df4ec8c7e260ef6ce1f67d",
       "mode": "100644",
       "extension": ".json",
-      "size": 7866,
+      "size": 7999,
       "is_binary": false
     },
     {
@@ -1136,7 +1276,7 @@
       "name": "frontend",
       "path": "frontend",
       "type": "directory",
-      "sha": "8c81a5ae804cf26d819d7ce37ceaae813c8c1992",
+      "sha": "451f47b84e27f33c63305df9d085b61e88c0c84d",
       "mode": "040000",
       "children": []
     },
@@ -1154,15 +1294,53 @@
       "name": "Specs",
       "path": "frontend/Specs",
       "type": "directory",
-      "sha": "eb60e31cd1001645a2b5d8e7d56aaccf2d292803",
+      "sha": "d1b95e2663f30004d2e484a972380fcb829daf3a",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "Specs_mapa_interativo",
+      "path": "frontend/Specs/Specs_mapa_interativo",
+      "type": "directory",
+      "sha": "530265ecd77e3644f67cfd13b359ae16e3141bb6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "plan.md",
+      "path": "frontend/Specs/Specs_mapa_interativo/plan.md",
+      "type": "file",
+      "sha": "a323a2ddb70d028231320076a3421b2731587115",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4180,
+      "is_binary": false
+    },
+    {
+      "name": "spec.md",
+      "path": "frontend/Specs/Specs_mapa_interativo/spec.md",
+      "type": "file",
+      "sha": "5e3328c744942d8c57853a490b5ca57e3e38105e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3343,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "frontend/Specs/Specs_mapa_interativo/tasks.md",
+      "type": "file",
+      "sha": "e53d4c3790839338c0d8731673a466f6e0fe4312",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2429,
+      "is_binary": false
     },
     {
       "name": "Specs_pg_inicial",
       "path": "frontend/Specs/Specs_pg_inicial",
       "type": "directory",
-      "sha": "9637908a467d0c5c57ad24e39fb7b5d80216a80f",
+      "sha": "cfdbec2ff8c31ae7e5d8c558203a8e851f5e2493",
       "mode": "040000",
       "children": []
     },
@@ -1235,24 +1413,6 @@
       "is_binary": false
     },
     {
-      "name": "run-frontend-tests",
-      "path": "frontend/Specs/Specs_pg_inicial/run-frontend-tests",
-      "type": "directory",
-      "sha": "146b1840d0b175b5c109be0035e5ab562f880793",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "SKILL.md",
-      "path": "frontend/Specs/Specs_pg_inicial/run-frontend-tests/SKILL.md",
-      "type": "file",
-      "sha": "f060fc4c60c00b1afbd405e776d51d1e6747216b",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 5210,
-      "is_binary": false
-    },
-    {
       "name": "spec.md",
       "path": "frontend/Specs/Specs_pg_inicial/spec.md",
       "type": "file",
@@ -1276,7 +1436,7 @@
       "name": "__tests__",
       "path": "frontend/__tests__",
       "type": "directory",
-      "sha": "4e3d2b03d6eccb36c9db42d2997e1e0473d8188a",
+      "sha": "71817cb461d83edaf21c7da5261b8d093a2c5768",
       "mode": "040000",
       "children": []
     },
@@ -1284,7 +1444,7 @@
       "name": "components",
       "path": "frontend/__tests__/components",
       "type": "directory",
-      "sha": "f6f882452da09b0ec8e343f5e70e8f407ba544c2",
+      "sha": "0c49b1d2ea1369dd99755c7a88a3ac2bd70c7fa0",
       "mode": "040000",
       "children": []
     },
@@ -1292,10 +1452,10 @@
       "name": "Chrome.test.tsx",
       "path": "frontend/__tests__/components/Chrome.test.tsx",
       "type": "file",
-      "sha": "1c89dfa87813e874552277098a298826da04f4e5",
+      "sha": "f6109330d4f277b697e2cdf07f21a6af0af045bb",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 3283,
+      "size": 4197,
       "is_binary": false
     },
     {
@@ -1322,10 +1482,10 @@
       "name": "Header.test.tsx",
       "path": "frontend/__tests__/components/Header.test.tsx",
       "type": "file",
-      "sha": "ef60215cb85091d835198eb1d5a57ca4a60b9a50",
+      "sha": "9c46d969ecf96bfe3f25cfb4d8698740843049d5",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 2186,
+      "size": 2737,
       "is_binary": false
     },
     {
@@ -1346,6 +1506,16 @@
       "mode": "100644",
       "extension": ".tsx",
       "size": 1913,
+      "is_binary": false
+    },
+    {
+      "name": "MapaInterativo.test.tsx",
+      "path": "frontend/__tests__/components/MapaInterativo.test.tsx",
+      "type": "file",
+      "sha": "874a7554d6c66cc32762430c1a2ef6c25457d9a3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2077,
       "is_binary": false
     },
     {
@@ -1446,7 +1616,7 @@
       "name": "components",
       "path": "frontend/components",
       "type": "directory",
-      "sha": "eee6c1324c0f6b0c4a28aa16abe81cb9e5470792",
+      "sha": "259be28d9a4fd98800a0b0ed018b888f6f911ee5",
       "mode": "040000",
       "children": []
     },
@@ -1454,7 +1624,7 @@
       "name": "Chrome",
       "path": "frontend/components/Chrome",
       "type": "directory",
-      "sha": "25075add57c26bd2b552b03346fddae33343dec3",
+      "sha": "dffad8810f245566b9240780abb1e8d914d08ba7",
       "mode": "040000",
       "children": []
     },
@@ -1462,20 +1632,20 @@
       "name": "Chrome.module.css",
       "path": "frontend/components/Chrome/Chrome.module.css",
       "type": "file",
-      "sha": "cbf01be351a8fd7c75ec9e311236f4734d9732aa",
+      "sha": "f72ab16a7aa9b490d5f6ed81dbbff43b67651a37",
       "mode": "100644",
       "extension": ".css",
-      "size": 44,
+      "size": 129,
       "is_binary": false
     },
     {
       "name": "Chrome.tsx",
       "path": "frontend/components/Chrome/Chrome.tsx",
       "type": "file",
-      "sha": "475d10b474f1ae224d9b389cd3b03d8dc189447d",
+      "sha": "87df1d6a27424044cd654e3b9cb123db027a3dd6",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 644,
+      "size": 859,
       "is_binary": false
     },
     {
@@ -1538,7 +1708,7 @@
       "name": "Header",
       "path": "frontend/components/Header",
       "type": "directory",
-      "sha": "e708c633687a1223bac3ff9890a3c13dc8b5b30b",
+      "sha": "42eea543995c4015fa0f42852314aa93ec341275",
       "mode": "040000",
       "children": []
     },
@@ -1546,20 +1716,20 @@
       "name": "Header.module.css",
       "path": "frontend/components/Header/Header.module.css",
       "type": "file",
-      "sha": "9d9b3dd0dfb90cdb53690795fefac2d6d5226819",
+      "sha": "deb77483bf77d1a94469c5d343632bc86ace4d1f",
       "mode": "100644",
       "extension": ".css",
-      "size": 1089,
+      "size": 1199,
       "is_binary": false
     },
     {
       "name": "Header.tsx",
       "path": "frontend/components/Header/Header.tsx",
       "type": "file",
-      "sha": "bd92f41f69644e6f1264b02f60d734a480bb55ff",
+      "sha": "952cff504cb08513897d38319a437c0f3f6ddd30",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 1020,
+      "size": 1166,
       "is_binary": false
     },
     {
@@ -1616,6 +1786,44 @@
       "mode": "100644",
       "extension": ".tsx",
       "size": 539,
+      "is_binary": false
+    },
+    {
+      "name": "MapaInterativo",
+      "path": "frontend/components/MapaInterativo",
+      "type": "directory",
+      "sha": "77e97c09e4bb9af2e2ec2393dad59b7cbe0a45bc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "MapView.tsx",
+      "path": "frontend/components/MapaInterativo/MapView.tsx",
+      "type": "file",
+      "sha": "f64c4cc51f4cbb123fcfdd4d146a74ce972e8a16",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 715,
+      "is_binary": false
+    },
+    {
+      "name": "MapaInterativo.module.css",
+      "path": "frontend/components/MapaInterativo/MapaInterativo.module.css",
+      "type": "file",
+      "sha": "cbe226cbcd53321c2ed52113f34bfd5680e84909",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 46,
+      "is_binary": false
+    },
+    {
+      "name": "MapaInterativo.tsx",
+      "path": "frontend/components/MapaInterativo/MapaInterativo.tsx",
+      "type": "file",
+      "sha": "47410759c0d0be68524edd8f9bba090ff86f7b12",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 303,
       "is_binary": false
     },
     {
@@ -1736,20 +1944,20 @@
       "name": "package-lock.json",
       "path": "frontend/package-lock.json",
       "type": "file",
-      "sha": "396895653b27fa88c51c220e553a2caa660a22be",
+      "sha": "ef5a7e34c29cf652776fd1bbaf1802e56db8e74f",
       "mode": "100644",
       "extension": ".json",
-      "size": 230366,
+      "size": 232401,
       "is_binary": false
     },
     {
       "name": "package.json",
       "path": "frontend/package.json",
       "type": "file",
-      "sha": "49d8ee7b503fe4cc53910cb2d293e4b89521331c",
+      "sha": "20276e70acf3eaaede316a4d4e013cf2106b5bbd",
       "mode": "100644",
       "extension": ".json",
-      "size": 726,
+      "size": 815,
       "is_binary": false
     },
     {
@@ -1830,7 +2038,7 @@
       "name": "view",
       "path": "frontend/view",
       "type": "directory",
-      "sha": "9fad5e94b8aba61147e39bc32bce002fa41e0161",
+      "sha": "1b3ba34dd075954d19788ff476b048a2242de9dc",
       "mode": "040000",
       "children": []
     },
@@ -1866,7 +2074,7 @@
       "name": "Mapa",
       "path": "frontend/view/Mapa",
       "type": "directory",
-      "sha": "29e6f67de02c38cde4651ca52ee73fc5217d6748",
+      "sha": "283a80d30a9ecd02bb03b0cb5d180bc357e5665f",
       "mode": "040000",
       "children": []
     },
@@ -1874,20 +2082,20 @@
       "name": "Mapa.module.css",
       "path": "frontend/view/Mapa/Mapa.module.css",
       "type": "file",
-      "sha": "be129fd2c50994c436cdd203f2ba32de408d8c43",
+      "sha": "2384501f88121c9b4db00afa684bed7d5fa9e1cd",
       "mode": "100644",
       "extension": ".css",
-      "size": 494,
+      "size": 41,
       "is_binary": false
     },
     {
       "name": "Mapa.tsx",
       "path": "frontend/view/Mapa/Mapa.tsx",
       "type": "file",
-      "sha": "ec121b0fafd010a10a51f933421d21df845ef062",
+      "sha": "a92cbb5a8aaf6871bb4a158c94ecf6d4d7504833",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 378,
+      "size": 235,
       "is_binary": false
     },
     {
@@ -1902,17 +2110,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-13T09:02:22.265876",
+  "extracted_at": "2026-06-14T09:25:04.698997",
   "method": "rest",
-  "total_items": 199,
+  "total_items": 222,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-13T04:38:23Z",
+    "updated_at": "2026-06-14T04:56:35Z",
     "language": "TypeScript",
-    "size": 2517,
+    "size": 2579,
     "stars": 4,
     "forks": 0,
     "open_issues": 15
