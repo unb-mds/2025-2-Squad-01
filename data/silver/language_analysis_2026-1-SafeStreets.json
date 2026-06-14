@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-13T09:02:22.265876",
+  "analyzed_at": "2026-06-14T09:25:04.698997",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 152,
-  "total_bytes": 3224401,
+  "total_files": 164,
+  "total_bytes": 3252878,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 8,
       "total_bytes": 1556150,
-      "percentage": 48.26,
+      "percentage": 47.84,
       "files": [
         {
           "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
@@ -70,7 +70,7 @@
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 31.14,
+      "percentage": 30.86,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -112,14 +112,20 @@
     },
     {
       "language": "Markdown",
-      "file_count": 76,
-      "total_bytes": 337661,
-      "percentage": 10.47,
+      "file_count": 80,
+      "total_bytes": 359306,
+      "percentage": 11.05,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
           "name": "analise-de-linguagens.md",
           "size": 28408,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/Requisitos/requisitos.md",
+          "name": "requisitos.md",
+          "size": 15837,
           "extension": ".md"
         },
         {
@@ -153,15 +159,15 @@
           "extension": ".md"
         },
         {
-          "path": "docs/Arquitetura/arquitetura-interna.md",
-          "name": "arquitetura-interna.md",
-          "size": 9531,
+          "path": "docs/Arquitetura/CONTEXT.md",
+          "name": "CONTEXT.md",
+          "size": 9590,
           "extension": ".md"
         },
         {
-          "path": "docs/Arquitetura/CONTEXT.md",
-          "name": "CONTEXT.md",
-          "size": 9446,
+          "path": "docs/Arquitetura/arquitetura-interna.md",
+          "name": "arquitetura-interna.md",
+          "size": 9531,
           "extension": ".md"
         },
         {
@@ -169,37 +175,31 @@
           "name": "tecnologias_projeto.md",
           "size": 9138,
           "extension": ".md"
-        },
-        {
-          "path": "docs/Requisitos/requisitos.md",
-          "name": "requisitos.md",
-          "size": 8250,
-          "extension": ".md"
         }
       ]
     },
     {
       "language": "JSON",
       "file_count": 4,
-      "total_bytes": 239624,
-      "percentage": 7.43,
+      "total_bytes": 241881,
+      "percentage": 7.44,
       "files": [
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 230366,
+          "size": 232401,
           "extension": ".json"
         },
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 7866,
+          "size": 7999,
           "extension": ".json"
         },
         {
           "path": "frontend/package.json",
           "name": "package.json",
-          "size": 726,
+          "size": 815,
           "extension": ".json"
         },
         {
@@ -212,9 +212,9 @@
     },
     {
       "language": "TypeScript",
-      "file_count": 29,
-      "total_bytes": 45282,
-      "percentage": 1.4,
+      "file_count": 32,
+      "total_bytes": 50060,
+      "percentage": 1.54,
       "files": [
         {
           "path": "frontend/__tests__/components/Drawer.test.tsx",
@@ -223,15 +223,15 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/__tests__/components/NewsCard.test.tsx",
-          "name": "NewsCard.test.tsx",
-          "size": 4031,
+          "path": "frontend/__tests__/components/Chrome.test.tsx",
+          "name": "Chrome.test.tsx",
+          "size": 4197,
           "extension": ".tsx"
         },
         {
-          "path": "frontend/__tests__/components/Chrome.test.tsx",
-          "name": "Chrome.test.tsx",
-          "size": 3283,
+          "path": "frontend/__tests__/components/NewsCard.test.tsx",
+          "name": "NewsCard.test.tsx",
+          "size": 4031,
           "extension": ".tsx"
         },
         {
@@ -259,15 +259,15 @@
           "extension": ".ts"
         },
         {
-          "path": "frontend/__tests__/components/icons.test.tsx",
-          "name": "icons.test.tsx",
-          "size": 2643,
+          "path": "frontend/__tests__/components/Header.test.tsx",
+          "name": "Header.test.tsx",
+          "size": 2737,
           "extension": ".tsx"
         },
         {
-          "path": "frontend/__tests__/components/Header.test.tsx",
-          "name": "Header.test.tsx",
-          "size": 2186,
+          "path": "frontend/__tests__/components/icons.test.tsx",
+          "name": "icons.test.tsx",
+          "size": 2643,
           "extension": ".tsx"
         },
         {
@@ -294,9 +294,9 @@
     },
     {
       "language": "CSS",
-      "file_count": 11,
-      "total_bytes": 9535,
-      "percentage": 0.3,
+      "file_count": 12,
+      "total_bytes": 9323,
+      "percentage": 0.29,
       "files": [
         {
           "path": "frontend/components/NewsCard/NewsCard.module.css",
@@ -319,7 +319,7 @@
         {
           "path": "frontend/components/Header/Header.module.css",
           "name": "Header.module.css",
-          "size": 1089,
+          "size": 1199,
           "extension": ".css"
         },
         {
@@ -335,12 +335,6 @@
           "extension": ".css"
         },
         {
-          "path": "frontend/view/Mapa/Mapa.module.css",
-          "name": "Mapa.module.css",
-          "size": 494,
-          "extension": ".css"
-        },
-        {
           "path": "frontend/components/Logo/Logo.module.css",
           "name": "Logo.module.css",
           "size": 310,
@@ -350,6 +344,12 @@
           "path": "frontend/components/Footer/Footer.module.css",
           "name": "Footer.module.css",
           "size": 186,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/Chrome/Chrome.module.css",
+          "name": "Chrome.module.css",
+          "size": 129,
           "extension": ".css"
         },
         {
@@ -363,7 +363,7 @@
     {
       "language": "Python",
       "file_count": 7,
-      "total_bytes": 7149,
+      "total_bytes": 7158,
       "percentage": 0.22,
       "files": [
         {
@@ -375,35 +375,35 @@
         {
           "path": "backend/teste.py",
           "name": "teste.py",
-          "size": 722,
+          "size": 727,
           "extension": ".py"
         },
         {
-          "path": "backend/app/database.py",
+          "path": "backend/app/core/database.py",
           "name": "database.py",
           "size": 518,
           "extension": ".py"
         },
         {
-          "path": "backend/app/models.py",
-          "name": "models.py",
-          "size": 374,
+          "path": "backend/app/models/ocorrencia.py",
+          "name": "ocorrencia.py",
+          "size": 379,
           "extension": ".py"
         },
         {
           "path": "backend/app/main.py",
           "name": "main.py",
-          "size": 311,
+          "size": 310,
           "extension": ".py"
         },
         {
-          "path": "backend/app/test_main.py",
+          "path": "backend/tests/test_main.py",
           "name": "test_main.py",
           "size": 279,
           "extension": ".py"
         },
         {
-          "path": "backend/app/routers/health.py",
+          "path": "backend/app/routes/health.py",
           "name": "health.py",
           "size": 156,
           "extension": ".py"
@@ -464,7 +464,7 @@
     },
     {
       "language": "Git Ignore",
-      "file_count": 2,
+      "file_count": 6,
       "total_bytes": 385,
       "percentage": 0.01,
       "files": [
@@ -478,6 +478,30 @@
           "path": "backend/.gitignore",
           "name": ".gitignore",
           "size": 23,
+          "extension": ".gitignore"
+        },
+        {
+          "path": "backend/app/integrations/.gitignore",
+          "name": ".gitignore",
+          "size": 0,
+          "extension": ".gitignore"
+        },
+        {
+          "path": "backend/app/repositories/.gitignore",
+          "name": ".gitignore",
+          "size": 0,
+          "extension": ".gitignore"
+        },
+        {
+          "path": "backend/app/schemas/.gitignore",
+          "name": ".gitignore",
+          "size": 0,
+          "extension": ".gitignore"
+        },
+        {
+          "path": "backend/app/services/.gitignore",
+          "name": ".gitignore",
+          "size": 0,
           "extension": ".gitignore"
         }
       ]
@@ -512,7 +536,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-13T09:05:18.424275",
+    "extracted_at": "2026-06-14T09:28:06.902947",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }
