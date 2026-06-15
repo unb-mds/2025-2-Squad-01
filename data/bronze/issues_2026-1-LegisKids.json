@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-14T08:37:01.895121",
+      "extracted_at": "2026-06-15T10:49:55.018513",
       "file_path": "data/bronze/issues_2026-1-LegisKids.json",
       "record_count": 61
     }
@@ -105,10 +105,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -308,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -513,11 +513,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -698,11 +698,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -903,11 +903,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1088,11 +1088,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1273,11 +1273,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1403,7 +1403,7 @@
         "description": "Esforço de 4 a 8 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1458,18 +1458,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 3,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-09T23:30:40Z",
+      "updated_at": "2026-06-14T22:03:26Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T17:08:18Z",
-    "updated_at": "2026-06-09T23:30:39Z",
-    "closed_at": null,
+    "updated_at": "2026-06-14T22:03:50Z",
+    "closed_at": "2026-06-14T22:03:26Z",
     "assignee": {
       "login": "CaioMota16",
       "id": 160689206,
@@ -1516,8 +1516,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descrição\n\nCriar as classes Python que representam as tabelas do banco, \ncom relacionamentos, validações e métodos auxiliares.\n\n## Tarefas\n\n- [ ] Criar arquivo `backend/src/models/` com um arquivo por model:\n  - `proposicao.py`\n  - `autor.py`\n  - `categoria.py`\n  - `usuario.py`\n  - `favorito.py`\n- [ ] Definir relacionamentos com `db.relationship()` e `back_populates`\n- [ ] Implementar método `to_dict()` em cada model para serialização JSON\n- [ ] Adicionar `__repr__` para facilitar debug\n- [ ] Garantir que os models são importados no `app.py`\n\n## Exemplo de estrutura esperada\n\n```python\nclass Proposicao(db.Model):\n    __tablename__ = 'proposicoes'\n    id = db.Column(db.Integer, primary_key=True)\n    titulo = db.Column(db.String(500), nullable=False)\n    ementa = db.Column(db.Text)\n    tipo = db.Column(db.String(50))\n    status = db.Column(db.String(100))\n    data_apresentacao = db.Column(db.Date)\n    url_api = db.Column(db.String(300), unique=True)\n    autor_id = db.Column(db.Integer, db.ForeignKey('autores.id'))\n    autor = db.relationship('Autor', back_populates='proposicoes')\n```\n\n## Critérios de Aceitação\n\n- [ ] Todos os models criados e importados\n- [ ] Relacionamentos funcionando (testados no shell do Flask)\n- [ ] `to_dict()` retorna JSON válido para todas as entidades",
-    "closed_by": null,
+    "body": "## Descrição\n\nCriar as classes Python que representam as tabelas do banco, \ncom relacionamentos, validações e métodos auxiliares.\n\n## Tarefas\n\n- [x] Criar arquivo `backend/src/models/` com um arquivo por model:\n  - `proposicao.py`\n  - `autor.py`\n  - `categoria.py`\n  - `usuario.py`\n  - `favorito.py`\n- [x] Definir relacionamentos com `db.relationship()` e `back_populates`\n- [x] Implementar método `to_dict()` em cada model para serialização JSON\n- [ ] Adicionar `__repr__` para facilitar debug\n- [x] Garantir que os models são importados no `app.py`\n\n## Exemplo de estrutura esperada\n\n```python\nclass Proposicao(db.Model):\n    __tablename__ = 'proposicoes'\n    id = db.Column(db.Integer, primary_key=True)\n    titulo = db.Column(db.String(500), nullable=False)\n    ementa = db.Column(db.Text)\n    tipo = db.Column(db.String(50))\n    status = db.Column(db.String(100))\n    data_apresentacao = db.Column(db.Date)\n    url_api = db.Column(db.String(300), unique=True)\n    autor_id = db.Column(db.Integer, db.ForeignKey('autores.id'))\n    autor = db.relationship('Autor', back_populates='proposicoes')\n```\n\n## Critérios de Aceitação\n\n- [x] Todos os models criados e importados\n- [x] Relacionamentos funcionando (testados no shell do Flask)\n- [x] `to_dict()` retorna JSON válido para todas as entidades",
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/174/reactions",
       "total_count": 0,
@@ -1532,7 +1552,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/174/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -1644,10 +1664,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -1849,10 +1869,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2054,10 +2074,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2250,10 +2270,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2454,10 +2474,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2667,10 +2687,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
@@ -2851,10 +2871,10 @@
         "site_admin": false
       },
       "open_issues": 2,
-      "closed_issues": 7,
+      "closed_issues": 8,
       "state": "open",
       "created_at": "2026-06-01T16:31:57Z",
-      "updated_at": "2026-06-10T01:05:13Z",
+      "updated_at": "2026-06-14T22:02:05Z",
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
