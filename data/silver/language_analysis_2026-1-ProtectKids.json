@@ -2,19 +2,19 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-15T11:43:57.579922",
+  "analyzed_at": "2026-06-16T10:52:29.251028",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 60,
-  "total_bytes": 488393,
+  "total_files": 61,
+  "total_bytes": 508847,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 2,
       "total_bytes": 203018,
-      "percentage": 41.57,
+      "percentage": 39.9,
       "files": [
         {
           "path": "docs/assets/images/c4_container.png",
@@ -34,7 +34,7 @@
       "language": "JSON",
       "file_count": 3,
       "total_bytes": 122816,
-      "percentage": 25.15,
+      "percentage": 24.14,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -59,9 +59,15 @@
     {
       "language": "Markdown",
       "file_count": 16,
-      "total_bytes": 57537,
-      "percentage": 11.78,
+      "total_bytes": 71454,
+      "percentage": 14.04,
       "files": [
+        {
+          "path": "docs/requisitos.md",
+          "name": "requisitos.md",
+          "size": 19877,
+          "extension": ".md"
+        },
         {
           "path": "estudos_iniciais/estudos/requisitos/requisitos.md",
           "name": "requisitos.md",
@@ -72,12 +78,6 @@
           "path": "scripts/claude.md",
           "name": "claude.md",
           "size": 9971,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/requisitos.md",
-          "name": "requisitos.md",
-          "size": 5960,
           "extension": ".md"
         },
         {
@@ -125,10 +125,66 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 8,
+      "total_bytes": 41007,
+      "percentage": 8.06,
+      "files": [
+        {
+          "path": "backend/crawler/camara_api.py",
+          "name": "camara_api.py",
+          "size": 17970,
+          "extension": ".py"
+        },
+        {
+          "path": "scripts/coletor_metricas.py",
+          "name": "coletor_metricas.py",
+          "size": 7793,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/crawler/senado_api.py",
+          "name": "senado_api.py",
+          "size": 7603,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/main.py",
+          "name": "main.py",
+          "size": 4858,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/models.py",
+          "name": "models.py",
+          "size": 1630,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_main.py",
+          "name": "test_main.py",
+          "size": 609,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/database.py",
+          "name": "database.py",
+          "size": 544,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "JavaScript",
       "file_count": 14,
       "total_bytes": 39047,
-      "percentage": 7.99,
+      "percentage": 7.67,
       "files": [
         {
           "path": "frontend/src/pages/Inicio.jsx",
@@ -193,66 +249,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 8,
-      "total_bytes": 34798,
-      "percentage": 7.12,
-      "files": [
-        {
-          "path": "backend/crawler/camara_api.py",
-          "name": "camara_api.py",
-          "size": 13751,
-          "extension": ".py"
-        },
-        {
-          "path": "scripts/coletor_metricas.py",
-          "name": "coletor_metricas.py",
-          "size": 7793,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/crawler/senado_api.py",
-          "name": "senado_api.py",
-          "size": 5613,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/main.py",
-          "name": "main.py",
-          "size": 4858,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/models.py",
-          "name": "models.py",
-          "size": 1630,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_main.py",
-          "name": "test_main.py",
-          "size": 609,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/database.py",
-          "name": "database.py",
-          "size": 544,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 14553,
-      "percentage": 2.98,
+      "percentage": 2.86,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -272,7 +272,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 9355,
-      "percentage": 1.92,
+      "percentage": 1.84,
       "files": [
         {
           "path": "docs/dashboard/index.html",
@@ -291,7 +291,7 @@
     {
       "language": "YAML",
       "file_count": 5,
-      "total_bytes": 4034,
+      "total_bytes": 4225,
       "percentage": 0.83,
       "files": [
         {
@@ -301,15 +301,15 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/metricas_e_docs.yml",
-          "name": "metricas_e_docs.yml",
-          "size": 865,
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 1004,
           "extension": ".yml"
         },
         {
-          "path": "docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 813,
+          "path": ".github/workflows/metricas_e_docs.yml",
+          "name": "metricas_e_docs.yml",
+          "size": 865,
           "extension": ".yml"
         },
         {
@@ -330,7 +330,7 @@
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 1764,
-      "percentage": 0.36,
+      "percentage": 0.35,
       "files": [
         {
           "path": "LICENSE",
@@ -395,20 +395,34 @@
     {
       "language": "Text",
       "file_count": 1,
-      "total_bytes": 318,
-      "percentage": 0.07,
+      "total_bytes": 315,
+      "percentage": 0.06,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
-          "size": 318,
+          "size": 315,
           "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 140,
+      "percentage": 0.03,
+      "files": [
+        {
+          "path": ".env.example",
+          "name": ".env.example",
+          "size": 140,
+          "extension": ".example"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-15T11:46:51.707077",
+    "extracted_at": "2026-06-16T10:55:26.977118",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }

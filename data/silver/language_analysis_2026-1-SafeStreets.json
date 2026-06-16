@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-15T11:43:47.378739",
+  "analyzed_at": "2026-06-16T10:52:22.868951",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 172,
-  "total_bytes": 3280928,
+  "total_files": 195,
+  "total_bytes": 3366380,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 8,
       "total_bytes": 1556150,
-      "percentage": 47.43,
+      "percentage": 46.23,
       "files": [
         {
           "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
@@ -70,7 +70,7 @@
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 30.6,
+      "percentage": 29.82,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -112,9 +112,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 83,
-      "total_bytes": 373552,
-      "percentage": 11.39,
+      "file_count": 86,
+      "total_bytes": 405555,
+      "percentage": 12.05,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -159,21 +159,21 @@
           "extension": ".md"
         },
         {
+          "path": "frontend/Specs/Specs_pg_inicial/plan.md",
+          "name": "plan.md",
+          "size": 9688,
+          "extension": ".md"
+        },
+        {
           "path": "docs/Arquitetura/CONTEXT.md",
           "name": "CONTEXT.md",
           "size": 9590,
           "extension": ".md"
         },
         {
-          "path": "docs/Arquitetura/arquitetura-interna.md",
-          "name": "arquitetura-interna.md",
-          "size": 9531,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/Arquitetura/tecnologias_projeto.md",
-          "name": "tecnologias_projeto.md",
-          "size": 9138,
+          "path": "frontend/Specs/Specs_dashboard_busca_resultados/plan.md",
+          "name": "plan.md",
+          "size": 9552,
           "extension": ".md"
         }
       ]
@@ -181,8 +181,8 @@
     {
       "language": "JSON",
       "file_count": 4,
-      "total_bytes": 241946,
-      "percentage": 7.37,
+      "total_bytes": 242088,
+      "percentage": 7.19,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -193,7 +193,7 @@
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 8064,
+          "size": 8206,
           "extension": ".json"
         },
         {
@@ -212,20 +212,56 @@
     },
     {
       "language": "TypeScript",
-      "file_count": 36,
-      "total_bytes": 61648,
-      "percentage": 1.88,
+      "file_count": 52,
+      "total_bytes": 108698,
+      "percentage": 3.23,
       "files": [
         {
           "path": "frontend/__tests__/components/PainelFiltros.test.tsx",
           "name": "PainelFiltros.test.tsx",
-          "size": 5137,
+          "size": 6754,
           "extension": ".tsx"
+        },
+        {
+          "path": "frontend/utils/noticias.ts",
+          "name": "noticias.ts",
+          "size": 6295,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/__tests__/utils/filtros.test.ts",
+          "name": "filtros.test.ts",
+          "size": 5496,
+          "extension": ".ts"
         },
         {
           "path": "frontend/__tests__/components/Drawer.test.tsx",
           "name": "Drawer.test.tsx",
           "size": 5114,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/__tests__/components/MapaInterativo.test.tsx",
+          "name": "MapaInterativo.test.tsx",
+          "size": 5008,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
+          "name": "PainelFiltros.tsx",
+          "size": 4763,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/__tests__/utils/noticias.test.ts",
+          "name": "noticias.test.ts",
+          "size": 4357,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/components/icons/index.tsx",
+          "name": "index.tsx",
+          "size": 4264,
           "extension": ".tsx"
         },
         {
@@ -237,77 +273,27 @@
         {
           "path": "frontend/__tests__/components/NewsCard.test.tsx",
           "name": "NewsCard.test.tsx",
-          "size": 4031,
+          "size": 4141,
           "extension": ".tsx"
-        },
-        {
-          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
-          "name": "PainelFiltros.tsx",
-          "size": 3571,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/components/icons/index.tsx",
-          "name": "index.tsx",
-          "size": 3502,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/components/Drawer/Drawer.tsx",
-          "name": "Drawer.tsx",
-          "size": 3152,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/__tests__/components/NewsFeed.test.tsx",
-          "name": "NewsFeed.test.tsx",
-          "size": 3049,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/__tests__/utils/noticias.test.ts",
-          "name": "noticias.test.ts",
-          "size": 2999,
-          "extension": ".ts"
-        },
-        {
-          "path": "frontend/__tests__/components/Header.test.tsx",
-          "name": "Header.test.tsx",
-          "size": 2737,
-          "extension": ".tsx"
-        }
-      ]
-    },
-    {
-      "language": "HTML",
-      "file_count": 1,
-      "total_bytes": 16261,
-      "percentage": 0.5,
-      "files": [
-        {
-          "path": "docs/productivity/index.html",
-          "name": "index.html",
-          "size": 16261,
-          "extension": ".html"
         }
       ]
     },
     {
       "language": "CSS",
-      "file_count": 13,
-      "total_bytes": 11474,
-      "percentage": 0.35,
+      "file_count": 17,
+      "total_bytes": 17731,
+      "percentage": 0.53,
       "files": [
         {
-          "path": "frontend/components/NewsCard/NewsCard.module.css",
-          "name": "NewsCard.module.css",
-          "size": 2253,
+          "path": "frontend/view/NoticiaDetalhe/NoticiaDetalhe.module.css",
+          "name": "NoticiaDetalhe.module.css",
+          "size": 2504,
           "extension": ".css"
         },
         {
           "path": "frontend/components/PainelFiltros/PainelFiltros.module.css",
           "name": "PainelFiltros.module.css",
-          "size": 2129,
+          "size": 2363,
           "extension": ".css"
         },
         {
@@ -319,13 +305,31 @@
         {
           "path": "frontend/style/globals.css",
           "name": "globals.css",
-          "size": 1676,
+          "size": 1797,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/DetalhesOcorrencia/DetalhesOcorrencia.module.css",
+          "name": "DetalhesOcorrencia.module.css",
+          "size": 1776,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/NewsCard/NewsCard.module.css",
+          "name": "NewsCard.module.css",
+          "size": 1570,
           "extension": ".css"
         },
         {
           "path": "frontend/components/Header/Header.module.css",
           "name": "Header.module.css",
-          "size": 1199,
+          "size": 1524,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/components/CardResumo/CardResumo.module.css",
+          "name": "CardResumo.module.css",
+          "size": 1194,
           "extension": ".css"
         },
         {
@@ -337,26 +341,22 @@
         {
           "path": "frontend/components/NewsFeed/NewsFeed.module.css",
           "name": "NewsFeed.module.css",
-          "size": 552,
+          "size": 725,
           "extension": ".css"
-        },
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 1,
+      "total_bytes": 16261,
+      "percentage": 0.48,
+      "files": [
         {
-          "path": "frontend/components/Logo/Logo.module.css",
-          "name": "Logo.module.css",
-          "size": 310,
-          "extension": ".css"
-        },
-        {
-          "path": "frontend/components/Footer/Footer.module.css",
-          "name": "Footer.module.css",
-          "size": 186,
-          "extension": ".css"
-        },
-        {
-          "path": "frontend/components/Chrome/Chrome.module.css",
-          "name": "Chrome.module.css",
-          "size": 129,
-          "extension": ".css"
+          "path": "docs/productivity/index.html",
+          "name": "index.html",
+          "size": 16261,
+          "extension": ".html"
         }
       ]
     },
@@ -364,7 +364,7 @@
       "language": "Python",
       "file_count": 7,
       "total_bytes": 7158,
-      "percentage": 0.22,
+      "percentage": 0.21,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
@@ -411,10 +411,30 @@
       ]
     },
     {
+      "language": "No Extension",
+      "file_count": 2,
+      "total_bytes": 4227,
+      "percentage": 0.13,
+      "files": [
+        {
+          "path": "docs/Estudos/estudo-de-agentes-de-IA",
+          "name": "estudo-de-agentes-de-IA",
+          "size": 3167,
+          "extension": ""
+        },
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1060,
+          "extension": ""
+        }
+      ]
+    },
+    {
       "language": "YAML",
       "file_count": 4,
       "total_bytes": 4113,
-      "percentage": 0.13,
+      "percentage": 0.12,
       "files": [
         {
           "path": "mkdocs.yml",
@@ -439,26 +459,6 @@
           "name": "docker-compose.yml",
           "size": 616,
           "extension": ".yml"
-        }
-      ]
-    },
-    {
-      "language": "No Extension",
-      "file_count": 2,
-      "total_bytes": 4227,
-      "percentage": 0.13,
-      "files": [
-        {
-          "path": "docs/Estudos/estudo-de-agentes-de-IA",
-          "name": "estudo-de-agentes-de-IA",
-          "size": 3167,
-          "extension": ""
-        },
-        {
-          "path": "LICENSE",
-          "name": "LICENSE",
-          "size": 1060,
-          "extension": ""
         }
       ]
     },
@@ -536,7 +536,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-15T11:46:51.719282",
+    "extracted_at": "2026-06-16T10:55:26.989417",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }
