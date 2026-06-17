@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-16T10:01:47.080848",
+      "extracted_at": "2026-06-17T09:26:47.786170",
       "file_path": "data/bronze/issues_2026-1-LegisKids.json",
       "record_count": 60
     }
@@ -308,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -458,7 +458,7 @@
         "description": "Esforço de 4 a 8 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -513,18 +513,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-03T17:17:13Z",
-    "updated_at": "2026-06-09T23:30:10Z",
-    "closed_at": null,
+    "updated_at": "2026-06-17T02:53:14Z",
+    "closed_at": "2026-06-17T02:53:14Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -572,7 +572,27 @@
       "total_blocking": 0
     },
     "body": "Configurar o Docker Compose para subir o PostgreSQL automaticamente, \neliminando a necessidade de instalação manual do banco por cada membro do time. \nCom um único comando, qualquer desenvolvedor terá o ambiente de banco pronto.\n\n## Contexto\n\nAtualmente, cada dev precisa instalar e configurar o PostgreSQL manualmente \nna própria máquina. O Docker Compose padroniza esse processo e garante que \ntodos usem a mesma versão e configuração do banco.\n\n## Tarefas\n\n- [ ] Criar `docker-compose.yml` na raiz do projeto:\n```yaml\n  services:\n    db:\n      image: postgres:16\n      container_name: legiskids_db\n      restart: unless-stopped\n      environment:\n        POSTGRES_DB: ${DB_NAME}\n        POSTGRES_USER: ${DB_USER}\n        POSTGRES_PASSWORD: ${DB_PASSWORD}\n      ports:\n        - \"${DB_PORT:-5432}:5432\"\n      volumes:\n        - pgdata:/var/lib/postgresql/data\n\n  volumes:\n    pgdata:\n```\n- [ ] Garantir que as variáveis do `docker-compose.yml` são lidas do `.env`\n- [ ] Atualizar o `.env.example` com os valores padrão para Docker:\nDB_HOST=localhost\nDB_PORT=5432\nDB_NAME=guardioes_da_lei\nDB_USER=postgres\nDB_PASSWORD=postgres\n- [ ] Adicionar `pgdata/` e `.env` ao `.gitignore` (se ainda não estiverem)\n- [ ] Testar o fluxo completo do zero:\n```bash\n  docker compose up -d\n  flask db upgrade\n  python scripts/seed.py\n  flask run\n```\n- [ ] Atualizar o README com a nova seção \"Subindo o banco com Docker\":\n```bash\n  # 1. Suba o banco\n  docker compose up -d\n\n  # 2. Aplique as migrations\n  flask db upgrade\n\n  # 3. Popule com dados iniciais (opcional)\n  python scripts/seed.py\n\n  # 4. Pare o banco quando terminar\n  docker compose down\n```\n\n## Critérios de Aceitação\n\n- [ ] `docker compose up -d` sobe o PostgreSQL sem erros\n- [ ] `flask db upgrade` conecta e aplica as migrations corretamente\n- [ ] `docker compose down` encerra sem perder os dados (volume persistente)\n- [ ] README atualizado e testado por ao menos um outro membro do time\n- [ ] Nenhuma senha hardcoded no `docker-compose.yml`\n\n## Pré-requisitos\n\n- Docker Desktop instalado ([download](https://www.docker.com/products/docker-desktop/))\n- Arquivo `.env` criado a partir do `.env.example'",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/179/reactions",
       "total_count": 0,
@@ -587,7 +607,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/179/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -698,11 +718,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -903,11 +923,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1088,11 +1108,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1273,11 +1293,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
@@ -1458,11 +1478,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 4,
+      "open_issues": 4,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-08T16:26:35Z",
-      "updated_at": "2026-06-14T22:03:26Z",
+      "updated_at": "2026-06-17T02:53:14Z",
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },

@@ -1,10 +1,247 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-16T10:01:49.921495",
+      "extracted_at": "2026-06-17T09:26:51.960742",
       "file_path": "data/bronze/issues_2026-1-Squad13.json",
-      "record_count": 57
+      "record_count": 59
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/283",
+    "id": 4679249796,
+    "node_id": "I_kwDORypFlc8AAAABFuevhA",
+    "number": 283,
+    "title": "Fix: Resolver falhas estruturais de casting de ID e parsing de emendas no motor de coleta",
+    "user": {
+      "login": "Heitorovski01",
+      "id": 170051918,
+      "node_id": "U_kgDOCiLJTg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170051918?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Heitorovski01",
+      "html_url": "https://github.com/Heitorovski01",
+      "followers_url": "https://api.github.com/users/Heitorovski01/followers",
+      "following_url": "https://api.github.com/users/Heitorovski01/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Heitorovski01/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Heitorovski01/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Heitorovski01/subscriptions",
+      "organizations_url": "https://api.github.com/users/Heitorovski01/orgs",
+      "repos_url": "https://api.github.com/users/Heitorovski01/repos",
+      "events_url": "https://api.github.com/users/Heitorovski01/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Heitorovski01/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842369,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
+        "name": "prio:high",
+        "color": "d93f0b",
+        "default": false,
+        "description": "Fazer nesta sprint impreterivelmente"
+      },
+      {
+        "id": 10937589044,
+        "node_id": "LA_kwDORypFlc8AAAACi-5dNA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:bug",
+        "name": "type:bug",
+        "color": "d73a4a",
+        "default": false,
+        "description": "Erro/Falha no sistema"
+      },
+      {
+        "id": 10946854167,
+        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
+        "name": "status:todo",
+        "color": "0052cc",
+        "default": false,
+        "description": "Pronto para puxar nesta sprint"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-06-17T01:40:49Z",
+    "updated_at": "2026-06-17T01:40:49Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "## Descrição\nForam identificadas três falhas críticas (Bugs A, B e C) que comprometem a integridade e a resiliência do motor de coleta assíncrona. Os problemas variam desde erros de casting de tipos primitivos em serviços de aplicação até violações de integridade referencial no banco de dados durante o processamento de lotes.\n\n| Bug | Exceção | Local da Falha | Causa Raiz |\n| :--- | :--- | :--- | :--- |\n| **Bug A** | `ValueError` | `ListarMovimentacoesService` | Tentativa de converter IDs prefixados (ex: `camara:104333`) diretamente para `int`. |\n| **Bug B** | `PendingRollbackError` | `ColetarEmLoteService` | Inserção de eventos com IDs sem prefixo, causando `ForeignKeyViolation`. |\n| **Bug C** | `ValueError` | `SenadoAdapter` | Falha ao parsear emendas substitutivas com sufixos literais (ex: `0113A`). |\n\n---\n\n## Racional Técnico\n> A arquitetura do LexTrack exige que as camadas de **Infrastructure** e **Application** sejam resilientes a variações nos dados das APIs governamentais.\n\n1. O uso de IDs prefixados é uma decisão de design para evitar colisões entre fontes (Câmara e Senado), portanto, qualquer lógica que ignore o prefixo em operações de casting quebra a compatibilidade.\n2. A integridade referencial é sagrada; falhas de transação silenciosas via `asyncio.gather` impedem a observabilidade de erros e corrompem o estado da sessão do banco.\n3. O parsing do Senado deve ser defensivo contra variações de formato de documentos (letras em campos tradicionalmente numéricos).\n\n---\n\n## Passos para Reproduzir\n1. **Para o Bug A:** Executar `ListarMovimentacoesService` para uma proposição já persistida com o ID prefixado `camara:XXXX`.\n2. **Para o Bug B:** Iniciar uma coleta diária onde uma das proposições retorne `None` ou possua um ID que falhe na unificação, provocando o fallback de inserção direta de ID puro.\n3. **Para o Bug C:** Tentar coletar uma matéria do Senado que possua emendas substitutivas (ex: Proposições com emendas do tipo `A`, `B`, etc).\n\n---\n\n## Análise de Comportamento\n\n| Contexto | Comportamento Atual | Comportamento Esperado |\n| :--- | :--- | :--- |\n| **Manipulação de IDs** | Lançamento de `ValueError` interrompendo o fluxo de unificação de linhas do tempo. | O sistema deve extrair apenas a parte numérica dos IDs para chamadas de API externas sem lançar exceções. |\n| **Transações (Lote)** | Abortagem silenciosa de tarefas Celery devido a transações em estado de rollback (`PendingRollbackError`). | As transações de banco de dados devem ser protegidas contra violações de FK, e erros em corrotinas individuais devem ser logados sem abortar a transação global da sessão. |\n| **Parsing de Emendas** | Descarte completo de proposições do Senado quando o adaptador encontra uma emenda com sufixo alfabético. | O parsing de emendas deve ser tolerante a caracteres não-numéricos, preservando o valor literal como fallback. |\n\n---\n\n## Critérios de Aceite\n- [ ] Implementada função auxiliar de extração robusta de ID numérico em `ListarMovimentacoesService`.\n- [ ] Refatorado o `ColetarEmLoteService` para validar prefixos antes de persistir em `evento_tramitacao`.\n- [ ] Adicionado tratamento de erro com logging explícito no `asyncio.gather` do motor de coleta.\n- [ ] Modificada a lógica de parsing de emendas no `SenadoAdapter` para suportar sufixos literais (regex-based parsing).\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/283/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280/events",
+    "html_url": "https://github.com/unb-mds/2026-1-Squad13/issues/280",
+    "id": 4677000016,
+    "node_id": "I_kwDORypFlc8AAAABFsVbUA",
+    "number": 280,
+    "title": "fix: corrige lentidão e concorrência no detalhe de proposições",
+    "user": {
+      "login": "caioflmjr",
+      "id": 67447767,
+      "node_id": "MDQ6VXNlcjY3NDQ3NzY3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67447767?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/caioflmjr",
+      "html_url": "https://github.com/caioflmjr",
+      "followers_url": "https://api.github.com/users/caioflmjr/followers",
+      "following_url": "https://api.github.com/users/caioflmjr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caioflmjr/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/caioflmjr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caioflmjr/subscriptions",
+      "organizations_url": "https://api.github.com/users/caioflmjr/orgs",
+      "repos_url": "https://api.github.com/users/caioflmjr/repos",
+      "events_url": "https://api.github.com/users/caioflmjr/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/caioflmjr/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 10936842369,
+        "node_id": "LA_kwDORypFlc8AAAACi-L4gQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/prio:high",
+        "name": "prio:high",
+        "color": "d93f0b",
+        "default": false,
+        "description": "Fazer nesta sprint impreterivelmente"
+      },
+      {
+        "id": 10937589044,
+        "node_id": "LA_kwDORypFlc8AAAACi-5dNA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/type:bug",
+        "name": "type:bug",
+        "color": "d73a4a",
+        "default": false,
+        "description": "Erro/Falha no sistema"
+      },
+      {
+        "id": 10942234796,
+        "node_id": "LA_kwDORypFlc8AAAACjDVArA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/feat:f2",
+        "name": "feat:f2",
+        "color": "bfd4f2",
+        "default": false,
+        "description": "Pertence a feature F2"
+      },
+      {
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
+        "default": false,
+        "description": "Com Pull Request aberto"
+      },
+      {
+        "id": 10946856200,
+        "node_id": "LA_kwDORypFlc8AAAACjHvFCA",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/release:R2",
+        "name": "release:R2",
+        "color": "5319e7",
+        "default": false,
+        "description": "Release 2 - Produto Completo"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-06-16T18:49:53Z",
+    "updated_at": "2026-06-16T18:55:47Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "### Descrição\nA tela de detalhamento de proposições apresenta um carregamento muito demorado (podendo demorar mais de 10 segundos na primeira carga) devido a requisições concorrentes e redundantes à API externa (Câmara/Senado) ocorrendo no backend.\n\nO problema ocorre porque o hook `useProposicao` no frontend dispara em paralelo `obterMovimentacoesFases` (modo=resumido) e `obterMovimentacoesEventos` (modo=relevante). Quando os dados da proposição não estão cacheados localmente no banco de dados, ambas as requisições chegam concorrentemente no backend (`ListarMovimentacoesService`), avaliam `ja_esta_no_cache` como `False` e realizam chamadas redundantes simultâneas na API externa. Além disso, o `cache_provider` (Redis) está nulo no serviço de movimentações (não foi injetado nas dependências), o que faz com que a busca de ID unificado (crossover) sempre consulte a rede de forma síncrona.\n\n### Racional Técnico\nO acúmulo de requisições de rede para as APIs públicas do Congresso Nacional resulta em alta latência e risco de rate limiting / bloqueios. Também gera concorrência na persistência de dados no banco local. Precisamos configurar a injeção do cache provider (Redis) para evitar buscas de ID crossover recorrentes e introduzir um mecanismo de trava concorrente baseada no Redis (*Distributed Lock*) no backend. Dessa forma, se duas chamadas chegarem em paralelo, apenas uma faz a carga externa enquanto a outra aguarda assincronamente a persistência dos dados no banco de dados local.\n\n### Critérios de Aceite\n1. O `RedisClient` deve ser devidamente injetado como `cache_provider` no `ListarMovimentacoesService` a partir de `proposicao_dependencies.py`.\n2. A resolução de ID do crossover deve ser devidamente cacheada e recuperada do Redis.\n3. Deve ser implementado um mecanismo de trava concorrente temporária via Redis (`set_nx`) para a proposição no início de `ListarMovimentacoesService.executar`.\n4. Requisições concorrentes adicionais que não adquirirem o Lock devem aguardar de forma assíncrona (loop com sleep assíncrono e timeout) até que os dados sejam persistidos no banco de dados local pela primeira requisição.\n5. Os testes unitários e de integração do backend devem ser executados com sucesso após as alterações.\n",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/280/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-Squad13"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/issues/277",
@@ -2278,13 +2515,13 @@
         "description": "Pertence a feature F2"
       },
       {
-        "id": 10946854167,
-        "node_id": "LA_kwDORypFlc8AAAACjHu9Fw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:todo",
-        "name": "status:todo",
-        "color": "0052cc",
+        "id": 10946855425,
+        "node_id": "LA_kwDORypFlc8AAAACjHvCAQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad13/labels/status:review",
+        "name": "status:review",
+        "color": "d876e3",
         "default": false,
-        "description": "Pronto para puxar nesta sprint"
+        "description": "Com Pull Request aberto"
       },
       {
         "id": 10946856200,
@@ -2302,7 +2539,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-09T19:44:09Z",
-    "updated_at": "2026-06-09T19:44:09Z",
+    "updated_at": "2026-06-16T18:42:17Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -4024,7 +4261,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-08T14:10:47Z",
-    "updated_at": "2026-06-15T22:39:47Z",
+    "updated_at": "2026-06-16T18:42:15Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -4147,7 +4384,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-08T14:10:38Z",
-    "updated_at": "2026-06-15T22:39:45Z",
+    "updated_at": "2026-06-16T18:42:13Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",

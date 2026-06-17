@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-ProtectKids",
   "branch": "main",
-  "sha": "e0f1b7f3f0d1f3ac30d1520888309eb6e638fab5",
+  "sha": "e12d483f9d34232e18c71ff2bebb0303debd96e0",
   "tree": [
     {
       "name": ".env.example",
@@ -18,7 +18,7 @@
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "cbf3777ec5119e254a3f904810678296270e4c5b",
+      "sha": "f496fd8dbf95065bc490e7fca9e7c54b6a1f3b6d",
       "mode": "040000",
       "children": []
     },
@@ -26,7 +26,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "84c692d66ec4a827267d96b2e71eec948852be8a",
+      "sha": "3e3b89f6d7b700c1c06143c7ab962b9b02b080a8",
       "mode": "040000",
       "children": []
     },
@@ -48,6 +48,16 @@
       "mode": "100644",
       "extension": ".yml",
       "size": 1223,
+      "is_binary": false
+    },
+    {
+      "name": "etl-tramitacoes.yml",
+      "path": ".github/workflows/etl-tramitacoes.yml",
+      "type": "file",
+      "sha": "721645c9decca558bb6e0d65c48410addd02ff52",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1003,
       "is_binary": false
     },
     {
@@ -94,7 +104,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "5972349feb55fecbc4bbd841d767dd0fea86bf78",
+      "sha": "2eb5c0eb77ac01ecaa1964db21a257f9e9fa619f",
       "mode": "040000",
       "children": []
     },
@@ -112,7 +122,7 @@
       "name": "crawler",
       "path": "backend/crawler",
       "type": "directory",
-      "sha": "1e2f577ef0ff79ccf5bf3fb732d8f635581c6fd7",
+      "sha": "920e45a0f7318a53df3f0215359e2f20ffff8efd",
       "mode": "040000",
       "children": []
     },
@@ -137,13 +147,23 @@
       "is_binary": false
     },
     {
+      "name": "tramitacoes_api.py",
+      "path": "backend/crawler/tramitacoes_api.py",
+      "type": "file",
+      "sha": "d26991c5e05ee058f2742fb430c01b529f3e479c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4224,
+      "is_binary": false
+    },
+    {
       "name": "database.py",
       "path": "backend/database.py",
       "type": "file",
-      "sha": "0713255dca58ea841d9970f3a35cc8208b9d3ed5",
+      "sha": "5a40c2c54b426a3c6c035a7778e914d4de5ae60d",
       "mode": "100644",
       "extension": ".py",
-      "size": 544,
+      "size": 519,
       "is_binary": false
     },
     {
@@ -160,10 +180,10 @@
       "name": "models.py",
       "path": "backend/models.py",
       "type": "file",
-      "sha": "02fc58560451ea6b5c06e5327610dcc6e0018187",
+      "sha": "d123f8ba76debfaa76f4569ff75d891a5155fd0c",
       "mode": "100644",
       "extension": ".py",
-      "size": 1630,
+      "size": 2444,
       "is_binary": false
     },
     {
@@ -208,10 +228,10 @@
       "name": "docker-compose.yml",
       "path": "docker-compose.yml",
       "type": "file",
-      "sha": "3b627e65e4dd27baf1c0bae21a72825ea7745836",
+      "sha": "fbf5c04d03fa5ada88e4f6c7b7af5f4409dea596",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1004,
+      "size": 771,
       "is_binary": false
     },
     {
@@ -816,19 +836,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-16T10:52:29.251028",
+  "extracted_at": "2026-06-17T10:23:04.431236",
   "method": "rest",
-  "total_items": 86,
+  "total_items": 88,
   "repository_metadata": {
     "id": 1196216020,
     "full_name": "unb-mds/2026-1-ProtectKids",
     "description": null,
     "created_at": "2026-03-30T13:37:41Z",
-    "updated_at": "2026-06-16T05:48:14Z",
+    "updated_at": "2026-06-16T16:47:43Z",
     "language": "Python",
-    "size": 39339,
+    "size": 39349,
     "stars": 2,
     "forks": 0,
-    "open_issues": 4
+    "open_issues": 7
   }
 }
