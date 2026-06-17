@@ -2,19 +2,19 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-16T10:52:29.251028",
+  "analyzed_at": "2026-06-17T10:23:04.431236",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 61,
-  "total_bytes": 508847,
+  "total_files": 63,
+  "total_bytes": 514630,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 2,
       "total_bytes": 203018,
-      "percentage": 39.9,
+      "percentage": 39.45,
       "files": [
         {
           "path": "docs/assets/images/c4_container.png",
@@ -34,7 +34,7 @@
       "language": "JSON",
       "file_count": 3,
       "total_bytes": 122816,
-      "percentage": 24.14,
+      "percentage": 23.86,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -60,7 +60,7 @@
       "language": "Markdown",
       "file_count": 16,
       "total_bytes": 71454,
-      "percentage": 14.04,
+      "percentage": 13.88,
       "files": [
         {
           "path": "docs/requisitos.md",
@@ -126,9 +126,9 @@
     },
     {
       "language": "Python",
-      "file_count": 8,
-      "total_bytes": 41007,
-      "percentage": 8.06,
+      "file_count": 9,
+      "total_bytes": 46020,
+      "percentage": 8.94,
       "files": [
         {
           "path": "backend/crawler/camara_api.py",
@@ -155,9 +155,15 @@
           "extension": ".py"
         },
         {
+          "path": "backend/crawler/tramitacoes_api.py",
+          "name": "tramitacoes_api.py",
+          "size": 4224,
+          "extension": ".py"
+        },
+        {
           "path": "backend/models.py",
           "name": "models.py",
-          "size": 1630,
+          "size": 2444,
           "extension": ".py"
         },
         {
@@ -169,7 +175,7 @@
         {
           "path": "backend/database.py",
           "name": "database.py",
-          "size": 544,
+          "size": 519,
           "extension": ".py"
         },
         {
@@ -184,7 +190,7 @@
       "language": "JavaScript",
       "file_count": 14,
       "total_bytes": 39047,
-      "percentage": 7.67,
+      "percentage": 7.59,
       "files": [
         {
           "path": "frontend/src/pages/Inicio.jsx",
@@ -252,7 +258,7 @@
       "language": "SVG Image",
       "file_count": 2,
       "total_bytes": 14553,
-      "percentage": 2.86,
+      "percentage": 2.83,
       "files": [
         {
           "path": "frontend/public/favicon.svg",
@@ -272,7 +278,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 9355,
-      "percentage": 1.84,
+      "percentage": 1.82,
       "files": [
         {
           "path": "docs/dashboard/index.html",
@@ -290,9 +296,9 @@
     },
     {
       "language": "YAML",
-      "file_count": 5,
-      "total_bytes": 4225,
-      "percentage": 0.83,
+      "file_count": 6,
+      "total_bytes": 4995,
+      "percentage": 0.97,
       "files": [
         {
           "path": ".github/workflows/docker-build.yml",
@@ -301,15 +307,21 @@
           "extension": ".yml"
         },
         {
-          "path": "docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 1004,
+          "path": ".github/workflows/etl-tramitacoes.yml",
+          "name": "etl-tramitacoes.yml",
+          "size": 1003,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/metricas_e_docs.yml",
           "name": "metricas_e_docs.yml",
           "size": 865,
+          "extension": ".yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 771,
           "extension": ".yml"
         },
         {
@@ -330,7 +342,7 @@
       "language": "No Extension",
       "file_count": 3,
       "total_bytes": 1764,
-      "percentage": 0.35,
+      "percentage": 0.34,
       "files": [
         {
           "path": "LICENSE",
@@ -422,7 +434,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-16T10:55:26.977118",
+    "extracted_at": "2026-06-17T10:25:59.154402",
     "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
   }
 }
