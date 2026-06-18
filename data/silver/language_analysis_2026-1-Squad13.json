@@ -2,19 +2,19 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-17T10:23:02.828063",
+  "analyzed_at": "2026-06-18T10:06:45.091381",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 292,
-  "total_bytes": 1744445,
+  "total_files": 295,
+  "total_bytes": 1746683,
   "languages": [
     {
       "language": "JSON",
       "file_count": 11,
       "total_bytes": 562306,
-      "percentage": 32.23,
+      "percentage": 32.19,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -82,7 +82,7 @@
       "language": "Lock File",
       "file_count": 1,
       "total_bytes": 408334,
-      "percentage": 23.41,
+      "percentage": 23.38,
       "files": [
         {
           "path": "backend/uv.lock",
@@ -96,7 +96,7 @@
       "language": "Python",
       "file_count": 113,
       "total_bytes": 318902,
-      "percentage": 18.28,
+      "percentage": 18.26,
       "files": [
         {
           "path": "backend/src/application/services/dashboard_service.py",
@@ -164,7 +164,7 @@
       "language": "TypeScript",
       "file_count": 81,
       "total_bytes": 214759,
-      "percentage": 12.31,
+      "percentage": 12.3,
       "files": [
         {
           "path": "frontend/src/shared/lib/mock-data.ts",
@@ -232,7 +232,7 @@
       "language": "Markdown",
       "file_count": 49,
       "total_bytes": 193868,
-      "percentage": 11.11,
+      "percentage": 11.1,
       "files": [
         {
           "path": "CLAUDE.md",
@@ -398,9 +398,9 @@
     },
     {
       "language": "YAML",
-      "file_count": 7,
-      "total_bytes": 6546,
-      "percentage": 0.38,
+      "file_count": 10,
+      "total_bytes": 8784,
+      "percentage": 0.5,
       "files": [
         {
           "path": "docker-compose.yml",
@@ -430,6 +430,24 @@
           "path": ".github/workflows/backend.yml",
           "name": "backend.yml",
           "size": 841,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/cron-metricas.yml",
+          "name": "cron-metricas.yml",
+          "size": 758,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/cron-baselines.yml",
+          "name": "cron-baselines.yml",
+          "size": 754,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/cron-coleta.yml",
+          "name": "cron-coleta.yml",
+          "size": 726,
           "extension": ".yml"
         },
         {
@@ -600,7 +618,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-17T10:26:02.089996",
+    "extracted_at": "2026-06-18T10:09:42.254416",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }

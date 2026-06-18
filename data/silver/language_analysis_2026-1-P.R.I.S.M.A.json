@@ -2,19 +2,19 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-17T10:23:05.230423",
+  "analyzed_at": "2026-06-18T10:06:47.460740",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 78,
-  "total_bytes": 3288055,
+  "total_files": 95,
+  "total_bytes": 3295184,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 7,
       "total_bytes": 3039929,
-      "percentage": 92.45,
+      "percentage": 92.25,
       "files": [
         {
           "path": "figma/print7/aprovadad.png",
@@ -64,7 +64,7 @@
       "language": "Markdown",
       "file_count": 34,
       "total_bytes": 117658,
-      "percentage": 3.58,
+      "percentage": 3.57,
       "files": [
         {
           "path": "docs/Arquitetura/documento-c4.md",
@@ -132,7 +132,7 @@
       "language": "HTML",
       "file_count": 9,
       "total_bytes": 95293,
-      "percentage": 2.9,
+      "percentage": 2.89,
       "files": [
         {
           "path": "src/home/templates/home/proposicoes.html",
@@ -206,20 +206,44 @@
     },
     {
       "language": "Python",
-      "file_count": 13,
-      "total_bytes": 8338,
-      "percentage": 0.25,
+      "file_count": 30,
+      "total_bytes": 15467,
+      "percentage": 0.47,
       "files": [
         {
           "path": "src/config/settings.py",
           "name": "settings.py",
-          "size": 4508,
+          "size": 4576,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Usuarios/migrations/0001_initial.py",
+          "name": "0001_initial.py",
+          "size": 3050,
           "extension": ".py"
         },
         {
           "path": "src/home/views.py",
           "name": "views.py",
           "size": 1495,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/migrations/0001_initial.py",
+          "name": "0001_initial.py",
+          "size": 1223,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/admin.py",
+          "name": "admin.py",
+          "size": 790,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/models.py",
+          "name": "models.py",
+          "size": 700,
           "extension": ".py"
         },
         {
@@ -235,39 +259,15 @@
           "extension": ".py"
         },
         {
+          "path": "src/Processos/migrations/0002_initial.py",
+          "name": "0002_initial.py",
+          "size": 570,
+          "extension": ".py"
+        },
+        {
           "path": "src/config/asgi.py",
           "name": "asgi.py",
           "size": 389,
-          "extension": ".py"
-        },
-        {
-          "path": "src/config/wsgi.py",
-          "name": "wsgi.py",
-          "size": 389,
-          "extension": ".py"
-        },
-        {
-          "path": "src/home/apps.py",
-          "name": "apps.py",
-          "size": 83,
-          "extension": ".py"
-        },
-        {
-          "path": "src/home/admin.py",
-          "name": "admin.py",
-          "size": 63,
-          "extension": ".py"
-        },
-        {
-          "path": "src/home/tests.py",
-          "name": "tests.py",
-          "size": 60,
-          "extension": ".py"
-        },
-        {
-          "path": "src/home/models.py",
-          "name": "models.py",
-          "size": 57,
           "extension": ".py"
         }
       ]
@@ -422,7 +422,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-17T10:25:59.379187",
+    "extracted_at": "2026-06-18T10:09:39.442365",
     "file_path": "data/silver/language_analysis_2026-1-P.R.I.S.M.A.json"
   }
 }
