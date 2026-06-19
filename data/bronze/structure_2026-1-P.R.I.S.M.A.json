@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-P.R.I.S.M.A",
   "branch": "main",
-  "sha": "84a467c543e2b97dc4a10f32af6e4206e3bb5c83",
+  "sha": "dfc0308fd0bf4e245c162b3e7e319a7a3ab16177",
   "tree": [
     {
       "name": ".env_docker.exemplo",
@@ -632,7 +632,7 @@
       "name": "src",
       "path": "src",
       "type": "directory",
-      "sha": "d5ca58b84d785ba6d93ea64bd82c62f7dee6ce24",
+      "sha": "43070e37dae4242183e789dc6111f66bdbbddab7",
       "mode": "040000",
       "children": []
     },
@@ -842,7 +842,7 @@
       "name": "config",
       "path": "src/config",
       "type": "directory",
-      "sha": "45e29837e8071fe36ad276f1e16630ce669da533",
+      "sha": "233929f4fd37ff5ad8ffef8a7bf21864045df6b7",
       "mode": "040000",
       "children": []
     },
@@ -870,20 +870,20 @@
       "name": "settings.py",
       "path": "src/config/settings.py",
       "type": "file",
-      "sha": "a631fa6ae1e4610f07b8be464da1d208f0de54f7",
+      "sha": "14f444686fa0626e8ebff074890584c5f3c535e8",
       "mode": "100644",
       "extension": ".py",
-      "size": 4576,
+      "size": 4674,
       "is_binary": false
     },
     {
       "name": "urls.py",
       "path": "src/config/urls.py",
       "type": "file",
-      "sha": "bb4a12f2e8950dbf8da86e8c6f957d243926e7a0",
+      "sha": "bfe999ddfece91cd6ee7881e21dc9265380d20ac",
       "mode": "100644",
       "extension": ".py",
-      "size": 632,
+      "size": 1045,
       "is_binary": false
     },
     {
@@ -900,7 +900,7 @@
       "name": "home",
       "path": "src/home",
       "type": "directory",
-      "sha": "98b6d6ed929ac7eb60d1f26b0ae97ecb80fd62cc",
+      "sha": "5400488c50d99be8519a95bb0fae07fea11b6243",
       "mode": "040000",
       "children": []
     },
@@ -932,6 +932,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 83,
+      "is_binary": false
+    },
+    {
+      "name": "forms.py",
+      "path": "src/home/forms.py",
+      "type": "file",
+      "sha": "4c9cddea1f1b0f354a0de4c2187655a3e59d7519",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 297,
       "is_binary": false
     },
     {
@@ -1028,7 +1038,7 @@
       "name": "templates",
       "path": "src/home/templates",
       "type": "directory",
-      "sha": "60fd3855c81c4f413c83ae4b0f341d0e6af6d163",
+      "sha": "4acbc63d8c93f0fb142b65b6ce7ec9fd482b897e",
       "mode": "040000",
       "children": []
     },
@@ -1036,7 +1046,7 @@
       "name": "home",
       "path": "src/home/templates/home",
       "type": "directory",
-      "sha": "f98a65ee8104647532b539b65ae579d6fc3fd236",
+      "sha": "20130564030af216144b2f50170a93f560b23f25",
       "mode": "040000",
       "children": []
     },
@@ -1092,10 +1102,10 @@
       "name": "dashboard.html",
       "path": "src/home/templates/home/dashboard.html",
       "type": "file",
-      "sha": "2215ffe529e77efa3407ea597616fa8f9d48d286",
+      "sha": "547012ea1d0c92ad293d6832c37433aa44875d94",
       "mode": "100644",
       "extension": ".html",
-      "size": 15820,
+      "size": 15778,
       "is_binary": false
     },
     {
@@ -1139,6 +1149,74 @@
       "is_binary": false
     },
     {
+      "name": "registration",
+      "path": "src/home/templates/registration",
+      "type": "directory",
+      "sha": "78c902764f13234eeea070b68b9bf2df3b9caca3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "login.html",
+      "path": "src/home/templates/registration/login.html",
+      "type": "file",
+      "sha": "ee53d4c8779631e993be89224e68b3c5240b7af9",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 422,
+      "is_binary": false
+    },
+    {
+      "name": "password_reset_complete.html",
+      "path": "src/home/templates/registration/password_reset_complete.html",
+      "type": "file",
+      "sha": "37e8cd4c7de91845f522892955efc1b0fc0bb43d",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 139,
+      "is_binary": false
+    },
+    {
+      "name": "password_reset_confirm.html",
+      "path": "src/home/templates/registration/password_reset_confirm.html",
+      "type": "file",
+      "sha": "46080d7d8775655cf97abc439dac92ed478d6d06",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 139,
+      "is_binary": false
+    },
+    {
+      "name": "password_reset_done.html",
+      "path": "src/home/templates/registration/password_reset_done.html",
+      "type": "file",
+      "sha": "b205d7c3ff0565f71d34ffe13b0a18fe56e7d417",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 160,
+      "is_binary": false
+    },
+    {
+      "name": "password_reset_form.html",
+      "path": "src/home/templates/registration/password_reset_form.html",
+      "type": "file",
+      "sha": "8d5603681ef68721a8a098efffc10fd5de898089",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 191,
+      "is_binary": false
+    },
+    {
+      "name": "signup.html",
+      "path": "src/home/templates/registration/signup.html",
+      "type": "file",
+      "sha": "4efcb051c45fe619b14a818823c10e0016cc22c2",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 342,
+      "is_binary": false
+    },
+    {
       "name": "tests.py",
       "path": "src/home/tests.py",
       "type": "file",
@@ -1152,10 +1230,10 @@
       "name": "views.py",
       "path": "src/home/views.py",
       "type": "file",
-      "sha": "f1e2a83a0c532f0fa0df1518750ab10d00430db1",
+      "sha": "52baf29982bddaee58624fc020b3451ba6105c07",
       "mode": "100644",
       "extension": ".py",
-      "size": 1495,
+      "size": 1878,
       "is_binary": false
     },
     {
@@ -1180,19 +1258,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-18T10:06:47.460740",
+  "extracted_at": "2026-06-19T10:14:57.344757",
   "method": "rest",
-  "total_items": 123,
+  "total_items": 131,
   "repository_metadata": {
     "id": 1203020564,
     "full_name": "unb-mds/2026-1-P.R.I.S.M.A",
     "description": null,
     "created_at": "2026-04-06T16:34:51Z",
-    "updated_at": "2026-06-17T21:41:50Z",
+    "updated_at": "2026-06-18T13:28:13Z",
     "language": "HTML",
-    "size": 3229,
+    "size": 3243,
     "stars": 2,
     "forks": 0,
-    "open_issues": 29
+    "open_issues": 28
   }
 }

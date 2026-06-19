@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-18T09:10:00.969632",
+      "extracted_at": "2026-06-19T09:24:28.143659",
       "file_path": "data/bronze/issues_2026-1-LegisKids.json",
-      "record_count": 61
+      "record_count": 60
     }
   },
   {
@@ -284,7 +284,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -312,8 +312,8 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-06-17T17:02:20Z",
-    "updated_at": "2026-06-17T20:21:34Z",
-    "closed_at": null,
+    "updated_at": "2026-06-18T22:16:02Z",
+    "closed_at": "2026-06-18T22:16:02Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -360,7 +360,27 @@
       "total_blocking": 0
     },
     "body": "# Objetivo\n\nOrganizar e padronizar a configuração do Claude Code no projeto, criando uma estrutura escalável para instruções, contexto e reutilização de conhecimento através de SKILLS.\n\n# Contexto\n\nAtualmente o projeto não possui uma estrutura formal para o Claude Code, dificultando a manutenção de instruções, padrões de desenvolvimento e documentação operacional.\n\nA proposta é criar uma base que permita:\n\nCentralizar instruções globais do projeto.\nReutilizar conhecimentos e procedimentos através de SKILLS.\nFacilitar onboarding de novos desenvolvedores.\nMelhorar a consistência das interações com IA.\nEscopo\n\n## 1. Arquivo CLAUDE.md\n\nDefinir o contexto principal do projeto contendo:\n\nDescrição geral do sistema.\n- Stack tecnológica.\n- Convenções de código.\n- Estrutura de diretórios.\n- Fluxo de desenvolvimento.\n- Comandos mais utilizados.\n- Boas práticas e restrições do projeto.\n## 2. Estruturar diretório .claude\n\nOrganização inicial semelhante a:\n\n.claude/\n├── skills/\n├── templates/\n├── context/\n└── docs/\n## 3. Criar/trazer SKILLS\n\nMapear atividades recorrentes do projeto e transformá-las em skills reutilizáveis.\n\nExemplos:\n- backend-development\n- frontend-development\n- code-review\n- database-migrations\n- api-design\n- testing\n- debugging\n- documentation\n\nCada skill deve conter:\n- Objetivo\n- Quando utilizar\n- Passo a passo\n- Boas práticas\n- Exemplos\n## 4. Definir padrão para novas SKILLS\n\nDocumentar:\nEstrutura de diretórios\nConvenções de nomenclatura\nFormato dos arquivos\nCritérios para criação de novas skills\n## 5. Documentar uso do Claude Code\n\nAdicionar documentação explicando:\n- Como utilizar o CLAUDE.md (atualizar o já existente com o fluxo que usaremos de fato)\n- Como adicionar novas skills\n- Como manter a documentação atualizada\n- Fluxo recomendado para desenvolvimento assistido por IA\n\n# Critérios de Aceitação\n- Arquivo CLAUDE.md criado.\n- Diretório .claude criado e organizado.\n- Pelo menos 5 SKILLS iniciais implementadas.\n- Padrão para criação de novas skills documentado.\n- Documentação de uso do Claude Code disponível.\n- Estrutura validada e pronta para expansão futura.\n\n## Benefícios Esperados\n- Maior consistência nas respostas da IA.\n- Redução de contexto repetido em prompts.\n- Padronização dos processos de desenvolvimento.\n- Melhor manutenção da base de conhecimento do projeto.\n- Escalabilidade para novas automações e workflows.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Donnk61",
+      "id": 169686699,
+      "node_id": "U_kgDOCh02qw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/169686699?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Donnk61",
+      "html_url": "https://github.com/Donnk61",
+      "followers_url": "https://api.github.com/users/Donnk61/followers",
+      "following_url": "https://api.github.com/users/Donnk61/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Donnk61/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Donnk61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Donnk61/subscriptions",
+      "organizations_url": "https://api.github.com/users/Donnk61/orgs",
+      "repos_url": "https://api.github.com/users/Donnk61/repos",
+      "events_url": "https://api.github.com/users/Donnk61/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Donnk61/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/194/reactions",
       "total_count": 0,
@@ -375,7 +395,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/194/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -485,9 +505,9 @@
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T20:58:51Z",
-    "updated_at": "2026-06-08T14:49:55Z",
+    "updated_at": "2026-06-18T17:10:52Z",
     "closed_at": "2026-06-08T14:49:55Z",
     "assignee": {
       "login": "Donnk61",
@@ -689,9 +709,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T17:21:40Z",
-    "updated_at": "2026-06-08T18:58:43Z",
+    "updated_at": "2026-06-18T17:08:39Z",
     "closed_at": "2026-06-08T18:58:43Z",
     "assignee": {
       "login": "Donnk61",
@@ -894,9 +914,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T17:17:13Z",
-    "updated_at": "2026-06-17T02:53:14Z",
+    "updated_at": "2026-06-18T17:07:19Z",
     "closed_at": "2026-06-17T02:53:14Z",
     "assignee": {
       "login": "Donnk61",
@@ -1099,9 +1119,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T17:11:37Z",
-    "updated_at": "2026-06-08T20:02:18Z",
+    "updated_at": "2026-06-18T17:04:01Z",
     "closed_at": "2026-06-08T20:02:18Z",
     "assignee": {
       "login": "Donnk61",
@@ -1304,9 +1324,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:10:42Z",
-    "updated_at": "2026-06-17T17:28:55Z",
+    "updated_at": "2026-06-18T17:02:11Z",
     "closed_at": "2026-06-17T17:28:55Z",
     "assignee": {
       "login": "Donnk61",
@@ -1509,9 +1529,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:10:04Z",
-    "updated_at": "2026-06-17T16:31:19Z",
+    "updated_at": "2026-06-18T16:59:46Z",
     "closed_at": "2026-06-17T16:31:18Z",
     "assignee": {
       "login": "CaioMota16",
@@ -1714,9 +1734,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:09:10Z",
-    "updated_at": "2026-06-17T16:31:02Z",
+    "updated_at": "2026-06-18T16:58:44Z",
     "closed_at": "2026-06-17T16:31:02Z",
     "assignee": {
       "login": "italo-lm",
@@ -1919,9 +1939,9 @@
       "due_on": "2026-06-14T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T17:08:18Z",
-    "updated_at": "2026-06-14T22:03:50Z",
+    "updated_at": "2026-06-18T16:55:58Z",
     "closed_at": "2026-06-14T22:03:26Z",
     "assignee": {
       "login": "CaioMota16",
@@ -2124,9 +2144,9 @@
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:07:20Z",
-    "updated_at": "2026-06-05T21:38:28Z",
+    "updated_at": "2026-06-18T16:54:23Z",
     "closed_at": "2026-06-05T21:38:28Z",
     "assignee": {
       "login": "thatsrenan",
@@ -2329,9 +2349,9 @@
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:06:32Z",
-    "updated_at": "2026-06-05T02:12:36Z",
+    "updated_at": "2026-06-18T16:52:20Z",
     "closed_at": "2026-06-05T02:12:36Z",
     "assignee": {
       "login": "thatsrenan",
@@ -2534,9 +2554,9 @@
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-03T17:05:40Z",
-    "updated_at": "2026-06-05T01:30:38Z",
+    "updated_at": "2026-06-18T16:51:06Z",
     "closed_at": "2026-06-05T01:30:38Z",
     "assignee": {
       "login": "thatsrenan",
@@ -2730,9 +2750,9 @@
       "due_on": "2026-06-07T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-03T05:37:27Z",
-    "updated_at": "2026-06-10T01:05:13Z",
+    "updated_at": "2026-06-18T16:47:56Z",
     "closed_at": "2026-06-10T01:05:13Z",
     "assignee": {
       "login": "CaioMota16",
@@ -3759,9 +3779,9 @@
       "due_on": "2026-05-24T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-20T13:21:45Z",
-    "updated_at": "2026-05-20T14:12:04Z",
+    "updated_at": "2026-06-18T16:46:13Z",
     "closed_at": "2026-05-20T14:12:04Z",
     "assignee": {
       "login": "italo-lm",
@@ -3954,9 +3974,9 @@
       "due_on": "2026-05-24T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-05-14T18:16:37Z",
-    "updated_at": "2026-05-20T16:56:03Z",
+    "updated_at": "2026-06-18T16:43:35Z",
     "closed_at": "2026-05-20T16:55:35Z",
     "assignee": {
       "login": "Donnk61",
@@ -4149,9 +4169,9 @@
       "due_on": "2026-05-17T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-14T00:02:14Z",
-    "updated_at": "2026-05-20T12:22:28Z",
+    "updated_at": "2026-06-18T16:42:25Z",
     "closed_at": "2026-05-20T12:22:28Z",
     "assignee": {
       "login": "italo-lm",
@@ -4344,9 +4364,9 @@
       "due_on": "2026-05-17T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-13T16:56:56Z",
-    "updated_at": "2026-05-13T17:00:53Z",
+    "updated_at": "2026-06-18T16:40:07Z",
     "closed_at": "2026-05-13T17:00:53Z",
     "assignee": {
       "login": "Donnk61",
@@ -7934,9 +7954,9 @@
       "due_on": "2026-05-17T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-05-12T03:58:43Z",
-    "updated_at": "2026-05-20T00:14:40Z",
+    "updated_at": "2026-06-18T15:59:07Z",
     "closed_at": "2026-05-20T00:14:39Z",
     "assignee": {
       "login": "CaioMota16",
@@ -8440,211 +8460,6 @@
       "eyes": 0
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/97/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-LegisKids"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96/events",
-    "html_url": "https://github.com/unb-mds/2026-1-LegisKids/issues/96",
-    "id": 4424859928,
-    "node_id": "I_kwDORqqSCc8AAAABB74BGA",
-    "number": 96,
-    "title": "Definir nome oficial do projeto",
-    "user": {
-      "login": "thatsrenan",
-      "id": 161871698,
-      "node_id": "U_kgDOCaX3Ug",
-      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/thatsrenan",
-      "html_url": "https://github.com/thatsrenan",
-      "followers_url": "https://api.github.com/users/thatsrenan/followers",
-      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
-      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
-      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
-      "repos_url": "https://api.github.com/users/thatsrenan/repos",
-      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10624387192,
-        "node_id": "LA_kwDORqqSCc8AAAACeUNIeA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/labels/processo",
-        "name": "processo",
-        "color": "d7c7be",
-        "default": false,
-        "description": "Inclui definição e melhoria de práticas, fluxos, cerimônias, organização e regras do projeto."
-      },
-      {
-        "id": 10760585835,
-        "node_id": "LA_kwDORqqSCc8AAAACgWGCaw",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/labels/XS",
-        "name": "XS",
-        "color": "9BE9A8",
-        "default": false,
-        "description": "Esforço de até 1 hora."
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "thatsrenan",
-        "id": 161871698,
-        "node_id": "U_kgDOCaX3Ug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/thatsrenan",
-        "html_url": "https://github.com/thatsrenan",
-        "followers_url": "https://api.github.com/users/thatsrenan/followers",
-        "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
-        "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
-        "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
-        "repos_url": "https://api.github.com/users/thatsrenan/repos",
-        "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/8",
-      "html_url": "https://github.com/unb-mds/2026-1-LegisKids/milestone/8",
-      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/milestones/8/labels",
-      "id": 15886919,
-      "node_id": "MI_kwDORqqSCc4A8mpH",
-      "number": 8,
-      "title": "Sprint 7",
-      "description": "",
-      "creator": {
-        "login": "thatsrenan",
-        "id": 161871698,
-        "node_id": "U_kgDOCaX3Ug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/thatsrenan",
-        "html_url": "https://github.com/thatsrenan",
-        "followers_url": "https://api.github.com/users/thatsrenan/followers",
-        "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
-        "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
-        "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
-        "repos_url": "https://api.github.com/users/thatsrenan/repos",
-        "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 22,
-      "state": "open",
-      "created_at": "2026-05-11T22:50:49Z",
-      "updated_at": "2026-06-05T01:29:53Z",
-      "due_on": "2026-05-17T00:00:00Z",
-      "closed_at": null
-    },
-    "comments": 3,
-    "created_at": "2026-05-11T22:54:30Z",
-    "updated_at": "2026-06-17T22:22:10Z",
-    "closed_at": "2026-05-11T22:55:38Z",
-    "assignee": {
-      "login": "thatsrenan",
-      "id": 161871698,
-      "node_id": "U_kgDOCaX3Ug",
-      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/thatsrenan",
-      "html_url": "https://github.com/thatsrenan",
-      "followers_url": "https://api.github.com/users/thatsrenan/followers",
-      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
-      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
-      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
-      "repos_url": "https://api.github.com/users/thatsrenan/repos",
-      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": {
-      "id": 20193710,
-      "node_id": "IT_kwDOCH8E_c4BNCGu",
-      "name": "Task",
-      "description": "A specific piece of work",
-      "color": "yellow",
-      "created_at": "2024-02-18T04:46:03Z",
-      "updated_at": "2024-07-26T15:22:11Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "parent_issue_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/95",
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "# Objetivo\n\nEscolher um nome oficial para o projeto que represente:\n\n- análise legislativa;\n- segurança infantil na internet;\n- monitoramento de dados legislativos;\n- tecnologia e governança.\n\n# Atividades\n- Levantar sugestões\n- Discutir com a equipe\n- Aprovar nome final\n\n# Critérios de Aceitação\n- Lista de sugestões criada\n- Nome escolhido\n- Nome aprovado pela equipe\n- Nome documentado na issue mãe",
-    "closed_by": {
-      "login": "thatsrenan",
-      "id": 161871698,
-      "node_id": "U_kgDOCaX3Ug",
-      "avatar_url": "https://avatars.githubusercontent.com/u/161871698?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/thatsrenan",
-      "html_url": "https://github.com/thatsrenan",
-      "followers_url": "https://api.github.com/users/thatsrenan/followers",
-      "following_url": "https://api.github.com/users/thatsrenan/following{/other_user}",
-      "gists_url": "https://api.github.com/users/thatsrenan/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/thatsrenan/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/thatsrenan/subscriptions",
-      "organizations_url": "https://api.github.com/users/thatsrenan/orgs",
-      "repos_url": "https://api.github.com/users/thatsrenan/repos",
-      "events_url": "https://api.github.com/users/thatsrenan/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/thatsrenan/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/96/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
     "pinned_comment": null,

@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "9d5ac8f787334c2cd50fd948e833ce6cd01985a2",
+  "sha": "483ac00b6c4501c25ca600cd26c78e4f67efd7f1",
   "tree": [
     {
       "name": ".claude",
@@ -164,51 +164,115 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "8ee44b3ffa86ee0dd1d00dd82e45013f9f5d5819",
+      "sha": "a0b7d18cc8357e61c9a28b297cab3436c753e42b",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": ".claude",
+      "path": "backend/.claude",
+      "type": "directory",
+      "sha": "2cd7143217feaedbbcd477b2ecaef3ccff153da3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "skills",
+      "path": "backend/.claude/skills",
+      "type": "directory",
+      "sha": "f41e417b8582cf42d9745d326a2a9fe527e09ce6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "run-endpoints",
+      "path": "backend/.claude/skills/run-endpoints",
+      "type": "directory",
+      "sha": "83e68499a484c575262fca3becb44ec0fca87ba6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-endpoints/SKILL.md",
+      "type": "file",
+      "sha": "59878f3388211e7c25215ec2fe165c6b78536d2e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4969,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-endpoints/driver.py",
+      "type": "file",
+      "sha": "cb329e9c9c2e7758e500bed2ec409287114f8853",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4975,
+      "is_binary": false
     },
     {
       "name": ".gitignore",
       "path": "backend/.gitignore",
       "type": "file",
-      "sha": "2825d1622ecc0bdfa9e4d54cabcfa7a523b98dd9",
+      "sha": "ebb8c14c78bc08ecb21280310b3ffb15e6be12b0",
       "mode": "100644",
       "extension": ".gitignore",
-      "size": 23,
+      "size": 38,
       "is_binary": false
     },
     {
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "91da9c724f926ed48cb7d1d84ae6a65acb57567b",
+      "sha": "3f6da8f18de64c456d9c5078543f6c3d95045585",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
     },
     {
       "name": "core",
       "path": "backend/app/core",
       "type": "directory",
-      "sha": "c2540adb865332887827d5d061d16ff9217cf07c",
+      "sha": "aa45bae59092235f69cdf0e688eb044a9eb755da",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/core/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
     },
     {
       "name": "database.py",
       "path": "backend/app/core/database.py",
       "type": "file",
-      "sha": "d7632e3391b96dbfd23dd7d21f34238079d9b3b5",
+      "sha": "91969b9c0c09cfcbdfb1f0561aa288cfb42c58d6",
       "mode": "100644",
       "extension": ".py",
-      "size": 518,
+      "size": 700,
       "is_binary": false
     },
     {
       "name": "integrations",
       "path": "backend/app/integrations",
       "type": "directory",
-      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "sha": "174fe49479d783684bc090042148eb888e603661",
       "mode": "040000",
       "children": []
     },
@@ -223,22 +287,42 @@
       "is_binary": false
     },
     {
+      "name": "__init__.py",
+      "path": "backend/app/integrations/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
       "name": "main.py",
       "path": "backend/app/main.py",
       "type": "file",
-      "sha": "ddeeaf8ef0b52a9e0d08e923d8db2d8ca7fc1084",
+      "sha": "da7cbf1fe0da1a82c1a001aad04c8d3b9bda56e3",
       "mode": "100644",
       "extension": ".py",
-      "size": 310,
+      "size": 357,
       "is_binary": false
     },
     {
       "name": "models",
       "path": "backend/app/models",
       "type": "directory",
-      "sha": "e4240e18034419c58aaacc6362a047c79988af43",
+      "sha": "3a95384f3007628b09274f6ab3c21e9027a39c20",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/models/__init__.py",
+      "type": "file",
+      "sha": "ca821aa3ab828da88c38b84678bed9a09ed78ec5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 71,
+      "is_binary": false
     },
     {
       "name": "ocorrencia.py",
@@ -254,7 +338,7 @@
       "name": "repositories",
       "path": "backend/app/repositories",
       "type": "directory",
-      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "sha": "9925bd4b2869607bef230b7fd64a57096740ecd4",
       "mode": "040000",
       "children": []
     },
@@ -269,12 +353,42 @@
       "is_binary": false
     },
     {
+      "name": "__init__.py",
+      "path": "backend/app/repositories/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "ocorrencias.py",
+      "path": "backend/app/repositories/ocorrencias.py",
+      "type": "file",
+      "sha": "3e06d1acc49e38e2705b3d9ac07083614303fbc3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 621,
+      "is_binary": false
+    },
+    {
       "name": "routes",
       "path": "backend/app/routes",
       "type": "directory",
-      "sha": "99a386443c174eac8120bae8a6cc418911a1ea65",
+      "sha": "0eebb6f690a56329776f46ea12ed8fcc692a83f0",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/routes/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
     },
     {
       "name": "health.py",
@@ -287,10 +401,20 @@
       "is_binary": false
     },
     {
+      "name": "ocorrencias.py",
+      "path": "backend/app/routes/ocorrencias.py",
+      "type": "file",
+      "sha": "c06e8590fc09dd235f7f3fc19fe55e9a1d5cc2b0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1526,
+      "is_binary": false
+    },
+    {
       "name": "schemas",
       "path": "backend/app/schemas",
       "type": "directory",
-      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "sha": "2f2253329ff205e7ae7820da5e008ccc44cfc01b",
       "mode": "040000",
       "children": []
     },
@@ -305,10 +429,30 @@
       "is_binary": false
     },
     {
+      "name": "__init__.py",
+      "path": "backend/app/schemas/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "ocorrencia.py",
+      "path": "backend/app/schemas/ocorrencia.py",
+      "type": "file",
+      "sha": "bdd0906b6438fc4cd916e919d2e85b04ae196e95",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 882,
+      "is_binary": false
+    },
+    {
       "name": "services",
       "path": "backend/app/services",
       "type": "directory",
-      "sha": "82e3a754b6a0fcb238b03c0e47d05219fbf9cf89",
+      "sha": "6909f75fbe37c8f9397e14c6bf96c9985780566f",
       "mode": "040000",
       "children": []
     },
@@ -320,6 +464,26 @@
       "mode": "100644",
       "extension": ".gitignore",
       "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/services/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "ocorrencias.py",
+      "path": "backend/app/services/ocorrencias.py",
+      "type": "file",
+      "sha": "3547d915a522a8d051818d6996c00de6b2d5e934",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 878,
       "is_binary": false
     },
     {
@@ -356,7 +520,7 @@
       "name": "tests",
       "path": "backend/tests",
       "type": "directory",
-      "sha": "3bf3cace3399ec9aacd3055f23afb8fbb923a511",
+      "sha": "2e5b914e16f0c8b45d08ac29fd59c7d7b471b582",
       "mode": "040000",
       "children": []
     },
@@ -371,10 +535,20 @@
       "is_binary": false
     },
     {
+      "name": "test_ocorrencias.py",
+      "path": "backend/tests/test_ocorrencias.py",
+      "type": "file",
+      "sha": "df62f5ea8e6c336942f359accf5b6a0bcec5729d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2023,
+      "is_binary": false
+    },
+    {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "5eb712aa327bcde69d78b44ce854840560d2fa50",
+      "sha": "973f3a74af743ab5deb5c9c6473850bc0bb083dc",
       "mode": "040000",
       "children": []
     },
@@ -1102,7 +1276,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "6dc44f684f6c17d98abebce40d8824c8711dddd6",
+      "sha": "cfbb09cd036c1d5ff20622bd32ca6595f86ac7e7",
       "mode": "040000",
       "children": []
     },
@@ -1130,7 +1304,7 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "e60c22e09bffd7bf26b99574a4be43407dac41eb",
+      "sha": "009a35de688b06a8bcde9c08bdd580fae15688b6",
       "mode": "100644",
       "extension": ".json",
       "size": 8080,
@@ -2508,19 +2682,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-18T10:06:37.026332",
+  "extracted_at": "2026-06-19T10:14:50.117273",
   "method": "rest",
-  "total_items": 264,
+  "total_items": 282,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-18T04:49:19Z",
+    "updated_at": "2026-06-19T05:09:50Z",
     "language": "TypeScript",
-    "size": 2638,
+    "size": 2644,
     "stars": 4,
     "forks": 0,
-    "open_issues": 8
+    "open_issues": 11
   }
 }

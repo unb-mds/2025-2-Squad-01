@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-18T09:10:08.490520",
+      "extracted_at": "2026-06-19T09:24:34.021853",
       "file_path": "data/bronze/issues_2026-1-P.R.I.S.M.A.json",
       "record_count": 41
     }
@@ -4783,7 +4783,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -4811,8 +4811,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-29T15:40:03Z",
-    "updated_at": "2026-06-05T08:01:46Z",
-    "closed_at": null,
+    "updated_at": "2026-06-18T13:28:53Z",
+    "closed_at": "2026-06-18T13:28:53Z",
     "assignee": {
       "login": "kaikysousa",
       "id": 17420604,
@@ -4850,7 +4850,27 @@
       "total_blocking": 0
     },
     "body": "# [API] Consumo de Dados Abertos (Câmara e Senado)\n\n**Labels:** backend, integration, epic: dados, must-have\n\n**Descrição:**\nIntegração com as APIs oficiais para capturar processos com base nos termos cadastrados.\n\n**Histórias de Usuário:**\n- Como consultor, quero que o sistema busque automaticamente novos processos na Câmara e no Senado com base nos meus termos.\n- Como usuário, quero que o sistema atualize minha lista sem duplicar matérias já cadastradas.\n\n**Tarefas:**\n- [ ] Criar módulo `services.py` ou pasta `integrations/`.\n- [ ] Implementar busca na API da Câmara (`/proposicoes`) enviando os termos monitorados via parâmetro.\n- [ ] Implementar busca na API do Senado (`/materia/pesquisa/lista`) enviando os termos.\n- [ ] Lógica para varrer o JSON recebido, verificar se a matéria já existe no banco e criar novos registros em `ProcessoLegislativo`.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/7/reactions",
       "total_count": 0,
@@ -4865,7 +4885,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/7/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },

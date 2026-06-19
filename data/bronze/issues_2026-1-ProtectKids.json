@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-18T09:10:06.893825",
+      "extracted_at": "2026-06-19T09:24:32.896700",
       "file_path": "data/bronze/issues_2026-1-ProtectKids.json",
-      "record_count": 58
+      "record_count": 57
     }
   },
   {
@@ -49,7 +49,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -104,18 +104,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-17T19:45:52Z",
+      "updated_at": "2026-06-18T15:33:45Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-17T19:44:56Z",
-    "updated_at": "2026-06-17T19:44:56Z",
-    "closed_at": null,
+    "updated_at": "2026-06-18T15:14:17Z",
+    "closed_at": "2026-06-18T15:14:17Z",
     "assignee": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -162,7 +162,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nDesacoplar o limite de paginação dos scripts de extração (camara_api.py e senado_api.py), removendo a limitação fixa (hardcoded) diretamente do código-fonte. A paginação passará a ser controlada pela variável de ambiente MAX_PAGES. Isso garante escalabilidade: o ambiente local pode baixar poucas páginas para desenvolvimento ágil, enquanto o servidor de produção baixa bases densas e aprofundadas para alimentar o painel analítico corretamente.\n\n## Prioridade\n- [ ] Baixa\n\n- [ ] Media\n\n- [ ] Alta\n\n- [x] Extrema\n\n## Checklist de Tarefas\n\n- [x] Adicionar instrução os.getenv(\"MAX_PAGES\", 3) no topo dos crawlers da Câmara e do Senado.\n\n- [x] Substituir a paginação fixa (ex: range(1, 4)) pelo limite dinâmico recebido via variável.\n\n- [x] Adicionar MAX_PAGES=3 ao arquivo de configuração local .env e ao arquivo de exemplo (.env.example).\n\n- [x] Atualizar o script de automação .github/workflows/etl-tramitacoes.yml para rodar todo o pipeline (Câmara, Senado e Tramitações) em sequência.\n\n- [x] Configurar o bloco env no GitHub Actions injetando o parâmetro MAX_PAGES: 50 (ou superior) para as execuções de produção quinzenais.\n\n## Notas Adicionais\n\nO fallback local em caso de ausência da variável deve se manter em no máximo 3 páginas para evitar penalizações de IP (rate limit) contra a API de Dados Abertos do Congresso durante os testes diários.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "augustogmedeiros",
+      "id": 75932316,
+      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/augustogmedeiros",
+      "html_url": "https://github.com/augustogmedeiros",
+      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
+      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
+      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
+      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
+      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
+      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/102/reactions",
       "total_count": 0,
@@ -177,7 +197,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/102/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   },
@@ -224,7 +244,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -279,18 +299,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-17T19:45:52Z",
+      "updated_at": "2026-06-18T15:33:45Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-17T19:42:13Z",
-    "updated_at": "2026-06-17T19:42:14Z",
-    "closed_at": null,
+    "updated_at": "2026-06-18T15:14:25Z",
+    "closed_at": "2026-06-18T15:14:25Z",
     "assignee": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -337,7 +357,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nCriação do endpoint GET /analytics/nuvem-palavras no backend (FastAPI) para processar as ementas das proposições em tempo real e retornar as palavras mais frequentes. O processamento utilizará a inteligência artificial do spaCy para limpar pontuações, stop words e consolidar palavras no singular (lematização). O objetivo é fornecer um JSON padronizado e limpo de ruídos legislativos para alimentar de forma chamativa os gráficos e a nuvem de palavras na página inicial do painel.\n\n## Prioridade\n- [ ] Baixa\n\n- [ ] Média\n\n- [ ] Alta\n\n- [ ] Extrema\n\n## Checklist de Tarefas\n\n- [x] Importar e inicializar o modelo de linguagem pt_core_news_sm do spaCy no main.py.\n\n- [x] Criar o endpoint GET /analytics/nuvem-palavras suportando os filtros de ano e tema_nlp.\n\n- [x] Extrair apenas a coluna ementa do banco de dados para garantir alta performance e tempo de resposta curto.\n\n- [x] Implementar filtro customizado (ruidos_legislativos) para remover jargões burocráticos (ex: \"lei\", \"art.\", \"institui\", \"requer\") e meses do ano.\n\n- [x] Formatar o retorno da API no padrão visual de array de objetos: [{\"text\": \"palavra\", \"value\": quantidade}].\n\n## Notas Adicionais\n\nA extração prioriza o campo ementa em vez de texto_integral visando estrito cumprimento do requisito não funcional de performance (< 1.5s), já que o processamento massivo de PDFs travaria a renderização inicial do dashboard para o usuário.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "augustogmedeiros",
+      "id": 75932316,
+      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/augustogmedeiros",
+      "html_url": "https://github.com/augustogmedeiros",
+      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
+      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
+      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
+      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
+      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
+      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/101/reactions",
       "total_count": 0,
@@ -352,7 +392,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/101/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   },
@@ -408,7 +448,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -463,18 +503,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-17T19:45:52Z",
+      "updated_at": "2026-06-18T15:33:45Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-17T05:05:06Z",
-    "updated_at": "2026-06-17T05:05:07Z",
-    "closed_at": null,
+    "updated_at": "2026-06-18T15:14:45Z",
+    "closed_at": "2026-06-18T15:14:45Z",
     "assignee": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -521,7 +561,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\nCriação do endpoint GET /proposicoes/{id}/tramitacoes no backend (FastAPI) para expor a linha do tempo de andamento das leis. Essa rota permitirá que o frontend consulte os dados extraídos pelo pipeline de ETL e renderize o componente de \"Status de Tramitação\" de forma dinâmica, atualizando as etapas conforme elas ocorrem nas casas legislativas.\n\n## Prioridade\n- [ ] Baixa\n- [ ] Media\n- [X] Alta\n- [ ] Extrema\n\n## Checklist de Tarefas\n\n- [ ] Criar o esquema de resposta (Pydantic Model) TramitacaoResponse para padronizar o retorno JSON.\n\n- [ ] Implementar a rota GET /proposicoes/{id_externo}/tramitacoes no FastAPI.\n\n- [ ] Adicionar validação para retornar erro 404 Not Found caso o ID da proposição não exista no banco.\n\n- [ ] Garantir que a consulta SQL (SQLModel) retorne as tramitações ordenadas da mais recente para a mais antiga (ORDER BY data_hora DESC).\n\n- [ ] Validar a rota na documentação automática do Swagger (/docs).\n\n## Notas Adicionais\n\nA busca deve ser feita utilizando o campo id_externo (o identificador oficial da Câmara/Senado), pois é ele que trafega nas URLs e nas chaves estrangeiras.\n\nÉ importante retornar apenas as informações necessárias para a tela (data, órgão e descrição), não sendo preciso devolver o ID interno da tramitação para o frontend.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "augustogmedeiros",
+      "id": 75932316,
+      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/augustogmedeiros",
+      "html_url": "https://github.com/augustogmedeiros",
+      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
+      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
+      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
+      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
+      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
+      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/97/reactions",
       "total_count": 0,
@@ -536,7 +596,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/97/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   },
@@ -647,11 +707,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 6,
+      "open_issues": 0,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-17T19:45:52Z",
+      "updated_at": "2026-06-18T15:33:45Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -11422,210 +11482,6 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/4/timeline",
     "performed_via_github_app": null,
     "state_reason": "completed",
-    "pinned_comment": null,
-    "repo_name": "2026-1-ProtectKids"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3/events",
-    "html_url": "https://github.com/unb-mds/2026-1-ProtectKids/issues/3",
-    "id": 4187029620,
-    "node_id": "I_kwDOR0zO1M75kQB0",
-    "number": 3,
-    "title": "Estudo sobre Product Owner",
-    "user": {
-      "login": "augustogmedeiros",
-      "id": 75932316,
-      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/augustogmedeiros",
-      "html_url": "https://github.com/augustogmedeiros",
-      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
-      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
-      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
-      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
-      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
-      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10562324897,
-        "node_id": "LA_kwDOR0zO1M8AAAACdZBJoQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/labels/estudo",
-        "name": "estudo",
-        "color": "6c73fa",
-        "default": false,
-        "description": ""
-      },
-      {
-        "id": 10581221413,
-        "node_id": "LA_kwDOR0zO1M8AAAACdrCgJQ",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/labels/Metodologia",
-        "name": "Metodologia",
-        "color": "23bb67",
-        "default": false,
-        "description": ""
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [
-      {
-        "login": "augustogmedeiros",
-        "id": 75932316,
-        "node_id": "MDQ6VXNlcjc1OTMyMzE2",
-        "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/augustogmedeiros",
-        "html_url": "https://github.com/augustogmedeiros",
-        "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
-        "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
-        "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
-        "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
-        "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
-        "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
-    "milestone": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/milestones/1",
-      "html_url": "https://github.com/unb-mds/2026-1-ProtectKids/milestone/1",
-      "labels_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/milestones/1/labels",
-      "id": 15357602,
-      "node_id": "MI_kwDOR0zO1M4A6lai",
-      "number": 1,
-      "title": "Sprint 00 - Estudos Gerais",
-      "description": "Issues de estudo da primeira sprint do projeto",
-      "creator": {
-        "login": "augustogmedeiros",
-        "id": 75932316,
-        "node_id": "MDQ6VXNlcjc1OTMyMzE2",
-        "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/augustogmedeiros",
-        "html_url": "https://github.com/augustogmedeiros",
-        "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
-        "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
-        "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
-        "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
-        "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
-        "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "open_issues": 0,
-      "closed_issues": 8,
-      "state": "closed",
-      "created_at": "2026-03-30T17:49:40Z",
-      "updated_at": "2026-04-14T03:24:45Z",
-      "due_on": "2026-04-06T00:00:00Z",
-      "closed_at": "2026-04-14T03:24:45Z"
-    },
-    "comments": 0,
-    "created_at": "2026-04-01T13:39:26Z",
-    "updated_at": "2026-04-05T14:26:42Z",
-    "closed_at": "2026-04-05T14:26:42Z",
-    "assignee": {
-      "login": "augustogmedeiros",
-      "id": 75932316,
-      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/augustogmedeiros",
-      "html_url": "https://github.com/augustogmedeiros",
-      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
-      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
-      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
-      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
-      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
-      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": {
-      "id": 20193710,
-      "node_id": "IT_kwDOCH8E_c4BNCGu",
-      "name": "Task",
-      "description": "A specific piece of work",
-      "color": "yellow",
-      "created_at": "2024-02-18T04:46:03Z",
-      "updated_at": "2024-07-26T15:22:11Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "# 📋 Descrição\nEstudar as técnicas específicas que o Product Owner utiliza para transformar a visão do projeto em tarefas executáveis, focando na criação de um backlog saudável e na escrita de requisitos centrados no usuário.\n\n## ⚠️ Prioridade\n- [ ] Baixa\n\n- [ ] Média\n\n- [ ] Alta\n\n- [X] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Estudar a técnica de User Story Mapping para visualizar a jornada do usuário\n\n- [ ] Aprender o padrão INVEST para criar boas histórias de usuário (Independent, Negotiable, Valuable, Estimable, Small, Testable)\n\n- [ ] Pesquisar técnicas de Priorização de Backlog (ex: MoSCoW ou Custo do Atraso)\n\n- [ ] Definir o modelo de História de Usuário e Critérios de Aceite que o grupo vai seguir\n\n- [ ] Estudar o conceito de MVP (Mínimo Produto Viável) aplicado ao nosso monitoramento legislativo\n\n- [ ] Entender a diferença entre o Product Backlog (visão geral) e o Sprint Backlog (foco da semana)\n\n- [ ] Realizar e revisar a documentação final na Wiki ou pasta /docs\n\n## 🧠 Notas Adicionais\nGuia INVEST para User Stories: [https://www.treinaweb.com.br/blog/o-que-e-invest-nas-user-stories](https://www.google.com/search?q=https://www.treinaweb.com.br/blog/o-que-e-invest-nas-user-stories)\n\nTécnica MoSCoW de priorização: https://www.voitto.com.br/blog/artigo/metodo-moscow",
-    "closed_by": {
-      "login": "augustogmedeiros",
-      "id": 75932316,
-      "node_id": "MDQ6VXNlcjc1OTMyMzE2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/75932316?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/augustogmedeiros",
-      "html_url": "https://github.com/augustogmedeiros",
-      "followers_url": "https://api.github.com/users/augustogmedeiros/followers",
-      "following_url": "https://api.github.com/users/augustogmedeiros/following{/other_user}",
-      "gists_url": "https://api.github.com/users/augustogmedeiros/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/augustogmedeiros/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/augustogmedeiros/subscriptions",
-      "organizations_url": "https://api.github.com/users/augustogmedeiros/orgs",
-      "repos_url": "https://api.github.com/users/augustogmedeiros/repos",
-      "events_url": "https://api.github.com/users/augustogmedeiros/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/augustogmedeiros/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-ProtectKids/issues/3/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "not_planned",
     "pinned_comment": null,
     "repo_name": "2026-1-ProtectKids"
   }
