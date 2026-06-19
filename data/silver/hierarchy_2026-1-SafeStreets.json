@@ -2,7 +2,7 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-18T10:06:37.026332",
+  "extracted_at": "2026-06-19T10:14:50.117273",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -136,10 +136,44 @@
         "children": []
       },
       {
+        "name": ".claude",
+        "type": "directory",
+        "path": "backend/.claude",
+        "children": []
+      },
+      {
+        "name": "skills",
+        "type": "directory",
+        "path": "backend/.claude/skills",
+        "children": []
+      },
+      {
+        "name": "run-endpoints",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-endpoints",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4969,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-endpoints/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4975,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-endpoints/driver.py"
+      },
+      {
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 23,
+        "size": 38,
         "extension": ".gitignore",
         "path": "backend/.gitignore"
       },
@@ -150,16 +184,32 @@
         "children": []
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/__init__.py"
+      },
+      {
         "name": "core",
         "type": "directory",
         "path": "backend/app/core",
         "children": []
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/core/__init__.py"
+      },
+      {
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 518,
+        "size": 700,
         "extension": ".py",
         "path": "backend/app/core/database.py"
       },
@@ -178,10 +228,18 @@
         "path": "backend/app/integrations/.gitignore"
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/integrations/__init__.py"
+      },
+      {
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 310,
+        "size": 357,
         "extension": ".py",
         "path": "backend/app/main.py"
       },
@@ -190,6 +248,14 @@
         "type": "directory",
         "path": "backend/app/models",
         "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 71,
+        "extension": ".py",
+        "path": "backend/app/models/__init__.py"
       },
       {
         "name": "ocorrencia.py",
@@ -214,10 +280,34 @@
         "path": "backend/app/repositories/.gitignore"
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/repositories/__init__.py"
+      },
+      {
+        "name": "ocorrencias.py",
+        "type": "file",
+        "language": "Python",
+        "size": 621,
+        "extension": ".py",
+        "path": "backend/app/repositories/ocorrencias.py"
+      },
+      {
         "name": "routes",
         "type": "directory",
         "path": "backend/app/routes",
         "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/routes/__init__.py"
       },
       {
         "name": "health.py",
@@ -226,6 +316,14 @@
         "size": 156,
         "extension": ".py",
         "path": "backend/app/routes/health.py"
+      },
+      {
+        "name": "ocorrencias.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1526,
+        "extension": ".py",
+        "path": "backend/app/routes/ocorrencias.py"
       },
       {
         "name": "schemas",
@@ -242,6 +340,22 @@
         "path": "backend/app/schemas/.gitignore"
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/schemas/__init__.py"
+      },
+      {
+        "name": "ocorrencia.py",
+        "type": "file",
+        "language": "Python",
+        "size": 882,
+        "extension": ".py",
+        "path": "backend/app/schemas/ocorrencia.py"
+      },
+      {
         "name": "services",
         "type": "directory",
         "path": "backend/app/services",
@@ -254,6 +368,22 @@
         "size": 0,
         "extension": ".gitignore",
         "path": "backend/app/services/.gitignore"
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/services/__init__.py"
+      },
+      {
+        "name": "ocorrencias.py",
+        "type": "file",
+        "language": "Python",
+        "size": 878,
+        "extension": ".py",
+        "path": "backend/app/services/ocorrencias.py"
       },
       {
         "name": "docker-compose.yml",
@@ -292,6 +422,14 @@
         "size": 279,
         "extension": ".py",
         "path": "backend/tests/test_main.py"
+      },
+      {
+        "name": "test_ocorrencias.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2023,
+        "extension": ".py",
+        "path": "backend/tests/test_ocorrencias.py"
       },
       {
         "name": "docs",
@@ -1984,7 +2122,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-18T10:09:39.230012",
+    "extracted_at": "2026-06-19T10:17:49.895741",
     "file_path": "data/silver/hierarchy_2026-1-SafeStreets.json"
   }
 }
