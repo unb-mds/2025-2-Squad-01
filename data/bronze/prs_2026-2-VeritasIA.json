@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-19T09:24:23.341440",
+      "extracted_at": "2026-06-20T08:17:10.589695",
       "file_path": "data/bronze/prs_2026-2-VeritasIA.json",
       "record_count": 6
     }
@@ -49,7 +49,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -125,18 +125,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 4,
+      "open_issues": 1,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2026-06-12T00:52:41Z",
-      "updated_at": "2026-06-18T21:27:44Z",
+      "updated_at": "2026-06-19T19:34:03Z",
       "due_on": "2026-06-18T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-18T21:27:44Z",
-    "updated_at": "2026-06-18T21:30:08Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T19:33:44Z",
+    "closed_at": "2026-06-19T19:33:44Z",
     "assignee": {
       "login": "jadsonRleandro",
       "id": 160337733,
@@ -168,10 +168,30 @@
       "html_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/50",
       "diff_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/50.diff",
       "patch_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/50.patch",
-      "merged_at": null
+      "merged_at": "2026-06-19T19:33:44Z"
     },
     "body": " Issue criada para a implementação: #41 \r\n\r\n# Arquivos adicionados:\r\n\r\n- .github/workflows/\r\n  - LangChain.yml\r\n- backend/llm/\r\n  - LangChain.py\r\n  - LangChain_Controller.py\r\n  - news_Classification.py\r\n  - news-llm.json\r\n\r\n# Como Testar\r\n- Alterar branch:\r\n  > git checkout LLM\r\n\r\n- Crie um arquivo .env dentro de llm/:\r\n  > GOOGLE_API_KEY =\"Sua Key do Gemini\"\r\n\r\n- Instalar dependências:\r\n  - pip install langchain\r\n  - pip install langchain-google-genai\r\n  - pip install python-dotenv\r\n\r\n## Executar:\r\n> <2026-2-VeritasIA> python3 .backend/llm/LangChain_Controller.py \r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "SchneiderCode1",
+      "id": 165057013,
+      "node_id": "U_kgDOCdaR9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165057013?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SchneiderCode1",
+      "html_url": "https://github.com/SchneiderCode1",
+      "followers_url": "https://api.github.com/users/SchneiderCode1/followers",
+      "following_url": "https://api.github.com/users/SchneiderCode1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SchneiderCode1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SchneiderCode1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SchneiderCode1/subscriptions",
+      "organizations_url": "https://api.github.com/users/SchneiderCode1/orgs",
+      "repos_url": "https://api.github.com/users/SchneiderCode1/repos",
+      "events_url": "https://api.github.com/users/SchneiderCode1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SchneiderCode1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/50/reactions",
       "total_count": 0,
@@ -334,7 +354,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -410,18 +430,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 4,
+      "open_issues": 1,
+      "closed_issues": 9,
       "state": "open",
       "created_at": "2026-06-12T00:52:41Z",
-      "updated_at": "2026-06-18T21:27:44Z",
+      "updated_at": "2026-06-19T19:34:03Z",
       "due_on": "2026-06-18T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-14T18:57:01Z",
-    "updated_at": "2026-06-15T13:43:41Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T19:34:03Z",
+    "closed_at": "2026-06-19T19:34:03Z",
     "assignee": {
       "login": "jadsonRleandro",
       "id": 160337733,
@@ -453,10 +473,30 @@
       "html_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/47",
       "diff_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/47.diff",
       "patch_url": "https://github.com/unb-mds/2026-2-VeritasIA/pull/47.patch",
-      "merged_at": null
+      "merged_at": "2026-06-19T19:34:03Z"
     },
     "body": "issue relacionada: [Backend/ Scrapy] Arrumar Bot Scrapy #40\r\n\r\n# Arquivos alterados:\r\n\r\n- metropoles.py\r\n- g1Spider.py\r\n- r7spider.py\r\n- cnnspider.py\r\n- executar-scrapy.yml\r\n\r\n# Como Testar\r\n\r\nVá na opção de Actions e execute o \"executor scraper\" selecionando a branch \"Refactor/web scraping\" como referencia.\r\n\r\n<img width=\"1197\" height=\"93\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a91a7881-f1f4-4800-8991-ae523a6c3795\" />\r\n\r\n---\r\n\r\n<img width=\"1839\" height=\"946\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e44e773c-9f9b-4ecf-8172-bc2ea93b827a\" />\r\n\r\n---\r\n\r\n<img width=\"328\" height=\"140\" alt=\"image\" src=\"https://github.com/user-attachments/assets/986e8873-63b5-4918-a0d0-876d0690926e\" />\r\n\r\n\r\n---\r\n\r\n# Resultado Esperado\r\n\r\nCommit realizado no caminho \"scrapers/resultados\"\r\n\r\n## Exemplo:\r\n\r\n<img width=\"1509\" height=\"308\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1cd75eac-be18-462a-9b65-2a86541db3af\" />\r\n\r\n\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "SchneiderCode1",
+      "id": 165057013,
+      "node_id": "U_kgDOCdaR9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165057013?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SchneiderCode1",
+      "html_url": "https://github.com/SchneiderCode1",
+      "followers_url": "https://api.github.com/users/SchneiderCode1/followers",
+      "following_url": "https://api.github.com/users/SchneiderCode1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SchneiderCode1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SchneiderCode1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SchneiderCode1/subscriptions",
+      "organizations_url": "https://api.github.com/users/SchneiderCode1/orgs",
+      "repos_url": "https://api.github.com/users/SchneiderCode1/repos",
+      "events_url": "https://api.github.com/users/SchneiderCode1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SchneiderCode1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/47/reactions",
       "total_count": 0,

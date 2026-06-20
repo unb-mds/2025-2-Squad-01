@@ -1,10 +1,115 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-19T09:24:34.021853",
+      "extracted_at": "2026-06-20T08:17:22.254756",
       "file_path": "data/bronze/issues_2026-1-P.R.I.S.M.A.json",
-      "record_count": 41
+      "record_count": 42
     }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68",
+    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A",
+    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68/events",
+    "html_url": "https://github.com/unb-mds/2026-1-P.R.I.S.M.A/issues/68",
+    "id": 4704044202,
+    "node_id": "I_kwDOR7SjFM8AAAABGGIEqg",
+    "number": 68,
+    "title": "chore(qa): Configurar ambiente de testes End-to-End (E2E) com Playwright",
+    "user": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 11284233991,
+        "node_id": "LA_kwDOR7SjFM8AAAACoJe_Bw",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/qa",
+        "name": "qa",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
+      {
+        "id": 11284233993,
+        "node_id": "LA_kwDOR7SjFM8AAAACoJe_CQ",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/testing",
+        "name": "testing",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
+      {
+        "id": 11284233994,
+        "node_id": "LA_kwDOR7SjFM8AAAACoJe_Cg",
+        "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/labels/infraestrutura",
+        "name": "infraestrutura",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-06-19T23:01:37Z",
+    "updated_at": "2026-06-19T23:01:37Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "sub_issues_summary": {
+      "total": 0,
+      "completed": 0,
+      "percent_completed": 0
+    },
+    "issue_dependencies_summary": {
+      "blocked_by": 0,
+      "total_blocked_by": 0,
+      "blocking": 0,
+      "total_blocking": 0
+    },
+    "body": "**Contexto:**\nGarantir a qualidade das entregas nas próximas fases da Release 2 implementando testes E2E básicos.\n\n**Critérios de Aceite:**\n- [ ] Instalar as dependências do `playwright` utilizando o `uv`.\n- [ ] Criar a estrutura de pastas para os testes (`tests/e2e/`).\n- [ ] Configurar fixtures básicas no `conftest.py` para rodar o Playwright integrado ao servidor de testes do Django (`LiveServerTestCase` ou `pytest-django`).\n- [ ] Escrever um teste E2E básico de \"Sanidade\" (Sanity Check) que abre a Home Page e verifica se o título carregou com sucesso.",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/68/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "pinned_comment": null,
+    "repo_name": "2026-1-P.R.I.S.M.A"
   },
   {
     "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/66",
@@ -16,7 +121,7 @@
     "id": 4661713826,
     "node_id": "I_kwDOR7SjFM8AAAABFdwbog",
     "number": 66,
-    "title": "refactor(ui): ajustar configurações de sistema e gatilhos de alerta",
+    "title": "refactor(ui): adicionar painel de configuração para alertas de prazos e estagnação",
     "user": {
       "login": "delvale412",
       "id": 122396991,
@@ -45,7 +150,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-15T03:07:05Z",
-    "updated_at": "2026-06-15T03:07:05Z",
+    "updated_at": "2026-06-19T22:49:38Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -63,7 +168,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "**Contexto:**\nA página `usuario.html` continha notificações políticas genéricas e o perfil de um consultor. Ela deve refletir as ferramentas do gerenciandor e o motor de prazos.\n\n**Critérios de Aceite:**\n- [ ] Atualizar a tabela de notificações para \"Roteamento de Alertas de Tempo\" (Prazos críticos, estagnação, mudança de velocidade).\n- [ ] Modificar o bloco de segurança da conta para \"Controle do Banco de Dados / Sincronização de Tempos\".\n- [ ] Substituir os \"Filtros Inteligentes\" por \"Filtros Frequentes de Tempo\".\n- [ ] Atualizar os logs do sistema para exibir as ações do motor de prazos (ex: recálculo de limites regimentais).",
+    "body": "**Contexto:**\nA página `usuario.html` continha notificações políticas genéricas e o perfil de um consultor. Ela deve refletir as configurações dos alertas de prazos.\n\n**Critérios de Aceite:**\n- [ ] Atualizar a tabela de notificações para permitir gerenciar \"Alertas de Estagnação\" e \"Prazos Críticos\".\n- [ ] Substituir os \"Filtros Inteligentes\" por um painel de \"Configurações de Alertas de Tempo\".\n- [ ] Exibir de forma clara as ações e regras dos alertas para o usuário final.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/66/reactions",
@@ -116,14 +221,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-15T03:05:24Z",
-    "updated_at": "2026-06-15T03:05:24Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T22:49:34Z",
+    "closed_at": "2026-06-19T22:49:34Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -141,7 +246,27 @@
       "total_blocking": 0
     },
     "body": "**Contexto:**\nA tela `votacoes.html` exibia dispersão partidária e regional. Essa tela deve virar o \"Cronômetro\", controlando o tempo gasto em sessões ao vivo.\n\n**Critérios de Aceite:**\n- [ ] Remover o mapa do Brasil e a contagem de quórum físico.\n- [ ] Adicionar o cronômetro principal mostrando o limite da sessão e o tempo gasto atual.\n- [ ] Implementar as métricas de divisão de tempo: \"Tempo de Debate\", \"Tempo de Obstrução\" e \"Votação Efetiva\".\n- [ ] Adaptar a lista de blocos partidários para exibir o \"Consumo de Cota de Tempo\" em vez de número de parlamentares.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/65/reactions",
       "total_count": 0,
@@ -156,7 +281,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/65/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -170,7 +295,7 @@
     "id": 4661705607,
     "node_id": "I_kwDOR7SjFM8AAAABFdv7hw",
     "number": 64,
-    "title": "refactor(ui): focar listagem e timeline de proposições no calendário regimental",
+    "title": "refactor(ui): focar listagem e timeline de proposições no controle de SLA",
     "user": {
       "login": "delvale412",
       "id": 122396991,
@@ -199,7 +324,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-15T03:04:56Z",
-    "updated_at": "2026-06-15T03:04:56Z",
+    "updated_at": "2026-06-19T22:49:44Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -217,7 +342,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "**Contexto:**\nA tela de proposições (`proposicoes.html`) focava em autoria e votos. A página deve agora gerenciar \"relógios\" e o desdobramento do tempo de cada matéria.\n\n**Critérios de Aceite:**\n- [ ] Atualizar os filtros laterais para buscas por \"Ritmo de Trâmite\" e \"Status Temporal\".\n- [ ] Substituir as colunas da tabela principal (Autor, Última Movimentação) por \"Tempo Acumulado\" e \"Prazo Regimental\".\n- [ ] Refatorar a visualização expandida (linha do tempo) para exibir o tempo gasto (em dias ou horas) em cada fase do ciclo, removendo placares de votação.",
+    "body": "**Contexto:**\nA tela de proposições (`proposicoes.html`) focava em autoria e votos. A página deve agora gerenciar \"relógios\" e o desdobramento do tempo de cada matéria.\n\n**Critérios de Aceite:**\n- [ ] Manter a coluna \"Última Movimentação\", mas adicionar \"Tempo Acumulado\" e \"Status de SLA\".\n- [ ] Atualizar os filtros laterais para buscas por \"Ritmo de Trâmite\" e \"Estagnadas\".\n- [ ] Refatorar a visualização expandida (linha do tempo) para exibir o tempo gasto (em dias ou horas) em cada fase do ciclo, focando no andamento da matéria.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/64/reactions",
@@ -276,7 +401,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-15T03:04:32Z",
-    "updated_at": "2026-06-15T03:04:32Z",
+    "updated_at": "2026-06-19T22:49:48Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -294,7 +419,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "**Contexto:**\nA gestão de proposições favoritas (`favoritos.html`) utilizava filtros por temas (Educação, Saúde). O novo direcionamento exige que o agrupamento seja feito pelo estado temporal da matéria.\n\n**Critérios de Aceite:**\n- [ ] Substituir os filtros de \"Temas\" por filtros de tempo (Em Urgência, Estagnados, Prazos Curtos).\n- [ ] Atualizar os cards das proposições para exibir \"Dias em Trâmite\" e \"Tempo restante de emendas\".\n- [ ] Mudar os widgets laterais para resumir o status de velocidade e alertas de prazos críticos.",
+    "body": "**Contexto:**\nA gestão de proposições favoritas (`favoritos.html`) utilizava filtros por temas (Educação, Saúde). O novo direcionamento exige que o agrupamento seja feito pelo estado temporal da matéria.\n\n**Critérios de Aceite:**\n- [ ] Substituir os filtros de \"Temas\" por filtros de tempo, como \"Em Urgência\" e \"Sem movimentação há 30 dias\".\n- [ ] Atualizar os cards das proposições para exibir \"Dias em Trâmite\" e \"SLA Restante\".\n- [ ] Mudar os widgets laterais para resumir o status de velocidade e alertas de prazos críticos.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/63/reactions",
@@ -353,7 +478,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-15T03:03:46Z",
-    "updated_at": "2026-06-15T03:03:46Z",
+    "updated_at": "2026-06-19T22:50:10Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -371,7 +496,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "**Contexto:**\nO `dashboard.html` possuía informações de impacto econômico e conformidade técnica que fogem da proposta do Prisma. O painel deve ser o centro de controle do tempo médio e da velocidade das aprovações.\n\n**Critérios de Aceite:**\n- [ ] Alterar os 4 cards principais para refletir: Tempo Médio de Trâmite, Trâmite em Urgência, Proposições Estagnadas e Atrasos de Relatoria.\n- [ ] Modificar a seção \"Recém Concluídas\" para destacar a duração total da proposição e a fase mais longa do processo.\n- [ ] Atualizar os gráficos e comparativos para focar em \"Dias Médios por Comissão\" e velocidade comparada.",
+    "body": "**Contexto:**\nO `dashboard.html` possuía informações de impacto econômico e conformidade técnica que fogem da proposta do Prisma. O painel deve ser o centro de controle do tempo médio e da velocidade das tramitações.\n\n**Critérios de Aceite:**\n- [ ] Alterar os 4 cards principais para refletir métricas temporais, como: Tempo Médio de Trâmite, SLA de Relatoria, Proposições Estagnadas.\n- [ ] Modificar a seção \"Recém Concluídas\" para destacar a duração total da proposição (em dias).\n- [ ] Atualizar os gráficos para focar em \"Dias Médios por Comissão\" em vez de dados irrelevantes ao tempo.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/62/reactions",
@@ -430,7 +555,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-15T03:03:05Z",
-    "updated_at": "2026-06-15T03:03:05Z",
+    "updated_at": "2026-06-19T22:50:01Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -448,7 +573,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "**Contexto:**\nA página de alertas (`alertas.html`) exibia métricas irrelevantes para o escopo atual (quórum, menções). Ela deve ser refatorada para expor gargalos de tempo, prazos esgotando e mudanças de ritmo legislativo.\n\n**Critérios de Aceite:**\n- [ ] Substituir os cards de topo (Urgência, Quórum, Menções) por \"Urgência Temporal\", \"Tempo em Comissão\" e \"Alerta de Estagnação\".\n- [ ] Atualizar o feed da linha do tempo para reportar contagens regressivas, atrasos e acelerações de trâmite.",
+    "body": "**Contexto:**\nA página de alertas (`alertas.html`) exibia métricas irrelevantes para o escopo atual (quórum, menções). Ela deve ser refatorada para expor gargalos de tempo, prazos esgotando e mudanças de ritmo legislativo.\n\n**Critérios de Aceite:**\n- [ ] Substituir os cards de topo por alertas relevantes: \"Urgência Temporal\", \"Tempo em Comissão\" e \"Alerta de Estagnação\".\n- [ ] Atualizar a lista da linha do tempo para reportar contagens regressivas de SLAs e dias estagnados, em vez de informações não temporais.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/61/reactions",
@@ -758,7 +883,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -786,8 +911,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-06T19:16:18Z",
-    "updated_at": "2026-06-06T19:22:09Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T22:25:24Z",
+    "closed_at": "2026-06-19T22:25:24Z",
     "assignee": {
       "login": "CauaoClemente",
       "id": 236893424,
@@ -825,7 +950,27 @@
       "total_blocking": 0
     },
     "body": "Configurar e integrar linters, formatadores de código e ferramentas de pre-commit no repositório para garantir padronização e qualidade no código.\n\nTarefas sugeridas:\n- Selecionar e adicionar linters adequados (por exemplo, ESLint, Flake8)\n- Selecionar e adicionar formatadores automáticos (por exemplo, Prettier, Black)\n- Configurar arquivos de configuração necessários para linters e formatadores\n- Integrar ferramentas de verificação no fluxo de pre-commit usando pre-commit\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/55/reactions",
       "total_count": 0,
@@ -840,7 +985,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/55/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -3148,14 +3293,14 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-29T15:44:37Z",
-    "updated_at": "2026-05-25T04:50:30Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T22:49:29Z",
+    "closed_at": "2026-06-19T22:49:29Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -3173,7 +3318,27 @@
       "total_blocking": 0
     },
     "body": "# [Avançado] Mapa Interativo Geográfico\n\n**Labels:** frontend, data-viz, epic: mapeamento, complex\n\n**Descrição:**\nMapa interativo mostrando densidade legislativa por Unidade Federativa.\n\n**Histórias de Usuário:**\n- Como pesquisador, quero usar um mapa interativo para cruzar dados legislativos de forma visual e geográfica.\n- Como usuário, quero consultar a densidade legislativa por estado para enxergar padrões regionais.\n\n**Tarefas:**\n- [ ] Extrair metadados de Unidade Federativa (UF) dos autores via API.\n- [ ] Implementar Leaflet.js para exibição de densidade legislativa por estado.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/20/reactions",
       "total_count": 0,
@@ -3188,7 +3353,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/20/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -3262,7 +3427,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -3288,10 +3453,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-29T15:44:22Z",
-    "updated_at": "2026-06-10T16:01:41Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T22:49:24Z",
+    "closed_at": "2026-06-19T22:49:24Z",
     "assignee": {
       "login": "otheomls",
       "id": 276396387,
@@ -3329,7 +3494,27 @@
       "total_blocking": 0
     },
     "body": "# [Avançado] Heatmap de Setores e Gargalos\n\n**Labels:** frontend, data-viz, epic: dashboard, complex\n\n**Descrição:**\nFuncionalidade de visualização que mostra gargalos por setor/ comissão.\n\n**Histórias de Usuário:**\n- Como estrategista, quero visualizar um heatmap de setores para identificar os gargalos do processo legislativo.\n- Como usuário, quero comparar a volumetria de processos entre comissões de forma rápida e visual.\n\n**Tarefas:**\n- [ ] Preparar endpoint/contexto JSON com volumetria de processos agrupados por comissões.\n- [ ] Integrar biblioteca Chart.js/ApexCharts para renderizar o mapa de calor.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/19/reactions",
       "total_count": 0,
@@ -3344,7 +3529,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/19/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "not_planned",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -4620,55 +4805,13 @@
     ],
     "state": "open",
     "locked": false,
-    "assignees": [
-      {
-        "login": "kaikysousa",
-        "id": 17420604,
-        "node_id": "MDQ6VXNlcjE3NDIwNjA0",
-        "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kaikysousa",
-        "html_url": "https://github.com/kaikysousa",
-        "followers_url": "https://api.github.com/users/kaikysousa/followers",
-        "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
-        "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
-        "repos_url": "https://api.github.com/users/kaikysousa/repos",
-        "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      }
-    ],
+    "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-29T15:40:23Z",
-    "updated_at": "2026-06-06T19:21:02Z",
+    "updated_at": "2026-06-19T22:25:51Z",
     "closed_at": null,
-    "assignee": {
-      "login": "kaikysousa",
-      "id": 17420604,
-      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/kaikysousa",
-      "html_url": "https://github.com/kaikysousa",
-      "followers_url": "https://api.github.com/users/kaikysousa/followers",
-      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
-      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
-      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
-      "repos_url": "https://api.github.com/users/kaikysousa/repos",
-      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
+    "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
     "type": null,
@@ -5318,7 +5461,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -5346,8 +5489,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-29T15:38:03Z",
-    "updated_at": "2026-06-13T01:50:00Z",
-    "closed_at": null,
+    "updated_at": "2026-06-19T22:26:56Z",
+    "closed_at": "2026-06-19T22:26:56Z",
     "assignee": {
       "login": "otheomls",
       "id": 276396387,
@@ -5385,7 +5528,27 @@
       "total_blocking": 0
     },
     "body": "# [Auth] Configuração de Sistema de Usuários e Login\n\n**Labels:** backend, auth, epic: infra, must-have\n\n**Descrição:**\nImplementar o sistema de autenticação padrão do Django para permitir que cada consultor tenha seu próprio ambiente de monitoramento.\n\n**Histórias de Usuário:**\n- Como usuário, quero acessar o sistema com segurança para visualizar apenas minhas informações.\n- Como consultor, quero iniciar e encerrar sessão para proteger meu ambiente de monitoramento.\n\n**Tarefas:**\n- [ ] Configurar `LOGIN_URL` e `LOGIN_REDIRECT_URL` no `settings.py`.\n- [ ] Criar templates base de `login.html` e `signup.html`.\n- [ ] Implementar as views de Login, Logout e Cadastro (usando as views nativas do Django).\n- [ ] Aplicar restrição de acesso (`LoginRequiredMixin` ou `@login_required`) nas rotas que exigem usuário logado.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "kaikysousa",
+      "id": 17420604,
+      "node_id": "MDQ6VXNlcjE3NDIwNjA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17420604?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kaikysousa",
+      "html_url": "https://github.com/kaikysousa",
+      "followers_url": "https://api.github.com/users/kaikysousa/followers",
+      "following_url": "https://api.github.com/users/kaikysousa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kaikysousa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kaikysousa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kaikysousa/subscriptions",
+      "organizations_url": "https://api.github.com/users/kaikysousa/orgs",
+      "repos_url": "https://api.github.com/users/kaikysousa/repos",
+      "events_url": "https://api.github.com/users/kaikysousa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kaikysousa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/4/reactions",
       "total_count": 0,
@@ -5400,7 +5563,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/4/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },

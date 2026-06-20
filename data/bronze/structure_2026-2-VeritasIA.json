@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-2-VeritasIA",
   "branch": "main",
-  "sha": "14711a7f4db001aff46d6bd0e0884cd13be8b32c",
+  "sha": "a0ed60d2f27ba5cc01f8a551529ee40d1a8444f0",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "e328dd3abe3091c29d831398f140f7cfbdd04a28",
+      "sha": "c0793cc06793101a8ec20bd7a3d2de5fb2d2fd9e",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "afc238bfc41ade23102cab3952ac393ee6633619",
+      "sha": "03e7de8481e02615fc8dfa8d4ac292c0c83e861d",
       "mode": "040000",
       "children": []
     },
@@ -24,10 +24,20 @@
       "name": "execute-scrapy.yml",
       "path": ".github/workflows/execute-scrapy.yml",
       "type": "file",
-      "sha": "b4ee840a1ef2094137102d6c3f2a4876b972a806",
+      "sha": "9390c03d2aae9cd4be327525ad71abf7c376394e",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1351,
+      "size": 1304,
+      "is_binary": false
+    },
+    {
+      "name": "langchaim.yml",
+      "path": ".github/workflows/langchaim.yml",
+      "type": "file",
+      "sha": "cb020a440bc39b11ac74f9060f6fca6c2a042047",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1466,
       "is_binary": false
     },
     {
@@ -48,60 +58,6 @@
       "mode": "100644",
       "extension": ".gitignore",
       "size": 72,
-      "is_binary": false
-    },
-    {
-      "name": "BackEnd",
-      "path": "BackEnd",
-      "type": "directory",
-      "sha": "547699100d4c6128fddc13bad18a82d488ad2e0f",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "app",
-      "path": "BackEnd/app",
-      "type": "directory",
-      "sha": "12fd5a74af7a79d06675a984b652d21a09162984",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "__pycache__",
-      "path": "BackEnd/app/__pycache__",
-      "type": "directory",
-      "sha": "267f57cfe6c02bd689d0984003e6164e9e393a87",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "main.cpython-314.pyc",
-      "path": "BackEnd/app/__pycache__/main.cpython-314.pyc",
-      "type": "file",
-      "sha": "928d153de74993327d5ffcf4922a1c6af7a1ed53",
-      "mode": "100644",
-      "extension": ".pyc",
-      "size": 941,
-      "is_binary": false
-    },
-    {
-      "name": "database.py",
-      "path": "BackEnd/app/database.py",
-      "type": "file",
-      "sha": "b95d27018fc775a969a1804b21352086d5c01b4f",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 945,
-      "is_binary": false
-    },
-    {
-      "name": "main.py",
-      "path": "BackEnd/app/main.py",
-      "type": "file",
-      "sha": "b84c3d2ad78225551c771763a97aaa613e336618",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 778,
       "is_binary": false
     },
     {
@@ -612,7 +568,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "b816ca27cd8d4a4b105603ee2f7c736214165183",
+      "sha": "facb64f09f6b67800def0e6c303efeab2fa84d83",
       "mode": "040000",
       "children": []
     },
@@ -658,7 +614,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "38ab8693db556cb6b7c06eb5fca915f89f0ed8c8",
+      "sha": "9f8f144c38d104ac77949e91430d4a403deaa671",
       "mode": "040000",
       "children": []
     },
@@ -843,6 +799,16 @@
       "is_binary": false
     },
     {
+      "name": "database.py",
+      "path": "backend/app/database.py",
+      "type": "file",
+      "sha": "b95d27018fc775a969a1804b21352086d5c01b4f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 945,
+      "is_binary": false
+    },
+    {
       "name": "domain",
       "path": "backend/app/domain",
       "type": "directory",
@@ -876,6 +842,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/app/main.py",
+      "type": "file",
+      "sha": "b84c3d2ad78225551c771763a97aaa613e336618",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 778,
       "is_binary": false
     },
     {
@@ -925,6 +901,54 @@
       "is_binary": false
     },
     {
+      "name": "llm",
+      "path": "backend/llm",
+      "type": "directory",
+      "sha": "d427e25cfb821d248264975489c44ffe03262da0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "langChain.py",
+      "path": "backend/llm/langChain.py",
+      "type": "file",
+      "sha": "02b9f28885eca705ebca0269df9e4fc1c60a9046",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1621,
+      "is_binary": false
+    },
+    {
+      "name": "langChain_Controller.py",
+      "path": "backend/llm/langChain_Controller.py",
+      "type": "file",
+      "sha": "af189579bf02ad153399f84ea1940c31a03a5dcd",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1670,
+      "is_binary": false
+    },
+    {
+      "name": "news-llm.json",
+      "path": "backend/llm/news-llm.json",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "news_Classification.py",
+      "path": "backend/llm/news_Classification.py",
+      "type": "file",
+      "sha": "158d448f43b7e2528bb4655c48b37cee39079f08",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 135,
+      "is_binary": false
+    },
+    {
       "name": "teste_conexao.py",
       "path": "backend/teste_conexao.py",
       "type": "file",
@@ -938,7 +962,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "b10ee39e74697fc8e0d4e7edf6aadc82eed2614d",
+      "sha": "6eabf4251a29b9890a54c820570760b879fb0378",
       "mode": "040000",
       "children": []
     },
@@ -1494,7 +1518,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "7292551b688918ea7e5d20659605bc620534413c",
+      "sha": "ae44fc2901855554a5e18776fa175949a7db6458",
       "mode": "040000",
       "children": []
     },
@@ -1512,10 +1536,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "2e913a6a55971c283340b395a9b12fbefa10f16a",
+      "sha": "e14cc1ce756d846431ae8d345cb248481716cfe3",
       "mode": "100644",
       "extension": ".json",
-      "size": 7430,
+      "size": 7685,
       "is_binary": false
     },
     {
@@ -1776,7 +1800,7 @@
       "name": "scrapers",
       "path": "scrapers",
       "type": "directory",
-      "sha": "6a2df91ae14be69d75ed3c621a2a448c476f2af3",
+      "sha": "ee1f3b593657a2289dc63865e255e15a6a0b347e",
       "mode": "040000",
       "children": []
     },
@@ -1794,7 +1818,7 @@
       "name": "resultados",
       "path": "scrapers/resultados",
       "type": "directory",
-      "sha": "b6ea5f9c7ddb4700242be36fd30994654db73dbe",
+      "sha": "3c6919191e19bf9058f2e648737abb292880a98d",
       "mode": "040000",
       "children": []
     },
@@ -1812,10 +1836,10 @@
       "name": "g1.json",
       "path": "scrapers/resultados/g1.json",
       "type": "file",
-      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "sha": "fa6dd92dba04fa01a0d77a679ab1daf84b76d027",
       "mode": "100644",
       "extension": ".json",
-      "size": 4,
+      "size": 36746,
       "is_binary": false
     },
     {
@@ -1842,10 +1866,10 @@
       "name": "resultados.json",
       "path": "scrapers/resultados/resultados.json",
       "type": "file",
-      "sha": "ea74494ce2260df876695348b6056f18d78e422c",
+      "sha": "da1620942f5bc6bd635b68351277f31a6fc7ed93",
       "mode": "100644",
       "extension": ".json",
-      "size": 281608,
+      "size": 387560,
       "is_binary": false
     },
     {
@@ -1862,7 +1886,7 @@
       "name": "spiders",
       "path": "scrapers/spiders",
       "type": "directory",
-      "sha": "cbd268e655038b1df508bf16e6d374773e15e08b",
+      "sha": "e4f0ba8ba878456b2c9d970cb2c0c78e8e970578",
       "mode": "040000",
       "children": []
     },
@@ -1870,57 +1894,57 @@
       "name": "cnnspider.py",
       "path": "scrapers/spiders/cnnspider.py",
       "type": "file",
-      "sha": "6e21d250d69cf6dede8ecd7db3b676983b8c5939",
+      "sha": "7acd939d0b289de18da2f378ccacccbe4062ca61",
       "mode": "100644",
       "extension": ".py",
-      "size": 2034,
+      "size": 1784,
       "is_binary": false
     },
     {
       "name": "g1Spider.py",
       "path": "scrapers/spiders/g1Spider.py",
       "type": "file",
-      "sha": "26d799dfeca22d905af2ad0bab2016e15a1bbaea",
+      "sha": "ce9f707498d7ce38094dfc116de347379a58ef2e",
       "mode": "100644",
       "extension": ".py",
-      "size": 3292,
+      "size": 3618,
       "is_binary": false
     },
     {
       "name": "metropoles.py",
       "path": "scrapers/spiders/metropoles.py",
       "type": "file",
-      "sha": "c28025ae15cd99b5bcc18a0dde872237f9b9fe44",
+      "sha": "b3d99478abea4cc891e9a5a5b318252e5d07217a",
       "mode": "100644",
       "extension": ".py",
-      "size": 2966,
+      "size": 3666,
       "is_binary": false
     },
     {
       "name": "r7spider.py",
       "path": "scrapers/spiders/r7spider.py",
       "type": "file",
-      "sha": "324b9f4c2a940feb8c70e2be77f79f08dd48cad8",
+      "sha": "528a8c678d97a26f2454e135c5f3afe1e588c875",
       "mode": "100644",
       "extension": ".py",
-      "size": 2682,
+      "size": 2860,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-19T10:14:51.075023",
+  "extracted_at": "2026-06-20T09:05:40.281650",
   "method": "rest",
-  "total_items": 200,
+  "total_items": 202,
   "repository_metadata": {
     "id": 1185581019,
     "full_name": "unb-mds/2026-2-VeritasIA",
     "description": "Monitoramento de noticias sobre feminicídio utilizando IA",
     "created_at": "2026-03-18T18:25:01Z",
-    "updated_at": "2026-06-17T22:52:29Z",
+    "updated_at": "2026-06-20T01:58:18Z",
     "language": "Python",
-    "size": 3212,
+    "size": 3229,
     "stars": 4,
     "forks": 0,
-    "open_issues": 11
+    "open_issues": 8
   }
 }
