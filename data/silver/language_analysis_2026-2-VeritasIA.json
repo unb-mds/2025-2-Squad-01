@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-19T10:14:51.075023",
+  "analyzed_at": "2026-06-20T09:05:40.281650",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 151,
-  "total_bytes": 2908471,
+  "total_files": 155,
+  "total_bytes": 3056279,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 9,
       "total_bytes": 2060331,
-      "percentage": 70.84,
+      "percentage": 67.41,
       "files": [
         {
           "path": "Frontend/src/assets/logo2.png",
@@ -74,14 +74,14 @@
     },
     {
       "language": "JSON",
-      "file_count": 12,
-      "total_bytes": 552027,
-      "percentage": 18.98,
+      "file_count": 13,
+      "total_bytes": 694977,
+      "percentage": 22.74,
       "files": [
         {
           "path": "scrapers/resultados/resultados.json",
           "name": "resultados.json",
-          "size": 281608,
+          "size": 387560,
           "extension": ".json"
         },
         {
@@ -97,15 +97,21 @@
           "extension": ".json"
         },
         {
-          "path": "docs/mkdocs/docs/productivity/metrics.json",
-          "name": "metrics.json",
-          "size": 7519,
+          "path": "scrapers/resultados/g1.json",
+          "name": "g1.json",
+          "size": 36746,
           "extension": ".json"
         },
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 7430,
+          "size": 7685,
+          "extension": ".json"
+        },
+        {
+          "path": "docs/mkdocs/docs/productivity/metrics.json",
+          "name": "metrics.json",
+          "size": 7519,
           "extension": ".json"
         },
         {
@@ -131,12 +137,6 @@
           "name": "cnn.json",
           "size": 4,
           "extension": ".json"
-        },
-        {
-          "path": "scrapers/resultados/g1.json",
-          "name": "g1.json",
-          "size": 4,
-          "extension": ".json"
         }
       ]
     },
@@ -144,7 +144,7 @@
       "language": "Markdown",
       "file_count": 52,
       "total_bytes": 103412,
-      "percentage": 3.56,
+      "percentage": 3.38,
       "files": [
         {
           "path": "docs/backend/FastAPI.md",
@@ -209,10 +209,78 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 25,
+      "total_bytes": 53897,
+      "percentage": 1.76,
+      "files": [
+        {
+          "path": "docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 11904,
+          "extension": ".py"
+        },
+        {
+          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 11773,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/metropoles.py",
+          "name": "metropoles.py",
+          "size": 3666,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/g1Spider.py",
+          "name": "g1Spider.py",
+          "size": 3618,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/r7spider.py",
+          "name": "r7spider.py",
+          "size": 2860,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/teste_conexao.py",
+          "name": "teste_conexao.py",
+          "size": 2099,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/cnnspider.py",
+          "name": "cnnspider.py",
+          "size": 1784,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/adapters/json_adapter.py",
+          "name": "json_adapter.py",
+          "size": 1692,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/adapters/db_adapter.py",
+          "name": "db_adapter.py",
+          "size": 1686,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/llm/langChain_Controller.py",
+          "name": "langChain_Controller.py",
+          "size": 1670,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "HTML",
       "file_count": 5,
       "total_bytes": 51340,
-      "percentage": 1.77,
+      "percentage": 1.68,
       "files": [
         {
           "path": "docs/dashboard/dashboard.html",
@@ -247,78 +315,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 22,
-      "total_bytes": 49517,
-      "percentage": 1.7,
-      "files": [
-        {
-          "path": "docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 11904,
-          "extension": ".py"
-        },
-        {
-          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 11773,
-          "extension": ".py"
-        },
-        {
-          "path": "scrapers/spiders/g1Spider.py",
-          "name": "g1Spider.py",
-          "size": 3292,
-          "extension": ".py"
-        },
-        {
-          "path": "scrapers/spiders/metropoles.py",
-          "name": "metropoles.py",
-          "size": 2966,
-          "extension": ".py"
-        },
-        {
-          "path": "scrapers/spiders/r7spider.py",
-          "name": "r7spider.py",
-          "size": 2682,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/teste_conexao.py",
-          "name": "teste_conexao.py",
-          "size": 2099,
-          "extension": ".py"
-        },
-        {
-          "path": "scrapers/spiders/cnnspider.py",
-          "name": "cnnspider.py",
-          "size": 2034,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/adapters/json_adapter.py",
-          "name": "json_adapter.py",
-          "size": 1692,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/adapters/db_adapter.py",
-          "name": "db_adapter.py",
-          "size": 1686,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/models.py",
-          "name": "models.py",
-          "size": 1627,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "Unknown",
-      "file_count": 15,
-      "total_bytes": 39085,
-      "percentage": 1.34,
+      "file_count": 14,
+      "total_bytes": 38144,
+      "percentage": 1.25,
       "files": [
         {
           "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
@@ -386,7 +386,7 @@
       "language": "CSS",
       "file_count": 6,
       "total_bytes": 27736,
-      "percentage": 0.95,
+      "percentage": 0.91,
       "files": [
         {
           "path": "Frontend/src/App.css",
@@ -430,7 +430,7 @@
       "language": "JavaScript",
       "file_count": 20,
       "total_bytes": 14093,
-      "percentage": 0.48,
+      "percentage": 0.46,
       "files": [
         {
           "path": "Frontend/src/pages/Dashboard.jsx",
@@ -496,9 +496,9 @@
     },
     {
       "language": "YAML",
-      "file_count": 4,
-      "total_bytes": 5515,
-      "percentage": 0.19,
+      "file_count": 5,
+      "total_bytes": 6934,
+      "percentage": 0.23,
       "files": [
         {
           "path": ".github/workflows/metrics-with-pages.yml",
@@ -507,9 +507,15 @@
           "extension": ".yml"
         },
         {
+          "path": ".github/workflows/langchaim.yml",
+          "name": "langchaim.yml",
+          "size": 1466,
+          "extension": ".yml"
+        },
+        {
           "path": ".github/workflows/execute-scrapy.yml",
           "name": "execute-scrapy.yml",
-          "size": 1351,
+          "size": 1304,
           "extension": ".yml"
         },
         {
@@ -544,7 +550,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.04,
+      "percentage": 0.03,
       "files": [
         {
           "path": "LICENSE",
@@ -596,7 +602,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-19T10:17:50.720207",
+    "extracted_at": "2026-06-20T09:08:46.298854",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }

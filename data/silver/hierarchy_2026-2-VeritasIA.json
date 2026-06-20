@@ -2,7 +2,7 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-19T10:14:51.075023",
+  "extracted_at": "2026-06-20T09:05:40.281650",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -23,9 +23,17 @@
         "name": "execute-scrapy.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1351,
+        "size": 1304,
         "extension": ".yml",
         "path": ".github/workflows/execute-scrapy.yml"
+      },
+      {
+        "name": "langchaim.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1466,
+        "extension": ".yml",
+        "path": ".github/workflows/langchaim.yml"
       },
       {
         "name": "metrics-with-pages.yml",
@@ -42,48 +50,6 @@
         "size": 72,
         "extension": ".gitignore",
         "path": ".gitignore"
-      },
-      {
-        "name": "BackEnd",
-        "type": "directory",
-        "path": "BackEnd",
-        "children": []
-      },
-      {
-        "name": "app",
-        "type": "directory",
-        "path": "BackEnd/app",
-        "children": []
-      },
-      {
-        "name": "__pycache__",
-        "type": "directory",
-        "path": "BackEnd/app/__pycache__",
-        "children": []
-      },
-      {
-        "name": "main.cpython-314.pyc",
-        "type": "file",
-        "language": "Unknown",
-        "size": 941,
-        "extension": ".pyc",
-        "path": "BackEnd/app/__pycache__/main.cpython-314.pyc"
-      },
-      {
-        "name": "database.py",
-        "type": "file",
-        "language": "Python",
-        "size": 945,
-        "extension": ".py",
-        "path": "BackEnd/app/database.py"
-      },
-      {
-        "name": "main.py",
-        "type": "file",
-        "language": "Python",
-        "size": 778,
-        "extension": ".py",
-        "path": "BackEnd/app/main.py"
       },
       {
         "name": "Frontend",
@@ -670,6 +636,14 @@
         "path": "backend/app/adapters/json_adapter.py"
       },
       {
+        "name": "database.py",
+        "type": "file",
+        "language": "Python",
+        "size": 945,
+        "extension": ".py",
+        "path": "backend/app/database.py"
+      },
+      {
         "name": "domain",
         "type": "directory",
         "path": "backend/app/domain",
@@ -696,6 +670,14 @@
         "size": 0,
         "extension": ".py",
         "path": "backend/app/domain/entities.py"
+      },
+      {
+        "name": "main.py",
+        "type": "file",
+        "language": "Python",
+        "size": 778,
+        "extension": ".py",
+        "path": "backend/app/main.py"
       },
       {
         "name": "models.py",
@@ -732,6 +714,44 @@
         "size": 312,
         "extension": ".py",
         "path": "backend/app/ports/repository_port.py"
+      },
+      {
+        "name": "llm",
+        "type": "directory",
+        "path": "backend/llm",
+        "children": []
+      },
+      {
+        "name": "langChain.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1621,
+        "extension": ".py",
+        "path": "backend/llm/langChain.py"
+      },
+      {
+        "name": "langChain_Controller.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1670,
+        "extension": ".py",
+        "path": "backend/llm/langChain_Controller.py"
+      },
+      {
+        "name": "news-llm.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 1,
+        "extension": ".json",
+        "path": "backend/llm/news-llm.json"
+      },
+      {
+        "name": "news_Classification.py",
+        "type": "file",
+        "language": "Python",
+        "size": 135,
+        "extension": ".py",
+        "path": "backend/llm/news_Classification.py"
       },
       {
         "name": "teste_conexao.py",
@@ -1197,7 +1217,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 7430,
+        "size": 7685,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -1435,7 +1455,7 @@
         "name": "g1.json",
         "type": "file",
         "language": "JSON",
-        "size": 4,
+        "size": 36746,
         "extension": ".json",
         "path": "scrapers/resultados/g1.json"
       },
@@ -1459,7 +1479,7 @@
         "name": "resultados.json",
         "type": "file",
         "language": "JSON",
-        "size": 281608,
+        "size": 387560,
         "extension": ".json",
         "path": "scrapers/resultados/resultados.json"
       },
@@ -1481,7 +1501,7 @@
         "name": "cnnspider.py",
         "type": "file",
         "language": "Python",
-        "size": 2034,
+        "size": 1784,
         "extension": ".py",
         "path": "scrapers/spiders/cnnspider.py"
       },
@@ -1489,7 +1509,7 @@
         "name": "g1Spider.py",
         "type": "file",
         "language": "Python",
-        "size": 3292,
+        "size": 3618,
         "extension": ".py",
         "path": "scrapers/spiders/g1Spider.py"
       },
@@ -1497,7 +1517,7 @@
         "name": "metropoles.py",
         "type": "file",
         "language": "Python",
-        "size": 2966,
+        "size": 3666,
         "extension": ".py",
         "path": "scrapers/spiders/metropoles.py"
       },
@@ -1505,14 +1525,14 @@
         "name": "r7spider.py",
         "type": "file",
         "language": "Python",
-        "size": 2682,
+        "size": 2860,
         "extension": ".py",
         "path": "scrapers/spiders/r7spider.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-19T10:17:50.721712",
+    "extracted_at": "2026-06-20T09:08:46.300328",
     "file_path": "data/silver/hierarchy_2026-2-VeritasIA.json"
   }
 }
