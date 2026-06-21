@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-20T08:17:14.443540",
+      "extracted_at": "2026-06-21T08:53:51.814073",
       "file_path": "data/bronze/prs_2026-1-Squad07.json",
       "record_count": 38
     }
@@ -529,7 +529,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -557,8 +557,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-14T18:06:11Z",
-    "updated_at": "2026-06-19T17:36:25Z",
-    "closed_at": null,
+    "updated_at": "2026-06-20T21:29:30Z",
+    "closed_at": "2026-06-20T21:29:30Z",
     "assignee": {
       "login": "ViniciusA05",
       "id": 227692461,
@@ -590,10 +590,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-Squad07/pull/130",
       "diff_url": "https://github.com/unb-mds/2026-1-Squad07/pull/130.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-Squad07/pull/130.patch",
-      "merged_at": null
+      "merged_at": "2026-06-20T21:29:30Z"
     },
     "body": "## 📝 Descrição\n\nResolve a issue #114 — configura centralmente o framework de testes do CrivoAI para backend e frontend, com integração ao CI.\n\n**Backend (pytest):**\n- Adiciona `pytest.ini` com `testpaths`, `asyncio_mode = auto` e threshold de 90%\n- Adiciona `pytest-asyncio` ao `requirements.txt`\n- Reorganiza `backend/tests/` em `unit/` e `integration/`\n- Cria `conftest.py` com fixtures `make_user` e `FakeUserDelegate` compartilhadas, eliminando duplicação entre `test_auth.py` e `test_users.py`\n\n**Frontend (Jest):**\n- Configura Jest via `next/jest` com ambiente jsdom e threshold de 90%\n- Adiciona `jest.setup.ts` com `@testing-library/jest-dom`\n- Cria 5 suítes de testes exemplo: `ApiError`, `apiRequest` (com mock de fetch), `cn`, `Button`, `Input` e `Badge`\n\n**CI (`main.yml`):**\n- Remove step duplicado de pytest que rodava antes do Prisma\n- Corrige caminho do schema: `backend/schema.prisma` → `backend/prisma/schema.prisma`\n- Remove instalação manual de dependências já presentes em `requirements.txt`\n- Adiciona flags de coverage com threshold de 90% no backend\n- Adiciona job `Testes Frontend` com `npm ci` e `npm run test:coverage`\n\n**SDD:** artefatos em `specs/003-framework-testes/` com `spec.md`, `test-plan.md` e `tasks.md`.\n\n## 🏷️ Tipo de alteração\n- [x] ✨ `feat:` Nova funcionalidade\n- [ ] 🐛 `bugfix:` Correção de um erro\n- [ ] ♻️ `refactor:` Refatoração de código (não altera as funcionalidades)\n- [ ] 📚 `docs:` Atualização na documentação\n- [x] 🔧 `chore:` Tarefas de manutenção (dependências, configurações, etc.)\n\n## ✅ Checklist de Revisão\n- [x] O meu código segue os padrões do nosso Guia Definitivo.\n- [x] Realizei uma auto-revisão detalhada do meu próprio código.\n- [x] Os meus commits são atômicos e as mensagens seguem o padrão *Conventional Commits*.\n- [x] O código não gera novos conflitos de merge (verifiquei a branch base).\n- [x] A alteração não introduz novos avisos (warnings) ou erros no terminal.\n\n## 🧪 Testes\n- [x] Criei/atualizei testes para esta funcionalidade (se aplicável).\n- [x] Testei a funcionalidade localmente e tudo está funcionando perfeitamente.\n\nValidado localmente:\n- `npm run test:coverage` — 27 testes passando, threshold de 90% atingido nos arquivos cobertos\n- `pytest backend/tests/unit/ -v` — todos os testes passando\n\n## 🖼️ Capturas de tela ou Vídeos (Se aplicável)\n\nN/A — alteração de infraestrutura de testes e CI.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/130/reactions",
       "total_count": 0,
