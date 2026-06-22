@@ -2,7 +2,7 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-21T09:41:20.919977",
+  "extracted_at": "2026-06-22T11:24:15.491743",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -35,7 +35,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 3662,
+        "size": 3670,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -83,7 +83,7 @@
         "name": "dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 783,
+        "size": 941,
         "extension": "",
         "path": "dockerfile"
       },
@@ -270,6 +270,14 @@
         "size": 2141,
         "extension": ".md",
         "path": "docs/releases/release_note_v0.1.0.md"
+      },
+      {
+        "name": "entrypoint.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 367,
+        "extension": ".sh",
+        "path": "entrypoint.sh"
       },
       {
         "name": "estudo",
@@ -489,15 +497,23 @@
         "name": "pyproject.toml",
         "type": "file",
         "language": "TOML",
-        "size": 493,
+        "size": 741,
         "extension": ".toml",
         "path": "pyproject.toml"
+      },
+      {
+        "name": "pytest.ini",
+        "type": "file",
+        "language": "INI",
+        "size": 67,
+        "extension": ".ini",
+        "path": "pytest.ini"
       },
       {
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 69,
+        "size": 91,
         "extension": ".txt",
         "path": "requirements.txt"
       },
@@ -525,7 +541,7 @@
         "name": "admin.py",
         "type": "file",
         "language": "Python",
-        "size": 790,
+        "size": 3480,
         "extension": ".py",
         "path": "src/Processos/admin.py"
       },
@@ -536,6 +552,90 @@
         "size": 93,
         "extension": ".py",
         "path": "src/Processos/apps.py"
+      },
+      {
+        "name": "cron.py",
+        "type": "file",
+        "language": "Python",
+        "size": 617,
+        "extension": ".py",
+        "path": "src/Processos/cron.py"
+      },
+      {
+        "name": "filters.py",
+        "type": "file",
+        "language": "Python",
+        "size": 877,
+        "extension": ".py",
+        "path": "src/Processos/filters.py"
+      },
+      {
+        "name": "management",
+        "type": "directory",
+        "path": "src/Processos/management",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "src/Processos/management/__init__.py"
+      },
+      {
+        "name": "commands",
+        "type": "directory",
+        "path": "src/Processos/management/commands",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/__init__.py"
+      },
+      {
+        "name": "auditoria_processos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5895,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/auditoria_processos.py"
+      },
+      {
+        "name": "carga_historica.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7937,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/carga_historica.py"
+      },
+      {
+        "name": "carga_inicial.py",
+        "type": "file",
+        "language": "Python",
+        "size": 988,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/carga_inicial.py"
+      },
+      {
+        "name": "limpar_processos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 712,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/limpar_processos.py"
+      },
+      {
+        "name": "sync_processos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1182,
+        "extension": ".py",
+        "path": "src/Processos/management/commands/sync_processos.py"
       },
       {
         "name": "migrations",
@@ -560,6 +660,46 @@
         "path": "src/Processos/migrations/0002_initial.py"
       },
       {
+        "name": "0003_movimentacao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 848,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0003_movimentacao.py"
+      },
+      {
+        "name": "0003_processolegislativo_apreciacao_and_more.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4585,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0003_processolegislativo_apreciacao_and_more.py"
+      },
+      {
+        "name": "0004_alter_processolegislativo_id_externo_and_more.py",
+        "type": "file",
+        "language": "Python",
+        "size": 649,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0004_alter_processolegislativo_id_externo_and_more.py"
+      },
+      {
+        "name": "0004_termomonitorado_processos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 466,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0004_termomonitorado_processos.py"
+      },
+      {
+        "name": "0005_processolegislativo_apelido_and_more.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2161,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0005_processolegislativo_apelido_and_more.py"
+      },
+      {
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
@@ -571,15 +711,23 @@
         "name": "models.py",
         "type": "file",
         "language": "Python",
-        "size": 700,
+        "size": 6016,
         "extension": ".py",
         "path": "src/Processos/models.py"
+      },
+      {
+        "name": "services.py",
+        "type": "file",
+        "language": "Python",
+        "size": 24500,
+        "extension": ".py",
+        "path": "src/Processos/services.py"
       },
       {
         "name": "tests.py",
         "type": "file",
         "language": "Python",
-        "size": 60,
+        "size": 14538,
         "extension": ".py",
         "path": "src/Processos/tests.py"
       },
@@ -609,7 +757,7 @@
         "name": "admin.py",
         "type": "file",
         "language": "Python",
-        "size": 63,
+        "size": 364,
         "extension": ".py",
         "path": "src/Usuarios/admin.py"
       },
@@ -620,6 +768,42 @@
         "size": 91,
         "extension": ".py",
         "path": "src/Usuarios/apps.py"
+      },
+      {
+        "name": "management",
+        "type": "directory",
+        "path": "src/Usuarios/management",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "src/Usuarios/management/__init__.py"
+      },
+      {
+        "name": "commands",
+        "type": "directory",
+        "path": "src/Usuarios/management/commands",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "src/Usuarios/management/commands/__init__.py"
+      },
+      {
+        "name": "gerar_alertas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2110,
+        "extension": ".py",
+        "path": "src/Usuarios/management/commands/gerar_alertas.py"
       },
       {
         "name": "migrations",
@@ -636,6 +820,22 @@
         "path": "src/Usuarios/migrations/0001_initial.py"
       },
       {
+        "name": "0002_notificacao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1321,
+        "extension": ".py",
+        "path": "src/Usuarios/migrations/0002_notificacao.py"
+      },
+      {
+        "name": "0003_userprofile.py",
+        "type": "file",
+        "language": "Python",
+        "size": 920,
+        "extension": ".py",
+        "path": "src/Usuarios/migrations/0003_userprofile.py"
+      },
+      {
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
@@ -647,7 +847,7 @@
         "name": "models.py",
         "type": "file",
         "language": "Python",
-        "size": 235,
+        "size": 1384,
         "extension": ".py",
         "path": "src/Usuarios/models.py"
       },
@@ -693,7 +893,7 @@
         "name": "settings.py",
         "type": "file",
         "language": "Python",
-        "size": 4674,
+        "size": 6066,
         "extension": ".py",
         "path": "src/config/settings.py"
       },
@@ -701,7 +901,7 @@
         "name": "urls.py",
         "type": "file",
         "language": "Python",
-        "size": 1045,
+        "size": 1527,
         "extension": ".py",
         "path": "src/config/urls.py"
       },
@@ -837,7 +1037,7 @@
         "name": "alertas.html",
         "type": "file",
         "language": "HTML",
-        "size": 11776,
+        "size": 6689,
         "extension": ".html",
         "path": "src/home/templates/home/alertas.html"
       },
@@ -859,7 +1059,7 @@
         "name": "header.html",
         "type": "file",
         "language": "HTML",
-        "size": 1371,
+        "size": 745,
         "extension": ".html",
         "path": "src/home/templates/home/components/header.html"
       },
@@ -867,7 +1067,7 @@
         "name": "sidebar.html",
         "type": "file",
         "language": "HTML",
-        "size": 3704,
+        "size": 3280,
         "extension": ".html",
         "path": "src/home/templates/home/components/sidebar.html"
       },
@@ -875,7 +1075,7 @@
         "name": "dashboard.html",
         "type": "file",
         "language": "HTML",
-        "size": 15778,
+        "size": 3475,
         "extension": ".html",
         "path": "src/home/templates/home/dashboard.html"
       },
@@ -883,33 +1083,33 @@
         "name": "favoritos.html",
         "type": "file",
         "language": "HTML",
-        "size": 12668,
+        "size": 9291,
         "extension": ".html",
         "path": "src/home/templates/home/favoritos.html"
       },
       {
-        "name": "proposicoes.html",
+        "name": "processos.html",
         "type": "file",
         "language": "HTML",
-        "size": 20462,
+        "size": 16334,
         "extension": ".html",
-        "path": "src/home/templates/home/proposicoes.html"
+        "path": "src/home/templates/home/processos.html"
+      },
+      {
+        "name": "proposicao_detalhes.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 8398,
+        "extension": ".html",
+        "path": "src/home/templates/home/proposicao_detalhes.html"
       },
       {
         "name": "usuario.html",
         "type": "file",
         "language": "HTML",
-        "size": 17465,
+        "size": 6580,
         "extension": ".html",
         "path": "src/home/templates/home/usuario.html"
-      },
-      {
-        "name": "votacoes.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 11020,
-        "extension": ".html",
-        "path": "src/home/templates/home/votacoes.html"
       },
       {
         "name": "registration",
@@ -977,7 +1177,7 @@
         "name": "views.py",
         "type": "file",
         "language": "Python",
-        "size": 1878,
+        "size": 12235,
         "extension": ".py",
         "path": "src/home/views.py"
       },
@@ -990,17 +1190,85 @@
         "path": "src/manage.py"
       },
       {
+        "name": "tests",
+        "type": "directory",
+        "path": "src/tests",
+        "children": []
+      },
+      {
+        "name": "e2e",
+        "type": "directory",
+        "path": "src/tests/e2e",
+        "children": []
+      },
+      {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 496,
+        "extension": ".py",
+        "path": "src/tests/e2e/conftest.py"
+      },
+      {
+        "name": "test_alertas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2286,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_alertas.py"
+      },
+      {
+        "name": "test_configuracoes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1438,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_configuracoes.py"
+      },
+      {
+        "name": "test_dashboard.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1953,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_dashboard.py"
+      },
+      {
+        "name": "test_favoritos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1474,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_favoritos.py"
+      },
+      {
+        "name": "test_sanity.py",
+        "type": "file",
+        "language": "Python",
+        "size": 682,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_sanity.py"
+      },
+      {
+        "name": "test_timeline.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4453,
+        "extension": ".py",
+        "path": "src/tests/e2e/test_timeline.py"
+      },
+      {
         "name": "uv.lock",
         "type": "file",
         "language": "Lock File",
-        "size": 17370,
+        "size": 76358,
         "extension": ".lock",
         "path": "uv.lock"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-21T09:44:13.562112",
+    "extracted_at": "2026-06-22T11:27:14.577376",
     "file_path": "data/silver/hierarchy_2026-1-P.R.I.S.M.A.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-21T09:41:20.919977",
+  "analyzed_at": "2026-06-22T11:24:15.491743",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 102,
-  "total_bytes": 3297726,
+  "total_files": 131,
+  "total_bytes": 3422847,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 7,
       "total_bytes": 3039929,
-      "percentage": 92.18,
+      "percentage": 88.81,
       "files": [
         {
           "path": "figma/print7/aprovadad.png",
@@ -61,10 +61,78 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 58,
+      "total_bytes": 121373,
+      "percentage": 3.55,
+      "files": [
+        {
+          "path": "src/Processos/services.py",
+          "name": "services.py",
+          "size": 24500,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/tests.py",
+          "name": "tests.py",
+          "size": 14538,
+          "extension": ".py"
+        },
+        {
+          "path": "src/home/views.py",
+          "name": "views.py",
+          "size": 12235,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/management/commands/carga_historica.py",
+          "name": "carga_historica.py",
+          "size": 7937,
+          "extension": ".py"
+        },
+        {
+          "path": "src/config/settings.py",
+          "name": "settings.py",
+          "size": 6066,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/models.py",
+          "name": "models.py",
+          "size": 6016,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/management/commands/auditoria_processos.py",
+          "name": "auditoria_processos.py",
+          "size": 5895,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/migrations/0003_processolegislativo_apreciacao_and_more.py",
+          "name": "0003_processolegislativo_apreciacao_and_more.py",
+          "size": 4585,
+          "extension": ".py"
+        },
+        {
+          "path": "src/tests/e2e/test_timeline.py",
+          "name": "test_timeline.py",
+          "size": 4453,
+          "extension": ".py"
+        },
+        {
+          "path": "src/Processos/admin.py",
+          "name": "admin.py",
+          "size": 3480,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "Markdown",
       "file_count": 34,
       "total_bytes": 117658,
-      "percentage": 3.57,
+      "percentage": 3.44,
       "files": [
         {
           "path": "docs/Arquitetura/documento-c4.md",
@@ -129,63 +197,77 @@
       ]
     },
     {
-      "language": "HTML",
-      "file_count": 15,
-      "total_bytes": 96644,
-      "percentage": 2.93,
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 76358,
+      "percentage": 2.23,
       "files": [
         {
-          "path": "src/home/templates/home/proposicoes.html",
-          "name": "proposicoes.html",
-          "size": 20462,
-          "extension": ".html"
-        },
+          "path": "uv.lock",
+          "name": "uv.lock",
+          "size": 76358,
+          "extension": ".lock"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 15,
+      "total_bytes": 57192,
+      "percentage": 1.67,
+      "files": [
         {
-          "path": "src/home/templates/home/usuario.html",
-          "name": "usuario.html",
-          "size": 17465,
-          "extension": ".html"
-        },
-        {
-          "path": "src/home/templates/home/dashboard.html",
-          "name": "dashboard.html",
-          "size": 15778,
+          "path": "src/home/templates/home/processos.html",
+          "name": "processos.html",
+          "size": 16334,
           "extension": ".html"
         },
         {
           "path": "src/home/templates/home/favoritos.html",
           "name": "favoritos.html",
-          "size": 12668,
+          "size": 9291,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/proposicao_detalhes.html",
+          "name": "proposicao_detalhes.html",
+          "size": 8398,
           "extension": ".html"
         },
         {
           "path": "src/home/templates/home/alertas.html",
           "name": "alertas.html",
-          "size": 11776,
+          "size": 6689,
           "extension": ".html"
         },
         {
-          "path": "src/home/templates/home/votacoes.html",
-          "name": "votacoes.html",
-          "size": 11020,
+          "path": "src/home/templates/home/usuario.html",
+          "name": "usuario.html",
+          "size": 6580,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/dashboard.html",
+          "name": "dashboard.html",
+          "size": 3475,
           "extension": ".html"
         },
         {
           "path": "src/home/templates/home/components/sidebar.html",
           "name": "sidebar.html",
-          "size": 3704,
-          "extension": ".html"
-        },
-        {
-          "path": "src/home/templates/home/components/header.html",
-          "name": "header.html",
-          "size": 1371,
+          "size": 3280,
           "extension": ".html"
         },
         {
           "path": "src/home/templates/home/base.html",
           "name": "base.html",
           "size": 1007,
+          "extension": ".html"
+        },
+        {
+          "path": "src/home/templates/home/components/header.html",
+          "name": "header.html",
+          "size": 745,
           "extension": ".html"
         },
         {
@@ -197,97 +279,15 @@
       ]
     },
     {
-      "language": "Lock File",
-      "file_count": 1,
-      "total_bytes": 17370,
-      "percentage": 0.53,
-      "files": [
-        {
-          "path": "uv.lock",
-          "name": "uv.lock",
-          "size": 17370,
-          "extension": ".lock"
-        }
-      ]
-    },
-    {
-      "language": "Python",
-      "file_count": 31,
-      "total_bytes": 16658,
-      "percentage": 0.51,
-      "files": [
-        {
-          "path": "src/config/settings.py",
-          "name": "settings.py",
-          "size": 4674,
-          "extension": ".py"
-        },
-        {
-          "path": "src/Usuarios/migrations/0001_initial.py",
-          "name": "0001_initial.py",
-          "size": 3050,
-          "extension": ".py"
-        },
-        {
-          "path": "src/home/views.py",
-          "name": "views.py",
-          "size": 1878,
-          "extension": ".py"
-        },
-        {
-          "path": "src/Processos/migrations/0001_initial.py",
-          "name": "0001_initial.py",
-          "size": 1223,
-          "extension": ".py"
-        },
-        {
-          "path": "src/config/urls.py",
-          "name": "urls.py",
-          "size": 1045,
-          "extension": ".py"
-        },
-        {
-          "path": "src/Processos/admin.py",
-          "name": "admin.py",
-          "size": 790,
-          "extension": ".py"
-        },
-        {
-          "path": "src/Processos/models.py",
-          "name": "models.py",
-          "size": 700,
-          "extension": ".py"
-        },
-        {
-          "path": "src/manage.py",
-          "name": "manage.py",
-          "size": 662,
-          "extension": ".py"
-        },
-        {
-          "path": "src/Processos/migrations/0002_initial.py",
-          "name": "0002_initial.py",
-          "size": 570,
-          "extension": ".py"
-        },
-        {
-          "path": "src/config/asgi.py",
-          "name": "asgi.py",
-          "size": 389,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "Git Ignore",
       "file_count": 1,
-      "total_bytes": 3662,
+      "total_bytes": 3670,
       "percentage": 0.11,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 3662,
+          "size": 3670,
           "extension": ".gitignore"
         }
       ]
@@ -295,7 +295,7 @@
     {
       "language": "No Extension",
       "file_count": 2,
-      "total_bytes": 1843,
+      "total_bytes": 2001,
       "percentage": 0.06,
       "files": [
         {
@@ -307,7 +307,7 @@
         {
           "path": "dockerfile",
           "name": "dockerfile",
-          "size": 783,
+          "size": 941,
           "extension": ""
         }
       ]
@@ -365,6 +365,20 @@
       ]
     },
     {
+      "language": "TOML",
+      "file_count": 1,
+      "total_bytes": 741,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 741,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
       "language": "JavaScript",
       "file_count": 2,
       "total_bytes": 674,
@@ -385,16 +399,16 @@
       ]
     },
     {
-      "language": "TOML",
+      "language": "Shell",
       "file_count": 1,
-      "total_bytes": 493,
+      "total_bytes": 367,
       "percentage": 0.01,
       "files": [
         {
-          "path": "pyproject.toml",
-          "name": "pyproject.toml",
-          "size": 493,
-          "extension": ".toml"
+          "path": "entrypoint.sh",
+          "name": "entrypoint.sh",
+          "size": 367,
+          "extension": ".sh"
         }
       ]
     },
@@ -413,22 +427,36 @@
       ]
     },
     {
+      "language": "INI",
+      "file_count": 1,
+      "total_bytes": 67,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "pytest.ini",
+          "name": "pytest.ini",
+          "size": 67,
+          "extension": ".ini"
+        }
+      ]
+    },
+    {
       "language": "Text",
       "file_count": 1,
-      "total_bytes": 69,
+      "total_bytes": 91,
       "percentage": 0.0,
       "files": [
         {
           "path": "requirements.txt",
           "name": "requirements.txt",
-          "size": 69,
+          "size": 91,
           "extension": ".txt"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-21T09:44:13.561037",
+    "extracted_at": "2026-06-22T11:27:14.576117",
     "file_path": "data/silver/language_analysis_2026-1-P.R.I.S.M.A.json"
   }
 }
