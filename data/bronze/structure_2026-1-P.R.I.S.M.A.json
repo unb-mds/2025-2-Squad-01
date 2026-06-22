@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-P.R.I.S.M.A",
   "branch": "main",
-  "sha": "dfc0308fd0bf4e245c162b3e7e319a7a3ab16177",
+  "sha": "97cf43ddc3338c4ac739027667354743cc1b13c4",
   "tree": [
     {
       "name": ".env_docker.exemplo",
@@ -38,10 +38,10 @@
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
-      "sha": "38c28a77d0ca9fc76b26bd135dfc1dee8d398883",
+      "sha": "13d7593fe690737b4e72363194328c5fac0cdae7",
       "mode": "100644",
       "extension": ".gitignore",
-      "size": 3662,
+      "size": 3670,
       "is_binary": false
     },
     {
@@ -98,10 +98,10 @@
       "name": "dockerfile",
       "path": "dockerfile",
       "type": "file",
-      "sha": "645afb97825aab6c2cfa808733942c5d53326c18",
+      "sha": "359a2411a1d0c2112740cc0b370daef0e9ff8a85",
       "mode": "100644",
       "extension": "",
-      "size": 783,
+      "size": 941,
       "is_binary": false
     },
     {
@@ -334,6 +334,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 2141,
+      "is_binary": false
+    },
+    {
+      "name": "entrypoint.sh",
+      "path": "entrypoint.sh",
+      "type": "file",
+      "sha": "f7326402b76de847e5f98005971d4234f8a47309",
+      "mode": "100644",
+      "extension": ".sh",
+      "size": 367,
       "is_binary": false
     },
     {
@@ -612,27 +622,37 @@
       "name": "pyproject.toml",
       "path": "pyproject.toml",
       "type": "file",
-      "sha": "44f422408cf9d64fa0f59ec51b5b747ac2dcead9",
+      "sha": "4c2273fce054ee10630765d68c27fbc2101b15a9",
       "mode": "100644",
       "extension": ".toml",
-      "size": 493,
+      "size": 741,
+      "is_binary": false
+    },
+    {
+      "name": "pytest.ini",
+      "path": "pytest.ini",
+      "type": "file",
+      "sha": "c8574154f6e779d66427fbfe1c54f2ca8c0dd23d",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 67,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "requirements.txt",
       "type": "file",
-      "sha": "70d2586f9279c36873e0058c466696c52a656246",
+      "sha": "a2d992a0d3c2ef9acb8a60da242200cc107dddd6",
       "mode": "100644",
       "extension": ".txt",
-      "size": 69,
+      "size": 91,
       "is_binary": false
     },
     {
       "name": "src",
       "path": "src",
       "type": "directory",
-      "sha": "43070e37dae4242183e789dc6111f66bdbbddab7",
+      "sha": "8290463ae548a4059970457ac1ac5dd94e128621",
       "mode": "040000",
       "children": []
     },
@@ -640,7 +660,7 @@
       "name": "Processos",
       "path": "src/Processos",
       "type": "directory",
-      "sha": "065dc04c6839537d251585fe3113633cae723491",
+      "sha": "a9c659aa53e3bbd826c20d64d35b7d325fed93fb",
       "mode": "040000",
       "children": []
     },
@@ -658,10 +678,10 @@
       "name": "admin.py",
       "path": "src/Processos/admin.py",
       "type": "file",
-      "sha": "d67867319f759e520660e245be259e1610529b66",
+      "sha": "7092b32d423f8af314bf52f8c71afdb1526ae078",
       "mode": "100644",
       "extension": ".py",
-      "size": 790,
+      "size": 3480,
       "is_binary": false
     },
     {
@@ -675,10 +695,116 @@
       "is_binary": false
     },
     {
+      "name": "cron.py",
+      "path": "src/Processos/cron.py",
+      "type": "file",
+      "sha": "44351780757ce975253fcae6ab99e6233d9727ec",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 617,
+      "is_binary": false
+    },
+    {
+      "name": "filters.py",
+      "path": "src/Processos/filters.py",
+      "type": "file",
+      "sha": "211561cb79bbefb44c8d3055e03a69a9a73aeab5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 877,
+      "is_binary": false
+    },
+    {
+      "name": "management",
+      "path": "src/Processos/management",
+      "type": "directory",
+      "sha": "52f8f765f8d093b2deaacf145bc1f87698743022",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/Processos/management/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "commands",
+      "path": "src/Processos/management/commands",
+      "type": "directory",
+      "sha": "29e57f56411dc05ae27bb047c6c720769589b797",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/Processos/management/commands/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "auditoria_processos.py",
+      "path": "src/Processos/management/commands/auditoria_processos.py",
+      "type": "file",
+      "sha": "58e88b4330feea56be1a41bc4f547ee4b1277658",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5895,
+      "is_binary": false
+    },
+    {
+      "name": "carga_historica.py",
+      "path": "src/Processos/management/commands/carga_historica.py",
+      "type": "file",
+      "sha": "995a71a4e4e8be34090480098bdc456f53087583",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7937,
+      "is_binary": false
+    },
+    {
+      "name": "carga_inicial.py",
+      "path": "src/Processos/management/commands/carga_inicial.py",
+      "type": "file",
+      "sha": "54e78a1056b58e0d63c92dfa271f841846c3f3f0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 988,
+      "is_binary": false
+    },
+    {
+      "name": "limpar_processos.py",
+      "path": "src/Processos/management/commands/limpar_processos.py",
+      "type": "file",
+      "sha": "ba8a839d5ba834888f92bf3d11275326c0075751",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 712,
+      "is_binary": false
+    },
+    {
+      "name": "sync_processos.py",
+      "path": "src/Processos/management/commands/sync_processos.py",
+      "type": "file",
+      "sha": "7af2b054bcb3cfc5b959f6a92b48221c621d4810",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1182,
+      "is_binary": false
+    },
+    {
       "name": "migrations",
       "path": "src/Processos/migrations",
       "type": "directory",
-      "sha": "1dc7a0da4b7d4051b51e457f58485e8a370af468",
+      "sha": "0c63c8938f9a4e0db25def613e3af348c630808a",
       "mode": "040000",
       "children": []
     },
@@ -703,6 +829,56 @@
       "is_binary": false
     },
     {
+      "name": "0003_movimentacao.py",
+      "path": "src/Processos/migrations/0003_movimentacao.py",
+      "type": "file",
+      "sha": "b2c7303f34145a0bed0d4205db91ce8ddb24db5b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 848,
+      "is_binary": false
+    },
+    {
+      "name": "0003_processolegislativo_apreciacao_and_more.py",
+      "path": "src/Processos/migrations/0003_processolegislativo_apreciacao_and_more.py",
+      "type": "file",
+      "sha": "30c5b02d40853e3e8d38ae3f7dd597c58a8ec5dc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4585,
+      "is_binary": false
+    },
+    {
+      "name": "0004_alter_processolegislativo_id_externo_and_more.py",
+      "path": "src/Processos/migrations/0004_alter_processolegislativo_id_externo_and_more.py",
+      "type": "file",
+      "sha": "dcbdac698f7e5ae6bbb0ade27d68866f19f1864f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 649,
+      "is_binary": false
+    },
+    {
+      "name": "0004_termomonitorado_processos.py",
+      "path": "src/Processos/migrations/0004_termomonitorado_processos.py",
+      "type": "file",
+      "sha": "1240c5e6c6c5af4042093089180a41b30ba41cf0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 466,
+      "is_binary": false
+    },
+    {
+      "name": "0005_processolegislativo_apelido_and_more.py",
+      "path": "src/Processos/migrations/0005_processolegislativo_apelido_and_more.py",
+      "type": "file",
+      "sha": "1779730f47b22e3f945ecb9351067660deba34d0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2161,
+      "is_binary": false
+    },
+    {
       "name": "__init__.py",
       "path": "src/Processos/migrations/__init__.py",
       "type": "file",
@@ -716,20 +892,30 @@
       "name": "models.py",
       "path": "src/Processos/models.py",
       "type": "file",
-      "sha": "35d82af2fb95c08038268493493dcc5dee3f0be3",
+      "sha": "a111abfde2c0a2f110c2e498e59b962056cb9e46",
       "mode": "100644",
       "extension": ".py",
-      "size": 700,
+      "size": 6016,
+      "is_binary": false
+    },
+    {
+      "name": "services.py",
+      "path": "src/Processos/services.py",
+      "type": "file",
+      "sha": "9da1399b70cc02f314a3a43f24a9dd330ac20b79",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 24500,
       "is_binary": false
     },
     {
       "name": "tests.py",
       "path": "src/Processos/tests.py",
       "type": "file",
-      "sha": "7ce503c2dd97ba78597f6ff6e4393132753573f6",
+      "sha": "4c240bd28355aea595a45d4d7dbf9663c74bcc27",
       "mode": "100644",
       "extension": ".py",
-      "size": 60,
+      "size": 14538,
       "is_binary": false
     },
     {
@@ -746,7 +932,7 @@
       "name": "Usuarios",
       "path": "src/Usuarios",
       "type": "directory",
-      "sha": "9e9e14e991e50314c03a5f3501724f660db0eb7f",
+      "sha": "b64963ae30580ce6cc229ebbfc459f20ad587be2",
       "mode": "040000",
       "children": []
     },
@@ -764,10 +950,10 @@
       "name": "admin.py",
       "path": "src/Usuarios/admin.py",
       "type": "file",
-      "sha": "8c38f3f3dad51e4585f3984282c2a4bec5349c1e",
+      "sha": "ed29139e87413944bf8750f45a8cefdf1b69c3c4",
       "mode": "100644",
       "extension": ".py",
-      "size": 63,
+      "size": 364,
       "is_binary": false
     },
     {
@@ -781,10 +967,56 @@
       "is_binary": false
     },
     {
+      "name": "management",
+      "path": "src/Usuarios/management",
+      "type": "directory",
+      "sha": "7025897228c73403ae13d5ba3d43846b7bf234e3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/Usuarios/management/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "commands",
+      "path": "src/Usuarios/management/commands",
+      "type": "directory",
+      "sha": "97b0ac9fa09307464089dfd8dde9b8db43753c92",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/Usuarios/management/commands/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "gerar_alertas.py",
+      "path": "src/Usuarios/management/commands/gerar_alertas.py",
+      "type": "file",
+      "sha": "8611331f8260ec5b53a01aed3a58772895614e47",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2110,
+      "is_binary": false
+    },
+    {
       "name": "migrations",
       "path": "src/Usuarios/migrations",
       "type": "directory",
-      "sha": "9afe6f74dc096105ec1f36df442df9e59db93b70",
+      "sha": "e4c6d0c42f02d40ff36d3239f742a77989a2a46c",
       "mode": "040000",
       "children": []
     },
@@ -796,6 +1028,26 @@
       "mode": "100644",
       "extension": ".py",
       "size": 3050,
+      "is_binary": false
+    },
+    {
+      "name": "0002_notificacao.py",
+      "path": "src/Usuarios/migrations/0002_notificacao.py",
+      "type": "file",
+      "sha": "476f377b575e034afb246df18c85a3f62c01042a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1321,
+      "is_binary": false
+    },
+    {
+      "name": "0003_userprofile.py",
+      "path": "src/Usuarios/migrations/0003_userprofile.py",
+      "type": "file",
+      "sha": "bbe5b97325be4d3f23d2f14c802642e078753394",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 920,
       "is_binary": false
     },
     {
@@ -812,10 +1064,10 @@
       "name": "models.py",
       "path": "src/Usuarios/models.py",
       "type": "file",
-      "sha": "8f870e2827a4ee108627a40bdc647d3acb5536e1",
+      "sha": "7227f86b71211557c957bd5f64c7eea980424743",
       "mode": "100644",
       "extension": ".py",
-      "size": 235,
+      "size": 1384,
       "is_binary": false
     },
     {
@@ -842,7 +1094,7 @@
       "name": "config",
       "path": "src/config",
       "type": "directory",
-      "sha": "233929f4fd37ff5ad8ffef8a7bf21864045df6b7",
+      "sha": "fa65251a9609f5f925f4da82e518fe24f697b3ba",
       "mode": "040000",
       "children": []
     },
@@ -870,20 +1122,20 @@
       "name": "settings.py",
       "path": "src/config/settings.py",
       "type": "file",
-      "sha": "14f444686fa0626e8ebff074890584c5f3c535e8",
+      "sha": "422403eb0df209d512f81f82fd32de9ff1ae83bb",
       "mode": "100644",
       "extension": ".py",
-      "size": 4674,
+      "size": 6066,
       "is_binary": false
     },
     {
       "name": "urls.py",
       "path": "src/config/urls.py",
       "type": "file",
-      "sha": "bfe999ddfece91cd6ee7881e21dc9265380d20ac",
+      "sha": "a0c3ad3af4f1a02e29747a7a67bee7b79f74aff7",
       "mode": "100644",
       "extension": ".py",
-      "size": 1045,
+      "size": 1527,
       "is_binary": false
     },
     {
@@ -900,7 +1152,7 @@
       "name": "home",
       "path": "src/home",
       "type": "directory",
-      "sha": "5400488c50d99be8519a95bb0fae07fea11b6243",
+      "sha": "980eb799663d9d42ae0d2ffa49eaef1918fcacd7",
       "mode": "040000",
       "children": []
     },
@@ -938,7 +1190,7 @@
       "name": "forms.py",
       "path": "src/home/forms.py",
       "type": "file",
-      "sha": "4c9cddea1f1b0f354a0de4c2187655a3e59d7519",
+      "sha": "b6a2e2836812189b72300c6cb5d740bd19012298",
       "mode": "100644",
       "extension": ".py",
       "size": 297,
@@ -1038,7 +1290,7 @@
       "name": "templates",
       "path": "src/home/templates",
       "type": "directory",
-      "sha": "4acbc63d8c93f0fb142b65b6ce7ec9fd482b897e",
+      "sha": "6eed0079b7e37eb8f41abe42d6a8b6b20dd36680",
       "mode": "040000",
       "children": []
     },
@@ -1046,7 +1298,7 @@
       "name": "home",
       "path": "src/home/templates/home",
       "type": "directory",
-      "sha": "20130564030af216144b2f50170a93f560b23f25",
+      "sha": "bc0974da5eccff0f4912fda22f6f1b01d9da466c",
       "mode": "040000",
       "children": []
     },
@@ -1054,10 +1306,10 @@
       "name": "alertas.html",
       "path": "src/home/templates/home/alertas.html",
       "type": "file",
-      "sha": "a89e11a4a22af0795df94a1cf3f20d09a2d9e3fd",
+      "sha": "8808316f164a8345c918e23c1aeea7ad9811bc55",
       "mode": "100644",
       "extension": ".html",
-      "size": 11776,
+      "size": 6689,
       "is_binary": false
     },
     {
@@ -1074,7 +1326,7 @@
       "name": "components",
       "path": "src/home/templates/home/components",
       "type": "directory",
-      "sha": "9da85d9f381c7cf0a39f09ff3ec0c290b1fd9ce0",
+      "sha": "f1157d2cc8f26a698258da0de5fe0d83e289fad5",
       "mode": "040000",
       "children": []
     },
@@ -1082,70 +1334,70 @@
       "name": "header.html",
       "path": "src/home/templates/home/components/header.html",
       "type": "file",
-      "sha": "d302f7c5a721d9a3b31208dc9158d18a7e1391a9",
+      "sha": "486f4f9ef2d513d9749f2d7bad2c5c476dc0244c",
       "mode": "100644",
       "extension": ".html",
-      "size": 1371,
+      "size": 745,
       "is_binary": false
     },
     {
       "name": "sidebar.html",
       "path": "src/home/templates/home/components/sidebar.html",
       "type": "file",
-      "sha": "85be5e2acddaab1fe5c391a78b8e653e079dd0ac",
+      "sha": "406dd5429a796136852194db2e0a5e37110c8c33",
       "mode": "100644",
       "extension": ".html",
-      "size": 3704,
+      "size": 3280,
       "is_binary": false
     },
     {
       "name": "dashboard.html",
       "path": "src/home/templates/home/dashboard.html",
       "type": "file",
-      "sha": "547012ea1d0c92ad293d6832c37433aa44875d94",
+      "sha": "13bda7556ae5bb69d7bcf262cb532028abf6fb24",
       "mode": "100644",
       "extension": ".html",
-      "size": 15778,
+      "size": 3475,
       "is_binary": false
     },
     {
       "name": "favoritos.html",
       "path": "src/home/templates/home/favoritos.html",
       "type": "file",
-      "sha": "5e66bcec2f6be6f88c7dea37d64f77fcca7576d2",
+      "sha": "d3f8668999ea1cf0ad9c91cff5cacfb86eb79c88",
       "mode": "100644",
       "extension": ".html",
-      "size": 12668,
+      "size": 9291,
       "is_binary": false
     },
     {
-      "name": "proposicoes.html",
-      "path": "src/home/templates/home/proposicoes.html",
+      "name": "processos.html",
+      "path": "src/home/templates/home/processos.html",
       "type": "file",
-      "sha": "0ad81fc7a99ed85c0a455794d6a303fa10e199a4",
+      "sha": "d8b1242d4237c7cb8bf4e87e772e4b54b83cec66",
       "mode": "100644",
       "extension": ".html",
-      "size": 20462,
+      "size": 16334,
+      "is_binary": false
+    },
+    {
+      "name": "proposicao_detalhes.html",
+      "path": "src/home/templates/home/proposicao_detalhes.html",
+      "type": "file",
+      "sha": "b6475086195e6aed56cd2b885d0b8989b33cf0cc",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 8398,
       "is_binary": false
     },
     {
       "name": "usuario.html",
       "path": "src/home/templates/home/usuario.html",
       "type": "file",
-      "sha": "acbc4f9d6a6cdb3ad1fbc13faeb52a72d0d06bf5",
+      "sha": "7b1b2887d2e4613129aec52ea20132b1ca1885e7",
       "mode": "100644",
       "extension": ".html",
-      "size": 17465,
-      "is_binary": false
-    },
-    {
-      "name": "votacoes.html",
-      "path": "src/home/templates/home/votacoes.html",
-      "type": "file",
-      "sha": "042e18af48d013c7b41d4c0db3bee67698b8fec6",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 11020,
+      "size": 6580,
       "is_binary": false
     },
     {
@@ -1230,10 +1482,10 @@
       "name": "views.py",
       "path": "src/home/views.py",
       "type": "file",
-      "sha": "52baf29982bddaee58624fc020b3451ba6105c07",
+      "sha": "263579acc27198a11fb91f73314f4d912f82fc64",
       "mode": "100644",
       "extension": ".py",
-      "size": 1878,
+      "size": 12235,
       "is_binary": false
     },
     {
@@ -1247,30 +1499,116 @@
       "is_binary": false
     },
     {
+      "name": "tests",
+      "path": "src/tests",
+      "type": "directory",
+      "sha": "ff88a89ad13d71d49c4a7b1e19f3383d7b057cc5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "e2e",
+      "path": "src/tests/e2e",
+      "type": "directory",
+      "sha": "9bbc0ed31864dc57802e66e1fbe301a3041fb702",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "conftest.py",
+      "path": "src/tests/e2e/conftest.py",
+      "type": "file",
+      "sha": "7409d4a42aadf58ecfebcf38177efb71e17a39f0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 496,
+      "is_binary": false
+    },
+    {
+      "name": "test_alertas.py",
+      "path": "src/tests/e2e/test_alertas.py",
+      "type": "file",
+      "sha": "d34009cb99e25c1ef6af5bf012bc739ea392614c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2286,
+      "is_binary": false
+    },
+    {
+      "name": "test_configuracoes.py",
+      "path": "src/tests/e2e/test_configuracoes.py",
+      "type": "file",
+      "sha": "94f66b6cf2ba074281dc0c36d24074138e3cb731",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1438,
+      "is_binary": false
+    },
+    {
+      "name": "test_dashboard.py",
+      "path": "src/tests/e2e/test_dashboard.py",
+      "type": "file",
+      "sha": "a7fead645fd0b239fb6ad2451fa09d14a23e511f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1953,
+      "is_binary": false
+    },
+    {
+      "name": "test_favoritos.py",
+      "path": "src/tests/e2e/test_favoritos.py",
+      "type": "file",
+      "sha": "66076e483526781fd21f498a1b4b86f9de4e5ca2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1474,
+      "is_binary": false
+    },
+    {
+      "name": "test_sanity.py",
+      "path": "src/tests/e2e/test_sanity.py",
+      "type": "file",
+      "sha": "e7609b243495fef7dea791b9ce0c5ed9a297ab07",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 682,
+      "is_binary": false
+    },
+    {
+      "name": "test_timeline.py",
+      "path": "src/tests/e2e/test_timeline.py",
+      "type": "file",
+      "sha": "77b962f8edafb011b5271299fd68528817a8de4f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4453,
+      "is_binary": false
+    },
+    {
       "name": "uv.lock",
       "path": "uv.lock",
       "type": "file",
-      "sha": "09f11aa85d415ba7a57ff986dd4ca021d72e5d94",
+      "sha": "4c886e4b978dde3b3d9a984f0301d4f115072e67",
       "mode": "100644",
       "extension": ".lock",
-      "size": 17370,
+      "size": 76358,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-21T09:41:20.919977",
+  "extracted_at": "2026-06-22T11:24:15.491743",
   "method": "rest",
-  "total_items": 131,
+  "total_items": 166,
   "repository_metadata": {
     "id": 1203020564,
     "full_name": "unb-mds/2026-1-P.R.I.S.M.A",
     "description": null,
     "created_at": "2026-04-06T16:34:51Z",
-    "updated_at": "2026-06-18T13:28:13Z",
-    "language": "HTML",
-    "size": 3243,
+    "updated_at": "2026-06-21T23:10:36Z",
+    "language": "Python",
+    "size": 3360,
     "stars": 2,
     "forks": 0,
-    "open_issues": 24
+    "open_issues": 11
   }
 }

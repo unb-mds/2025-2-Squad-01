@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-21T08:53:51.802168",
+      "extracted_at": "2026-06-22T10:32:13.080480",
       "file_path": "data/bronze/issues_2026-1-Squad07.json",
-      "record_count": 62
+      "record_count": 60
     }
   },
   {
@@ -569,11 +569,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -934,11 +934,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -1127,11 +1127,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -1256,7 +1256,7 @@
         "description": "Segunda release"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1332,18 +1332,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-15T03:25:23Z",
-    "updated_at": "2026-06-18T19:38:36Z",
-    "closed_at": null,
+    "updated_at": "2026-06-21T12:34:31Z",
+    "closed_at": "2026-06-21T12:34:31Z",
     "assignee": {
       "login": "Jonathan-Carpaneda",
       "id": 102928460,
@@ -1381,7 +1381,27 @@
       "total_blocking": 0
     },
     "body": "## Contexto\nA spec de integracao IA (#106) define que os resultados de analise serao persistidos pelo backend. Atualmente o schema Prisma nao possui a tabela `Analysis`. Esta migration e pre-requisito para a implementacao do agente e do score.\n\n## O que fazer\n- Adicionar model `Analysis` em `backend/prisma/schema.prisma`:\n  - `id`, `lawId` (FK para `Law`), `score`, `metrics` (JSON), `warnings` (JSON), `modelVersion`, `cached` (Bool), `createdAt`\n- Resolver NC-001 da spec (#106): confirmar se analise e tabela propria ou campo em `Law` (decisao: tabela propria `Analysis`)\n- Gerar e aplicar migration: `prisma migrate dev --name add-analysis-table`\n- Atualizar `backend/app/models/` com o schema gerado\n\n## Criterios de Aceite\n- [ ] Model `Analysis` adicionado ao `schema.prisma`\n- [ ] Migration gerada em `backend/prisma/migrations/`\n- [ ] `prisma db push` roda sem erros no ambiente local\n- [ ] CI passa apos a migration\n- [ ] Sem breaking changes nas tabelas existentes (`Law`, `User`)\n\n## Dependencia\nBloqueia: Implementacao do Agente LegalBERT-pt e Score de Legibilidade (Backend).\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/131/reactions",
       "total_count": 0,
@@ -1396,7 +1416,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/131/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -1494,11 +1514,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -1669,11 +1689,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -1835,11 +1855,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2028,11 +2048,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
@@ -2233,11 +2253,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
@@ -2504,11 +2524,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2651,7 +2671,7 @@
         "description": "TDD e testes automatizados"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2706,18 +2726,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-02T02:48:35Z",
-    "updated_at": "2026-06-13T16:19:18Z",
-    "closed_at": null,
+    "updated_at": "2026-06-22T00:34:46Z",
+    "closed_at": "2026-06-22T00:34:46Z",
     "assignee": {
       "login": "ViniciusA05",
       "id": 227692461,
@@ -2755,7 +2775,27 @@
       "total_blocking": 0
     },
     "body": "## Problema\nSem framework de testes configurado centralmente, cada dev usa uma abordagem diferente.\n\n## Solução Desejada\n\n### Backend (Python + pytest)\n```yaml\nSetup:\n  - pytest.ini configurado\n  - pytest-cov para coverage reports\n  - pytest-asyncio para testes async\n  - Coverage mínima: 75%\n\nOrganização:\n  - tests/unit/ → testes unitários isolados\n  - tests/integration/ → testes com banco/API\n  - tests/conftest.py → fixtures compartilhadas\n\nCI Integration:\n  - pytest roda em CI\n  - Relatório de coverage gerado\n  - Falha se coverage < 75%\n```\n\n### Frontend (TypeScript + Jest)\n```yaml\nSetup:\n  - jest.config.ts configurado\n  - @testing-library/react para componentes\n  - @testing-library/jest-dom para assertions\n  - Coverage mínima: 70%\n\nOrganização:\n  - src/__tests__/ → testes unitários\n  - src/components/__tests__/ → testes de componentes\n  - jest.setup.js → configuração global\n\nCI Integration:\n  - jest roda em CI (4.2)\n  - Relatório de coverage gerado\n  - Falha se coverage < 70%\n```\n\n### Relatórios\n- Coverage reports em formato HTML\n- LCOV para integração com codecov/codeclimate\n- Badge de coverage no README\n\n## Critério de Aceite\n- [ ] pytest configurado no backend com mínimo 5 testes exemplo\n- [ ] Jest configurado no frontend com mínimo 5 testes exemplo\n- [ ] Coverage reports gerados automaticamente\n- [ ] CI integrado\n- [ ] Documentação\n- [ ] README atualizado com badges de coverage\n\n## Contexto Adicional\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/114/reactions",
       "total_count": 0,
@@ -2770,7 +2810,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/114/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -2881,11 +2921,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
@@ -3086,11 +3126,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -3394,11 +3434,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -3596,11 +3636,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
@@ -3905,11 +3945,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
@@ -4054,7 +4094,7 @@
         "description": "Algoritmos de legibilidade, integração com IA e processamento de texto, etc"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -4109,18 +4149,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 4,
       "state": "closed",
       "created_at": "2026-06-02T03:15:29Z",
-      "updated_at": "2026-06-09T22:17:53Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-08T00:00:00Z",
       "closed_at": "2026-06-09T22:15:58Z"
     },
     "comments": 0,
     "created_at": "2026-06-02T02:30:35Z",
-    "updated_at": "2026-06-03T14:46:23Z",
-    "closed_at": null,
+    "updated_at": "2026-06-22T01:10:14Z",
+    "closed_at": "2026-06-22T01:10:14Z",
     "assignee": {
       "login": "pedrolrm",
       "id": 141690806,
@@ -4158,7 +4198,27 @@
       "total_blocking": 0
     },
     "body": "## Problema\nA falta de arquitetura clara para integração IA gera uncertainty para a implementação e torna difícil planejar sprints futuras.\n\n## Solução Desejada\nCriar documento `docs/architecture/ai-integration.md` e spec `specs/002-requirements-r2/ai-integration.md` contendo:\n\n### Estrutura de Integração\n- Diagrama de componentes (Frontend → Backend → IA Service)\n- Fluxos de requisição/resposta\n- Schemas de input/output (Pydantic models)\n- Tratamento de erros e fallbacks\n\n### Decisões Arquiteturais\n- Integração local (modelo embedido) vs. externa (microserviço, API)\n- Síncrono vs. assíncrono (jobs background, queues)\n- Caching de resultados\n- Versionamento de modelos\n\n### Endpoints da API\nex:\n\nPOST /api/v1/analysis/evaluate\n  Input: { text: string, type: 'bill' | 'amendment' }\n  Output: { score: float, metrics: {...}, warnings: [...], cached: bool }\n\nGET /api/v1/analysis/{id}/history\n  Output: [ { timestamp, score, model_version } ]\n\n\n### Performance & Escalabilidade\n- Latência esperada por análise\n- Concorrência máxima\n- Armazenamento de cache\n- Monitoramento\n\n## Critério de Aceite\n- [ ] Documento criado e completo\n- [ ] Spec `specs/002-requirements-r2/ai-integration.md` criado\n- [ ] Diagrama de componentes (Mermaid ou similar) incluído\n- [ ] Endpoints especificados com schemas\n- [ ] Fluxo assíncrono vs. síncrono decidido e documentado\n- [ ] Revisado com arquiteto, backend lead e ML lead\n\n## Contexto Adicional\ndocs/architecture/index.md",
-    "closed_by": null,
+    "closed_by": {
+      "login": "pedrolrm",
+      "id": 141690806,
+      "node_id": "U_kgDOCHIHtg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141690806?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pedrolrm",
+      "html_url": "https://github.com/pedrolrm",
+      "followers_url": "https://api.github.com/users/pedrolrm/followers",
+      "following_url": "https://api.github.com/users/pedrolrm/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pedrolrm/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pedrolrm/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pedrolrm/subscriptions",
+      "organizations_url": "https://api.github.com/users/pedrolrm/orgs",
+      "repos_url": "https://api.github.com/users/pedrolrm/repos",
+      "events_url": "https://api.github.com/users/pedrolrm/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pedrolrm/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/106/reactions",
       "total_count": 0,
@@ -4173,7 +4233,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/106/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -4229,7 +4289,7 @@
         "description": "Algoritmos de legibilidade, integração com IA e processamento de texto, etc"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -4284,18 +4344,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-02T02:28:31Z",
-    "updated_at": "2026-06-09T22:17:22Z",
-    "closed_at": null,
+    "updated_at": "2026-06-22T01:10:14Z",
+    "closed_at": "2026-06-22T01:10:14Z",
     "assignee": {
       "login": "pedrolrm",
       "id": 141690806,
@@ -4333,7 +4393,27 @@
       "total_blocking": 0
     },
     "body": "## Nome do Conceito\nArquiteturas de Inteligência Artificial e Processamento de Linguagem Natural (NLP) para Análise de Texto Legislativo\n\n## O que é?\nUm conjunto de padrões arquiteturais e tecnologias utilizadas para construir sistemas de IA que processam texto legislativo, extraem métricas de qualidade, identificam inconsistências e geram scores de qualidade técnica de proposições.\n\n## Como funciona?\n- **Entrada**: Texto de proposição legislativa\n- **Processamento**: Pipeline de NLP (tokenização, análise sintática, extração de entidades, comparação com legislação)\n- **Saída**: Score de qualidade + métricas detalhadas\n\nPode envolver: Modelos pré-treinados (BERT, RoBERTa), fine-tuning, regras customizadas, APIs externas.\n\n## Tópicos a serem estudados\n- [ ] Comparação entre abordagens rule-based vs. ML vs. LLM\n- [ ] Estudo de transformer models (BERT, GPT) para análise legislativa\n- [ ] Ferramentas existentes (spaCy, NLTK, Hugging Face Transformers)\n- [ ] Datasets públicos de legislação em português\n- [ ] Padrões de integração (batch processing, real-time, streaming)\n- [ ] Considerações de performance e escalabilidade\n- [ ] Estratégias de deploy (container, serverless, on-premise)\n\n## Quem será o coelho?\n[Nome do membro do time]\n\n## Documentação\nCentralizar achados arquitetura-ia-nlp.md\n\n## Notion de Estudo\n[Link para página de estudo]",
-    "closed_by": null,
+    "closed_by": {
+      "login": "pedrolrm",
+      "id": 141690806,
+      "node_id": "U_kgDOCHIHtg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141690806?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pedrolrm",
+      "html_url": "https://github.com/pedrolrm",
+      "followers_url": "https://api.github.com/users/pedrolrm/followers",
+      "following_url": "https://api.github.com/users/pedrolrm/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pedrolrm/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pedrolrm/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pedrolrm/subscriptions",
+      "organizations_url": "https://api.github.com/users/pedrolrm/orgs",
+      "repos_url": "https://api.github.com/users/pedrolrm/repos",
+      "events_url": "https://api.github.com/users/pedrolrm/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pedrolrm/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/105/reactions",
       "total_count": 0,
@@ -4348,7 +4428,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/105/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -4468,11 +4548,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -4652,11 +4732,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-15T03:36:28Z",
+      "updated_at": "2026-06-21T12:34:31Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -4845,11 +4925,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 2,
+      "open_issues": 5,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-09T22:16:40Z",
-      "updated_at": "2026-06-15T03:01:47Z",
+      "updated_at": "2026-06-22T01:10:14Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -11098,256 +11178,6 @@
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/45/timeline",
     "performed_via_github_app": null,
     "state_reason": "not_planned",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad07"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad07/issues/44",
-    "id": 4318423256,
-    "node_id": "I_kwDORqqPns8AAAABAWXo2A",
-    "number": 44,
-    "title": "[US14] - Componente de Problemas Detectados",
-    "user": {
-      "login": "Paulodemczuk",
-      "id": 226184285,
-      "node_id": "U_kgDODXtMXQ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/226184285?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Paulodemczuk",
-      "html_url": "https://github.com/Paulodemczuk",
-      "followers_url": "https://api.github.com/users/Paulodemczuk/followers",
-      "following_url": "https://api.github.com/users/Paulodemczuk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Paulodemczuk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Paulodemczuk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Paulodemczuk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Paulodemczuk/orgs",
-      "repos_url": "https://api.github.com/users/Paulodemczuk/repos",
-      "events_url": "https://api.github.com/users/Paulodemczuk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Paulodemczuk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10772285852,
-        "node_id": "LA_kwDORqqPns8AAAACghQJnA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/epic:%20visualiza%C3%A7%C3%A3o-dados",
-        "name": "epic: visualização-dados",
-        "color": "33c9a8",
-        "default": false,
-        "description": "Para a construção da Dashboard, gráficos e a exibição das métricas calculadas."
-      },
-      {
-        "id": 10772343180,
-        "node_id": "LA_kwDORqqPns8AAAACghTpjA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/requirement",
-        "name": "requirement",
-        "color": "d4c5f9",
-        "default": false,
-        "description": "Requisitos funcionais ou nao funcionais"
-      },
-      {
-        "id": 10772372486,
-        "node_id": "LA_kwDORqqPns8AAAACghVcBg",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/release:%20mvp",
-        "name": "release: mvp",
-        "color": "0e8a16",
-        "default": false,
-        "description": "Primeira release"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-04-23T19:41:55Z",
-    "updated_at": "2026-05-12T18:25:45Z",
-    "closed_at": "2026-05-12T18:25:45Z",
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "Descrição: Como Jornalista, quero identificar rapidamente quais são os erros de ambiguidade.\n\nCritérios de Aceite:\n\n[ ] Cards laterais listando termos dúbios ou frases muito longas.",
-    "closed_by": {
-      "login": "Paulodemczuk",
-      "id": 226184285,
-      "node_id": "U_kgDODXtMXQ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/226184285?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Paulodemczuk",
-      "html_url": "https://github.com/Paulodemczuk",
-      "followers_url": "https://api.github.com/users/Paulodemczuk/followers",
-      "following_url": "https://api.github.com/users/Paulodemczuk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Paulodemczuk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Paulodemczuk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Paulodemczuk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Paulodemczuk/orgs",
-      "repos_url": "https://api.github.com/users/Paulodemczuk/repos",
-      "events_url": "https://api.github.com/users/Paulodemczuk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Paulodemczuk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/44/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "not_planned",
-    "pinned_comment": null,
-    "repo_name": "2026-1-Squad07"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43/events",
-    "html_url": "https://github.com/unb-mds/2026-1-Squad07/issues/43",
-    "id": 4318418491,
-    "node_id": "I_kwDORqqPns8AAAABAWXWOw",
-    "number": 43,
-    "title": "[US10] - Tela de Dashboard da Lei (Texto e nota principal)",
-    "user": {
-      "login": "Paulodemczuk",
-      "id": 226184285,
-      "node_id": "U_kgDODXtMXQ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/226184285?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Paulodemczuk",
-      "html_url": "https://github.com/Paulodemczuk",
-      "followers_url": "https://api.github.com/users/Paulodemczuk/followers",
-      "following_url": "https://api.github.com/users/Paulodemczuk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Paulodemczuk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Paulodemczuk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Paulodemczuk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Paulodemczuk/orgs",
-      "repos_url": "https://api.github.com/users/Paulodemczuk/repos",
-      "events_url": "https://api.github.com/users/Paulodemczuk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Paulodemczuk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10772285852,
-        "node_id": "LA_kwDORqqPns8AAAACghQJnA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/epic:%20visualiza%C3%A7%C3%A3o-dados",
-        "name": "epic: visualização-dados",
-        "color": "33c9a8",
-        "default": false,
-        "description": "Para a construção da Dashboard, gráficos e a exibição das métricas calculadas."
-      },
-      {
-        "id": 10772343180,
-        "node_id": "LA_kwDORqqPns8AAAACghTpjA",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/requirement",
-        "name": "requirement",
-        "color": "d4c5f9",
-        "default": false,
-        "description": "Requisitos funcionais ou nao funcionais"
-      },
-      {
-        "id": 10772372486,
-        "node_id": "LA_kwDORqqPns8AAAACghVcBg",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/labels/release:%20mvp",
-        "name": "release: mvp",
-        "color": "0e8a16",
-        "default": false,
-        "description": "Primeira release"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-04-23T19:41:08Z",
-    "updated_at": "2026-06-09T21:23:02Z",
-    "closed_at": "2026-06-09T21:23:02Z",
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "Descrição: Como Jornalista, quero ver o relatório detalhado de uma lei específica.\n\nCritérios de Aceite:\n\n[ ] Exibição do texto completo da lei ao lado da pontuação.\n\n[ ] Destaque visual (cor) para a nota obtida.",
-    "closed_by": {
-      "login": "ViniciusA05",
-      "id": 227692461,
-      "node_id": "U_kgDODZJPrQ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ViniciusA05",
-      "html_url": "https://github.com/ViniciusA05",
-      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
-      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
-      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
-      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
-      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/43/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   }
