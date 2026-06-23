@@ -2,7 +2,7 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-22T11:24:07.346249",
+  "extracted_at": "2026-06-23T09:18:19.825062",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -178,6 +178,66 @@
         "path": "backend/.gitignore"
       },
       {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 533,
+        "extension": "",
+        "path": "backend/Dockerfile"
+      },
+      {
+        "name": "alembic.ini",
+        "type": "file",
+        "language": "INI",
+        "size": 5008,
+        "extension": ".ini",
+        "path": "backend/alembic.ini"
+      },
+      {
+        "name": "alembic",
+        "type": "directory",
+        "path": "backend/alembic",
+        "children": []
+      },
+      {
+        "name": "README",
+        "type": "file",
+        "language": "No Extension",
+        "size": 38,
+        "extension": "",
+        "path": "backend/alembic/README"
+      },
+      {
+        "name": "env.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2623,
+        "extension": ".py",
+        "path": "backend/alembic/env.py"
+      },
+      {
+        "name": "script.py.mako",
+        "type": "file",
+        "language": "Unknown",
+        "size": 704,
+        "extension": ".mako",
+        "path": "backend/alembic/script.py.mako"
+      },
+      {
+        "name": "versions",
+        "type": "directory",
+        "path": "backend/alembic/versions",
+        "children": []
+      },
+      {
+        "name": "001_initial_schema.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6082,
+        "extension": ".py",
+        "path": "backend/alembic/versions/001_initial_schema.py"
+      },
+      {
         "name": "app",
         "type": "directory",
         "path": "backend/app",
@@ -206,10 +266,18 @@
         "path": "backend/app/core/__init__.py"
       },
       {
+        "name": "cache.py",
+        "type": "file",
+        "language": "Python",
+        "size": 651,
+        "extension": ".py",
+        "path": "backend/app/core/cache.py"
+      },
+      {
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 700,
+        "size": 821,
         "extension": ".py",
         "path": "backend/app/core/database.py"
       },
@@ -253,15 +321,31 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 71,
+        "size": 341,
         "extension": ".py",
         "path": "backend/app/models/__init__.py"
+      },
+      {
+        "name": "historico_consulta.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1014,
+        "extension": ".py",
+        "path": "backend/app/models/historico_consulta.py"
+      },
+      {
+        "name": "local_pin.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1115,
+        "extension": ".py",
+        "path": "backend/app/models/local_pin.py"
       },
       {
         "name": "ocorrencia.py",
         "type": "file",
         "language": "Python",
-        "size": 379,
+        "size": 1929,
         "extension": ".py",
         "path": "backend/app/models/ocorrencia.py"
       },
@@ -283,9 +367,25 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 0,
+        "size": 23,
         "extension": ".py",
         "path": "backend/app/repositories/__init__.py"
+      },
+      {
+        "name": "local_pin_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1669,
+        "extension": ".py",
+        "path": "backend/app/repositories/local_pin_repository.py"
+      },
+      {
+        "name": "ocorrencia_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2389,
+        "extension": ".py",
+        "path": "backend/app/repositories/ocorrencia_repository.py"
       },
       {
         "name": "ocorrencias.py",
@@ -386,10 +486,18 @@
         "path": "backend/app/services/ocorrencias.py"
       },
       {
+        "name": "risco_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 801,
+        "extension": ".py",
+        "path": "backend/app/services/risco_service.py"
+      },
+      {
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 616,
+        "size": 998,
         "extension": ".yml",
         "path": "backend/docker-compose.yml"
       },
@@ -397,7 +505,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 95,
+        "size": 103,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -424,12 +532,28 @@
         "path": "backend/tests/test_main.py"
       },
       {
+        "name": "test_ocorrencia_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6147,
+        "extension": ".py",
+        "path": "backend/tests/test_ocorrencia_repository.py"
+      },
+      {
         "name": "test_ocorrencias.py",
         "type": "file",
         "language": "Python",
         "size": 2023,
         "extension": ".py",
         "path": "backend/tests/test_ocorrencias.py"
+      },
+      {
+        "name": "test_risco_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1942,
+        "extension": ".py",
+        "path": "backend/tests/test_risco_service.py"
       },
       {
         "name": "docs",
@@ -482,6 +606,36 @@
         "size": 11649,
         "extension": ".md",
         "path": "docs/Arquitetura/RSS-Integration.md"
+      },
+      {
+        "name": "Specs_banco_de_dados",
+        "type": "directory",
+        "path": "docs/Arquitetura/Specs_banco_de_dados",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 16655,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Specs_banco_de_dados/plan.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4675,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Specs_banco_de_dados/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6585,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Specs_banco_de_dados/tasks.md"
       },
       {
         "name": "analise-compatibilidade.md",
@@ -1035,7 +1189,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 8079,
+        "size": 8155,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -2122,7 +2276,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-22T11:27:14.353406",
+    "extracted_at": "2026-06-23T09:21:24.154176",
     "file_path": "data/silver/hierarchy_2026-1-SafeStreets.json"
   }
 }
