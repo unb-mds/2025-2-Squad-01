@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-22T10:32:09.227009",
+      "extracted_at": "2026-06-23T08:23:47.260931",
       "file_path": "data/bronze/issues_2026-2-VeritasIA.json",
       "record_count": 53
     }
@@ -104,11 +104,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
@@ -308,11 +308,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
@@ -533,11 +533,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
@@ -728,11 +728,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
@@ -868,7 +868,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -944,18 +944,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-19T19:12:21Z",
-    "updated_at": "2026-06-21T23:43:48Z",
-    "closed_at": null,
+    "updated_at": "2026-06-23T02:15:48Z",
+    "closed_at": "2026-06-23T02:15:48Z",
     "assignee": {
       "login": "danilofns",
       "id": 190551570,
@@ -1001,8 +1001,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 🤖 [FEAT] Módulo LLM: Script de Resumo Automatizado de Notícias (Modos Raw e Blurred)\n\n## 📝 Descrição\nEsta issue compreende a criação de um script/serviço isolado no Back-end que consome as notícias brutas já existentes no banco de dados (Supabase), envia o corpo do texto para uma API de LLM (como Google Gemini API via AI Studio) e gera dois tipos de resumos estruturados:\n\n1. **Modo Raw (Resumo Direto):** Um resumo puramente factual, conciso e direto da notícia original, sem filtros adicionais de sensibilidade.\n2. **Modo Blurred (Resumo Protegido):** Um resumo focado em mitigar o impacto de desinformação agressiva, mascarando termos excessivamente violentos, ofensivos ou dados sensíveis, focando no contexto sem replicar a toxicidade.\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### 🧪 Fase 1: Engenharia de Prompts (Prompt Engineering)\n- [x] Desenvolver e validar o prompt do **Modo Raw** (focado em extrair quem, o quê, onde, quando e por quê em no máximo 3 parágrafos).\n- [x] Desenvolver e validar o prompt do **Modo Blurred** (instruindo a LLM a identificar gatilhos sensíveis, desarmar o tom inflamatório e substituir termos tóxicos por descrições neutras, ex: substituir xingamentos por `[termo ofensivo]`).\n - [x] `localizacao_texto` (String ou None) - Extrair menções de texto a locais (Ex: \"Fronteira DF/GO\", \"Gama\").\n\n### 🏗️ Fase 2: Estrutura do Script em Python (`services/llm_processor.py`)\n- [ ] Configurar a integração oficial com o SDK da LLM utilizando chaves de API mascaradas via `.env`.\n- [ ] Criar a função principal de processamento que lê as notícias do banco onde `resumo_raw IS NULL`, disparando as duas chamadas para a LLM.\n- [ ] Implementar tratamento de erros caso o texto da notícia seja curto demais, esteja em formato inválido ou a API da LLM atinja o limite de requisições (*Rate Limit*).\n\n---\n\n## 🏆 Critérios de Aceitação\n- [ ] O script deve gerar as duas versões de resumo para cada notícia submetida de forma automatizada.\n- [ ] O **Modo Blurred** não deve inventar fatos (*alucinação*), apenas suavizar e mascarar os termos sensíveis identificados no texto original.\n- [ ] As chaves de API da LLM devem ser lidas estritamente de variáveis de ambiente locais, nunca fixadas direto no código.",
-    "closed_by": null,
+    "body": "# 🤖 [FEAT] Módulo LLM: Script de Resumo Automatizado de Notícias (Modos Raw e Blurred)\n\n## 📝 Descrição\nEsta issue compreende a criação de um script/serviço isolado no Back-end que consome as notícias brutas já existentes no banco de dados (Supabase), envia o corpo do texto para uma API de LLM (como Google Gemini API via AI Studio) e gera dois tipos de resumos estruturados:\n\n1. **Modo Raw (Resumo Direto):** Um resumo puramente factual, conciso e direto da notícia original, sem filtros adicionais de sensibilidade.\n2. **Modo Blurred (Resumo Protegido):** Um resumo focado em mitigar o impacto de desinformação agressiva, mascarando termos excessivamente violentos, ofensivos ou dados sensíveis, focando no contexto sem replicar a toxicidade.\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### 🧪 Fase 1: Engenharia de Prompts (Prompt Engineering)\n- [x] Desenvolver e validar o prompt do **Modo Raw** (focado em extrair quem, o quê, onde, quando e por quê em no máximo 3 parágrafos).\n- [x] Desenvolver e validar o prompt do **Modo Blurred** (instruindo a LLM a identificar gatilhos sensíveis, desarmar o tom inflamatório e substituir termos tóxicos por descrições neutras, ex: substituir xingamentos por `[termo ofensivo]`).\n - [x] `localizacao_texto` (String ou None) - Extrair menções de texto a locais (Ex: \"Fronteira DF/GO\", \"Gama\").\n\n### 🏗️ Fase 2: Estrutura do Script em Python (`services/llm_processor.py`)\n- [x] Configurar a integração oficial com o SDK da LLM utilizando chaves de API mascaradas via `.env`.\n- [x] Criar a função principal de processamento que lê as notícias do banco onde `resumo_raw IS NULL`, disparando as duas chamadas para a LLM.\n- [x] Implementar tratamento de erros caso o texto da notícia seja curto demais, esteja em formato inválido ou a API da LLM atinja o limite de requisições (*Rate Limit*).\n\n---\n\n## 🏆 Critérios de Aceitação\n- [x] O script deve gerar as duas versões de resumo para cada notícia submetida de forma automatizada.\n- [x] O **Modo Blurred** não deve inventar fatos (*alucinação*), apenas suavizar e mascarar os termos sensíveis identificados no texto original.\n- [x] As chaves de API da LLM devem ser lidas estritamente de variáveis de ambiente locais, nunca fixadas direto no código.",
+    "closed_by": {
+      "login": "SchneiderCode1",
+      "id": 165057013,
+      "node_id": "U_kgDOCdaR9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165057013?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SchneiderCode1",
+      "html_url": "https://github.com/SchneiderCode1",
+      "followers_url": "https://api.github.com/users/SchneiderCode1/followers",
+      "following_url": "https://api.github.com/users/SchneiderCode1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SchneiderCode1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SchneiderCode1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SchneiderCode1/subscriptions",
+      "organizations_url": "https://api.github.com/users/SchneiderCode1/orgs",
+      "repos_url": "https://api.github.com/users/SchneiderCode1/repos",
+      "events_url": "https://api.github.com/users/SchneiderCode1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SchneiderCode1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/55/reactions",
       "total_count": 0,
@@ -1017,7 +1037,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/55/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-2-VeritasIA"
   },
@@ -1149,11 +1169,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
@@ -1324,17 +1344,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-19T01:40:22Z",
-    "updated_at": "2026-06-21T22:04:02Z",
+    "updated_at": "2026-06-23T02:09:31Z",
     "closed_at": null,
     "assignee": {
       "login": "SchneiderCode1",
@@ -1381,7 +1401,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 🧪 [TEST] Backend: Testes de Integração (Front-Back / Back-Front) e Envio para o Banco de Dados #53\n\n## 📝 Descrição\nEsta issue foca na criação da camada de testes de integração e na validação do fluxo de ponta a ponta (*End-to-End*) do ecossistema do **VeritasIA**. O objetivo é garantir que as requisições enviadas pela interface (Vue 3) sejam recebidas, validadas e processadas corretamente pelas rotas do FastAPI, terminando com o salvamento seguro e persistente dos dados no banco de dados espacial (Supabase/PostGIS).\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### 🔌 Fase 1: Testes de Integração Back-Front (Contratos de Entrada)\n- [x] Criar testes automatizados utilizando o `TestClient` do FastAPI para simular o comportamento do Front-end enviando dados.\n- [ ] Validar a rota `POST /locais/noticias`:\n  - [ ] Testar cenário de envio bem-sucedido com payload JSON completo (Título, Conteúdo, URL, Coordenadas).\n  - [ ] Testar cenário de erro com dados ausentes ou malformatados (Garantir retorno `422 Unprocessable Entity`).\n  - [ ] Testar bloqueio de duplicidade de URL (Garantir retorno `400 Bad Request`).\n\n### 📦 Fase 2: Testes de Integração Front-Back (Contratos de Saída)\n- [x] Validar a consistência da rota `GET /locais/noticias` simulando a leitura do Front-end.\n- [ ] Garantir que o formato de saída do JSON entregue pela API bata 100% com o que o componente do mapa e a lista do Vue esperam receber.\n- [ ] Testar o comportamento da paginação (`skip` e `limit`) para garantir que o front consiga fracionar a busca de notícias volumosas.\n\n### 🗄️ Fase 3: Validação do Envio e Persistência no Banco (Supabase)\n- [x] Configurar os testes de integração para utilizarem uma sessão de banco real (ou banco de testes isolado) que execute os commits do SQLAlchemy com sucesso.\n- [ ] Validar se as coordenadas (`latitude` e `longitude`) enviadas pela requisição estão sendo inseridas sem perdas ou corrupção de tipo nas tabelas remotas.\n- [ ] Garantir que o campo `data_coleta` seja gerado automaticamente pelo servidor e persistido corretamente no banco.\n\n---\n\n## 🏆 Critérios de Aceitação\n- [ ] Os testes de integração devem rodar com sucesso através do comando `pytest` na raiz do backend.\n- [ ] Nenhuma rota de inserção/leitura deve expor dados sensíveis ou estourar erros internos sem tratamento (`500 Internal Server Error`).\n- [ ] A configuração do middleware de CORS deve ser testada e validada para permitir que as requisições vindas de `http://localhost:5173` transitem sem bloqueios do navegador.",
+    "body": "# 🧪 [TEST] Backend: Testes de Integração (Front-Back / Back-Front) e Envio para o Banco de Dados #53\n\n## 📝 Descrição\nEsta issue foca na criação da camada de testes de integração e na validação do fluxo de ponta a ponta (*End-to-End*) do ecossistema do **VeritasIA**. O objetivo é garantir que as requisições enviadas pela interface (Vue 3) sejam recebidas, validadas e processadas corretamente pelas rotas do FastAPI, terminando com o salvamento seguro e persistente dos dados no banco de dados espacial (Supabase/PostGIS).\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### 🔌 Fase 1: Testes de Integração Back-Front (Contratos de Entrada)\n- [x] Criar testes automatizados utilizando o `TestClient` do FastAPI para simular o comportamento do Front-end enviando dados.\n- [ ] Validar a rota `POST /locais/noticias`:\n  - [x] Testar cenário de envio bem-sucedido com payload JSON completo (Título, Conteúdo, URL, Coordenadas).\n  - [x] Testar cenário de erro com dados ausentes ou malformatados (Garantir retorno `422 Unprocessable Entity`).\n  - [x] Testar bloqueio de duplicidade de URL (Garantir retorno `400 Bad Request`).\n\n### 📦 Fase 2: Testes de Integração Front-Back (Contratos de Saída)\n- [x] Validar a consistência da rota `GET /locais/noticias` simulando a leitura do Front-end.\n- [x] Garantir que o formato de saída do JSON entregue pela API bata 100% com o que o componente do mapa e a lista do Vue esperam receber.\n- [x] Testar o comportamento da paginação (`skip` e `limit`) para garantir que o front consiga fracionar a busca de notícias volumosas.\n\n### 🗄️ Fase 3: Validação do Envio e Persistência no Banco (Supabase)\n- [x] Configurar os testes de integração para utilizarem uma sessão de banco real (ou banco de testes isolado) que execute os commits do SQLAlchemy com sucesso.\n- [x] Validar se as coordenadas (`latitude` e `longitude`) enviadas pela requisição estão sendo inseridas sem perdas ou corrupção de tipo nas tabelas remotas.\n- [x] Garantir que o campo `data_coleta` seja gerado automaticamente pelo servidor e persistido corretamente no banco.\n\n---\n\n## 🏆 Critérios de Aceitação\n- [ ] Os testes de integração devem rodar com sucesso através do comando `pytest` na raiz do backend.\n- [x] Nenhuma rota de inserção/leitura deve expor dados sensíveis ou estourar erros internos sem tratamento (`500 Internal Server Error`).\n- [x] A configuração do middleware de CORS deve ser testada e validada para permitir que as requisições vindas de `http://localhost:5173` transitem sem bloqueios do navegador.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/53/reactions",
@@ -1453,7 +1473,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1529,18 +1549,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
-    "comments": 3,
+    "comments": 4,
     "created_at": "2026-06-19T01:34:38Z",
-    "updated_at": "2026-06-21T23:50:08Z",
-    "closed_at": null,
+    "updated_at": "2026-06-22T20:04:52Z",
+    "closed_at": "2026-06-22T20:04:52Z",
     "assignee": {
       "login": "jadsonRleandro",
       "id": 160337733,
@@ -1586,8 +1606,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 🕷️ [FEAT] Scraper: Alinhamento de Atributos Coletados com o Schema do Banco de Dados\n\n## 📝 Descrição\nEsta issue tem como objetivo refatorar a classe ou script do **Scraper** para que os dados extraídos dos portais de notícias batam exatamente com as colunas, tipos e restrições configuradas na tabela `noticias` do nosso banco de dados. \n\nIsso garante que, ao disparar o `POST /locais/noticias`, a API não rejeite o pacote por falta de campos obrigatórios ou formatos inválidos.\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### ⚙️ Fase 1: Atualização dos Campos Extraídos (Parser do Scraper)\n- [x] Ajustar o dicionário/objeto de extração para capturar e renomear os campos seguindo o padrão da tabela do banco:\n  - [x] `titulo` (String) - Título principal da matéria.\n  - [x] `conteudo` (String) - Corpo do texto ou resumo da notícia.\n  - [x] `fonte_url` (String) - URL original do link da notícia (Chave única para evitar duplicados).\n- [x] Adicionar campos opcionais de metadados geográficos e temporais:\n  - [x] `data_publicacao` (ISO DateTime ou None) - Extrair a data de publicação da página.\n\n### 🗺️ Fase 2: Integração com o Módulo de Geocodificação (GeoPy)\n- [ ] Incorporar a biblioteca `geopy` no pipeline pós-raspagem.\n- [ ] Criar lógica para pegar o campo `localizacao_texto` e convertê-lo em:\n  - [ ] `latitude` (Float ou None)\n  - [ ] `longitude` (Float ou None)\n- [ ] Tratar casos em que a notícia não possui geolocalização explícita (salvar com `None` ou `null` sem quebrar o robô).\n\n### 🧹 Fase 3: Tratamento e Limpeza de Dados (Sanitização)\n- [x] Validar e normalizar strings de texto (remover espaços em branco excessivos e caracteres de quebra de linha `\\n` indesejados).\n- [x] Formatar a data capturada para o padrão aceito pelo PostgreSQL (`YYYY-MM-DD HH:MM:SS`).\n- [x] Garantir que URLs longas ou com parâmetros de rastreamento (`?utm_source=...`) sejam limpas antes de gerar o campo `fonte_url`.\n\n### 🧪 Fase 4: Teste de Consistência Local\n- [ ] Criar um script de teste simulado (`test_scraper_output.py`) para rodar o scraper em 3 links diferentes.\n- [ ] Imprimir o JSON final gerado no terminal para inspecionar visualmente se os campos batam 100% com o Schema do Pydantic (`NoticiaCreate`).\n\n---\n\n## 🏆 Critérios de Aceitação\n- [x] O Scraper deve gerar um payload de saída contendo estritamente as chaves: `titulo`, `conteudo`, `fonte_url`, `data_publicacao`, `localizacao_texto`, `latitude` e `longitude`.\n- [x] O script não deve estourar erros caso a data ou a localização não sejam encontradas na página (esses campos devem vir como `None`).\n- [x] Nenhum dado deve ser enviado com codificação corrompida (erros de acentuação/UTF-8).",
-    "closed_by": null,
+    "body": "# 🕷️ [FEAT] Scraper: Alinhamento de Atributos Coletados com o Schema do Banco de Dados\n\n## 📝 Descrição\nEsta issue tem como objetivo refatorar a classe ou script do **Scraper** para que os dados extraídos dos portais de notícias batam exatamente com as colunas, tipos e restrições configuradas na tabela `noticias` do nosso banco de dados. \n\nIsso garante que, ao disparar o `POST /locais/noticias`, a API não rejeite o pacote por falta de campos obrigatórios ou formatos inválidos.\n\n---\n\n## 🗺️ Roadmap de Atividades\n\n### ⚙️ Fase 1: Atualização dos Campos Extraídos (Parser do Scraper)\n- [x] Ajustar o dicionário/objeto de extração para capturar e renomear os campos seguindo o padrão da tabela do banco:\n  - [x] `titulo` (String) - Título principal da matéria.\n  - [x] `conteudo` (String) - Corpo do texto ou resumo da notícia.\n  - [x] `fonte_url` (String) - URL original do link da notícia (Chave única para evitar duplicados).\n- [x] Adicionar campos opcionais de metadados geográficos e temporais:\n  - [x] `data_publicacao` (ISO DateTime ou None) - Extrair a data de publicação da página.\n\n### 🗺️ Fase 2: Integração com o Módulo de Geocodificação (GeoPy)\n- [x] Incorporar a biblioteca `geopy` no pipeline pós-raspagem.\n- [x] Criar lógica para pegar o campo `localizacao_texto` e convertê-lo em:\n  - [x] `latitude` (Float ou None)\n  - [x] `longitude` (Float ou None)\n- [x] Tratar casos em que a notícia não possui geolocalização explícita (salvar com `None` ou `null` sem quebrar o robô).\n\n### 🧹 Fase 3: Tratamento e Limpeza de Dados (Sanitização)\n- [x] Validar e normalizar strings de texto (remover espaços em branco excessivos e caracteres de quebra de linha `\\n` indesejados).\n- [x] Formatar a data capturada para o padrão aceito pelo PostgreSQL (`YYYY-MM-DD HH:MM:SS`).\n- [x] Garantir que URLs longas ou com parâmetros de rastreamento (`?utm_source=...`) sejam limpas antes de gerar o campo `fonte_url`.\n\n### 🧪 Fase 4: Teste de Consistência Local\n- [x] Criar um script de teste simulado (`test_scraper_output.py`) para rodar o scraper em 3 links diferentes.\n- [x] Imprimir o JSON final gerado no terminal para inspecionar visualmente se os campos batam 100% com o Schema do Pydantic (`NoticiaCreate`).\n\n---\n\n## 🏆 Critérios de Aceitação\n- [x] O Scraper deve gerar um payload de saída contendo estritamente as chaves: `titulo`, `conteudo`, `fonte_url`, `data_publicacao`, `localizacao_texto`, `latitude` e `longitude`.\n- [x] O script não deve estourar erros caso a data ou a localização não sejam encontradas na página (esses campos devem vir como `None`).\n- [x] Nenhum dado deve ser enviado com codificação corrompida (erros de acentuação/UTF-8).",
+    "closed_by": {
+      "login": "SchneiderCode1",
+      "id": 165057013,
+      "node_id": "U_kgDOCdaR9Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165057013?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SchneiderCode1",
+      "html_url": "https://github.com/SchneiderCode1",
+      "followers_url": "https://api.github.com/users/SchneiderCode1/followers",
+      "following_url": "https://api.github.com/users/SchneiderCode1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SchneiderCode1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SchneiderCode1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SchneiderCode1/subscriptions",
+      "organizations_url": "https://api.github.com/users/SchneiderCode1/orgs",
+      "repos_url": "https://api.github.com/users/SchneiderCode1/repos",
+      "events_url": "https://api.github.com/users/SchneiderCode1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SchneiderCode1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/52/reactions",
       "total_count": 0,
@@ -1602,7 +1642,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/52/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-2-VeritasIA"
   },
@@ -1743,17 +1783,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-19T01:32:53Z",
-    "updated_at": "2026-06-21T20:37:39Z",
+    "updated_at": "2026-06-22T20:06:08Z",
     "closed_at": null,
     "assignee": {
       "login": "TheBagomes",
@@ -1800,7 +1840,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# 🎯 [EPIC] Prototipagem e Implementação das Telas do Front-end (Vue 3)\n\n## 📝 Descrição\nEsta issue épica compreende o ciclo de design (UI/UX no Figma) e desenvolvimento visual (Vue 3 + Tailwind CSS) das cinco páginas essenciais do MVP do **VeritasIA**, organizadas por ordem estrita de prioridade de entrega. \n\n*Nota: A integração com a API e banco de dados será tratada em uma issue separada do Back-end.*\n\n---\n\n## 🗺️ Roadmap de Atividades (Ordenado por Prioridade)\n\n### 🎨 CRÍTICO: Fase 1 - Entrega dos Wireframes de Alta Fidelidade (Figma)\n*Esta fase tem prioridade máxima e deve ser concluída antes da codificação das respectivas telas.*\n- [ ] Criar design do Wireframe para **Tela de Notícia (Individual)**\n- [ ] Criar design do Wireframe para **Lista de Notícias**\n- [ ] Criar design do Wireframe para **Dashboard**\n- [ ] Criar design do Wireframe para **Sobre Nós**\n- [ ] Criar design do Wireframe para **Mapa Interativo**\n\n### 🏗️ Fase 2: Estrutura Base no Vue 3\n- [ ] Validar e configurar o **Vue Router** para gerenciar a transição suave entre todas as rotas.\n- [ ] Desenvolver componentes globais reutilizáveis (`Navbar`, `Footer` e `LoadingSpinner`).\n\n### 💻 Fase 3: Desenvolvimento e Implementação das Telas (Componentes Vue)\n\n#### 🔍 1. Tela de Notícia Individual (`/noticias/{id}`)\n- [ ] Renderizar o conteúdo da notícia baseado no parâmetro ID da rota.\n- [ ] Exibir os metadados da notícia (Data de coleta, Fonte, Local geocodificado).\n- [ ] Adicionar seção indicando o status de verificação e o link original da fonte.\n\n#### 📰 2. Lista de Notícias (`/noticias`)\n- [ ] Desenvolver grid responsivo com cards de notícias.\n- [ ] Implementar sistema de busca textual simples por título ou conteúdo.\n\n#### 📊 3. Dashboard de Métricas (`/dashboard`)\n- [ ] Integrar biblioteca de gráficos (ex: **Chart.js** via `vue-chartjs` ou **ApexCharts**).\n- [ ] Implementar gráfico de distribuição visual (Fakes vs Fatos coletados).\n- [ ] Criar painel com contadores de notícias coletadas e regiões cadastradas.\n\n#### 👥 4. Sobre Nós (`/sobre`)\n- [ ] Codificar o layout institucional com texto sobre desinformação e o Cerrado.\n- [ ] Criar cards dos integrantes do grupo VeritasIA com links de redes (GitHub/LinkedIn).\n\n#### 📍 5. Mapa Interativo (`/mapa` ou `/`)\n- [x] Instalar e configurar biblioteca de mapas (**Leaflet** com `vue3-leaflet` ou Leaflet JS puro).\n- [x] Plotar marcadores das notícias geocodificadas no mapa.\n- [x] Adicionar funcionalidade para desenhar polígonos no mapa (Regiões Monitoradas).\n- [x] Criar popups nos marcadores contendo o resumo da notícia e o link para a visualização completa.\n\n---\n\n## 🏆 Critérios de Aceitação\n- [ ] Os wireframes de cada tela devem ser validados pelo grupo antes do início do desenvolvimento da mesma.\n- [ ] O front-end precisa ser **totalmente responsivo**, adaptando-se sem quebras em dispositivos móveis e desktops.\n- [ ] A transição entre rotas usando o Vue Router deve funcionar sem recarregar a página inteira (Single Page Application).",
+    "body": "# 🎯 [EPIC] Prototipagem e Implementação das Telas do Front-end (Vue 3)\n\n## 📝 Descrição\nEsta issue épica compreende o ciclo de design (UI/UX no Figma) e desenvolvimento visual (Vue 3 + Tailwind CSS) das cinco páginas essenciais do MVP do **VeritasIA**, organizadas por ordem estrita de prioridade de entrega. \n\n*Nota: A integração com a API e banco de dados será tratada em uma issue separada do Back-end.*\n\n---\n\n## 🗺️ Roadmap de Atividades (Ordenado por Prioridade)\n\n### 🎨 CRÍTICO: Fase 1 - Entrega dos Wireframes de Alta Fidelidade (Figma)\n*Esta fase tem prioridade máxima e deve ser concluída antes da codificação das respectivas telas.*\n- [ ] Criar design do Wireframe para **Tela de Notícia (Individual)**\n- [ ] Criar design do Wireframe para **Lista de Notícias**\n- [ ] Criar design do Wireframe para **Dashboard**\n- [ ] Criar design do Wireframe para **Sobre Nós**\n- [x] Criar design do Wireframe para **Mapa Interativo**\n\n### 🏗️ Fase 2: Estrutura Base no Vue 3\n- [ ] Validar e configurar o **Vue Router** para gerenciar a transição suave entre todas as rotas.\n- [ ] Desenvolver componentes globais reutilizáveis (`Navbar`, `Footer` e `LoadingSpinner`).\n\n### 💻 Fase 3: Desenvolvimento e Implementação das Telas (Componentes Vue)\n\n#### 🔍 1. Tela de Notícia Individual (`/noticias/{id}`)\n- [ ] Renderizar o conteúdo da notícia baseado no parâmetro ID da rota.\n- [ ] Exibir os metadados da notícia (Data de coleta, Fonte, Local geocodificado).\n- [ ] Adicionar seção indicando o status de verificação e o link original da fonte.\n\n#### 📰 2. Lista de Notícias (`/noticias`)\n- [ ] Desenvolver grid responsivo com cards de notícias.\n- [ ] Implementar sistema de busca textual simples por título ou conteúdo.\n\n#### 📊 3. Dashboard de Métricas (`/dashboard`)\n- [ ] Integrar biblioteca de gráficos (ex: **Chart.js** via `vue-chartjs` ou **ApexCharts**).\n- [ ] Implementar gráfico de distribuição visual (Fakes vs Fatos coletados).\n- [ ] Criar painel com contadores de notícias coletadas e regiões cadastradas.\n\n#### 👥 4. Sobre Nós (`/sobre`)\n- [ ] Codificar o layout institucional com texto sobre desinformação e o Cerrado.\n- [ ] Criar cards dos integrantes do grupo VeritasIA com links de redes (GitHub/LinkedIn).\n\n#### 📍 5. Mapa Interativo (`/mapa` ou `/`)\n- [x] Instalar e configurar biblioteca de mapas (**Leaflet** com `vue3-leaflet` ou Leaflet JS puro).\n- [x] Plotar marcadores das notícias geocodificadas no mapa.\n- [x] Adicionar funcionalidade para desenhar polígonos no mapa (Regiões Monitoradas).\n- [x] Criar popups nos marcadores contendo o resumo da notícia e o link para a visualização completa.\n\n---\n\n## 🏆 Critérios de Aceitação\n- [ ] Os wireframes de cada tela devem ser validados pelo grupo antes do início do desenvolvimento da mesma.\n- [ ] O front-end precisa ser **totalmente responsivo**, adaptando-se sem quebras em dispositivos móveis e desktops.\n- [ ] A transição entre rotas usando o Vue Router deve funcionar sem recarregar a página inteira (Single Page Application).",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-2-VeritasIA/issues/51/reactions",
@@ -2219,11 +2259,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 4,
+      "open_issues": 5,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-06-19T19:22:09Z",
-      "updated_at": "2026-06-21T23:42:45Z",
+      "updated_at": "2026-06-23T02:15:48Z",
       "due_on": "2026-06-25T00:00:00Z",
       "closed_at": null
     },

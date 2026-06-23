@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-22T10:32:21.133844",
+      "extracted_at": "2026-06-23T08:24:00.426961",
       "file_path": "data/bronze/issues_2026-1-P.R.I.S.M.A.json",
       "record_count": 44
     }
@@ -4817,15 +4817,57 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
-    "assignees": [],
+    "assignees": [
+      {
+        "login": "otheomls",
+        "id": 276396387,
+        "node_id": "U_kgDOEHl5Yw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/276396387?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/otheomls",
+        "html_url": "https://github.com/otheomls",
+        "followers_url": "https://api.github.com/users/otheomls/followers",
+        "following_url": "https://api.github.com/users/otheomls/following{/other_user}",
+        "gists_url": "https://api.github.com/users/otheomls/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/otheomls/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/otheomls/subscriptions",
+        "organizations_url": "https://api.github.com/users/otheomls/orgs",
+        "repos_url": "https://api.github.com/users/otheomls/repos",
+        "events_url": "https://api.github.com/users/otheomls/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/otheomls/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      }
+    ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-04-29T15:41:28Z",
-    "updated_at": "2026-04-29T16:03:14Z",
-    "closed_at": null,
-    "assignee": null,
+    "updated_at": "2026-06-22T17:51:55Z",
+    "closed_at": "2026-06-22T17:51:55Z",
+    "assignee": {
+      "login": "otheomls",
+      "id": 276396387,
+      "node_id": "U_kgDOEHl5Yw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/276396387?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/otheomls",
+      "html_url": "https://github.com/otheomls",
+      "followers_url": "https://api.github.com/users/otheomls/followers",
+      "following_url": "https://api.github.com/users/otheomls/following{/other_user}",
+      "gists_url": "https://api.github.com/users/otheomls/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/otheomls/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/otheomls/subscriptions",
+      "organizations_url": "https://api.github.com/users/otheomls/orgs",
+      "repos_url": "https://api.github.com/users/otheomls/repos",
+      "events_url": "https://api.github.com/users/otheomls/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/otheomls/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
     "type": null,
@@ -4841,8 +4883,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# [Workspace] Favoritar Projetos\n\n**Labels:** fullstack, epic: workspace, must-have\n\n**Descrição:**\nPermitir que o usuário separe projetos chave em uma lista de favoritos.\n\n**Histórias de Usuário:**\n- Como usuário, quero favoritar processos e temas para montar minha fila pessoal de acompanhamento.\n- Como consultor, quero receber atualizações apenas dos itens que favoritei para reduzir ruído.\n\n**Tarefas:**\n- [ ] Criar model `ProcessoFavorito` (ForeignKey: User, ProcessoLegislativo).\n- [ ] Criar view de requisição POST (toggle) para favoritar/desfavoritar.\n- [ ] Implementar botão visual (estrela) na página de listagem e detalhes.\n",
-    "closed_by": null,
+    "body": "# [Workspace] Favoritar Projetos\n\n**Labels:** fullstack, epic: workspace, must-have\n\n**Descrição:**\nPermitir que o usuário separe projetos chave em uma lista de favoritos.\n\n**Histórias de Usuário:**\n- Como usuário, quero favoritar processos e temas para montar minha fila pessoal de acompanhamento.\n- Como consultor, quero receber atualizações apenas dos itens que favoritei para reduzir ruído.\n\n**Tarefas:**\n- [x] Criar model `ProcessoFavorito` (ForeignKey: User, ProcessoLegislativo).\n- [x] Criar view de requisição POST (toggle) para favoritar/desfavoritar.\n- [x] Implementar botão visual (estrela) na página de listagem e detalhes.\n",
+    "closed_by": {
+      "login": "otheomls",
+      "id": 276396387,
+      "node_id": "U_kgDOEHl5Yw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/276396387?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/otheomls",
+      "html_url": "https://github.com/otheomls",
+      "followers_url": "https://api.github.com/users/otheomls/followers",
+      "following_url": "https://api.github.com/users/otheomls/following{/other_user}",
+      "gists_url": "https://api.github.com/users/otheomls/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/otheomls/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/otheomls/subscriptions",
+      "organizations_url": "https://api.github.com/users/otheomls/orgs",
+      "repos_url": "https://api.github.com/users/otheomls/repos",
+      "events_url": "https://api.github.com/users/otheomls/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/otheomls/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/11/reactions",
       "total_count": 0,
@@ -4857,7 +4919,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/11/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },

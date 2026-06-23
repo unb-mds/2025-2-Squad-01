@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "cdb6e5920a01605d3d86a8b2223dfb3d7e5a7c8f",
+  "sha": "f54f65af894020009a52fd1d088c4cf21656617e",
   "tree": [
     {
       "name": ".claude",
@@ -164,7 +164,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "a0b7d18cc8357e61c9a28b297cab3436c753e42b",
+      "sha": "b46e935f0aa6db8e6079cbb53f42b743096a29f5",
       "mode": "040000",
       "children": []
     },
@@ -223,10 +223,86 @@
       "is_binary": false
     },
     {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "ef1a72bee1e26df03c3f82df0a5516083a9337b3",
+      "mode": "100644",
+      "extension": "",
+      "size": 533,
+      "is_binary": false
+    },
+    {
+      "name": "alembic.ini",
+      "path": "backend/alembic.ini",
+      "type": "file",
+      "sha": "807ded2d51659e78e03f0078187d54724b7658d8",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 5008,
+      "is_binary": false
+    },
+    {
+      "name": "alembic",
+      "path": "backend/alembic",
+      "type": "directory",
+      "sha": "b506fb3e2117195cad76b865c652ae10428938f4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README",
+      "path": "backend/alembic/README",
+      "type": "file",
+      "sha": "98e4f9c44effe479ed38c66ba922e7bcc672916f",
+      "mode": "100644",
+      "extension": "",
+      "size": 38,
+      "is_binary": false
+    },
+    {
+      "name": "env.py",
+      "path": "backend/alembic/env.py",
+      "type": "file",
+      "sha": "9be2eb91b8e7ed9d4e777f33744ca5a239123be6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2623,
+      "is_binary": false
+    },
+    {
+      "name": "script.py.mako",
+      "path": "backend/alembic/script.py.mako",
+      "type": "file",
+      "sha": "11016301e749297acb67822efc7974ee53c905c6",
+      "mode": "100644",
+      "extension": ".mako",
+      "size": 704,
+      "is_binary": false
+    },
+    {
+      "name": "versions",
+      "path": "backend/alembic/versions",
+      "type": "directory",
+      "sha": "a9a69697cb2ce8eb0712f45a4f74fe17fcedddec",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "001_initial_schema.py",
+      "path": "backend/alembic/versions/001_initial_schema.py",
+      "type": "file",
+      "sha": "031806e31e0d4fb9f765df4249aae7055b17c920",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6082,
+      "is_binary": false
+    },
+    {
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "3f6da8f18de64c456d9c5078543f6c3d95045585",
+      "sha": "7fe1794f9432c9973a8a1736fe8fa15287aa46ab",
       "mode": "040000",
       "children": []
     },
@@ -244,7 +320,7 @@
       "name": "core",
       "path": "backend/app/core",
       "type": "directory",
-      "sha": "aa45bae59092235f69cdf0e688eb044a9eb755da",
+      "sha": "1bdfda9af6c1a8874eafbacd69e934b1d0542828",
       "mode": "040000",
       "children": []
     },
@@ -259,13 +335,23 @@
       "is_binary": false
     },
     {
+      "name": "cache.py",
+      "path": "backend/app/core/cache.py",
+      "type": "file",
+      "sha": "a277c0384f9524f04b3baa72200c48f89b214beb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 651,
+      "is_binary": false
+    },
+    {
       "name": "database.py",
       "path": "backend/app/core/database.py",
       "type": "file",
-      "sha": "91969b9c0c09cfcbdfb1f0561aa288cfb42c58d6",
+      "sha": "f450096afb5a3a931e7c50335d26b5dae9b0ce49",
       "mode": "100644",
       "extension": ".py",
-      "size": 700,
+      "size": 821,
       "is_binary": false
     },
     {
@@ -310,7 +396,7 @@
       "name": "models",
       "path": "backend/app/models",
       "type": "directory",
-      "sha": "3a95384f3007628b09274f6ab3c21e9027a39c20",
+      "sha": "e35c4bd3c3c0bd6d9b410b031b5a998ce82e164c",
       "mode": "040000",
       "children": []
     },
@@ -318,27 +404,47 @@
       "name": "__init__.py",
       "path": "backend/app/models/__init__.py",
       "type": "file",
-      "sha": "ca821aa3ab828da88c38b84678bed9a09ed78ec5",
+      "sha": "f168bb5eb5f3b14c13f3149efa9f27d8dd6a5550",
       "mode": "100644",
       "extension": ".py",
-      "size": 71,
+      "size": 341,
+      "is_binary": false
+    },
+    {
+      "name": "historico_consulta.py",
+      "path": "backend/app/models/historico_consulta.py",
+      "type": "file",
+      "sha": "58a40a548e9535ed1bea9e0286ac30a02ac4c56c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1014,
+      "is_binary": false
+    },
+    {
+      "name": "local_pin.py",
+      "path": "backend/app/models/local_pin.py",
+      "type": "file",
+      "sha": "5432ef7c740c1e34dc674854d290a9847a2a5069",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1115,
       "is_binary": false
     },
     {
       "name": "ocorrencia.py",
       "path": "backend/app/models/ocorrencia.py",
       "type": "file",
-      "sha": "340bc93225e2804227b059bb93c16c59007b889d",
+      "sha": "e5f500a9b5c6d1048b834733f0ee2ccc675ae7d8",
       "mode": "100644",
       "extension": ".py",
-      "size": 379,
+      "size": 1929,
       "is_binary": false
     },
     {
       "name": "repositories",
       "path": "backend/app/repositories",
       "type": "directory",
-      "sha": "9925bd4b2869607bef230b7fd64a57096740ecd4",
+      "sha": "9ac9068b3aafb70b10333a543defe873c8ca5c22",
       "mode": "040000",
       "children": []
     },
@@ -356,10 +462,30 @@
       "name": "__init__.py",
       "path": "backend/app/repositories/__init__.py",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "223f3399dabcd7461b8deac4363df6262a60100c",
       "mode": "100644",
       "extension": ".py",
-      "size": 0,
+      "size": 23,
+      "is_binary": false
+    },
+    {
+      "name": "local_pin_repository.py",
+      "path": "backend/app/repositories/local_pin_repository.py",
+      "type": "file",
+      "sha": "a8488e7c84176de8d24449a67367ca12322605d0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1669,
+      "is_binary": false
+    },
+    {
+      "name": "ocorrencia_repository.py",
+      "path": "backend/app/repositories/ocorrencia_repository.py",
+      "type": "file",
+      "sha": "9b4e58874eb84299cb1f82e444c4085d769537fc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2389,
       "is_binary": false
     },
     {
@@ -452,7 +578,7 @@
       "name": "services",
       "path": "backend/app/services",
       "type": "directory",
-      "sha": "6909f75fbe37c8f9397e14c6bf96c9985780566f",
+      "sha": "6bf28440fcb7cd41387c2b6b93074b73aa904f5c",
       "mode": "040000",
       "children": []
     },
@@ -487,23 +613,33 @@
       "is_binary": false
     },
     {
+      "name": "risco_service.py",
+      "path": "backend/app/services/risco_service.py",
+      "type": "file",
+      "sha": "e29e175332d860424c30e64b163eebd34ce88c08",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 801,
+      "is_binary": false
+    },
+    {
       "name": "docker-compose.yml",
       "path": "backend/docker-compose.yml",
       "type": "file",
-      "sha": "2823e66299eab15066f44fae7104bfdbdcb7140d",
+      "sha": "f1ab037b1f1c262f6b8c157bdf0bc58344988687",
       "mode": "100644",
       "extension": ".yml",
-      "size": 616,
+      "size": 998,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "ad595b2a5c29b54be7bb3fbc3c959589fdf1c507",
+      "sha": "598651032589a301f38fa8d57c8ee51dcd05d52d",
       "mode": "100644",
       "extension": ".txt",
-      "size": 95,
+      "size": 103,
       "is_binary": false
     },
     {
@@ -520,7 +656,7 @@
       "name": "tests",
       "path": "backend/tests",
       "type": "directory",
-      "sha": "2e5b914e16f0c8b45d08ac29fd59c7d7b471b582",
+      "sha": "66b4c89176e7c25ac89679b4990bbaeeb4dddb63",
       "mode": "040000",
       "children": []
     },
@@ -535,6 +671,16 @@
       "is_binary": false
     },
     {
+      "name": "test_ocorrencia_repository.py",
+      "path": "backend/tests/test_ocorrencia_repository.py",
+      "type": "file",
+      "sha": "5843ed279ba9279b6ad3dbbe839c2e3198dab184",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6147,
+      "is_binary": false
+    },
+    {
       "name": "test_ocorrencias.py",
       "path": "backend/tests/test_ocorrencias.py",
       "type": "file",
@@ -545,10 +691,20 @@
       "is_binary": false
     },
     {
+      "name": "test_risco_service.py",
+      "path": "backend/tests/test_risco_service.py",
+      "type": "file",
+      "sha": "68505e577da95734fc6f2374b1cd7e242d81c883",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1942,
+      "is_binary": false
+    },
+    {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "930e68c1fc555759b2ec43e5c8626c15de1ed59e",
+      "sha": "1571dfe22a86775c76aab6e8f30948c98957fbbb",
       "mode": "040000",
       "children": []
     },
@@ -556,7 +712,7 @@
       "name": "Arquitetura",
       "path": "docs/Arquitetura",
       "type": "directory",
-      "sha": "92ffda8843ab57bbc4c0a2f62966b639205ac2af",
+      "sha": "03835a25f5f49df25dc0edd8535568bc80f77453",
       "mode": "040000",
       "children": []
     },
@@ -608,6 +764,44 @@
       "mode": "100644",
       "extension": ".md",
       "size": 11649,
+      "is_binary": false
+    },
+    {
+      "name": "Specs_banco_de_dados",
+      "path": "docs/Arquitetura/Specs_banco_de_dados",
+      "type": "directory",
+      "sha": "c02fca5cfde19c0481dc28e628b3f25ce8e133db",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "plan.md",
+      "path": "docs/Arquitetura/Specs_banco_de_dados/plan.md",
+      "type": "file",
+      "sha": "f9a4eae22b411bd410069193c83bab42d49d325f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 16655,
+      "is_binary": false
+    },
+    {
+      "name": "spec.md",
+      "path": "docs/Arquitetura/Specs_banco_de_dados/spec.md",
+      "type": "file",
+      "sha": "702f38e8ef88bae6452649f86abca1bf406275ae",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4675,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "docs/Arquitetura/Specs_banco_de_dados/tasks.md",
+      "type": "file",
+      "sha": "92f8da02945598fd7dcbe4f64de6de234afe1bf2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6585,
       "is_binary": false
     },
     {
@@ -1276,7 +1470,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "6f8bbff5b0847f9f013be90b98f07a6dfb8c81fb",
+      "sha": "f597ae2a9f95fecfc8ffba1d036ee71d5497409a",
       "mode": "040000",
       "children": []
     },
@@ -1304,10 +1498,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "e30a11480362e9267d3bc824db49f88cc7317e23",
+      "sha": "df129ee44af537f3cadc278971cc63576c40a85a",
       "mode": "100644",
       "extension": ".json",
-      "size": 8079,
+      "size": 8155,
       "is_binary": false
     },
     {
@@ -2682,19 +2876,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-22T11:24:07.346249",
+  "extracted_at": "2026-06-23T09:18:19.825062",
   "method": "rest",
-  "total_items": 282,
+  "total_items": 302,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-22T05:15:41Z",
+    "updated_at": "2026-06-23T04:11:14Z",
     "language": "TypeScript",
-    "size": 2667,
+    "size": 2673,
     "stars": 4,
     "forks": 0,
-    "open_issues": 12
+    "open_issues": 11
   }
 }
