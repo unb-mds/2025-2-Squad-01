@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-23T09:18:21.324356",
+  "analyzed_at": "2026-06-24T09:14:49.591017",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
   "total_files": 157,
-  "total_bytes": 3118582,
+  "total_bytes": 3197147,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 9,
       "total_bytes": 2060331,
-      "percentage": 66.07,
+      "percentage": 64.44,
       "files": [
         {
           "path": "Frontend/src/assets/logo2.png",
@@ -75,13 +75,13 @@
     {
       "language": "JSON",
       "file_count": 13,
-      "total_bytes": 754499,
-      "percentage": 24.19,
+      "total_bytes": 833064,
+      "percentage": 26.06,
       "files": [
         {
           "path": "scrapers/resultados/resultados.json",
           "name": "resultados.json",
-          "size": 454658,
+          "size": 507351,
           "extension": ".json"
         },
         {
@@ -91,15 +91,15 @@
           "extension": ".json"
         },
         {
-          "path": "package-lock.json",
-          "name": "package-lock.json",
-          "size": 37889,
+          "path": "scrapers/resultados/g1.json",
+          "name": "g1.json",
+          "size": 55042,
           "extension": ".json"
         },
         {
-          "path": "scrapers/resultados/g1.json",
-          "name": "g1.json",
-          "size": 20222,
+          "path": "package-lock.json",
+          "name": "package-lock.json",
+          "size": 37889,
           "extension": ".json"
         },
         {
@@ -115,18 +115,6 @@
           "extension": ".json"
         },
         {
-          "path": "scrapers/resultados/r7.json",
-          "name": "r7.json",
-          "size": 7059,
-          "extension": ".json"
-        },
-        {
-          "path": "scrapers/resultados/cnn.json",
-          "name": "cnn.json",
-          "size": 1897,
-          "extension": ".json"
-        },
-        {
           "path": "docs/mkdocs/docs/openapi.json",
           "name": "openapi.json",
           "size": 974,
@@ -137,6 +125,18 @@
           "name": "package.json",
           "size": 867,
           "extension": ".json"
+        },
+        {
+          "path": "package.json",
+          "name": "package.json",
+          "size": 106,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/cnn.json",
+          "name": "cnn.json",
+          "size": 4,
+          "extension": ".json"
         }
       ]
     },
@@ -144,7 +144,7 @@
       "language": "Markdown",
       "file_count": 52,
       "total_bytes": 103412,
-      "percentage": 3.32,
+      "percentage": 3.23,
       "files": [
         {
           "path": "docs/backend/FastAPI.md",
@@ -212,7 +212,7 @@
       "language": "Python",
       "file_count": 25,
       "total_bytes": 53897,
-      "percentage": 1.73,
+      "percentage": 1.69,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
@@ -280,7 +280,7 @@
       "language": "HTML",
       "file_count": 5,
       "total_bytes": 51340,
-      "percentage": 1.65,
+      "percentage": 1.61,
       "files": [
         {
           "path": "docs/dashboard/dashboard.html",
@@ -318,7 +318,7 @@
       "language": "Unknown",
       "file_count": 16,
       "total_bytes": 40925,
-      "percentage": 1.31,
+      "percentage": 1.28,
       "files": [
         {
           "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
@@ -386,7 +386,7 @@
       "language": "CSS",
       "file_count": 6,
       "total_bytes": 27736,
-      "percentage": 0.89,
+      "percentage": 0.87,
       "files": [
         {
           "path": "Frontend/src/App.css",
@@ -430,7 +430,7 @@
       "language": "JavaScript",
       "file_count": 20,
       "total_bytes": 14093,
-      "percentage": 0.45,
+      "percentage": 0.44,
       "files": [
         {
           "path": "Frontend/src/pages/Dashboard.jsx",
@@ -561,10 +561,24 @@
       ]
     },
     {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 72,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 72,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
       "language": "Text",
       "file_count": 3,
       "total_bytes": 157,
-      "percentage": 0.01,
+      "percentage": 0.0,
       "files": [
         {
           "path": "requirements.txt",
@@ -585,24 +599,10 @@
           "extension": ".txt"
         }
       ]
-    },
-    {
-      "language": "Git Ignore",
-      "file_count": 1,
-      "total_bytes": 72,
-      "percentage": 0.0,
-      "files": [
-        {
-          "path": ".gitignore",
-          "name": ".gitignore",
-          "size": 72,
-          "extension": ".gitignore"
-        }
-      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-23T09:21:24.993915",
+    "extracted_at": "2026-06-24T09:18:13.025068",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }
