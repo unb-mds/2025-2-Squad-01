@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-24T09:14:48.306229",
+  "analyzed_at": "2026-06-25T09:08:55.673609",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 227,
-  "total_bytes": 3448444,
+  "total_files": 240,
+  "total_bytes": 3491604,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 8,
       "total_bytes": 1556150,
-      "percentage": 45.13,
+      "percentage": 44.57,
       "files": [
         {
           "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
@@ -70,7 +70,7 @@
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 29.11,
+      "percentage": 28.75,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -112,9 +112,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 90,
-      "total_bytes": 443380,
-      "percentage": 12.86,
+      "file_count": 93,
+      "total_bytes": 457725,
+      "percentage": 13.11,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -181,8 +181,8 @@
     {
       "language": "JSON",
       "file_count": 4,
-      "total_bytes": 242037,
-      "percentage": 7.02,
+      "total_bytes": 241974,
+      "percentage": 6.93,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -193,7 +193,7 @@
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 8155,
+          "size": 8092,
           "extension": ".json"
         },
         {
@@ -214,7 +214,7 @@
       "language": "TypeScript",
       "file_count": 52,
       "total_bytes": 108698,
-      "percentage": 3.15,
+      "percentage": 3.11,
       "files": [
         {
           "path": "frontend/__tests__/components/PainelFiltros.test.tsx",
@@ -280,9 +280,9 @@
     },
     {
       "language": "Python",
-      "file_count": 31,
-      "total_bytes": 44760,
-      "percentage": 1.3,
+      "file_count": 41,
+      "total_bytes": 73548,
+      "percentage": 2.11,
       "files": [
         {
           "path": "backend/tests/test_ocorrencia_repository.py",
@@ -303,45 +303,45 @@
           "extension": ".py"
         },
         {
+          "path": "backend/.claude/skills/run-nominatim-gemini/driver.py",
+          "name": "driver.py",
+          "size": 4874,
+          "extension": ".py"
+        },
+        {
           "path": "docs/productivity/collect_metrics.py",
           "name": "collect_metrics.py",
           "size": 4789,
           "extension": ".py"
         },
         {
+          "path": "backend/.claude/skills/run-schemas/driver.py",
+          "name": "driver.py",
+          "size": 4066,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/.claude/skills/run-correio-rss/driver.py",
+          "name": "driver.py",
+          "size": 3983,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/integrations/correio_rss.py",
+          "name": "correio_rss.py",
+          "size": 2858,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_correio_rss.py",
+          "name": "test_correio_rss.py",
+          "size": 2735,
+          "extension": ".py"
+        },
+        {
           "path": "backend/alembic/env.py",
           "name": "env.py",
           "size": 2623,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/repositories/ocorrencia_repository.py",
-          "name": "ocorrencia_repository.py",
-          "size": 2389,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_ocorrencias.py",
-          "name": "test_ocorrencias.py",
-          "size": 2023,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_risco_service.py",
-          "name": "test_risco_service.py",
-          "size": 1942,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/models/ocorrencia.py",
-          "name": "ocorrencia.py",
-          "size": 1929,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/repositories/local_pin_repository.py",
-          "name": "local_pin_repository.py",
-          "size": 1669,
           "extension": ".py"
         }
       ]
@@ -429,20 +429,6 @@
       ]
     },
     {
-      "language": "INI",
-      "file_count": 1,
-      "total_bytes": 5008,
-      "percentage": 0.15,
-      "files": [
-        {
-          "path": "backend/alembic.ini",
-          "name": "alembic.ini",
-          "size": 5008,
-          "extension": ".ini"
-        }
-      ]
-    },
-    {
       "language": "No Extension",
       "file_count": 4,
       "total_bytes": 4798,
@@ -471,6 +457,20 @@
           "name": "README",
           "size": 38,
           "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "INI",
+      "file_count": 1,
+      "total_bytes": 5008,
+      "percentage": 0.14,
+      "files": [
+        {
+          "path": "backend/alembic.ini",
+          "name": "alembic.ini",
+          "size": 5008,
+          "extension": ".ini"
         }
       ]
     },
@@ -573,20 +573,20 @@
     {
       "language": "Text",
       "file_count": 1,
-      "total_bytes": 103,
-      "percentage": 0.0,
+      "total_bytes": 193,
+      "percentage": 0.01,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
-          "size": 103,
+          "size": 193,
           "extension": ".txt"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-24T09:18:12.254248",
+    "extracted_at": "2026-06-25T09:12:01.346695",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }

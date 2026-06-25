@@ -2,7 +2,7 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-24T09:14:48.306229",
+  "extracted_at": "2026-06-25T09:08:55.673609",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -148,6 +148,28 @@
         "children": []
       },
       {
+        "name": "run-correio-rss",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-correio-rss",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4462,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-correio-rss/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3983,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-correio-rss/driver.py"
+      },
+      {
         "name": "run-endpoints",
         "type": "directory",
         "path": "backend/.claude/skills/run-endpoints",
@@ -168,6 +190,50 @@
         "size": 4975,
         "extension": ".py",
         "path": "backend/.claude/skills/run-endpoints/driver.py"
+      },
+      {
+        "name": "run-nominatim-gemini",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-nominatim-gemini",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5056,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-nominatim-gemini/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4874,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-nominatim-gemini/driver.py"
+      },
+      {
+        "name": "run-schemas",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-schemas",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4827,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-schemas/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4066,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-schemas/driver.py"
       },
       {
         "name": ".gitignore",
@@ -302,6 +368,30 @@
         "size": 0,
         "extension": ".py",
         "path": "backend/app/integrations/__init__.py"
+      },
+      {
+        "name": "correio_rss.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2858,
+        "extension": ".py",
+        "path": "backend/app/integrations/correio_rss.py"
+      },
+      {
+        "name": "gemini.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2444,
+        "extension": ".py",
+        "path": "backend/app/integrations/gemini.py"
+      },
+      {
+        "name": "nominatim.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2126,
+        "extension": ".py",
+        "path": "backend/app/integrations/nominatim.py"
       },
       {
         "name": "main.py",
@@ -505,7 +595,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 103,
+        "size": 193,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -524,12 +614,36 @@
         "children": []
       },
       {
+        "name": "test_correio_rss.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2735,
+        "extension": ".py",
+        "path": "backend/tests/test_correio_rss.py"
+      },
+      {
+        "name": "test_gemini.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1790,
+        "extension": ".py",
+        "path": "backend/tests/test_gemini.py"
+      },
+      {
         "name": "test_main.py",
         "type": "file",
         "language": "Python",
         "size": 279,
         "extension": ".py",
         "path": "backend/tests/test_main.py"
+      },
+      {
+        "name": "test_nominatim.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1651,
+        "extension": ".py",
+        "path": "backend/tests/test_nominatim.py"
       },
       {
         "name": "test_ocorrencia_repository.py",
@@ -554,6 +668,14 @@
         "size": 1942,
         "extension": ".py",
         "path": "backend/tests/test_risco_service.py"
+      },
+      {
+        "name": "test_schemas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2261,
+        "extension": ".py",
+        "path": "backend/tests/test_schemas.py"
       },
       {
         "name": "docs",
@@ -1189,7 +1311,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 8155,
+        "size": 8092,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -2276,7 +2398,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-24T09:18:12.255937",
+    "extracted_at": "2026-06-25T09:12:01.348648",
     "file_path": "data/silver/hierarchy_2026-1-SafeStreets.json"
   }
 }
