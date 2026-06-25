@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-24T08:18:37.041812",
+      "extracted_at": "2026-06-25T08:17:26.719481",
       "file_path": "data/bronze/prs_2026-1-ProtectKids.json",
       "record_count": 47
     }
@@ -482,7 +482,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -508,7 +508,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -664,7 +664,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -690,7 +690,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -855,7 +855,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -881,7 +881,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1037,7 +1037,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -1063,7 +1063,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1219,7 +1219,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -1245,7 +1245,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1410,7 +1410,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -1436,7 +1436,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1601,7 +1601,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -1627,7 +1627,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -1783,7 +1783,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -1809,7 +1809,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1974,7 +1974,7 @@
       "node_id": "MI_kwDOR0zO1M4A-fdM",
       "number": 10,
       "title": "Sprint 09",
-      "description": "",
+      "description": "A Sprint 09 compõe a expansão do domínio de dados legislativos com a inclusão do rastreamento de tramitações e a criação de novas capacidades analíticas na API. O foco desta iteração foi modelar e extrair o ciclo de vida das proposições, estabelecer controles de limite dinâmico para a ingestão de dados, implementar a rota para o componente visual de nuvem de palavras e atualizar os artefatos de integração e documentação.\n\n## Entregas Realizadas\n### Backend e Extração de Dados (ETL):\n\n- Histórico de Tramitações: Execução da modelagem do banco de dados e desenvolvimento do pipeline ETL focado no histórico de tramitações. Implementação de um extrator específico e configuração de um workflow de execução quinzenal automatizado via CI/CD.\n\n- Rotas de Tramitação: Criação do endpoint na API para o consumo do Histórico de Tramitações e implementação da lógica de cálculo e exposição do tempo de tramitação.\n\n- Limites Dinâmicos: Configuração de um limite dinâmico de extração no backend para otimizar o processamento e evitar sobrecargas no consumo das APIs governamentais externas.\n\n- Rotas Analíticas: Desenvolvimento e implementação de um endpoint analítico dedicado ao fornecimento de dados para a renderização da Nuvem de Palavras.\n\n- Correções de Código: Execução de bugfix para a correção de erro de tipografia e nomenclatura de variáveis.\n\n### Arquitetura, Documentação e Requisitos:\n\n- Contrato de API: Documentação e formalização do contrato de API, garantindo o alinhamento arquitetural entre as requisições do frontend e as respostas do backend.\n\n- Gestão de Produto: Atualização do artefato de Story Map, refletindo as novas funcionalidades de tramitação no mapeamento de requisitos.\n\n## Impacto Alcançado no Projeto\nCom a conclusão da Sprint, o sistema deixa de exibir apenas dados estáticos das proposições e passa a monitorar ativamente o ciclo de vida e o tempo de tramitação das matérias no legislativo. A introdução do limite dinâmico confere maior resiliência e controle operacional ao processo de extração de dados. Adicionalmente, a disponibilização da rota para a nuvem de palavras fornece os dados processados necessários para que o frontend expanda os recursos visuais do dashboard, mantendo a interoperabilidade assegurada pelo novo contrato de API documentado.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -2000,7 +2000,7 @@
       "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-16T14:25:41Z",
-      "updated_at": "2026-06-23T20:22:46Z",
+      "updated_at": "2026-06-25T00:01:50Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -2225,7 +2225,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -2251,7 +2251,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -2425,7 +2425,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -2451,7 +2451,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -2607,7 +2607,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -2633,7 +2633,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -2816,7 +2816,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -2842,7 +2842,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -3016,7 +3016,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -3042,7 +3042,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -3207,7 +3207,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -3233,7 +3233,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -3398,7 +3398,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -3424,7 +3424,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -3610,7 +3610,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -3636,7 +3636,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -3831,7 +3831,7 @@
       "node_id": "MI_kwDOR0zO1M4A-Bdz",
       "number": 9,
       "title": "Sprint 08",
-      "description": "",
+      "description": "A Sprint 08 contempla a expansão das fontes de dados legislativos, a otimização da infraestrutura técnica e a adoção formal de Pull Requests (PRs) no fluxo de versionamento. O foco desta iteração foi a implementação do pipeline de extração do Senado Federal, a melhoria na performance de leitura de PDFs e do banco de dados, além do estabelecimento de uma esteira de CI/CD utilizando o GitHub Container Registry (GHCR).\n\n## Entregas Realizadas\n### Metodologia e Versionamento de Código:\n\n- Adoção de Pull Requests: Consolidação do uso de Pull Requests como padrão obrigatório para a integração de código. A prática foi adotada para garantir a revisão por pares, a execução de validações automatizadas e a rastreabilidade das alterações antes da mesclagem (merge) na branch principal.\n\n### Backend e Extração de Dados (Senado Federal):\n\n- Integração e Normalização: Implementação completa do pipeline de dados do Senado Federal, permitindo a captação e normalização das proposições.\n\n- Refinamento de Extração: Atualização do script do Senado com o desenvolvimento de um extrator JSON recursivo e correções finais na comunicação com a API.\n\n- Filtro de Ruídos (NLP): Desenvolvimento de filtros de ruídos específicos para otimizar o Processamento de Linguagem Natural (NLP) aplicado aos documentos do Senado.\n\n- Correções na Câmara: Aplicação de correções (bugfixes) na inicialização incorreta do script camara_api.\n\n### Arquitetura e Performance:\n\n- Motor PDF: Execução da otimização de performance do sistema através da troca do motor de processamento de PDFs, visando maior velocidade na extração de inteiro teor.\n\n- Banco de Dados: Implementação de otimizações estruturais no banco de dados para suportar a carga dupla de informações (Câmara e Senado) com eficiência.\n\n- DevOps e Infraestrutura:\n\n- Pipeline CI/CD (GHCR): Otimização do Dockerfile e configuração da esteira de Integração e Entrega Contínuas conectada ao GitHub Container Registry (GHCR) para a gestão de imagens Docker.\n\n- Resiliência de Contêineres: Adição de healthcheck no serviço do PostgreSQL para garantir a prontidão do banco de dados antes da inicialização da API.\n\n### Documentação e Gestão de Produto:\n\n- Mapeamento de Requisitos: Refatoração e complementação do artefato de Story Map.\n\n- Ajuste de Escopo: Atualização da documentação de requisitos para refletir formalmente a nova integração com o Senado Federal no escopo do projeto.\n\n### Impacto Alcançado no Projeto\nCom a conclusão da Sprint 08, adotamos a boa práticados Pull Requests e a conteinerização contínua via GHCR elevam o nível de controle de qualidade, mitigando quebras diretas no ambiente de produção.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -3857,7 +3857,7 @@
       "closed_issues": 15,
       "state": "open",
       "created_at": "2026-06-08T15:31:34Z",
-      "updated_at": "2026-06-22T13:39:40Z",
+      "updated_at": "2026-06-24T23:44:54Z",
       "due_on": "2026-06-17T00:00:00Z",
       "closed_at": null
     },
@@ -4031,7 +4031,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -4057,7 +4057,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -4231,7 +4231,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -4257,7 +4257,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -4422,7 +4422,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -4448,7 +4448,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -4622,7 +4622,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -4648,7 +4648,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -4813,7 +4813,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -4839,7 +4839,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5004,7 +5004,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5030,7 +5030,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5186,7 +5186,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5212,7 +5212,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5368,7 +5368,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5394,7 +5394,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5568,7 +5568,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5594,7 +5594,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5740,7 +5740,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5766,7 +5766,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -5931,7 +5931,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -5957,7 +5957,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -6131,7 +6131,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -6157,7 +6157,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -6322,7 +6322,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -6348,7 +6348,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -6522,7 +6522,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -6548,7 +6548,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -6713,7 +6713,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -6739,13 +6739,13 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
     "comments": 0,
     "created_at": "2026-05-20T22:33:08Z",
-    "updated_at": "2026-05-20T23:10:05Z",
+    "updated_at": "2026-06-24T22:59:32Z",
     "closed_at": "2026-05-20T23:10:04Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -6780,7 +6780,7 @@
       "patch_url": "https://github.com/unb-mds/2026-1-ProtectKids/pull/54.patch",
       "merged_at": "2026-05-20T23:10:03Z"
     },
-    "body": null,
+    "body": "## 📋 Descrição\r\nDesenvolver um endpoint REST no FastAPI para retornar o ranking de parlamentares, baseado no volume de proposições legislativas de sua autoria vinculadas aos temas monitorados. O objetivo é fornecer dados consolidados e ordenados para a camada de frontend renderizar a listagem dos autores mais ativos.\r\n\r\n## ⚠️ Prioridade\r\n- [ ] Baixa\r\n\r\n- [x] Média\r\n\r\n- [ ] Alta\r\n\r\n- [ ] Extrema\r\n- [ ] \r\n## ✅ Checklist de Tarefas\r\n\r\n- [x] Criar a rota GET /parlamentares/ranking no roteador do FastAPI.\r\n\r\n- [x] Desenvolver a consulta via SQLModel para agregar (GROUP BY) e contabilizar o número de proposições por parlamentar.\r\n\r\n- [x] Implementar a ordenação decrescente baseada no total de matérias cadastradas no banco de dados.",
     "closed_by": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -6904,7 +6904,7 @@
       "node_id": "MI_kwDOR0zO1M4A9F6U",
       "number": 7,
       "title": "Sprint 06",
-      "description": "",
+      "description": "A Sprint 06 marca o fechamento e a entrega da Release 1 (R1) do projeto. O foco desta iteração foi consolidar o pipeline de Processamento de Linguagem Natural (NLP) no extrator de dados, estruturar as rotas analíticas do backend e finalizar a implementação das interfaces e do roteamento no frontend. Devido à proximidade do marco de entrega, a iteração registrou um nível elevado de issues e pull requests.\n\n## Entregas Realizadas\n### Backend, Banco de Dados e NLP:\n\n- Motor de Classificação: Integração da extração de PDFs e do processamento de classificação via NLP diretamente no crawler.\n\n- Estrutura de Dados: Modificação do banco de dados para a adição de colunas relacionadas à extração de dados do NLP e correção de colunas divergentes. Correção da lógica de agrupamento e da variável id_proposicao.\n\n- Rotas Analíticas: Criação das rotas de ranking de parlamentares (analytics) e adição de filtros de dashboard no backend.\n\n- Estabilização: Remoção de rotas de teste obsoletas do banco de dados e atualização do gerenciador de pacotes (requirements.txt) com os novos frameworks necessários.\n\n### Frontend e Interface:\n\n- Navegação e Páginas: Implementação do roteamento dinâmico e criação estrutural das páginas \"Sobre\" e \"Detalhes da Lei\".\n\n- Integração de Dados: Adição e integração dos componentes de filtros de busca e das tabelas de rankings no frontend.\n\n- Ajustes de UI/UX: Correção da paleta de cores do site, renderização do autor das proposições, implementação do footer e remoção de interferências globais de background no CSS.\n\n### DevOps e Documentação:\n\n- Qualidade de Código (QA): Configuração de rotina no GitHub Actions para a execução de testes automatizados no repositório.\n\n- Documentação: Aplicação de correções de integridade no sistema de documentação estática gerado pelo MkDocs.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -6930,7 +6930,7 @@
       "closed_issues": 23,
       "state": "closed",
       "created_at": "2026-05-20T19:43:38Z",
-      "updated_at": "2026-05-27T06:34:13Z",
+      "updated_at": "2026-06-24T23:09:33Z",
       "due_on": "2026-05-28T00:00:00Z",
       "closed_at": "2026-05-26T21:25:20Z"
     },
@@ -7242,7 +7242,7 @@
       "node_id": "MI_kwDOR0zO1M4A8p_1",
       "number": 6,
       "title": "Sprint 05",
-      "description": "",
+      "description": "A Sprint 05 compõe a implementação do sistema de coleta de métricas de produtividade do repositório, refinamentos nos algoritmos de extração de dados e a consolidação do design da interface. O foco desta iteração foi desenvolver e automatizar um dashboard de metodologias ágeis, corrigir e estabilizar o crawler da Câmara dos Deputados e finalizar a prototipagem de alta fidelidade da aplicação.\n\n### Entregas Realizadas\n- Métricas e Metodologia Ágil:\n\n- Coletor e Dashboard (D3.js): Desenvolvimento de um script coletor de métricas do repositório e implementação de um painel de visualização de dados.\n\n- Indicadores de Qualidade: Adição de gráficos analíticos, incluindo a distribuição de commits por hora e a métrica de contribuição por autor, acompanhada da padronização dos usernames da equipe.\n\n- Automação (CI/CD): Configuração de rotina no GitHub Actions para a execução automatizada do coletor de métricas, com deploy contínuo dos resultados no GitHub Pages.\n\n### Backend e Extração de Dados:\n\n- Revisão do Crawler: Execução de correções estruturais e implementações de melhoria (integração da feature API da Câmara) no script de extração de dados legislativos, visando maior estabilidade na captação das proposições.\n\n### Frontend e Design (UI/UX):\n\n- Prototipagem: Conclusão do protótipo de alta fidelidade no Figma, estabelecendo as diretrizes visuais e de usabilidade definitivas para a construção da interface em código.\n\n- Arquitetura e Configuração de Repositório:\n\n- Ajustes de Versionamento: Correção no mapeamento dos diretórios de documentação (doc/docs) e atualização do .gitignore para ignorar a pasta site, prevenindo o rastreamento de artefatos estáticos de build.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -7268,13 +7268,13 @@
       "closed_issues": 10,
       "state": "closed",
       "created_at": "2026-05-12T21:12:44Z",
-      "updated_at": "2026-05-27T05:44:37Z",
+      "updated_at": "2026-06-24T22:54:44Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": "2026-05-27T05:44:37Z"
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-18T16:49:04Z",
-    "updated_at": "2026-05-18T16:49:16Z",
+    "updated_at": "2026-06-24T22:46:45Z",
     "closed_at": "2026-05-18T16:49:14Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -7414,7 +7414,7 @@
       "node_id": "MI_kwDOR0zO1M4A8p_1",
       "number": 6,
       "title": "Sprint 05",
-      "description": "",
+      "description": "A Sprint 05 compõe a implementação do sistema de coleta de métricas de produtividade do repositório, refinamentos nos algoritmos de extração de dados e a consolidação do design da interface. O foco desta iteração foi desenvolver e automatizar um dashboard de metodologias ágeis, corrigir e estabilizar o crawler da Câmara dos Deputados e finalizar a prototipagem de alta fidelidade da aplicação.\n\n### Entregas Realizadas\n- Métricas e Metodologia Ágil:\n\n- Coletor e Dashboard (D3.js): Desenvolvimento de um script coletor de métricas do repositório e implementação de um painel de visualização de dados.\n\n- Indicadores de Qualidade: Adição de gráficos analíticos, incluindo a distribuição de commits por hora e a métrica de contribuição por autor, acompanhada da padronização dos usernames da equipe.\n\n- Automação (CI/CD): Configuração de rotina no GitHub Actions para a execução automatizada do coletor de métricas, com deploy contínuo dos resultados no GitHub Pages.\n\n### Backend e Extração de Dados:\n\n- Revisão do Crawler: Execução de correções estruturais e implementações de melhoria (integração da feature API da Câmara) no script de extração de dados legislativos, visando maior estabilidade na captação das proposições.\n\n### Frontend e Design (UI/UX):\n\n- Prototipagem: Conclusão do protótipo de alta fidelidade no Figma, estabelecendo as diretrizes visuais e de usabilidade definitivas para a construção da interface em código.\n\n- Arquitetura e Configuração de Repositório:\n\n- Ajustes de Versionamento: Correção no mapeamento dos diretórios de documentação (doc/docs) e atualização do .gitignore para ignorar a pasta site, prevenindo o rastreamento de artefatos estáticos de build.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -7440,13 +7440,13 @@
       "closed_issues": 10,
       "state": "closed",
       "created_at": "2026-05-12T21:12:44Z",
-      "updated_at": "2026-05-27T05:44:37Z",
+      "updated_at": "2026-06-24T22:54:44Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": "2026-05-27T05:44:37Z"
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-13T14:13:58Z",
-    "updated_at": "2026-05-13T14:14:16Z",
+    "updated_at": "2026-06-24T22:45:25Z",
     "closed_at": "2026-05-13T14:14:12Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -7586,7 +7586,7 @@
       "node_id": "MI_kwDOR0zO1M4A8p_1",
       "number": 6,
       "title": "Sprint 05",
-      "description": "",
+      "description": "A Sprint 05 compõe a implementação do sistema de coleta de métricas de produtividade do repositório, refinamentos nos algoritmos de extração de dados e a consolidação do design da interface. O foco desta iteração foi desenvolver e automatizar um dashboard de metodologias ágeis, corrigir e estabilizar o crawler da Câmara dos Deputados e finalizar a prototipagem de alta fidelidade da aplicação.\n\n### Entregas Realizadas\n- Métricas e Metodologia Ágil:\n\n- Coletor e Dashboard (D3.js): Desenvolvimento de um script coletor de métricas do repositório e implementação de um painel de visualização de dados.\n\n- Indicadores de Qualidade: Adição de gráficos analíticos, incluindo a distribuição de commits por hora e a métrica de contribuição por autor, acompanhada da padronização dos usernames da equipe.\n\n- Automação (CI/CD): Configuração de rotina no GitHub Actions para a execução automatizada do coletor de métricas, com deploy contínuo dos resultados no GitHub Pages.\n\n### Backend e Extração de Dados:\n\n- Revisão do Crawler: Execução de correções estruturais e implementações de melhoria (integração da feature API da Câmara) no script de extração de dados legislativos, visando maior estabilidade na captação das proposições.\n\n### Frontend e Design (UI/UX):\n\n- Prototipagem: Conclusão do protótipo de alta fidelidade no Figma, estabelecendo as diretrizes visuais e de usabilidade definitivas para a construção da interface em código.\n\n- Arquitetura e Configuração de Repositório:\n\n- Ajustes de Versionamento: Correção no mapeamento dos diretórios de documentação (doc/docs) e atualização do .gitignore para ignorar a pasta site, prevenindo o rastreamento de artefatos estáticos de build.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -7612,13 +7612,13 @@
       "closed_issues": 10,
       "state": "closed",
       "created_at": "2026-05-12T21:12:44Z",
-      "updated_at": "2026-05-27T05:44:37Z",
+      "updated_at": "2026-06-24T22:54:44Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": "2026-05-27T05:44:37Z"
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-13T05:17:47Z",
-    "updated_at": "2026-05-13T05:18:17Z",
+    "updated_at": "2026-06-24T22:44:52Z",
     "closed_at": "2026-05-13T05:18:04Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -7653,7 +7653,7 @@
       "patch_url": "https://github.com/unb-mds/2026-1-ProtectKids/pull/44.patch",
       "merged_at": "2026-05-13T05:18:04Z"
     },
-    "body": "…ção individual",
+    "body": null,
     "closed_by": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -7981,7 +7981,7 @@
       "node_id": "MI_kwDOR0zO1M4A8p_1",
       "number": 6,
       "title": "Sprint 05",
-      "description": "",
+      "description": "A Sprint 05 compõe a implementação do sistema de coleta de métricas de produtividade do repositório, refinamentos nos algoritmos de extração de dados e a consolidação do design da interface. O foco desta iteração foi desenvolver e automatizar um dashboard de metodologias ágeis, corrigir e estabilizar o crawler da Câmara dos Deputados e finalizar a prototipagem de alta fidelidade da aplicação.\n\n### Entregas Realizadas\n- Métricas e Metodologia Ágil:\n\n- Coletor e Dashboard (D3.js): Desenvolvimento de um script coletor de métricas do repositório e implementação de um painel de visualização de dados.\n\n- Indicadores de Qualidade: Adição de gráficos analíticos, incluindo a distribuição de commits por hora e a métrica de contribuição por autor, acompanhada da padronização dos usernames da equipe.\n\n- Automação (CI/CD): Configuração de rotina no GitHub Actions para a execução automatizada do coletor de métricas, com deploy contínuo dos resultados no GitHub Pages.\n\n### Backend e Extração de Dados:\n\n- Revisão do Crawler: Execução de correções estruturais e implementações de melhoria (integração da feature API da Câmara) no script de extração de dados legislativos, visando maior estabilidade na captação das proposições.\n\n### Frontend e Design (UI/UX):\n\n- Prototipagem: Conclusão do protótipo de alta fidelidade no Figma, estabelecendo as diretrizes visuais e de usabilidade definitivas para a construção da interface em código.\n\n- Arquitetura e Configuração de Repositório:\n\n- Ajustes de Versionamento: Correção no mapeamento dos diretórios de documentação (doc/docs) e atualização do .gitignore para ignorar a pasta site, prevenindo o rastreamento de artefatos estáticos de build.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -8007,13 +8007,13 @@
       "closed_issues": 10,
       "state": "closed",
       "created_at": "2026-05-12T21:12:44Z",
-      "updated_at": "2026-05-27T05:44:37Z",
+      "updated_at": "2026-06-24T22:54:44Z",
       "due_on": "2026-05-20T00:00:00Z",
       "closed_at": "2026-05-27T05:44:37Z"
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-05-12T22:06:27Z",
-    "updated_at": "2026-05-13T00:43:18Z",
+    "updated_at": "2026-06-24T22:50:07Z",
     "closed_at": "2026-05-13T00:43:18Z",
     "assignee": {
       "login": "augustogmedeiros",
@@ -8048,7 +8048,7 @@
       "patch_url": "https://github.com/unb-mds/2026-1-ProtectKids/pull/39.patch",
       "merged_at": "2026-05-13T00:43:18Z"
     },
-    "body": null,
+    "body": "## 📋 Descrição\r\nDesenvolver e integrar o painel de métricas (dashboard) na interface React. O objetivo é consumir os dados da API REST e apresentar visualmente as estatísticas das proposições legislativas (Câmara e Senado), os temas classificados por NLP e o volume de tramitações processadas.\r\n\r\n## ⚠️ Prioridade\r\n\r\n\r\n- [ ] Baixa\r\n\r\n- [ ] Média\r\n\r\n- [ ] Alta\r\n\r\n- [x] Extrema\r\n\r\n## ✅ Checklist de Tarefas\r\n\r\n- [x] Criar a estrutura base do componente Dashboard e configurar o roteamento correspondente.\r\n\r\n- [x] Desenvolver a camada de serviço no frontend utilizando Axios para consumir os endpoints de agregação do backend.\r\n\r\n- [x] Implementar os cards totalizadores (Total de Proposições, Total de Tramitações, Proporção Câmara vs. Senado).\r\n\r\n- [x] Integrar uma biblioteca de visualização de dados (ex: Recharts ou Chart.js) para renderizar o gráfico de distribuição de proposições por categoria/subtema.\r\n\r\n- [x] Implementar o tratamento de estados assíncronos da interface (Loading, Error, Empty State).\r\n\r\n- [x] Aplicar a estilização responsiva garantindo o correto redimensionamento dos gráficos em diferentes resoluções.",
     "closed_by": {
       "login": "augustogmedeiros",
       "id": 75932316,
@@ -8150,7 +8150,7 @@
       "node_id": "MI_kwDOR0zO1M4A8Aei",
       "number": 5,
       "title": "Sprint 04",
-      "description": "",
+      "description": "Essa sprint compôs a estabilização da arquitetura inicial e a implementação dos pipelines de integração, testes e extração de dados. O foco desta iteração foi corrigir inconsistências estruturais no repositório, integrar a API definitivamente ao banco de dados, estabelecer a automação de CI (Continuous Integration) e iniciar o desenvolvimento do script responsável por popular o sistema com dados reais.\n\n## Entregas Realizadas\n### Arquitetura e Configuração de Repositório:\n\n- Correções Estruturais: Realocação e atualização do arquivo .gitignore para garantir o rastreamento correto dos artefatos do projeto.\n\n- Documentação Arquitetural: Aplicação de correções e ajustes finais no Diagrama C4, alinhando a documentação visual com a implementação real.\n\n### Backend e Extração de Dados:\n\n- Integração com Banco de Dados: Conclusão da integração entre o framework FastAPI e o PostgreSQL, utilizando a biblioteca SQLModel para o mapeamento objeto-relacional (ORM).\n\n- Pipeline ETL (Crawler): Desenvolvimento e implementação do Crawler de Extração de Dados consumindo a API da Câmara dos Deputados, permitindo a captação dos projetos de lei primários.\n\n### Frontend:\n\n- Estabilização de Ambiente: Aplicação de correções nas configurações do Vite e na sua execução via Docker, assegurando o funcionamento adequado da renderização inicial da aplicação no ambiente conteinerizado.\n\n- DevOps e Qualidade (QA):\n\n- Automação (CI): Configuração da Pipeline de Integração Contínua utilizando GitHub Actions, permitindo a validação automática do código a cada submissão.\n\n- Testes Automatizados: Configuração da base do ambiente de testes automatizados, contemplando as estruturas iniciais tanto para o Backend quanto para o Frontend.",
       "creator": {
         "login": "augustogmedeiros",
         "id": 75932316,
@@ -8176,7 +8176,7 @@
       "closed_issues": 8,
       "state": "closed",
       "created_at": "2026-04-29T15:31:24Z",
-      "updated_at": "2026-05-26T21:25:15Z",
+      "updated_at": "2026-06-24T22:54:15Z",
       "due_on": "2026-05-06T00:00:00Z",
       "closed_at": "2026-05-26T21:25:15Z"
     },

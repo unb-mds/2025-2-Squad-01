@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "e4cc96cae8305683588545e4482cbacd0753df47",
+  "sha": "38fb197a723fe064e67cb0ca032f04b0807209f5",
   "tree": [
     {
       "name": ".claude",
@@ -164,7 +164,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "b46e935f0aa6db8e6079cbb53f42b743096a29f5",
+      "sha": "f80dc45fdd10b2ba4b0aa0f8e5e9a04272cbe0e5",
       "mode": "040000",
       "children": []
     },
@@ -172,7 +172,7 @@
       "name": ".claude",
       "path": "backend/.claude",
       "type": "directory",
-      "sha": "2cd7143217feaedbbcd477b2ecaef3ccff153da3",
+      "sha": "c9a874f81d808a1bc91277727a1548b1d6cc131f",
       "mode": "040000",
       "children": []
     },
@@ -180,9 +180,37 @@
       "name": "skills",
       "path": "backend/.claude/skills",
       "type": "directory",
-      "sha": "f41e417b8582cf42d9745d326a2a9fe527e09ce6",
+      "sha": "6cd776585c81475c980b1fc0d7c9bb321a6857c9",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "run-correio-rss",
+      "path": "backend/.claude/skills/run-correio-rss",
+      "type": "directory",
+      "sha": "f582e04ff088ee28f2976cbb81a09671bdf86c03",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-correio-rss/SKILL.md",
+      "type": "file",
+      "sha": "ae4ff11ab8e542db383b22817387eceec61fef32",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4462,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-correio-rss/driver.py",
+      "type": "file",
+      "sha": "1b085139b78d89e0a5e6ce0cf0cf5dafd92657d7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3983,
+      "is_binary": false
     },
     {
       "name": "run-endpoints",
@@ -210,6 +238,62 @@
       "mode": "100644",
       "extension": ".py",
       "size": 4975,
+      "is_binary": false
+    },
+    {
+      "name": "run-nominatim-gemini",
+      "path": "backend/.claude/skills/run-nominatim-gemini",
+      "type": "directory",
+      "sha": "4892e4baea3b29d6a58f45976005de81237f3f1f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-nominatim-gemini/SKILL.md",
+      "type": "file",
+      "sha": "09539c4fd553a2e9a3d8e3fd049d5a8b7f798432",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5056,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-nominatim-gemini/driver.py",
+      "type": "file",
+      "sha": "868e950cbda2e16f0daba67ea4693ca2c0511665",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4874,
+      "is_binary": false
+    },
+    {
+      "name": "run-schemas",
+      "path": "backend/.claude/skills/run-schemas",
+      "type": "directory",
+      "sha": "835d6d6e99cba9bdf4a32be31b136b1ce8d6ad09",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-schemas/SKILL.md",
+      "type": "file",
+      "sha": "37f015fe0e80cb3d44e6ef2af4dab592cbbc2a13",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4827,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-schemas/driver.py",
+      "type": "file",
+      "sha": "3be691694148d85414f6b7a42baeafa244118cdf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4066,
       "is_binary": false
     },
     {
@@ -302,7 +386,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "7fe1794f9432c9973a8a1736fe8fa15287aa46ab",
+      "sha": "bf33671856f43e8070d832a6fd57173ecceb99ff",
       "mode": "040000",
       "children": []
     },
@@ -358,7 +442,7 @@
       "name": "integrations",
       "path": "backend/app/integrations",
       "type": "directory",
-      "sha": "174fe49479d783684bc090042148eb888e603661",
+      "sha": "f88e3a2fca3136b03fd6e57be7e2790d07a6203b",
       "mode": "040000",
       "children": []
     },
@@ -380,6 +464,36 @@
       "mode": "100644",
       "extension": ".py",
       "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "correio_rss.py",
+      "path": "backend/app/integrations/correio_rss.py",
+      "type": "file",
+      "sha": "7d56ae3d4bf20a721cdcd591d1d39d7b94d297b6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2858,
+      "is_binary": false
+    },
+    {
+      "name": "gemini.py",
+      "path": "backend/app/integrations/gemini.py",
+      "type": "file",
+      "sha": "73a61e448bcc7e29cd09389872b644b7db835b3e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2444,
+      "is_binary": false
+    },
+    {
+      "name": "nominatim.py",
+      "path": "backend/app/integrations/nominatim.py",
+      "type": "file",
+      "sha": "40c87e1b8383e29e8a66819916c2f59d2844ce42",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2126,
       "is_binary": false
     },
     {
@@ -636,10 +750,10 @@
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "598651032589a301f38fa8d57c8ee51dcd05d52d",
+      "sha": "71afe08ab961ce8c634798d395fbaa3d9088927a",
       "mode": "100644",
       "extension": ".txt",
-      "size": 103,
+      "size": 193,
       "is_binary": false
     },
     {
@@ -656,9 +770,29 @@
       "name": "tests",
       "path": "backend/tests",
       "type": "directory",
-      "sha": "66b4c89176e7c25ac89679b4990bbaeeb4dddb63",
+      "sha": "997b6cfe3e767d509c7ec967d01b9746c9dcf20f",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "test_correio_rss.py",
+      "path": "backend/tests/test_correio_rss.py",
+      "type": "file",
+      "sha": "b79b3303563d8c31bd75fd533e2eae86234222c1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2735,
+      "is_binary": false
+    },
+    {
+      "name": "test_gemini.py",
+      "path": "backend/tests/test_gemini.py",
+      "type": "file",
+      "sha": "abc65656ebb3ae00346e6b336652e18396e54edc",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1790,
+      "is_binary": false
     },
     {
       "name": "test_main.py",
@@ -668,6 +802,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 279,
+      "is_binary": false
+    },
+    {
+      "name": "test_nominatim.py",
+      "path": "backend/tests/test_nominatim.py",
+      "type": "file",
+      "sha": "6b78baea612d7bdd457639993f5de554dacb06c6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1651,
       "is_binary": false
     },
     {
@@ -701,10 +845,20 @@
       "is_binary": false
     },
     {
+      "name": "test_schemas.py",
+      "path": "backend/tests/test_schemas.py",
+      "type": "file",
+      "sha": "53560842d2367f3303aaec9efb3dbef049b4e916",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2261,
+      "is_binary": false
+    },
+    {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "a372cf755b112169fb3a08fe317ca25464bdbfb2",
+      "sha": "e4c6451f841d5ebce7bc0ff7634d6a34b427aac2",
       "mode": "040000",
       "children": []
     },
@@ -1470,7 +1624,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "1380c839849ce2909c465f1f327ee79fc32e46dd",
+      "sha": "11e946cc80a5dd9467bfb35dabf5f5ba7d5dfc8e",
       "mode": "040000",
       "children": []
     },
@@ -1498,10 +1652,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "6001f407965042aaa079a8686cd94d416c598294",
+      "sha": "efd291312ae81b0835ef8053f5f0c7de7086c124",
       "mode": "100644",
       "extension": ".json",
-      "size": 8155,
+      "size": 8092,
       "is_binary": false
     },
     {
@@ -2876,19 +3030,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-24T09:14:48.306229",
+  "extracted_at": "2026-06-25T09:08:55.673609",
   "method": "rest",
-  "total_items": 302,
+  "total_items": 318,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-24T04:14:31Z",
+    "updated_at": "2026-06-25T04:14:39Z",
     "language": "TypeScript",
-    "size": 2675,
+    "size": 2688,
     "stars": 4,
     "forks": 0,
-    "open_issues": 11
+    "open_issues": 8
   }
 }

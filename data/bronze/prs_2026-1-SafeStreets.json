@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-24T08:18:22.620849",
+      "extracted_at": "2026-06-25T08:17:14.432339",
       "file_path": "data/bronze/prs_2026-1-SafeStreets.json",
       "record_count": 33
     }
@@ -161,17 +161,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 6,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-17T22:41:12Z",
-      "updated_at": "2026-06-23T22:07:27Z",
+      "updated_at": "2026-06-25T01:02:30Z",
       "due_on": null,
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-22T16:05:15Z",
-    "updated_at": "2026-06-24T04:14:29Z",
+    "updated_at": "2026-06-25T04:14:37Z",
     "closed_at": null,
     "assignee": {
       "login": "matheusqsa",
@@ -286,7 +286,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -341,18 +341,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 6,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-17T22:41:12Z",
-      "updated_at": "2026-06-23T22:07:27Z",
+      "updated_at": "2026-06-25T01:02:30Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-06-21T23:33:57Z",
-    "updated_at": "2026-06-23T01:13:23Z",
-    "closed_at": null,
+    "updated_at": "2026-06-24T10:39:09Z",
+    "closed_at": "2026-06-24T10:39:09Z",
     "assignee": {
       "login": "IsraelSoares-25",
       "id": 242254122,
@@ -384,10 +384,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/114",
       "diff_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/114.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/114.patch",
-      "merged_at": null
+      "merged_at": "2026-06-24T10:39:09Z"
     },
     "body": "## Descrição\r\n\r\nImplementação das integrações com os serviços **Gemini**, **Nominatim** e **RSS**, ampliando as funcionalidades da aplicação para processamento inteligente de dados, geolocalização e consumo de notícias.\r\n\r\nForam adicionados os módulos responsáveis por:\r\n\r\n* Integração com a API do Gemini para processamento e geração de respostas baseadas em IA.\r\n* Integração com o serviço Nominatim para geocodificação e obtenção de informações de localização a partir de endereços e coordenadas geográficas.\r\n* Integração com feeds RSS para coleta e processamento automatizado de notícias e conteúdos externos.\r\n\r\nAlém da implementação, foram desenvolvidos testes automatizados para validar o comportamento das integrações, cobrindo cenários de sucesso, falhas de comunicação, tratamento de exceções e validação das respostas recebidas dos serviços externos.\r\n\r\n## Tipo de mudança\r\n\r\n<!-- Marque com um \"x\" -->\r\n\r\n* [ ] Bug fix\r\n* [x] Nova funcionalidade\r\n* [ ] Refatoração\r\n* [ ] Documentação\r\n* [ ] Melhoria de performance\r\n* [x] Testes\r\n\r\n## Issue Relacionada\r\nCloses #110 \r\n\r\n## Como testar\r\n\r\nPasso a passo para validar\r\n\r\n1. Executar a suíte de testes das integrações:\r\n\r\n```bash\r\npython -m pytest tests/test_correio_rss.py tests/test_nominatim.py tests/test_gemini.py -v\r\n```\r\n\r\n2. Verificar se todos os testes são executados com sucesso.\r\n3. Validar a comunicação com a API Gemini utilizando requisições válidas.\r\n4. Validar a obtenção de coordenadas e informações geográficas através da integração com o Nominatim.\r\n5. Validar a leitura e o processamento dos feeds RSS configurados.\r\n6. Simular falhas de conexão e garantir que os tratamentos de erro funcionem corretamente.\r\n7. Confirmar que não houve regressão nas funcionalidades já existentes da aplicação.\r\n\r\n## Evidências (se aplicável)\r\n\r\n* Resultado da execução dos testes automatizados.\r\n* Relatório de cobertura de testes.\r\n* Prints das integrações funcionando em ambiente local.\r\n* Logs das chamadas realizadas para os serviços externos.\r\n\r\n## Impactos e riscos\r\n\r\n* Médio impacto na aplicação devido à dependência de serviços externos.\r\n* Possibilidade de indisponibilidade temporária dos provedores integrados.\r\n* Necessidade de monitoramento de limites de uso e alterações futuras nas APIs consumidas.\r\n* Possíveis ajustes caso ocorram mudanças nos contratos das APIs externas.\r\n\r\n## Checklist\r\n\r\n* [x] Código segue o padrão do projeto\r\n* [x] Testes adicionados/atualizados (se necessário)\r\n* [x] Testado localmente\r\n* [ ] Documentação atualizada (se necessário)\r\n\r\n## Observações adicionais\r\n\r\n* As integrações foram implementadas de forma modular para facilitar manutenção e evolução futura.\r\n* O tratamento de exceções foi centralizado para melhorar a confiabilidade da aplicação.\r\n* Os testes automatizados ajudam a garantir a estabilidade das integrações e a prevenir regressões.\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/114/reactions",
       "total_count": 0,
@@ -466,7 +486,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -521,18 +541,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 0,
+      "open_issues": 6,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-17T22:41:12Z",
-      "updated_at": "2026-06-23T22:07:27Z",
+      "updated_at": "2026-06-25T01:02:30Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-06-17T22:13:55Z",
-    "updated_at": "2026-06-23T22:07:26Z",
-    "closed_at": null,
+    "updated_at": "2026-06-25T01:02:30Z",
+    "closed_at": "2026-06-25T01:02:30Z",
     "assignee": {
       "login": "IsraelSoares-25",
       "id": 242254122,
@@ -564,10 +584,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/109",
       "diff_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/109.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-SafeStreets/pull/109.patch",
-      "merged_at": null
+      "merged_at": "2026-06-25T01:02:30Z"
     },
     "body": "## Descrição\r\n\r\nCriação da pasta `schemas` para centralizar os modelos de validação e serialização de dados da aplicação.\r\n\r\nForam implementados os schemas necessários para as operações relacionadas às ocorrências, garantindo a validação dos dados de entrada e a padronização das respostas da API.\r\n\r\nAlém da implementação, foram adicionados testes para validar o comportamento dos schemas, cobrindo cenários de sucesso e falha, incluindo validação de campos obrigatórios, tipos de dados e regras de negócio aplicáveis.\r\n\r\n## Tipo de mudança\r\n\r\n<!-- Marque com um \"x\" -->\r\n\r\n* [ ] Bug fix\r\n* [x] Nova funcionalidade\r\n* [ ] Refatoração\r\n* [ ] Documentação\r\n* [ ] Melhoria de performance\r\n* [x] Testes\r\n\r\n## Como testar\r\n\r\nPasso a passo para validar\r\n\r\n1. Executar a suíte de testes dos schemas:\r\n\r\n```bash\r\npython -m pytest tests\\test_schemas.py -v\r\n```\r\n\r\n2. Verificar se todos os testes são executados com sucesso.\r\n3. Validar a criação de objetos utilizando dados válidos.\r\n4. Validar o comportamento dos schemas ao receber dados inválidos.\r\n5. Confirmar que os erros de validação retornam as mensagens esperadas.\r\n6. Garantir que não houve regressão nos modelos já existentes.\r\n\r\n\r\n## Evidências (se aplicável)\r\n\r\n* Resultado da execução dos testes automatizados.\r\n* Relatório de cobertura de testes.\r\n* Prints da execução dos testes em ambiente local.\r\n\r\n## Impactos e riscos\r\n\r\n* Baixo impacto na aplicação.\r\n* Alterações concentradas na camada de validação de dados.\r\n* Possíveis ajustes poderão ser necessários caso novos campos sejam adicionados aos modelos no futuro.\r\n\r\n## Checklist\r\n\r\n* [x] Código segue o padrão do projeto\r\n* [x] Testes adicionados/atualizados (se necessário)\r\n* [x] Testado localmente\r\n* [ ] Documentação atualizada (se necessário)\r\n\r\n## Observações adicionais\r\n\r\n* A estrutura da pasta `schemas` foi organizada para facilitar manutenção e escalabilidade.\r\n* Os testes implementados ajudam a garantir a consistência dos contratos da API e a prevenir regressões futuras.\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "IsraelSoares-25",
+      "id": 242254122,
+      "node_id": "U_kgDODnCBKg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242254122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/IsraelSoares-25",
+      "html_url": "https://github.com/IsraelSoares-25",
+      "followers_url": "https://api.github.com/users/IsraelSoares-25/followers",
+      "following_url": "https://api.github.com/users/IsraelSoares-25/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IsraelSoares-25/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/IsraelSoares-25/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IsraelSoares-25/subscriptions",
+      "organizations_url": "https://api.github.com/users/IsraelSoares-25/orgs",
+      "repos_url": "https://api.github.com/users/IsraelSoares-25/repos",
+      "events_url": "https://api.github.com/users/IsraelSoares-25/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/IsraelSoares-25/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-SafeStreets/issues/109/reactions",
       "total_count": 0,
