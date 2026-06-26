@@ -2,7 +2,7 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-25T09:08:56.233806",
+  "extracted_at": "2026-06-26T09:19:44.059367",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -118,6 +118,14 @@
         "path": ".github/workflows/data-ingestion.yml"
       },
       {
+        "name": "deploy-backend.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 930,
+        "extension": ".yml",
+        "path": ".github/workflows/deploy-backend.yml"
+      },
+      {
         "name": "scrum metrics.yml",
         "type": "file",
         "language": "YAML",
@@ -137,7 +145,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 272,
+        "size": 283,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -162,6 +170,14 @@
         "type": "directory",
         "path": "backend",
         "children": []
+      },
+      {
+        "name": ".gitignore",
+        "type": "file",
+        "language": "Git Ignore",
+        "size": 14,
+        "extension": ".gitignore",
+        "path": "backend/.gitignore"
       },
       {
         "name": "Dockerfile",
@@ -219,7 +235,7 @@
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 1639,
+        "size": 1848,
         "extension": ".py",
         "path": "backend/app/database.py"
       },
@@ -285,7 +301,7 @@
         "name": "projeto.py",
         "type": "file",
         "language": "Python",
-        "size": 8903,
+        "size": 16763,
         "extension": ".py",
         "path": "backend/app/routers/projeto.py"
       },
@@ -329,15 +345,23 @@
         "name": "collector.py",
         "type": "file",
         "language": "Python",
-        "size": 6178,
+        "size": 6659,
         "extension": ".py",
         "path": "backend/app/services/collector.py"
+      },
+      {
+        "name": "nlp_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2118,
+        "extension": ".py",
+        "path": "backend/app/services/nlp_service.py"
       },
       {
         "name": "normalizer.py",
         "type": "file",
         "language": "Python",
-        "size": 14127,
+        "size": 16070,
         "extension": ".py",
         "path": "backend/app/services/normalizer.py"
       },
@@ -369,7 +393,7 @@
         "name": "popular_banco.py",
         "type": "file",
         "language": "Python",
-        "size": 2545,
+        "size": 2668,
         "extension": ".py",
         "path": "backend/popular_banco.py"
       },
@@ -385,7 +409,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 83,
+        "size": 138,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -394,6 +418,38 @@
         "type": "directory",
         "path": "backend/tests",
         "children": []
+      },
+      {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 253,
+        "extension": ".py",
+        "path": "backend/tests/conftest.py"
+      },
+      {
+        "name": "test_camara_client_unit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2626,
+        "extension": ".py",
+        "path": "backend/tests/test_camara_client_unit.py"
+      },
+      {
+        "name": "test_collector.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2458,
+        "extension": ".py",
+        "path": "backend/tests/test_collector.py"
+      },
+      {
+        "name": "test_collector_unit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4280,
+        "extension": ".py",
+        "path": "backend/tests/test_collector_unit.py"
       },
       {
         "name": "test_dashboard.py",
@@ -420,12 +476,44 @@
         "path": "backend/tests/test_merge_reports.py"
       },
       {
+        "name": "test_nlp_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1648,
+        "extension": ".py",
+        "path": "backend/tests/test_nlp_service.py"
+      },
+      {
+        "name": "test_normalizer_unit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5561,
+        "extension": ".py",
+        "path": "backend/tests/test_normalizer_unit.py"
+      },
+      {
         "name": "test_popular_banco.py",
         "type": "file",
         "language": "Python",
         "size": 1387,
         "extension": ".py",
         "path": "backend/tests/test_popular_banco.py"
+      },
+      {
+        "name": "test_senado_client_unit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2536,
+        "extension": ".py",
+        "path": "backend/tests/test_senado_client_unit.py"
+      },
+      {
+        "name": "vercel.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 417,
+        "extension": ".json",
+        "path": "backend/vercel.json"
       },
       {
         "name": "docker-compose.yml",
@@ -616,6 +704,20 @@
         "type": "directory",
         "path": "docs/Estudos",
         "children": []
+      },
+      {
+        "name": "Deploy",
+        "type": "directory",
+        "path": "docs/Estudos/Deploy",
+        "children": []
+      },
+      {
+        "name": "vercel.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4300,
+        "extension": ".md",
+        "path": "docs/Estudos/Deploy/vercel.md"
       },
       {
         "name": "Sprint00",
@@ -972,6 +1074,42 @@
         "path": "docs/Estudos/Sprint04/StoryMap-figma.md"
       },
       {
+        "name": "Sprint11",
+        "type": "directory",
+        "path": "docs/Estudos/Sprint11",
+        "children": []
+      },
+      {
+        "name": "Estudo_Implementacao_Dashboard.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7130,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint11/Estudo_Implementacao_Dashboard.md"
+      },
+      {
+        "name": "viabilidade_ranking_parlamentares.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10623,
+        "extension": ".md",
+        "path": "docs/Estudos/Sprint11/viabilidade_ranking_parlamentares.md"
+      },
+      {
+        "name": "NLP com AI",
+        "type": "directory",
+        "path": "docs/NLP com AI",
+        "children": []
+      },
+      {
+        "name": "ai_integration_nlp.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3945,
+        "extension": ".md",
+        "path": "docs/NLP com AI/ai_integration_nlp.md"
+      },
+      {
         "name": "Release Notes",
         "type": "directory",
         "path": "docs/Release Notes",
@@ -1196,6 +1334,14 @@
         "path": "docs/SKILLS/Resumo.md"
       },
       {
+        "name": "grill_deploy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6383,
+        "extension": ".md",
+        "path": "docs/grill_deploy.md"
+      },
+      {
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
@@ -1221,7 +1367,7 @@
         "name": "ingestion-history.json",
         "type": "file",
         "language": "JSON",
-        "size": 3461,
+        "size": 270,
         "extension": ".json",
         "path": "docs/ingestion/ingestion-history.json"
       },
@@ -1305,7 +1451,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 67978,
+        "size": 108472,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -1313,7 +1459,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 699,
+        "size": 725,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -1357,7 +1503,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 492,
+        "size": 718,
         "extension": ".jsx",
         "path": "frontend/src/App.jsx"
       },
@@ -1398,6 +1544,68 @@
         "children": []
       },
       {
+        "name": "Dashboard",
+        "type": "directory",
+        "path": "frontend/src/components/Dashboard",
+        "children": []
+      },
+      {
+        "name": "BotaoExportar.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1254,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/BotaoExportar.jsx"
+      },
+      {
+        "name": "BreadcrumbDashboard.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 516,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/BreadcrumbDashboard.jsx"
+      },
+      {
+        "name": "CardIndicadores.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1274,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/CardIndicadores.jsx"
+      },
+      {
+        "name": "FiltrosDashboard.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3010,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/FiltrosDashboard.jsx"
+      },
+      {
+        "name": "GraficoColunas.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1145,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/GraficoColunas.jsx"
+      },
+      {
+        "name": "GraficoPizza.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1954,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/GraficoPizza.jsx"
+      },
+      {
+        "name": "SeletorComparar.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 979,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Dashboard/SeletorComparar.jsx"
+      },
+      {
         "name": "Footer",
         "type": "directory",
         "path": "frontend/src/components/Footer",
@@ -1410,6 +1618,44 @@
         "size": 1078,
         "extension": ".jsx",
         "path": "frontend/src/components/Footer/index.jsx"
+      },
+      {
+        "name": "Graficos",
+        "type": "directory",
+        "path": "frontend/src/components/Graficos",
+        "children": []
+      },
+      {
+        "name": "CardCTADashboard.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1058,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Graficos/CardCTADashboard.jsx"
+      },
+      {
+        "name": "CardParlamentaresAtivos.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1813,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Graficos/CardParlamentaresAtivos.jsx"
+      },
+      {
+        "name": "CardTempoTramitacao.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1268,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Graficos/CardTempoTramitacao.jsx"
+      },
+      {
+        "name": "CardTopEstados.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1245,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Graficos/CardTopEstados.jsx"
       },
       {
         "name": "NavBar",
@@ -1451,7 +1697,7 @@
         "name": "CardPrincipal.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1932,
+        "size": 2124,
         "extension": ".jsx",
         "path": "frontend/src/components/PLDetalhado/CardPrincipal.jsx"
       },
@@ -1475,7 +1721,7 @@
         "name": "EstagioAtual.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 2045,
+        "size": 2877,
         "extension": ".jsx",
         "path": "frontend/src/components/PLDetalhado/EstagioAtual.jsx"
       },
@@ -1483,7 +1729,7 @@
         "name": "HistoricoTramitacao.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1275,
+        "size": 2343,
         "extension": ".jsx",
         "path": "frontend/src/components/PLDetalhado/HistoricoTramitacao.jsx"
       },
@@ -1497,7 +1743,7 @@
         "name": "CardPL.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 2599,
+        "size": 2949,
         "extension": ".jsx",
         "path": "frontend/src/components/ProjetosLei/CardPL.jsx"
       },
@@ -1540,10 +1786,26 @@
         "children": []
       },
       {
+        "name": "useDashboard.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1317,
+        "extension": ".js",
+        "path": "frontend/src/hooks/useDashboard.js"
+      },
+      {
+        "name": "useGraficosResumo.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 673,
+        "extension": ".js",
+        "path": "frontend/src/hooks/useGraficosResumo.js"
+      },
+      {
         "name": "usePLDetalhado.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 635,
+        "size": 745,
         "extension": ".js",
         "path": "frontend/src/hooks/usePLDetalhado.js"
       },
@@ -1554,6 +1816,14 @@
         "size": 2124,
         "extension": ".js",
         "path": "frontend/src/hooks/useProjetosLei.js"
+      },
+      {
+        "name": "useStats.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 711,
+        "extension": ".js",
+        "path": "frontend/src/hooks/useStats.js"
       },
       {
         "name": "index.css",
@@ -1578,10 +1848,26 @@
         "children": []
       },
       {
+        "name": "dashboard.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1677,
+        "extension": ".js",
+        "path": "frontend/src/mocks/dashboard.js"
+      },
+      {
+        "name": "graficosResumo.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 816,
+        "extension": ".js",
+        "path": "frontend/src/mocks/graficosResumo.js"
+      },
+      {
         "name": "plDetalhado.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 6613,
+        "size": 6130,
         "extension": ".js",
         "path": "frontend/src/mocks/plDetalhado.js"
       },
@@ -1600,6 +1886,34 @@
         "children": []
       },
       {
+        "name": "Dashboard",
+        "type": "directory",
+        "path": "frontend/src/pages/Dashboard",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 5000,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/Dashboard/index.jsx"
+      },
+      {
+        "name": "Graficos",
+        "type": "directory",
+        "path": "frontend/src/pages/Graficos",
+        "children": []
+      },
+      {
+        "name": "index.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3229,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/Graficos/index.jsx"
+      },
+      {
         "name": "Inicio",
         "type": "directory",
         "path": "frontend/src/pages/Inicio",
@@ -1609,7 +1923,7 @@
         "name": "index.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 17540,
+        "size": 17740,
         "extension": ".jsx",
         "path": "frontend/src/pages/Inicio/index.jsx"
       },
@@ -1623,7 +1937,7 @@
         "name": "index.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 3834,
+        "size": 4065,
         "extension": ".jsx",
         "path": "frontend/src/pages/PLDetalhado/index.jsx"
       },
@@ -1651,7 +1965,7 @@
         "name": "api.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 3418,
+        "size": 4737,
         "extension": ".js",
         "path": "frontend/src/services/api.js"
       },
@@ -2660,6 +2974,30 @@
         "children": []
       },
       {
+        "name": "test_api_pl_detalhado.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2480,
+        "extension": ".py",
+        "path": "tests/test_api_pl_detalhado.py"
+      },
+      {
+        "name": "test_collector.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3776,
+        "extension": ".py",
+        "path": "tests/test_collector.py"
+      },
+      {
+        "name": "test_mapeamentos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1740,
+        "extension": ".py",
+        "path": "tests/test_mapeamentos.py"
+      },
+      {
         "name": "test_workflow_deploy_pages.py",
         "type": "file",
         "language": "Python",
@@ -2678,7 +3016,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-25T09:12:01.798578",
+    "extracted_at": "2026-06-26T09:22:51.754127",
     "file_path": "data/silver/hierarchy_2026-1-Mapa_L.I.L.A.S.json"
   }
 }
