@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-25T08:17:20.580580",
+      "extracted_at": "2026-06-26T08:26:24.600220",
       "file_path": "data/bronze/issues_2026-1-Squad07.json",
       "record_count": 59
     }
@@ -569,11 +569,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -858,7 +858,7 @@
         "description": "Segunda release"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -934,18 +934,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-15T03:26:43Z",
-    "updated_at": "2026-06-19T13:31:16Z",
-    "closed_at": null,
+    "updated_at": "2026-06-26T03:58:12Z",
+    "closed_at": "2026-06-26T03:58:12Z",
     "assignee": {
       "login": "Jonathan-Carpaneda",
       "id": 102928460,
@@ -983,7 +983,27 @@
       "total_blocking": 0
     },
     "body": "## Contexto\nCom a spec arquitetural aprovada (#106) e a tabela `Analysis` criada, esta issue implementa o classificador multi-label de problemas usando LegalBERT-pt. O agente fica atras de uma interface `AnalysisProvider` conforme a spec.\n\n## O que fazer\n- Criar `backend/app/services/analysis_provider.py` com interface `AnalysisProvider`\n- Implementar `LegalBERTProvider` carregando o modelo via `transformers` + `torch`\n- Tratar textos acima de 512 tokens com chunking + pooling (decisao D8 da spec)\n- Endpoint: `POST /api/v1/analysis/evaluate` recebendo `{ \"texto\": str }`\n- Retornar: `{ \"score\": float, \"metrics\": {...}, \"warnings\": [...], \"model_version\": str, \"cached\": bool }`\n- Implementar cache por hash do texto + versao do modelo\n- Persistir resultado na tabela `Analysis`\n- Endpoint: `GET /api/v1/analysis/{id}/history`\n- Criar `test-plan.md` antes da implementacao (TDD, mocks do LLM nos testes)\n- Adicionar `transformers` e `torch` ao `requirements.txt`\n\n## Criterios de Aceite\n- [ ] `test-plan.md` criado com cenarios de inferencia e validacao de schema\n- [ ] Interface `AnalysisProvider` implementada (permite trocar modelo sem mudar o resto)\n- [ ] Endpoint `POST /api/v1/analysis/evaluate` funciona com leis reais\n- [ ] Chunking funcionando para textos acima de 512 tokens\n- [ ] Cache funciona: segunda chamada com mesmo texto retorna `\"cached\": true`\n- [ ] Resultado persiste no banco (tabela `Analysis`)\n- [ ] Cobertura >= 90% (mocks do modelo nos testes unitarios)\n- [ ] CI passa sem falhas\n\n## Dependencia\nBloqueada por: Migration Prisma e PR #106 aprovado.\nBloqueia: Resumo Automatico, Cards de Ambiguidade, Highlights.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "Jonathan-Carpaneda",
+      "id": 102928460,
+      "node_id": "U_kgDOBiKQTA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102928460?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jonathan-Carpaneda",
+      "html_url": "https://github.com/Jonathan-Carpaneda",
+      "followers_url": "https://api.github.com/users/Jonathan-Carpaneda/followers",
+      "following_url": "https://api.github.com/users/Jonathan-Carpaneda/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jonathan-Carpaneda/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jonathan-Carpaneda/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jonathan-Carpaneda/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jonathan-Carpaneda/orgs",
+      "repos_url": "https://api.github.com/users/Jonathan-Carpaneda/repos",
+      "events_url": "https://api.github.com/users/Jonathan-Carpaneda/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jonathan-Carpaneda/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/133/reactions",
       "total_count": 0,
@@ -998,7 +1018,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/133/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Squad07"
   },
@@ -1127,11 +1147,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -1332,11 +1352,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -4610,11 +4630,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
@@ -4794,11 +4814,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 4,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-22T15:17:04Z",
+      "updated_at": "2026-06-26T03:58:12Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },

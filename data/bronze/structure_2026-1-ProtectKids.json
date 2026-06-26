@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-ProtectKids",
   "branch": "main",
-  "sha": "2e593f8f92fbe155f2140ff0bb6cd850ac2a4672",
+  "sha": "6a83c88fbdab91753e1c40529bbd21c79d79f65d",
   "tree": [
     {
       "name": ".env.example",
@@ -94,27 +94,27 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "6886a96311ed8479828250c0a39a0c9327f892fc",
+      "sha": "7eb89cef2960b46bcc1d26c1211368eeac3238be",
       "mode": "100644",
       "extension": ".md",
-      "size": 4291,
+      "size": 4253,
       "is_binary": false
     },
     {
       "name": "api_contrato.md",
       "path": "api_contrato.md",
       "type": "file",
-      "sha": "885d42b83ec2f5430e2a382bba75fe196252ec52",
+      "sha": "c4554e13e16d63de55cea547704437b69af0cff4",
       "mode": "100644",
       "extension": ".md",
-      "size": 5124,
+      "size": 11424,
       "is_binary": false
     },
     {
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "607b7016b5bc5c7feccb7ed848c4cf75611d0b66",
+      "sha": "9e166a3e616727395ccd722ee140514936382a30",
       "mode": "040000",
       "children": []
     },
@@ -132,7 +132,7 @@
       "name": "crawler",
       "path": "backend/crawler",
       "type": "directory",
-      "sha": "805f9f30fc2ccb39d961bc6b6a41bb6cdef4b437",
+      "sha": "6ca13fed661131a9784ae2378e7b279247193d95",
       "mode": "040000",
       "children": []
     },
@@ -140,30 +140,40 @@
       "name": "camara_api.py",
       "path": "backend/crawler/camara_api.py",
       "type": "file",
-      "sha": "ce4515edeb8f784f30da59d084e33720555d29cc",
+      "sha": "eadcc41bce446fba1d092a23cc67adcf7c3d9185",
       "mode": "100644",
       "extension": ".py",
-      "size": 17996,
+      "size": 26102,
+      "is_binary": false
+    },
+    {
+      "name": "reprocessar_classificacao.py",
+      "path": "backend/crawler/reprocessar_classificacao.py",
+      "type": "file",
+      "sha": "44786c488bf317e1fecd2257ca2fd03ddfd68008",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1960,
       "is_binary": false
     },
     {
       "name": "senado_api.py",
       "path": "backend/crawler/senado_api.py",
       "type": "file",
-      "sha": "25f1b5cdb0859d1502f992fb58e42b8ded8fe51c",
+      "sha": "458eb0c56ff217b1164e876c7c63193a40cde0b6",
       "mode": "100644",
       "extension": ".py",
-      "size": 7603,
+      "size": 9043,
       "is_binary": false
     },
     {
       "name": "tramitacoes_api.py",
       "path": "backend/crawler/tramitacoes_api.py",
       "type": "file",
-      "sha": "21b9cbe480b471eedb56d99a45e03d01bab3708c",
+      "sha": "6efabe8d3a2c55fe821b37b0d1a111148d471e43",
       "mode": "100644",
       "extension": ".py",
-      "size": 4244,
+      "size": 5216,
       "is_binary": false
     },
     {
@@ -180,20 +190,20 @@
       "name": "main.py",
       "path": "backend/main.py",
       "type": "file",
-      "sha": "a2092cd2070ad25c502ebdb870883e1ea34d512d",
+      "sha": "542d592bbc02e8917141889034c6afa93a524cdc",
       "mode": "100644",
       "extension": ".py",
-      "size": 11629,
+      "size": 13736,
       "is_binary": false
     },
     {
       "name": "models.py",
       "path": "backend/models.py",
       "type": "file",
-      "sha": "7d98312598c1c62d2f755bfb2b1c8b16a35f159b",
+      "sha": "4a7cd6d3499c327cd72e04e7b3764616ec388616",
       "mode": "100644",
       "extension": ".py",
-      "size": 2040,
+      "size": 2032,
       "is_binary": false
     },
     {
@@ -238,17 +248,17 @@
       "name": "docker-compose.yml",
       "path": "docker-compose.yml",
       "type": "file",
-      "sha": "ee9ed25d4a2d0cc38d0a0e9f686db5eb0df891c4",
+      "sha": "99cf0373d37122eab6165b12cdf373dfc153dd94",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1077,
+      "size": 1085,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "3902f06e880374e3cd8c2a2fac4e930fc8de4f14",
+      "sha": "be27241b0e221e5932b2b1481aeda7fc18cca2b1",
       "mode": "040000",
       "children": []
     },
@@ -418,6 +428,24 @@
       "mode": "100644",
       "extension": ".md",
       "size": 1656,
+      "is_binary": false
+    },
+    {
+      "name": "infra",
+      "path": "docs/infra",
+      "type": "directory",
+      "sha": "d8f9014718faaa82ab8e4677a0f7a569c6075654",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "docker-compose.md",
+      "path": "docs/infra/docker-compose.md",
+      "type": "file",
+      "sha": "59e824a65b7f5ee81129fa9f40ee810c6837b666",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 12914,
       "is_binary": false
     },
     {
@@ -916,10 +944,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "c483148b8d33a5540ff6f49d36e75619a367e3ea",
+      "sha": "e513a1c799724f4fb0862ee98bf19d3053cfcfc8",
       "mode": "100644",
       "extension": ".yml",
-      "size": 642,
+      "size": 1022,
       "is_binary": false
     },
     {
@@ -952,19 +980,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-25T09:09:02.433264",
+  "extracted_at": "2026-06-26T09:19:53.131895",
   "method": "rest",
-  "total_items": 100,
+  "total_items": 103,
   "repository_metadata": {
     "id": 1196216020,
     "full_name": "unb-mds/2026-1-ProtectKids",
     "description": null,
     "created_at": "2026-03-30T13:37:41Z",
-    "updated_at": "2026-06-24T01:32:16Z",
+    "updated_at": "2026-06-25T22:48:05Z",
     "language": "Python",
-    "size": 40084,
+    "size": 40147,
     "stars": 2,
     "forks": 0,
-    "open_issues": 7
+    "open_issues": 12
   }
 }
