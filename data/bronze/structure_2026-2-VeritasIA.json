@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-2-VeritasIA",
   "branch": "main",
-  "sha": "5c6405f0c970f69968b09b758bd076f82263d984",
+  "sha": "9be5f31b3a84abc1f70b7fb89acff5b69e9ab4fa",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "443f4ecef75e6ab50596dec288c564b68673863c",
+      "sha": "9b4cc9e1c5b06773c3601074854647251b718c07",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "cd1d3d09d9cb1acae97e7babf06918d425532a9b",
+      "sha": "d3024188a94b15ce83d8e0e1868ef5a59d1509ab",
       "mode": "040000",
       "children": []
     },
@@ -24,30 +24,40 @@
       "name": "execute-scrapy.yml",
       "path": ".github/workflows/execute-scrapy.yml",
       "type": "file",
-      "sha": "9390c03d2aae9cd4be327525ad71abf7c376394e",
+      "sha": "cf8728c2e55d84451a22d42a642cfcdd32c73066",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1304,
+      "size": 1293,
+      "is_binary": false
+    },
+    {
+      "name": "keep-alive.yml",
+      "path": ".github/workflows/keep-alive.yml",
+      "type": "file",
+      "sha": "773ab6668b6d392f9d69ae7a5f1385e100bb433d",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 300,
       "is_binary": false
     },
     {
       "name": "langchaim.yml",
       "path": ".github/workflows/langchaim.yml",
       "type": "file",
-      "sha": "4110a19e03b147b7c8a431597a37013348051204",
+      "sha": "0177b40fec16d3af523fb6dcba1ee751d46bcb37",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1479,
+      "size": 1540,
       "is_binary": false
     },
     {
-      "name": "metrics-with-pages.yml",
-      "path": ".github/workflows/metrics-with-pages.yml",
+      "name": "static.yml",
+      "path": ".github/workflows/static.yml",
       "type": "file",
-      "sha": "324f6ad54eda3a87f3204049b9645d2565984318",
+      "sha": "b50a02ea97df2fe4829fac47391895f8efa9d944",
       "mode": "100644",
       "extension": ".yml",
-      "size": 2070,
+      "size": 1098,
       "is_binary": false
     },
     {
@@ -61,10 +71,44 @@
       "is_binary": false
     },
     {
+      "name": "BackEnd",
+      "path": "BackEnd",
+      "type": "directory",
+      "sha": "ee80ca1b126e55318400b6bfc631abb461cc44e0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "app",
+      "path": "BackEnd/app",
+      "type": "directory",
+      "sha": "390385a4bc5cf410670772a5dc245dc23ce032aa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "BackEnd/app/__pycache__",
+      "type": "directory",
+      "sha": "825ca14926aba57b9d80ca8e91ddae60281367b6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "main.cpython-314.pyc",
+      "path": "BackEnd/app/__pycache__/main.cpython-314.pyc",
+      "type": "file",
+      "sha": "50d683e37ea0f3d62be8784cfc471a315ea93d0f",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 4991,
+      "is_binary": false
+    },
+    {
       "name": "Frontend",
       "path": "Frontend",
       "type": "directory",
-      "sha": "8c1a05bb6ecbc87a0a3f8a666645b474bdb6c998",
+      "sha": "b7460725df65c88d3d6cb783af3db8868334ec6a",
       "mode": "040000",
       "children": []
     },
@@ -215,33 +259,23 @@
       "is_binary": false
     },
     {
-      "name": "index.html",
-      "path": "Frontend/index.html",
-      "type": "file",
-      "sha": "22ec9e79b5281c3bd6aa31b17ebdeb237b16473c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 360,
-      "is_binary": false
-    },
-    {
       "name": "package-lock.json",
       "path": "Frontend/package-lock.json",
       "type": "file",
-      "sha": "3d5c1609d810b41edfbe6dff7bc04be8e5115b5a",
+      "sha": "90ac7a9150a5d3ea2a677ff2d88cc721e9f9d6f8",
       "mode": "100644",
       "extension": ".json",
-      "size": 215618,
+      "size": 216991,
       "is_binary": false
     },
     {
       "name": "package.json",
       "path": "Frontend/package.json",
       "type": "file",
-      "sha": "9fb38ede263308338cabbbb55ba271edd6fc89b1",
+      "sha": "2177b1c6063414ff8e8b303e08ddacc281552abd",
       "mode": "100644",
       "extension": ".json",
-      "size": 867,
+      "size": 1059,
       "is_binary": false
     },
     {
@@ -255,10 +289,36 @@
       "is_binary": false
     },
     {
+      "name": "public",
+      "path": "Frontend/public",
+      "type": "directory",
+      "sha": "f7874bfb9062b0b8f9410422a4829696b453ef5f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "images",
+      "path": "Frontend/public/images",
+      "type": "directory",
+      "sha": "dfa64a62b2d2e8e7120a22858947509dd5400ed8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "noticia-placeholder.jpg",
+      "path": "Frontend/public/images/noticia-placeholder.jpg",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".jpg",
+      "size": 0,
+      "is_binary": false
+    },
+    {
       "name": "src",
       "path": "Frontend/src",
       "type": "directory",
-      "sha": "30909d2a453dc7e4be549891cea5f82d9fac9198",
+      "sha": "ed9ec82b95e08d1cef5d7c5d8cb259c2c129a753",
       "mode": "040000",
       "children": []
     },
@@ -266,20 +326,20 @@
       "name": "App.css",
       "path": "Frontend/src/App.css",
       "type": "file",
-      "sha": "a3209a25c3ffd2e3dd233ba29d1a6836454774ff",
+      "sha": "df958b697441f1fc95caf497f4e3ad9275570051",
       "mode": "100644",
       "extension": ".css",
-      "size": 13824,
+      "size": 14108,
       "is_binary": false
     },
     {
       "name": "App.jsx",
       "path": "Frontend/src/App.jsx",
       "type": "file",
-      "sha": "da6cc40889cf8e62b593c8428ee3b2a6f82035cc",
+      "sha": "274386bd271f4e13f984a5af8cff22feb6593b6c",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 427,
+      "size": 819,
       "is_binary": false
     },
     {
@@ -334,7 +394,7 @@
       "name": "components",
       "path": "Frontend/src/components",
       "type": "directory",
-      "sha": "1fabb4bdd8c457d8aa7f0eba5432171461c62546",
+      "sha": "40cb2c63862297da488e6ab4697a0790d23094b5",
       "mode": "040000",
       "children": []
     },
@@ -352,50 +412,80 @@
       "name": "BrazilMap.jsx",
       "path": "Frontend/src/components/BrazilMap.jsx",
       "type": "file",
-      "sha": "081d415ebe14e2d817805bf21f887916fad00ecb",
+      "sha": "a06e3bf59558aea3e14f041146f59e128b09d25f",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 1818,
+      "size": 2868,
+      "is_binary": false
+    },
+    {
+      "name": "HeatmapLayer.jsx",
+      "path": "Frontend/src/components/HeatmapLayer.jsx",
+      "type": "file",
+      "sha": "e2b4707b80899a15c173db5d617d4f051948c76d",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1245,
       "is_binary": false
     },
     {
       "name": "LatestNews.jsx",
       "path": "Frontend/src/components/LatestNews.jsx",
       "type": "file",
-      "sha": "f85c2f560c091effa7f60a3d8c4fc1a7d373ea57",
+      "sha": "db08831dfcfea3ae951c89be01387a0884cafdc6",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 872,
+      "size": 1210,
+      "is_binary": false
+    },
+    {
+      "name": "LeafletMap.jsx",
+      "path": "Frontend/src/components/LeafletMap.jsx",
+      "type": "file",
+      "sha": "2be9b01506a6edd629a7e809c0ae636137a3d9bc",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 2503,
       "is_binary": false
     },
     {
       "name": "NewsChart.jsx",
       "path": "Frontend/src/components/NewsChart.jsx",
       "type": "file",
-      "sha": "eed281407d6e1376ad2dfafea6292ccd99febe65",
+      "sha": "b5dc9cbae2853e82122e9497d1b2857024f48552",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 747,
+      "size": 1270,
+      "is_binary": false
+    },
+    {
+      "name": "PageHeader.jsx",
+      "path": "Frontend/src/components/PageHeader.jsx",
+      "type": "file",
+      "sha": "79fedc63b9346d6e025815d038f0ad91a8907a7e",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 292,
       "is_binary": false
     },
     {
       "name": "RegionChart.jsx",
       "path": "Frontend/src/components/RegionChart.jsx",
       "type": "file",
-      "sha": "397a1188da50ad8ea1bcf390f2e41e5323645a69",
+      "sha": "f6419ee4fae662bb59dca254ed2d1ac56e48622b",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 685,
+      "size": 1322,
       "is_binary": false
     },
     {
       "name": "Sidebar.jsx",
       "path": "Frontend/src/components/Sidebar.jsx",
       "type": "file",
-      "sha": "d63d6884d78d0fecdf702f6530b00d055fa7f078",
+      "sha": "86d80e765329aa62dbad4ae0c644fde5609a8bb8",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 551,
+      "size": 556,
       "is_binary": false
     },
     {
@@ -412,10 +502,28 @@
       "name": "TopVehicles.jsx",
       "path": "Frontend/src/components/TopVehicles.jsx",
       "type": "file",
-      "sha": "906529500b9b2356bfb94dd9173e19a72516422a",
+      "sha": "ee64d908f462b1585d1df889c132a3b980d85423",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 586,
+      "size": 1494,
+      "is_binary": false
+    },
+    {
+      "name": "data",
+      "path": "Frontend/src/data",
+      "type": "directory",
+      "sha": "770644be0a144b91f2a516489ea532e5e1c8ce9b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "noticias.js",
+      "path": "Frontend/src/data/noticias.js",
+      "type": "file",
+      "sha": "22ab3a03e9254c4acf5628bf32dc680e0d9d64c8",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2030,
       "is_binary": false
     },
     {
@@ -442,7 +550,7 @@
       "name": "pages",
       "path": "Frontend/src/pages",
       "type": "directory",
-      "sha": "9bd4bdfa15c771f5326b3f914a0e2c1ad24a4254",
+      "sha": "235eb4463f2b9c312bb117ff638872b282b4cf79",
       "mode": "040000",
       "children": []
     },
@@ -450,10 +558,30 @@
       "name": "Dashboard.jsx",
       "path": "Frontend/src/pages/Dashboard.jsx",
       "type": "file",
-      "sha": "411edaaff61bb0f9066a70c8709114aea8714ab6",
+      "sha": "454dea0a7c40b7857b3add8877a91ae747591f64",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 2896,
+      "size": 4471,
+      "is_binary": false
+    },
+    {
+      "name": "DetalhesNoticia.css",
+      "path": "Frontend/src/pages/DetalhesNoticia.css",
+      "type": "file",
+      "sha": "7c4982fd4fb0cf1ef87d7e6ed79295cc3af8975e",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 4066,
+      "is_binary": false
+    },
+    {
+      "name": "DetalhesNoticia.jsx",
+      "path": "Frontend/src/pages/DetalhesNoticia.jsx",
+      "type": "file",
+      "sha": "4257a3621148d423ad86de2057446e305cc9196e",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 5940,
       "is_binary": false
     },
     {
@@ -477,33 +605,63 @@
       "is_binary": false
     },
     {
+      "name": "Mapa.css",
+      "path": "Frontend/src/pages/Mapa.css",
+      "type": "file",
+      "sha": "8df07b8eef1df24d18919b6a7ba5479e7eed0e84",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2585,
+      "is_binary": false
+    },
+    {
       "name": "Mapa.jsx",
       "path": "Frontend/src/pages/Mapa.jsx",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "fe005a8bc3959abca97ffe98695dcc29a253935e",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 0,
+      "size": 1063,
+      "is_binary": false
+    },
+    {
+      "name": "Noticias.css",
+      "path": "Frontend/src/pages/Noticias.css",
+      "type": "file",
+      "sha": "8891b4f529686dee53ce81b73af793d8fefaaec5",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 6527,
       "is_binary": false
     },
     {
       "name": "Noticias.jsx",
       "path": "Frontend/src/pages/Noticias.jsx",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "d8839eda7fefc05c8011e578732c6587572af23b",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 0,
+      "size": 7493,
+      "is_binary": false
+    },
+    {
+      "name": "Sobre.css",
+      "path": "Frontend/src/pages/Sobre.css",
+      "type": "file",
+      "sha": "9d0b7f138d8fecb6847106d50603aa43352e2a34",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 5180,
       "is_binary": false
     },
     {
       "name": "Sobre.jsx",
       "path": "Frontend/src/pages/Sobre.jsx",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "7eb90bcbe290bd898d12312d0698c5a2fe5e81d8",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 0,
+      "size": 6850,
       "is_binary": false
     },
     {
@@ -514,16 +672,6 @@
       "mode": "100644",
       "extension": ".js",
       "size": 169,
-      "is_binary": false
-    },
-    {
-      "name": "vite.config.js",
-      "path": "Frontend/vite.config.js",
-      "type": "file",
-      "sha": "d3f950b86a4493115b458b57a1af648534d4ff58",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 166,
       "is_binary": false
     },
     {
@@ -568,7 +716,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "d4ef1d4a58ef31189912a6205cf72903aef4c213",
+      "sha": "8af09ce580f8d7b560b677b835000d7e1ed29b0d",
       "mode": "040000",
       "children": []
     },
@@ -586,7 +734,7 @@
       "name": "__pycache__",
       "path": "backend/__pycache__",
       "type": "directory",
-      "sha": "5413af4d4436b4a769ca49a2e059f3739b5dc53a",
+      "sha": "9d010c4104b7de43b94118f4bd49438b6044bbb5",
       "mode": "040000",
       "children": []
     },
@@ -594,10 +742,10 @@
       "name": "__init__.cpython-314.pyc",
       "path": "backend/__pycache__/__init__.cpython-314.pyc",
       "type": "file",
-      "sha": "d86a83c1f57a409d12b6f805366a59ac9d7c18ee",
+      "sha": "46923e10481f3749fc22541c05c142bb4d5be053",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 156,
+      "size": 151,
       "is_binary": false
     },
     {
@@ -614,7 +762,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "9f8f144c38d104ac77949e91430d4a403deaa671",
+      "sha": "c22252d9d019b990098f18aa79bf00c36d88d251",
       "mode": "040000",
       "children": []
     },
@@ -632,7 +780,7 @@
       "name": "__pycache__",
       "path": "backend/app/__pycache__",
       "type": "directory",
-      "sha": "8893b9dae6a925a13f52564865f81de828abd66f",
+      "sha": "3d90d3b9b3c9d3b10da9f9a527f15e75e6e65567",
       "mode": "040000",
       "children": []
     },
@@ -640,53 +788,73 @@
       "name": "__init__.cpython-314.pyc",
       "path": "backend/app/__pycache__/__init__.cpython-314.pyc",
       "type": "file",
-      "sha": "43f67d8d7d4477cd806fc241e9f12fb8240a7ffc",
+      "sha": "de15d9e218879139a2fee3116143dd0784c6e0d5",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 160,
+      "size": 155,
       "is_binary": false
     },
     {
       "name": "database.cpython-314.pyc",
       "path": "backend/app/__pycache__/database.cpython-314.pyc",
       "type": "file",
-      "sha": "3b750af02250c0fc217626a6c33c5b5e17631d87",
+      "sha": "09088ded7ed7b29fe350e41042e2ad4a88f4f72a",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 945,
+      "size": 1907,
       "is_binary": false
     },
     {
       "name": "models.cpython-314.pyc",
       "path": "backend/app/__pycache__/models.cpython-314.pyc",
       "type": "file",
-      "sha": "a799d3535e62e44359e7937e03f4834c0f49603b",
+      "sha": "29aa8eb02b9410c13a023d2c94f283c4525d52e8",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 2308,
+      "size": 5278,
       "is_binary": false
     },
     {
       "name": "adapters",
       "path": "backend/app/adapters",
       "type": "directory",
-      "sha": "1f35d9349a4060ceb3156bcfe59e6342e361e16d",
+      "sha": "bbea519a4a324e5096af1d1845e49c3d276bd7de",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/adapters/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
     },
     {
       "name": "__pycache__",
       "path": "backend/app/adapters/__pycache__",
       "type": "directory",
-      "sha": "c96da895767fed8563d4135bc2d3af1801921a3f",
+      "sha": "1793cd3b10f3aabd9e97cb28cbf9684a27842dac",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__init__.cpython-314.pyc",
+      "path": "backend/app/adapters/__pycache__/__init__.cpython-314.pyc",
+      "type": "file",
+      "sha": "76525c07dee7cd21b0420a34528364a67ce0261d",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 164,
+      "is_binary": false
     },
     {
       "name": "db_adapter.cpython-314.pyc",
       "path": "backend/app/adapters/__pycache__/db_adapter.cpython-314.pyc",
       "type": "file",
-      "sha": "291587aef01bc9b44603ad35e2e31f5ce61cb876",
+      "sha": "4bd0a19599ed9b597e74112bb605aa5740ccb37c",
       "mode": "100644",
       "extension": ".pyc",
       "size": 3407,
@@ -706,7 +874,7 @@
       "name": "api_adapter",
       "path": "backend/app/adapters/api_adapter",
       "type": "directory",
-      "sha": "8ac2fd7af57af5613f2df6193e30d80bb01d9deb",
+      "sha": "2f0f536fbbee5de26536896593e8903e48972858",
       "mode": "040000",
       "children": []
     },
@@ -724,7 +892,7 @@
       "name": "__pycache__",
       "path": "backend/app/adapters/api_adapter/__pycache__",
       "type": "directory",
-      "sha": "2a31f40a6e0d90d224cd0738b0e32b90caba67f4",
+      "sha": "069de113e30418bc4c4b213f9c67399b5d4543d7",
       "mode": "040000",
       "children": []
     },
@@ -732,87 +900,127 @@
       "name": "__init__.cpython-314.pyc",
       "path": "backend/app/adapters/api_adapter/__pycache__/__init__.cpython-314.pyc",
       "type": "file",
-      "sha": "ae0a4f1f11fe2018375995e73351dd971d4ac0b0",
+      "sha": "7603e30dc60ed92ed24f0fc97e265670c36bece8",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 181,
+      "size": 176,
       "is_binary": false
     },
     {
       "name": "auth_routes.cpython-314.pyc",
       "path": "backend/app/adapters/api_adapter/__pycache__/auth_routes.cpython-314.pyc",
       "type": "file",
-      "sha": "a4880b77592ceee37b6082af77fb0620df973f70",
+      "sha": "ece60f9f1989aa79f715b3e88ba5676f1441b29c",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 1918,
+      "size": 3817,
       "is_binary": false
     },
     {
-      "name": "locais_routes.cpython-314.pyc",
-      "path": "backend/app/adapters/api_adapter/__pycache__/locais_routes.cpython-314.pyc",
+      "name": "dashboard_routes.cpython-314.pyc",
+      "path": "backend/app/adapters/api_adapter/__pycache__/dashboard_routes.cpython-314.pyc",
       "type": "file",
-      "sha": "ea2edf3faf42ae83a7833269f32dd002826f4904",
+      "sha": "6f071273a6bb0c57c0cc097b743dcdb3a7860eb2",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 186,
+      "size": 9493,
+      "is_binary": false
+    },
+    {
+      "name": "mapa_routes.cpython-314.pyc",
+      "path": "backend/app/adapters/api_adapter/__pycache__/mapa_routes.cpython-314.pyc",
+      "type": "file",
+      "sha": "a83ab75b28314549fed9b026873bdd48d6371d27",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 3361,
+      "is_binary": false
+    },
+    {
+      "name": "noticias_routes.cpython-314.pyc",
+      "path": "backend/app/adapters/api_adapter/__pycache__/noticias_routes.cpython-314.pyc",
+      "type": "file",
+      "sha": "a713b76c94f6f063dbe9d1f6bcc77ea449e1f535",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 4094,
       "is_binary": false
     },
     {
       "name": "auth_routes.py",
       "path": "backend/app/adapters/api_adapter/auth_routes.py",
       "type": "file",
-      "sha": "b7536576cfb85214b7828e25de115a15d3328e08",
+      "sha": "eaff4510d3d092c56a1db8e80aa5a4ff1b519ec6",
       "mode": "100644",
       "extension": ".py",
-      "size": 1279,
+      "size": 3551,
       "is_binary": false
     },
     {
-      "name": "locais_routes.py",
-      "path": "backend/app/adapters/api_adapter/locais_routes.py",
+      "name": "dashboard_routes.py",
+      "path": "backend/app/adapters/api_adapter/dashboard_routes.py",
       "type": "file",
-      "sha": "836c3a16da22974c7b68749d6d38e0cb8b4429fa",
+      "sha": "df5d764f1a57c6eb33c43fb72ab653ca4dce220b",
       "mode": "100644",
       "extension": ".py",
-      "size": 1126,
+      "size": 7934,
+      "is_binary": false
+    },
+    {
+      "name": "mapa_routes.py",
+      "path": "backend/app/adapters/api_adapter/mapa_routes.py",
+      "type": "file",
+      "sha": "85431ba0d6d217ea5aa9edec4d2ef202279ba389",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3284,
+      "is_binary": false
+    },
+    {
+      "name": "noticias_routes.py",
+      "path": "backend/app/adapters/api_adapter/noticias_routes.py",
+      "type": "file",
+      "sha": "8e75f71e3645cc75f397fa3731998497a07fed33",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3714,
       "is_binary": false
     },
     {
       "name": "db_adapter.py",
       "path": "backend/app/adapters/db_adapter.py",
       "type": "file",
-      "sha": "1fbadef25e16945ac2a58d3aac76ec417af744fe",
+      "sha": "4792f965277bb04e6d6e61d3a6864fadb35548fe",
       "mode": "100644",
       "extension": ".py",
-      "size": 1686,
+      "size": 2593,
       "is_binary": false
     },
     {
       "name": "json_adapter.py",
       "path": "backend/app/adapters/json_adapter.py",
       "type": "file",
-      "sha": "6ac371b01db64acce684d02ea122e30cdecb79c3",
+      "sha": "a1ac420f4dd79be3a1ab6482b11ae79ce0c7fd18",
       "mode": "100644",
       "extension": ".py",
-      "size": 1692,
+      "size": 5340,
       "is_binary": false
     },
     {
       "name": "database.py",
       "path": "backend/app/database.py",
       "type": "file",
-      "sha": "b95d27018fc775a969a1804b21352086d5c01b4f",
+      "sha": "c44d653a85a006ba9de7e5d4fd38f07641584e54",
       "mode": "100644",
       "extension": ".py",
-      "size": 945,
+      "size": 2339,
       "is_binary": false
     },
     {
       "name": "domain",
       "path": "backend/app/domain",
       "type": "directory",
-      "sha": "ab228155b301de04a6bc5adbd7130c1690dc01fa",
+      "sha": "9cf3fe6b40ed5c5aee5f3584c9cf8651ccc17e56",
       "mode": "040000",
       "children": []
     },
@@ -820,7 +1028,7 @@
       "name": "__pycache__",
       "path": "backend/app/domain/__pycache__",
       "type": "directory",
-      "sha": "8ecbf3863f7d3894df157d41977e1a1d98de9ff8",
+      "sha": "bdd0fe1ebc3150e68203d3e73b9ac5bffa1a735c",
       "mode": "040000",
       "children": []
     },
@@ -828,15 +1036,43 @@
       "name": "entities.cpython-314.pyc",
       "path": "backend/app/domain/__pycache__/entities.cpython-314.pyc",
       "type": "file",
-      "sha": "fcf2d7837d963d24da9510558e084dd030222ea3",
+      "sha": "c364dda7ece0390ae22d98da894737f952993388",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 2048,
+      "size": 4363,
       "is_binary": false
     },
     {
-      "name": "entities.py",
-      "path": "backend/app/domain/entities.py",
+      "name": "main.py",
+      "path": "backend/app/main.py",
+      "type": "file",
+      "sha": "1141a883491ef480805f5e867a7109c57a049bcf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4983,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "backend/app/models.py",
+      "type": "file",
+      "sha": "4ff3c5b69c2782f8fb499c4b56a30b52f5a9a012",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5376,
+      "is_binary": false
+    },
+    {
+      "name": "schemas",
+      "path": "backend/app/schemas",
+      "type": "directory",
+      "sha": "eb3e8b58e70a6e9cc0ade7810ddc24a626c19def",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/schemas/__init__.py",
       "type": "file",
       "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
       "mode": "100644",
@@ -845,152 +1081,162 @@
       "is_binary": false
     },
     {
-      "name": "main.py",
-      "path": "backend/app/main.py",
-      "type": "file",
-      "sha": "b84c3d2ad78225551c771763a97aaa613e336618",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 778,
-      "is_binary": false
-    },
-    {
-      "name": "models.py",
-      "path": "backend/app/models.py",
-      "type": "file",
-      "sha": "fd4157827b76cfbeb7b3b00c1b07b71558b56ea8",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 1627,
-      "is_binary": false
-    },
-    {
-      "name": "ports",
-      "path": "backend/app/ports",
-      "type": "directory",
-      "sha": "c79e87268596c00713bea582f6c999f3a336617a",
-      "mode": "040000",
-      "children": []
-    },
-    {
       "name": "__pycache__",
-      "path": "backend/app/ports/__pycache__",
+      "path": "backend/app/schemas/__pycache__",
       "type": "directory",
-      "sha": "b42c1cd64c3702829035b6447aaf7ef286fa3c02",
+      "sha": "dab5d61bcd0f316f9827627cc878fd15c0a37551",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "repository_port.cpython-314.pyc",
-      "path": "backend/app/ports/__pycache__/repository_port.cpython-314.pyc",
+      "name": "__init__.cpython-314.pyc",
+      "path": "backend/app/schemas/__pycache__/__init__.cpython-314.pyc",
       "type": "file",
-      "sha": "44a6d6ef9d5555f6046e5a828be1c0fae3375f2b",
+      "sha": "e93a34d06ead8473859eae020e3e898a7135d47b",
       "mode": "100644",
       "extension": ".pyc",
-      "size": 1333,
+      "size": 163,
       "is_binary": false
     },
     {
-      "name": "repository_port.py",
-      "path": "backend/app/ports/repository_port.py",
+      "name": "noticia.cpython-314.pyc",
+      "path": "backend/app/schemas/__pycache__/noticia.cpython-314.pyc",
       "type": "file",
-      "sha": "8bdd3b697c568d34a25e5241cf6ad56047e07641",
+      "sha": "ce20987217de4f8c9d58e780962112d9477d9be4",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 1976,
+      "is_binary": false
+    },
+    {
+      "name": "noticia.py",
+      "path": "backend/app/schemas/noticia.py",
+      "type": "file",
+      "sha": "5c2deb8314d54c273a707fccab96c3d5e8c088e6",
       "mode": "100644",
       "extension": ".py",
-      "size": 312,
+      "size": 679,
       "is_binary": false
     },
     {
       "name": "llm",
       "path": "backend/llm",
       "type": "directory",
-      "sha": "8e5264017f6b8d319d6dcff270b85197bae30dbf",
+      "sha": "8af2fe17c03c3e09fc758506237baa1155c98a7a",
       "mode": "040000",
       "children": []
-    },
-    {
-      "name": "__pycache__",
-      "path": "backend/llm/__pycache__",
-      "type": "directory",
-      "sha": "ef9164371e1967b40732e5ab1e32e9be99a96743",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "langChain.cpython-311.pyc",
-      "path": "backend/llm/__pycache__/langChain.cpython-311.pyc",
-      "type": "file",
-      "sha": "9d5bafa566fc0b9c58bc69c13e98c88e77322e5f",
-      "mode": "100644",
-      "extension": ".pyc",
-      "size": 2152,
-      "is_binary": false
-    },
-    {
-      "name": "news_Classification.cpython-311.pyc",
-      "path": "backend/llm/__pycache__/news_Classification.cpython-311.pyc",
-      "type": "file",
-      "sha": "fec8443ca6a514ef32194f4e673ad1cb7fdbc4fc",
-      "mode": "100644",
-      "extension": ".pyc",
-      "size": 629,
-      "is_binary": false
     },
     {
       "name": "langChain.py",
       "path": "backend/llm/langChain.py",
       "type": "file",
-      "sha": "02b9f28885eca705ebca0269df9e4fc1c60a9046",
+      "sha": "b99523d997ec3e979ed3617ac91647d6c834415e",
       "mode": "100644",
       "extension": ".py",
-      "size": 1621,
+      "size": 3776,
       "is_binary": false
     },
     {
       "name": "langChain_Controller.py",
       "path": "backend/llm/langChain_Controller.py",
       "type": "file",
-      "sha": "af189579bf02ad153399f84ea1940c31a03a5dcd",
+      "sha": "ce88338922b185a185ca3208fa177449a532e7c6",
       "mode": "100644",
       "extension": ".py",
-      "size": 1670,
+      "size": 2067,
       "is_binary": false
     },
     {
       "name": "news-llm.json",
       "path": "backend/llm/news-llm.json",
       "type": "file",
-      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "sha": "4b6385faa1443a8a185986eefec67b57d4d92e36",
       "mode": "100644",
       "extension": ".json",
-      "size": 1,
+      "size": 23995,
       "is_binary": false
     },
     {
       "name": "news_Classification.py",
       "path": "backend/llm/news_Classification.py",
       "type": "file",
-      "sha": "158d448f43b7e2528bb4655c48b37cee39079f08",
+      "sha": "bb046aab67f5387127738b226b3164452814a330",
       "mode": "100644",
       "extension": ".py",
-      "size": 135,
+      "size": 477,
       "is_binary": false
     },
     {
-      "name": "teste_conexao.py",
-      "path": "backend/teste_conexao.py",
+      "name": "requirements.txt",
+      "path": "backend/llm/requirements.txt",
       "type": "file",
-      "sha": "474e536c0138eafffcfd8614c4744cc30868c5dd",
+      "sha": "b69d43b73d635b5ce7fbfe0472a74c72bd80ed5d",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 86,
+      "is_binary": false
+    },
+    {
+      "name": "tratamentoDeDados",
+      "path": "backend/tratamentoDeDados",
+      "type": "directory",
+      "sha": "84b64fb73f410b04aaf45e29f6b2c4cd60a31a6e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "backend/tratamentoDeDados/__pycache__",
+      "type": "directory",
+      "sha": "7c882c12547069b219d4bf050d93f1f2800aaf5d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "juntar_dados.cpython-314.pyc",
+      "path": "backend/tratamentoDeDados/__pycache__/juntar_dados.cpython-314.pyc",
+      "type": "file",
+      "sha": "f4cb653191438e9f8bb999783f6ba092ef56f486",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 4540,
+      "is_binary": false
+    },
+    {
+      "name": "tratamentoDeTexto.cpython-314.pyc",
+      "path": "backend/tratamentoDeDados/__pycache__/tratamentoDeTexto.cpython-314.pyc",
+      "type": "file",
+      "sha": "5a7d805276a28885b0d7efe6685b219a7348989b",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 1659,
+      "is_binary": false
+    },
+    {
+      "name": "juntar_dados.py",
+      "path": "backend/tratamentoDeDados/juntar_dados.py",
+      "type": "file",
+      "sha": "2ef1c12c5e4c0fa1c69c517693edb3f744b39458",
       "mode": "100644",
       "extension": ".py",
-      "size": 2099,
+      "size": 4365,
+      "is_binary": false
+    },
+    {
+      "name": "tratamentoDeTexto.py",
+      "path": "backend/tratamentoDeDados/tratamentoDeTexto.py",
+      "type": "file",
+      "sha": "77312e4ce0e21d3ce090720a2923b2019df26665",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1447,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "cae901d953c15e4e0059abc5dd214cd1d0c00f67",
+      "sha": "b6ed1bb47a5f29404425724254f7649d28b88b08",
       "mode": "040000",
       "children": []
     },
@@ -1036,18 +1282,126 @@
       "name": "backend",
       "path": "docs/backend",
       "type": "directory",
-      "sha": "3bf8fb2cafc972600722c9b85d4a2d9c59a4837e",
+      "sha": "9954831536f96fe86ac5eaa189e3c03869c4d862",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "FastAPI",
+      "path": "docs/backend/FastAPI",
+      "type": "directory",
+      "sha": "11e9240fef0a98119f53493b46936bc5f769a701",
       "mode": "040000",
       "children": []
     },
     {
       "name": "FastAPI.md",
-      "path": "docs/backend/FastAPI.md",
+      "path": "docs/backend/FastAPI/FastAPI.md",
       "type": "file",
-      "sha": "55d949f49b90080bed20cba8823a1b438fd9cea9",
+      "sha": "6ba129776ce88ce7aa03aad77dc07388ca398906",
       "mode": "100644",
       "extension": ".md",
-      "size": 8402,
+      "size": 2439,
+      "is_binary": false
+    },
+    {
+      "name": "adapters",
+      "path": "docs/backend/FastAPI/adapters",
+      "type": "directory",
+      "sha": "04851aad5fbfb5e84e9a2df5397efc0cffc84324",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "adapter.md",
+      "path": "docs/backend/FastAPI/adapters/adapter.md",
+      "type": "file",
+      "sha": "c9c856f67e5a5617bbb80263c214b8f3e26d3f0f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1277,
+      "is_binary": false
+    },
+    {
+      "name": "banco de dados",
+      "path": "docs/backend/FastAPI/banco de dados",
+      "type": "directory",
+      "sha": "49b3e451c45682b09fbbc3afc8455bd5e23a20b0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "database.md",
+      "path": "docs/backend/FastAPI/banco de dados/database.md",
+      "type": "file",
+      "sha": "f7aac3c358f973d1b9945d6c063db4148db081b4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 366,
+      "is_binary": false
+    },
+    {
+      "name": "models.md",
+      "path": "docs/backend/FastAPI/banco de dados/models.md",
+      "type": "file",
+      "sha": "23094948c4a41e4475e759f23eaa157f79d2568a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 440,
+      "is_binary": false
+    },
+    {
+      "name": "base",
+      "path": "docs/backend/FastAPI/base",
+      "type": "directory",
+      "sha": "f0846c6f60596bc9d4b29a3c0861f2ac6b8a26fe",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "main.md",
+      "path": "docs/backend/FastAPI/base/main.md",
+      "type": "file",
+      "sha": "dbfa3b22d46b6c8dd562bfd6719cda433838f208",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 385,
+      "is_binary": false
+    },
+    {
+      "name": "rotas",
+      "path": "docs/backend/FastAPI/rotas",
+      "type": "directory",
+      "sha": "e0dba0e028ae230cde168f8f70c626d1b11f3d3d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "rotas.md",
+      "path": "docs/backend/FastAPI/rotas/rotas.md",
+      "type": "file",
+      "sha": "2dec7dd4586312cf3758b41fa765abfe5273890e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1644,
+      "is_binary": false
+    },
+    {
+      "name": "schemas",
+      "path": "docs/backend/FastAPI/schemas",
+      "type": "directory",
+      "sha": "667aa97c5050fe7c87fa09a6bcc85b0cb5722e99",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "schemas.md",
+      "path": "docs/backend/FastAPI/schemas/schemas.md",
+      "type": "file",
+      "sha": "d5c0c928eeb0b30cc03b9579ba842192d5267c13",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 471,
       "is_binary": false
     },
     {
@@ -1068,6 +1422,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 4137,
+      "is_binary": false
+    },
+    {
+      "name": "como-rodar-backend.md",
+      "path": "docs/backend/como-rodar-backend.md",
+      "type": "file",
+      "sha": "912994033002636d9167443d9d406dcc87a436f5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2979,
       "is_binary": false
     },
     {
@@ -1223,368 +1587,10 @@
       "is_binary": false
     },
     {
-      "name": "mkdocs",
-      "path": "docs/mkdocs",
-      "type": "directory",
-      "sha": "98da8d47239b5cdd45dbb42dc48042412bf32ec0",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "docs",
-      "path": "docs/mkdocs/docs",
-      "type": "directory",
-      "sha": "d8039d3cee2e4cc68b87be562539367fab290790",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "api.md",
-      "path": "docs/mkdocs/docs/api.md",
-      "type": "file",
-      "sha": "01697e6632ca65636f0ab51478bf7b9214429949",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 210,
-      "is_binary": false
-    },
-    {
-      "name": "assets",
-      "path": "docs/mkdocs/docs/assets",
-      "type": "directory",
-      "sha": "e7263f1f6991e49ecc7db9394effb3517944d693",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "Logo.png",
-      "path": "docs/mkdocs/docs/assets/Logo.png",
-      "type": "file",
-      "sha": "cbaa5cdf7734477ed0859a9e6b4600c71fdc58ed",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 17490,
-      "is_binary": false
-    },
-    {
-      "name": "LogoBlack.png",
-      "path": "docs/mkdocs/docs/assets/LogoBlack.png",
-      "type": "file",
-      "sha": "35bdce93bf6d89643ba174ad5155ba39764fb0bb",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 65544,
-      "is_binary": false
-    },
-    {
-      "name": "texto.png",
-      "path": "docs/mkdocs/docs/assets/texto.png",
-      "type": "file",
-      "sha": "c4f560c422c70aad424a73f00c7642bbf923593b",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 21479,
-      "is_binary": false
-    },
-    {
-      "name": "backend",
-      "path": "docs/mkdocs/docs/backend",
-      "type": "directory",
-      "sha": "854f8836f48e1cdcaf5b708b9d9131ab1aa13854",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "FastAPI.md",
-      "path": "docs/mkdocs/docs/backend/FastAPI.md",
-      "type": "file",
-      "sha": "55d949f49b90080bed20cba8823a1b438fd9cea9",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 8402,
-      "is_binary": false
-    },
-    {
-      "name": "LangChain.md",
-      "path": "docs/mkdocs/docs/backend/LangChain.md",
-      "type": "file",
-      "sha": "e1e62498cfd006eb1e563b44dbdc65fad4704d1a",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 7867,
-      "is_binary": false
-    },
-    {
-      "name": "Scrapy.md",
-      "path": "docs/mkdocs/docs/backend/Scrapy.md",
-      "type": "file",
-      "sha": "d464f9ccffaca01915d8838ba3af6b02b80fa826",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 4137,
-      "is_binary": false
-    },
-    {
-      "name": "dashboard",
-      "path": "docs/mkdocs/docs/dashboard",
-      "type": "directory",
-      "sha": "7af4a12dddaab829861fb13c47ff6d0bbb658feb",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "docs/mkdocs/docs/dashboard/index.html",
-      "type": "file",
-      "sha": "4ce638ea3184bc42c15c5188685fc31ddf5ffccc",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 25017,
-      "is_binary": false
-    },
-    {
-      "name": "frontend",
-      "path": "docs/mkdocs/docs/frontend",
-      "type": "directory",
-      "sha": "4e577df63ba0294247a4298166c0c1fb6624c953",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "Prototipagem.md",
-      "path": "docs/mkdocs/docs/frontend/Prototipagem.md",
-      "type": "file",
-      "sha": "e8b00ffce1a460679f6e474bf1350890a76f2316",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 231,
-      "is_binary": false
-    },
-    {
-      "name": "React.md",
-      "path": "docs/mkdocs/docs/frontend/React.md",
-      "type": "file",
-      "sha": "08efd39bedec1d297c001e1f081c7c365a597a92",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 4074,
-      "is_binary": false
-    },
-    {
-      "name": "index.md",
-      "path": "docs/mkdocs/docs/index.md",
-      "type": "file",
-      "sha": "565b32afc97fc48e3a8292b55b9526e270b50873",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1327,
-      "is_binary": false
-    },
-    {
-      "name": "openapi.json",
-      "path": "docs/mkdocs/docs/openapi.json",
-      "type": "file",
-      "sha": "d7e98f4ad8b6ed65f48dcc96eb8b140ba006fb5c",
-      "mode": "100644",
-      "extension": ".json",
-      "size": 974,
-      "is_binary": false
-    },
-    {
-      "name": "productivity",
-      "path": "docs/mkdocs/docs/productivity",
-      "type": "directory",
-      "sha": "a4e960a8b2a28c35f896a95b1198c2699d7a1528",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "__pycache__",
-      "path": "docs/mkdocs/docs/productivity/__pycache__",
-      "type": "directory",
-      "sha": "4484215af0b132353e2b301df70d654c13c0b34c",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "collect_metrics.cpython-314.pyc",
-      "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
-      "type": "file",
-      "sha": "bdd3c3e6eabed359b0dee6d87fcea95a526b5b8f",
-      "mode": "100644",
-      "extension": ".pyc",
-      "size": 17416,
-      "is_binary": false
-    },
-    {
-      "name": "collect_metrics.py",
-      "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
-      "type": "file",
-      "sha": "5ee15b3964bba387c896fc8d699d217ad91b61ff",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 11773,
-      "is_binary": false
-    },
-    {
-      "name": "metrics.json",
-      "path": "docs/mkdocs/docs/productivity/metrics.json",
-      "type": "file",
-      "sha": "fa3631f93e93329fcfa43c70bae49a10ae1ba478",
-      "mode": "100644",
-      "extension": ".json",
-      "size": 7519,
-      "is_binary": false
-    },
-    {
-      "name": "requirements.txt",
-      "path": "docs/mkdocs/docs/productivity/requirements.txt",
-      "type": "file",
-      "sha": "f5df19e8110b887ba454830dc7cc6c46957f2b28",
-      "mode": "100644",
-      "extension": ".txt",
-      "size": 17,
-      "is_binary": false
-    },
-    {
-      "name": "style.css",
-      "path": "docs/mkdocs/docs/productivity/style.css",
-      "type": "file",
-      "sha": "e3b2ec5895b886a3105d2dfe62381e9c8a97f947",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 4205,
-      "is_binary": false
-    },
-    {
-      "name": "projeto",
-      "path": "docs/mkdocs/docs/projeto",
-      "type": "directory",
-      "sha": "714bbbec90a774177350a67afa0a8e9e60a31514",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "Requisitos.md",
-      "path": "docs/mkdocs/docs/projeto/Requisitos.md",
-      "type": "file",
-      "sha": "20ee4a0ca1fcf915f6bca54f282d6c748115eb70",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 3488,
-      "is_binary": false
-    },
-    {
-      "name": "product-backlog.md",
-      "path": "docs/mkdocs/docs/projeto/product-backlog.md",
-      "type": "file",
-      "sha": "7c85b05073f74cf50f42d4a54e169a33459e3b58",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1123,
-      "is_binary": false
-    },
-    {
-      "name": "sprint0.md",
-      "path": "docs/mkdocs/docs/projeto/sprint0.md",
-      "type": "file",
-      "sha": "41ea17d136a93d91d71c5795dd81622c063a712f",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 911,
-      "is_binary": false
-    },
-    {
-      "name": "sprint1.md",
-      "path": "docs/mkdocs/docs/projeto/sprint1.md",
-      "type": "file",
-      "sha": "369f52b73e1423675f6e47ad819d6a880b8c6006",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1372,
-      "is_binary": false
-    },
-    {
-      "name": "sprint2.md",
-      "path": "docs/mkdocs/docs/projeto/sprint2.md",
-      "type": "file",
-      "sha": "99cf6389506d6c0a495b6019ae2267c2db73ac51",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 757,
-      "is_binary": false
-    },
-    {
-      "name": "sprint3.md",
-      "path": "docs/mkdocs/docs/projeto/sprint3.md",
-      "type": "file",
-      "sha": "1cc1ea599e1711735c9c7b12ddeea9c65bcf7ac5",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1746,
-      "is_binary": false
-    },
-    {
-      "name": "sobrenos.md",
-      "path": "docs/mkdocs/docs/sobrenos.md",
-      "type": "file",
-      "sha": "ba23f1c3699e80a142de127119262c0ceed64af4",
-      "mode": "100644",
-      "extension": ".md",
-      "size": 1620,
-      "is_binary": false
-    },
-    {
-      "name": "stylesheets",
-      "path": "docs/mkdocs/docs/stylesheets",
-      "type": "directory",
-      "sha": "a854a457bce30340520c3ffcade3ed81fbebd926",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "extra.css",
-      "path": "docs/mkdocs/docs/stylesheets/extra.css",
-      "type": "file",
-      "sha": "7a73ac157d07e06b98c79a6a5d276b967f276e77",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 2171,
-      "is_binary": false
-    },
-    {
-      "name": "mkdocs.yml",
-      "path": "docs/mkdocs/mkdocs.yml",
-      "type": "file",
-      "sha": "aadec9ac594dab6c94cc208425dc3643d08a907b",
-      "mode": "100644",
-      "extension": ".yml",
-      "size": 880,
-      "is_binary": false
-    },
-    {
-      "name": "overrides",
-      "path": "docs/mkdocs/overrides",
-      "type": "directory",
-      "sha": "1dc9b17f1f6ffa6bbf5b2b66eac5a1f0e549aced",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "main.html",
-      "path": "docs/mkdocs/overrides/main.html",
-      "type": "file",
-      "sha": "e319aff7c1382ea2b113464182cfc586475ff9bd",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 468,
-      "is_binary": false
-    },
-    {
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "8b603f963a64ecc6392e660a67ef3f44c8c9061d",
+      "sha": "2ef23245928f13440dcc63ac03a87afc931a76e1",
       "mode": "040000",
       "children": []
     },
@@ -1602,10 +1608,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "4278949fe832e1706f4d751b57181545959e403c",
+      "sha": "53fc550d824be09996d997a31dc41912c760b88a",
       "mode": "100644",
       "extension": ".json",
-      "size": 7765,
+      "size": 8958,
       "is_binary": false
     },
     {
@@ -1632,7 +1638,7 @@
       "name": "projeto",
       "path": "docs/projeto",
       "type": "directory",
-      "sha": "7dc6f88989f45f875b79a64bd694c7144edbf051",
+      "sha": "354b4feec913a10967f2dc55bf4355304895db79",
       "mode": "040000",
       "children": []
     },
@@ -1707,6 +1713,16 @@
       "is_binary": false
     },
     {
+      "name": "sprint10.md",
+      "path": "docs/projeto/sprint10.md",
+      "type": "file",
+      "sha": "3e362210168eda5b70ca7e10cc07b7041728e856",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2320,
+      "is_binary": false
+    },
+    {
       "name": "sprint2.md",
       "path": "docs/projeto/sprint2.md",
       "type": "file",
@@ -1767,6 +1783,16 @@
       "is_binary": false
     },
     {
+      "name": "sprint8.md",
+      "path": "docs/projeto/sprint8.md",
+      "type": "file",
+      "sha": "38386e2b8bf43f8f47017ebcc0c1118ebece7eb3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1739,
+      "is_binary": false
+    },
+    {
       "name": "team.md",
       "path": "docs/projeto/team.md",
       "type": "file",
@@ -1805,23 +1831,23 @@
       "is_binary": false
     },
     {
-      "name": "gerar_arvore.py",
-      "path": "gerar_arvore.py",
+      "name": "index.html",
+      "path": "index.html",
       "type": "file",
-      "sha": "0da6f540f982f889beff53a4b9573424776845cb",
+      "sha": "6781e91ce035abc532490f4e3591b8c41adc6999",
       "mode": "100644",
-      "extension": ".py",
-      "size": 1056,
+      "extension": ".html",
+      "size": 370,
       "is_binary": false
     },
     {
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "1a27624d4f1c37c642faea3eaf4f226e3a516c31",
+      "sha": "0a59ef3f182b0a05d42bdaac70468475dcb74969",
       "mode": "100644",
       "extension": ".yml",
-      "size": 1395,
+      "size": 1831,
       "is_binary": false
     },
     {
@@ -1856,45 +1882,73 @@
       "name": "package.json",
       "path": "package.json",
       "type": "file",
-      "sha": "de384fd5ca8402822d24642226b66efa3efe5ca9",
+      "sha": "2d3645083798c78997362aaa9bb8b3ab892b2de1",
       "mode": "100644",
       "extension": ".json",
-      "size": 106,
+      "size": 714,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "requirements.txt",
       "type": "file",
-      "sha": "06dd1a05ffbd150fef888b947657c0e275e13cb3",
+      "sha": "46a3999b9e67d408b8082f22cfbdc82f1f902147",
       "mode": "100644",
       "extension": ".txt",
-      "size": 123,
+      "size": 273,
       "is_binary": false
     },
     {
       "name": "scrapers",
       "path": "scrapers",
       "type": "directory",
-      "sha": "b699768784ec8446ff2a99cceccb5c66a66b7cf0",
+      "sha": "e5481be53bc387b40ea2fb83ef9a6f849cab4010",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "scrapers/__pycache__",
+      "type": "directory",
+      "sha": "288b1dabfbc4618e99814f5cd4910f33a00280f7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "salvarscrapys.cpython-314.pyc",
+      "path": "scrapers/__pycache__/salvarscrapys.cpython-314.pyc",
+      "type": "file",
+      "sha": "a0df608c4f3a379f58a09e598341dc7175e53b33",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 2458,
+      "is_binary": false
     },
     {
       "name": "executarSpiders.py",
       "path": "scrapers/executarSpiders.py",
       "type": "file",
-      "sha": "d421fb303c6a488fbe56afcaeafe6cae4dc78052",
+      "sha": "aee81ab7c570cf879127f2097612dc8ca9835895",
       "mode": "100644",
       "extension": ".py",
-      "size": 752,
+      "size": 1169,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "scrapers/requirements.txt",
+      "type": "file",
+      "sha": "987f03f735be387ad2fe703b65e2acba1eebcd94",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 30,
       "is_binary": false
     },
     {
       "name": "resultados",
       "path": "scrapers/resultados",
       "type": "directory",
-      "sha": "1825ef4119bd931ff42ccd86b7173fb9864065ca",
+      "sha": "1b27c0ed45209b838ddb54c2c9a85ecb33168c5c",
       "mode": "040000",
       "children": []
     },
@@ -1912,115 +1966,211 @@
       "name": "g1.json",
       "path": "scrapers/resultados/g1.json",
       "type": "file",
-      "sha": "7594c0afe7f0e3957d486afff6125b6cedc603f3",
+      "sha": "12aba902a1f20b7078e77c3ed97c96977daf0680",
       "mode": "100644",
       "extension": ".json",
-      "size": 51687,
+      "size": 88751,
       "is_binary": false
     },
     {
       "name": "metropoles.json",
       "path": "scrapers/resultados/metropoles.json",
       "type": "file",
-      "sha": "c44dc44f37c7b9b807ef282b291b36cda0f0bbeb",
+      "sha": "525fe87932c0478bdbfc4fcc2baab5fa816c1e0a",
       "mode": "100644",
       "extension": ".json",
-      "size": 4,
+      "size": 5177,
       "is_binary": false
     },
     {
       "name": "r7.json",
       "path": "scrapers/resultados/r7.json",
       "type": "file",
-      "sha": "374cd87f71cd35c34de69006896f076f75b62101",
+      "sha": "b93af47d4673f15a514d20d1df5f5a54eb8d8051",
       "mode": "100644",
       "extension": ".json",
-      "size": 8211,
+      "size": 5642,
       "is_binary": false
     },
     {
       "name": "resultados.json",
       "path": "scrapers/resultados/resultados.json",
       "type": "file",
-      "sha": "fe89108c69cc368a6b27cf2c0cecb942b4cc38db",
+      "sha": "0a957aee965294d9b12894d5b92f0baafb9a53eb",
       "mode": "100644",
       "extension": ".json",
-      "size": 632009,
+      "size": 640366,
       "is_binary": false
     },
     {
       "name": "salvarscrapys.py",
       "path": "scrapers/salvarscrapys.py",
       "type": "file",
-      "sha": "c4ee6a8e147aeb638ae2aa7d46a454e029bf6932",
+      "sha": "d33fa988038566916d4959a6c6cb6f9d72e6ca5b",
       "mode": "100644",
       "extension": ".py",
-      "size": 1514,
+      "size": 1779,
       "is_binary": false
     },
     {
       "name": "spiders",
       "path": "scrapers/spiders",
       "type": "directory",
-      "sha": "e4f0ba8ba878456b2c9d970cb2c0c78e8e970578",
+      "sha": "4246fac395d8804a12b63b59de56fe2fe50bddcf",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "scrapers/spiders/__pycache__",
+      "type": "directory",
+      "sha": "a860081d8299c9b3ad41774fabb8b075122a5795",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "cnnspider.cpython-314.pyc",
+      "path": "scrapers/spiders/__pycache__/cnnspider.cpython-314.pyc",
+      "type": "file",
+      "sha": "2624e6abed35788ff75cbdb676a079d88ccbb6ef",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 4231,
+      "is_binary": false
+    },
+    {
+      "name": "g1Spider.cpython-314.pyc",
+      "path": "scrapers/spiders/__pycache__/g1Spider.cpython-314.pyc",
+      "type": "file",
+      "sha": "e8129a77f9512b282a01553e881613bf102991aa",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 5491,
+      "is_binary": false
+    },
+    {
+      "name": "metropoles.cpython-314.pyc",
+      "path": "scrapers/spiders/__pycache__/metropoles.cpython-314.pyc",
+      "type": "file",
+      "sha": "db6d91cec480fbb33893882fece1eab700a5050d",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 5758,
+      "is_binary": false
+    },
+    {
+      "name": "r7spider.cpython-314.pyc",
+      "path": "scrapers/spiders/__pycache__/r7spider.cpython-314.pyc",
+      "type": "file",
+      "sha": "8bef2b1205970dd45870d4ce548c2ba1509bbddb",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 5567,
+      "is_binary": false
     },
     {
       "name": "cnnspider.py",
       "path": "scrapers/spiders/cnnspider.py",
       "type": "file",
-      "sha": "7acd939d0b289de18da2f378ccacccbe4062ca61",
+      "sha": "78d96df886f8a255090a1cb7cb500fe1ecc1e8f4",
       "mode": "100644",
       "extension": ".py",
-      "size": 1784,
+      "size": 3329,
       "is_binary": false
     },
     {
       "name": "g1Spider.py",
       "path": "scrapers/spiders/g1Spider.py",
       "type": "file",
-      "sha": "ce9f707498d7ce38094dfc116de347379a58ef2e",
+      "sha": "9f6c85080ff3ee81ef4a9c322a5231fa211eb924",
       "mode": "100644",
       "extension": ".py",
-      "size": 3618,
+      "size": 4089,
       "is_binary": false
     },
     {
       "name": "metropoles.py",
       "path": "scrapers/spiders/metropoles.py",
       "type": "file",
-      "sha": "b3d99478abea4cc891e9a5a5b318252e5d07217a",
+      "sha": "7a884891e060dfc92e020c6e8c0045aba82213f1",
       "mode": "100644",
       "extension": ".py",
-      "size": 3666,
+      "size": 4538,
       "is_binary": false
     },
     {
       "name": "r7spider.py",
       "path": "scrapers/spiders/r7spider.py",
       "type": "file",
-      "sha": "528a8c678d97a26f2454e135c5f3afe1e588c875",
+      "sha": "258c2ae6eb445a541065bda5b602fae90223cac3",
       "mode": "100644",
       "extension": ".py",
-      "size": 2860,
+      "size": 4240,
+      "is_binary": false
+    },
+    {
+      "name": "testes",
+      "path": "testes",
+      "type": "directory",
+      "sha": "210ec63ac2c3963d7ff50ab6cf57a4bb8035b70c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "arquivos para testes.txt",
+      "path": "testes/arquivos para testes.txt",
+      "type": "file",
+      "sha": "58ba6e49902cca79d276b88ca2790deac23d0ce9",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 12723,
+      "is_binary": false
+    },
+    {
+      "name": "conftest.py",
+      "path": "testes/conftest.py",
+      "type": "file",
+      "sha": "2f4710a0c1efe86e6340c95eb24691371daee39e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3636,
+      "is_binary": false
+    },
+    {
+      "name": "duplicata_scraper.py",
+      "path": "testes/duplicata_scraper.py",
+      "type": "file",
+      "sha": "2af320c611e47499bb08ee3485bcdcaedbeb54b4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2543,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.js",
+      "path": "vite.config.js",
+      "type": "file",
+      "sha": "5c96b26012e66ade568140d979045bf301823a18",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 310,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-26T09:19:44.835864",
+  "extracted_at": "2026-06-27T08:32:59.520540",
   "method": "rest",
-  "total_items": 210,
+  "total_items": 226,
   "repository_metadata": {
     "id": 1185581019,
     "full_name": "unb-mds/2026-2-VeritasIA",
     "description": "Monitoramento de noticias sobre feminicídio utilizando IA",
     "created_at": "2026-03-18T18:25:01Z",
-    "updated_at": "2026-06-26T01:57:13Z",
+    "updated_at": "2026-06-27T06:05:20Z",
     "language": "Python",
-    "size": 3455,
+    "size": 3816,
     "stars": 4,
     "forks": 0,
-    "open_issues": 5
+    "open_issues": 4
   }
 }

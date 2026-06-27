@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-26T08:26:24.611250",
+      "extracted_at": "2026-06-27T07:43:24.077621",
       "file_path": "data/bronze/prs_2026-1-Squad07.json",
       "record_count": 41
     }
@@ -324,17 +324,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 4,
-      "closed_issues": 3,
+      "open_issues": 2,
+      "closed_issues": 5,
       "state": "open",
       "created_at": "2026-06-09T22:23:08Z",
-      "updated_at": "2026-06-26T03:58:12Z",
+      "updated_at": "2026-06-26T16:18:40Z",
       "due_on": "2026-06-22T00:00:00Z",
       "closed_at": null
     },
     "comments": 1,
     "created_at": "2026-06-21T17:56:05Z",
-    "updated_at": "2026-06-22T15:17:03Z",
+    "updated_at": "2026-06-26T16:19:28Z",
     "closed_at": "2026-06-22T15:17:03Z",
     "assignee": {
       "login": "Jonathan-Carpaneda",
@@ -586,7 +586,7 @@
         "description": "ICriação ou melhoria na documentação"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -614,8 +614,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-19T01:13:20Z",
-    "updated_at": "2026-06-22T14:00:53Z",
-    "closed_at": null,
+    "updated_at": "2026-06-26T16:19:26Z",
+    "closed_at": "2026-06-26T16:17:48Z",
     "assignee": {
       "login": "Paulodemczuk",
       "id": 226184285,
@@ -647,10 +647,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-Squad07/pull/141",
       "diff_url": "https://github.com/unb-mds/2026-1-Squad07/pull/141.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-Squad07/pull/141.patch",
-      "merged_at": null
+      "merged_at": "2026-06-26T16:17:48Z"
     },
     "body": "## 📝 Descrição\r\n\r\nEste Pull Request resolve a issue de definição dos **Critérios de Aceite (AC) para a Release 2**. Foi criado o arquivo estruturado em `specs/002-requirements-r2/acceptance-criteria.md`, utilizando a sintaxe comportamental BDD (**GIVEN/WHEN/THEN**) para guiar o desenvolvimento do time e a futura escrita dos *test plans* em TDD.\r\n\r\nO documento cobre os quatro eixos obrigatórios exigidos:\r\n\r\n* **Módulo 1 (Análise de IA):** Formato estrito de payload JSON, tempos lógicos de latência/inferência (2s a 5s) e trava de input mínimo (HTTP 400 abaixo de 100 caracteres).\r\n\r\n\r\n* **Módulo 2 (Autenticação e Perfil):** CRUD de perfil no Front-end mapeado para a R2 e especificações de segurança de recuperação de senha e 2FA documentadas como Roadmap.\r\n\r\n\r\n* **Módulo 3 (UI/UX):** Responsividade mobile (Tailwind), acessibilidade a leitores de tela/teclado (WCAG) e a vinculação interativa entre cliques nos *highlights* e os cards de ambiguidade.\r\n\r\n\r\n* **Módulo 4 (Integração e Infra):** Isolamento de transações no Prisma ORM, reprodutibilidade em containers Docker limpos e regras de quebra automática do build no pipeline de CI/CD.\r\n\r\n\r\n\r\n## 🏷️ Tipo de alteração\r\n\r\n* [ ] ✨ `feat:` Nova funcionalidade\r\n* [ ] 🐛 `bugfix:` Correção de um erro\r\n* [ ] ♻️ `refactor:` Refatoração de código (não altera as funcionalidades)\r\n* [x] 📚 `docs:` Atualização na documentação\r\n* [ ] 🔧 `chore:` Tarefas de manutenção (dependências, configurações, etc.)\r\n\r\n## ✅ Checklist de Revisão\r\n\r\n* [x] O meu código segue os padrões do nosso Guia Definitivo.\r\n* [x] Realizei uma auto-revisão detalhada do meu próprio código.\r\n* [x] Os meus commits são atômicos e as mensagens seguem o padrão *Conventional Commits*.\r\n* [x] O código não gera novos conflitos de merge (verifiquei a branch base).\r\n* [x] A alteração não introduz novos avisos (warnings) ou erros no terminal.\r\n\r\n## 🧪 Testes\r\n\r\n* [x] Criei/atualizei testes para esta funcionalidade (se aplicável).\r\n* [x] Testei a funcionalidade localmente e tudo está funcionando perfeitamente.\r\n\r\n*Nota de Teste:* Foi aplicada a validação lógica de TDD Documental no fim do arquivo, garantindo paridade entre todos os critérios gerados e as regras de negócio de métricas da IA do projeto.\r\n\r\n## 🖼️ Capturas de tela ou Vídeos (Se aplicável)\r\n\r\n*(Não aplicável para este PR de documentação estrita de requisitos).*",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/141/reactions",
       "total_count": 0,
@@ -729,7 +749,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-06-17T02:58:30Z",
-    "updated_at": "2026-06-25T15:31:31Z",
+    "updated_at": "2026-06-26T16:15:40Z",
     "closed_at": null,
     "assignee": {
       "login": "valexim",
@@ -816,7 +836,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -844,8 +864,8 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2026-06-17T01:58:58Z",
-    "updated_at": "2026-06-25T15:31:45Z",
-    "closed_at": null,
+    "updated_at": "2026-06-26T16:19:31Z",
+    "closed_at": "2026-06-26T16:18:18Z",
     "assignee": {
       "login": "valexim",
       "id": 138086433,
@@ -877,10 +897,30 @@
       "html_url": "https://github.com/unb-mds/2026-1-Squad07/pull/139",
       "diff_url": "https://github.com/unb-mds/2026-1-Squad07/pull/139.diff",
       "patch_url": "https://github.com/unb-mds/2026-1-Squad07/pull/139.patch",
-      "merged_at": null
+      "merged_at": "2026-06-26T16:18:18Z"
     },
     "body": "## 📝 Descrição\r\n\r\nCriação do documento `specs/002-requirements-r2/business-rules.md` para estruturar as regras de negócio da Release 2. Este documento é fundamental para guiar o desenvolvimento orientado a testes (TDD) e a implementação do Agente de IA.\r\n\r\nA documentação inclui:\r\n\r\n* **Autoria e propriedade:** Regras de isolamento de dados (tenant-level) e restrições para usuários não logados.\r\n* **Validação de entrada:** Limites de caracteres (300 a 50.000) e aceitação exclusiva de texto plano.\r\n* **Scoring e Avaliação:** Pesos do algoritmo de inteligência artificial (Clareza, Ambiguidade, Tamanho, Referências) e formato de saída estruturado em JSON para os *highlights*.\r\n* **Retenção de Dados:** Política de hard delete e direito ao esquecimento atrelados ao CRUD de perfil.\r\n* **Segurança:** Diretrizes de anonimização no processamento de NLP, proteção de rotas via JWT e criptografia de senhas.\r\n\r\n## 🏷️ Tipo de alteração\r\n\r\n* [ ] ✨ `feat:` Nova funcionalidade\r\n* [ ] 🐛 `bugfix:` Correção de um erro\r\n* [ ] ♻️ `refactor:` Refatoração de código (não altera as funcionalidades)\r\n* [x] 📚 `docs:` Atualização na documentação\r\n* [ ] 🔧 `chore:` Tarefas de manutenção (dependências, configurações, etc.)\r\n\r\n## ✅ Checklist de Revisão\r\n\r\n* [x] O meu código segue os padrões do nosso Guia Definitivo.\r\n* [x] Realizei uma auto-revisão detalhada do meu próprio código.\r\n* [x] Os meus commits são atômicos e as mensagens seguem o padrão *Conventional Commits* (ex: `docs: adiciona business-rules.md para a release 2`).\r\n* [x] O código não gera novos conflitos de merge (verifiquei a branch base).\r\n* [x] A alteração não introduz novos avisos (warnings) ou erros no terminal.\r\n\r\n## 🧪 Testes\r\n\r\n* [ ] Criei/atualizei testes para esta funcionalidade (se aplicável). - *N/A*\r\n* [x] Testei a funcionalidade localmente e tudo está funcionando perfeitamente. *(Revisão da formatação e links internos do Markdown validada)*\r\n\r\n## 🖼️ Capturas de tela ou Vídeos (Se aplicável)\r\n\r\n*N/A*",
-    "closed_by": null,
+    "closed_by": {
+      "login": "ViniciusA05",
+      "id": 227692461,
+      "node_id": "U_kgDODZJPrQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227692461?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ViniciusA05",
+      "html_url": "https://github.com/ViniciusA05",
+      "followers_url": "https://api.github.com/users/ViniciusA05/followers",
+      "following_url": "https://api.github.com/users/ViniciusA05/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ViniciusA05/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ViniciusA05/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ViniciusA05/subscriptions",
+      "organizations_url": "https://api.github.com/users/ViniciusA05/orgs",
+      "repos_url": "https://api.github.com/users/ViniciusA05/repos",
+      "events_url": "https://api.github.com/users/ViniciusA05/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ViniciusA05/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Squad07/issues/139/reactions",
       "total_count": 0,
@@ -959,7 +999,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-14T18:06:11Z",
-    "updated_at": "2026-06-20T21:29:30Z",
+    "updated_at": "2026-06-26T16:19:24Z",
     "closed_at": "2026-06-20T21:29:30Z",
     "assignee": {
       "login": "ViniciusA05",
@@ -1301,7 +1341,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-10T00:42:18Z",
-    "updated_at": "2026-06-22T01:08:10Z",
+    "updated_at": "2026-06-26T16:19:26Z",
     "closed_at": "2026-06-22T01:08:10Z",
     "assignee": {
       "login": "Pedrop06",
@@ -1436,7 +1476,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-09T00:45:55Z",
-    "updated_at": "2026-06-21T12:48:43Z",
+    "updated_at": "2026-06-26T16:19:22Z",
     "closed_at": "2026-06-21T12:48:42Z",
     "assignee": {
       "login": "ViniciusA05",

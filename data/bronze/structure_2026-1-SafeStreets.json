@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "d2cf7f51fbaba1511f9aa0205bec954b6238cee8",
+  "sha": "bc51afe6f4006bc91700168bf1d333143ed76365",
   "tree": [
     {
       "name": ".claude",
@@ -164,7 +164,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "f80dc45fdd10b2ba4b0aa0f8e5e9a04272cbe0e5",
+      "sha": "83390bd8d0240f1a72524bd686ec8ed710170010",
       "mode": "040000",
       "children": []
     },
@@ -172,7 +172,7 @@
       "name": ".claude",
       "path": "backend/.claude",
       "type": "directory",
-      "sha": "c9a874f81d808a1bc91277727a1548b1d6cc131f",
+      "sha": "b45921948c15ae6f0e4e32033a9fa5c5519fe6ea",
       "mode": "040000",
       "children": []
     },
@@ -180,7 +180,7 @@
       "name": "skills",
       "path": "backend/.claude/skills",
       "type": "directory",
-      "sha": "6cd776585c81475c980b1fc0d7c9bb321a6857c9",
+      "sha": "79ee5ee145eae4197b02e42fcc66252959f0d9ae",
       "mode": "040000",
       "children": []
     },
@@ -213,6 +213,34 @@
       "is_binary": false
     },
     {
+      "name": "run-disparo-ingestao",
+      "path": "backend/.claude/skills/run-disparo-ingestao",
+      "type": "directory",
+      "sha": "15cbf50d8ef23ef61515a23b048d08c8b324a300",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-disparo-ingestao/SKILL.md",
+      "type": "file",
+      "sha": "c5f190a28172e785caf5f78cad4bbe5c0e8ad06c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3815,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-disparo-ingestao/driver.py",
+      "type": "file",
+      "sha": "90cb5242cccb0ad50d76e10290cc14c5d1edabf4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3697,
+      "is_binary": false
+    },
+    {
       "name": "run-endpoints",
       "path": "backend/.claude/skills/run-endpoints",
       "type": "directory",
@@ -238,6 +266,34 @@
       "mode": "100644",
       "extension": ".py",
       "size": 4975,
+      "is_binary": false
+    },
+    {
+      "name": "run-ingestao",
+      "path": "backend/.claude/skills/run-ingestao",
+      "type": "directory",
+      "sha": "2bcfda47eec668c75033bc3b3f51bf27c8c1a18a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "backend/.claude/skills/run-ingestao/SKILL.md",
+      "type": "file",
+      "sha": "a93ab12bc9214f15c827f41da5c45cd2303dc306",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5873,
+      "is_binary": false
+    },
+    {
+      "name": "driver.py",
+      "path": "backend/.claude/skills/run-ingestao/driver.py",
+      "type": "file",
+      "sha": "6cc464e8cf6047748ced99bf448c38114c97a450",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5812,
       "is_binary": false
     },
     {
@@ -386,7 +442,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "bf33671856f43e8070d832a6fd57173ecceb99ff",
+      "sha": "668229909fdd32f54d31c4de537e8bec48a86d65",
       "mode": "040000",
       "children": []
     },
@@ -500,10 +556,10 @@
       "name": "main.py",
       "path": "backend/app/main.py",
       "type": "file",
-      "sha": "da7cbf1fe0da1a82c1a001aad04c8d3b9bda56e3",
+      "sha": "d79c5275248f3ec2513ffbb71cec65485d6f4831",
       "mode": "100644",
       "extension": ".py",
-      "size": 357,
+      "size": 397,
       "is_binary": false
     },
     {
@@ -558,7 +614,7 @@
       "name": "repositories",
       "path": "backend/app/repositories",
       "type": "directory",
-      "sha": "9ac9068b3aafb70b10333a543defe873c8ca5c22",
+      "sha": "a092cebb698628aa0d57b755561f37109876b7e3",
       "mode": "040000",
       "children": []
     },
@@ -596,27 +652,17 @@
       "name": "ocorrencia_repository.py",
       "path": "backend/app/repositories/ocorrencia_repository.py",
       "type": "file",
-      "sha": "9b4e58874eb84299cb1f82e444c4085d769537fc",
+      "sha": "c5786495f234139f6bda9626025f58ab36cd1488",
       "mode": "100644",
       "extension": ".py",
-      "size": 2389,
-      "is_binary": false
-    },
-    {
-      "name": "ocorrencias.py",
-      "path": "backend/app/repositories/ocorrencias.py",
-      "type": "file",
-      "sha": "3e06d1acc49e38e2705b3d9ac07083614303fbc3",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 621,
+      "size": 2720,
       "is_binary": false
     },
     {
       "name": "routes",
       "path": "backend/app/routes",
       "type": "directory",
-      "sha": "0eebb6f690a56329776f46ea12ed8fcc692a83f0",
+      "sha": "22d6b603a9310d9a79f058fc90e6964855f26124",
       "mode": "040000",
       "children": []
     },
@@ -628,6 +674,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "admin.py",
+      "path": "backend/app/routes/admin.py",
+      "type": "file",
+      "sha": "1fb6b7a3d07a6713c80edfa01b81820d7ca42b85",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1295,
       "is_binary": false
     },
     {
@@ -644,10 +700,10 @@
       "name": "ocorrencias.py",
       "path": "backend/app/routes/ocorrencias.py",
       "type": "file",
-      "sha": "c06e8590fc09dd235f7f3fc19fe55e9a1d5cc2b0",
+      "sha": "68e77978ed1ba86aaadffbe0917733bca28f8677",
       "mode": "100644",
       "extension": ".py",
-      "size": 1526,
+      "size": 1612,
       "is_binary": false
     },
     {
@@ -692,7 +748,7 @@
       "name": "services",
       "path": "backend/app/services",
       "type": "directory",
-      "sha": "6bf28440fcb7cd41387c2b6b93074b73aa904f5c",
+      "sha": "0f1439dc1ddb5fad305138fff538d5f9d22be735",
       "mode": "040000",
       "children": []
     },
@@ -717,13 +773,23 @@
       "is_binary": false
     },
     {
+      "name": "ingestao.py",
+      "path": "backend/app/services/ingestao.py",
+      "type": "file",
+      "sha": "54a206cf65be700b643d86bbed6076aa887c7a58",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6558,
+      "is_binary": false
+    },
+    {
       "name": "ocorrencias.py",
       "path": "backend/app/services/ocorrencias.py",
       "type": "file",
-      "sha": "3547d915a522a8d051818d6996c00de6b2d5e934",
+      "sha": "66256f4dacdb8e25767ed561458c293ca32b0fe0",
       "mode": "100644",
       "extension": ".py",
-      "size": 878,
+      "size": 1419,
       "is_binary": false
     },
     {
@@ -740,20 +806,20 @@
       "name": "docker-compose.yml",
       "path": "backend/docker-compose.yml",
       "type": "file",
-      "sha": "f1ab037b1f1c262f6b8c157bdf0bc58344988687",
+      "sha": "806c32237f62bf6f93f9374d021895929700503f",
       "mode": "100644",
       "extension": ".yml",
-      "size": 998,
+      "size": 1102,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "71afe08ab961ce8c634798d395fbaa3d9088927a",
+      "sha": "e6ef47cb98f6564473efa3d3ec8425c11717831d",
       "mode": "100644",
       "extension": ".txt",
-      "size": 193,
+      "size": 201,
       "is_binary": false
     },
     {
@@ -770,9 +836,19 @@
       "name": "tests",
       "path": "backend/tests",
       "type": "directory",
-      "sha": "997b6cfe3e767d509c7ec967d01b9746c9dcf20f",
+      "sha": "199eaca4c8e6a16d0a9da3d2bac91525153a8901",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "test_admin.py",
+      "path": "backend/tests/test_admin.py",
+      "type": "file",
+      "sha": "224a17b02ac51b3ebef9469a1de20037b3e35aff",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2303,
+      "is_binary": false
     },
     {
       "name": "test_correio_rss.py",
@@ -792,6 +868,16 @@
       "mode": "100644",
       "extension": ".py",
       "size": 1790,
+      "is_binary": false
+    },
+    {
+      "name": "test_ingestao.py",
+      "path": "backend/tests/test_ingestao.py",
+      "type": "file",
+      "sha": "2fe4452aff23c8fb2e2738f92a56c20607228a94",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6205,
       "is_binary": false
     },
     {
@@ -828,10 +914,10 @@
       "name": "test_ocorrencias.py",
       "path": "backend/tests/test_ocorrencias.py",
       "type": "file",
-      "sha": "df62f5ea8e6c336942f359accf5b6a0bcec5729d",
+      "sha": "4cd33a54c61bf07528cb38c416e546c6d5ff0408",
       "mode": "100644",
       "extension": ".py",
-      "size": 2023,
+      "size": 2550,
       "is_binary": false
     },
     {
@@ -858,7 +944,7 @@
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "d274c998fde57640d6d410f3e0de8440d25991d8",
+      "sha": "cb44c69809bd5694b72fd5f05836a6a9e8e2c3c7",
       "mode": "040000",
       "children": []
     },
@@ -1624,7 +1710,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "490dbaa9ede50887f1f21e1419b1d39403ae1370",
+      "sha": "dfb499695daaaa9af41d0d0f271b47e7b6abf431",
       "mode": "040000",
       "children": []
     },
@@ -1652,10 +1738,10 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "7b29e030c9f524131a9544b9aaf8ef6848fe835c",
+      "sha": "6aa7832d295488562497e7f39ca4e184ebbab83b",
       "mode": "100644",
       "extension": ".json",
-      "size": 8092,
+      "size": 8159,
       "is_binary": false
     },
     {
@@ -3030,19 +3116,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-26T09:19:43.282835",
+  "extracted_at": "2026-06-27T08:32:58.572810",
   "method": "rest",
-  "total_items": 318,
+  "total_items": 327,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-26T04:21:11Z",
+    "updated_at": "2026-06-27T04:07:36Z",
     "language": "TypeScript",
-    "size": 2692,
-    "stars": 4,
+    "size": 2721,
+    "stars": 5,
     "forks": 0,
-    "open_issues": 8
+    "open_issues": 11
   }
 }
