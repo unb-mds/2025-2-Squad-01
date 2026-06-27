@@ -2,7 +2,7 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-26T09:19:44.835864",
+  "extracted_at": "2026-06-27T08:32:59.520540",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -23,25 +23,33 @@
         "name": "execute-scrapy.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1304,
+        "size": 1293,
         "extension": ".yml",
         "path": ".github/workflows/execute-scrapy.yml"
+      },
+      {
+        "name": "keep-alive.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 300,
+        "extension": ".yml",
+        "path": ".github/workflows/keep-alive.yml"
       },
       {
         "name": "langchaim.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1479,
+        "size": 1540,
         "extension": ".yml",
         "path": ".github/workflows/langchaim.yml"
       },
       {
-        "name": "metrics-with-pages.yml",
+        "name": "static.yml",
         "type": "file",
         "language": "YAML",
-        "size": 2070,
+        "size": 1098,
         "extension": ".yml",
-        "path": ".github/workflows/metrics-with-pages.yml"
+        "path": ".github/workflows/static.yml"
       },
       {
         "name": ".gitignore",
@@ -50,6 +58,32 @@
         "size": 72,
         "extension": ".gitignore",
         "path": ".gitignore"
+      },
+      {
+        "name": "BackEnd",
+        "type": "directory",
+        "path": "BackEnd",
+        "children": []
+      },
+      {
+        "name": "app",
+        "type": "directory",
+        "path": "BackEnd/app",
+        "children": []
+      },
+      {
+        "name": "__pycache__",
+        "type": "directory",
+        "path": "BackEnd/app/__pycache__",
+        "children": []
+      },
+      {
+        "name": "main.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4991,
+        "extension": ".pyc",
+        "path": "BackEnd/app/__pycache__/main.cpython-314.pyc"
       },
       {
         "name": "Frontend",
@@ -174,18 +208,10 @@
         "path": "Frontend/eslint.config.js"
       },
       {
-        "name": "index.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 360,
-        "extension": ".html",
-        "path": "Frontend/index.html"
-      },
-      {
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 215618,
+        "size": 216991,
         "extension": ".json",
         "path": "Frontend/package-lock.json"
       },
@@ -193,7 +219,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 867,
+        "size": 1059,
         "extension": ".json",
         "path": "Frontend/package.json"
       },
@@ -206,6 +232,26 @@
         "path": "Frontend/postcss.config.js"
       },
       {
+        "name": "public",
+        "type": "directory",
+        "path": "Frontend/public",
+        "children": []
+      },
+      {
+        "name": "images",
+        "type": "directory",
+        "path": "Frontend/public/images",
+        "children": []
+      },
+      {
+        "name": "noticia-placeholder.jpg",
+        "type": "file",
+        "language": "JPEG Image",
+        "size": 0,
+        "extension": ".jpg",
+        "path": "Frontend/public/images/noticia-placeholder.jpg"
+      },
+      {
         "name": "src",
         "type": "directory",
         "path": "Frontend/src",
@@ -215,7 +261,7 @@
         "name": "App.css",
         "type": "file",
         "language": "CSS",
-        "size": 13824,
+        "size": 14108,
         "extension": ".css",
         "path": "Frontend/src/App.css"
       },
@@ -223,7 +269,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 427,
+        "size": 819,
         "extension": ".jsx",
         "path": "Frontend/src/App.jsx"
       },
@@ -283,31 +329,55 @@
         "name": "BrazilMap.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1818,
+        "size": 2868,
         "extension": ".jsx",
         "path": "Frontend/src/components/BrazilMap.jsx"
+      },
+      {
+        "name": "HeatmapLayer.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1245,
+        "extension": ".jsx",
+        "path": "Frontend/src/components/HeatmapLayer.jsx"
       },
       {
         "name": "LatestNews.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 872,
+        "size": 1210,
         "extension": ".jsx",
         "path": "Frontend/src/components/LatestNews.jsx"
+      },
+      {
+        "name": "LeafletMap.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2503,
+        "extension": ".jsx",
+        "path": "Frontend/src/components/LeafletMap.jsx"
       },
       {
         "name": "NewsChart.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 747,
+        "size": 1270,
         "extension": ".jsx",
         "path": "Frontend/src/components/NewsChart.jsx"
+      },
+      {
+        "name": "PageHeader.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 292,
+        "extension": ".jsx",
+        "path": "Frontend/src/components/PageHeader.jsx"
       },
       {
         "name": "RegionChart.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 685,
+        "size": 1322,
         "extension": ".jsx",
         "path": "Frontend/src/components/RegionChart.jsx"
       },
@@ -315,7 +385,7 @@
         "name": "Sidebar.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 551,
+        "size": 556,
         "extension": ".jsx",
         "path": "Frontend/src/components/Sidebar.jsx"
       },
@@ -331,9 +401,23 @@
         "name": "TopVehicles.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 586,
+        "size": 1494,
         "extension": ".jsx",
         "path": "Frontend/src/components/TopVehicles.jsx"
+      },
+      {
+        "name": "data",
+        "type": "directory",
+        "path": "Frontend/src/data",
+        "children": []
+      },
+      {
+        "name": "noticias.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2030,
+        "extension": ".js",
+        "path": "Frontend/src/data/noticias.js"
       },
       {
         "name": "index.css",
@@ -361,9 +445,25 @@
         "name": "Dashboard.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 2896,
+        "size": 4471,
         "extension": ".jsx",
         "path": "Frontend/src/pages/Dashboard.jsx"
+      },
+      {
+        "name": "DetalhesNoticia.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 4066,
+        "extension": ".css",
+        "path": "Frontend/src/pages/DetalhesNoticia.css"
+      },
+      {
+        "name": "DetalhesNoticia.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 5940,
+        "extension": ".jsx",
+        "path": "Frontend/src/pages/DetalhesNoticia.jsx"
       },
       {
         "name": "Home.jsx",
@@ -382,26 +482,50 @@
         "path": "Frontend/src/pages/Login.jsx"
       },
       {
+        "name": "Mapa.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 2585,
+        "extension": ".css",
+        "path": "Frontend/src/pages/Mapa.css"
+      },
+      {
         "name": "Mapa.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 0,
+        "size": 1063,
         "extension": ".jsx",
         "path": "Frontend/src/pages/Mapa.jsx"
+      },
+      {
+        "name": "Noticias.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 6527,
+        "extension": ".css",
+        "path": "Frontend/src/pages/Noticias.css"
       },
       {
         "name": "Noticias.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 0,
+        "size": 7493,
         "extension": ".jsx",
         "path": "Frontend/src/pages/Noticias.jsx"
+      },
+      {
+        "name": "Sobre.css",
+        "type": "file",
+        "language": "CSS",
+        "size": 5180,
+        "extension": ".css",
+        "path": "Frontend/src/pages/Sobre.css"
       },
       {
         "name": "Sobre.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 0,
+        "size": 6850,
         "extension": ".jsx",
         "path": "Frontend/src/pages/Sobre.jsx"
       },
@@ -412,14 +536,6 @@
         "size": 169,
         "extension": ".js",
         "path": "Frontend/tailwind.config.js"
-      },
-      {
-        "name": "vite.config.js",
-        "type": "file",
-        "language": "JavaScript",
-        "size": 166,
-        "extension": ".js",
-        "path": "Frontend/vite.config.js"
       },
       {
         "name": "LICENSE",
@@ -475,7 +591,7 @@
         "name": "__init__.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 156,
+        "size": 151,
         "extension": ".pyc",
         "path": "backend/__pycache__/__init__.cpython-314.pyc"
       },
@@ -511,7 +627,7 @@
         "name": "__init__.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 160,
+        "size": 155,
         "extension": ".pyc",
         "path": "backend/app/__pycache__/__init__.cpython-314.pyc"
       },
@@ -519,7 +635,7 @@
         "name": "database.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 945,
+        "size": 1907,
         "extension": ".pyc",
         "path": "backend/app/__pycache__/database.cpython-314.pyc"
       },
@@ -527,7 +643,7 @@
         "name": "models.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 2308,
+        "size": 5278,
         "extension": ".pyc",
         "path": "backend/app/__pycache__/models.cpython-314.pyc"
       },
@@ -538,10 +654,26 @@
         "children": []
       },
       {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/adapters/__init__.py"
+      },
+      {
         "name": "__pycache__",
         "type": "directory",
         "path": "backend/app/adapters/__pycache__",
         "children": []
+      },
+      {
+        "name": "__init__.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 164,
+        "extension": ".pyc",
+        "path": "backend/app/adapters/__pycache__/__init__.cpython-314.pyc"
       },
       {
         "name": "db_adapter.cpython-314.pyc",
@@ -583,7 +715,7 @@
         "name": "__init__.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 181,
+        "size": 176,
         "extension": ".pyc",
         "path": "backend/app/adapters/api_adapter/__pycache__/__init__.cpython-314.pyc"
       },
@@ -591,39 +723,71 @@
         "name": "auth_routes.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 1918,
+        "size": 3817,
         "extension": ".pyc",
         "path": "backend/app/adapters/api_adapter/__pycache__/auth_routes.cpython-314.pyc"
       },
       {
-        "name": "locais_routes.cpython-314.pyc",
+        "name": "dashboard_routes.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 186,
+        "size": 9493,
         "extension": ".pyc",
-        "path": "backend/app/adapters/api_adapter/__pycache__/locais_routes.cpython-314.pyc"
+        "path": "backend/app/adapters/api_adapter/__pycache__/dashboard_routes.cpython-314.pyc"
+      },
+      {
+        "name": "mapa_routes.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3361,
+        "extension": ".pyc",
+        "path": "backend/app/adapters/api_adapter/__pycache__/mapa_routes.cpython-314.pyc"
+      },
+      {
+        "name": "noticias_routes.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4094,
+        "extension": ".pyc",
+        "path": "backend/app/adapters/api_adapter/__pycache__/noticias_routes.cpython-314.pyc"
       },
       {
         "name": "auth_routes.py",
         "type": "file",
         "language": "Python",
-        "size": 1279,
+        "size": 3551,
         "extension": ".py",
         "path": "backend/app/adapters/api_adapter/auth_routes.py"
       },
       {
-        "name": "locais_routes.py",
+        "name": "dashboard_routes.py",
         "type": "file",
         "language": "Python",
-        "size": 1126,
+        "size": 7934,
         "extension": ".py",
-        "path": "backend/app/adapters/api_adapter/locais_routes.py"
+        "path": "backend/app/adapters/api_adapter/dashboard_routes.py"
+      },
+      {
+        "name": "mapa_routes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3284,
+        "extension": ".py",
+        "path": "backend/app/adapters/api_adapter/mapa_routes.py"
+      },
+      {
+        "name": "noticias_routes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3714,
+        "extension": ".py",
+        "path": "backend/app/adapters/api_adapter/noticias_routes.py"
       },
       {
         "name": "db_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1686,
+        "size": 2593,
         "extension": ".py",
         "path": "backend/app/adapters/db_adapter.py"
       },
@@ -631,7 +795,7 @@
         "name": "json_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1692,
+        "size": 5340,
         "extension": ".py",
         "path": "backend/app/adapters/json_adapter.py"
       },
@@ -639,7 +803,7 @@
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 945,
+        "size": 2339,
         "extension": ".py",
         "path": "backend/app/database.py"
       },
@@ -659,23 +823,15 @@
         "name": "entities.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 2048,
+        "size": 4363,
         "extension": ".pyc",
         "path": "backend/app/domain/__pycache__/entities.cpython-314.pyc"
-      },
-      {
-        "name": "entities.py",
-        "type": "file",
-        "language": "Python",
-        "size": 0,
-        "extension": ".py",
-        "path": "backend/app/domain/entities.py"
       },
       {
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 778,
+        "size": 4983,
         "extension": ".py",
         "path": "backend/app/main.py"
       },
@@ -683,37 +839,53 @@
         "name": "models.py",
         "type": "file",
         "language": "Python",
-        "size": 1627,
+        "size": 5376,
         "extension": ".py",
         "path": "backend/app/models.py"
       },
       {
-        "name": "ports",
+        "name": "schemas",
         "type": "directory",
-        "path": "backend/app/ports",
+        "path": "backend/app/schemas",
         "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/app/schemas/__init__.py"
       },
       {
         "name": "__pycache__",
         "type": "directory",
-        "path": "backend/app/ports/__pycache__",
+        "path": "backend/app/schemas/__pycache__",
         "children": []
       },
       {
-        "name": "repository_port.cpython-314.pyc",
+        "name": "__init__.cpython-314.pyc",
         "type": "file",
         "language": "Unknown",
-        "size": 1333,
+        "size": 163,
         "extension": ".pyc",
-        "path": "backend/app/ports/__pycache__/repository_port.cpython-314.pyc"
+        "path": "backend/app/schemas/__pycache__/__init__.cpython-314.pyc"
       },
       {
-        "name": "repository_port.py",
+        "name": "noticia.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1976,
+        "extension": ".pyc",
+        "path": "backend/app/schemas/__pycache__/noticia.cpython-314.pyc"
+      },
+      {
+        "name": "noticia.py",
         "type": "file",
         "language": "Python",
-        "size": 312,
+        "size": 679,
         "extension": ".py",
-        "path": "backend/app/ports/repository_port.py"
+        "path": "backend/app/schemas/noticia.py"
       },
       {
         "name": "llm",
@@ -722,32 +894,10 @@
         "children": []
       },
       {
-        "name": "__pycache__",
-        "type": "directory",
-        "path": "backend/llm/__pycache__",
-        "children": []
-      },
-      {
-        "name": "langChain.cpython-311.pyc",
-        "type": "file",
-        "language": "Unknown",
-        "size": 2152,
-        "extension": ".pyc",
-        "path": "backend/llm/__pycache__/langChain.cpython-311.pyc"
-      },
-      {
-        "name": "news_Classification.cpython-311.pyc",
-        "type": "file",
-        "language": "Unknown",
-        "size": 629,
-        "extension": ".pyc",
-        "path": "backend/llm/__pycache__/news_Classification.cpython-311.pyc"
-      },
-      {
         "name": "langChain.py",
         "type": "file",
         "language": "Python",
-        "size": 1621,
+        "size": 3776,
         "extension": ".py",
         "path": "backend/llm/langChain.py"
       },
@@ -755,7 +905,7 @@
         "name": "langChain_Controller.py",
         "type": "file",
         "language": "Python",
-        "size": 1670,
+        "size": 2067,
         "extension": ".py",
         "path": "backend/llm/langChain_Controller.py"
       },
@@ -763,7 +913,7 @@
         "name": "news-llm.json",
         "type": "file",
         "language": "JSON",
-        "size": 1,
+        "size": 23995,
         "extension": ".json",
         "path": "backend/llm/news-llm.json"
       },
@@ -771,17 +921,61 @@
         "name": "news_Classification.py",
         "type": "file",
         "language": "Python",
-        "size": 135,
+        "size": 477,
         "extension": ".py",
         "path": "backend/llm/news_Classification.py"
       },
       {
-        "name": "teste_conexao.py",
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 86,
+        "extension": ".txt",
+        "path": "backend/llm/requirements.txt"
+      },
+      {
+        "name": "tratamentoDeDados",
+        "type": "directory",
+        "path": "backend/tratamentoDeDados",
+        "children": []
+      },
+      {
+        "name": "__pycache__",
+        "type": "directory",
+        "path": "backend/tratamentoDeDados/__pycache__",
+        "children": []
+      },
+      {
+        "name": "juntar_dados.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4540,
+        "extension": ".pyc",
+        "path": "backend/tratamentoDeDados/__pycache__/juntar_dados.cpython-314.pyc"
+      },
+      {
+        "name": "tratamentoDeTexto.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1659,
+        "extension": ".pyc",
+        "path": "backend/tratamentoDeDados/__pycache__/tratamentoDeTexto.cpython-314.pyc"
+      },
+      {
+        "name": "juntar_dados.py",
         "type": "file",
         "language": "Python",
-        "size": 2099,
+        "size": 4365,
         "extension": ".py",
-        "path": "backend/teste_conexao.py"
+        "path": "backend/tratamentoDeDados/juntar_dados.py"
+      },
+      {
+        "name": "tratamentoDeTexto.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1447,
+        "extension": ".py",
+        "path": "backend/tratamentoDeDados/tratamentoDeTexto.py"
       },
       {
         "name": "docs",
@@ -826,12 +1020,96 @@
         "children": []
       },
       {
+        "name": "FastAPI",
+        "type": "directory",
+        "path": "docs/backend/FastAPI",
+        "children": []
+      },
+      {
         "name": "FastAPI.md",
         "type": "file",
         "language": "Markdown",
-        "size": 8402,
+        "size": 2439,
         "extension": ".md",
-        "path": "docs/backend/FastAPI.md"
+        "path": "docs/backend/FastAPI/FastAPI.md"
+      },
+      {
+        "name": "adapters",
+        "type": "directory",
+        "path": "docs/backend/FastAPI/adapters",
+        "children": []
+      },
+      {
+        "name": "adapter.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1277,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/adapters/adapter.md"
+      },
+      {
+        "name": "banco de dados",
+        "type": "directory",
+        "path": "docs/backend/FastAPI/banco de dados",
+        "children": []
+      },
+      {
+        "name": "database.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 366,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/banco de dados/database.md"
+      },
+      {
+        "name": "models.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 440,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/banco de dados/models.md"
+      },
+      {
+        "name": "base",
+        "type": "directory",
+        "path": "docs/backend/FastAPI/base",
+        "children": []
+      },
+      {
+        "name": "main.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 385,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/base/main.md"
+      },
+      {
+        "name": "rotas",
+        "type": "directory",
+        "path": "docs/backend/FastAPI/rotas",
+        "children": []
+      },
+      {
+        "name": "rotas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1644,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/rotas/rotas.md"
+      },
+      {
+        "name": "schemas",
+        "type": "directory",
+        "path": "docs/backend/FastAPI/schemas",
+        "children": []
+      },
+      {
+        "name": "schemas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 471,
+        "extension": ".md",
+        "path": "docs/backend/FastAPI/schemas/schemas.md"
       },
       {
         "name": "LangChain.md",
@@ -848,6 +1126,14 @@
         "size": 4137,
         "extension": ".md",
         "path": "docs/backend/Scrapy.md"
+      },
+      {
+        "name": "como-rodar-backend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2979,
+        "extension": ".md",
+        "path": "docs/backend/como-rodar-backend.md"
       },
       {
         "name": "langChain",
@@ -970,288 +1256,6 @@
         "path": "docs/index.md"
       },
       {
-        "name": "mkdocs",
-        "type": "directory",
-        "path": "docs/mkdocs",
-        "children": []
-      },
-      {
-        "name": "docs",
-        "type": "directory",
-        "path": "docs/mkdocs/docs",
-        "children": []
-      },
-      {
-        "name": "api.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 210,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/api.md"
-      },
-      {
-        "name": "assets",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/assets",
-        "children": []
-      },
-      {
-        "name": "Logo.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 17490,
-        "extension": ".png",
-        "path": "docs/mkdocs/docs/assets/Logo.png"
-      },
-      {
-        "name": "LogoBlack.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 65544,
-        "extension": ".png",
-        "path": "docs/mkdocs/docs/assets/LogoBlack.png"
-      },
-      {
-        "name": "texto.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 21479,
-        "extension": ".png",
-        "path": "docs/mkdocs/docs/assets/texto.png"
-      },
-      {
-        "name": "backend",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/backend",
-        "children": []
-      },
-      {
-        "name": "FastAPI.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 8402,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/backend/FastAPI.md"
-      },
-      {
-        "name": "LangChain.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 7867,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/backend/LangChain.md"
-      },
-      {
-        "name": "Scrapy.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 4137,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/backend/Scrapy.md"
-      },
-      {
-        "name": "dashboard",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/dashboard",
-        "children": []
-      },
-      {
-        "name": "index.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 25017,
-        "extension": ".html",
-        "path": "docs/mkdocs/docs/dashboard/index.html"
-      },
-      {
-        "name": "frontend",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/frontend",
-        "children": []
-      },
-      {
-        "name": "Prototipagem.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 231,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/frontend/Prototipagem.md"
-      },
-      {
-        "name": "React.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 4074,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/frontend/React.md"
-      },
-      {
-        "name": "index.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1327,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/index.md"
-      },
-      {
-        "name": "openapi.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 974,
-        "extension": ".json",
-        "path": "docs/mkdocs/docs/openapi.json"
-      },
-      {
-        "name": "productivity",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/productivity",
-        "children": []
-      },
-      {
-        "name": "__pycache__",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/productivity/__pycache__",
-        "children": []
-      },
-      {
-        "name": "collect_metrics.cpython-314.pyc",
-        "type": "file",
-        "language": "Unknown",
-        "size": 17416,
-        "extension": ".pyc",
-        "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc"
-      },
-      {
-        "name": "collect_metrics.py",
-        "type": "file",
-        "language": "Python",
-        "size": 11773,
-        "extension": ".py",
-        "path": "docs/mkdocs/docs/productivity/collect_metrics.py"
-      },
-      {
-        "name": "metrics.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 7519,
-        "extension": ".json",
-        "path": "docs/mkdocs/docs/productivity/metrics.json"
-      },
-      {
-        "name": "requirements.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 17,
-        "extension": ".txt",
-        "path": "docs/mkdocs/docs/productivity/requirements.txt"
-      },
-      {
-        "name": "style.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 4205,
-        "extension": ".css",
-        "path": "docs/mkdocs/docs/productivity/style.css"
-      },
-      {
-        "name": "projeto",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/projeto",
-        "children": []
-      },
-      {
-        "name": "Requisitos.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 3488,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/Requisitos.md"
-      },
-      {
-        "name": "product-backlog.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1123,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/product-backlog.md"
-      },
-      {
-        "name": "sprint0.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 911,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/sprint0.md"
-      },
-      {
-        "name": "sprint1.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1372,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/sprint1.md"
-      },
-      {
-        "name": "sprint2.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 757,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/sprint2.md"
-      },
-      {
-        "name": "sprint3.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1746,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/projeto/sprint3.md"
-      },
-      {
-        "name": "sobrenos.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1620,
-        "extension": ".md",
-        "path": "docs/mkdocs/docs/sobrenos.md"
-      },
-      {
-        "name": "stylesheets",
-        "type": "directory",
-        "path": "docs/mkdocs/docs/stylesheets",
-        "children": []
-      },
-      {
-        "name": "extra.css",
-        "type": "file",
-        "language": "CSS",
-        "size": 2171,
-        "extension": ".css",
-        "path": "docs/mkdocs/docs/stylesheets/extra.css"
-      },
-      {
-        "name": "mkdocs.yml",
-        "type": "file",
-        "language": "YAML",
-        "size": 880,
-        "extension": ".yml",
-        "path": "docs/mkdocs/mkdocs.yml"
-      },
-      {
-        "name": "overrides",
-        "type": "directory",
-        "path": "docs/mkdocs/overrides",
-        "children": []
-      },
-      {
-        "name": "main.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 468,
-        "extension": ".html",
-        "path": "docs/mkdocs/overrides/main.html"
-      },
-      {
         "name": "productivity",
         "type": "directory",
         "path": "docs/productivity",
@@ -1269,7 +1273,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 7765,
+        "size": 8958,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -1352,6 +1356,14 @@
         "path": "docs/projeto/sprint1.md"
       },
       {
+        "name": "sprint10.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2320,
+        "extension": ".md",
+        "path": "docs/projeto/sprint10.md"
+      },
+      {
         "name": "sprint2.md",
         "type": "file",
         "language": "Markdown",
@@ -1400,6 +1412,14 @@
         "path": "docs/projeto/sprint7.md"
       },
       {
+        "name": "sprint8.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1739,
+        "extension": ".md",
+        "path": "docs/projeto/sprint8.md"
+      },
+      {
         "name": "team.md",
         "type": "file",
         "language": "Markdown",
@@ -1430,18 +1450,18 @@
         "path": "docs/stylesheets/extra.css"
       },
       {
-        "name": "gerar_arvore.py",
+        "name": "index.html",
         "type": "file",
-        "language": "Python",
-        "size": 1056,
-        "extension": ".py",
-        "path": "gerar_arvore.py"
+        "language": "HTML",
+        "size": 370,
+        "extension": ".html",
+        "path": "index.html"
       },
       {
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1395,
+        "size": 1831,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -1471,7 +1491,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 106,
+        "size": 714,
         "extension": ".json",
         "path": "package.json"
       },
@@ -1479,7 +1499,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 123,
+        "size": 273,
         "extension": ".txt",
         "path": "requirements.txt"
       },
@@ -1490,12 +1510,34 @@
         "children": []
       },
       {
+        "name": "__pycache__",
+        "type": "directory",
+        "path": "scrapers/__pycache__",
+        "children": []
+      },
+      {
+        "name": "salvarscrapys.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2458,
+        "extension": ".pyc",
+        "path": "scrapers/__pycache__/salvarscrapys.cpython-314.pyc"
+      },
+      {
         "name": "executarSpiders.py",
         "type": "file",
         "language": "Python",
-        "size": 752,
+        "size": 1169,
         "extension": ".py",
         "path": "scrapers/executarSpiders.py"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 30,
+        "extension": ".txt",
+        "path": "scrapers/requirements.txt"
       },
       {
         "name": "resultados",
@@ -1515,7 +1557,7 @@
         "name": "g1.json",
         "type": "file",
         "language": "JSON",
-        "size": 51687,
+        "size": 88751,
         "extension": ".json",
         "path": "scrapers/resultados/g1.json"
       },
@@ -1523,7 +1565,7 @@
         "name": "metropoles.json",
         "type": "file",
         "language": "JSON",
-        "size": 4,
+        "size": 5177,
         "extension": ".json",
         "path": "scrapers/resultados/metropoles.json"
       },
@@ -1531,7 +1573,7 @@
         "name": "r7.json",
         "type": "file",
         "language": "JSON",
-        "size": 8211,
+        "size": 5642,
         "extension": ".json",
         "path": "scrapers/resultados/r7.json"
       },
@@ -1539,7 +1581,7 @@
         "name": "resultados.json",
         "type": "file",
         "language": "JSON",
-        "size": 632009,
+        "size": 640366,
         "extension": ".json",
         "path": "scrapers/resultados/resultados.json"
       },
@@ -1547,7 +1589,7 @@
         "name": "salvarscrapys.py",
         "type": "file",
         "language": "Python",
-        "size": 1514,
+        "size": 1779,
         "extension": ".py",
         "path": "scrapers/salvarscrapys.py"
       },
@@ -1558,10 +1600,48 @@
         "children": []
       },
       {
+        "name": "__pycache__",
+        "type": "directory",
+        "path": "scrapers/spiders/__pycache__",
+        "children": []
+      },
+      {
+        "name": "cnnspider.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4231,
+        "extension": ".pyc",
+        "path": "scrapers/spiders/__pycache__/cnnspider.cpython-314.pyc"
+      },
+      {
+        "name": "g1Spider.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5491,
+        "extension": ".pyc",
+        "path": "scrapers/spiders/__pycache__/g1Spider.cpython-314.pyc"
+      },
+      {
+        "name": "metropoles.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5758,
+        "extension": ".pyc",
+        "path": "scrapers/spiders/__pycache__/metropoles.cpython-314.pyc"
+      },
+      {
+        "name": "r7spider.cpython-314.pyc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5567,
+        "extension": ".pyc",
+        "path": "scrapers/spiders/__pycache__/r7spider.cpython-314.pyc"
+      },
+      {
         "name": "cnnspider.py",
         "type": "file",
         "language": "Python",
-        "size": 1784,
+        "size": 3329,
         "extension": ".py",
         "path": "scrapers/spiders/cnnspider.py"
       },
@@ -1569,7 +1649,7 @@
         "name": "g1Spider.py",
         "type": "file",
         "language": "Python",
-        "size": 3618,
+        "size": 4089,
         "extension": ".py",
         "path": "scrapers/spiders/g1Spider.py"
       },
@@ -1577,7 +1657,7 @@
         "name": "metropoles.py",
         "type": "file",
         "language": "Python",
-        "size": 3666,
+        "size": 4538,
         "extension": ".py",
         "path": "scrapers/spiders/metropoles.py"
       },
@@ -1585,14 +1665,52 @@
         "name": "r7spider.py",
         "type": "file",
         "language": "Python",
-        "size": 2860,
+        "size": 4240,
         "extension": ".py",
         "path": "scrapers/spiders/r7spider.py"
+      },
+      {
+        "name": "testes",
+        "type": "directory",
+        "path": "testes",
+        "children": []
+      },
+      {
+        "name": "arquivos para testes.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 12723,
+        "extension": ".txt",
+        "path": "testes/arquivos para testes.txt"
+      },
+      {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3636,
+        "extension": ".py",
+        "path": "testes/conftest.py"
+      },
+      {
+        "name": "duplicata_scraper.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2543,
+        "extension": ".py",
+        "path": "testes/duplicata_scraper.py"
+      },
+      {
+        "name": "vite.config.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 310,
+        "extension": ".js",
+        "path": "vite.config.js"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-26T09:22:52.143742",
+    "extracted_at": "2026-06-27T08:36:14.127811",
     "file_path": "data/silver/hierarchy_2026-2-VeritasIA.json"
   }
 }

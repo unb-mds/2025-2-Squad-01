@@ -2,7 +2,7 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-26T09:19:43.282835",
+  "extracted_at": "2026-06-27T08:32:58.572810",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -170,6 +170,28 @@
         "path": "backend/.claude/skills/run-correio-rss/driver.py"
       },
       {
+        "name": "run-disparo-ingestao",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-disparo-ingestao",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3815,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-disparo-ingestao/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3697,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-disparo-ingestao/driver.py"
+      },
+      {
         "name": "run-endpoints",
         "type": "directory",
         "path": "backend/.claude/skills/run-endpoints",
@@ -190,6 +212,28 @@
         "size": 4975,
         "extension": ".py",
         "path": "backend/.claude/skills/run-endpoints/driver.py"
+      },
+      {
+        "name": "run-ingestao",
+        "type": "directory",
+        "path": "backend/.claude/skills/run-ingestao",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5873,
+        "extension": ".md",
+        "path": "backend/.claude/skills/run-ingestao/SKILL.md"
+      },
+      {
+        "name": "driver.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5812,
+        "extension": ".py",
+        "path": "backend/.claude/skills/run-ingestao/driver.py"
       },
       {
         "name": "run-nominatim-gemini",
@@ -397,7 +441,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 357,
+        "size": 397,
         "extension": ".py",
         "path": "backend/app/main.py"
       },
@@ -473,17 +517,9 @@
         "name": "ocorrencia_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 2389,
+        "size": 2720,
         "extension": ".py",
         "path": "backend/app/repositories/ocorrencia_repository.py"
-      },
-      {
-        "name": "ocorrencias.py",
-        "type": "file",
-        "language": "Python",
-        "size": 621,
-        "extension": ".py",
-        "path": "backend/app/repositories/ocorrencias.py"
       },
       {
         "name": "routes",
@@ -500,6 +536,14 @@
         "path": "backend/app/routes/__init__.py"
       },
       {
+        "name": "admin.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1295,
+        "extension": ".py",
+        "path": "backend/app/routes/admin.py"
+      },
+      {
         "name": "health.py",
         "type": "file",
         "language": "Python",
@@ -511,7 +555,7 @@
         "name": "ocorrencias.py",
         "type": "file",
         "language": "Python",
-        "size": 1526,
+        "size": 1612,
         "extension": ".py",
         "path": "backend/app/routes/ocorrencias.py"
       },
@@ -568,10 +612,18 @@
         "path": "backend/app/services/__init__.py"
       },
       {
+        "name": "ingestao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6558,
+        "extension": ".py",
+        "path": "backend/app/services/ingestao.py"
+      },
+      {
         "name": "ocorrencias.py",
         "type": "file",
         "language": "Python",
-        "size": 878,
+        "size": 1419,
         "extension": ".py",
         "path": "backend/app/services/ocorrencias.py"
       },
@@ -587,7 +639,7 @@
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 998,
+        "size": 1102,
         "extension": ".yml",
         "path": "backend/docker-compose.yml"
       },
@@ -595,7 +647,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 193,
+        "size": 201,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -614,6 +666,14 @@
         "children": []
       },
       {
+        "name": "test_admin.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2303,
+        "extension": ".py",
+        "path": "backend/tests/test_admin.py"
+      },
+      {
         "name": "test_correio_rss.py",
         "type": "file",
         "language": "Python",
@@ -628,6 +688,14 @@
         "size": 1790,
         "extension": ".py",
         "path": "backend/tests/test_gemini.py"
+      },
+      {
+        "name": "test_ingestao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6205,
+        "extension": ".py",
+        "path": "backend/tests/test_ingestao.py"
       },
       {
         "name": "test_main.py",
@@ -657,7 +725,7 @@
         "name": "test_ocorrencias.py",
         "type": "file",
         "language": "Python",
-        "size": 2023,
+        "size": 2550,
         "extension": ".py",
         "path": "backend/tests/test_ocorrencias.py"
       },
@@ -1311,7 +1379,7 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 8092,
+        "size": 8159,
         "extension": ".json",
         "path": "docs/productivity/metrics.json"
       },
@@ -2398,7 +2466,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-26T09:22:51.301230",
+    "extracted_at": "2026-06-27T08:36:13.311147",
     "file_path": "data/silver/hierarchy_2026-1-SafeStreets.json"
   }
 }

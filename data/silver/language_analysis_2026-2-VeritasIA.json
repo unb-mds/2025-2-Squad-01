@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-26T09:19:44.835864",
+  "analyzed_at": "2026-06-27T08:32:59.520540",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 161,
-  "total_bytes": 3334183,
+  "total_files": 172,
+  "total_bytes": 3372256,
   "languages": [
     {
       "language": "PNG Image",
-      "file_count": 9,
-      "total_bytes": 2060331,
-      "percentage": 61.79,
+      "file_count": 6,
+      "total_bytes": 1955818,
+      "percentage": 58.0,
       "files": [
         {
           "path": "Frontend/src/assets/logo2.png",
@@ -29,31 +29,13 @@
           "extension": ".png"
         },
         {
-          "path": "docs/mkdocs/docs/assets/LogoBlack.png",
-          "name": "LogoBlack.png",
-          "size": 65544,
-          "extension": ".png"
-        },
-        {
           "path": "docs/assets/texto.png",
           "name": "texto.png",
           "size": 21479,
           "extension": ".png"
         },
         {
-          "path": "docs/mkdocs/docs/assets/texto.png",
-          "name": "texto.png",
-          "size": 21479,
-          "extension": ".png"
-        },
-        {
           "path": "docs/assets/Logo.png",
-          "name": "Logo.png",
-          "size": 17490,
-          "extension": ".png"
-        },
-        {
-          "path": "docs/mkdocs/docs/assets/Logo.png",
           "name": "Logo.png",
           "size": 17490,
           "extension": ".png"
@@ -74,26 +56,26 @@
     },
     {
       "language": "JSON",
-      "file_count": 13,
-      "total_bytes": 962654,
-      "percentage": 28.87,
+      "file_count": 11,
+      "total_bytes": 1029546,
+      "percentage": 30.53,
       "files": [
         {
           "path": "scrapers/resultados/resultados.json",
           "name": "resultados.json",
-          "size": 632009,
+          "size": 640366,
           "extension": ".json"
         },
         {
           "path": "Frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 215618,
+          "size": 216991,
           "extension": ".json"
         },
         {
           "path": "scrapers/resultados/g1.json",
           "name": "g1.json",
-          "size": 51687,
+          "size": 88751,
           "extension": ".json"
         },
         {
@@ -103,69 +85,187 @@
           "extension": ".json"
         },
         {
-          "path": "scrapers/resultados/r7.json",
-          "name": "r7.json",
-          "size": 8211,
+          "path": "backend/llm/news-llm.json",
+          "name": "news-llm.json",
+          "size": 23995,
           "extension": ".json"
         },
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 7765,
+          "size": 8958,
           "extension": ".json"
         },
         {
-          "path": "docs/mkdocs/docs/productivity/metrics.json",
-          "name": "metrics.json",
-          "size": 7519,
+          "path": "scrapers/resultados/r7.json",
+          "name": "r7.json",
+          "size": 5642,
           "extension": ".json"
         },
         {
-          "path": "docs/mkdocs/docs/openapi.json",
-          "name": "openapi.json",
-          "size": 974,
+          "path": "scrapers/resultados/metropoles.json",
+          "name": "metropoles.json",
+          "size": 5177,
           "extension": ".json"
         },
         {
           "path": "Frontend/package.json",
           "name": "package.json",
-          "size": 867,
+          "size": 1059,
           "extension": ".json"
         },
         {
           "path": "package.json",
           "name": "package.json",
-          "size": 106,
+          "size": 714,
           "extension": ".json"
         }
       ]
     },
     {
-      "language": "Markdown",
-      "file_count": 56,
-      "total_bytes": 110664,
-      "percentage": 3.32,
+      "language": "Python",
+      "file_count": 29,
+      "total_bytes": 89152,
+      "percentage": 2.64,
       "files": [
         {
-          "path": "docs/backend/FastAPI.md",
-          "name": "FastAPI.md",
-          "size": 8402,
-          "extension": ".md"
+          "path": "docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 11904,
+          "extension": ".py"
         },
         {
-          "path": "docs/mkdocs/docs/backend/FastAPI.md",
-          "name": "FastAPI.md",
-          "size": 8402,
-          "extension": ".md"
+          "path": "backend/app/adapters/api_adapter/dashboard_routes.py",
+          "name": "dashboard_routes.py",
+          "size": 7934,
+          "extension": ".py"
         },
+        {
+          "path": "backend/app/models.py",
+          "name": "models.py",
+          "size": 5376,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/adapters/json_adapter.py",
+          "name": "json_adapter.py",
+          "size": 5340,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/main.py",
+          "name": "main.py",
+          "size": 4983,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/metropoles.py",
+          "name": "metropoles.py",
+          "size": 4538,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tratamentoDeDados/juntar_dados.py",
+          "name": "juntar_dados.py",
+          "size": 4365,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/r7spider.py",
+          "name": "r7spider.py",
+          "size": 4240,
+          "extension": ".py"
+        },
+        {
+          "path": "scrapers/spiders/g1Spider.py",
+          "name": "g1Spider.py",
+          "size": 4089,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/llm/langChain.py",
+          "name": "langChain.py",
+          "size": 3776,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 25,
+      "total_bytes": 81286,
+      "percentage": 2.41,
+      "files": [
+        {
+          "path": "backend/app/adapters/api_adapter/__pycache__/dashboard_routes.cpython-314.pyc",
+          "name": "dashboard_routes.cpython-314.pyc",
+          "size": 9493,
+          "extension": ".pyc"
+        },
+        {
+          "path": "scrapers/spiders/__pycache__/metropoles.cpython-314.pyc",
+          "name": "metropoles.cpython-314.pyc",
+          "size": 5758,
+          "extension": ".pyc"
+        },
+        {
+          "path": "scrapers/spiders/__pycache__/r7spider.cpython-314.pyc",
+          "name": "r7spider.cpython-314.pyc",
+          "size": 5567,
+          "extension": ".pyc"
+        },
+        {
+          "path": "scrapers/spiders/__pycache__/g1Spider.cpython-314.pyc",
+          "name": "g1Spider.cpython-314.pyc",
+          "size": 5491,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/__pycache__/models.cpython-314.pyc",
+          "name": "models.cpython-314.pyc",
+          "size": 5278,
+          "extension": ".pyc"
+        },
+        {
+          "path": "BackEnd/app/__pycache__/main.cpython-314.pyc",
+          "name": "main.cpython-314.pyc",
+          "size": 4991,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/tratamentoDeDados/__pycache__/juntar_dados.cpython-314.pyc",
+          "name": "juntar_dados.cpython-314.pyc",
+          "size": 4540,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/entities.cpython-314.pyc",
+          "name": "entities.cpython-314.pyc",
+          "size": 4363,
+          "extension": ".pyc"
+        },
+        {
+          "path": "scrapers/spiders/__pycache__/cnnspider.cpython-314.pyc",
+          "name": "cnnspider.cpython-314.pyc",
+          "size": 4231,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/adapters/api_adapter/__pycache__/noticias_routes.cpython-314.pyc",
+          "name": "noticias_routes.cpython-314.pyc",
+          "size": 4094,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
+      "language": "Markdown",
+      "file_count": 51,
+      "total_bytes": 79057,
+      "percentage": 2.34,
+      "files": [
         {
           "path": "docs/backend/LangChain.md",
-          "name": "LangChain.md",
-          "size": 7867,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/mkdocs/docs/backend/LangChain.md",
           "name": "LangChain.md",
           "size": 7867,
           "extension": ".md"
@@ -183,19 +283,7 @@
           "extension": ".md"
         },
         {
-          "path": "docs/mkdocs/docs/backend/Scrapy.md",
-          "name": "Scrapy.md",
-          "size": 4137,
-          "extension": ".md"
-        },
-        {
           "path": "docs/frontend/React.md",
-          "name": "React.md",
-          "size": 4074,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/mkdocs/docs/frontend/React.md",
           "name": "React.md",
           "size": 4074,
           "extension": ".md"
@@ -205,199 +293,129 @@
           "name": "Requisitos.md",
           "size": 3569,
           "extension": ".md"
+        },
+        {
+          "path": "docs/backend/langChain/LangChain.md",
+          "name": "LangChain.md",
+          "size": 3551,
+          "extension": ".md"
+        },
+        {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 3123,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/backend/como-rodar-backend.md",
+          "name": "como-rodar-backend.md",
+          "size": 2979,
+          "extension": ".md"
+        },
+        {
+          "path": "Frontend/docs/projeto/Frontend.md",
+          "name": "Frontend.md",
+          "size": 2862,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/backend/FastAPI/FastAPI.md",
+          "name": "FastAPI.md",
+          "size": 2439,
+          "extension": ".md"
         }
       ]
     },
     {
-      "language": "Python",
+      "language": "JavaScript",
       "file_count": 25,
-      "total_bytes": 53897,
-      "percentage": 1.62,
+      "total_bytes": 47081,
+      "percentage": 1.4,
       "files": [
         {
-          "path": "docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 11904,
-          "extension": ".py"
+          "path": "Frontend/src/pages/Noticias.jsx",
+          "name": "Noticias.jsx",
+          "size": 7493,
+          "extension": ".jsx"
         },
         {
-          "path": "docs/mkdocs/docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 11773,
-          "extension": ".py"
+          "path": "Frontend/src/pages/Sobre.jsx",
+          "name": "Sobre.jsx",
+          "size": 6850,
+          "extension": ".jsx"
         },
         {
-          "path": "scrapers/spiders/metropoles.py",
-          "name": "metropoles.py",
-          "size": 3666,
-          "extension": ".py"
+          "path": "Frontend/src/pages/DetalhesNoticia.jsx",
+          "name": "DetalhesNoticia.jsx",
+          "size": 5940,
+          "extension": ".jsx"
         },
         {
-          "path": "scrapers/spiders/g1Spider.py",
-          "name": "g1Spider.py",
-          "size": 3618,
-          "extension": ".py"
+          "path": "Frontend/src/pages/Dashboard.jsx",
+          "name": "Dashboard.jsx",
+          "size": 4471,
+          "extension": ".jsx"
         },
         {
-          "path": "scrapers/spiders/r7spider.py",
-          "name": "r7spider.py",
-          "size": 2860,
-          "extension": ".py"
+          "path": "Frontend/src/components/BrazilMap.jsx",
+          "name": "BrazilMap.jsx",
+          "size": 2868,
+          "extension": ".jsx"
         },
         {
-          "path": "backend/teste_conexao.py",
-          "name": "teste_conexao.py",
-          "size": 2099,
-          "extension": ".py"
+          "path": "Frontend/src/pages/Login.jsx",
+          "name": "Login.jsx",
+          "size": 2721,
+          "extension": ".jsx"
         },
         {
-          "path": "scrapers/spiders/cnnspider.py",
-          "name": "cnnspider.py",
-          "size": 1784,
-          "extension": ".py"
+          "path": "Frontend/src/components/LeafletMap.jsx",
+          "name": "LeafletMap.jsx",
+          "size": 2503,
+          "extension": ".jsx"
         },
         {
-          "path": "backend/app/adapters/json_adapter.py",
-          "name": "json_adapter.py",
-          "size": 1692,
-          "extension": ".py"
+          "path": "Frontend/src/data/noticias.js",
+          "name": "noticias.js",
+          "size": 2030,
+          "extension": ".js"
         },
         {
-          "path": "backend/app/adapters/db_adapter.py",
-          "name": "db_adapter.py",
-          "size": 1686,
-          "extension": ".py"
+          "path": "Frontend/src/components/TopVehicles.jsx",
+          "name": "TopVehicles.jsx",
+          "size": 1494,
+          "extension": ".jsx"
         },
         {
-          "path": "backend/llm/langChain_Controller.py",
-          "name": "langChain_Controller.py",
-          "size": 1670,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
-      "language": "HTML",
-      "file_count": 5,
-      "total_bytes": 51340,
-      "percentage": 1.54,
-      "files": [
-        {
-          "path": "docs/dashboard/dashboard.html",
-          "name": "dashboard.html",
-          "size": 25017,
-          "extension": ".html"
-        },
-        {
-          "path": "docs/mkdocs/docs/dashboard/index.html",
-          "name": "index.html",
-          "size": 25017,
-          "extension": ".html"
-        },
-        {
-          "path": "overrides/index.html",
-          "name": "index.html",
-          "size": 478,
-          "extension": ".html"
-        },
-        {
-          "path": "docs/mkdocs/overrides/main.html",
-          "name": "main.html",
-          "size": 468,
-          "extension": ".html"
-        },
-        {
-          "path": "Frontend/index.html",
-          "name": "index.html",
-          "size": 360,
-          "extension": ".html"
-        }
-      ]
-    },
-    {
-      "language": "Unknown",
-      "file_count": 16,
-      "total_bytes": 40925,
-      "percentage": 1.23,
-      "files": [
-        {
-          "path": "docs/mkdocs/docs/productivity/__pycache__/collect_metrics.cpython-314.pyc",
-          "name": "collect_metrics.cpython-314.pyc",
-          "size": 17416,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/adapters/__pycache__/json_adapter.cpython-314.pyc",
-          "name": "json_adapter.cpython-314.pyc",
-          "size": 3496,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/adapters/__pycache__/db_adapter.cpython-314.pyc",
-          "name": "db_adapter.cpython-314.pyc",
-          "size": 3407,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/__pycache__/teste_conexao.cpython-314.pyc",
-          "name": "teste_conexao.cpython-314.pyc",
-          "size": 2686,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/__pycache__/models.cpython-314.pyc",
-          "name": "models.cpython-314.pyc",
-          "size": 2308,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/llm/__pycache__/langChain.cpython-311.pyc",
-          "name": "langChain.cpython-311.pyc",
-          "size": 2152,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/domain/__pycache__/entities.cpython-314.pyc",
-          "name": "entities.cpython-314.pyc",
-          "size": 2048,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/adapters/api_adapter/__pycache__/auth_routes.cpython-314.pyc",
-          "name": "auth_routes.cpython-314.pyc",
-          "size": 1918,
-          "extension": ".pyc"
-        },
-        {
-          "path": "__pycache__/main.cpython-314.pyc",
-          "name": "main.cpython-314.pyc",
-          "size": 1904,
-          "extension": ".pyc"
-        },
-        {
-          "path": "backend/app/ports/__pycache__/repository_port.cpython-314.pyc",
-          "name": "repository_port.cpython-314.pyc",
-          "size": 1333,
-          "extension": ".pyc"
+          "path": "Frontend/src/components/RegionChart.jsx",
+          "name": "RegionChart.jsx",
+          "size": 1322,
+          "extension": ".jsx"
         }
       ]
     },
     {
       "language": "CSS",
-      "file_count": 6,
-      "total_bytes": 27736,
-      "percentage": 0.83,
+      "file_count": 8,
+      "total_bytes": 40002,
+      "percentage": 1.19,
       "files": [
         {
           "path": "Frontend/src/App.css",
           "name": "App.css",
-          "size": 13824,
+          "size": 14108,
           "extension": ".css"
         },
         {
-          "path": "docs/mkdocs/docs/productivity/style.css",
-          "name": "style.css",
-          "size": 4205,
+          "path": "Frontend/src/pages/Noticias.css",
+          "name": "Noticias.css",
+          "size": 6527,
+          "extension": ".css"
+        },
+        {
+          "path": "Frontend/src/pages/Sobre.css",
+          "name": "Sobre.css",
+          "size": 5180,
           "extension": ".css"
         },
         {
@@ -407,9 +425,15 @@
           "extension": ".css"
         },
         {
-          "path": "docs/mkdocs/docs/stylesheets/extra.css",
-          "name": "extra.css",
-          "size": 2171,
+          "path": "Frontend/src/pages/DetalhesNoticia.css",
+          "name": "DetalhesNoticia.css",
+          "size": 4066,
+          "extension": ".css"
+        },
+        {
+          "path": "Frontend/src/pages/Mapa.css",
+          "name": "Mapa.css",
+          "size": 2585,
           "extension": ".css"
         },
         {
@@ -427,107 +451,103 @@
       ]
     },
     {
-      "language": "JavaScript",
-      "file_count": 20,
-      "total_bytes": 14093,
-      "percentage": 0.42,
+      "language": "HTML",
+      "file_count": 3,
+      "total_bytes": 25865,
+      "percentage": 0.77,
       "files": [
         {
-          "path": "Frontend/src/pages/Dashboard.jsx",
-          "name": "Dashboard.jsx",
-          "size": 2896,
-          "extension": ".jsx"
+          "path": "docs/dashboard/dashboard.html",
+          "name": "dashboard.html",
+          "size": 25017,
+          "extension": ".html"
         },
         {
-          "path": "Frontend/src/pages/Login.jsx",
-          "name": "Login.jsx",
-          "size": 2721,
-          "extension": ".jsx"
+          "path": "overrides/index.html",
+          "name": "index.html",
+          "size": 478,
+          "extension": ".html"
         },
         {
-          "path": "Frontend/src/components/BrazilMap.jsx",
-          "name": "BrazilMap.jsx",
-          "size": 1818,
-          "extension": ".jsx"
+          "path": "index.html",
+          "name": "index.html",
+          "size": 370,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 5,
+      "total_bytes": 13129,
+      "percentage": 0.39,
+      "files": [
+        {
+          "path": "testes/arquivos para testes.txt",
+          "name": "arquivos para testes.txt",
+          "size": 12723,
+          "extension": ".txt"
         },
         {
-          "path": "Frontend/eslint.config.js",
-          "name": "eslint.config.js",
-          "size": 1041,
-          "extension": ".js"
+          "path": "requirements.txt",
+          "name": "requirements.txt",
+          "size": 273,
+          "extension": ".txt"
         },
         {
-          "path": "Frontend/src/components/LatestNews.jsx",
-          "name": "LatestNews.jsx",
-          "size": 872,
-          "extension": ".jsx"
+          "path": "backend/llm/requirements.txt",
+          "name": "requirements.txt",
+          "size": 86,
+          "extension": ".txt"
         },
         {
-          "path": "Frontend/src/components/AuthPrompt.jsx",
-          "name": "AuthPrompt.jsx",
-          "size": 832,
-          "extension": ".jsx"
+          "path": "scrapers/requirements.txt",
+          "name": "requirements.txt",
+          "size": 30,
+          "extension": ".txt"
         },
         {
-          "path": "Frontend/src/components/NewsChart.jsx",
-          "name": "NewsChart.jsx",
-          "size": 747,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/RegionChart.jsx",
-          "name": "RegionChart.jsx",
-          "size": 685,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/TopVehicles.jsx",
-          "name": "TopVehicles.jsx",
-          "size": 586,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/Sidebar.jsx",
-          "name": "Sidebar.jsx",
-          "size": 551,
-          "extension": ".jsx"
+          "path": "docs/productivity/requirements.txt",
+          "name": "requirements.txt",
+          "size": 17,
+          "extension": ".txt"
         }
       ]
     },
     {
       "language": "YAML",
       "file_count": 5,
-      "total_bytes": 7128,
-      "percentage": 0.21,
+      "total_bytes": 6062,
+      "percentage": 0.18,
       "files": [
         {
-          "path": ".github/workflows/metrics-with-pages.yml",
-          "name": "metrics-with-pages.yml",
-          "size": 2070,
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 1831,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/langchaim.yml",
           "name": "langchaim.yml",
-          "size": 1479,
-          "extension": ".yml"
-        },
-        {
-          "path": "mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 1395,
+          "size": 1540,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/execute-scrapy.yml",
           "name": "execute-scrapy.yml",
-          "size": 1304,
+          "size": 1293,
           "extension": ".yml"
         },
         {
-          "path": "docs/mkdocs/mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 880,
+          "path": ".github/workflows/static.yml",
+          "name": "static.yml",
+          "size": 1098,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/keep-alive.yml",
+          "name": "keep-alive.yml",
+          "size": 300,
           "extension": ".yml"
         }
       ]
@@ -575,34 +595,22 @@
       ]
     },
     {
-      "language": "Text",
-      "file_count": 3,
-      "total_bytes": 157,
+      "language": "JPEG Image",
+      "file_count": 1,
+      "total_bytes": 0,
       "percentage": 0.0,
       "files": [
         {
-          "path": "requirements.txt",
-          "name": "requirements.txt",
-          "size": 123,
-          "extension": ".txt"
-        },
-        {
-          "path": "docs/mkdocs/docs/productivity/requirements.txt",
-          "name": "requirements.txt",
-          "size": 17,
-          "extension": ".txt"
-        },
-        {
-          "path": "docs/productivity/requirements.txt",
-          "name": "requirements.txt",
-          "size": 17,
-          "extension": ".txt"
+          "path": "Frontend/public/images/noticia-placeholder.jpg",
+          "name": "noticia-placeholder.jpg",
+          "size": 0,
+          "extension": ".jpg"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-26T09:22:52.142190",
+    "extracted_at": "2026-06-27T08:36:14.126169",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }
