@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-27T08:32:59.520540",
+  "analyzed_at": "2026-06-28T09:06:53.429654",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 172,
-  "total_bytes": 3372256,
+  "total_files": 174,
+  "total_bytes": 2722501,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 6,
       "total_bytes": 1955818,
-      "percentage": 58.0,
+      "percentage": 71.84,
       "files": [
         {
           "path": "Frontend/src/assets/logo2.png",
@@ -57,15 +57,9 @@
     {
       "language": "JSON",
       "file_count": 11,
-      "total_bytes": 1029546,
-      "percentage": 30.53,
+      "total_bytes": 352130,
+      "percentage": 12.93,
       "files": [
-        {
-          "path": "scrapers/resultados/resultados.json",
-          "name": "resultados.json",
-          "size": 640366,
-          "extension": ".json"
-        },
         {
           "path": "Frontend/package-lock.json",
           "name": "package-lock.json",
@@ -73,9 +67,9 @@
           "extension": ".json"
         },
         {
-          "path": "scrapers/resultados/g1.json",
-          "name": "g1.json",
-          "size": 88751,
+          "path": "scrapers/resultados/resultados.json",
+          "name": "resultados.json",
+          "size": 43515,
           "extension": ".json"
         },
         {
@@ -85,15 +79,21 @@
           "extension": ".json"
         },
         {
-          "path": "backend/llm/news-llm.json",
-          "name": "news-llm.json",
-          "size": 23995,
+          "path": "scrapers/resultados/g1.json",
+          "name": "g1.json",
+          "size": 23383,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/metropoles.json",
+          "name": "metropoles.json",
+          "size": 9466,
           "extension": ".json"
         },
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 8958,
+          "size": 9089,
           "extension": ".json"
         },
         {
@@ -103,9 +103,9 @@
           "extension": ".json"
         },
         {
-          "path": "scrapers/resultados/metropoles.json",
-          "name": "metropoles.json",
-          "size": 5177,
+          "path": "scrapers/resultados/cnn.json",
+          "name": "cnn.json",
+          "size": 4380,
           "extension": ".json"
         },
         {
@@ -125,8 +125,8 @@
     {
       "language": "Python",
       "file_count": 29,
-      "total_bytes": 89152,
-      "percentage": 2.64,
+      "total_bytes": 89384,
+      "percentage": 3.28,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
@@ -159,15 +159,15 @@
           "extension": ".py"
         },
         {
-          "path": "scrapers/spiders/metropoles.py",
-          "name": "metropoles.py",
-          "size": 4538,
+          "path": "backend/tratamentoDeDados/juntar_dados.py",
+          "name": "juntar_dados.py",
+          "size": 4860,
           "extension": ".py"
         },
         {
-          "path": "backend/tratamentoDeDados/juntar_dados.py",
-          "name": "juntar_dados.py",
-          "size": 4365,
+          "path": "scrapers/spiders/metropoles.py",
+          "name": "metropoles.py",
+          "size": 4538,
           "extension": ".py"
         },
         {
@@ -194,7 +194,7 @@
       "language": "Unknown",
       "file_count": 25,
       "total_bytes": 81286,
-      "percentage": 2.41,
+      "percentage": 2.99,
       "files": [
         {
           "path": "backend/app/adapters/api_adapter/__pycache__/dashboard_routes.cpython-314.pyc",
@@ -260,9 +260,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 51,
-      "total_bytes": 79057,
-      "percentage": 2.34,
+      "file_count": 52,
+      "total_bytes": 79379,
+      "percentage": 2.92,
       "files": [
         {
           "path": "docs/backend/LangChain.md",
@@ -327,10 +327,42 @@
       ]
     },
     {
+      "language": "HTML",
+      "file_count": 4,
+      "total_bytes": 50882,
+      "percentage": 1.87,
+      "files": [
+        {
+          "path": "docs/dashboard/dashboard.html",
+          "name": "dashboard.html",
+          "size": 25017,
+          "extension": ".html"
+        },
+        {
+          "path": "docs/produtividade/dashboard.html",
+          "name": "dashboard.html",
+          "size": 25017,
+          "extension": ".html"
+        },
+        {
+          "path": "overrides/index.html",
+          "name": "index.html",
+          "size": 478,
+          "extension": ".html"
+        },
+        {
+          "path": "index.html",
+          "name": "index.html",
+          "size": 370,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
       "language": "JavaScript",
       "file_count": 25,
-      "total_bytes": 47081,
-      "percentage": 1.4,
+      "total_bytes": 47185,
+      "percentage": 1.73,
       "files": [
         {
           "path": "Frontend/src/pages/Noticias.jsx",
@@ -398,7 +430,7 @@
       "language": "CSS",
       "file_count": 8,
       "total_bytes": 40002,
-      "percentage": 1.19,
+      "percentage": 1.47,
       "files": [
         {
           "path": "Frontend/src/App.css",
@@ -451,36 +483,10 @@
       ]
     },
     {
-      "language": "HTML",
-      "file_count": 3,
-      "total_bytes": 25865,
-      "percentage": 0.77,
-      "files": [
-        {
-          "path": "docs/dashboard/dashboard.html",
-          "name": "dashboard.html",
-          "size": 25017,
-          "extension": ".html"
-        },
-        {
-          "path": "overrides/index.html",
-          "name": "index.html",
-          "size": 478,
-          "extension": ".html"
-        },
-        {
-          "path": "index.html",
-          "name": "index.html",
-          "size": 370,
-          "extension": ".html"
-        }
-      ]
-    },
-    {
       "language": "Text",
       "file_count": 5,
-      "total_bytes": 13129,
-      "percentage": 0.39,
+      "total_bytes": 13146,
+      "percentage": 0.48,
       "files": [
         {
           "path": "testes/arquivos para testes.txt",
@@ -491,7 +497,7 @@
         {
           "path": "requirements.txt",
           "name": "requirements.txt",
-          "size": 273,
+          "size": 290,
           "extension": ".txt"
         },
         {
@@ -517,31 +523,31 @@
     {
       "language": "YAML",
       "file_count": 5,
-      "total_bytes": 6062,
-      "percentage": 0.18,
+      "total_bytes": 8031,
+      "percentage": 0.29,
       "files": [
+        {
+          "path": ".github/workflows/static.yml",
+          "name": "static.yml",
+          "size": 2913,
+          "extension": ".yml"
+        },
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 1831,
+          "size": 1898,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/langchaim.yml",
           "name": "langchaim.yml",
-          "size": 1540,
+          "size": 1627,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/execute-scrapy.yml",
           "name": "execute-scrapy.yml",
           "size": 1293,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/static.yml",
-          "name": "static.yml",
-          "size": 1098,
           "extension": ".yml"
         },
         {
@@ -556,7 +562,7 @@
       "language": "SVG Image",
       "file_count": 1,
       "total_bytes": 4126,
-      "percentage": 0.12,
+      "percentage": 0.15,
       "files": [
         {
           "path": "Frontend/src/assets/react.svg",
@@ -570,7 +576,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1060,
-      "percentage": 0.03,
+      "percentage": 0.04,
       "files": [
         {
           "path": "LICENSE",
@@ -610,7 +616,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-27T08:36:14.126169",
+    "extracted_at": "2026-06-28T09:09:59.671784",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }
