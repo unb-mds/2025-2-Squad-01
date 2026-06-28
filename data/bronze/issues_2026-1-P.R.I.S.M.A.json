@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-06-27T07:43:31.174743",
+      "extracted_at": "2026-06-28T08:16:28.318282",
       "file_path": "data/bronze/issues_2026-1-P.R.I.S.M.A.json",
       "record_count": 52
     }
@@ -186,7 +186,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -212,10 +212,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-25T15:42:11Z",
-    "updated_at": "2026-06-25T15:42:11Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T16:27:32Z",
+    "closed_at": "2026-06-27T16:27:32Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -252,8 +252,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nO gráfico de commits apresentava achatamento no eixo temporal (ziguezague poluído) e os módulos analíticos não possuíam título individual, dificultando a leitura visual.\n\n## Solução Aplicada\nInserção de cabeçalhos descritivos no HTML e otimização da tensão de linha (tension) e limite de eixos (ticks) no motor do Chart.js.\n\n## Checklist de Entregas\n- [ ] Inserção de títulos no DOM (`index.html`).\n- [ ] Ajuste dos parâmetros visuais de agrupamento e tensão das curvas no `charts.js`.",
-    "closed_by": null,
+    "body": "## Contexto\nO gráfico de commits apresentava achatamento no eixo temporal (ziguezague poluído) e os módulos analíticos não possuíam título individual, dificultando a leitura visual.\n\n## Solução Aplicada\nInserção de cabeçalhos descritivos no HTML e otimização da tensão de linha (tension) e limite de eixos (ticks) no motor do Chart.js.\n\n## Checklist de Entregas\n- [x] Inserção de títulos no DOM (`index.html`).\n- [x] Ajuste dos parâmetros visuais de agrupamento e tensão das curvas no `charts.js`.",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/94/reactions",
       "total_count": 0,
@@ -268,7 +288,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/94/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -305,14 +325,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-25T15:38:37Z",
-    "updated_at": "2026-06-25T15:38:37Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T16:29:45Z",
+    "closed_at": "2026-06-27T16:29:45Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -329,8 +349,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nUm erro de referência (`ReferenceError: nivel is not defined`) no componente `heatmap.js` estava interrompendo a renderização em cascata do Javascript, travando os painéis subsequentes de Log e Equipe.\n\n## Solução Aplicada\nCorreção da ordem de declaração de variáveis no loop de construção do mapa e implementação de Tooltips nativos detalhados.\n\n## Checklist de Entregas\n- [ ] Correção da declaração da variável de cor no script.\n- [ ] Formatação da data para padrão PT-BR no tooltip.\n- [ ] Soma consolidada de atividades diárias (Commits + Issues Abertas + Issues Fechadas).",
-    "closed_by": null,
+    "body": "## Contexto\nUm erro de referência (`ReferenceError: nivel is not defined`) no componente `heatmap.js` estava interrompendo a renderização em cascata do Javascript, travando os painéis subsequentes de Log e Equipe.\n\n## Solução Aplicada\nCorreção da ordem de declaração de variáveis no loop de construção do mapa e implementação de Tooltips nativos detalhados.\n\n## Checklist de Entregas\n- [x] Correção da declaração da variável de cor no script.\n- [x] Formatação da data para padrão PT-BR no tooltip.\n- [x] Soma consolidada de atividades diárias (Commits + Issues Abertas + Issues Fechadas).",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/93/reactions",
       "total_count": 0,
@@ -345,7 +385,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/93/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -382,14 +422,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-25T15:38:13Z",
-    "updated_at": "2026-06-25T15:38:13Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T16:30:00Z",
+    "closed_at": "2026-06-27T16:30:00Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -406,8 +446,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nO log de atividades Git exibia a hash (SHA) das revisões como texto estático, impedindo a auditoria rápida do código.\n\n## Solução Aplicada\nAtualização do componente `commitlog.js` para montar dinamicamente a URL do repositório, transformando a hash em um link direto para o *diff* no GitHub.\n\n## Checklist de Entregas\n- [ ] Construção da `diffUrl` baseada no repositório `unb-mds/2026-1-P.R.I.S.M.A`.\n- [ ] Inserção da tag de âncora `<a>` com target para nova aba.",
-    "closed_by": null,
+    "body": "## Contexto\nO log de atividades Git exibia a hash (SHA) das revisões como texto estático, impedindo a auditoria rápida do código.\n\n## Solução Aplicada\nAtualização do componente `commitlog.js` para montar dinamicamente a URL do repositório, transformando a hash em um link direto para o *diff* no GitHub.\n\n## Checklist de Entregas\n- [x] Construção da `diffUrl` baseada no repositório `unb-mds/2026-1-P.R.I.S.M.A`.\n- [x] Inserção da tag de âncora `<a>` com target para nova aba.",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/92/reactions",
       "total_count": 0,
@@ -422,7 +482,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/92/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -459,7 +519,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -487,8 +547,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-06-25T15:37:47Z",
-    "updated_at": "2026-06-25T15:37:47Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T16:30:18Z",
+    "closed_at": "2026-06-27T16:30:18Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -525,8 +585,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nOs cards individuais de cada membro da equipe exibiam a métrica de Pull Requests (que foi desativada na API) e focavam apenas em \"Demandas\" pendentes, mascarando o volume de trabalho já entregue.\n\n## Solução Aplicada\nRefatoração do componente `collaborators.js` para iterar sobre o array de issues do JSON e separar visualmente o que está pendente do que já foi solucionado por cada usuário.\n\n## Checklist de Entregas\n- [ ] Remoção da contagem de PRs nulos.\n- [ ] Implementação da lógica de separação por `state === 'open'` e `state === 'closed'`.\n- [ ] Atualização do grid HTML dos cards para exibir \"Commits\", \"Abertas\" (âmbar) e \"Fechadas\" (esmeralda).",
-    "closed_by": null,
+    "body": "## Contexto\nOs cards individuais de cada membro da equipe exibiam a métrica de Pull Requests (que foi desativada na API) e focavam apenas em \"Demandas\" pendentes, mascarando o volume de trabalho já entregue.\n\n## Solução Aplicada\nRefatoração do componente `collaborators.js` para iterar sobre o array de issues do JSON e separar visualmente o que está pendente do que já foi solucionado por cada usuário.\n\n## Checklist de Entregas\n- [x] Remoção da contagem de PRs nulos.\n- [x] Implementação da lógica de separação por `state === 'open'` e `state === 'closed'`.\n- [x] Atualização do grid HTML dos cards para exibir \"Commits\", \"Abertas\" (âmbar) e \"Fechadas\" (esmeralda).",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/91/reactions",
       "total_count": 0,
@@ -541,7 +621,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/91/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -578,7 +658,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -604,10 +684,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-25T15:37:00Z",
-    "updated_at": "2026-06-25T15:37:00Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T16:28:12Z",
+    "closed_at": "2026-06-27T16:28:12Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -644,8 +724,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nOs dados do dashboard estavam sendo poluídos por commits de bots (`dependabot`, `github-actions`) e usuários externos. Além disso, o status do build exibia dados fictícios.\n\n## Solução Aplicada\nCriação de um módulo de filtragem no script Python (`export_data.py`) garantindo que apenas as atividades da equipe sejam contabilizadas e processadas para o Frontend.\n\n## Checklist de Entregas\n- [ ] Implementação do array `TEAM_MEMBERS` com os logins oficiais.\n- [ ] Filtro de validação na extração de commits.\n- [ ] Filtro de validação na extração de issues.\n- [ ] Adição do campo `generated_at` no JSON para alimentar o card de \"Última Sincronização\".",
-    "closed_by": null,
+    "body": "## Contexto\nOs dados do dashboard estavam sendo poluídos por commits de bots (`dependabot`, `github-actions`) e usuários externos. Além disso, o status do build exibia dados fictícios.\n\n## Solução Aplicada\nCriação de um módulo de filtragem no script Python (`export_data.py`) garantindo que apenas as atividades da equipe sejam contabilizadas e processadas para o Frontend.\n\n## Checklist de Entregas\n- [x] Implementação do array `TEAM_MEMBERS` com os logins oficiais.\n- [x] Filtro de validação na extração de commits.\n- [x] Filtro de validação na extração de issues.\n- [x] Adição do campo `generated_at` no JSON para alimentar o card de \"Última Sincronização\".",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/90/reactions",
       "total_count": 0,
@@ -660,7 +760,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/90/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
@@ -697,7 +797,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -723,10 +823,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-25T15:36:30Z",
-    "updated_at": "2026-06-25T15:36:30Z",
-    "closed_at": null,
+    "updated_at": "2026-06-27T15:00:15Z",
+    "closed_at": "2026-06-27T15:00:15Z",
     "assignee": {
       "login": "delvale412",
       "id": 122396991,
@@ -763,8 +863,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Contexto\nO dashboard exigia a inserção manual de um token do GitHub pelo usuário na interface, o que gerava atrito e expunha a aplicação a riscos de segurança.\n\n## Solução Aplicada\nModificado a arquitetura para o modelo estático (JAMstack). O frontend agora consome automaticamente o arquivo `dados.json` gerado em background pelo GitHub Actions, eliminando o campo de senha da interface.\n\n## Checklist de Entregas\n- [ ] Remoção do input de token no `index.html`.\n- [ ] Atualização do botão de \"Sincronizar\" para \"Atualizar Dados\".\n- [ ] Remoção da lógica de `localStorage` no `main.js`.\n- [ ] Configuração do `app.js` para ler o pacote de dados local.",
-    "closed_by": null,
+    "body": "## Contexto\nO dashboard exigia a inserção manual de um token do GitHub pelo usuário na interface, o que gerava atrito e expunha a aplicação a riscos de segurança.\n\n## Solução Aplicada\nModificado a arquitetura para o modelo estático (JAMstack). O frontend agora consome automaticamente o arquivo `dados.json` gerado em background pelo GitHub Actions, eliminando o campo de senha da interface.\n\n## Checklist de Entregas\n- [x] Remoção do input de token no `index.html`.\n- [x] Atualização do botão de \"Sincronizar\" para \"Atualizar Dados\".\n- [x] Remoção da lógica de `localStorage` no `main.js`.\n- [x] Configuração do `app.js` para ler o pacote de dados local.",
+    "closed_by": {
+      "login": "delvale412",
+      "id": 122396991,
+      "node_id": "U_kgDOB0uhPw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122396991?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/delvale412",
+      "html_url": "https://github.com/delvale412",
+      "followers_url": "https://api.github.com/users/delvale412/followers",
+      "following_url": "https://api.github.com/users/delvale412/following{/other_user}",
+      "gists_url": "https://api.github.com/users/delvale412/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/delvale412/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/delvale412/subscriptions",
+      "organizations_url": "https://api.github.com/users/delvale412/orgs",
+      "repos_url": "https://api.github.com/users/delvale412/repos",
+      "events_url": "https://api.github.com/users/delvale412/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/delvale412/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/89/reactions",
       "total_count": 0,
@@ -779,7 +899,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-P.R.I.S.M.A/issues/89/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-P.R.I.S.M.A"
   },
