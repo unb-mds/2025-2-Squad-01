@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-28T09:06:52.153882",
+  "analyzed_at": "2026-06-29T10:15:09.293640",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 247,
-  "total_bytes": 3529172,
+  "total_files": 249,
+  "total_bytes": 3530764,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 8,
       "total_bytes": 1556150,
-      "percentage": 44.09,
+      "percentage": 44.07,
       "files": [
         {
           "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
@@ -70,7 +70,7 @@
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 28.45,
+      "percentage": 28.43,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -114,7 +114,7 @@
       "language": "Markdown",
       "file_count": 95,
       "total_bytes": 467441,
-      "percentage": 13.25,
+      "percentage": 13.24,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -181,7 +181,7 @@
     {
       "language": "JSON",
       "file_count": 4,
-      "total_bytes": 241979,
+      "total_bytes": 242117,
       "percentage": 6.86,
       "files": [
         {
@@ -193,7 +193,7 @@
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 8097,
+          "size": 8235,
           "extension": ".json"
         },
         {
@@ -213,20 +213,14 @@
     {
       "language": "TypeScript",
       "file_count": 52,
-      "total_bytes": 108841,
-      "percentage": 3.08,
+      "total_bytes": 106545,
+      "percentage": 3.02,
       "files": [
         {
           "path": "frontend/__tests__/components/PainelFiltros.test.tsx",
           "name": "PainelFiltros.test.tsx",
           "size": 6754,
           "extension": ".tsx"
-        },
-        {
-          "path": "frontend/utils/noticias.ts",
-          "name": "noticias.ts",
-          "size": 6295,
-          "extension": ".ts"
         },
         {
           "path": "frontend/__tests__/utils/filtros.test.ts",
@@ -241,15 +235,15 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/__tests__/components/MapaInterativo.test.tsx",
-          "name": "MapaInterativo.test.tsx",
-          "size": 5012,
+          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
+          "name": "PainelFiltros.tsx",
+          "size": 5083,
           "extension": ".tsx"
         },
         {
-          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
-          "name": "PainelFiltros.tsx",
-          "size": 4763,
+          "path": "frontend/__tests__/components/MapaInterativo.test.tsx",
+          "name": "MapaInterativo.test.tsx",
+          "size": 5012,
           "extension": ".tsx"
         },
         {
@@ -275,25 +269,31 @@
           "name": "NewsCard.test.tsx",
           "size": 4141,
           "extension": ".tsx"
+        },
+        {
+          "path": "frontend/__tests__/components/Header.test.tsx",
+          "name": "Header.test.tsx",
+          "size": 3797,
+          "extension": ".tsx"
         }
       ]
     },
     {
       "language": "Python",
       "file_count": 46,
-      "total_bytes": 100740,
-      "percentage": 2.85,
+      "total_bytes": 103870,
+      "percentage": 2.94,
       "files": [
-        {
-          "path": "backend/app/services/ingestao.py",
-          "name": "ingestao.py",
-          "size": 6558,
-          "extension": ".py"
-        },
         {
           "path": "backend/tests/test_ingestao.py",
           "name": "test_ingestao.py",
-          "size": 6205,
+          "size": 7106,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/services/ingestao.py",
+          "name": "ingestao.py",
+          "size": 6836,
           "extension": ".py"
         },
         {
@@ -429,9 +429,41 @@
       ]
     },
     {
-      "language": "No Extension",
+      "language": "YAML",
       "file_count": 4,
-      "total_bytes": 4798,
+      "total_bytes": 4945,
+      "percentage": 0.14,
+      "files": [
+        {
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 1622,
+          "extension": ".yml"
+        },
+        {
+          "path": "backend/docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 1448,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/metrics.yml",
+          "name": "metrics.yml",
+          "size": 1108,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/docs.yml",
+          "name": "docs.yml",
+          "size": 767,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 5,
+      "total_bytes": 4922,
       "percentage": 0.14,
       "files": [
         {
@@ -450,6 +482,12 @@
           "path": "backend/Dockerfile",
           "name": "Dockerfile",
           "size": 533,
+          "extension": ""
+        },
+        {
+          "path": "frontend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 124,
           "extension": ""
         },
         {
@@ -475,41 +513,9 @@
       ]
     },
     {
-      "language": "YAML",
-      "file_count": 4,
-      "total_bytes": 4599,
-      "percentage": 0.13,
-      "files": [
-        {
-          "path": "mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 1622,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/metrics.yml",
-          "name": "metrics.yml",
-          "size": 1108,
-          "extension": ".yml"
-        },
-        {
-          "path": "backend/docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 1102,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/docs.yml",
-          "name": "docs.yml",
-          "size": 767,
-          "extension": ".yml"
-        }
-      ]
-    },
-    {
       "language": "Unknown",
-      "file_count": 2,
-      "total_bytes": 705,
+      "file_count": 3,
+      "total_bytes": 855,
       "percentage": 0.02,
       "files": [
         {
@@ -517,6 +523,12 @@
           "name": "script.py.mako",
           "size": 704,
           "extension": ".mako"
+        },
+        {
+          "path": "frontend/.env.example",
+          "name": ".env.example",
+          "size": 150,
+          "extension": ".example"
         },
         {
           "path": "docs/imagens/.gitkeep",
@@ -586,7 +598,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-28T09:09:58.860301",
+    "extracted_at": "2026-06-29T10:18:20.370057",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }
