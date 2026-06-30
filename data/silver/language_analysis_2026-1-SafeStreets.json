@@ -2,19 +2,19 @@
   "repository": "2026-1-SafeStreets",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-29T10:15:09.293640",
+  "analyzed_at": "2026-06-30T09:17:48.469345",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
   "total_files": 249,
-  "total_bytes": 3530764,
+  "total_bytes": 3551103,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 8,
       "total_bytes": 1556150,
-      "percentage": 44.07,
+      "percentage": 43.82,
       "files": [
         {
           "path": "frontend/Specs/Specs_pg_inicial/imagens/pagina_inicial_com_menu.png",
@@ -70,7 +70,7 @@
       "language": "JPEG Image",
       "file_count": 6,
       "total_bytes": 1003918,
-      "percentage": 28.43,
+      "percentage": 28.27,
       "files": [
         {
           "path": "docs/imagens/foto-edson.jpeg",
@@ -114,7 +114,7 @@
       "language": "Markdown",
       "file_count": 95,
       "total_bytes": 467441,
-      "percentage": 13.24,
+      "percentage": 13.16,
       "files": [
         {
           "path": "docs/Estudos/analise-de-linguagens.md",
@@ -181,8 +181,8 @@
     {
       "language": "JSON",
       "file_count": 4,
-      "total_bytes": 242117,
-      "percentage": 6.86,
+      "total_bytes": 242044,
+      "percentage": 6.82,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -193,7 +193,7 @@
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 8235,
+          "size": 8162,
           "extension": ".json"
         },
         {
@@ -211,15 +211,83 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 46,
+      "total_bytes": 120789,
+      "percentage": 3.4,
+      "files": [
+        {
+          "path": "backend/app/services/ingestao.py",
+          "name": "ingestao.py",
+          "size": 14921,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_ingestao.py",
+          "name": "test_ingestao.py",
+          "size": 12469,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_ocorrencia_repository.py",
+          "name": "test_ocorrencia_repository.py",
+          "size": 6147,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/alembic/versions/001_initial_schema.py",
+          "name": "001_initial_schema.py",
+          "size": 6082,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/.claude/skills/run-ingestao/driver.py",
+          "name": "driver.py",
+          "size": 5812,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/.claude/skills/run-endpoints/driver.py",
+          "name": "driver.py",
+          "size": 4975,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/integrations/correio_rss.py",
+          "name": "correio_rss.py",
+          "size": 4918,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/.claude/skills/run-nominatim-gemini/driver.py",
+          "name": "driver.py",
+          "size": 4874,
+          "extension": ".py"
+        },
+        {
+          "path": "docs/productivity/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 4789,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/.claude/skills/run-schemas/driver.py",
+          "name": "driver.py",
+          "size": 4066,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "TypeScript",
       "file_count": 52,
-      "total_bytes": 106545,
-      "percentage": 3.02,
+      "total_bytes": 109423,
+      "percentage": 3.08,
       "files": [
         {
           "path": "frontend/__tests__/components/PainelFiltros.test.tsx",
           "name": "PainelFiltros.test.tsx",
-          "size": 6754,
+          "size": 6619,
           "extension": ".tsx"
         },
         {
@@ -229,15 +297,15 @@
           "extension": ".ts"
         },
         {
-          "path": "frontend/__tests__/components/Drawer.test.tsx",
-          "name": "Drawer.test.tsx",
-          "size": 5114,
+          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
+          "name": "PainelFiltros.tsx",
+          "size": 5463,
           "extension": ".tsx"
         },
         {
-          "path": "frontend/components/PainelFiltros/PainelFiltros.tsx",
-          "name": "PainelFiltros.tsx",
-          "size": 5083,
+          "path": "frontend/__tests__/components/Drawer.test.tsx",
+          "name": "Drawer.test.tsx",
+          "size": 5114,
           "extension": ".tsx"
         },
         {
@@ -271,85 +339,17 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/__tests__/components/Header.test.tsx",
-          "name": "Header.test.tsx",
-          "size": 3797,
+          "path": "frontend/__tests__/view/NoticiaDetalhe.test.tsx",
+          "name": "NoticiaDetalhe.test.tsx",
+          "size": 4005,
           "extension": ".tsx"
-        }
-      ]
-    },
-    {
-      "language": "Python",
-      "file_count": 46,
-      "total_bytes": 103870,
-      "percentage": 2.94,
-      "files": [
-        {
-          "path": "backend/tests/test_ingestao.py",
-          "name": "test_ingestao.py",
-          "size": 7106,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/services/ingestao.py",
-          "name": "ingestao.py",
-          "size": 6836,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_ocorrencia_repository.py",
-          "name": "test_ocorrencia_repository.py",
-          "size": 6147,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/alembic/versions/001_initial_schema.py",
-          "name": "001_initial_schema.py",
-          "size": 6082,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/.claude/skills/run-ingestao/driver.py",
-          "name": "driver.py",
-          "size": 5812,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/.claude/skills/run-endpoints/driver.py",
-          "name": "driver.py",
-          "size": 4975,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/.claude/skills/run-nominatim-gemini/driver.py",
-          "name": "driver.py",
-          "size": 4874,
-          "extension": ".py"
-        },
-        {
-          "path": "docs/productivity/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 4789,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/.claude/skills/run-schemas/driver.py",
-          "name": "driver.py",
-          "size": 4066,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/.claude/skills/run-correio-rss/driver.py",
-          "name": "driver.py",
-          "size": 3983,
-          "extension": ".py"
         }
       ]
     },
     {
       "language": "CSS",
       "file_count": 17,
-      "total_bytes": 18131,
+      "total_bytes": 18165,
       "percentage": 0.51,
       "files": [
         {
@@ -361,7 +361,7 @@
         {
           "path": "frontend/components/PainelFiltros/PainelFiltros.module.css",
           "name": "PainelFiltros.module.css",
-          "size": 2363,
+          "size": 2397,
           "extension": ".css"
         },
         {
@@ -431,19 +431,19 @@
     {
       "language": "YAML",
       "file_count": 4,
-      "total_bytes": 4945,
-      "percentage": 0.14,
+      "total_bytes": 5518,
+      "percentage": 0.16,
       "files": [
+        {
+          "path": "backend/docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 2021,
+          "extension": ".yml"
+        },
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
           "size": 1622,
-          "extension": ".yml"
-        },
-        {
-          "path": "backend/docker-compose.yml",
-          "name": "docker-compose.yml",
-          "size": 1448,
           "extension": ".yml"
         },
         {
@@ -541,13 +541,13 @@
     {
       "language": "Git Ignore",
       "file_count": 6,
-      "total_bytes": 400,
+      "total_bytes": 408,
       "percentage": 0.01,
       "files": [
         {
           "path": "frontend/.gitignore",
           "name": ".gitignore",
-          "size": 362,
+          "size": 370,
           "extension": ".gitignore"
         },
         {
@@ -598,7 +598,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-29T10:18:20.370057",
+    "extracted_at": "2026-06-30T09:20:58.588526",
     "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2026-2-VeritasIA",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-29T10:15:10.378772",
+  "analyzed_at": "2026-06-30T09:17:49.644886",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
   "total_files": 174,
-  "total_bytes": 2729047,
+  "total_bytes": 2935032,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 6,
       "total_bytes": 1955818,
-      "percentage": 71.67,
+      "percentage": 66.64,
       "files": [
         {
           "path": "Frontend/src/assets/logo2.png",
@@ -57,49 +57,55 @@
     {
       "language": "JSON",
       "file_count": 11,
-      "total_bytes": 358676,
-      "percentage": 13.14,
+      "total_bytes": 539027,
+      "percentage": 18.37,
       "files": [
         {
           "path": "Frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 216991,
-          "extension": ".json"
-        },
-        {
-          "path": "scrapers/resultados/resultados.json",
-          "name": "resultados.json",
-          "size": 46837,
+          "size": 216958,
           "extension": ".json"
         },
         {
           "path": "package-lock.json",
           "name": "package-lock.json",
-          "size": 37889,
+          "size": 131382,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/resultados.json",
+          "name": "resultados.json",
+          "size": 90695,
           "extension": ".json"
         },
         {
           "path": "scrapers/resultados/g1.json",
           "name": "g1.json",
-          "size": 35225,
+          "size": 61755,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/metropoles.json",
+          "name": "metropoles.json",
+          "size": 13599,
           "extension": ".json"
         },
         {
           "path": "docs/productivity/metrics.json",
           "name": "metrics.json",
-          "size": 9089,
+          "size": 9216,
+          "extension": ".json"
+        },
+        {
+          "path": "scrapers/resultados/cnn.json",
+          "name": "cnn.json",
+          "size": 8005,
           "extension": ".json"
         },
         {
           "path": "scrapers/resultados/r7.json",
           "name": "r7.json",
           "size": 5642,
-          "extension": ".json"
-        },
-        {
-          "path": "scrapers/resultados/metropoles.json",
-          "name": "metropoles.json",
-          "size": 5224,
           "extension": ".json"
         },
         {
@@ -113,12 +119,6 @@
           "name": "package.json",
           "size": 714,
           "extension": ".json"
-        },
-        {
-          "path": "scrapers/resultados/cnn.json",
-          "name": "cnn.json",
-          "size": 4,
-          "extension": ".json"
         }
       ]
     },
@@ -126,7 +126,7 @@
       "language": "Python",
       "file_count": 29,
       "total_bytes": 89384,
-      "percentage": 3.28,
+      "percentage": 3.05,
       "files": [
         {
           "path": "docs/productivity/collect_metrics.py",
@@ -194,7 +194,7 @@
       "language": "Unknown",
       "file_count": 25,
       "total_bytes": 81286,
-      "percentage": 2.98,
+      "percentage": 2.77,
       "files": [
         {
           "path": "backend/app/adapters/api_adapter/__pycache__/dashboard_routes.cpython-314.pyc",
@@ -262,7 +262,7 @@
       "language": "Markdown",
       "file_count": 52,
       "total_bytes": 79379,
-      "percentage": 2.91,
+      "percentage": 2.7,
       "files": [
         {
           "path": "docs/backend/LangChain.md",
@@ -327,10 +327,78 @@
       ]
     },
     {
+      "language": "JavaScript",
+      "file_count": 25,
+      "total_bytes": 71099,
+      "percentage": 2.42,
+      "files": [
+        {
+          "path": "Frontend/src/pages/Noticias.jsx",
+          "name": "Noticias.jsx",
+          "size": 8816,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/pages/Sobre.jsx",
+          "name": "Sobre.jsx",
+          "size": 8310,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/pages/DetalhesNoticia.jsx",
+          "name": "DetalhesNoticia.jsx",
+          "size": 7888,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/pages/Dashboard.jsx",
+          "name": "Dashboard.jsx",
+          "size": 7018,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/components/LeafletMap.jsx",
+          "name": "LeafletMap.jsx",
+          "size": 5495,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/components/BrazilMap.jsx",
+          "name": "BrazilMap.jsx",
+          "size": 4027,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/pages/Login.jsx",
+          "name": "Login.jsx",
+          "size": 3437,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/pages/Mapa.jsx",
+          "name": "Mapa.jsx",
+          "size": 3329,
+          "extension": ".jsx"
+        },
+        {
+          "path": "Frontend/src/data/noticias.js",
+          "name": "noticias.js",
+          "size": 3007,
+          "extension": ".js"
+        },
+        {
+          "path": "Frontend/src/components/HeatmapLayer.jsx",
+          "name": "HeatmapLayer.jsx",
+          "size": 2685,
+          "extension": ".jsx"
+        }
+      ]
+    },
+    {
       "language": "HTML",
       "file_count": 4,
       "total_bytes": 50882,
-      "percentage": 1.86,
+      "percentage": 1.73,
       "files": [
         {
           "path": "docs/dashboard/dashboard.html",
@@ -359,83 +427,15 @@
       ]
     },
     {
-      "language": "JavaScript",
-      "file_count": 25,
-      "total_bytes": 47185,
-      "percentage": 1.73,
-      "files": [
-        {
-          "path": "Frontend/src/pages/Noticias.jsx",
-          "name": "Noticias.jsx",
-          "size": 7493,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/pages/Sobre.jsx",
-          "name": "Sobre.jsx",
-          "size": 6850,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/pages/DetalhesNoticia.jsx",
-          "name": "DetalhesNoticia.jsx",
-          "size": 5940,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/pages/Dashboard.jsx",
-          "name": "Dashboard.jsx",
-          "size": 4471,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/BrazilMap.jsx",
-          "name": "BrazilMap.jsx",
-          "size": 2868,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/pages/Login.jsx",
-          "name": "Login.jsx",
-          "size": 2721,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/LeafletMap.jsx",
-          "name": "LeafletMap.jsx",
-          "size": 2503,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/data/noticias.js",
-          "name": "noticias.js",
-          "size": 2030,
-          "extension": ".js"
-        },
-        {
-          "path": "Frontend/src/components/TopVehicles.jsx",
-          "name": "TopVehicles.jsx",
-          "size": 1494,
-          "extension": ".jsx"
-        },
-        {
-          "path": "Frontend/src/components/RegionChart.jsx",
-          "name": "RegionChart.jsx",
-          "size": 1322,
-          "extension": ".jsx"
-        }
-      ]
-    },
-    {
       "language": "CSS",
       "file_count": 8,
-      "total_bytes": 40002,
-      "percentage": 1.47,
+      "total_bytes": 41722,
+      "percentage": 1.42,
       "files": [
         {
           "path": "Frontend/src/App.css",
           "name": "App.css",
-          "size": 14108,
+          "size": 14918,
           "extension": ".css"
         },
         {
@@ -447,7 +447,7 @@
         {
           "path": "Frontend/src/pages/Sobre.css",
           "name": "Sobre.css",
-          "size": 5180,
+          "size": 6090,
           "extension": ".css"
         },
         {
@@ -486,7 +486,7 @@
       "language": "Text",
       "file_count": 5,
       "total_bytes": 13146,
-      "percentage": 0.48,
+      "percentage": 0.45,
       "files": [
         {
           "path": "testes/arquivos para testes.txt",
@@ -524,7 +524,7 @@
       "language": "YAML",
       "file_count": 5,
       "total_bytes": 8031,
-      "percentage": 0.29,
+      "percentage": 0.27,
       "files": [
         {
           "path": ".github/workflows/static.yml",
@@ -562,7 +562,7 @@
       "language": "SVG Image",
       "file_count": 1,
       "total_bytes": 4126,
-      "percentage": 0.15,
+      "percentage": 0.14,
       "files": [
         {
           "path": "Frontend/src/assets/react.svg",
@@ -616,7 +616,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-29T10:18:21.192517",
+    "extracted_at": "2026-06-30T09:20:59.445173",
     "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
   }
 }

@@ -2,19 +2,19 @@
   "repository": "2026.1-ContraDito",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-29T10:15:14.222913",
+  "analyzed_at": "2026-06-30T09:17:53.608419",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 295,
-  "total_bytes": 5163551,
+  "total_files": 296,
+  "total_bytes": 5174375,
   "languages": [
     {
       "language": "JPEG Image",
       "file_count": 14,
       "total_bytes": 2701663,
-      "percentage": 52.32,
+      "percentage": 52.21,
       "files": [
         {
           "path": "frontend/public/images/foto_dia_congresso.jpeg",
@@ -82,7 +82,7 @@
       "language": "PDF",
       "file_count": 4,
       "total_bytes": 783194,
-      "percentage": 15.17,
+      "percentage": 15.14,
       "files": [
         {
           "path": "LLM_validation/proposicoes/pl_002.pdf",
@@ -113,8 +113,8 @@
     {
       "language": "Python",
       "file_count": 91,
-      "total_bytes": 551458,
-      "percentage": 10.68,
+      "total_bytes": 557580,
+      "percentage": 10.78,
       "files": [
         {
           "path": "app/rotas/dados.py",
@@ -132,6 +132,12 @@
           "path": "LLM_validation/auditar_estimativas.py",
           "name": "auditar_estimativas.py",
           "size": 16653,
+          "extension": ".py"
+        },
+        {
+          "path": "tests/etl/test_transformadores_discursos_camara.py",
+          "name": "test_transformadores_discursos_camara.py",
+          "size": 15922,
           "extension": ".py"
         },
         {
@@ -169,25 +175,19 @@
           "name": "test_vinculador_discursos_votos_senado.py",
           "size": 11916,
           "extension": ".py"
-        },
-        {
-          "path": "tests/etl/test_extrator_votos_camara.py",
-          "name": "test_extrator_votos_camara.py",
-          "size": 11867,
-          "extension": ".py"
         }
       ]
     },
     {
       "language": "TypeScript",
       "file_count": 58,
-      "total_bytes": 341031,
-      "percentage": 6.6,
+      "total_bytes": 341843,
+      "percentage": 6.61,
       "files": [
         {
           "path": "frontend/lib/mock.ts",
           "name": "mock.ts",
-          "size": 41573,
+          "size": 41474,
           "extension": ".ts"
         },
         {
@@ -199,7 +199,7 @@
         {
           "path": "frontend/app/discursos/DiscursosClient.tsx",
           "name": "DiscursosClient.tsx",
-          "size": 26069,
+          "size": 26169,
           "extension": ".tsx"
         },
         {
@@ -211,13 +211,13 @@
         {
           "path": "frontend/app/partidos/PartidosClient.tsx",
           "name": "PartidosClient.tsx",
-          "size": 18429,
+          "size": 18686,
           "extension": ".tsx"
         },
         {
           "path": "frontend/app/diretorio/DiretorioClient.tsx",
           "name": "DiretorioClient.tsx",
-          "size": 16077,
+          "size": 16164,
           "extension": ".tsx"
         },
         {
@@ -235,13 +235,13 @@
         {
           "path": "frontend/app/comparacao/SeletorComparacao.tsx",
           "name": "SeletorComparacao.tsx",
-          "size": 14019,
+          "size": 14128,
           "extension": ".tsx"
         },
         {
           "path": "frontend/components/home/DiretorioPreview.tsx",
           "name": "DiretorioPreview.tsx",
-          "size": 11961,
+          "size": 11015,
           "extension": ".tsx"
         }
       ]
@@ -250,7 +250,7 @@
       "language": "JSON",
       "file_count": 22,
       "total_bytes": 329692,
-      "percentage": 6.38,
+      "percentage": 6.37,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -318,7 +318,7 @@
       "language": "Markdown",
       "file_count": 62,
       "total_bytes": 309064,
-      "percentage": 5.99,
+      "percentage": 5.97,
       "files": [
         {
           "path": "PLANEJAMENTO.md",
@@ -492,9 +492,9 @@
     },
     {
       "language": "Unknown",
-      "file_count": 6,
-      "total_bytes": 17352,
-      "percentage": 0.34,
+      "file_count": 7,
+      "total_bytes": 19486,
+      "percentage": 0.38,
       "files": [
         {
           "path": "LLM_validation/benchmark_llama31_8b_colab.ipynb",
@@ -505,14 +505,20 @@
         {
           "path": "Dockerfile.worker",
           "name": "Dockerfile.worker",
-          "size": 2364,
+          "size": 3058,
           "extension": ".worker"
         },
         {
           "path": "Dockerfile.api",
           "name": "Dockerfile.api",
-          "size": 1914,
+          "size": 2509,
           "extension": ".api"
+        },
+        {
+          "path": "sonar-project.properties",
+          "name": "sonar-project.properties",
+          "size": 845,
+          "extension": ".properties"
         },
         {
           "path": "frontend/eslint.config.mjs",
@@ -537,7 +543,7 @@
     {
       "language": "CSS",
       "file_count": 3,
-      "total_bytes": 16144,
+      "total_bytes": 16220,
       "percentage": 0.31,
       "files": [
         {
@@ -555,7 +561,7 @@
         {
           "path": "frontend/app/globals.css",
           "name": "globals.css",
-          "size": 3255,
+          "size": 3331,
           "extension": ".css"
         }
       ]
@@ -563,9 +569,15 @@
     {
       "language": "YAML",
       "file_count": 7,
-      "total_bytes": 11238,
-      "percentage": 0.22,
+      "total_bytes": 12918,
+      "percentage": 0.25,
       "files": [
+        {
+          "path": ".github/workflows/testes-backend.yml",
+          "name": "testes-backend.yml",
+          "size": 3385,
+          "extension": ".yml"
+        },
         {
           "path": "docker-compose.yml",
           "name": "docker-compose.yml",
@@ -576,12 +588,6 @@
           "path": "docs/mkdocs.yml",
           "name": "mkdocs.yml",
           "size": 2757,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/testes-backend.yml",
-          "name": "testes-backend.yml",
-          "size": 1705,
           "extension": ".yml"
         },
         {
@@ -700,7 +706,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-29T10:18:21.297533",
+    "extracted_at": "2026-06-30T09:20:59.558059",
     "file_path": "data/silver/language_analysis_2026.1-ContraDito.json"
   }
 }
