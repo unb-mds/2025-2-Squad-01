@@ -2,8 +2,18 @@
   "owner": "unb-mds",
   "repository": "2026-1-P.R.I.S.M.A",
   "branch": "main",
-  "sha": "97cf43ddc3338c4ac739027667354743cc1b13c4",
+  "sha": "c2338b2432ba0a9a2ace1491b018e4cbeaceec17",
   "tree": [
+    {
+      "name": ".dockerignore",
+      "path": ".dockerignore",
+      "type": "file",
+      "sha": "52b71a46751714b518390e41dd48080f4de95d0a",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 104,
+      "is_binary": false
+    },
     {
       "name": ".env_docker.exemplo",
       "path": ".env_docker.exemplo",
@@ -78,37 +88,47 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "29508d0ded9c9f4865de670aadf35c51db9694a7",
+      "sha": "3a712f59161b7cda1788810dba9e4e419e2ef923",
       "mode": "100644",
       "extension": ".md",
-      "size": 2790,
+      "size": 4842,
       "is_binary": false
     },
     {
       "name": "compose.yml",
       "path": "compose.yml",
       "type": "file",
-      "sha": "7641ca73c6f2b8da19ab9ede66cfb7dfa1cbe861",
+      "sha": "6e943892b1faaf53915fa097bf38f16067484bca",
       "mode": "100644",
       "extension": ".yml",
-      "size": 868,
+      "size": 902,
+      "is_binary": false
+    },
+    {
+      "name": "docker-entrypoint.sh",
+      "path": "docker-entrypoint.sh",
+      "type": "file",
+      "sha": "0b3a44e52153a7d00eb3f6085475729583ff2f4c",
+      "mode": "100644",
+      "extension": ".sh",
+      "size": 184,
       "is_binary": false
     },
     {
       "name": "dockerfile",
       "path": "dockerfile",
       "type": "file",
-      "sha": "359a2411a1d0c2112740cc0b370daef0e9ff8a85",
+      "sha": "111d83d7eb39459b3461b398eef20e29ec3db458",
       "mode": "100644",
       "extension": "",
-      "size": 941,
+      "size": 1083,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "c0ba515447a6f9bcfbf9e554e842233b0f204a5c",
+      "sha": "f41f98f16b6eea6a7cf87a211197562ceef70b84",
       "mode": "040000",
       "children": []
     },
@@ -322,7 +342,7 @@
       "name": "releases",
       "path": "docs/releases",
       "type": "directory",
-      "sha": "995d63c76651f0564b1abf69ad787a18150e1273",
+      "sha": "2eca680efaf5c876740287eb13905cebac27fa4e",
       "mode": "040000",
       "children": []
     },
@@ -334,6 +354,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 2141,
+      "is_binary": false
+    },
+    {
+      "name": "release_note_v0.2.0.md",
+      "path": "docs/releases/release_note_v0.2.0.md",
+      "type": "file",
+      "sha": "258400281ab7ced6da4a8d800ef25744232a8e24",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6723,
       "is_binary": false
     },
     {
@@ -632,10 +662,10 @@
       "name": "pytest.ini",
       "path": "pytest.ini",
       "type": "file",
-      "sha": "c8574154f6e779d66427fbfe1c54f2ca8c0dd23d",
+      "sha": "278851c9d860ab4e23f96a569c85e013e26e0164",
       "mode": "100644",
       "extension": ".ini",
-      "size": 67,
+      "size": 72,
       "is_binary": false
     },
     {
@@ -652,7 +682,7 @@
       "name": "src",
       "path": "src",
       "type": "directory",
-      "sha": "8290463ae548a4059970457ac1ac5dd94e128621",
+      "sha": "e3278cdec830ba80779b7dbfe97bc9bf6c565ac0",
       "mode": "040000",
       "children": []
     },
@@ -660,7 +690,7 @@
       "name": "Processos",
       "path": "src/Processos",
       "type": "directory",
-      "sha": "a9c659aa53e3bbd826c20d64d35b7d325fed93fb",
+      "sha": "d802811a60b2178314601ceb4cd4cd86f7929d85",
       "mode": "040000",
       "children": []
     },
@@ -804,7 +834,7 @@
       "name": "migrations",
       "path": "src/Processos/migrations",
       "type": "directory",
-      "sha": "0c63c8938f9a4e0db25def613e3af348c630808a",
+      "sha": "673e15973519b2991563e4956fa4ae75f1542490",
       "mode": "040000",
       "children": []
     },
@@ -879,6 +909,16 @@
       "is_binary": false
     },
     {
+      "name": "0006_merge_20260701_0349.py",
+      "path": "src/Processos/migrations/0006_merge_20260701_0349.py",
+      "type": "file",
+      "sha": "f9af31878435bde6ea8f428f8975a3b31ad04d14",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 302,
+      "is_binary": false
+    },
+    {
       "name": "__init__.py",
       "path": "src/Processos/migrations/__init__.py",
       "type": "file",
@@ -902,10 +942,10 @@
       "name": "services.py",
       "path": "src/Processos/services.py",
       "type": "file",
-      "sha": "9da1399b70cc02f314a3a43f24a9dd330ac20b79",
+      "sha": "777974a6da13e89c245f323ca912a78429e193ec",
       "mode": "100644",
       "extension": ".py",
-      "size": 24500,
+      "size": 24799,
       "is_binary": false
     },
     {
@@ -1094,7 +1134,7 @@
       "name": "config",
       "path": "src/config",
       "type": "directory",
-      "sha": "fa65251a9609f5f925f4da82e518fe24f697b3ba",
+      "sha": "3d5173dd09b95ab9c5e3cf1de931749d8e2ee292",
       "mode": "040000",
       "children": []
     },
@@ -1122,20 +1162,30 @@
       "name": "settings.py",
       "path": "src/config/settings.py",
       "type": "file",
-      "sha": "422403eb0df209d512f81f82fd32de9ff1ae83bb",
+      "sha": "182d7976435ce699fb4946d787e8320a85bb35ad",
       "mode": "100644",
       "extension": ".py",
-      "size": 6066,
+      "size": 6090,
+      "is_binary": false
+    },
+    {
+      "name": "test_settings.py",
+      "path": "src/config/test_settings.py",
+      "type": "file",
+      "sha": "5906f20435cb4a4eee11eb74561919ee3264fa25",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 158,
       "is_binary": false
     },
     {
       "name": "urls.py",
       "path": "src/config/urls.py",
       "type": "file",
-      "sha": "a0c3ad3af4f1a02e29747a7a67bee7b79f74aff7",
+      "sha": "edb79ebe0bfbd87d91c5f7b9cbbe30dac2862b98",
       "mode": "100644",
       "extension": ".py",
-      "size": 1527,
+      "size": 1583,
       "is_binary": false
     },
     {
@@ -1152,7 +1202,7 @@
       "name": "home",
       "path": "src/home",
       "type": "directory",
-      "sha": "980eb799663d9d42ae0d2ffa49eaef1918fcacd7",
+      "sha": "f38376dbda698b6f8eae0d05b19d27bfef2e5398",
       "mode": "040000",
       "children": []
     },
@@ -1290,7 +1340,7 @@
       "name": "templates",
       "path": "src/home/templates",
       "type": "directory",
-      "sha": "6eed0079b7e37eb8f41abe42d6a8b6b20dd36680",
+      "sha": "7e3d73b6d41c50c9a4fe6e46ea4e02a4b6794157",
       "mode": "040000",
       "children": []
     },
@@ -1298,7 +1348,7 @@
       "name": "home",
       "path": "src/home/templates/home",
       "type": "directory",
-      "sha": "bc0974da5eccff0f4912fda22f6f1b01d9da466c",
+      "sha": "3481cdd7faf49d16c8bc0b4e19e7fa770ddadcbb",
       "mode": "040000",
       "children": []
     },
@@ -1326,7 +1376,7 @@
       "name": "components",
       "path": "src/home/templates/home/components",
       "type": "directory",
-      "sha": "f1157d2cc8f26a698258da0de5fe0d83e289fad5",
+      "sha": "88da4473f41bedfa7c8a01544d4f7db39f6bc84f",
       "mode": "040000",
       "children": []
     },
@@ -1334,30 +1384,20 @@
       "name": "header.html",
       "path": "src/home/templates/home/components/header.html",
       "type": "file",
-      "sha": "486f4f9ef2d513d9749f2d7bad2c5c476dc0244c",
+      "sha": "b52bf79e960821a99707bab239460880ae0ce48b",
       "mode": "100644",
       "extension": ".html",
-      "size": 745,
+      "size": 393,
       "is_binary": false
     },
     {
       "name": "sidebar.html",
       "path": "src/home/templates/home/components/sidebar.html",
       "type": "file",
-      "sha": "406dd5429a796136852194db2e0a5e37110c8c33",
+      "sha": "402703344b2b63c5d1ab6a5a4765fa5cdae0842d",
       "mode": "100644",
       "extension": ".html",
-      "size": 3280,
-      "is_binary": false
-    },
-    {
-      "name": "dashboard.html",
-      "path": "src/home/templates/home/dashboard.html",
-      "type": "file",
-      "sha": "13bda7556ae5bb69d7bcf262cb532028abf6fb24",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 3475,
+      "size": 2310,
       "is_binary": false
     },
     {
@@ -1394,78 +1434,88 @@
       "name": "usuario.html",
       "path": "src/home/templates/home/usuario.html",
       "type": "file",
-      "sha": "7b1b2887d2e4613129aec52ea20132b1ca1885e7",
+      "sha": "5ab71bfaaa250dae2715726875eec02dfdd0b9de",
       "mode": "100644",
       "extension": ".html",
-      "size": 6580,
+      "size": 5515,
       "is_binary": false
     },
     {
       "name": "registration",
       "path": "src/home/templates/registration",
       "type": "directory",
-      "sha": "78c902764f13234eeea070b68b9bf2df3b9caca3",
+      "sha": "867913003800db454f9d5e18138e5c5b01cc2e87",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "base_auth.html",
+      "path": "src/home/templates/registration/base_auth.html",
+      "type": "file",
+      "sha": "f4cc2f75d5b3018ede68c9ed9f6476821add70aa",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 3684,
+      "is_binary": false
     },
     {
       "name": "login.html",
       "path": "src/home/templates/registration/login.html",
       "type": "file",
-      "sha": "ee53d4c8779631e993be89224e68b3c5240b7af9",
+      "sha": "1bea1c31a791fe4c44f8b9d4a74a63d32ace1613",
       "mode": "100644",
       "extension": ".html",
-      "size": 422,
+      "size": 1555,
       "is_binary": false
     },
     {
       "name": "password_reset_complete.html",
       "path": "src/home/templates/registration/password_reset_complete.html",
       "type": "file",
-      "sha": "37e8cd4c7de91845f522892955efc1b0fc0bb43d",
+      "sha": "c99e9a68a024137fb15b9c85b7202c45ff853c6f",
       "mode": "100644",
       "extension": ".html",
-      "size": 139,
+      "size": 899,
       "is_binary": false
     },
     {
       "name": "password_reset_confirm.html",
       "path": "src/home/templates/registration/password_reset_confirm.html",
       "type": "file",
-      "sha": "46080d7d8775655cf97abc439dac92ed478d6d06",
+      "sha": "4c41f094776124508f005d94bd64cc8471262aad",
       "mode": "100644",
       "extension": ".html",
-      "size": 139,
+      "size": 1556,
       "is_binary": false
     },
     {
       "name": "password_reset_done.html",
       "path": "src/home/templates/registration/password_reset_done.html",
       "type": "file",
-      "sha": "b205d7c3ff0565f71d34ffe13b0a18fe56e7d417",
+      "sha": "f042cdc65321e97c230653380b1b2e6c77fab1cc",
       "mode": "100644",
       "extension": ".html",
-      "size": 160,
+      "size": 1097,
       "is_binary": false
     },
     {
       "name": "password_reset_form.html",
       "path": "src/home/templates/registration/password_reset_form.html",
       "type": "file",
-      "sha": "8d5603681ef68721a8a098efffc10fd5de898089",
+      "sha": "a71a1eda13c46f3309e00bca9733183a4a24d5b3",
       "mode": "100644",
       "extension": ".html",
-      "size": 191,
+      "size": 1395,
       "is_binary": false
     },
     {
       "name": "signup.html",
       "path": "src/home/templates/registration/signup.html",
       "type": "file",
-      "sha": "4efcb051c45fe619b14a818823c10e0016cc22c2",
+      "sha": "68580e6134d47af845c8c41ac51d004a7444e6c7",
       "mode": "100644",
       "extension": ".html",
-      "size": 342,
+      "size": 1083,
       "is_binary": false
     },
     {
@@ -1482,10 +1532,10 @@
       "name": "views.py",
       "path": "src/home/views.py",
       "type": "file",
-      "sha": "263579acc27198a11fb91f73314f4d912f82fc64",
+      "sha": "4db6be15c072128478bb4e9d929b92371f0b8ef9",
       "mode": "100644",
       "extension": ".py",
-      "size": 12235,
+      "size": 11103,
       "is_binary": false
     },
     {
@@ -1502,7 +1552,7 @@
       "name": "tests",
       "path": "src/tests",
       "type": "directory",
-      "sha": "ff88a89ad13d71d49c4a7b1e19f3383d7b057cc5",
+      "sha": "bcc796cc7b1149503ccb022f64e2c1995778ee5d",
       "mode": "040000",
       "children": []
     },
@@ -1510,7 +1560,7 @@
       "name": "e2e",
       "path": "src/tests/e2e",
       "type": "directory",
-      "sha": "9bbc0ed31864dc57802e66e1fbe301a3041fb702",
+      "sha": "fb28269bc2304bc9f7d9528bed3888d12ee9aead",
       "mode": "040000",
       "children": []
     },
@@ -1545,16 +1595,6 @@
       "is_binary": false
     },
     {
-      "name": "test_dashboard.py",
-      "path": "src/tests/e2e/test_dashboard.py",
-      "type": "file",
-      "sha": "a7fead645fd0b239fb6ad2451fa09d14a23e511f",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 1953,
-      "is_binary": false
-    },
-    {
       "name": "test_favoritos.py",
       "path": "src/tests/e2e/test_favoritos.py",
       "type": "file",
@@ -1568,10 +1608,10 @@
       "name": "test_sanity.py",
       "path": "src/tests/e2e/test_sanity.py",
       "type": "file",
-      "sha": "e7609b243495fef7dea791b9ce0c5ed9a297ab07",
+      "sha": "53c0048ae4d76c462775ffe1d96785e956f8b754",
       "mode": "100644",
       "extension": ".py",
-      "size": 682,
+      "size": 820,
       "is_binary": false
     },
     {
@@ -1596,17 +1636,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-30T09:17:56.069174",
+  "extracted_at": "2026-07-01T09:40:14.612027",
   "method": "rest",
-  "total_items": 166,
+  "total_items": 170,
   "repository_metadata": {
     "id": 1203020564,
     "full_name": "unb-mds/2026-1-P.R.I.S.M.A",
     "description": null,
     "created_at": "2026-04-06T16:34:51Z",
-    "updated_at": "2026-06-21T23:10:36Z",
+    "updated_at": "2026-07-01T05:43:28Z",
     "language": "Python",
-    "size": 3381,
+    "size": 3453,
     "stars": 2,
     "forks": 0,
     "open_issues": 14

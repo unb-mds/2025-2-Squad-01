@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2026-1-SafeStreets",
   "branch": "main",
-  "sha": "a53723d3a2e2ea35f1bac9427824f9f1d4c90ff3",
+  "sha": "d3e52c7888360a7f88d65f3ca03ef12d9ba48485",
   "tree": [
     {
       "name": ".claude",
@@ -78,7 +78,7 @@
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "86edd2b1d5a47b85a4eba49184d97a8c4c3b48ab",
+      "sha": "bfe545dd60c632974cc9a8050a32c5fce9c8192f",
       "mode": "040000",
       "children": []
     },
@@ -86,7 +86,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "28f2b62a53a712bd76fdf87c0ca9349a951a4036",
+      "sha": "412f6350e97910f580b8f69f729e521d2d84abbe",
       "mode": "040000",
       "children": []
     },
@@ -98,6 +98,16 @@
       "mode": "100644",
       "extension": ".yml",
       "size": 767,
+      "is_binary": false
+    },
+    {
+      "name": "ingest-cron.yml",
+      "path": ".github/workflows/ingest-cron.yml",
+      "type": "file",
+      "sha": "c5885a5ec8dc9168dc80574eaa29d6a051cd9c1d",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 903,
       "is_binary": false
     },
     {
@@ -144,10 +154,10 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "3650ead227e9bd7be2eef9b1142b92630af1d7c4",
+      "sha": "0a69f6a59786cc61fb62cf0f28724133cecf4cdf",
       "mode": "100644",
       "extension": ".md",
-      "size": 5164,
+      "size": 6302,
       "is_binary": false
     },
     {
@@ -164,7 +174,7 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "f0253e3c4eca3b1a0f990ad0586771935ed89932",
+      "sha": "2d6b2f3665782d8a37378bc490b862ccc6a8992b",
       "mode": "040000",
       "children": []
     },
@@ -172,7 +182,7 @@
       "name": ".claude",
       "path": "backend/.claude",
       "type": "directory",
-      "sha": "b45921948c15ae6f0e4e32033a9fa5c5519fe6ea",
+      "sha": "54748b75e16b17717f4f6be416df8f11bf706e40",
       "mode": "040000",
       "children": []
     },
@@ -180,7 +190,7 @@
       "name": "skills",
       "path": "backend/.claude/skills",
       "type": "directory",
-      "sha": "79ee5ee145eae4197b02e42fcc66252959f0d9ae",
+      "sha": "d9a2b64e60a99c7b5fb29ce8d1d18f2a04ff1fcb",
       "mode": "040000",
       "children": []
     },
@@ -188,7 +198,7 @@
       "name": "run-correio-rss",
       "path": "backend/.claude/skills/run-correio-rss",
       "type": "directory",
-      "sha": "f582e04ff088ee28f2976cbb81a09671bdf86c03",
+      "sha": "b3d39d71deb9f5542cae1ff03c6d397f6c0659d0",
       "mode": "040000",
       "children": []
     },
@@ -213,10 +223,20 @@
       "is_binary": false
     },
     {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-correio-rss/spec.md",
+      "type": "file",
+      "sha": "de90d6e3a7ba67f677c6e3d74f4cbaffdd2d934f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2465,
+      "is_binary": false
+    },
+    {
       "name": "run-disparo-ingestao",
       "path": "backend/.claude/skills/run-disparo-ingestao",
       "type": "directory",
-      "sha": "15cbf50d8ef23ef61515a23b048d08c8b324a300",
+      "sha": "3a05aeea3c90babc573354d23999451ecce3ea30",
       "mode": "040000",
       "children": []
     },
@@ -234,17 +254,27 @@
       "name": "driver.py",
       "path": "backend/.claude/skills/run-disparo-ingestao/driver.py",
       "type": "file",
-      "sha": "90cb5242cccb0ad50d76e10290cc14c5d1edabf4",
+      "sha": "ae00a50a7fc5b0016f9214e9807b1daae1fc45ff",
       "mode": "100644",
       "extension": ".py",
       "size": 3697,
       "is_binary": false
     },
     {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-disparo-ingestao/spec.md",
+      "type": "file",
+      "sha": "71e539442c6edadd217bc0f9bc843d491c28fd93",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2274,
+      "is_binary": false
+    },
+    {
       "name": "run-endpoints",
       "path": "backend/.claude/skills/run-endpoints",
       "type": "directory",
-      "sha": "83e68499a484c575262fca3becb44ec0fca87ba6",
+      "sha": "f0620545142cdfdc6f11c8a185404a6c9e0aa084",
       "mode": "040000",
       "children": []
     },
@@ -269,10 +299,20 @@
       "is_binary": false
     },
     {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-endpoints/spec.md",
+      "type": "file",
+      "sha": "2485ce6551563ab9f8118a6f7c7ffbd4a74d3551",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2273,
+      "is_binary": false
+    },
+    {
       "name": "run-ingestao",
       "path": "backend/.claude/skills/run-ingestao",
       "type": "directory",
-      "sha": "2bcfda47eec668c75033bc3b3f51bf27c8c1a18a",
+      "sha": "75bf94d208e79ceeb20226d7d4384c289fc83a2c",
       "mode": "040000",
       "children": []
     },
@@ -290,17 +330,27 @@
       "name": "driver.py",
       "path": "backend/.claude/skills/run-ingestao/driver.py",
       "type": "file",
-      "sha": "6cc464e8cf6047748ced99bf448c38114c97a450",
+      "sha": "ca86facf808fddf76d1da39ecc44155c4bd6c288",
       "mode": "100644",
       "extension": ".py",
       "size": 5812,
       "is_binary": false
     },
     {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-ingestao/spec.md",
+      "type": "file",
+      "sha": "05429dfe1405092acbd5c45f72df0260a13df9c1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2626,
+      "is_binary": false
+    },
+    {
       "name": "run-nominatim-gemini",
       "path": "backend/.claude/skills/run-nominatim-gemini",
       "type": "directory",
-      "sha": "4892e4baea3b29d6a58f45976005de81237f3f1f",
+      "sha": "f998c9a0829ee4d701eae7e9e8c3568a5d878eb6",
       "mode": "040000",
       "children": []
     },
@@ -318,17 +368,27 @@
       "name": "driver.py",
       "path": "backend/.claude/skills/run-nominatim-gemini/driver.py",
       "type": "file",
-      "sha": "868e950cbda2e16f0daba67ea4693ca2c0511665",
+      "sha": "ca1af9b5ea437c4966c6852b15a4f1c6e95e8d81",
       "mode": "100644",
       "extension": ".py",
-      "size": 4874,
+      "size": 4891,
+      "is_binary": false
+    },
+    {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-nominatim-gemini/spec.md",
+      "type": "file",
+      "sha": "2b713b3a930f22d6818fdd9e143ebb4dd7647124",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2413,
       "is_binary": false
     },
     {
       "name": "run-schemas",
       "path": "backend/.claude/skills/run-schemas",
       "type": "directory",
-      "sha": "835d6d6e99cba9bdf4a32be31b136b1ce8d6ad09",
+      "sha": "f3c54a406fcda1aa4bd609aa1fc86b55dd699349",
       "mode": "040000",
       "children": []
     },
@@ -346,10 +406,20 @@
       "name": "driver.py",
       "path": "backend/.claude/skills/run-schemas/driver.py",
       "type": "file",
-      "sha": "3be691694148d85414f6b7a42baeafa244118cdf",
+      "sha": "4d16cc95f916a12c0c0151cbf5d818d7588efdfd",
       "mode": "100644",
       "extension": ".py",
       "size": 4066,
+      "is_binary": false
+    },
+    {
+      "name": "spec.md",
+      "path": "backend/.claude/skills/run-schemas/spec.md",
+      "type": "file",
+      "sha": "ed4d9ee417356d3da06325f4efda5dbee513e5cf",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2207,
       "is_binary": false
     },
     {
@@ -366,10 +436,10 @@
       "name": "Dockerfile",
       "path": "backend/Dockerfile",
       "type": "file",
-      "sha": "ef1a72bee1e26df03c3f82df0a5516083a9337b3",
+      "sha": "b548b4691983d52e6c668a8bd04b49f08564aca0",
       "mode": "100644",
       "extension": "",
-      "size": 533,
+      "size": 712,
       "is_binary": false
     },
     {
@@ -386,7 +456,7 @@
       "name": "alembic",
       "path": "backend/alembic",
       "type": "directory",
-      "sha": "b506fb3e2117195cad76b865c652ae10428938f4",
+      "sha": "ef18769e6d9ccf6cef5a4a35b07ef68df4f0fe54",
       "mode": "040000",
       "children": []
     },
@@ -404,10 +474,10 @@
       "name": "env.py",
       "path": "backend/alembic/env.py",
       "type": "file",
-      "sha": "9be2eb91b8e7ed9d4e777f33744ca5a239123be6",
+      "sha": "fe9b48fbae16685983b0358ad59f7617ef4aa731",
       "mode": "100644",
       "extension": ".py",
-      "size": 2623,
+      "size": 2601,
       "is_binary": false
     },
     {
@@ -442,7 +512,7 @@
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "53983e18f0a1185c7aa501ea5f61d0361f86a848",
+      "sha": "9c2c72bf94beb35f12f3fb802cf7943ada0a33e3",
       "mode": "040000",
       "children": []
     },
@@ -460,7 +530,7 @@
       "name": "core",
       "path": "backend/app/core",
       "type": "directory",
-      "sha": "1bdfda9af6c1a8874eafbacd69e934b1d0542828",
+      "sha": "5e9f55c5a1acf06696f2d43a791856ec2bb653cb",
       "mode": "040000",
       "children": []
     },
@@ -488,17 +558,17 @@
       "name": "database.py",
       "path": "backend/app/core/database.py",
       "type": "file",
-      "sha": "f450096afb5a3a931e7c50335d26b5dae9b0ce49",
+      "sha": "aad9cc926b4177fdc44dd0242922eac3a06e6359",
       "mode": "100644",
       "extension": ".py",
-      "size": 821,
+      "size": 822,
       "is_binary": false
     },
     {
       "name": "integrations",
       "path": "backend/app/integrations",
       "type": "directory",
-      "sha": "8f7f2fcd87cb9ecafa5b70762282df13717de2d8",
+      "sha": "5ab5c528e86813c10cd65154321aa603ff1e3fcd",
       "mode": "040000",
       "children": []
     },
@@ -526,7 +596,7 @@
       "name": "correio_rss.py",
       "path": "backend/app/integrations/correio_rss.py",
       "type": "file",
-      "sha": "06a7d66d5282a687a2ca559f952403d38187cae1",
+      "sha": "daaf337f16de9f1301e6d2b5ee3a17d4f1e355d3",
       "mode": "100644",
       "extension": ".py",
       "size": 4918,
@@ -536,10 +606,10 @@
       "name": "gemini.py",
       "path": "backend/app/integrations/gemini.py",
       "type": "file",
-      "sha": "73a61e448bcc7e29cd09389872b644b7db835b3e",
+      "sha": "e72b975f9ede1ec60704c5444fd8c8d21c2665bc",
       "mode": "100644",
       "extension": ".py",
-      "size": 2444,
+      "size": 4319,
       "is_binary": false
     },
     {
@@ -556,17 +626,17 @@
       "name": "main.py",
       "path": "backend/app/main.py",
       "type": "file",
-      "sha": "b4e930460d2d7ca454d292bc8efb16493773bcbe",
+      "sha": "d8482182ac2896ed47c5e4e3da9117124d3989c5",
       "mode": "100644",
       "extension": ".py",
-      "size": 807,
+      "size": 1232,
       "is_binary": false
     },
     {
       "name": "models",
       "path": "backend/app/models",
       "type": "directory",
-      "sha": "e35c4bd3c3c0bd6d9b410b031b5a998ce82e164c",
+      "sha": "a8f539da0d74dbf7c433f97ca01082994e8258c2",
       "mode": "040000",
       "children": []
     },
@@ -574,7 +644,7 @@
       "name": "__init__.py",
       "path": "backend/app/models/__init__.py",
       "type": "file",
-      "sha": "f168bb5eb5f3b14c13f3149efa9f27d8dd6a5550",
+      "sha": "b0ee4612ced790445b4fb896db5b6f443cb71ed5",
       "mode": "100644",
       "extension": ".py",
       "size": 341,
@@ -584,37 +654,37 @@
       "name": "historico_consulta.py",
       "path": "backend/app/models/historico_consulta.py",
       "type": "file",
-      "sha": "58a40a548e9535ed1bea9e0286ac30a02ac4c56c",
+      "sha": "5de330e38894e77a51f4830eb73d61a52a0a444d",
       "mode": "100644",
       "extension": ".py",
-      "size": 1014,
+      "size": 1015,
       "is_binary": false
     },
     {
       "name": "local_pin.py",
       "path": "backend/app/models/local_pin.py",
       "type": "file",
-      "sha": "5432ef7c740c1e34dc674854d290a9847a2a5069",
+      "sha": "4b3651dfbb45b33dcebfd41d948cf28316131be7",
       "mode": "100644",
       "extension": ".py",
-      "size": 1115,
+      "size": 1116,
       "is_binary": false
     },
     {
       "name": "ocorrencia.py",
       "path": "backend/app/models/ocorrencia.py",
       "type": "file",
-      "sha": "e5f500a9b5c6d1048b834733f0ee2ccc675ae7d8",
+      "sha": "a31521538e93da8f362e721a37a9e4b434a5082e",
       "mode": "100644",
       "extension": ".py",
-      "size": 1929,
+      "size": 1955,
       "is_binary": false
     },
     {
       "name": "repositories",
       "path": "backend/app/repositories",
       "type": "directory",
-      "sha": "86f92030602062006efba7359eb892ce0c4e8832",
+      "sha": "387c9804946a288b8b293aee3e54a580916bc4a6",
       "mode": "040000",
       "children": []
     },
@@ -642,27 +712,27 @@
       "name": "local_pin_repository.py",
       "path": "backend/app/repositories/local_pin_repository.py",
       "type": "file",
-      "sha": "a8488e7c84176de8d24449a67367ca12322605d0",
+      "sha": "99e2077df7acc25a265b28376857fdd773a8b0d2",
       "mode": "100644",
       "extension": ".py",
-      "size": 1669,
+      "size": 1637,
       "is_binary": false
     },
     {
       "name": "ocorrencia_repository.py",
       "path": "backend/app/repositories/ocorrencia_repository.py",
       "type": "file",
-      "sha": "28b06c016c805275e58e3b0b5ec1e3459f878779",
+      "sha": "03b9d8e01d6fedbd195457cefae749eed72e3192",
       "mode": "100644",
       "extension": ".py",
-      "size": 2988,
+      "size": 2956,
       "is_binary": false
     },
     {
       "name": "routes",
       "path": "backend/app/routes",
       "type": "directory",
-      "sha": "5757f5a6341ae2a686b9a3b5decb032683157598",
+      "sha": "047544d073817dcabd222c66ecd1c7df0515db0b",
       "mode": "040000",
       "children": []
     },
@@ -680,10 +750,10 @@
       "name": "admin.py",
       "path": "backend/app/routes/admin.py",
       "type": "file",
-      "sha": "acecdd484184d9eb079cea7ef2fc7c21faa69c2f",
+      "sha": "61262c0833bf9efba2f8dd202f818c2613616f85",
       "mode": "100644",
       "extension": ".py",
-      "size": 1343,
+      "size": 1750,
       "is_binary": false
     },
     {
@@ -700,17 +770,17 @@
       "name": "ocorrencias.py",
       "path": "backend/app/routes/ocorrencias.py",
       "type": "file",
-      "sha": "68e77978ed1ba86aaadffbe0917733bca28f8677",
+      "sha": "85bbf2cd9a1c53d42c39b57c62fd6a22ac484f36",
       "mode": "100644",
       "extension": ".py",
-      "size": 1612,
+      "size": 1613,
       "is_binary": false
     },
     {
       "name": "schemas",
       "path": "backend/app/schemas",
       "type": "directory",
-      "sha": "f7c04ccbf8498f5e99a45330e9b1a91423555fd2",
+      "sha": "a83faa76969b778210c38ec9c937466c2efd0bd8",
       "mode": "040000",
       "children": []
     },
@@ -738,17 +808,17 @@
       "name": "ocorrencia.py",
       "path": "backend/app/schemas/ocorrencia.py",
       "type": "file",
-      "sha": "fb1e8f407186e3da8e37157d3c4aa38659b61c85",
+      "sha": "2064f7d50301322930be04c7b03192400ab07c53",
       "mode": "100644",
       "extension": ".py",
-      "size": 1580,
+      "size": 1550,
       "is_binary": false
     },
     {
       "name": "services",
       "path": "backend/app/services",
       "type": "directory",
-      "sha": "69c1931ac7c365ee6b66fb8a7061439cca952a14",
+      "sha": "754fb80eb7755097d67c1df4d3b366d4c62c1f19",
       "mode": "040000",
       "children": []
     },
@@ -776,40 +846,40 @@
       "name": "ingestao.py",
       "path": "backend/app/services/ingestao.py",
       "type": "file",
-      "sha": "2ff242ddeb904e51e117eab3faa54042075623b4",
+      "sha": "2ec3d2f964e03fe27cebd361d14629ba96168547",
       "mode": "100644",
       "extension": ".py",
-      "size": 14921,
+      "size": 15088,
       "is_binary": false
     },
     {
       "name": "ocorrencias.py",
       "path": "backend/app/services/ocorrencias.py",
       "type": "file",
-      "sha": "346dbdffba881d83106d3d0d50d17409307a0d7e",
+      "sha": "b17387a58949083e5d3bdf9ed7303ae355a57010",
       "mode": "100644",
       "extension": ".py",
-      "size": 2207,
+      "size": 3236,
       "is_binary": false
     },
     {
       "name": "risco_service.py",
       "path": "backend/app/services/risco_service.py",
       "type": "file",
-      "sha": "e29e175332d860424c30e64b163eebd34ce88c08",
+      "sha": "4808da15bca3cbf501ea3aefbe48527a809708c8",
       "mode": "100644",
       "extension": ".py",
-      "size": 801,
+      "size": 802,
       "is_binary": false
     },
     {
       "name": "docker-compose.yml",
       "path": "backend/docker-compose.yml",
       "type": "file",
-      "sha": "6136de1b96b7196c245762bf2e2fd74d7e9861dc",
+      "sha": "35c0ef9fc9c7f4997e9ec5b0dad54b2243b76554",
       "mode": "100644",
       "extension": ".yml",
-      "size": 2021,
+      "size": 2061,
       "is_binary": false
     },
     {
@@ -823,10 +893,20 @@
       "is_binary": false
     },
     {
+      "name": "ruff.toml",
+      "path": "backend/ruff.toml",
+      "type": "file",
+      "sha": "899aeb0b2ff9f45e4d535c8442ccf2752353014c",
+      "mode": "100644",
+      "extension": ".toml",
+      "size": 595,
+      "is_binary": false
+    },
+    {
       "name": "teste.py",
       "path": "backend/teste.py",
       "type": "file",
-      "sha": "22339115f4b9aa7e9bc0488d57b5159872d75a68",
+      "sha": "fe85fbb58ceea2ed643e62bc08ac348698632874",
       "mode": "100644",
       "extension": ".py",
       "size": 727,
@@ -836,7 +916,7 @@
       "name": "tests",
       "path": "backend/tests",
       "type": "directory",
-      "sha": "7fa3d7934ad80b8f6151a506e3f4be134278bc46",
+      "sha": "68ce4454a3d809a2d33e2b00610c50418c4c04c6",
       "mode": "040000",
       "children": []
     },
@@ -844,17 +924,17 @@
       "name": "test_admin.py",
       "path": "backend/tests/test_admin.py",
       "type": "file",
-      "sha": "d956205a8f10048d7392b48e818a3bfdacb5ebde",
+      "sha": "8e69b84ec423cc738476871cdac482859cdb1791",
       "mode": "100644",
       "extension": ".py",
-      "size": 2328,
+      "size": 2314,
       "is_binary": false
     },
     {
       "name": "test_correio_rss.py",
       "path": "backend/tests/test_correio_rss.py",
       "type": "file",
-      "sha": "5ee787033e66dec6dbfe4114b2359d46abb7c1fd",
+      "sha": "cead6fd92dea142720dca9229e35266b535377ed",
       "mode": "100644",
       "extension": ".py",
       "size": 4031,
@@ -864,37 +944,37 @@
       "name": "test_gemini.py",
       "path": "backend/tests/test_gemini.py",
       "type": "file",
-      "sha": "abc65656ebb3ae00346e6b336652e18396e54edc",
+      "sha": "ef66b44e6e1e5069b8791bf44bfe3dd900d54eec",
       "mode": "100644",
       "extension": ".py",
-      "size": 1790,
+      "size": 5470,
       "is_binary": false
     },
     {
       "name": "test_ingestao.py",
       "path": "backend/tests/test_ingestao.py",
       "type": "file",
-      "sha": "6ab938ebb46d96bca98b04312746d7ca7ae66fd7",
+      "sha": "2ef996c81ee6a9afe8a62ba9416f7c70c69b7f60",
       "mode": "100644",
       "extension": ".py",
-      "size": 12469,
+      "size": 11449,
       "is_binary": false
     },
     {
       "name": "test_main.py",
       "path": "backend/tests/test_main.py",
       "type": "file",
-      "sha": "5b246f85a8f51c2a66b075fc1baa3e2471644d75",
+      "sha": "6e1cad8d24f2329aeba2c89c6727014614b50079",
       "mode": "100644",
       "extension": ".py",
-      "size": 279,
+      "size": 280,
       "is_binary": false
     },
     {
       "name": "test_nominatim.py",
       "path": "backend/tests/test_nominatim.py",
       "type": "file",
-      "sha": "6b78baea612d7bdd457639993f5de554dacb06c6",
+      "sha": "15eb063d147e221c282b5fe4d13f959df36424e7",
       "mode": "100644",
       "extension": ".py",
       "size": 1651,
@@ -904,7 +984,7 @@
       "name": "test_ocorrencia_repository.py",
       "path": "backend/tests/test_ocorrencia_repository.py",
       "type": "file",
-      "sha": "5843ed279ba9279b6ad3dbbe839c2e3198dab184",
+      "sha": "d6ff0d9dbfff89f54d4e5e79560a93566b8f5402",
       "mode": "100644",
       "extension": ".py",
       "size": 6147,
@@ -914,37 +994,37 @@
       "name": "test_ocorrencias.py",
       "path": "backend/tests/test_ocorrencias.py",
       "type": "file",
-      "sha": "4cd33a54c61bf07528cb38c416e546c6d5ff0408",
+      "sha": "2b70fe2be98bf94901f9e628da42d47f6ec45eaa",
       "mode": "100644",
       "extension": ".py",
-      "size": 2550,
+      "size": 4131,
       "is_binary": false
     },
     {
       "name": "test_risco_service.py",
       "path": "backend/tests/test_risco_service.py",
       "type": "file",
-      "sha": "68505e577da95734fc6f2374b1cd7e242d81c883",
+      "sha": "5d2b2857ebb86b1f612b01a55a6d76f5aa8dbb01",
       "mode": "100644",
       "extension": ".py",
-      "size": 1942,
+      "size": 1943,
       "is_binary": false
     },
     {
       "name": "test_schemas.py",
       "path": "backend/tests/test_schemas.py",
       "type": "file",
-      "sha": "44546b54a9ea73ff309ae16abb31425043432a6c",
+      "sha": "441f03e8e35a895d589ba11c6c06bcf8a545d7c2",
       "mode": "100644",
       "extension": ".py",
-      "size": 2508,
+      "size": 2507,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "a7d25b904dc6798f60980a24d6ddf0e5ad837ab8",
+      "sha": "6a4e0114f439ba2766c9a81d59924485294e9036",
       "mode": "040000",
       "children": []
     },
@@ -952,7 +1032,7 @@
       "name": "Arquitetura",
       "path": "docs/Arquitetura",
       "type": "directory",
-      "sha": "03835a25f5f49df25dc0edd8535568bc80f77453",
+      "sha": "93ef3b900834547f115f279236f8af70979689b8",
       "mode": "040000",
       "children": []
     },
@@ -960,10 +1040,10 @@
       "name": "ADR-001-Gemini-Fallback-Strategy.md",
       "path": "docs/Arquitetura/ADR-001-Gemini-Fallback-Strategy.md",
       "type": "file",
-      "sha": "3cffc5e18d546b7cc4f51feaced22d675cc8b942",
+      "sha": "c36544e994989582d191e844d381aecb4fd10e9f",
       "mode": "100644",
       "extension": ".md",
-      "size": 4418,
+      "size": 5460,
       "is_binary": false
     },
     {
@@ -1710,7 +1790,7 @@
       "name": "productivity",
       "path": "docs/productivity",
       "type": "directory",
-      "sha": "c72c257b31bb256eb97189e9b868c34f60e4edd3",
+      "sha": "440e9b52a8602d73c801c23f7b651bb677b0c181",
       "mode": "040000",
       "children": []
     },
@@ -1738,17 +1818,17 @@
       "name": "metrics.json",
       "path": "docs/productivity/metrics.json",
       "type": "file",
-      "sha": "4c545e7c36be3dcd3b28c4243411189775d15e3a",
+      "sha": "69021e69835de283e5bce17a3c7a0a129b12a96e",
       "mode": "100644",
       "extension": ".json",
-      "size": 8162,
+      "size": 8160,
       "is_binary": false
     },
     {
       "name": "sprints",
       "path": "docs/sprints",
       "type": "directory",
-      "sha": "889030f1abbb4295531bc9e7501193548e89018c",
+      "sha": "1555e1773ba430c16c4bbd9b5d4dd6e4de9cdf43",
       "mode": "040000",
       "children": []
     },
@@ -1770,6 +1850,36 @@
       "mode": "100644",
       "extension": ".md",
       "size": 2274,
+      "is_binary": false
+    },
+    {
+      "name": "sprint10.md",
+      "path": "docs/sprints/sprint10.md",
+      "type": "file",
+      "sha": "ff76325246d9a6ef89a5e21e9ee83f1b3435a401",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1357,
+      "is_binary": false
+    },
+    {
+      "name": "sprint11.md",
+      "path": "docs/sprints/sprint11.md",
+      "type": "file",
+      "sha": "946ba2923936067cbbe2af41e9e72416d3e9a948",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1388,
+      "is_binary": false
+    },
+    {
+      "name": "sprint12.md",
+      "path": "docs/sprints/sprint12.md",
+      "type": "file",
+      "sha": "ab95a1f8e1369ea2a30c0aafa524fe5799f677ee",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2047,
       "is_binary": false
     },
     {
@@ -1833,6 +1943,26 @@
       "is_binary": false
     },
     {
+      "name": "sprint8.md",
+      "path": "docs/sprints/sprint8.md",
+      "type": "file",
+      "sha": "7dba8100f5f7d7ed4d901ac23a153af628ac01bd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2376,
+      "is_binary": false
+    },
+    {
+      "name": "sprint9.md",
+      "path": "docs/sprints/sprint9.md",
+      "type": "file",
+      "sha": "7826081c6c6c67fb8d1c8c2fa6f89d69952b1301",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1003,
+      "is_binary": false
+    },
+    {
       "name": "templates_issue",
       "path": "docs/templates_issue",
       "type": "directory",
@@ -1884,7 +2014,7 @@
       "name": "frontend",
       "path": "frontend",
       "type": "directory",
-      "sha": "e9bea036d7d2dd789a440377fbbb1704bc854b10",
+      "sha": "30c81626875443496fb3e5eaa691034c14e857c7",
       "mode": "040000",
       "children": []
     },
@@ -1896,6 +2026,16 @@
       "mode": "100644",
       "extension": ".example",
       "size": 150,
+      "is_binary": false
+    },
+    {
+      "name": ".eslintrc.json",
+      "path": "frontend/.eslintrc.json",
+      "type": "file",
+      "sha": "6b10a5b739246fb1605689e8f190bbb2cf5683b9",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 73,
       "is_binary": false
     },
     {
@@ -2140,7 +2280,7 @@
       "name": "__tests__",
       "path": "frontend/__tests__",
       "type": "directory",
-      "sha": "f99fba932483c02375bd75bb92a7e938f47d0154",
+      "sha": "6b6521cbea2aef86c0760ace489ba51d9bc3b7b8",
       "mode": "040000",
       "children": []
     },
@@ -2148,7 +2288,7 @@
       "name": "components",
       "path": "frontend/__tests__/components",
       "type": "directory",
-      "sha": "59d8f7098133fd796324585aa67f229ac6b8a13c",
+      "sha": "05e41c2d26c01cae00c6faa14adc26881e27a8db",
       "mode": "040000",
       "children": []
     },
@@ -2156,10 +2296,10 @@
       "name": "CardResumo.test.tsx",
       "path": "frontend/__tests__/components/CardResumo.test.tsx",
       "type": "file",
-      "sha": "eb1ab8d02e9ae789eabae3969b2023644eae6f8c",
+      "sha": "f8ede76b6913d9f9a977f49d6dbabc5b969f5dde",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 1509,
+      "size": 1527,
       "is_binary": false
     },
     {
@@ -2176,10 +2316,10 @@
       "name": "DetalhesOcorrencia.test.tsx",
       "path": "frontend/__tests__/components/DetalhesOcorrencia.test.tsx",
       "type": "file",
-      "sha": "b8e78583cae50d377d8150bf752688185b8c9dad",
+      "sha": "cc164bbb17b947b3a4de83d6711a5779092251a5",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 3159,
+      "size": 3177,
       "is_binary": false
     },
     {
@@ -2236,10 +2376,10 @@
       "name": "MapaInterativo.test.tsx",
       "path": "frontend/__tests__/components/MapaInterativo.test.tsx",
       "type": "file",
-      "sha": "aaef9d846da34434217641d9adb7c01093a79608",
+      "sha": "c7ad04cd8672e01165dc2b5f2a4b2986a9ecdc92",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 5012,
+      "size": 5037,
       "is_binary": false
     },
     {
@@ -2266,20 +2406,20 @@
       "name": "PainelFiltros.test.tsx",
       "path": "frontend/__tests__/components/PainelFiltros.test.tsx",
       "type": "file",
-      "sha": "0b8cf06e3a0f65a503dba92fa8ab63c8bcee1e13",
+      "sha": "30dfcb792d0f381b2916872d3b714aefe087e846",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 6619,
+      "size": 8227,
       "is_binary": false
     },
     {
       "name": "ResultadoBusca.test.tsx",
       "path": "frontend/__tests__/components/ResultadoBusca.test.tsx",
       "type": "file",
-      "sha": "aba679c930e4fc8f4c0502891abda97e5afc633c",
+      "sha": "bb8e7ee2c66ee76366961ffee627fde50e951119",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 1383,
+      "size": 1401,
       "is_binary": false
     },
     {
@@ -2303,10 +2443,28 @@
       "is_binary": false
     },
     {
+      "name": "fixtures",
+      "path": "frontend/__tests__/fixtures",
+      "type": "directory",
+      "sha": "d8d2e09b988fd508caca83864b23732b79bcf247",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "noticias.ts",
+      "path": "frontend/__tests__/fixtures/noticias.ts",
+      "type": "file",
+      "sha": "4bf7c05224a4727e46f91ac50652541033bb7239",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 6063,
+      "is_binary": false
+    },
+    {
       "name": "utils",
       "path": "frontend/__tests__/utils",
       "type": "directory",
-      "sha": "d6b08c19eae88717026527380f354cd7e1147634",
+      "sha": "64c64a7ea1a547de69eb0a5810da7c7061362c8f",
       "mode": "040000",
       "children": []
     },
@@ -2324,37 +2482,37 @@
       "name": "filtros.test.ts",
       "path": "frontend/__tests__/utils/filtros.test.ts",
       "type": "file",
-      "sha": "ebada77004f5833786b85357e31b589582e100f2",
+      "sha": "70fdeb935ed6b24c0d672b85b2e3edd1be84b6ce",
       "mode": "100644",
       "extension": ".ts",
-      "size": 5496,
+      "size": 5666,
       "is_binary": false
     },
     {
       "name": "iaResumo.test.ts",
       "path": "frontend/__tests__/utils/iaResumo.test.ts",
       "type": "file",
-      "sha": "f36c95e5b41112c59e27722b1376cb1c6b8ab151",
+      "sha": "c25925db6451a2a732a260107fe4c1c2205ceedf",
       "mode": "100644",
       "extension": ".ts",
-      "size": 629,
+      "size": 1597,
       "is_binary": false
     },
     {
       "name": "noticias.test.ts",
       "path": "frontend/__tests__/utils/noticias.test.ts",
       "type": "file",
-      "sha": "1983c8b55212a6f70220c0fd73a3252b37384737",
+      "sha": "9db7136c697d98684f9c29a21edb1939f89f392f",
       "mode": "100644",
       "extension": ".ts",
-      "size": 4357,
+      "size": 4070,
       "is_binary": false
     },
     {
       "name": "view",
       "path": "frontend/__tests__/view",
       "type": "directory",
-      "sha": "ff35e595067820e5e769abd7db99e49bfb2cd122",
+      "sha": "9ed08fa4aa58d3f3e8e80eeac129440cb92a597c",
       "mode": "040000",
       "children": []
     },
@@ -2362,10 +2520,10 @@
       "name": "Home.test.tsx",
       "path": "frontend/__tests__/view/Home.test.tsx",
       "type": "file",
-      "sha": "648593ce1bb527e7372687671eee091da41d887a",
+      "sha": "4cdad600f7d5c5ccf5e3d0f501e886034b835180",
       "mode": "100644",
       "extension": ".tsx",
-      "size": 2470,
+      "size": 3920,
       "is_binary": false
     },
     {
@@ -2912,20 +3070,20 @@
       "name": "package-lock.json",
       "path": "frontend/package-lock.json",
       "type": "file",
-      "sha": "ef5a7e34c29cf652776fd1bbaf1802e56db8e74f",
+      "sha": "4824c91db5012c5348d0a0bfab4b48b93d3f84d0",
       "mode": "100644",
       "extension": ".json",
-      "size": 232401,
+      "size": 372768,
       "is_binary": false
     },
     {
       "name": "package.json",
       "path": "frontend/package.json",
       "type": "file",
-      "sha": "20276e70acf3eaaede316a4d4e013cf2106b5bbd",
+      "sha": "74c0670e0f97fdd8a33a41cf2e9e72a211d7c0c7",
       "mode": "100644",
       "extension": ".json",
-      "size": 815,
+      "size": 903,
       "is_binary": false
     },
     {
@@ -2988,7 +3146,7 @@
       "name": "utils",
       "path": "frontend/utils",
       "type": "directory",
-      "sha": "198d8e3ba96c927b76184cbc91cd24de36f23323",
+      "sha": "fca0736288feaabd2855606e34f475d8fa116781",
       "mode": "040000",
       "children": []
     },
@@ -3016,10 +3174,10 @@
       "name": "iaResumo.ts",
       "path": "frontend/utils/iaResumo.ts",
       "type": "file",
-      "sha": "f5c33bc8b292f55d49f9876f186953a72783e6cb",
+      "sha": "38d1e01193fccbb9ce4846ccf84de40e8183abbf",
       "mode": "100644",
       "extension": ".ts",
-      "size": 511,
+      "size": 975,
       "is_binary": false
     },
     {
@@ -3136,19 +3294,19 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-30T09:17:48.469345",
+  "extracted_at": "2026-07-01T09:40:04.717061",
   "method": "rest",
-  "total_items": 329,
+  "total_items": 345,
   "repository_metadata": {
     "id": 1185579631,
     "full_name": "unb-mds/2026-1-SafeStreets",
     "description": "O SafeStreets é uma aplicação voltada ao monitoramento inteligente de riscos urbanos a partir da análise de notícias e dados públicos de segurança. O projeto tem como objetivo fornecer uma visão clara e atualizada sobre ocorrências criminais em diferentes regiões, contribuindo para a conscientização e prevenção.",
     "created_at": "2026-03-18T18:23:07Z",
-    "updated_at": "2026-06-30T04:15:39Z",
+    "updated_at": "2026-07-01T05:34:19Z",
     "language": "Python",
-    "size": 2749,
+    "size": 2957,
     "stars": 5,
     "forks": 0,
-    "open_issues": 6
+    "open_issues": 8
   }
 }

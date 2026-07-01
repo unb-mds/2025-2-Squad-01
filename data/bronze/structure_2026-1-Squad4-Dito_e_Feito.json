@@ -2,13 +2,13 @@
   "owner": "unb-mds",
   "repository": "2026-1-Squad4-Dito_e_Feito",
   "branch": "main",
-  "sha": "14404a249c96b3015cc47d7b725490ceed92830a",
+  "sha": "ccf01ce301f90d9fa7a462134988a165564ca2dd",
   "tree": [
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "6812438cbb4afa9b734904461b5d9eb834c847da",
+      "sha": "ca32f5ab974f4ceaa995372a6ecc208d35b46b4c",
       "mode": "040000",
       "children": []
     },
@@ -16,7 +16,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "66a592c2c28f829f4f45f4a917e08859bd5c7607",
+      "sha": "41ba055071a06d4a5f55d6361c90a2db4caa8ca9",
       "mode": "040000",
       "children": []
     },
@@ -41,6 +41,16 @@
       "is_binary": false
     },
     {
+      "name": "tests.yml",
+      "path": ".github/workflows/tests.yml",
+      "type": "file",
+      "sha": "a629fb2f63464be5d1f7da2945d81a829eb079ca",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1364,
+      "is_binary": false
+    },
+    {
       "name": ".gitignore",
       "path": ".gitignore",
       "type": "file",
@@ -54,10 +64,20 @@
       "name": "CONTEXTO.md",
       "path": "CONTEXTO.md",
       "type": "file",
-      "sha": "bcbe72ee294d571d701300cf10341c6bd10a3657",
+      "sha": "333084336b4c515dfabcab3b19153653dafaacba",
       "mode": "100644",
       "extension": ".md",
-      "size": 8077,
+      "size": 22195,
+      "is_binary": false
+    },
+    {
+      "name": "DOCKER_PASSO_A_PASSO.md",
+      "path": "DOCKER_PASSO_A_PASSO.md",
+      "type": "file",
+      "sha": "ad58bfc86a84617201a3bb71b469cd1f659dedc8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7628,
       "is_binary": false
     },
     {
@@ -84,10 +104,10 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "70227c01e2a4914894c8d254e8926b035f4f6e97",
+      "sha": "e53f8692dc576a6751f102ab3f97e4057070584a",
       "mode": "100644",
       "extension": ".md",
-      "size": 5655,
+      "size": 6812,
       "is_binary": false
     },
     {
@@ -112,18 +132,28 @@
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "22a3346cd4972906d37c3788ba8b974fce5bffe1",
+      "sha": "c34f3693b81f4a08433c6a2bee89fbc0c282c571",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": ".dockerignore",
+      "path": "backend/.dockerignore",
+      "type": "file",
+      "sha": "fde15777f7b29eb7e0351aee7b18ae7ab6557279",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 175,
+      "is_binary": false
     },
     {
       "name": ".env.example",
       "path": "backend/.env.example",
       "type": "file",
-      "sha": "c8cd0e18a197348e14bb2f27bd8ea67979199b0f",
+      "sha": "c80c42f305e593d98e3d65f791a28ad30ed86c90",
       "mode": "100644",
       "extension": ".example",
-      "size": 720,
+      "size": 758,
       "is_binary": false
     },
     {
@@ -137,13 +167,63 @@
       "is_binary": false
     },
     {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "65b64ef99475a11ad94eb2ca5f3191b756ee61b6",
+      "mode": "100644",
+      "extension": "",
+      "size": 737,
+      "is_binary": false
+    },
+    {
       "name": "api.py",
       "path": "backend/api.py",
       "type": "file",
-      "sha": "342cf922155662c1074a7699a2b55be85fd560c6",
+      "sha": "fdc8134c1e81418c2b21be34d5e3e08a250de864",
       "mode": "100644",
       "extension": ".py",
-      "size": 29232,
+      "size": 40761,
+      "is_binary": false
+    },
+    {
+      "name": "apply_migration.py",
+      "path": "backend/apply_migration.py",
+      "type": "file",
+      "sha": "33888cc5c675ca775ddf04cf285735ad2c74fce0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4654,
+      "is_binary": false
+    },
+    {
+      "name": "check_apis.py",
+      "path": "backend/check_apis.py",
+      "type": "file",
+      "sha": "078ff064b02ea389d9c0650a7c3827d47fde63e1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4221,
+      "is_binary": false
+    },
+    {
+      "name": "check_db.py",
+      "path": "backend/check_db.py",
+      "type": "file",
+      "sha": "8ddfed2e755885e52585f4c6501bd22346c1a468",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3575,
+      "is_binary": false
+    },
+    {
+      "name": "config_data.json",
+      "path": "backend/config_data.json",
+      "type": "file",
+      "sha": "7e06c412bed8e490b3ab41e002969401404c14bf",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 89,
       "is_binary": false
     },
     {
@@ -160,17 +240,17 @@
       "name": "dashboard_metrics.json",
       "path": "backend/dashboard_metrics.json",
       "type": "file",
-      "sha": "b42978dbf754e277212e8de1e05a7a36f8a55920",
+      "sha": "485ef2fde23074e05a42fcef2190b5ba77bff458",
       "mode": "100644",
       "extension": ".json",
-      "size": 34486,
+      "size": 209613,
       "is_binary": false
     },
     {
       "name": "database",
       "path": "backend/database",
       "type": "directory",
-      "sha": "6b247226e86a8ab36628fdd444d90beb510bbf70",
+      "sha": "9b2dd5c7f4cce6182c7d861d3e334a9461cd10a9",
       "mode": "040000",
       "children": []
     },
@@ -182,6 +262,56 @@
       "mode": "100644",
       "extension": ".sql",
       "size": 858,
+      "is_binary": false
+    },
+    {
+      "name": "004_coerencia_booleana.sql",
+      "path": "backend/database/004_coerencia_booleana.sql",
+      "type": "file",
+      "sha": "2c0df9916a17244b695e6ed07ca0ee237f36842a",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 3012,
+      "is_binary": false
+    },
+    {
+      "name": "006_coerencia_booleana.sql",
+      "path": "backend/database/006_coerencia_booleana.sql",
+      "type": "file",
+      "sha": "2c0df9916a17244b695e6ed07ca0ee237f36842a",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 3012,
+      "is_binary": false
+    },
+    {
+      "name": "007_fix_views_and_alignment.sql",
+      "path": "backend/database/007_fix_views_and_alignment.sql",
+      "type": "file",
+      "sha": "ffbdfe5829a2e0762629af2fdc4ab786df4afcca",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 10905,
+      "is_binary": false
+    },
+    {
+      "name": "008_fix_columns_and_views.sql",
+      "path": "backend/database/008_fix_columns_and_views.sql",
+      "type": "file",
+      "sha": "aa5d270a0621076de007483e9a934c6e16b72fd5",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 10394,
+      "is_binary": false
+    },
+    {
+      "name": "009_drop_recreate_views.sql",
+      "path": "backend/database/009_drop_recreate_views.sql",
+      "type": "file",
+      "sha": "f7fec2d965523c7676ffe53eaa8a245dc0439ad2",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 4242,
       "is_binary": false
     },
     {
@@ -198,69 +328,175 @@
       "name": "Migrations.md",
       "path": "backend/database/Migrations.md",
       "type": "file",
-      "sha": "945d629c8ed249a54f40d978f1f560f1ae76f891",
+      "sha": "72f4206294748ec8c1818a95d914896e8e7bd985",
       "mode": "100644",
       "extension": ".md",
-      "size": 5111,
+      "size": 6774,
       "is_binary": false
     },
     {
       "name": "Migrations.sql",
       "path": "backend/database/Migrations.sql",
       "type": "file",
-      "sha": "33d8cb6b91b3bdd1216cc4ae1402d9a96ef56eca",
+      "sha": "2f2eac74c732693045c081161386e5ffdb00f2be",
       "mode": "100644",
       "extension": ".sql",
-      "size": 4152,
+      "size": 7576,
       "is_binary": false
     },
     {
       "name": "schema.sql",
       "path": "backend/database/schema.sql",
       "type": "file",
-      "sha": "0b7670606d73a7704ebd57be3cafb4719b802cb0",
+      "sha": "866e208c34747ff69f42014d4176a86ccbb2a26d",
       "mode": "100644",
       "extension": ".sql",
-      "size": 3712,
+      "size": 4190,
+      "is_binary": false
+    },
+    {
+      "name": "seed.sql",
+      "path": "backend/database/seed.sql",
+      "type": "file",
+      "sha": "c1d1f6e7ba4d6044f6dcf5535d00351ff90ebf60",
+      "mode": "100644",
+      "extension": ".sql",
+      "size": 936,
+      "is_binary": false
+    },
+    {
+      "name": "generate_massive_dashboard.py",
+      "path": "backend/generate_massive_dashboard.py",
+      "type": "file",
+      "sha": "5371cf6bd111baf0f76f60a2701d4f01c6ffdd95",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6682,
       "is_binary": false
     },
     {
       "name": "pipe.py",
       "path": "backend/pipe.py",
       "type": "file",
-      "sha": "8c5110fdd91805a88d2ef8d9f9f6c9a0ae2aa2c1",
+      "sha": "9758d3df5c11eec4b31906965b684c0e17cf92fe",
       "mode": "100644",
       "extension": ".py",
-      "size": 12663,
+      "size": 12664,
       "is_binary": false
     },
     {
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "73ecc2d56854a8738b17b9f8d6b1d6af72621725",
+      "sha": "cc875d04a218d8550eecb84a10cf51f16560ea78",
       "mode": "100644",
       "extension": ".txt",
-      "size": 71,
+      "size": 99,
+      "is_binary": false
+    },
+    {
+      "name": "scan_deputados.py",
+      "path": "backend/scan_deputados.py",
+      "type": "file",
+      "sha": "36fb6e4c1c362eed354b9d694c3337a2c355f82f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2629,
       "is_binary": false
     },
     {
       "name": "scan_senators.py",
       "path": "backend/scan_senators.py",
       "type": "file",
-      "sha": "9d4709ce50a12e7ea3e641e17633b27929b5ab58",
+      "sha": "9e5211f7f701178ece3c1189cd6b9913bed803d2",
       "mode": "100644",
       "extension": ".py",
-      "size": 40387,
+      "size": 55249,
+      "is_binary": false
+    },
+    {
+      "name": "seed_massive_database.py",
+      "path": "backend/seed_massive_database.py",
+      "type": "file",
+      "sha": "741ef78250ec93e7a800cc390cc765b5bcc7349d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11267,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/tests",
+      "type": "directory",
+      "sha": "7aec2cf68b64f0375a97151b83ba180dda20edda",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "conftest.py",
+      "path": "backend/tests/conftest.py",
+      "type": "file",
+      "sha": "790a2ca9858a742dc9dc0c2d0362b19e7be5a5cf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 834,
+      "is_binary": false
+    },
+    {
+      "name": "test_api.py",
+      "path": "backend/tests/test_api.py",
+      "type": "file",
+      "sha": "5d3865c854cc458d84c582b464d91de56d313227",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6294,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "backend/utils",
+      "type": "directory",
+      "sha": "b016640106176bc85ff0086e7b2abfb8878975b2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "config.py",
+      "path": "backend/utils/config.py",
+      "type": "file",
+      "sha": "75d16bce2f088bef4fa5c968d50cabe5d42d39c7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4780,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "8db2167007625174103b98db86d55517cb7d79c8",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1464,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "4846982d808330cee84319aec4fdc28b3fbde321",
+      "sha": "6f62a78da238e9a2e951ad348c46eafd43231ea8",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "DEPLOY.md",
+      "path": "docs/DEPLOY.md",
+      "type": "file",
+      "sha": "927ca94250740d209775221500c2c95c650291f0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5747,
+      "is_binary": false
     },
     {
       "name": "Possivel_R1_Apresentação.md",
@@ -276,7 +512,7 @@
       "name": "backend",
       "path": "docs/backend",
       "type": "directory",
-      "sha": "3630246bb82b02e01a818a1f865102617b038870",
+      "sha": "98e9adbb740fb1618bedaebdf8b092457d7ebeda",
       "mode": "040000",
       "children": []
     },
@@ -284,20 +520,40 @@
       "name": "backend.md",
       "path": "docs/backend/backend.md",
       "type": "file",
-      "sha": "1c5273f44864b351d746dbaaa05879f49f762ec8",
+      "sha": "60627428693cae7b64793cd46094fa4a5d01fa24",
       "mode": "100644",
       "extension": ".md",
-      "size": 9673,
+      "size": 9891,
       "is_binary": false
     },
     {
       "name": "banco_de_dados.md",
       "path": "docs/backend/banco_de_dados.md",
       "type": "file",
-      "sha": "3538ce95a93eaacb1a096e3b148297432b6b83a9",
+      "sha": "5fa6fc8f925b8b474a0939d42f737a386922abbf",
       "mode": "100644",
       "extension": ".md",
       "size": 14916,
+      "is_binary": false
+    },
+    {
+      "name": "coerencia_e_incremental.md",
+      "path": "docs/backend/coerencia_e_incremental.md",
+      "type": "file",
+      "sha": "9f811d7aac5ab462ba1a72324fb2dbba51f52fa2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4550,
+      "is_binary": false
+    },
+    {
+      "name": "pipeline_multicasa.md",
+      "path": "docs/backend/pipeline_multicasa.md",
+      "type": "file",
+      "sha": "4d8bc3fd8d677a9719dfc236e97a6464ae6de587",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7055,
       "is_binary": false
     },
     {
@@ -488,10 +744,10 @@
       "name": "fluxo_pipeline_dashboard.md",
       "path": "docs/fluxo_pipeline_dashboard.md",
       "type": "file",
-      "sha": "9736806daa7855dce2036a3f5094e61ada439e08",
+      "sha": "a8b92a52bcd85f1c4ac278c0ff2aff887efcae6c",
       "mode": "100644",
       "extension": ".md",
-      "size": 6210,
+      "size": 6510,
       "is_binary": false
     },
     {
@@ -526,10 +782,10 @@
       "name": "index.md",
       "path": "docs/index.md",
       "type": "file",
-      "sha": "e77ca4d73018a2615fdd892ee913bb35eb32c113",
+      "sha": "517eac655f66f2249c2872adb1af3d183d7ff593",
       "mode": "100644",
       "extension": ".md",
-      "size": 1820,
+      "size": 3471,
       "is_binary": false
     },
     {
@@ -551,10 +807,38 @@
       "is_binary": false
     },
     {
+      "name": "releases",
+      "path": "docs/releases",
+      "type": "directory",
+      "sha": "ac3ade38ef953abc26d7241ce2cfd41e7d17abc6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "release1.md",
+      "path": "docs/releases/release1.md",
+      "type": "file",
+      "sha": "32aa3e4c3876da26ad30453b412c58038e7c0acb",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6879,
+      "is_binary": false
+    },
+    {
+      "name": "release2.md",
+      "path": "docs/releases/release2.md",
+      "type": "file",
+      "sha": "cfff81e1547e5d7c5c010568af67eebd02694ed9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4705,
+      "is_binary": false
+    },
+    {
       "name": "requisitos",
       "path": "docs/requisitos",
       "type": "directory",
-      "sha": "dc7dfd4c3a19dce45a55e1ef80124f647acfe8e3",
+      "sha": "92abd7204cce0a4952cc24b78e35ec0c17a81ca0",
       "mode": "040000",
       "children": []
     },
@@ -572,17 +856,17 @@
       "name": "requisitos.md",
       "path": "docs/requisitos/requisitos.md",
       "type": "file",
-      "sha": "b2e5173c5434f7448d3af2ca6a3e3d9bfbf082d7",
+      "sha": "7cf55c3a50aac1b8b40068b5b0c22b337d545a2e",
       "mode": "100644",
       "extension": ".md",
-      "size": 7314,
+      "size": 10578,
       "is_binary": false
     },
     {
       "name": "sprints",
       "path": "docs/sprints",
       "type": "directory",
-      "sha": "26e9d162bfae9cc1c00e5023b90b6bd217352d5f",
+      "sha": "0b192180393ec795852cb8295c453ece3ea15e08",
       "mode": "040000",
       "children": []
     },
@@ -657,6 +941,16 @@
       "is_binary": false
     },
     {
+      "name": "sprint08.md",
+      "path": "docs/sprints/sprint08.md",
+      "type": "file",
+      "sha": "5e91b1d7ed9b943956ceb26b4556641c0615e9f3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2892,
+      "is_binary": false
+    },
+    {
       "name": "tecnologias",
       "path": "docs/tecnologias",
       "type": "directory",
@@ -688,9 +982,29 @@
       "name": "frontend",
       "path": "frontend",
       "type": "directory",
-      "sha": "9e928728115a7ba504c4a249ab35d1af18777660",
+      "sha": "b0fba12a8afeebe7d234b2cae01e116ad662745a",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": ".dockerignore",
+      "path": "frontend/.dockerignore",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".dockerignore",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": ".env.example",
+      "path": "frontend/.env.example",
+      "type": "file",
+      "sha": "165095eec73d7596b79722217c17ce2b79ebc2f1",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 241,
+      "is_binary": false
     },
     {
       "name": ".gitignore",
@@ -703,6 +1017,16 @@
       "is_binary": false
     },
     {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "527ec233b6b766219d66ce27c620c4357cfef6ae",
+      "mode": "100644",
+      "extension": "",
+      "size": 774,
+      "is_binary": false
+    },
+    {
       "name": "README.md",
       "path": "frontend/README.md",
       "type": "file",
@@ -710,6 +1034,24 @@
       "mode": "100644",
       "extension": ".md",
       "size": 1027,
+      "is_binary": false
+    },
+    {
+      "name": "e2e",
+      "path": "frontend/e2e",
+      "type": "directory",
+      "sha": "77c2a9723a9a4572dda2d21f36dc325ec0611324",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "dashboard.spec.js",
+      "path": "frontend/e2e/dashboard.spec.js",
+      "type": "file",
+      "sha": "9d965d1d0a9b239f3018c048691d8dd12dc9037b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2953,
       "is_binary": false
     },
     {
@@ -726,30 +1068,40 @@
       "name": "index.html",
       "path": "frontend/index.html",
       "type": "file",
-      "sha": "9ab8d85e7ac03770002d160634175c5d17693ecd",
+      "sha": "6dbe8e10c8cf2a68e4b63b0f47942a0fe3a38f6c",
       "mode": "100644",
       "extension": ".html",
-      "size": 845,
+      "size": 857,
       "is_binary": false
     },
     {
       "name": "package-lock.json",
       "path": "frontend/package-lock.json",
       "type": "file",
-      "sha": "0504090cc58f5335d9d944f29f755bd223cf8c1d",
+      "sha": "ae407f34a55581863f663ac94281c74f7f68593a",
       "mode": "100644",
       "extension": ".json",
-      "size": 126730,
+      "size": 201554,
       "is_binary": false
     },
     {
       "name": "package.json",
       "path": "frontend/package.json",
       "type": "file",
-      "sha": "0b57e8d1a761d58fdf01e85d790ed504cf3e1f23",
+      "sha": "75e4e6db3bf4533c6713cc13c3dbd95056277098",
       "mode": "100644",
       "extension": ".json",
-      "size": 845,
+      "size": 1101,
+      "is_binary": false
+    },
+    {
+      "name": "playwright.config.js",
+      "path": "frontend/playwright.config.js",
+      "type": "file",
+      "sha": "d8353e103105297e027f3205659c4865158fd931",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 627,
       "is_binary": false
     },
     {
@@ -794,7 +1146,7 @@
       "name": "src",
       "path": "frontend/src",
       "type": "directory",
-      "sha": "cbdc085f9b2b22f07a539cc678eaf732c866f12e",
+      "sha": "9a8af2f5ad906a347a59fec58f919cf6d819d1a8",
       "mode": "040000",
       "children": []
     },
@@ -812,28 +1164,28 @@
       "name": "App.jsx",
       "path": "frontend/src/App.jsx",
       "type": "file",
-      "sha": "13402567b3a32d60ece8f8f937e9a23b01cdb4f8",
+      "sha": "c76c2c8ee99492e373f30e9ec9305cdcaaa09ea0",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 1143,
+      "size": 2554,
       "is_binary": false
     },
     {
       "name": "assets",
       "path": "frontend/src/assets",
       "type": "directory",
-      "sha": "cff299901617c708226dccca2b0bf0ab0378c5fa",
+      "sha": "1fa1cacf689bc64ee8d0da538e9ba6e2982150cb",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "hero.png",
-      "path": "frontend/src/assets/hero.png",
+      "name": "dito_logo.png",
+      "path": "frontend/src/assets/dito_logo.png",
       "type": "file",
-      "sha": "02251f4b956c55af2d76fd0788124d7eee2b45eb",
+      "sha": "4bbe9d5fd13bc183161be18f9900af7d6eed6c36",
       "mode": "100644",
       "extension": ".png",
-      "size": 13057,
+      "size": 81134,
       "is_binary": false
     },
     {
@@ -860,7 +1212,7 @@
       "name": "components",
       "path": "frontend/src/components",
       "type": "directory",
-      "sha": "e023c859eb3430743144cd5f1ba664af40934511",
+      "sha": "65982a2f7435dbc097ae83e51bc6fc9b448f133f",
       "mode": "040000",
       "children": []
     },
@@ -888,10 +1240,10 @@
       "name": "GraficoPartidos.jsx",
       "path": "frontend/src/components/GraficoPartidos.jsx",
       "type": "file",
-      "sha": "73bc0e501634135c647cde7e34af9e1236c02230",
+      "sha": "9a2c9c76bef7641a8f0d8f8365a76847b06b2ede",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 1409,
+      "size": 1480,
       "is_binary": false
     },
     {
@@ -908,10 +1260,10 @@
       "name": "GraficoTendencias.jsx",
       "path": "frontend/src/components/GraficoTendencias.jsx",
       "type": "file",
-      "sha": "b89b47b74d11fa7cbc2d522bd59e6f6753b7ad8b",
+      "sha": "bdcfd94649c26e61923ed86c3c19a5a0c5581a3f",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 1482,
+      "size": 1719,
       "is_binary": false
     },
     {
@@ -922,6 +1274,26 @@
       "mode": "100644",
       "extension": ".jsx",
       "size": 734,
+      "is_binary": false
+    },
+    {
+      "name": "Header.test.jsx",
+      "path": "frontend/src/components/Header.test.jsx",
+      "type": "file",
+      "sha": "99247b6c3281fb0699d54022243feb00f13a2a7d",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 1047,
+      "is_binary": false
+    },
+    {
+      "name": "MapaBrasil.jsx",
+      "path": "frontend/src/components/MapaBrasil.jsx",
+      "type": "file",
+      "sha": "4fd6fab106a5d24f1e0ac60b7b73e2df39bff18a",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 70410,
       "is_binary": false
     },
     {
@@ -938,10 +1310,10 @@
       "name": "Sidebar.jsx",
       "path": "frontend/src/components/Sidebar.jsx",
       "type": "file",
-      "sha": "8a47d7392b3d8b29c7fe3d4f148e1b5ff6e215ef",
+      "sha": "6a44515f30bcce42cf84787acf6aaeee241ec0df",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 4313,
+      "size": 5722,
       "is_binary": false
     },
     {
@@ -958,10 +1330,10 @@
       "name": "index.css",
       "path": "frontend/src/index.css",
       "type": "file",
-      "sha": "6d2d82f66a61c9c96203279a4f71ceb15a1563d0",
+      "sha": "fecfd6ed03468633c4e9efddd26fe3f293af13bd",
       "mode": "100644",
       "extension": ".css",
-      "size": 737,
+      "size": 870,
       "is_binary": false
     },
     {
@@ -978,7 +1350,7 @@
       "name": "pages",
       "path": "frontend/src/pages",
       "type": "directory",
-      "sha": "5086350aa0e4894ad0234e5610ef33aea0a811a6",
+      "sha": "7276dba0f8d4fe537fc24e13f1a3d3d0ba687a54",
       "mode": "040000",
       "children": []
     },
@@ -986,77 +1358,97 @@
       "name": "Comparacao.jsx",
       "path": "frontend/src/pages/Comparacao.jsx",
       "type": "file",
-      "sha": "63588c9f17477632a0ed740084f5cace5970fd4d",
+      "sha": "80e5c8bd214f7a2a14d5771ecd93ee32fc1da84f",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 13232,
+      "size": 16479,
+      "is_binary": false
+    },
+    {
+      "name": "Estados.jsx",
+      "path": "frontend/src/pages/Estados.jsx",
+      "type": "file",
+      "sha": "c551478393eb09fdc109c570d810c1563b2f87f0",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 25533,
+      "is_binary": false
+    },
+    {
+      "name": "Partidos.jsx",
+      "path": "frontend/src/pages/Partidos.jsx",
+      "type": "file",
+      "sha": "4ebb9133266f2db58ff12af36bb41f95f125577d",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 24268,
       "is_binary": false
     },
     {
       "name": "Perfil.jsx",
       "path": "frontend/src/pages/Perfil.jsx",
       "type": "file",
-      "sha": "b931aac4dbe4869b6549f43b2b285ae54d3e02bf",
+      "sha": "165a92b7f9687afa2d87bc0c851d7094bb9b2420",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 11447,
+      "size": 11504,
       "is_binary": false
     },
     {
       "name": "PerfilPolitico.jsx",
       "path": "frontend/src/pages/PerfilPolitico.jsx",
       "type": "file",
-      "sha": "b0903aff13a4c97e99abacbd8992a4dfeb69f9c9",
+      "sha": "fbddbfd1b50cb03e505692c54939457aa1d25368",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 17109,
+      "size": 18601,
       "is_binary": false
     },
     {
       "name": "Politicos.jsx",
       "path": "frontend/src/pages/Politicos.jsx",
       "type": "file",
-      "sha": "f20f7994c69c112053ad715bdadf31909532e513",
+      "sha": "8e787dc9fa0b47e91bcb760d6e8b8049e92d324a",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 7809,
+      "size": 10883,
       "is_binary": false
     },
     {
       "name": "Relatorios.jsx",
       "path": "frontend/src/pages/Relatorios.jsx",
       "type": "file",
-      "sha": "ec75b9ce5ebb9ef58542c76d12323ac843a3ef43",
+      "sha": "f0cfb8e9550aa7b70c706ca2cadfed0851c4aa5e",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 3000,
+      "size": 13217,
       "is_binary": false
     },
     {
       "name": "Sobre.jsx",
       "path": "frontend/src/pages/Sobre.jsx",
       "type": "file",
-      "sha": "b012ae56fa9d85b04cf2f5fbd886c177c6914324",
+      "sha": "4a6fbc169b794ba991ad4c01cf0d29b0db8a2a2b",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 9691,
+      "size": 9698,
       "is_binary": false
     },
     {
       "name": "VisaoGeral.jsx",
       "path": "frontend/src/pages/VisaoGeral.jsx",
       "type": "file",
-      "sha": "03be891192215b211e5d0d2ffb013b9ae7a93683",
+      "sha": "f9eb177410a2f43bbbef2611e9260b57b2d16fc6",
       "mode": "100644",
       "extension": ".jsx",
-      "size": 14734,
+      "size": 22251,
       "is_binary": false
     },
     {
       "name": "services",
       "path": "frontend/src/services",
       "type": "directory",
-      "sha": "031729a6f11ff5c1c4f171b6edb28a72c4e907e9",
+      "sha": "75c094a2bf9b68b5fc70ac00c165cb516ca919fd",
       "mode": "040000",
       "children": []
     },
@@ -1064,28 +1456,96 @@
       "name": "api.js",
       "path": "frontend/src/services/api.js",
       "type": "file",
-      "sha": "39abe24a52a3fecd32c24f99fbe3e98a88706264",
+      "sha": "d039f1806fe1bf61700ace43c6c98413d1efc86a",
       "mode": "100644",
       "extension": ".js",
-      "size": 2010,
+      "size": 2504,
+      "is_binary": false
+    },
+    {
+      "name": "api.test.js",
+      "path": "frontend/src/services/api.test.js",
+      "type": "file",
+      "sha": "a1626dd9abd9099d00803ff050df489fddc80a80",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 2359,
+      "is_binary": false
+    },
+    {
+      "name": "setupTests.js",
+      "path": "frontend/src/setupTests.js",
+      "type": "file",
+      "sha": "4ee32869890d35f0e369803f79060c6f24001845",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 91,
       "is_binary": false
     },
     {
       "name": "utils",
       "path": "frontend/src/utils",
       "type": "directory",
-      "sha": "63a44059b2753f366ef6bbd4e0a3329ce8c41d84",
+      "sha": "40cbd09749a14e358aa223d261ab88f32d872a9b",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "formatters.js",
+      "path": "frontend/src/utils/formatters.js",
+      "type": "file",
+      "sha": "4d674f6097763fb24ede8ed7c787c5ab7864e089",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 3704,
+      "is_binary": false
+    },
+    {
+      "name": "formatters.test.js",
+      "path": "frontend/src/utils/formatters.test.js",
+      "type": "file",
+      "sha": "53791c83ae2906fc4cf084a6c7a5719438512c20",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1205,
+      "is_binary": false
     },
     {
       "name": "mockData.js",
       "path": "frontend/src/utils/mockData.js",
       "type": "file",
-      "sha": "8440e769f0227f0088be6087e827240967b7523d",
+      "sha": "393e9af1b73d1f0fb7ff444aa22ed1569c559fdc",
       "mode": "100644",
       "extension": ".js",
-      "size": 1659,
+      "size": 1842,
+      "is_binary": false
+    },
+    {
+      "name": "timeline.js",
+      "path": "frontend/src/utils/timeline.js",
+      "type": "file",
+      "sha": "52d0023655763202d4a775b611db26f06580ebf2",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1466,
+      "is_binary": false
+    },
+    {
+      "name": "test-results",
+      "path": "frontend/test-results",
+      "type": "directory",
+      "sha": "c59876354b2d4f9b578d5c335419fee7b8a8aad0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".last-run.json",
+      "path": "frontend/test-results/.last-run.json",
+      "type": "file",
+      "sha": "cbcc1fbac11a74b608b2b3edc3a2ffd6ab639cb2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 45,
       "is_binary": false
     },
     {
@@ -1096,6 +1556,16 @@
       "mode": "100644",
       "extension": ".js",
       "size": 298,
+      "is_binary": false
+    },
+    {
+      "name": "vitest.config.js",
+      "path": "frontend/vitest.config.js",
+      "type": "file",
+      "sha": "c60f80abf10587c9ed235294785536961b979779",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 349,
       "is_binary": false
     },
     {
@@ -1112,10 +1582,10 @@
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "300d1f4abe56ee88e21585d07c334289f4cf1082",
+      "sha": "22b29c545425ab5a2d495326a0bf170475611f64",
       "mode": "100644",
       "extension": ".yml",
-      "size": 3446,
+      "size": 3699,
       "is_binary": false
     },
     {
@@ -1142,7 +1612,7 @@
       "name": "scripts",
       "path": "scripts",
       "type": "directory",
-      "sha": "ac7afea448b3c0f5469b82e32b61339019daa8ff",
+      "sha": "b68a6e9c75a0b940dcddba03309eff32327455c2",
       "mode": "040000",
       "children": []
     },
@@ -1155,22 +1625,32 @@
       "extension": ".js",
       "size": 6828,
       "is_binary": false
+    },
+    {
+      "name": "setup-git-hooks.js",
+      "path": "scripts/setup-git-hooks.js",
+      "type": "file",
+      "sha": "a4933ed21f81c811a266eebd7f7ecd774be10e0d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1776,
+      "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-06-30T09:17:50.154430",
+  "extracted_at": "2026-07-01T09:40:07.144341",
   "method": "rest",
-  "total_items": 120,
+  "total_items": 169,
   "repository_metadata": {
     "id": 1185581846,
     "full_name": "unb-mds/2026-1-Squad4-Dito_e_Feito",
     "description": "O Dito e Feito é um sistema de análise de coerência política que compara discursos de parlamentares com seus votos reais em plenário. O objetivo do projeto é promover transparência e apoiar a análise de comportamento legislativo por meio de dados e inteligência artificial.",
     "created_at": "2026-03-18T18:26:06Z",
-    "updated_at": "2026-06-10T16:10:57Z",
+    "updated_at": "2026-07-01T03:08:46Z",
     "language": "JavaScript",
-    "size": 3251,
+    "size": 3419,
     "stars": 3,
     "forks": 0,
-    "open_issues": 11
+    "open_issues": 1
   }
 }
