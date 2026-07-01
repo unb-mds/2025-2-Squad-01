@@ -2,19 +2,19 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-06-30T09:17:49.076218",
+  "analyzed_at": "2026-07-01T09:40:05.594985",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 312,
-  "total_bytes": 19753899,
+  "total_files": 320,
+  "total_bytes": 19792500,
   "languages": [
     {
       "language": "PDF",
       "file_count": 26,
       "total_bytes": 10548494,
-      "percentage": 53.4,
+      "percentage": 53.3,
       "files": [
         {
           "path": "docs/Arquitetura/Arquitetura C4 (1).pdf",
@@ -82,7 +82,7 @@
       "language": "PNG Image",
       "file_count": 46,
       "total_bytes": 5598260,
-      "percentage": 28.34,
+      "percentage": 28.28,
       "files": [
         {
           "path": "docs/Requisitos/imagens/GRÁFICOS.png",
@@ -150,7 +150,7 @@
       "language": "Unknown",
       "file_count": 8,
       "total_bytes": 1295522,
-      "percentage": 6.56,
+      "percentage": 6.55,
       "files": [
         {
           "path": "site/assets/javascripts/bundle.79ae519e.min.js.map",
@@ -205,8 +205,8 @@
     {
       "language": "JavaScript",
       "file_count": 80,
-      "total_bytes": 1156443,
-      "percentage": 5.85,
+      "total_bytes": 1161802,
+      "percentage": 5.87,
       "files": [
         {
           "path": "site/assets/javascripts/lunr/wordcut.js",
@@ -273,13 +273,13 @@
     {
       "language": "HTML",
       "file_count": 18,
-      "total_bytes": 335921,
+      "total_bytes": 336581,
       "percentage": 1.7,
       "files": [
         {
           "path": "overrides/main.html",
           "name": "main.html",
-          "size": 47616,
+          "size": 48276,
           "extension": ".html"
         },
         {
@@ -341,8 +341,8 @@
     {
       "language": "Markdown",
       "file_count": 63,
-      "total_bytes": 317707,
-      "percentage": 1.61,
+      "total_bytes": 314973,
+      "percentage": 1.59,
       "files": [
         {
           "path": ".claude/CLAUDE_MapaLILAS.md",
@@ -407,9 +407,77 @@
       ]
     },
     {
+      "language": "Python",
+      "file_count": 40,
+      "total_bytes": 169582,
+      "percentage": 0.86,
+      "files": [
+        {
+          "path": "backend/app/routers/projeto.py",
+          "name": "projeto.py",
+          "size": 20854,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/services/normalizer.py",
+          "name": "normalizer.py",
+          "size": 16421,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/services/graficos.py",
+          "name": "graficos.py",
+          "size": 12963,
+          "extension": ".py"
+        },
+        {
+          "path": "metrics/analyzer.py",
+          "name": "analyzer.py",
+          "size": 10562,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_cache_endpoints.py",
+          "name": "test_cache_endpoints.py",
+          "size": 9011,
+          "extension": ".py"
+        },
+        {
+          "path": "tests/test_workflow_deploy_pages.py",
+          "name": "test_workflow_deploy_pages.py",
+          "size": 8223,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/models.py",
+          "name": "models.py",
+          "size": 8031,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/schemas/senado.py",
+          "name": "senado.py",
+          "size": 7252,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/services/collector.py",
+          "name": "collector.py",
+          "size": 6579,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/migrations/versions/baf79178346c_criando_tabelas_iniciais.py",
+          "name": "baf79178346c_criando_tabelas_iniciais.py",
+          "size": 6206,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "JSON",
-      "file_count": 7,
-      "total_bytes": 168318,
+      "file_count": 8,
+      "total_bytes": 168697,
       "percentage": 0.85,
       "files": [
         {
@@ -433,7 +501,7 @@
         {
           "path": "docs/ingestion/ingestion-history.json",
           "name": "ingestion-history.json",
-          "size": 4595,
+          "size": 4878,
           "extension": ".json"
         },
         {
@@ -452,6 +520,12 @@
           "path": "backend/ingestion-report.json",
           "name": "ingestion-report.json",
           "size": 238,
+          "extension": ".json"
+        },
+        {
+          "path": "frontend/vercel.json",
+          "name": "vercel.json",
+          "size": 96,
           "extension": ".json"
         }
       ]
@@ -495,74 +569,6 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 34,
-      "total_bytes": 136010,
-      "percentage": 0.69,
-      "files": [
-        {
-          "path": "backend/app/routers/projeto.py",
-          "name": "projeto.py",
-          "size": 16763,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/services/normalizer.py",
-          "name": "normalizer.py",
-          "size": 16070,
-          "extension": ".py"
-        },
-        {
-          "path": "metrics/analyzer.py",
-          "name": "analyzer.py",
-          "size": 10562,
-          "extension": ".py"
-        },
-        {
-          "path": "tests/test_workflow_deploy_pages.py",
-          "name": "test_workflow_deploy_pages.py",
-          "size": 8223,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/models.py",
-          "name": "models.py",
-          "size": 7675,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/schemas/senado.py",
-          "name": "senado.py",
-          "size": 7252,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/services/collector.py",
-          "name": "collector.py",
-          "size": 6659,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/migrations/versions/baf79178346c_criando_tabelas_iniciais.py",
-          "name": "baf79178346c_criando_tabelas_iniciais.py",
-          "size": 6255,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_normalizer_unit.py",
-          "name": "test_normalizer_unit.py",
-          "size": 5561,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/schemas/camara.py",
-          "name": "camara.py",
-          "size": 4289,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "SVG Image",
       "file_count": 4,
       "total_bytes": 18147,
@@ -596,14 +602,14 @@
     },
     {
       "language": "YAML",
-      "file_count": 8,
-      "total_bytes": 12697,
-      "percentage": 0.06,
+      "file_count": 9,
+      "total_bytes": 13988,
+      "percentage": 0.07,
       "files": [
         {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 3249,
+          "size": 3401,
           "extension": ".yml"
         },
         {
@@ -622,6 +628,12 @@
           "path": ".github/workflows/static.yml",
           "name": "static.yml",
           "size": 1869,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/lint.yml",
+          "name": "lint.yml",
+          "size": 1139,
           "extension": ".yml"
         },
         {
@@ -679,7 +691,7 @@
     {
       "language": "Git Ignore",
       "file_count": 4,
-      "total_bytes": 596,
+      "total_bytes": 646,
       "percentage": 0.0,
       "files": [
         {
@@ -695,15 +707,15 @@
           "extension": ".gitignore"
         },
         {
-          "path": "backend/app/.gitignore",
+          "path": "backend/.gitignore",
           "name": ".gitignore",
-          "size": 30,
+          "size": 64,
           "extension": ".gitignore"
         },
         {
-          "path": "backend/.gitignore",
+          "path": "backend/app/.gitignore",
           "name": ".gitignore",
-          "size": 14,
+          "size": 30,
           "extension": ".gitignore"
         }
       ]
@@ -739,13 +751,13 @@
     {
       "language": "Text",
       "file_count": 2,
-      "total_bytes": 157,
+      "total_bytes": 181,
       "percentage": 0.0,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
-          "size": 138,
+          "size": 162,
           "extension": ".txt"
         },
         {
@@ -786,7 +798,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-06-30T09:20:59.048716",
+    "extracted_at": "2026-07-01T09:43:15.240091",
     "file_path": "data/silver/language_analysis_2026-1-Mapa_L.I.L.A.S.json"
   }
 }

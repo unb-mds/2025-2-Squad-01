@@ -2,11 +2,19 @@
   "repository": "2026-1-P.R.I.S.M.A",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-30T09:17:56.069174",
+  "extracted_at": "2026-07-01T09:40:14.612027",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
+      {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 104,
+        "extension": ".dockerignore",
+        "path": ".dockerignore"
+      },
       {
         "name": ".env_docker.exemplo",
         "type": "file",
@@ -67,7 +75,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2790,
+        "size": 4842,
         "extension": ".md",
         "path": "README.md"
       },
@@ -75,15 +83,23 @@
         "name": "compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 868,
+        "size": 902,
         "extension": ".yml",
         "path": "compose.yml"
+      },
+      {
+        "name": "docker-entrypoint.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 184,
+        "extension": ".sh",
+        "path": "docker-entrypoint.sh"
       },
       {
         "name": "dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 941,
+        "size": 1083,
         "extension": "",
         "path": "dockerfile"
       },
@@ -270,6 +286,14 @@
         "size": 2141,
         "extension": ".md",
         "path": "docs/releases/release_note_v0.1.0.md"
+      },
+      {
+        "name": "release_note_v0.2.0.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6723,
+        "extension": ".md",
+        "path": "docs/releases/release_note_v0.2.0.md"
       },
       {
         "name": "entrypoint.sh",
@@ -505,7 +529,7 @@
         "name": "pytest.ini",
         "type": "file",
         "language": "INI",
-        "size": 67,
+        "size": 72,
         "extension": ".ini",
         "path": "pytest.ini"
       },
@@ -700,6 +724,14 @@
         "path": "src/Processos/migrations/0005_processolegislativo_apelido_and_more.py"
       },
       {
+        "name": "0006_merge_20260701_0349.py",
+        "type": "file",
+        "language": "Python",
+        "size": 302,
+        "extension": ".py",
+        "path": "src/Processos/migrations/0006_merge_20260701_0349.py"
+      },
+      {
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
@@ -719,7 +751,7 @@
         "name": "services.py",
         "type": "file",
         "language": "Python",
-        "size": 24500,
+        "size": 24799,
         "extension": ".py",
         "path": "src/Processos/services.py"
       },
@@ -893,15 +925,23 @@
         "name": "settings.py",
         "type": "file",
         "language": "Python",
-        "size": 6066,
+        "size": 6090,
         "extension": ".py",
         "path": "src/config/settings.py"
+      },
+      {
+        "name": "test_settings.py",
+        "type": "file",
+        "language": "Python",
+        "size": 158,
+        "extension": ".py",
+        "path": "src/config/test_settings.py"
       },
       {
         "name": "urls.py",
         "type": "file",
         "language": "Python",
-        "size": 1527,
+        "size": 1583,
         "extension": ".py",
         "path": "src/config/urls.py"
       },
@@ -1059,7 +1099,7 @@
         "name": "header.html",
         "type": "file",
         "language": "HTML",
-        "size": 745,
+        "size": 393,
         "extension": ".html",
         "path": "src/home/templates/home/components/header.html"
       },
@@ -1067,17 +1107,9 @@
         "name": "sidebar.html",
         "type": "file",
         "language": "HTML",
-        "size": 3280,
+        "size": 2310,
         "extension": ".html",
         "path": "src/home/templates/home/components/sidebar.html"
-      },
-      {
-        "name": "dashboard.html",
-        "type": "file",
-        "language": "HTML",
-        "size": 3475,
-        "extension": ".html",
-        "path": "src/home/templates/home/dashboard.html"
       },
       {
         "name": "favoritos.html",
@@ -1107,7 +1139,7 @@
         "name": "usuario.html",
         "type": "file",
         "language": "HTML",
-        "size": 6580,
+        "size": 5515,
         "extension": ".html",
         "path": "src/home/templates/home/usuario.html"
       },
@@ -1118,10 +1150,18 @@
         "children": []
       },
       {
+        "name": "base_auth.html",
+        "type": "file",
+        "language": "HTML",
+        "size": 3684,
+        "extension": ".html",
+        "path": "src/home/templates/registration/base_auth.html"
+      },
+      {
         "name": "login.html",
         "type": "file",
         "language": "HTML",
-        "size": 422,
+        "size": 1555,
         "extension": ".html",
         "path": "src/home/templates/registration/login.html"
       },
@@ -1129,7 +1169,7 @@
         "name": "password_reset_complete.html",
         "type": "file",
         "language": "HTML",
-        "size": 139,
+        "size": 899,
         "extension": ".html",
         "path": "src/home/templates/registration/password_reset_complete.html"
       },
@@ -1137,7 +1177,7 @@
         "name": "password_reset_confirm.html",
         "type": "file",
         "language": "HTML",
-        "size": 139,
+        "size": 1556,
         "extension": ".html",
         "path": "src/home/templates/registration/password_reset_confirm.html"
       },
@@ -1145,7 +1185,7 @@
         "name": "password_reset_done.html",
         "type": "file",
         "language": "HTML",
-        "size": 160,
+        "size": 1097,
         "extension": ".html",
         "path": "src/home/templates/registration/password_reset_done.html"
       },
@@ -1153,7 +1193,7 @@
         "name": "password_reset_form.html",
         "type": "file",
         "language": "HTML",
-        "size": 191,
+        "size": 1395,
         "extension": ".html",
         "path": "src/home/templates/registration/password_reset_form.html"
       },
@@ -1161,7 +1201,7 @@
         "name": "signup.html",
         "type": "file",
         "language": "HTML",
-        "size": 342,
+        "size": 1083,
         "extension": ".html",
         "path": "src/home/templates/registration/signup.html"
       },
@@ -1177,7 +1217,7 @@
         "name": "views.py",
         "type": "file",
         "language": "Python",
-        "size": 12235,
+        "size": 11103,
         "extension": ".py",
         "path": "src/home/views.py"
       },
@@ -1226,14 +1266,6 @@
         "path": "src/tests/e2e/test_configuracoes.py"
       },
       {
-        "name": "test_dashboard.py",
-        "type": "file",
-        "language": "Python",
-        "size": 1953,
-        "extension": ".py",
-        "path": "src/tests/e2e/test_dashboard.py"
-      },
-      {
         "name": "test_favoritos.py",
         "type": "file",
         "language": "Python",
@@ -1245,7 +1277,7 @@
         "name": "test_sanity.py",
         "type": "file",
         "language": "Python",
-        "size": 682,
+        "size": 820,
         "extension": ".py",
         "path": "src/tests/e2e/test_sanity.py"
       },
@@ -1268,7 +1300,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-30T09:20:58.812907",
+    "extracted_at": "2026-07-01T09:43:15.016591",
     "file_path": "data/silver/hierarchy_2026-1-P.R.I.S.M.A.json"
   }
 }

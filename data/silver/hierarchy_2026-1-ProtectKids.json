@@ -2,7 +2,7 @@
   "repository": "2026-1-ProtectKids",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-30T09:17:55.448313",
+  "extracted_at": "2026-07-01T09:40:13.773445",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -11,7 +11,7 @@
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 151,
+        "size": 250,
         "extension": ".example",
         "path": ".env.example"
       },
@@ -31,7 +31,7 @@
         "name": "ci.yml",
         "type": "file",
         "language": "YAML",
-        "size": 645,
+        "size": 1861,
         "extension": ".yml",
         "path": ".github/workflows/ci.yml"
       },
@@ -63,7 +63,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 645,
+        "size": 697,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -79,7 +79,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5519,
+        "size": 5528,
         "extension": ".md",
         "path": "README.md"
       },
@@ -101,7 +101,7 @@
         "name": "Dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 541,
+        "size": 531,
         "extension": "",
         "path": "backend/Dockerfile"
       },
@@ -115,7 +115,7 @@
         "name": "camara_api.py",
         "type": "file",
         "language": "Python",
-        "size": 28991,
+        "size": 34082,
         "extension": ".py",
         "path": "backend/crawler/camara_api.py"
       },
@@ -131,7 +131,7 @@
         "name": "senado_api.py",
         "type": "file",
         "language": "Python",
-        "size": 12567,
+        "size": 11295,
         "extension": ".py",
         "path": "backend/crawler/senado_api.py"
       },
@@ -139,15 +139,23 @@
         "name": "tramitacoes_api.py",
         "type": "file",
         "language": "Python",
-        "size": 5353,
+        "size": 7857,
         "extension": ".py",
         "path": "backend/crawler/tramitacoes_api.py"
+      },
+      {
+        "name": "tramitacoes_senado_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 15877,
+        "extension": ".py",
+        "path": "backend/crawler/tramitacoes_senado_api.py"
       },
       {
         "name": "database.py",
         "type": "file",
         "language": "Python",
-        "size": 519,
+        "size": 469,
         "extension": ".py",
         "path": "backend/database.py"
       },
@@ -155,7 +163,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 14545,
+        "size": 19018,
         "extension": ".py",
         "path": "backend/main.py"
       },
@@ -190,12 +198,84 @@
         "path": "backend/tests/__init__.py"
       },
       {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3183,
+        "extension": ".py",
+        "path": "backend/tests/conftest.py"
+      },
+      {
+        "name": "test_analytics.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5962,
+        "extension": ".py",
+        "path": "backend/tests/test_analytics.py"
+      },
+      {
+        "name": "test_api_proposicoes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2985,
+        "extension": ".py",
+        "path": "backend/tests/test_api_proposicoes.py"
+      },
+      {
+        "name": "test_busca_por_id.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3034,
+        "extension": ".py",
+        "path": "backend/tests/test_busca_por_id.py"
+      },
+      {
+        "name": "test_filtros_origem.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2060,
+        "extension": ".py",
+        "path": "backend/tests/test_filtros_origem.py"
+      },
+      {
         "name": "test_main.py",
         "type": "file",
         "language": "Python",
-        "size": 609,
+        "size": 3701,
         "extension": ".py",
         "path": "backend/tests/test_main.py"
+      },
+      {
+        "name": "test_models_unit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4025,
+        "extension": ".py",
+        "path": "backend/tests/test_models_unit.py"
+      },
+      {
+        "name": "test_normalizacao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 892,
+        "extension": ".py",
+        "path": "backend/tests/test_normalizacao.py"
+      },
+      {
+        "name": "test_tramitacoes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3060,
+        "extension": ".py",
+        "path": "backend/tests/test_tramitacoes.py"
+      },
+      {
+        "name": "docker-compose.prod.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 999,
+        "extension": ".yml",
+        "path": "docker-compose.prod.yml"
       },
       {
         "name": "docker-compose.yml",
@@ -338,14 +418,6 @@
         "children": []
       },
       {
-        "name": "estrategia_testes.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 5470,
-        "extension": ".md",
-        "path": "docs/estudos/estrategia_testes.md"
-      },
-      {
         "name": "fast API",
         "type": "directory",
         "path": "docs/estudos/fast API",
@@ -369,7 +441,7 @@
         "name": "estrategia_testes.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5470,
+        "size": 7643,
         "extension": ".md",
         "path": "docs/estudos/testes/estrategia_testes.md"
       },
@@ -386,6 +458,14 @@
         "type": "directory",
         "path": "docs/infra",
         "children": []
+      },
+      {
+        "name": "ci-cd.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3618,
+        "extension": ".md",
+        "path": "docs/infra/ci-cd.md"
       },
       {
         "name": "docker-compose.md",
@@ -421,7 +501,7 @@
         "name": "sprint_00.md",
         "type": "file",
         "language": "Markdown",
-        "size": 430,
+        "size": 1867,
         "extension": ".md",
         "path": "docs/sprints/sprint_00.md"
       },
@@ -429,7 +509,7 @@
         "name": "sprint_01.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2617,
+        "size": 3914,
         "extension": ".md",
         "path": "docs/sprints/sprint_01.md"
       },
@@ -437,7 +517,7 @@
         "name": "sprint_02.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2209,
+        "size": 3475,
         "extension": ".md",
         "path": "docs/sprints/sprint_02.md"
       },
@@ -445,7 +525,7 @@
         "name": "sprint_03.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3596,
+        "size": 4780,
         "extension": ".md",
         "path": "docs/sprints/sprint_03.md"
       },
@@ -453,7 +533,7 @@
         "name": "sprint_04.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4720,
+        "size": 5894,
         "extension": ".md",
         "path": "docs/sprints/sprint_04.md"
       },
@@ -461,7 +541,7 @@
         "name": "sprint_05.md",
         "type": "file",
         "language": "Markdown",
-        "size": 0,
+        "size": 6147,
         "extension": ".md",
         "path": "docs/sprints/sprint_05.md"
       },
@@ -469,7 +549,7 @@
         "name": "sprint_06.md",
         "type": "file",
         "language": "Markdown",
-        "size": 6175,
+        "size": 7948,
         "extension": ".md",
         "path": "docs/sprints/sprint_06.md"
       },
@@ -477,7 +557,7 @@
         "name": "sprint_07.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2342,
+        "size": 3732,
         "extension": ".md",
         "path": "docs/sprints/sprint_07.md"
       },
@@ -485,7 +565,7 @@
         "name": "sprint_08.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5746,
+        "size": 7010,
         "extension": ".md",
         "path": "docs/sprints/sprint_08.md"
       },
@@ -493,9 +573,17 @@
         "name": "sprint_09.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4830,
+        "size": 6044,
         "extension": ".md",
         "path": "docs/sprints/sprint_09.md"
+      },
+      {
+        "name": "sprint_10.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7831,
+        "extension": ".md",
+        "path": "docs/sprints/sprint_10.md"
       },
       {
         "name": "stylesheets",
@@ -605,7 +693,7 @@
         "name": "requisitos.md",
         "type": "file",
         "language": "Markdown",
-        "size": 12682,
+        "size": 13253,
         "extension": ".md",
         "path": "estudos_iniciais/estudos/requisitos/requisitos.md"
       },
@@ -619,7 +707,7 @@
         "name": ".dockerignore",
         "type": "file",
         "language": "Docker Ignore",
-        "size": 28,
+        "size": 80,
         "extension": ".dockerignore",
         "path": "frontend/.dockerignore"
       },
@@ -643,9 +731,17 @@
         "name": "Dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 220,
+        "size": 215,
         "extension": "",
         "path": "frontend/Dockerfile"
+      },
+      {
+        "name": "Dockerfile.prod",
+        "type": "file",
+        "language": "Unknown",
+        "size": 345,
+        "extension": ".prod",
+        "path": "frontend/Dockerfile.prod"
       },
       {
         "name": "README.md",
@@ -654,26 +750,6 @@
         "size": 1027,
         "extension": ".md",
         "path": "frontend/README.md"
-      },
-      {
-        "name": "assets",
-        "type": "directory",
-        "path": "frontend/assets",
-        "children": []
-      },
-      {
-        "name": "img",
-        "type": "directory",
-        "path": "frontend/assets/img",
-        "children": []
-      },
-      {
-        "name": "maeefilha.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 2766553,
-        "extension": ".png",
-        "path": "frontend/assets/img/maeefilha.png"
       },
       {
         "name": "eslint.config.js",
@@ -733,15 +809,23 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 329,
+        "size": 582,
         "extension": ".html",
         "path": "frontend/index.html"
+      },
+      {
+        "name": "nginx.conf",
+        "type": "file",
+        "language": "Config",
+        "size": 345,
+        "extension": ".conf",
+        "path": "frontend/nginx.conf"
       },
       {
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 107522,
+        "size": 115211,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -749,7 +833,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 1027,
+        "size": 1112,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -766,6 +850,14 @@
         "type": "directory",
         "path": "frontend/public",
         "children": []
+      },
+      {
+        "name": "favicon.svg",
+        "type": "file",
+        "language": "SVG Image",
+        "size": 366,
+        "extension": ".svg",
+        "path": "frontend/public/favicon.svg"
       },
       {
         "name": "images",
@@ -791,7 +883,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 969,
+        "size": 1689,
         "extension": ".jsx",
         "path": "frontend/src/App.jsx"
       },
@@ -799,7 +891,7 @@
         "name": "App.test.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 469,
+        "size": 934,
         "extension": ".jsx",
         "path": "frontend/src/App.test.jsx"
       },
@@ -807,7 +899,7 @@
         "name": "api.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 1215,
+        "size": 2067,
         "extension": ".js",
         "path": "frontend/src/api.js"
       },
@@ -834,26 +926,64 @@
         "path": "frontend/src/components/Footer.jsx"
       },
       {
+        "name": "Header.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1847,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Header.jsx"
+      },
+      {
         "name": "NuvemPalavras.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1733,
+        "size": 1878,
         "extension": ".jsx",
         "path": "frontend/src/components/NuvemPalavras.jsx"
       },
       {
-        "name": "header.jsx",
+        "name": "NuvemPalavras.test.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1638,
+        "size": 695,
         "extension": ".jsx",
-        "path": "frontend/src/components/header.jsx"
+        "path": "frontend/src/components/NuvemPalavras.test.jsx"
+      },
+      {
+        "name": "ScrollToTop.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 304,
+        "extension": ".jsx",
+        "path": "frontend/src/components/ScrollToTop.jsx"
+      },
+      {
+        "name": "constants",
+        "type": "directory",
+        "path": "frontend/src/constants",
+        "children": []
+      },
+      {
+        "name": "analytics.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2172,
+        "extension": ".js",
+        "path": "frontend/src/constants/analytics.js"
+      },
+      {
+        "name": "categoriasNlp.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 13218,
+        "extension": ".js",
+        "path": "frontend/src/constants/categoriasNlp.js"
       },
       {
         "name": "index.css",
         "type": "file",
         "language": "CSS",
-        "size": 128,
+        "size": 127,
         "extension": ".css",
         "path": "frontend/src/index.css"
       },
@@ -875,15 +1005,23 @@
         "name": "DetalhesLei.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 9661,
+        "size": 11157,
         "extension": ".jsx",
         "path": "frontend/src/pages/DetalhesLei.jsx"
+      },
+      {
+        "name": "DetalhesSubtema.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 8916,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/DetalhesSubtema.jsx"
       },
       {
         "name": "Estatisticas.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 10319,
+        "size": 12056,
         "extension": ".jsx",
         "path": "frontend/src/pages/Estatisticas.jsx"
       },
@@ -891,7 +1029,7 @@
         "name": "Inicio.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 14012,
+        "size": 16357,
         "extension": ".jsx",
         "path": "frontend/src/pages/Inicio.jsx"
       },
@@ -899,7 +1037,7 @@
         "name": "Sobre.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 4260,
+        "size": 4357,
         "extension": ".jsx",
         "path": "frontend/src/pages/Sobre.jsx"
       },
@@ -907,9 +1045,39 @@
         "name": "TodasAsLeis.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 6403,
+        "size": 9660,
         "extension": ".jsx",
         "path": "frontend/src/pages/TodasAsLeis.jsx"
+      },
+      {
+        "name": "TodasAsLeis.test.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1133,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/TodasAsLeis.test.jsx"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "frontend/src/utils",
+        "children": []
+      },
+      {
+        "name": "formatters.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1461,
+        "extension": ".js",
+        "path": "frontend/src/utils/formatters.js"
+      },
+      {
+        "name": "formatters.test.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1662,
+        "extension": ".js",
+        "path": "frontend/src/utils/formatters.test.js"
       },
       {
         "name": "tailwind.config.js",
@@ -923,7 +1091,7 @@
         "name": "vite.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 329,
+        "size": 525,
         "extension": ".js",
         "path": "frontend/vite.config.js"
       },
@@ -931,7 +1099,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1451,
+        "size": 1505,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -968,7 +1136,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-30T09:20:58.576139",
+    "extracted_at": "2026-07-01T09:43:14.784533",
     "file_path": "data/silver/hierarchy_2026-1-ProtectKids.json"
   }
 }

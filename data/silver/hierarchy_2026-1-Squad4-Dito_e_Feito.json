@@ -2,7 +2,7 @@
   "repository": "2026-1-Squad4-Dito_e_Feito",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-06-30T09:17:50.154430",
+  "extracted_at": "2026-07-01T09:40:07.144341",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -36,6 +36,14 @@
         "path": ".github/workflows/metrics.yml"
       },
       {
+        "name": "tests.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1364,
+        "extension": ".yml",
+        "path": ".github/workflows/tests.yml"
+      },
+      {
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
@@ -47,9 +55,17 @@
         "name": "CONTEXTO.md",
         "type": "file",
         "language": "Markdown",
-        "size": 8077,
+        "size": 22195,
         "extension": ".md",
         "path": "CONTEXTO.md"
+      },
+      {
+        "name": "DOCKER_PASSO_A_PASSO.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7628,
+        "extension": ".md",
+        "path": "DOCKER_PASSO_A_PASSO.md"
       },
       {
         "name": "ESTRUTURA.md",
@@ -71,7 +87,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5655,
+        "size": 6812,
         "extension": ".md",
         "path": "README.md"
       },
@@ -96,10 +112,18 @@
         "children": []
       },
       {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 175,
+        "extension": ".dockerignore",
+        "path": "backend/.dockerignore"
+      },
+      {
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 720,
+        "size": 758,
         "extension": ".example",
         "path": "backend/.env.example"
       },
@@ -112,12 +136,52 @@
         "path": "backend/.gitignore"
       },
       {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 737,
+        "extension": "",
+        "path": "backend/Dockerfile"
+      },
+      {
         "name": "api.py",
         "type": "file",
         "language": "Python",
-        "size": 29232,
+        "size": 40761,
         "extension": ".py",
         "path": "backend/api.py"
+      },
+      {
+        "name": "apply_migration.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4654,
+        "extension": ".py",
+        "path": "backend/apply_migration.py"
+      },
+      {
+        "name": "check_apis.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4221,
+        "extension": ".py",
+        "path": "backend/check_apis.py"
+      },
+      {
+        "name": "check_db.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3575,
+        "extension": ".py",
+        "path": "backend/check_db.py"
+      },
+      {
+        "name": "config_data.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 89,
+        "extension": ".json",
+        "path": "backend/config_data.json"
       },
       {
         "name": "dashboard.html",
@@ -131,7 +195,7 @@
         "name": "dashboard_metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 34486,
+        "size": 209613,
         "extension": ".json",
         "path": "backend/dashboard_metrics.json"
       },
@@ -150,6 +214,46 @@
         "path": "backend/database/001_add_tipo_parlamentar.sql"
       },
       {
+        "name": "004_coerencia_booleana.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 3012,
+        "extension": ".sql",
+        "path": "backend/database/004_coerencia_booleana.sql"
+      },
+      {
+        "name": "006_coerencia_booleana.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 3012,
+        "extension": ".sql",
+        "path": "backend/database/006_coerencia_booleana.sql"
+      },
+      {
+        "name": "007_fix_views_and_alignment.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 10905,
+        "extension": ".sql",
+        "path": "backend/database/007_fix_views_and_alignment.sql"
+      },
+      {
+        "name": "008_fix_columns_and_views.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 10394,
+        "extension": ".sql",
+        "path": "backend/database/008_fix_columns_and_views.sql"
+      },
+      {
+        "name": "009_drop_recreate_views.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 4242,
+        "extension": ".sql",
+        "path": "backend/database/009_drop_recreate_views.sql"
+      },
+      {
         "name": "Conexão.md",
         "type": "file",
         "language": "Markdown",
@@ -161,7 +265,7 @@
         "name": "Migrations.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5111,
+        "size": 6774,
         "extension": ".md",
         "path": "backend/database/Migrations.md"
       },
@@ -169,7 +273,7 @@
         "name": "Migrations.sql",
         "type": "file",
         "language": "SQL",
-        "size": 4152,
+        "size": 7576,
         "extension": ".sql",
         "path": "backend/database/Migrations.sql"
       },
@@ -177,15 +281,31 @@
         "name": "schema.sql",
         "type": "file",
         "language": "SQL",
-        "size": 3712,
+        "size": 4190,
         "extension": ".sql",
         "path": "backend/database/schema.sql"
+      },
+      {
+        "name": "seed.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 936,
+        "extension": ".sql",
+        "path": "backend/database/seed.sql"
+      },
+      {
+        "name": "generate_massive_dashboard.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6682,
+        "extension": ".py",
+        "path": "backend/generate_massive_dashboard.py"
       },
       {
         "name": "pipe.py",
         "type": "file",
         "language": "Python",
-        "size": 12663,
+        "size": 12664,
         "extension": ".py",
         "path": "backend/pipe.py"
       },
@@ -193,23 +313,91 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 71,
+        "size": 99,
         "extension": ".txt",
         "path": "backend/requirements.txt"
+      },
+      {
+        "name": "scan_deputados.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2629,
+        "extension": ".py",
+        "path": "backend/scan_deputados.py"
       },
       {
         "name": "scan_senators.py",
         "type": "file",
         "language": "Python",
-        "size": 40387,
+        "size": 55249,
         "extension": ".py",
         "path": "backend/scan_senators.py"
+      },
+      {
+        "name": "seed_massive_database.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11267,
+        "extension": ".py",
+        "path": "backend/seed_massive_database.py"
+      },
+      {
+        "name": "tests",
+        "type": "directory",
+        "path": "backend/tests",
+        "children": []
+      },
+      {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 834,
+        "extension": ".py",
+        "path": "backend/tests/conftest.py"
+      },
+      {
+        "name": "test_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6294,
+        "extension": ".py",
+        "path": "backend/tests/test_api.py"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "backend/utils",
+        "children": []
+      },
+      {
+        "name": "config.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4780,
+        "extension": ".py",
+        "path": "backend/utils/config.py"
+      },
+      {
+        "name": "docker-compose.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1464,
+        "extension": ".yml",
+        "path": "docker-compose.yml"
       },
       {
         "name": "docs",
         "type": "directory",
         "path": "docs",
         "children": []
+      },
+      {
+        "name": "DEPLOY.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5747,
+        "extension": ".md",
+        "path": "docs/DEPLOY.md"
       },
       {
         "name": "Possivel_R1_Apresentação.md",
@@ -229,7 +417,7 @@
         "name": "backend.md",
         "type": "file",
         "language": "Markdown",
-        "size": 9673,
+        "size": 9891,
         "extension": ".md",
         "path": "docs/backend/backend.md"
       },
@@ -240,6 +428,22 @@
         "size": 14916,
         "extension": ".md",
         "path": "docs/backend/banco_de_dados.md"
+      },
+      {
+        "name": "coerencia_e_incremental.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4550,
+        "extension": ".md",
+        "path": "docs/backend/coerencia_e_incremental.md"
+      },
+      {
+        "name": "pipeline_multicasa.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7055,
+        "extension": ".md",
+        "path": "docs/backend/pipeline_multicasa.md"
       },
       {
         "name": "estudos",
@@ -391,7 +595,7 @@
         "name": "fluxo_pipeline_dashboard.md",
         "type": "file",
         "language": "Markdown",
-        "size": 6210,
+        "size": 6510,
         "extension": ".md",
         "path": "docs/fluxo_pipeline_dashboard.md"
       },
@@ -421,7 +625,7 @@
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1820,
+        "size": 3471,
         "extension": ".md",
         "path": "docs/index.md"
       },
@@ -438,6 +642,28 @@
         "size": 1232,
         "extension": ".md",
         "path": "docs/observações/forceinIndevido.md"
+      },
+      {
+        "name": "releases",
+        "type": "directory",
+        "path": "docs/releases",
+        "children": []
+      },
+      {
+        "name": "release1.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6879,
+        "extension": ".md",
+        "path": "docs/releases/release1.md"
+      },
+      {
+        "name": "release2.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4705,
+        "extension": ".md",
+        "path": "docs/releases/release2.md"
       },
       {
         "name": "requisitos",
@@ -457,7 +683,7 @@
         "name": "requisitos.md",
         "type": "file",
         "language": "Markdown",
-        "size": 7314,
+        "size": 10578,
         "extension": ".md",
         "path": "docs/requisitos/requisitos.md"
       },
@@ -524,6 +750,14 @@
         "path": "docs/sprints/sprint07.md"
       },
       {
+        "name": "sprint08.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2892,
+        "extension": ".md",
+        "path": "docs/sprints/sprint08.md"
+      },
+      {
         "name": "tecnologias",
         "type": "directory",
         "path": "docs/tecnologias",
@@ -552,6 +786,22 @@
         "children": []
       },
       {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 0,
+        "extension": ".dockerignore",
+        "path": "frontend/.dockerignore"
+      },
+      {
+        "name": ".env.example",
+        "type": "file",
+        "language": "Unknown",
+        "size": 241,
+        "extension": ".example",
+        "path": "frontend/.env.example"
+      },
+      {
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
@@ -560,12 +810,34 @@
         "path": "frontend/.gitignore"
       },
       {
+        "name": "Dockerfile",
+        "type": "file",
+        "language": "No Extension",
+        "size": 774,
+        "extension": "",
+        "path": "frontend/Dockerfile"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
         "size": 1027,
         "extension": ".md",
         "path": "frontend/README.md"
+      },
+      {
+        "name": "e2e",
+        "type": "directory",
+        "path": "frontend/e2e",
+        "children": []
+      },
+      {
+        "name": "dashboard.spec.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2953,
+        "extension": ".js",
+        "path": "frontend/e2e/dashboard.spec.js"
       },
       {
         "name": "eslint.config.js",
@@ -579,7 +851,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 845,
+        "size": 857,
         "extension": ".html",
         "path": "frontend/index.html"
       },
@@ -587,7 +859,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 126730,
+        "size": 201554,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -595,9 +867,17 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 845,
+        "size": 1101,
         "extension": ".json",
         "path": "frontend/package.json"
+      },
+      {
+        "name": "playwright.config.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 627,
+        "extension": ".js",
+        "path": "frontend/playwright.config.js"
       },
       {
         "name": "postcss.config.js",
@@ -647,7 +927,7 @@
         "name": "App.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1143,
+        "size": 2554,
         "extension": ".jsx",
         "path": "frontend/src/App.jsx"
       },
@@ -658,12 +938,12 @@
         "children": []
       },
       {
-        "name": "hero.png",
+        "name": "dito_logo.png",
         "type": "file",
         "language": "PNG Image",
-        "size": 13057,
+        "size": 81134,
         "extension": ".png",
-        "path": "frontend/src/assets/hero.png"
+        "path": "frontend/src/assets/dito_logo.png"
       },
       {
         "name": "react.svg",
@@ -707,7 +987,7 @@
         "name": "GraficoPartidos.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1409,
+        "size": 1480,
         "extension": ".jsx",
         "path": "frontend/src/components/GraficoPartidos.jsx"
       },
@@ -723,7 +1003,7 @@
         "name": "GraficoTendencias.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 1482,
+        "size": 1719,
         "extension": ".jsx",
         "path": "frontend/src/components/GraficoTendencias.jsx"
       },
@@ -734,6 +1014,22 @@
         "size": 734,
         "extension": ".jsx",
         "path": "frontend/src/components/Header.jsx"
+      },
+      {
+        "name": "Header.test.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1047,
+        "extension": ".jsx",
+        "path": "frontend/src/components/Header.test.jsx"
+      },
+      {
+        "name": "MapaBrasil.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 70410,
+        "extension": ".jsx",
+        "path": "frontend/src/components/MapaBrasil.jsx"
       },
       {
         "name": "PoliticoCard.jsx",
@@ -747,7 +1043,7 @@
         "name": "Sidebar.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 4313,
+        "size": 5722,
         "extension": ".jsx",
         "path": "frontend/src/components/Sidebar.jsx"
       },
@@ -763,7 +1059,7 @@
         "name": "index.css",
         "type": "file",
         "language": "CSS",
-        "size": 737,
+        "size": 870,
         "extension": ".css",
         "path": "frontend/src/index.css"
       },
@@ -785,15 +1081,31 @@
         "name": "Comparacao.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 13232,
+        "size": 16479,
         "extension": ".jsx",
         "path": "frontend/src/pages/Comparacao.jsx"
+      },
+      {
+        "name": "Estados.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 25533,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/Estados.jsx"
+      },
+      {
+        "name": "Partidos.jsx",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 24268,
+        "extension": ".jsx",
+        "path": "frontend/src/pages/Partidos.jsx"
       },
       {
         "name": "Perfil.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 11447,
+        "size": 11504,
         "extension": ".jsx",
         "path": "frontend/src/pages/Perfil.jsx"
       },
@@ -801,7 +1113,7 @@
         "name": "PerfilPolitico.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 17109,
+        "size": 18601,
         "extension": ".jsx",
         "path": "frontend/src/pages/PerfilPolitico.jsx"
       },
@@ -809,7 +1121,7 @@
         "name": "Politicos.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 7809,
+        "size": 10883,
         "extension": ".jsx",
         "path": "frontend/src/pages/Politicos.jsx"
       },
@@ -817,7 +1129,7 @@
         "name": "Relatorios.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 3000,
+        "size": 13217,
         "extension": ".jsx",
         "path": "frontend/src/pages/Relatorios.jsx"
       },
@@ -825,7 +1137,7 @@
         "name": "Sobre.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 9691,
+        "size": 9698,
         "extension": ".jsx",
         "path": "frontend/src/pages/Sobre.jsx"
       },
@@ -833,7 +1145,7 @@
         "name": "VisaoGeral.jsx",
         "type": "file",
         "language": "JavaScript",
-        "size": 14734,
+        "size": 22251,
         "extension": ".jsx",
         "path": "frontend/src/pages/VisaoGeral.jsx"
       },
@@ -847,9 +1159,25 @@
         "name": "api.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 2010,
+        "size": 2504,
         "extension": ".js",
         "path": "frontend/src/services/api.js"
+      },
+      {
+        "name": "api.test.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 2359,
+        "extension": ".js",
+        "path": "frontend/src/services/api.test.js"
+      },
+      {
+        "name": "setupTests.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 91,
+        "extension": ".js",
+        "path": "frontend/src/setupTests.js"
       },
       {
         "name": "utils",
@@ -858,12 +1186,50 @@
         "children": []
       },
       {
+        "name": "formatters.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 3704,
+        "extension": ".js",
+        "path": "frontend/src/utils/formatters.js"
+      },
+      {
+        "name": "formatters.test.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1205,
+        "extension": ".js",
+        "path": "frontend/src/utils/formatters.test.js"
+      },
+      {
         "name": "mockData.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 1659,
+        "size": 1842,
         "extension": ".js",
         "path": "frontend/src/utils/mockData.js"
+      },
+      {
+        "name": "timeline.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1466,
+        "extension": ".js",
+        "path": "frontend/src/utils/timeline.js"
+      },
+      {
+        "name": "test-results",
+        "type": "directory",
+        "path": "frontend/test-results",
+        "children": []
+      },
+      {
+        "name": ".last-run.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 45,
+        "extension": ".json",
+        "path": "frontend/test-results/.last-run.json"
       },
       {
         "name": "vite.config.js",
@@ -872,6 +1238,14 @@
         "size": 298,
         "extension": ".js",
         "path": "frontend/vite.config.js"
+      },
+      {
+        "name": "vitest.config.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 349,
+        "extension": ".js",
+        "path": "frontend/vitest.config.js"
       },
       {
         "name": "index.html",
@@ -885,7 +1259,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 3446,
+        "size": 3699,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -918,11 +1292,19 @@
         "size": 6828,
         "extension": ".js",
         "path": "scripts/collect.js"
+      },
+      {
+        "name": "setup-git-hooks.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 1776,
+        "extension": ".js",
+        "path": "scripts/setup-git-hooks.js"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-06-30T09:20:58.578980",
+    "extracted_at": "2026-07-01T09:43:14.788059",
     "file_path": "data/silver/hierarchy_2026-1-Squad4-Dito_e_Feito.json"
   }
 }
