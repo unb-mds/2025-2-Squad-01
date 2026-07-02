@@ -1,9 +1,9 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-07-01T08:45:16.760072",
+      "extracted_at": "2026-07-02T08:00:05.464010",
       "file_path": "data/bronze/issues_2026-1-LegisKids.json",
-      "record_count": 50
+      "record_count": 48
     }
   },
   {
@@ -58,7 +58,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -84,10 +84,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-30T22:19:39Z",
-    "updated_at": "2026-06-30T22:19:39Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:06:09Z",
+    "closed_at": "2026-07-01T13:06:09Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -134,7 +134,27 @@
       "total_blocking": 0
     },
     "body": "## Contexto\n\nO pipeline de sincronização com a API da Câmara (`camara_service.py`) apresentava três problemas práticos:\n\n1. **Logging invisível** — logs não apareciam no CLI durante execuções manuais\n2. **Upsert frágil** — falhas silenciosas ao persistir proposições em lote no banco\n3. **Retry inútil após quota diária** — ao esgotar a cota do Gemini, o sistema continuava tentando novas chamadas, desperdiçando requisições e travando o run\n\nAlém disso, a variável `GEMINI_RATE_LIMIT_RPM` existia no `.env` mas não tinha implementação no código, e o modelo de classificação chamava o Gemini uma vez por página da API da Câmara — muito ineficiente para o free tier de 20 req/dia.\n\n## O que foi feito\n\n### Correções de robustez\n- Logging configurado para ser visível no CLI durante runs manuais\n- Upsert de proposições em lote tornado resiliente a falhas parciais\n- Quota diária do Gemini detectada sem retry: ao receber o erro `GenerateRequestsPerDayPerProjectPerModel`, o pipeline marca todas as proposições restantes como `pendente_classificacao` e encerra a classificação sem desperdiçar mais chamadas\n\n### Otimização do consumo do Gemini (fila acumulada)\n- Substituído o modelo \"classifica por página\" por fila acumulada entre páginas\n- Proposições válidas de múltiplas páginas se acumulam e só são enviadas ao Gemini quando a fila atinge `GEMINI_BATCH_SIZE` (ou ao final da paginação para o lote residual)\n- Com `GEMINI_BATCH_SIZE=50` e o free tier de 20 req/dia: **1.000 proposições classificadas por dia** (vs ~200 antes)\n- Redução de até 80% nas chamadas ao Gemini em runs típicas\n\n### Rate limiting client-side\n- Implementado `_gemini_acquire(rpm, rpd)` com:\n  - **Janela deslizante de 60s** para o limite de RPM: dorme o tempo necessário antes de cada chamada\n  - **Contador diário com reset automático** para o limite de RPD: lança erro compatível com o fluxo de `cota_gemini_esgotada` antes mesmo de chamar a API\n- Variáveis `GEMINI_RATE_LIMIT_RPM=5` e `GEMINI_RATE_LIMIT_RPD=20` configuradas no `.env`\n\n### Cobertura de testes\n4 novos testes unitários em `TestRunSyncFilaAcumulada`:\n- Acumulação de proposições entre páginas antes de acionar o Gemini\n- Lote residual classificado após o fim da paginação\n- `cota_esgotada=True` impede chamadas subsequentes ao Gemini\n- Totais (`total_inseridos`, `total_descartados`) acumulam corretamente entre múltiplos lotes\n\n## Arquivos modificados\n- `src/backend/services/camara_service.py`\n- `tests/test_camara_service.py`\n- `openspec/changes/sync-camara-gemini-batch-queue/` (proposta, design e tasks)\n\n## Relacionado\n- Branch: `fix/sync-camara-logging-upsert-quota`",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/213/reactions",
       "total_count": 0,
@@ -149,7 +169,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/213/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -205,7 +225,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -260,18 +280,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 7,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-25T21:23:08Z",
-      "updated_at": "2026-07-01T05:28:06Z",
+      "updated_at": "2026-07-01T13:10:05Z",
       "due_on": "2026-06-28T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-30T20:59:48Z",
-    "updated_at": "2026-06-30T20:59:49Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:08:15Z",
+    "closed_at": "2026-07-01T13:08:15Z",
     "assignee": {
       "login": "arthurpalhares1",
       "id": 193905735,
@@ -318,7 +338,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\n\nA documentação atual apresenta principalmente a API externa da Câmara dos Deputados, mas não possui uma referência centralizada para os endpoints internos fornecidos pelo backend do LegisKids.\n\nEssa ausência dificulta o desenvolvimento do frontend, a realização de testes e a entrada de novos integrantes no projeto.\n\n## Objetivo\n\nCriar uma página de referência da API interna, documentando seus endpoints, parâmetros, respostas e possíveis erros.\n\n## Endpoints que devem ser documentados\n\n- `GET /`\n- `GET /health`\n- `GET /api/proposicoes`\n- `GET /api/proposicoes/{id}`\n- `GET /api/estatisticas`\n- `GET /api/temas`\n\n## Tarefas\n\n- [ ] Criar uma página de referência da API no MkDocs;\n- [ ] Documentar a URL base utilizada localmente;\n- [ ] Descrever os parâmetros de busca e filtros de proposições;\n- [ ] Documentar paginação e limite máximo de itens;\n- [ ] Adicionar exemplos de requisição com `curl`;\n- [ ] Adicionar exemplos de respostas JSON;\n- [ ] Documentar os principais códigos HTTP, como `200`, `400`, `404` e `500`;\n- [ ] Diferenciar claramente a API interna do LegisKids da API externa da Câmara;\n- [ ] Adicionar a nova página à navegação do `mkdocs.yml`;\n- [ ] Validar a documentação com `mkdocs build --strict`.\n\n## Critérios de aceite\n\n- Todos os endpoints internos existentes estão documentados;\n- Parâmetros obrigatórios, opcionais e valores padrão estão descritos;\n- Os exemplos correspondem ao comportamento atual do backend;\n- A documentação diferencia a API interna da API da Câmara;\n- A página pode ser acessada pela navegação do MkDocs;\n- O build da documentação é concluído sem erros.\n\n## Observação\n\nA documentação deve utilizar exemplos fictícios e não pode expor credenciais, dados sensíveis ou a `DATABASE_URL` do Neon.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/212/reactions",
       "total_count": 0,
@@ -333,7 +373,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/212/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -389,7 +429,7 @@
         "description": "Esforço de 4 a 8 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -444,18 +484,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 7,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-25T21:23:08Z",
-      "updated_at": "2026-07-01T05:28:06Z",
+      "updated_at": "2026-07-01T13:10:05Z",
       "due_on": "2026-06-28T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-30T20:01:16Z",
-    "updated_at": "2026-06-30T20:01:48Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:08:59Z",
+    "closed_at": "2026-07-01T13:08:59Z",
     "assignee": {
       "login": "arthurpalhares1",
       "id": 193905735,
@@ -502,7 +542,27 @@
       "total_blocking": 0
     },
     "body": "## Descrição\n\nO README e o CONTRIBUTING apresentam inconsistências que dificultam a configuração e execução local do projeto.\n\nAtualmente:\n\n- A seção “Como Executar a Documentação” mistura instruções de documentação, backend e banco de dados;\n- As dependências do MkDocs estão em `requirements-docs.txt`, mas o README indica apenas `requirements.txt`;\n- Os comandos de migrations e seed aparecem duplicados;\n- O README informa a porta `8000`, enquanto o backend Flask e o frontend utilizam `5000`;\n- Não há um comando claro para iniciar o backend Flask;\n- O CONTRIBUTING recomenda executar a API com `uvicorn`, apesar de a aplicação principal utilizar Flask.\n\n## Objetivo\n\nCriar um guia de instalação e execução local claro, atualizado e reproduzível para novos contribuidores.\n\n## Tarefas\n\n- [ ] Separar as instruções de backend, frontend e documentação;\n- [ ] Documentar corretamente `requirements.txt` e `requirements-docs.txt`;\n- [ ] Adicionar o comando para iniciar o backend Flask;\n- [ ] Padronizar URLs e portas utilizadas;\n- [ ] Remover etapas duplicadas de migrations e seed;\n- [ ] Alinhar as instruções do `README.md` e do `CONTRIBUTING.md`;\n- [ ] Revisar a numeração e organização das etapas;\n- [ ] Validar o passo a passo em um ambiente limpo.\n\n## Critérios de aceite\n\n- Um novo contribuidor consegue executar banco, backend, frontend e documentação seguindo apenas o README;\n- Todos os comandos documentados correspondem à stack atual do projeto;\n- O README e o CONTRIBUTING não apresentam instruções conflitantes;\n- A documentação continua compilando com:\n\n```bash\nmkdocs build --strict",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/210/reactions",
       "total_count": 0,
@@ -517,7 +577,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/210/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -619,11 +679,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 7,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-25T21:23:08Z",
-      "updated_at": "2026-07-01T05:28:06Z",
+      "updated_at": "2026-07-01T13:10:05Z",
       "due_on": "2026-06-28T00:00:00Z",
       "closed_at": null
     },
@@ -768,7 +828,7 @@
         "description": "Esforço de 1 a 2 dias."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -823,18 +883,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 7,
+      "open_issues": 0,
+      "closed_issues": 12,
       "state": "open",
       "created_at": "2026-06-25T21:23:08Z",
-      "updated_at": "2026-07-01T05:28:06Z",
+      "updated_at": "2026-07-01T13:10:05Z",
       "due_on": "2026-06-28T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-28T22:32:48Z",
-    "updated_at": "2026-06-28T22:32:48Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:05:30Z",
+    "closed_at": "2026-07-01T13:05:30Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -881,7 +941,27 @@
       "total_blocking": 0
     },
     "body": "# Relatório — feat/gemini-classificacao-neon\n\n**Branch:** `feat/gemini-classificacao-neon`\n**Base:** `develop`\n**Commits exclusivos:** 8\n**Testes:** 39/39 passando\n\n---\n\n## O que foi implementado\n\n### 1. Pipeline de classificação Gemini + persistência no Neon (`ce29c42`)\n- Integração completa: API da Câmara → filtro → Gemini → PostgreSQL (Neon)\n- Modelo `SyncExecution` para registrar cada execução de sync com contadores e status\n- Comando CLI `flask sync-camara` para execução manual\n- Categorias fixas (8): cyberbullying, exploração sexual infantil online, proteção de dados de menores, segurança digital infantil, regulação de plataformas digitais, conteúdos nocivos para menores, crimes virtuais contra crianças, privacidade de menores\n- Seed automático das categorias na inicialização\n- Proposições irrelevantes ao tema são descartadas antes de serem salvas\n\n### 2. Troca de SDK Gemini (`ecf67d5`)\n- Migração de `google-generativeai` para `google-genai 2.10.0`\n- Modelo: `gemini-2.5-flash` (disponível na tier gratuita)\n- Timeout de 60s por chamada\n\n### 3. Otimizações de consumo e classificação (`45187d0`)\n- **Classificação em lote:** N ementas por chamada ao Gemini (padrão: 10, configurável via `GEMINI_BATCH_SIZE`)\n- **Múltiplas categorias por proposição:** o Gemini pode retornar 1 a N categorias válidas por ementa\n- **Filtro de data:** consumo de proposições a partir de `2022-01-01` (`CAMARA_DATA_INICIO`)\n- **Retry para erro 429** (cota esgotada): aguarda 60s e re-tenta (até 3 tentativas)\n- **Re-tentativa de pendentes:** `_retentar_pendentes()` reclassifica proposições com `pendente_classificacao` no início de cada run\n\n### 4. Limpeza do backend (`42703c8`)\n- Remoção de `src/backend/main.py` (CLI com `input()` em nível de módulo — bloqueava testes)\n- Remoção de `src/backend/services/camara_api.py` (duplicata da camada de serviço)\n- Correção de `datetime.utcnow` deprecated → `datetime.now(timezone.utc)` em todos os modelos\n\n### 5. Filtro de reprocessamento (`bce7a8b`)\n- **Early-stop de paginação:** se todos os IDs de uma página já existem no banco, encerra a paginação (a API retorna em ordem DESC por ID, então páginas seguintes seriam ainda mais antigas)\n- **Skip antes do Gemini:** IDs já conhecidos são filtrados antes de qualquer chamada ao Gemini\n- **`get_ids_existentes()`** no repositório: query única `SELECT id WHERE id IN (...)` por página\n\n### 6. Retry para erro 503 (`237bdc9`)\n- `_is_transient_error()`: detecta erros 503 / \"unavailable\" do Gemini\n- Aguarda 30s e re-tenta (até 3 tentativas, igual ao 429)\n- Isolamento de testes: mocks de `get_proposicoes_pendentes` para evitar interferência do estado real do banco\n\n### 7. Scheduler cron diário (`32efd48`)\n- Troca de `trigger=\"interval\"` por `trigger=\"cron\"` com `hour=12, minute=0`\n- Configurável via `CAMARA_SYNC_HOUR` e `CAMARA_SYNC_MINUTE` no `.env`\n- `coalesce=True` + `misfire_grace_time=300s` para robustez\n\n### 8. Auditoria pré-develop (`876ad11`)\n- **Bug corrigido:** `cota_gemini_esgotada` era código morto — `_classificar_lote()` nunca lançava exceção; agora detectado via `all(resultado is None)`\n- **Bug corrigido:** `total_descartados` não era persistido — adicionado ao modelo `SyncExecution` + migration\n- **Migration `ded4438e4a2c`:** coluna `total_descartados`, índice `idx_proposicoes_classificacao_status`, alinhamento de índices e constraints com o Neon real\n- **Limpeza:** remoção de `src/backend/migrations/testa_tabelas.py`\n\n---\n\n## Variáveis de ambiente adicionadas\n\n| Variável | Padrão | Descrição |\n|---|---|---|\n| `GOOGLE_API_KEY` | — | Chave da API do Gemini (obrigatória) |\n| `CAMARA_DATA_INICIO` | `2022-01-01` | Data de início para busca de proposições |\n| `GEMINI_BATCH_SIZE` | `10` | Proposições por chamada ao Gemini |\n| `CAMARA_SYNC_HOUR` | `12` | Hora do sync diário |\n| `CAMARA_SYNC_MINUTE` | `0` | Minuto do sync diário |\n\n---\n\n## Migrations aplicadas (nesta branch)\n\n| Revisão | O que faz |\n|---|---|\n| `ca57241159f9` | Cria `sync_executions`; adiciona `classificacao_status` em `proposicoes` |\n| `f3a1b2c4d5e6` | Garante `categorias` e `proposicao_categoria` com CASCADE |\n| `ded4438e4a2c` | Adiciona `total_descartados`; cria índice em `classificacao_status`; alinha constraints |\n\n---\n\n## O que está completo\n\n- [x] Leitura paginada da API da Câmara (com filtro de data, palavras-chave e paginação DESC)\n- [x] Classificação em lote pelo Gemini (múltiplas categorias, retry 429/503, fallback para pendente)\n- [x] Persistência idempotente no Neon via upsert (`ON CONFLICT DO UPDATE`)\n- [x] Relacionamento N:N proposições ↔ categorias (`proposicao_categoria`)\n- [x] Re-tentativa automática de proposições pendentes a cada run\n- [x] Early-stop + skip de IDs já conhecidos (evita reprocessamento)\n- [x] Scheduler cron diário ao meio-dia (enquanto Flask estiver no ar)\n- [x] Registro de cada execução em `sync_executions` com contadores e status\n- [x] Testes de integração: 39/39 passando\n\n---\n\n## O que está pendente\n\n### Nesta branch / pré-develop\n- [ ] **Scheduler sem servidor 24/7:** o scheduler só roda enquanto `flask run` estiver ativo. Para garantir o sync diário de forma confiável, é necessário ou um servidor sempre ligado ou um GitHub Actions cron chamando um endpoint `POST /sync`.\n\n### Próximas releases (fora do escopo desta branch)\n- [ ] Endpoints REST para o frontend consumir proposições, categorias e estatísticas (`src/backend/routes/` está vazio)\n- [ ] Atualização de tramitações (job diário separado do sync de novas proposições)\n- [ ] Autenticação Google OAuth 2.0\n- [ ] Favoritos, histórico de buscas, alertas\n- [ ] Exportação CSV/PDF\n\n---\n\n## Estado geral para o merge\n\nO backend de coleta, classificação e persistência está funcional e testado. O único ponto em aberto antes do merge para `develop` é decidir como garantir o scheduler sem depender do Flask estar no ar — mas isso pode ser resolvido em uma issue separada sem bloquear o merge.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/204/reactions",
       "total_count": 0,
@@ -896,7 +976,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/204/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -1016,11 +1096,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 2,
+      "open_issues": 0,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-17T16:30:05Z",
-      "updated_at": "2026-06-30T20:49:54Z",
+      "updated_at": "2026-07-01T12:57:27Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
@@ -1156,7 +1236,7 @@
         "description": "Esforço de 1 a 4 horas."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1182,10 +1262,10 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-06-24T13:04:30Z",
-    "updated_at": "2026-06-24T13:04:30Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:09:26Z",
+    "closed_at": "2026-07-01T13:09:26Z",
     "assignee": {
       "login": "Donnk61",
       "id": 169686699,
@@ -1232,7 +1312,27 @@
       "total_blocking": 0
     },
     "body": "### Descrição\n\nEsta issue tem como objetivo corrigir problemas relacionados à **Skill de Banco de Dados**, garantindo que sua estrutura, funcionamento e integração estejam adequados ao fluxo do projeto.\n\nAtualmente, a Skill de Banco de Dados apresenta inconsistências que podem afetar o uso correto das informações, a comunicação com outras partes do sistema e a confiabilidade dos dados manipulados. É necessário revisar sua implementação para identificar possíveis erros de lógica, nomenclatura, estrutura de dados, conexão, persistência ou retorno das informações.\n\n### Objetivos\n\n* Revisar a estrutura atual da Skill de Banco de Dados.\n* Corrigir erros de funcionamento identificados.\n* Garantir que a Skill consiga acessar, salvar, atualizar e retornar dados corretamente.\n* Ajustar nomes, funções e responsabilidades caso estejam confusos ou duplicados.\n* Validar se a integração com o restante do sistema está funcionando corretamente.\n\n### Tarefas\n\n* [ ] Analisar a implementação atual da Skill de Banco de Dados.\n* [ ] Identificar bugs, inconsistências ou trechos duplicados.\n* [ ] Corrigir problemas de conexão ou manipulação dos dados.\n* [ ] Padronizar nomes de funções, variáveis e arquivos relacionados.\n* [ ] Testar operações principais: criação, leitura, atualização e exclusão de dados.\n* [ ] Verificar se a Skill continua compatível com as demais partes do projeto.\n\n### Critérios de aceitação\n\n* A Skill de Banco de Dados deve funcionar sem erros aparentes.\n* As operações principais com dados devem estar funcionando corretamente.\n* O código deve estar organizado e com nomes claros.\n* Não devem existir duplicidades ou responsabilidades confusas na Skill.\n* A integração com o restante do projeto deve permanecer estável.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/197/reactions",
       "total_count": 0,
@@ -1247,7 +1347,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/197/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -1303,7 +1403,7 @@
         "description": "Esforço de mais de 2 dias."
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1400,18 +1500,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 2,
+      "open_issues": 0,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-06-17T16:30:05Z",
-      "updated_at": "2026-06-30T20:49:54Z",
+      "updated_at": "2026-07-01T12:57:27Z",
       "due_on": "2026-06-21T00:00:00Z",
       "closed_at": null
     },
-    "comments": 1,
+    "comments": 2,
     "created_at": "2026-06-17T17:26:05Z",
-    "updated_at": "2026-06-17T20:20:20Z",
-    "closed_at": null,
+    "updated_at": "2026-07-01T13:01:26Z",
+    "closed_at": "2026-07-01T12:57:27Z",
     "assignee": {
       "login": "thatsrenan",
       "id": 161871698,
@@ -1458,7 +1558,27 @@
       "total_blocking": 0
     },
     "body": "# Objetivo\nImplementar um Scheduler responsável por consultar periodicamente a API da Câmara Legislativa e manter o banco de dados da aplicação sincronizado com novos dados e atualizações disponibilizadas pela fonte oficial.\n\n## Contexto\nAtualmente o processo de atualização dos dados depende de execuções manuais ou cargas pontuais.\n\nPara garantir que a base de dados esteja sempre atualizada, será criado um processo automatizado que executará sincronizações periódicas, identificando novos registros e atualizando informações já existentes quando necessário.\n\n\n## Fluxo esperado:\n\nScheduler\n    ↓\nCamaraService\n    ↓\nCamaraRepository\n    ↓\nBanco de Dados\n\n# Responsabilidades\n\n## Scheduler (schedulers/camara_scheduler.py)\n\n### Responsável por:\n\nExecutar a sincronização em intervalos configuráveis.\nRegistrar início e fim das execuções.\nTratar falhas operacionais do agendador.\nAcionar o Service responsável pela sincronização.\n\n### Não deve:\n\nRealizar chamadas diretas ao banco.\nConter regras de negócio.\nProcessar ou transformar dados.\n\n## Service (services/camara_service.py)\n\n### Responsável por:\n\nConsumir a API da Câmara Legislativa.\nValidar os dados recebidos.\nIdentificar novos registros.\nIdentificar atualizações em registros existentes.\nAplicar regras de negócio da sincronização.\nDelegar persistência para os repositories.\n\n## Repository (repositories/camara_repository.py)\n\n### Responsável por:\n\nConsultar dados existentes.\nInserir novos registros.\nAtualizar registros existentes.\nGarantir integridade e evitar duplicidades.\n\n# Escopo\n\n## 1. Implementar Scheduler\n\nCriar um agendador que execute automaticamente a sincronização em intervalos configuráveis.\n\nRequisitos:\n- Frequência configurável via variável de ambiente ou configuração da aplicação.\n- Possibilidade de execução manual para testes.\n- Registro da última execução.\n\n## 2. Implementar sincronização da API\n\nCriar no Service a lógica necessária para:\n### 2.1 Base\n- Consumir os endpoints da Câmara Legislativa.\n### 2.2 Filtro\n- Processar respostas da API. \n- Validar dados recebidos.\n- Identificar novos registros.\n- Identificar alterações em registros já existentes.\n### 2.3 IA\n- Prompt estruturado, com os dados de cada proposição, para o Gemini categorizar dentre as já definidas.\n- Definir limites de requisições por minuto, mesmo que aumente o tempo de execução.\n- Conseguir receber a resposta e associá-las de forma organizada a cada proposição.\n\n## 3. Persistência dos dados\n\nImplementar no Repository:\n- Inserção de novos registros.\n- Atualização de registros existentes.\n- Prevenção de duplicidades.\n- Operações transacionais quando aplicável.\n\n## 4. Controle de execuções\n\nRegistrar informações de cada sincronização:\n- Data/hora de início.\n- Data/hora de término.\n- Status da execução.\n- Quantidade de registros processados.\n- Quantidade de registros inseridos.\n- Quantidade de registros atualizados.\n- Mensagens de erro, quando houver.\n\n## 5. Logs e observabilidade\n\nAdicionar logs para:\n- Início da sincronização.\n- Fim da sincronização.\n- Tempo total de execução.\n- Erros de comunicação com a API.\n- Resumo das alterações realizadas.\n\n# Requisitos Não Funcionais\n- Processo idempotente.\n- Não gerar registros duplicados.\n- Suportar falhas temporárias da API.\n- Permitir expansão para novos endpoints da Câmara Legislativa.\n- Seguir rigorosamente a separação de responsabilidades entre Scheduler, Service e Repository.\n\n# Critérios de Aceitação\n\n- Estrutura schedulers/ criada.\n- camara_scheduler.py implementado.\n- Scheduler executa automaticamente em intervalos configuráveis.\n- Toda regra de negócio permanece na camada de Services.\n- Nenhum acesso direto ao banco é realizado pelo Scheduler.\n- Novos registros são persistidos corretamente.\n- Registros existentes são atualizados quando necessário.\n- Não há duplicidade de dados.\n- Logs de execução são gerados.\n- Informações da última sincronização são armazenadas.\n- Testes implementados para os principais cenários de sincronização.\n\n## Benefícios Esperados\n- Atualização automática da base de dados.\n- Redução de operações manuais.\n- Melhor confiabilidade dos dados.\n- Arquitetura aderente ao padrão em camadas do projeto.\n- Facilidade para manutenção e expansão futura.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "CaioMota16",
+      "id": 160689206,
+      "node_id": "U_kgDOCZPsNg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CaioMota16",
+      "html_url": "https://github.com/CaioMota16",
+      "followers_url": "https://api.github.com/users/CaioMota16/followers",
+      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
+      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
+      "repos_url": "https://api.github.com/users/CaioMota16/repos",
+      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/195/reactions",
       "total_count": 0,
@@ -1473,7 +1593,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/195/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-LegisKids"
   },
@@ -7536,200 +7656,6 @@
       "eyes": 0
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/122/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null,
-    "pinned_comment": null,
-    "repo_name": "2026-1-LegisKids"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121/events",
-    "html_url": "https://github.com/unb-mds/2026-1-LegisKids/issues/121",
-    "id": 4434297930,
-    "node_id": "I_kwDORqqSCc8AAAABCE4ESg",
-    "number": 121,
-    "title": "EP01-US07 — Separação de camadas no backend",
-    "user": {
-      "login": "CaioMota16",
-      "id": 160689206,
-      "node_id": "U_kgDOCZPsNg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CaioMota16",
-      "html_url": "https://github.com/CaioMota16",
-      "followers_url": "https://api.github.com/users/CaioMota16/followers",
-      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
-      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
-      "repos_url": "https://api.github.com/users/CaioMota16/repos",
-      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10462553290,
-        "node_id": "LA_kwDORqqSCc8AAAACb53kyg",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/labels/enhancement",
-        "name": "enhancement",
-        "color": "a2eeef",
-        "default": true,
-        "description": "New feature or request"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T02:50:44Z",
-    "updated_at": "2026-05-25T03:46:28Z",
-    "closed_at": null,
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": {
-      "id": 20193716,
-      "node_id": "IT_kwDOCH8E_c4BNCG0",
-      "name": "Feature",
-      "description": "A request, idea, or new functionality",
-      "color": "blue",
-      "created_at": "2024-02-18T04:46:04Z",
-      "updated_at": "2024-10-08T22:02:57Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 2,
-      "completed": 2,
-      "percent_completed": 100
-    },
-    "parent_issue_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/106",
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "Como desenvolvedor, Quero que o backend siga rigorosamente a separação routes → controllers → services → repositories definida na arquitetura, Para que o código seja testável, manutenível e consistente com a estrutura do projeto.\n\nContexto arquitetural: a Arquitetura v2 define 5 camadas com responsabilidades distintas. Esta US garante que nenhuma implementação viole essa separação.\n\nCritérios de aceitação:\n\n- [ ] Nenhuma rota Flask deve conter lógica de negócio — rotas apenas recebem a requisição e delegam ao controller\n- [ ] Controllers são responsáveis pelo fluxo da requisição (validar entrada, chamar service, retornar resposta) — não devem acessar o banco diretamente\n- [ ] Services contêm todas as regras de negócio e processamento — não devem conhecer detalhes de HTTP (request/response)\n- [ ] Repositories são os únicos responsáveis pelo acesso ao banco via SQLAlchemy — nenhuma query deve existir fora dessa camada\n- [ ] O módulo de IA (backend/ai/) deve ser chamado exclusivamente pela camada Services\n- [ ] A estrutura de pastas do projeto deve seguir: backend/auth/, routes/, controllers/, services/, repositories/, ai/, models/, config/",
-    "closed_by": null,
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/121/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null,
-    "pinned_comment": null,
-    "repo_name": "2026-1-LegisKids"
-  },
-  {
-    "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120",
-    "repository_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids",
-    "labels_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120/labels{/name}",
-    "comments_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120/comments",
-    "events_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120/events",
-    "html_url": "https://github.com/unb-mds/2026-1-LegisKids/issues/120",
-    "id": 4434293056,
-    "node_id": "I_kwDORqqSCc8AAAABCE3xQA",
-    "number": 120,
-    "title": "EP01-US06 — Atualização incremental de proposições via tramitação",
-    "user": {
-      "login": "CaioMota16",
-      "id": 160689206,
-      "node_id": "U_kgDOCZPsNg",
-      "avatar_url": "https://avatars.githubusercontent.com/u/160689206?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CaioMota16",
-      "html_url": "https://github.com/CaioMota16",
-      "followers_url": "https://api.github.com/users/CaioMota16/followers",
-      "following_url": "https://api.github.com/users/CaioMota16/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CaioMota16/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CaioMota16/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CaioMota16/subscriptions",
-      "organizations_url": "https://api.github.com/users/CaioMota16/orgs",
-      "repos_url": "https://api.github.com/users/CaioMota16/repos",
-      "events_url": "https://api.github.com/users/CaioMota16/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CaioMota16/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10462553290,
-        "node_id": "LA_kwDORqqSCc8AAAACb53kyg",
-        "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/labels/enhancement",
-        "name": "enhancement",
-        "color": "a2eeef",
-        "default": true,
-        "description": "New feature or request"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-05-13T02:49:37Z",
-    "updated_at": "2026-05-25T03:46:18Z",
-    "closed_at": null,
-    "assignee": null,
-    "author_association": "COLLABORATOR",
-    "issue_field_values": [],
-    "type": {
-      "id": 20193716,
-      "node_id": "IT_kwDOCH8E_c4BNCG0",
-      "name": "Feature",
-      "description": "A request, idea, or new functionality",
-      "color": "blue",
-      "created_at": "2024-02-18T04:46:04Z",
-      "updated_at": "2024-10-08T22:02:57Z",
-      "is_enabled": true
-    },
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "parent_issue_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/106",
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "Como sistema, Quero identificar proposições atualizadas usando o endpoint de tramitações no período, Para que a coleta diária seja eficiente — atualizando apenas o que mudou, sem reprocessar toda a base.\n\nContexto arquitetural: a API da Câmara não fornece campo de atualização global. A tramitação é usada como proxy de mudança — pequenas inconsistências são aceitas, pois o sistema serve análise política, não auditoria jurídica.\n\nCritérios de aceitação:\n\n- [ ] O job de atualização diária deve consultar o endpoint listarProposicoesTramitadasNoPeriodo com o intervalo desde a última execução bem-sucedida\n- [ ] O sistema deve persistir o timestamp da última verificação bem-sucedida\n- [ ] Para cada ID retornado pela tramitação, o sistema deve chamar ObterProposicaoPorID e atualizar os dados no banco\n- [ ] Proposições não retornadas na tramitação do período não devem ser reprocessadas\n- [ ] O job deve registrar: quantidade de proposições verificadas, atualizadas, com erro, e os timestamps de início e fim da execução\n- [ ] Em caso de falha parcial, o job deve continuar processando os demais IDs e registrar os erros individualmente\n- [ ] A interface deve exibir aviso informando que as atualizações são baseadas em tramitações, podendo não capturar alterações editoriais sem movimentação processual\n- [ ] Deve ser possível forçar a recoleta completa de um ID específico manualmente pelo administrador, ignorando a lógica de tramitação",
-    "closed_by": null,
-    "reactions": {
-      "url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-LegisKids/issues/120/timeline",
     "performed_via_github_app": null,
     "state_reason": null,
     "pinned_comment": null,

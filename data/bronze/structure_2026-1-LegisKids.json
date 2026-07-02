@@ -2,21 +2,103 @@
   "owner": "unb-mds",
   "repository": "2026-1-LegisKids",
   "branch": "main",
-  "sha": "62409f05fb6cc40d4ebde46b182fd242d81a6ea1",
+  "sha": "1c56c245dfe3bed9f01aba27e2859931cccb49c3",
   "tree": [
+    {
+      "name": ".agents",
+      "path": ".agents",
+      "type": "directory",
+      "sha": "e449d77443875891eb4963a28708ea84d1cb7229",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "skills",
+      "path": ".agents/skills",
+      "type": "directory",
+      "sha": "9dc6d2317fe3678b622dfefc4cf96326b75ca902",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "neon-postgres",
+      "path": ".agents/skills/neon-postgres",
+      "type": "directory",
+      "sha": "678933da6545b94f86955a7bef9a8cda36b8a908",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".agents/skills/neon-postgres/SKILL.md",
+      "type": "file",
+      "sha": "9e8bcb0d197a4d10edfe13724c6978f0d90c9199",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 11415,
+      "is_binary": false
+    },
     {
       "name": ".claude",
       "path": ".claude",
       "type": "directory",
-      "sha": "31119dbb6ffe36ddff9ec316dfc448ec16bdda99",
+      "sha": "1352c90f8b18a752841944082010a32675b60251",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "agents",
+      "path": ".claude/agents",
+      "type": "directory",
+      "sha": "80f5cfef7dcc5a1841e837ca98281bda8aac2e71",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ai-data-engineer.md",
+      "path": ".claude/agents/ai-data-engineer.md",
+      "type": "file",
+      "sha": "77eefe28e6cea380173608d86f27d5a0fdca8ae5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3792,
+      "is_binary": false
+    },
+    {
+      "name": "backend-developer.md",
+      "path": ".claude/agents/backend-developer.md",
+      "type": "file",
+      "sha": "f37f6c1a7cdb43826bb90cfd81545414353700ea",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3388,
+      "is_binary": false
+    },
+    {
+      "name": "devops-engineer.md",
+      "path": ".claude/agents/devops-engineer.md",
+      "type": "file",
+      "sha": "ce85c374a4d0d24f5b7c50c60eecfda17914593c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3556,
+      "is_binary": false
+    },
+    {
+      "name": "frontend-developer.md",
+      "path": ".claude/agents/frontend-developer.md",
+      "type": "file",
+      "sha": "7c8bdc5764c51ffb6eeaa6ae7c1ab06190dce145",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3369,
+      "is_binary": false
     },
     {
       "name": "commands",
       "path": ".claude/commands",
       "type": "directory",
-      "sha": "ed4822a6a944f5b4f822ed7d0e7415ff07490b15",
+      "sha": "33d9da27679a5dbab81fbdbde77aad59e5f6dc22",
       "mode": "040000",
       "children": []
     },
@@ -24,7 +106,7 @@
       "name": "opsx",
       "path": ".claude/commands/opsx",
       "type": "directory",
-      "sha": "89dd5b0475a40d8300f957253fec749e77012981",
+      "sha": "e2297e44c5f5ad5b50c8f3cbc989a610c97dd9ed",
       "mode": "040000",
       "children": []
     },
@@ -32,55 +114,235 @@
       "name": "apply.md",
       "path": ".claude/commands/opsx/apply.md",
       "type": "file",
-      "sha": "ae14f0f5f94e92de15de0617d2b91736e3b36bfe",
+      "sha": "45003f8fa0f35cd9eaba1b4d874521925c87ea84",
       "mode": "100644",
       "extension": ".md",
-      "size": 4596,
+      "size": 5047,
       "is_binary": false
     },
     {
       "name": "archive.md",
       "path": ".claude/commands/opsx/archive.md",
       "type": "file",
-      "sha": "5e916083ae5d643953572244fabbc40cbb4090cd",
+      "sha": "4af9687780fdfe941be20043c10e26d3c018e1d9",
       "mode": "100644",
       "extension": ".md",
-      "size": 5015,
+      "size": 5532,
       "is_binary": false
     },
     {
       "name": "explore.md",
       "path": ".claude/commands/opsx/explore.md",
       "type": "file",
-      "sha": "1757907e56c0f97001846a67df117fe213dd73dc",
+      "sha": "8655619f1efaf1620691334e1846f87d5ec267b0",
       "mode": "100644",
       "extension": ".md",
-      "size": 6760,
+      "size": 6851,
       "is_binary": false
     },
     {
       "name": "propose.md",
       "path": ".claude/commands/opsx/propose.md",
       "type": "file",
-      "sha": "05276f4d0d514bd8ed8a997cc98f1ef5cbbee72f",
+      "sha": "90ba3448b9f2af270a2c7ac110395f70f5250c08",
       "mode": "100644",
       "extension": ".md",
-      "size": 4418,
+      "size": 4638,
       "is_binary": false
     },
     {
       "name": "skills",
       "path": ".claude/skills",
       "type": "directory",
-      "sha": "b71303607a9b30fc118f0d76aedf7d90e6af01f7",
+      "sha": "d1a56f827c2c1d9772718ee01720439e82a47975",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "chartjs-visualization",
+      "path": ".claude/skills/chartjs-visualization",
+      "type": "directory",
+      "sha": "2c4e1bc0b5432653aeffd03bc66223e3041ea83e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/chartjs-visualization/SKILL.md",
+      "type": "file",
+      "sha": "109f06700b4419f8c28a43a345d1591ac01ebe6f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5099,
+      "is_binary": false
+    },
+    {
+      "name": "docker-containers",
+      "path": ".claude/skills/docker-containers",
+      "type": "directory",
+      "sha": "1f5a49357d39d4849f9234ae989073a6f33f80aa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/docker-containers/SKILL.md",
+      "type": "file",
+      "sha": "eaea8b9302830a89cd70f1a30c8a1a7a1221bc33",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4757,
+      "is_binary": false
+    },
+    {
+      "name": "flask-backend",
+      "path": ".claude/skills/flask-backend",
+      "type": "directory",
+      "sha": "36a885f394ee7f662229572c4800f1fb62ff8e33",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/flask-backend/SKILL.md",
+      "type": "file",
+      "sha": "dff60ba640d3c436ef3cd951e6ac1524381fe6d1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6284,
+      "is_binary": false
+    },
+    {
+      "name": "gemini-ai-integration",
+      "path": ".claude/skills/gemini-ai-integration",
+      "type": "directory",
+      "sha": "28d7593a253be19006d233ccceec31798729a7d4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/gemini-ai-integration/SKILL.md",
+      "type": "file",
+      "sha": "3e669913e11098897806d6ba67bdaef5df51bf2c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5403,
+      "is_binary": false
+    },
+    {
+      "name": "github-actions-ci",
+      "path": ".claude/skills/github-actions-ci",
+      "type": "directory",
+      "sha": "ece9bf85671b870f0630c4d8e892830aa50841ce",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/github-actions-ci/SKILL.md",
+      "type": "file",
+      "sha": "232b90be21d1d0619b71cc8f3d731bea649c8e82",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4834,
+      "is_binary": false
+    },
+    {
+      "name": "google-oauth",
+      "path": ".claude/skills/google-oauth",
+      "type": "directory",
+      "sha": "206432a74df776534918a34f0d49c85465399d4f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/google-oauth/SKILL.md",
+      "type": "file",
+      "sha": "d444538e9bbeafb8509cb23b170e3e653fdc0d25",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6114,
+      "is_binary": false
+    },
+    {
+      "name": "jwt-auth",
+      "path": ".claude/skills/jwt-auth",
+      "type": "directory",
+      "sha": "953008ef76af40f272d891237e960052467183a4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/jwt-auth/SKILL.md",
+      "type": "file",
+      "sha": "492ee55efe317801383c51535cdd96c301340e66",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5874,
+      "is_binary": false
+    },
+    {
+      "name": "neon-database",
+      "path": ".claude/skills/neon-database",
+      "type": "directory",
+      "sha": "1b5ace58b7bf3cf2fba043059c694b180ec52e99",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/neon-database/SKILL.md",
+      "type": "file",
+      "sha": "e1fb747e2ed5b925c599634c4d1c6f0b8d731d75",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4401,
+      "is_binary": false
+    },
+    {
+      "name": "neon-postgres",
+      "path": ".claude/skills/neon-postgres",
+      "type": "directory",
+      "sha": "678933da6545b94f86955a7bef9a8cda36b8a908",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/neon-postgres/SKILL.md",
+      "type": "file",
+      "sha": "9e8bcb0d197a4d10edfe13724c6978f0d90c9199",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 11415,
+      "is_binary": false
+    },
+    {
+      "name": "nginx-config",
+      "path": ".claude/skills/nginx-config",
+      "type": "directory",
+      "sha": "c6eb8e62a90b5aee2f2152728414ed0883ad73e8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/nginx-config/SKILL.md",
+      "type": "file",
+      "sha": "34395a0a74393962d4bd063ae625698b1da91d22",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5032,
+      "is_binary": false
     },
     {
       "name": "openspec-apply-change",
       "path": ".claude/skills/openspec-apply-change",
       "type": "directory",
-      "sha": "281ec89ac6ecc4da1e464bc74a5d9d63afe7fad9",
+      "sha": "ef0e89ee83ef134a8056156b4e3721e49890e8e5",
       "mode": "040000",
       "children": []
     },
@@ -88,17 +350,17 @@
       "name": "SKILL.md",
       "path": ".claude/skills/openspec-apply-change/SKILL.md",
       "type": "file",
-      "sha": "70fbdb8569fe19d90e1eff727fd27b3ffed31723",
+      "sha": "db4d8ce2a8dd2ff89e33e5b9035c3a036988afd4",
       "mode": "100644",
       "extension": ".md",
-      "size": 4774,
+      "size": 5225,
       "is_binary": false
     },
     {
       "name": "openspec-archive-change",
       "path": ".claude/skills/openspec-archive-change",
       "type": "directory",
-      "sha": "5c21f450b72f226ebeccb7de4fe91daffb66acb5",
+      "sha": "3a8d83471b6648c81823059fbd0553afa9262ff5",
       "mode": "040000",
       "children": []
     },
@@ -106,17 +368,17 @@
       "name": "SKILL.md",
       "path": ".claude/skills/openspec-archive-change/SKILL.md",
       "type": "file",
-      "sha": "12e2f70e9cee7e5ecbf0894c064e939d36e216d9",
+      "sha": "97c3e5e3a4e71707c9a4ca4928906377272e5826",
       "mode": "100644",
       "extension": ".md",
-      "size": 4157,
+      "size": 4581,
       "is_binary": false
     },
     {
       "name": "openspec-explore",
       "path": ".claude/skills/openspec-explore",
       "type": "directory",
-      "sha": "3db2e01da4d77a6b6097691c4236c326d31516d1",
+      "sha": "f4048e4b2f5fa6515c8c419aa87f8a6b761133c4",
       "mode": "040000",
       "children": []
     },
@@ -124,17 +386,17 @@
       "name": "SKILL.md",
       "path": ".claude/skills/openspec-explore/SKILL.md",
       "type": "file",
-      "sha": "6858d3f693e0ab5ebd7d8a05f8e06b668aff49fd",
+      "sha": "1e97aaa81f5ba33204a2e12a4cffcb13663373e7",
       "mode": "100644",
       "extension": ".md",
-      "size": 10738,
+      "size": 10829,
       "is_binary": false
     },
     {
       "name": "openspec-propose",
       "path": ".claude/skills/openspec-propose",
       "type": "directory",
-      "sha": "69dd379b382c366b273ac70015f88de529dae65d",
+      "sha": "88c9455a718168961d764b2c9036409971a08122",
       "mode": "040000",
       "children": []
     },
@@ -142,17 +404,161 @@
       "name": "SKILL.md",
       "path": ".claude/skills/openspec-propose/SKILL.md",
       "type": "file",
-      "sha": "4b7e204184f2119378d4d07dec484028dd308ade",
+      "sha": "9fc85139aaca3e381126fef946865ece362975e5",
       "mode": "100644",
       "extension": ".md",
-      "size": 4646,
+      "size": 4866,
+      "is_binary": false
+    },
+    {
+      "name": "pinia-state",
+      "path": ".claude/skills/pinia-state",
+      "type": "directory",
+      "sha": "c6b896f279b722fe4861beb37a5afca822f1062f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/pinia-state/SKILL.md",
+      "type": "file",
+      "sha": "31591629cd69893d9a5aaf837474e1853fcd1448",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4458,
+      "is_binary": false
+    },
+    {
+      "name": "postgresql-design",
+      "path": ".claude/skills/postgresql-design",
+      "type": "directory",
+      "sha": "2d7cd5ab9d332b6a32da7fcbd4440f1d4d2d2d8a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/postgresql-design/SKILL.md",
+      "type": "file",
+      "sha": "b5cff363eb2659062d9e42e58407e4ed5a101222",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5584,
+      "is_binary": false
+    },
+    {
+      "name": "python-style",
+      "path": ".claude/skills/python-style",
+      "type": "directory",
+      "sha": "156454307631825bb6da0d0ff31973b01c020ce0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/python-style/SKILL.md",
+      "type": "file",
+      "sha": "c58786753d03f5f1f4fab7866683a177cb7077a5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4125,
+      "is_binary": false
+    },
+    {
+      "name": "sqlalchemy-orm",
+      "path": ".claude/skills/sqlalchemy-orm",
+      "type": "directory",
+      "sha": "fd23762507dcf99ed5c95516bae58a131fc28cb1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/sqlalchemy-orm/SKILL.md",
+      "type": "file",
+      "sha": "a0d5b6c8b00b84d9fdaedbcb3f6b8150565a773a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5853,
+      "is_binary": false
+    },
+    {
+      "name": "vanilla-frontend",
+      "path": ".claude/skills/vanilla-frontend",
+      "type": "directory",
+      "sha": "337ffe287fc40dd88b39561b126dba5d42ccfce8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/vanilla-frontend/SKILL.md",
+      "type": "file",
+      "sha": "32df129342ce6c496b8b705f88271b91882d86ad",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5366,
+      "is_binary": false
+    },
+    {
+      "name": "vite-build",
+      "path": ".claude/skills/vite-build",
+      "type": "directory",
+      "sha": "18b413e047244f084947a812734b9670400fa2ec",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/vite-build/SKILL.md",
+      "type": "file",
+      "sha": "5b20a9613162eec324870e65cf2e8b8574ffd181",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3737,
+      "is_binary": false
+    },
+    {
+      "name": "vue-router",
+      "path": ".claude/skills/vue-router",
+      "type": "directory",
+      "sha": "ee2af7904ac1bac24f02102f9b41a6494e551150",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/vue-router/SKILL.md",
+      "type": "file",
+      "sha": "afcbf0b2ece4283900ed1783f617cce9c8afe619",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3774,
+      "is_binary": false
+    },
+    {
+      "name": "vuejs-frontend",
+      "path": ".claude/skills/vuejs-frontend",
+      "type": "directory",
+      "sha": "4d811cbdd5c8ed69cb03e39dde2bbd2760703612",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": ".claude/skills/vuejs-frontend/SKILL.md",
+      "type": "file",
+      "sha": "17dafe2d4d2644a988e400a4d673c0fd4e40267c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4904,
       "is_binary": false
     },
     {
       "name": ".codex",
       "path": ".codex",
       "type": "directory",
-      "sha": "2b1fab2e6e9b165f6fb6a6dc27b377a1135f6c8c",
+      "sha": "a2095de35340677f44ef9bce897f1a79a3b968ed",
       "mode": "040000",
       "children": []
     },
@@ -160,7 +566,7 @@
       "name": "skills",
       "path": ".codex/skills",
       "type": "directory",
-      "sha": "b71303607a9b30fc118f0d76aedf7d90e6af01f7",
+      "sha": "2d0b86a45e83ec41d1a71a30565afe112bf26194",
       "mode": "040000",
       "children": []
     },
@@ -168,7 +574,7 @@
       "name": "openspec-apply-change",
       "path": ".codex/skills/openspec-apply-change",
       "type": "directory",
-      "sha": "281ec89ac6ecc4da1e464bc74a5d9d63afe7fad9",
+      "sha": "ef0e89ee83ef134a8056156b4e3721e49890e8e5",
       "mode": "040000",
       "children": []
     },
@@ -176,17 +582,17 @@
       "name": "SKILL.md",
       "path": ".codex/skills/openspec-apply-change/SKILL.md",
       "type": "file",
-      "sha": "70fbdb8569fe19d90e1eff727fd27b3ffed31723",
+      "sha": "db4d8ce2a8dd2ff89e33e5b9035c3a036988afd4",
       "mode": "100644",
       "extension": ".md",
-      "size": 4774,
+      "size": 5225,
       "is_binary": false
     },
     {
       "name": "openspec-archive-change",
       "path": ".codex/skills/openspec-archive-change",
       "type": "directory",
-      "sha": "5c21f450b72f226ebeccb7de4fe91daffb66acb5",
+      "sha": "3a8d83471b6648c81823059fbd0553afa9262ff5",
       "mode": "040000",
       "children": []
     },
@@ -194,17 +600,17 @@
       "name": "SKILL.md",
       "path": ".codex/skills/openspec-archive-change/SKILL.md",
       "type": "file",
-      "sha": "12e2f70e9cee7e5ecbf0894c064e939d36e216d9",
+      "sha": "97c3e5e3a4e71707c9a4ca4928906377272e5826",
       "mode": "100644",
       "extension": ".md",
-      "size": 4157,
+      "size": 4581,
       "is_binary": false
     },
     {
       "name": "openspec-explore",
       "path": ".codex/skills/openspec-explore",
       "type": "directory",
-      "sha": "3db2e01da4d77a6b6097691c4236c326d31516d1",
+      "sha": "f4048e4b2f5fa6515c8c419aa87f8a6b761133c4",
       "mode": "040000",
       "children": []
     },
@@ -212,17 +618,17 @@
       "name": "SKILL.md",
       "path": ".codex/skills/openspec-explore/SKILL.md",
       "type": "file",
-      "sha": "6858d3f693e0ab5ebd7d8a05f8e06b668aff49fd",
+      "sha": "1e97aaa81f5ba33204a2e12a4cffcb13663373e7",
       "mode": "100644",
       "extension": ".md",
-      "size": 10738,
+      "size": 10829,
       "is_binary": false
     },
     {
       "name": "openspec-propose",
       "path": ".codex/skills/openspec-propose",
       "type": "directory",
-      "sha": "69dd379b382c366b273ac70015f88de529dae65d",
+      "sha": "88c9455a718168961d764b2c9036409971a08122",
       "mode": "040000",
       "children": []
     },
@@ -230,17 +636,27 @@
       "name": "SKILL.md",
       "path": ".codex/skills/openspec-propose/SKILL.md",
       "type": "file",
-      "sha": "4b7e204184f2119378d4d07dec484028dd308ade",
+      "sha": "9fc85139aaca3e381126fef946865ece362975e5",
       "mode": "100644",
       "extension": ".md",
-      "size": 4646,
+      "size": 4866,
+      "is_binary": false
+    },
+    {
+      "name": ".env.example",
+      "path": ".env.example",
+      "type": "file",
+      "sha": "75aa5374fc51000c642e937cd91679c4b4151b43",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 1931,
       "is_binary": false
     },
     {
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "de3febdb992e2579baea00c8a8805cfe819b126d",
+      "sha": "a805de8fdca5d32addc13e4ae5d9154f98f341c5",
       "mode": "040000",
       "children": []
     },
@@ -258,9 +674,29 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "3362ade94a02cc35de7b553182484af662252853",
+      "sha": "09ca4a9b395b71a23110f6e1c4fc37bb0f76ea8d",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "backend-ci.yml",
+      "path": ".github/workflows/backend-ci.yml",
+      "type": "file",
+      "sha": "f900a2e1388db81c576af6b1e1ff4dba49e96a93",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1649,
+      "is_binary": false
+    },
+    {
+      "name": "frontend-ci.yml",
+      "path": ".github/workflows/frontend-ci.yml",
+      "type": "file",
+      "sha": "2b212965ca74b393f452bbfe3c0e18558e1694fe",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 763,
+      "is_binary": false
     },
     {
       "name": "perfomance-report.yml",
@@ -283,13 +719,43 @@
       "is_binary": false
     },
     {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "5acb53d42d2e15169adabb1575e15bae301f86c9",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 2563,
+      "is_binary": false
+    },
+    {
       "name": "CLAUDE.md",
       "path": "CLAUDE.md",
       "type": "file",
-      "sha": "7c26f2caf5af1ccd91c0da459d32183cd3a639b0",
+      "sha": "476504ecfdbcf2e036c09bc89754cb26c76d3571",
       "mode": "100644",
       "extension": ".md",
-      "size": 11474,
+      "size": 13244,
+      "is_binary": false
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "sha": "d74b61621ff58b06bd57e10bede0e5ceb49bc96b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2334,
+      "is_binary": false
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "sha": "828034491a1d1e832ae7369d15f375b04d40fec5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4353,
       "is_binary": false
     },
     {
@@ -306,17 +772,117 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "3502eecb366d003833b17cf6a2a9ec3086bcc2d2",
+      "sha": "097a6f3897835d9dfb411361c032b7ee79dd4d4c",
       "mode": "100644",
       "extension": ".md",
-      "size": 5708,
+      "size": 7024,
+      "is_binary": false
+    },
+    {
+      "name": "SECURITY.md",
+      "path": "SECURITY.md",
+      "type": "file",
+      "sha": "d02b09fa7cac96cde6fe5d0ac6b291ac0fa9eb76",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1980,
+      "is_binary": false
+    },
+    {
+      "name": "SUPPORT.md",
+      "path": "SUPPORT.md",
+      "type": "file",
+      "sha": "f5b67328dd4e3ac67516e8f889a8fffeaa14d5b0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1244,
+      "is_binary": false
+    },
+    {
+      "name": "api",
+      "path": "api",
+      "type": "directory",
+      "sha": "254c82075ac419caefaf711df4021da9c0c569df",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.py",
+      "path": "api/index.py",
+      "type": "file",
+      "sha": "9fe228b5cef6e6b2b34a82e394b030cb36dc5fe8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 210,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "2a17c8fd27ff8fdf59c451d3a623daa65fdfb571",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "src",
+      "path": "backend/src",
+      "type": "directory",
+      "sha": "80a77fc2badd28a50b66307ad9e5f4d5199a8e8f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "services",
+      "path": "backend/src/services",
+      "type": "directory",
+      "sha": "3016fd1ef2df878a96ed928b1079e080b112a0af",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__pycache__",
+      "path": "backend/src/services/__pycache__",
+      "type": "directory",
+      "sha": "8698a00258ed0a1be7e5214e9ca9208f5418e4e3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "camara_api.cpython-312.pyc",
+      "path": "backend/src/services/__pycache__/camara_api.cpython-312.pyc",
+      "type": "file",
+      "sha": "8987ef7062aeb12037c356d4619c2da2788b3f4e",
+      "mode": "100644",
+      "extension": ".pyc",
+      "size": 3424,
+      "is_binary": false
+    },
+    {
+      "name": "conftest.py",
+      "path": "conftest.py",
+      "type": "file",
+      "sha": "e20ed468707edc11e480e66e12442f041719b932",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 105,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "35916461cb476db5a4cf99af5d48ba025cbd5f68",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 451,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "e29b25033e85a420d47baaef360bc9b4d568eca5",
+      "sha": "0974b12eb1328c93cfb9674a6a9de392ba43748b",
       "mode": "040000",
       "children": []
     },
@@ -405,10 +971,48 @@
       "is_binary": false
     },
     {
+      "name": "db",
+      "path": "docs/db",
+      "type": "directory",
+      "sha": "59b6a64bb7273336f5f87169b6fa815c377943f8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "erd.dbml",
+      "path": "docs/db/erd.dbml",
+      "type": "file",
+      "sha": "51325d7366e83bb1ea6fd7528f1d89fa74fec83c",
+      "mode": "100644",
+      "extension": ".dbml",
+      "size": 4429,
+      "is_binary": false
+    },
+    {
+      "name": "erd.png",
+      "path": "docs/db/erd.png",
+      "type": "file",
+      "sha": "efa2d0a0d6c3ae90507f38310982449f1f3537c5",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 147631,
+      "is_binary": false
+    },
+    {
+      "name": "schema.md",
+      "path": "docs/db/schema.md",
+      "type": "file",
+      "sha": "df758bcb651fd6c6279a2b52c9ca502eca2c21ed",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 18344,
+      "is_binary": false
+    },
+    {
       "name": "estudos",
       "path": "docs/estudos",
       "type": "directory",
-      "sha": "d663403807f3aee865aa250ab7b1ac64314f7849",
+      "sha": "9ee196af8167a0abe20216c857a5454f187729ab",
       "mode": "040000",
       "children": []
     },
@@ -416,7 +1020,7 @@
       "name": "API",
       "path": "docs/estudos/API",
       "type": "directory",
-      "sha": "3255d0c2bb2f3098b696b0c0980a35c83e92f80c",
+      "sha": "c2b25461999230c85a89ad02010be403544007c3",
       "mode": "040000",
       "children": []
     },
@@ -424,10 +1028,10 @@
       "name": "index.md",
       "path": "docs/estudos/API/index.md",
       "type": "file",
-      "sha": "c759671d47f8d20a46449c99b4d6083e4b640e44",
+      "sha": "954de1bdd5108c6589595edc30ec4001362966b2",
       "mode": "100644",
       "extension": ".md",
-      "size": 575,
+      "size": 544,
       "is_binary": false
     },
     {
@@ -438,6 +1042,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 2877,
+      "is_binary": false
+    },
+    {
+      "name": "referencia_api.md",
+      "path": "docs/estudos/API/referencia_api.md",
+      "type": "file",
+      "sha": "ba77372952ceff14425af0cb214ec7799d327223",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 9284,
       "is_binary": false
     },
     {
@@ -580,9 +1194,29 @@
       "name": "banco_de_dados",
       "path": "docs/estudos/banco_de_dados",
       "type": "directory",
-      "sha": "92837c395e6f55199c7cf6633b9412be79caf53d",
+      "sha": "a6826436298a86f8425e7929d47a2563d2c34dfa",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "atualizacao_dos_models_e_implementacao_seeds.md",
+      "path": "docs/estudos/banco_de_dados/atualizacao_dos_models_e_implementacao_seeds.md",
+      "type": "file",
+      "sha": "5ef53a49842c69010ff7177aa58943f1bd5503c0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3059,
+      "is_binary": false
+    },
+    {
+      "name": "configuracao_database_url.md",
+      "path": "docs/estudos/banco_de_dados/configuracao_database_url.md",
+      "type": "file",
+      "sha": "eb86fce3a1c46da5b50ba167a865eb1b6181efc3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2546,
+      "is_binary": false
     },
     {
       "name": "definicao_banco_de_dados.md",
@@ -608,10 +1242,10 @@
       "name": "definicao_dados.md",
       "path": "docs/estudos/banco_de_dados/definicao_dados.md",
       "type": "file",
-      "sha": "2ed621a674e201f6fac88f6e5283191c66ef8eb9",
+      "sha": "079f7cf8c84e6f6b2b3b03697a1d6fed176a001a",
       "mode": "100644",
       "extension": ".md",
-      "size": 6052,
+      "size": 7807,
       "is_binary": false
     },
     {
@@ -645,6 +1279,16 @@
       "is_binary": false
     },
     {
+      "name": "guia_integrantes.md",
+      "path": "docs/estudos/banco_de_dados/guia_integrantes.md",
+      "type": "file",
+      "sha": "f8f37faf2c03886046e018c23cfae899ffc23a3c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3460,
+      "is_binary": false
+    },
+    {
       "name": "hospedagem_banco_de_dados.md",
       "path": "docs/estudos/banco_de_dados/hospedagem_banco_de_dados.md",
       "type": "file",
@@ -655,13 +1299,33 @@
       "is_binary": false
     },
     {
+      "name": "implementacao_dos_models.md",
+      "path": "docs/estudos/banco_de_dados/implementacao_dos_models.md",
+      "type": "file",
+      "sha": "b564579185bf7c6bb3484f94e4e7c9aa642452ba",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10598,
+      "is_binary": false
+    },
+    {
       "name": "index.md",
       "path": "docs/estudos/banco_de_dados/index.md",
       "type": "file",
-      "sha": "40aaf2a134c8aa01b298de3df4965a8aced2de2d",
+      "sha": "37451288d5dcdb363c9b0521fb8eff0ed715a892",
       "mode": "100644",
       "extension": ".md",
-      "size": 931,
+      "size": 1089,
+      "is_binary": false
+    },
+    {
+      "name": "otimizacao_indices_e_constraints.md",
+      "path": "docs/estudos/banco_de_dados/otimizacao_indices_e_constraints.md",
+      "type": "file",
+      "sha": "58ca80305170f3a04cda23fc753132179a9e2a12",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5308,
       "is_binary": false
     },
     {
@@ -716,18 +1380,28 @@
       "name": "frontend",
       "path": "docs/estudos/frontend",
       "type": "directory",
-      "sha": "32210673b62a58b05bcce8e6dc28175e942f6e90",
+      "sha": "4c0ef937562a7892de1e4b96086e7622cf3de868",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "frameworks_bibliotecas.md",
+      "path": "docs/estudos/frontend/frameworks_bibliotecas.md",
+      "type": "file",
+      "sha": "9d8c8bf657f210e141098672ba02392c4d8c2f8c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 16442,
+      "is_binary": false
     },
     {
       "name": "index.md",
       "path": "docs/estudos/frontend/index.md",
       "type": "file",
-      "sha": "416894c263c6e4ccaf33b40461f28378609efb10",
+      "sha": "355245a792333248ee35fd9c012589e64247690d",
       "mode": "100644",
       "extension": ".md",
-      "size": 465,
+      "size": 521,
       "is_binary": false
     },
     {
@@ -876,7 +1550,7 @@
       "name": "sdd",
       "path": "docs/estudos/sdd",
       "type": "directory",
-      "sha": "62f3713c698d097f2cd9a6c9237642898e30a41e",
+      "sha": "559f02b845ddeeac1ca80008dd91e3e35438bb6f",
       "mode": "040000",
       "children": []
     },
@@ -888,6 +1562,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 476,
+      "is_binary": false
+    },
+    {
+      "name": "openspec-estudo.md",
+      "path": "docs/estudos/sdd/openspec-estudo.md",
+      "type": "file",
+      "sha": "da440ccd4b3d73be1b26841c6bad2a4b740b9c38",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2296,
       "is_binary": false
     },
     {
@@ -914,7 +1598,7 @@
       "name": "padrao_organizacao",
       "path": "docs/padrao_organizacao",
       "type": "directory",
-      "sha": "65b0ce2c691dd15cbc1916aa10194c487d27d0f5",
+      "sha": "5ab38a16cfc09f130c6b4331af257e6ac68702a6",
       "mode": "040000",
       "children": []
     },
@@ -942,10 +1626,10 @@
       "name": "padrao_PR.md",
       "path": "docs/padrao_organizacao/padrao_PR.md",
       "type": "file",
-      "sha": "264628885fb1108aaa10659e3bc91ca0b14f9d0e",
+      "sha": "1d76245339b6a9290c35fb29a852dcf20946d5fc",
       "mode": "100644",
       "extension": ".md",
-      "size": 3402,
+      "size": 3458,
       "is_binary": false
     },
     {
@@ -1048,7 +1732,7 @@
       "name": "reunioes",
       "path": "docs/reunioes",
       "type": "directory",
-      "sha": "1b98362d5703d4c1b5caded24f3d3f94fa750a6f",
+      "sha": "abaed68fa95548a21dd3575275700536ba3c6721",
       "mode": "040000",
       "children": []
     },
@@ -1056,10 +1740,10 @@
       "name": "dailies.md",
       "path": "docs/reunioes/dailies.md",
       "type": "file",
-      "sha": "33f3b69dc13bfcf83b8d12e61c8cea0569ca8d62",
+      "sha": "de9b19341982b53fc102692b0db770045e866a4a",
       "mode": "100644",
       "extension": ".md",
-      "size": 5835,
+      "size": 6620,
       "is_binary": false
     },
     {
@@ -1086,37 +1770,151 @@
       "name": "reviews_retrospectives.md",
       "path": "docs/reunioes/reviews_retrospectives.md",
       "type": "file",
-      "sha": "4bf9cd0ecf549f54c069179f85c4aab8b6309cb5",
+      "sha": "12138602710ed782e8c06a683c913aa990278c6c",
       "mode": "100644",
       "extension": ".md",
-      "size": 2834,
+      "size": 3818,
       "is_binary": false
     },
     {
       "name": "sprint_plannings.md",
       "path": "docs/reunioes/sprint_plannings.md",
       "type": "file",
-      "sha": "eb8a33f739e55edebcc62a16f5e9eb83fb57dfd4",
+      "sha": "ab3fc0a93d2d535869b14d508777f4b0f2069286",
       "mode": "100644",
       "extension": ".md",
-      "size": 4415,
+      "size": 5381,
+      "is_binary": false
+    },
+    {
+      "name": "stylesheets",
+      "path": "docs/stylesheets",
+      "type": "directory",
+      "sha": "9d409290f170633b69d978a7753ba4025ee3f529",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "custom.css",
+      "path": "docs/stylesheets/custom.css",
+      "type": "file",
+      "sha": "c2638ffccbfce8051150cfb22d0b76e55f1537ec",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 4679,
+      "is_binary": false
+    },
+    {
+      "name": "migrations",
+      "path": "migrations",
+      "type": "directory",
+      "sha": "8023420a1d6a8eee50c6ebd1ccd019d9e39d8a25",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README",
+      "path": "migrations/README",
+      "type": "file",
+      "sha": "0e048441597444a7e2850d6d7c4ce15550f79bda",
+      "mode": "100644",
+      "extension": "",
+      "size": 41,
+      "is_binary": false
+    },
+    {
+      "name": "alembic.ini",
+      "path": "migrations/alembic.ini",
+      "type": "file",
+      "sha": "ec9d45c26a6bb54e833fd4e6ce2de29343894f4b",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 857,
+      "is_binary": false
+    },
+    {
+      "name": "env.py",
+      "path": "migrations/env.py",
+      "type": "file",
+      "sha": "4c9709271b2ff28271b13c29bba5c50b80fea0ac",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3344,
+      "is_binary": false
+    },
+    {
+      "name": "script.py.mako",
+      "path": "migrations/script.py.mako",
+      "type": "file",
+      "sha": "2c0156303a8df3ffdc9de87765bf801bf6bea4a5",
+      "mode": "100644",
+      "extension": ".mako",
+      "size": 494,
+      "is_binary": false
+    },
+    {
+      "name": "versions",
+      "path": "migrations/versions",
+      "type": "directory",
+      "sha": "3e661e412a41cd49a2a8e55a0b2403489b91c2df",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "babbb73a5d52_schema_inicial_com_categorias_n_n_e_.py",
+      "path": "migrations/versions/babbb73a5d52_schema_inicial_com_categorias_n_n_e_.py",
+      "type": "file",
+      "sha": "fc0171d8592f4c3fc5d63d8a8cd9d4c6f4f4da12",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6794,
+      "is_binary": false
+    },
+    {
+      "name": "ca57241159f9_add_sync_executions_and_classificacao_.py",
+      "path": "migrations/versions/ca57241159f9_add_sync_executions_and_classificacao_.py",
+      "type": "file",
+      "sha": "71509a4f3952086c0160c1ff3342e3230e6ed1a7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1598,
+      "is_binary": false
+    },
+    {
+      "name": "ded4438e4a2c_auditoria_backend_total_descartados_e_.py",
+      "path": "migrations/versions/ded4438e4a2c_auditoria_backend_total_descartados_e_.py",
+      "type": "file",
+      "sha": "42866aef2fc6aa750141fbfccb9d581de790c696",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4529,
+      "is_binary": false
+    },
+    {
+      "name": "f3a1b2c4d5e6_ensure_categorias_e_proposicao_categoria.py",
+      "path": "migrations/versions/f3a1b2c4d5e6_ensure_categorias_e_proposicao_categoria.py",
+      "type": "file",
+      "sha": "266e67f87b245c47816bfc2a9858fe1fdbe9158a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1345,
       "is_binary": false
     },
     {
       "name": "mkdocs.yml",
       "path": "mkdocs.yml",
       "type": "file",
-      "sha": "24a54da08eac4669f297236f3baccf6fa5e25cd6",
+      "sha": "9c54cfe906d40bd0460491bec4c095d8b2eb9cbb",
       "mode": "100644",
       "extension": ".yml",
-      "size": 4850,
+      "size": 6251,
       "is_binary": false
     },
     {
       "name": "openspec",
       "path": "openspec",
       "type": "directory",
-      "sha": "dff37b3947bded1cb844086660973435cb6137f2",
+      "sha": "5e4faf6aaaa916cd8cde9e4901e352ccd51b37c1",
       "mode": "040000",
       "children": []
     },
@@ -1124,9 +1922,1141 @@
       "name": "changes",
       "path": "openspec/changes",
       "type": "directory",
-      "sha": "9afc1c8b0be89fcd583b7a5c1125aa649f822678",
+      "sha": "77c7de85ffec9807bbdcff13dbbeada518a39e05",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "archive",
+      "path": "openspec/changes/archive",
+      "type": "directory",
+      "sha": "dc8828bb74ab47d0154d4d8d96ce955dac0cbbe0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "2026-06-08-configure-database-url",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url",
+      "type": "directory",
+      "sha": "090424d935f84350c26e721e6c2e265615a648d1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/.openspec.yaml",
+      "type": "file",
+      "sha": "e8d4ccfe905a1326c16d92720669aca42ba9ccf8",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/design.md",
+      "type": "file",
+      "sha": "4ff43086cc788813134e90ef4035a340341e58e8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3822,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/proposal.md",
+      "type": "file",
+      "sha": "7b0dab8820840c04495c0d9f70f7bec293c1c301",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1658,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/specs",
+      "type": "directory",
+      "sha": "d5e37e61ef13dfcd6b4da3a1e0fb8fe6d95ca4a3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "database-url-config",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/specs/database-url-config",
+      "type": "directory",
+      "sha": "4740e827c98bd79516c486b0282ae24f3df97cf4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/specs/database-url-config/spec.md",
+      "type": "file",
+      "sha": "1eee9c51e8fff0a9ac8236965abcdeb5a05c088d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3982,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-06-08-configure-database-url/tasks.md",
+      "type": "file",
+      "sha": "3407697a78577d317e61fafb0234dcfa2f5461df",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2226,
+      "is_binary": false
+    },
+    {
+      "name": "2026-06-08-documentar-schema-banco-de-dados",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados",
+      "type": "directory",
+      "sha": "ab5ee1f0fbadb6918e1e79c1d882992863c06962",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/.openspec.yaml",
+      "type": "file",
+      "sha": "e8d4ccfe905a1326c16d92720669aca42ba9ccf8",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/design.md",
+      "type": "file",
+      "sha": "f8d718aad84cf01c912275d3b11f4295ed3f0208",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3145,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/proposal.md",
+      "type": "file",
+      "sha": "3113caaebc4aaca6d2f9b5637f7ee83fda07f3b3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1493,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/specs",
+      "type": "directory",
+      "sha": "10f32350863ba068502956943a8690fb2d2b555b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "schema-banco-de-dados",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/specs/schema-banco-de-dados",
+      "type": "directory",
+      "sha": "a185be66eb1b8a188d77407118083850547d46a6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/specs/schema-banco-de-dados/spec.md",
+      "type": "file",
+      "sha": "8258fd20afd60f231ecc9478ce070b1c73525fc5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3568,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-06-08-documentar-schema-banco-de-dados/tasks.md",
+      "type": "file",
+      "sha": "4fad8ad9a825e7ef75a6bb74707808690bc4891a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2883,
+      "is_binary": false
+    },
+    {
+      "name": "2026-06-27-migracao-frontend-vuejs",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs",
+      "type": "directory",
+      "sha": "450f3303d4f76a5d8342acfdb6bfcd0c07851a29",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/.openspec.yaml",
+      "type": "file",
+      "sha": "f9be753a1e4a61c55434a7e5fcdf7a537eb2c90a",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/design.md",
+      "type": "file",
+      "sha": "9ca5c3b903c9a71b818c5159ff6aa60499817d98",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6980,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/proposal.md",
+      "type": "file",
+      "sha": "6e4d0588a2cbf970d70774df66e219229b920428",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3087,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs",
+      "type": "directory",
+      "sha": "52e4a87e84d49c9fb8cfa1c9f79034d7bcd50ec2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "chart-visualizations",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/chart-visualizations",
+      "type": "directory",
+      "sha": "c8379e389483be32cbdb6bcda6e9fb370d2297a0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/chart-visualizations/spec.md",
+      "type": "file",
+      "sha": "8bf83a83ff6e1fe39eae04d8d57372d45d574dd7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2509,
+      "is_binary": false
+    },
+    {
+      "name": "pinia-state",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/pinia-state",
+      "type": "directory",
+      "sha": "466905c1a11ac57c17d89f229d78a87bfe213492",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/pinia-state/spec.md",
+      "type": "file",
+      "sha": "fed90bb3b10dfd588dea75cfba7316f0e90ade4e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2057,
+      "is_binary": false
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "1eb6ee9540546a0bdc8cd25dfcbbc203e772dd53",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "42e1592366b8e3865ff95206ed18447c2b271675",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4414,
+      "is_binary": false
+    },
+    {
+      "name": "vue-project-scaffold",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-project-scaffold",
+      "type": "directory",
+      "sha": "f76961a9881cda133565b35b655f2c8ce0e9453b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-project-scaffold/spec.md",
+      "type": "file",
+      "sha": "c17c8bc2673cb172eda5d9269b088f3cdd22031e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2431,
+      "is_binary": false
+    },
+    {
+      "name": "vue-router-pages",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-router-pages",
+      "type": "directory",
+      "sha": "87a0881ec0653d96df682a2ebd936f260f29ca4a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/specs/vue-router-pages/spec.md",
+      "type": "file",
+      "sha": "a43cd224d043dfce1216b31a478b379f4e35a623",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2645,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-06-27-migracao-frontend-vuejs/tasks.md",
+      "type": "file",
+      "sha": "8941f03ed3565366efb9a691c44440620b29c1e8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4913,
+      "is_binary": false
+    },
+    {
+      "name": "2026-06-29-flask-api-routes-proposicoes",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes",
+      "type": "directory",
+      "sha": "4ccb9b95bea6e1b6af5468646949304af33c63ec",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/.openspec.yaml",
+      "type": "file",
+      "sha": "d6b53dee55dec70984cecdfff3ee4fb4ed16425d",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/design.md",
+      "type": "file",
+      "sha": "7df8b909e6587178815fa53dc5b17bb13ad402c6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3906,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/proposal.md",
+      "type": "file",
+      "sha": "f240105b81bec423dacc854fd78aa7ddf01de423",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2027,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs",
+      "type": "directory",
+      "sha": "7d25efcce46c5fc17d8420eeb6f3486f2f32af0e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api-estatisticas",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-estatisticas",
+      "type": "directory",
+      "sha": "10a400f868c2445ecb9f9c194d3b9087b0d17ad7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-estatisticas/spec.md",
+      "type": "file",
+      "sha": "1210a3debf2d74e9549189465c2cbaff3fe99546",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2232,
+      "is_binary": false
+    },
+    {
+      "name": "api-proposicoes-detail",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-proposicoes-detail",
+      "type": "directory",
+      "sha": "bd7a593d41860e6b5768238b638bf83f57d45f14",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-proposicoes-detail/spec.md",
+      "type": "file",
+      "sha": "e7adf4912ad9263ab0625aaeb4562aa91a57db00",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1583,
+      "is_binary": false
+    },
+    {
+      "name": "api-proposicoes-list",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-proposicoes-list",
+      "type": "directory",
+      "sha": "1d12fed2d640174c7b33be481516bc05f6935157",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-proposicoes-list/spec.md",
+      "type": "file",
+      "sha": "36d8a7be6b099583d4f9b17a1899a79747d2a817",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2569,
+      "is_binary": false
+    },
+    {
+      "name": "api-temas",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-temas",
+      "type": "directory",
+      "sha": "79cab902112fa9464d8ddf845f3bdb8a30b48b67",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/specs/api-temas/spec.md",
+      "type": "file",
+      "sha": "cb7f7e70096e6af09d099932cfd2bca01408c3c0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 982,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-06-29-flask-api-routes-proposicoes/tasks.md",
+      "type": "file",
+      "sha": "624b01b172d7c4be03d7e8478076ab24cf68c07f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2686,
+      "is_binary": false
+    },
+    {
+      "name": "2026-06-30-fix-frontend-display-bugs",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs",
+      "type": "directory",
+      "sha": "06449dd6bf7b19d71b3ad4c55bbadefd6b4084b3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/.openspec.yaml",
+      "type": "file",
+      "sha": "d6b53dee55dec70984cecdfff3ee4fb4ed16425d",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/design.md",
+      "type": "file",
+      "sha": "a8ec093d821eaa9149ac52a906cb869b6e1b57f6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2477,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/proposal.md",
+      "type": "file",
+      "sha": "0b03ccec4fdb77a7422e007d42d6fd2650aa9661",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1700,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/specs",
+      "type": "directory",
+      "sha": "ef94ea0c489de6e2c543659c72e818e0fbaaa5c9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "125488860c4897785862ec9e649b807b5df17689",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "dbe9f9c357629b589d5e1191241ddd96b6508247",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2818,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-06-30-fix-frontend-display-bugs/tasks.md",
+      "type": "file",
+      "sha": "70702b131df07fa8dc010460cbcc76dd00ca17f3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2208,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-fix-backend-deploy-vercel",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel",
+      "type": "directory",
+      "sha": "199a4a0af1658af29f1226b335edf7ef6686f9f0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/design.md",
+      "type": "file",
+      "sha": "bdd10ed1b4906fa014321e986aa30f5a1de63ec1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7240,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/proposal.md",
+      "type": "file",
+      "sha": "52982e2e6b62f1315d104ffa631253302a438f83",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3100,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/specs",
+      "type": "directory",
+      "sha": "41316091f3f38e7af8460566d0e19dd590883c1d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "deploy-vercel",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/specs/deploy-vercel",
+      "type": "directory",
+      "sha": "82aaf660cda6199d3b66c18534e124fd8b65a362",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/specs/deploy-vercel/spec.md",
+      "type": "file",
+      "sha": "8ac3ca5b235c5eeadafb2b92f75f79255795f5f4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4207,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-backend-deploy-vercel/tasks.md",
+      "type": "file",
+      "sha": "7940913e1ace64f44bee05b461a9bbb84b805c3e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3403,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-fix-migration-drop-categoria-condicional",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional",
+      "type": "directory",
+      "sha": "ea72b2f299c7d5ca395494e8a41979e171a475d3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/design.md",
+      "type": "file",
+      "sha": "0a181e9a4e6b80ec48652b3802a0e1abf58819bf",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3538,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/proposal.md",
+      "type": "file",
+      "sha": "ae9b3b6c8a82d4d6d822dcd2339dd6e53f819f71",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1844,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/specs",
+      "type": "directory",
+      "sha": "5b826b13e323d809b5111587151fd554488b2bc3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "db-migrations-fresh-install",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/specs/db-migrations-fresh-install",
+      "type": "directory",
+      "sha": "cd26c397710fec1ec0aca5c2414544bb1ef44286",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/specs/db-migrations-fresh-install/spec.md",
+      "type": "file",
+      "sha": "0441652fba9ac31dfb2a1ab1b1a1f3f6eb53bdcf",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1545,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-migration-drop-categoria-condicional/tasks.md",
+      "type": "file",
+      "sha": "9805f0c97f981f76a436b217dcfebaa8f806eb5f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1649,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-fix-multiplos-subtemas-serializer",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer",
+      "type": "directory",
+      "sha": "02f249504da302eb69208d67eb6d30d1e2ac80bc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/README.md",
+      "type": "file",
+      "sha": "f21e3a1ea9e87f451b5c85d161936c304d8594dc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 144,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/design.md",
+      "type": "file",
+      "sha": "eae77f8d3c2849d70b6fd03e058e4e7903a3a1c8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2188,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/proposal.md",
+      "type": "file",
+      "sha": "b9e5b7fddb2b1c6d4ff007b0b2f47eba202aa23a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1920,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/specs",
+      "type": "directory",
+      "sha": "40c34b2361f0ded9aa48b28e5f959cbda88b2762",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api-proposicoes-detail",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/specs/api-proposicoes-detail",
+      "type": "directory",
+      "sha": "e3a309a9cbf03660562c8030dd4d6b900de77414",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/specs/api-proposicoes-detail/spec.md",
+      "type": "file",
+      "sha": "6e6cbac62ca4ff277066dbb46554b152166f9eaf",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1620,
+      "is_binary": false
+    },
+    {
+      "name": "api-proposicoes-list",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/specs/api-proposicoes-list",
+      "type": "directory",
+      "sha": "6896041f388b60435dc2717e4b59d935ec7f8bf4",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/specs/api-proposicoes-list/spec.md",
+      "type": "file",
+      "sha": "69a3000985a23cd5097bf9489436bcccd2469152",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2606,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-fix-multiplos-subtemas-serializer/tasks.md",
+      "type": "file",
+      "sha": "db2878f67b2b17bccc540e9baf06537d0785ab63",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1221,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-vue-ajustes-visuais-graficos-logo-sobre",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre",
+      "type": "directory",
+      "sha": "1a360340ab3d2ba7c4d45a1f86d2529cfc2715a0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/design.md",
+      "type": "file",
+      "sha": "b2f2c919143adb136d06f8b6b7d4f0f3db7736f2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5551,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/proposal.md",
+      "type": "file",
+      "sha": "ed9d6eb7efe4e4ebb6dd71a337f464b0bc923bbf",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3278,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/specs",
+      "type": "directory",
+      "sha": "7e40b2697d9c00092af9ae7ee72c40f6a2edac01",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "chart-visualizations",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/specs/chart-visualizations",
+      "type": "directory",
+      "sha": "2a7934ab2d9801cc51c145b2c6b207bb1b87bb53",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/specs/chart-visualizations/spec.md",
+      "type": "file",
+      "sha": "6f28aa5f88a22392851a0947f0ecd0a034862090",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3577,
+      "is_binary": false
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "82bbe8ee7f5cb938703583209c1623a9a89b321e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "8f1cec38712e096faa50491c3a0f395b707d5a40",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1973,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-ajustes-visuais-graficos-logo-sobre/tasks.md",
+      "type": "file",
+      "sha": "1f8d7cdb63df2ddcd0c2df06f6063dda906a8e80",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2566,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-vue-detalhe-config-notificacoes",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes",
+      "type": "directory",
+      "sha": "6be52cceefe6721bc6c27a33bdb2129260a0ce5a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/design.md",
+      "type": "file",
+      "sha": "10a0ff493082cdf53b275d1d7f15bab75edccabd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8537,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/proposal.md",
+      "type": "file",
+      "sha": "47d620fa2bf87760d9a8c290fef900f0b555de19",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3754,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs",
+      "type": "directory",
+      "sha": "590598c73fd224acf97a571c99ea0bd308cabe15",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "10af50a0e484d8e0a5080ad16182edb9f02814e2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "815ce4990d15ad811426a59dcc48e47e1f746c74",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1266,
+      "is_binary": false
+    },
+    {
+      "name": "vue-detalhe-visual-parity",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-detalhe-visual-parity",
+      "type": "directory",
+      "sha": "7b14e73072d1743051acde94a9d123106d6de3df",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-detalhe-visual-parity/spec.md",
+      "type": "file",
+      "sha": "2ce7c5f450b123eaf690d1338d7921514a7311d1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3866,
+      "is_binary": false
+    },
+    {
+      "name": "vue-router-pages",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-router-pages",
+      "type": "directory",
+      "sha": "7122de4eadb30ffcbffee9805998faa75e72c4f0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-router-pages/spec.md",
+      "type": "file",
+      "sha": "24d5cfad6a8a74abd51eb33fd6bdfbf8653bc37d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1716,
+      "is_binary": false
+    },
+    {
+      "name": "vue-settings-notifications-pages",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-settings-notifications-pages",
+      "type": "directory",
+      "sha": "10c90edc63905e285289056dd77701fdcf480e5d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/specs/vue-settings-notifications-pages/spec.md",
+      "type": "file",
+      "sha": "41cc4952c4f943da8e5a234b1daf2a2f295c5e99",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1475,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-detalhe-config-notificacoes/tasks.md",
+      "type": "file",
+      "sha": "3734f1d899f1b39fd304f02c1cc5d0d77feff3e8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4055,
+      "is_binary": false
+    },
+    {
+      "name": "2026-07-01-vue-subtemas-relacionados-sobre",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre",
+      "type": "directory",
+      "sha": "6a07312fb7fc0cdb385c4b478cc17672edd6bbf3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/.openspec.yaml",
+      "type": "file",
+      "sha": "e7cc357ca0354907d4e70293a668d3f8d80c8f4b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/design.md",
+      "type": "file",
+      "sha": "cdf74004da1e4c0ecf2a3d4f51b7cd17fd19c591",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6943,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/proposal.md",
+      "type": "file",
+      "sha": "c4698cb32cf32559586978683df6465e6eaa8d56",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3575,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs",
+      "type": "directory",
+      "sha": "c5671929f4a9316f22ab4370ec671079e74a02c8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "ed9c92f379362704fbdea218ca63a57ad0f1c251",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "ed4e70bff8d824675a6cf2cb2f435be1794f250f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3058,
+      "is_binary": false
+    },
+    {
+      "name": "vue-detalhe-visual-parity",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-detalhe-visual-parity",
+      "type": "directory",
+      "sha": "e38d07976202967d94ff7ab1003fe92148668dc2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-detalhe-visual-parity/spec.md",
+      "type": "file",
+      "sha": "058b9856c9ed5e81707f73d8cb1b72ca2ff08c93",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3414,
+      "is_binary": false
+    },
+    {
+      "name": "vue-router-pages",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-router-pages",
+      "type": "directory",
+      "sha": "b716d8423ed99e1143719c7e18ba9b2363646c64",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/specs/vue-router-pages/spec.md",
+      "type": "file",
+      "sha": "ad260afde98e23b21a6fae777a8d04f6e81afdf7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 435,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/archive/2026-07-01-vue-subtemas-relacionados-sobre/tasks.md",
+      "type": "file",
+      "sha": "e8435ae91144e25f37e110552125dda396fe6ce1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3825,
+      "is_binary": false
+    },
+    {
+      "name": "auditoria-backend-pre-develop",
+      "path": "openspec/changes/auditoria-backend-pre-develop",
+      "type": "directory",
+      "sha": "3fd082c05fd9cc94122889cc233791fcf0a9b9ea",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/auditoria-backend-pre-develop/design.md",
+      "type": "file",
+      "sha": "bb7865d393dfcb9ac34fbafce6c257f5f1bde5e1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3949,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/auditoria-backend-pre-develop/proposal.md",
+      "type": "file",
+      "sha": "80ef8a775888c1ccb5a8ec9888db3a6ef03f7c6c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3827,
+      "is_binary": false
+    },
+    {
+      "name": "relatorio-branch.md",
+      "path": "openspec/changes/auditoria-backend-pre-develop/relatorio-branch.md",
+      "type": "file",
+      "sha": "14af619b2dd28aab0a42773f8793826ff4537f8b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6072,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/auditoria-backend-pre-develop/tasks.md",
+      "type": "file",
+      "sha": "a6ff2d29a1a3900e37e19069e124c47a6a848ca7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1947,
+      "is_binary": false
     },
     {
       "name": "dashboard-pesquisa",
@@ -1335,6 +3265,44 @@
       "is_binary": false
     },
     {
+      "name": "filtro-proposicoes-processadas",
+      "path": "openspec/changes/filtro-proposicoes-processadas",
+      "type": "directory",
+      "sha": "78f5d29a4b4772da5dcaae6fe4c9beaff5408a68",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/filtro-proposicoes-processadas/design.md",
+      "type": "file",
+      "sha": "3242491a2ce9a1046e0d725134728683af530d71",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3485,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/filtro-proposicoes-processadas/proposal.md",
+      "type": "file",
+      "sha": "5a1e241d50311a59cde1aa7d40ccc48837fa7549",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2160,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/filtro-proposicoes-processadas/tasks.md",
+      "type": "file",
+      "sha": "4c15769182cf1b5f1a22f7714fccdd4178b52ff1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1432,
+      "is_binary": false
+    },
+    {
       "name": "fix-performance-dashboard-rendering",
       "path": "openspec/changes/fix-performance-dashboard-rendering",
       "type": "directory",
@@ -1406,6 +3374,54 @@
       "mode": "100644",
       "extension": ".md",
       "size": 803,
+      "is_binary": false
+    },
+    {
+      "name": "gemini-classificacao-neon",
+      "path": "openspec/changes/gemini-classificacao-neon",
+      "type": "directory",
+      "sha": "1e9586aae73acda04424ea4730baf33409e4fca5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/gemini-classificacao-neon/.openspec.yaml",
+      "type": "file",
+      "sha": "f9be753a1e4a61c55434a7e5fcdf7a537eb2c90a",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/gemini-classificacao-neon/design.md",
+      "type": "file",
+      "sha": "17483bceae54ce055c65c371e968b1e56282d8c4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6299,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/gemini-classificacao-neon/proposal.md",
+      "type": "file",
+      "sha": "ecdd7572663e86f2ea32f2ab92097575dc54b80a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2834,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/gemini-classificacao-neon/tasks.md",
+      "type": "file",
+      "sha": "535652c7ce2f2b647ac727214aac75bd4b0eb014",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5292,
       "is_binary": false
     },
     {
@@ -1522,7 +3538,7 @@
       "name": "improve-github-productivity-dashboard",
       "path": "openspec/changes/improve-github-productivity-dashboard",
       "type": "directory",
-      "sha": "c4b0278831ca4187929ee1f9d74aabb68d2e0ffc",
+      "sha": "2e9dfdd2249ba6b0f96f1769e3a6758d3303a207",
       "mode": "040000",
       "children": []
     },
@@ -1560,7 +3576,7 @@
       "name": "specs",
       "path": "openspec/changes/improve-github-productivity-dashboard/specs",
       "type": "directory",
-      "sha": "bc4e2e69772dc0e2ac126794af149e77d7026601",
+      "sha": "68686acc660961ead5e177004489eca9f41fa00a",
       "mode": "040000",
       "children": []
     },
@@ -1568,7 +3584,7 @@
       "name": "github-productivity-dashboard",
       "path": "openspec/changes/improve-github-productivity-dashboard/specs/github-productivity-dashboard",
       "type": "directory",
-      "sha": "5b994604fb6f14eeddebf82b4c9ddbb7bf28dad8",
+      "sha": "ee5ed70d78c95ce5b1bff11ef897a2c16f3d0a17",
       "mode": "040000",
       "children": []
     },
@@ -1576,10 +3592,10 @@
       "name": "spec.md",
       "path": "openspec/changes/improve-github-productivity-dashboard/specs/github-productivity-dashboard/spec.md",
       "type": "file",
-      "sha": "ce17c59d3e78dd357c7bea56d03e06a6a9635f52",
+      "sha": "04afebf696b114fd43616780e0b612de33dd4ce4",
       "mode": "100644",
       "extension": ".md",
-      "size": 4397,
+      "size": 4398,
       "is_binary": false
     },
     {
@@ -1611,6 +3627,324 @@
       "is_binary": false
     },
     {
+      "name": "limpeza-backend",
+      "path": "openspec/changes/limpeza-backend",
+      "type": "directory",
+      "sha": "88c9e689360eba25c1e211072ded18e6c534fbe9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/limpeza-backend/design.md",
+      "type": "file",
+      "sha": "be293d2ae31329cd55aaf8a45f4e04f749ce29f1",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3879,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/limpeza-backend/proposal.md",
+      "type": "file",
+      "sha": "20b69a6d3d88ce74db0c0662f877cd13ce1a538c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2498,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/limpeza-backend/tasks.md",
+      "type": "file",
+      "sha": "bd071d7d5143620ad982a6ebbefaaa951471ac2b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1666,
+      "is_binary": false
+    },
+    {
+      "name": "pagina-analises-relatorios",
+      "path": "openspec/changes/pagina-analises-relatorios",
+      "type": "directory",
+      "sha": "85eacbcd5b8a6fa4750ea87f2280bc7e76b6f396",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/pagina-analises-relatorios/design.md",
+      "type": "file",
+      "sha": "07afa0e86a5c1145fe3e28f01c4befaa9a071ead",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7024,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/pagina-analises-relatorios/proposal.md",
+      "type": "file",
+      "sha": "d59cf44a9f5ef0ce8926e6ca9266d217b044c437",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2703,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/pagina-analises-relatorios/tasks.md",
+      "type": "file",
+      "sha": "fd577d62761c9abbc681b55b800e6e510032abfd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3054,
+      "is_binary": false
+    },
+    {
+      "name": "periodo-dados-proposicoes",
+      "path": "openspec/changes/periodo-dados-proposicoes",
+      "type": "directory",
+      "sha": "8f8c74075e46b12c1072ba4db5b0c12cb207284b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/periodo-dados-proposicoes/design.md",
+      "type": "file",
+      "sha": "4b7cc949ade83a049a7f8796c1f5e7bc9efabe91",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3982,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/periodo-dados-proposicoes/proposal.md",
+      "type": "file",
+      "sha": "ec68c12e49d188eed7480cc7e9fae513ee099324",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1850,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/periodo-dados-proposicoes/tasks.md",
+      "type": "file",
+      "sha": "6d8e04fd11e43b74da9e9da0d5a6c7c63f6a6b21",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1992,
+      "is_binary": false
+    },
+    {
+      "name": "pipeline-ci-qualidade",
+      "path": "openspec/changes/pipeline-ci-qualidade",
+      "type": "directory",
+      "sha": "31ebc3c24b8b204bf0fdc6c622872c3f4366a69c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/pipeline-ci-qualidade/design.md",
+      "type": "file",
+      "sha": "1fa8aea6aa7c8599af8b85c5346645743f7f5d0d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 11995,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/pipeline-ci-qualidade/proposal.md",
+      "type": "file",
+      "sha": "ffef521dbc9f7d7877c37febd21b4afbf23fe370",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4543,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/pipeline-ci-qualidade/tasks.md",
+      "type": "file",
+      "sha": "93905f87090112432ce2e9ff13357aea8590e8f3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8096,
+      "is_binary": false
+    },
+    {
+      "name": "sync-camara-gemini-batch-queue",
+      "path": "openspec/changes/sync-camara-gemini-batch-queue",
+      "type": "directory",
+      "sha": "18af065b0785d35304ee5c3075d299f7574d8489",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/sync-camara-gemini-batch-queue/design.md",
+      "type": "file",
+      "sha": "d31ad743aba99c8c283df62af15cc1bd3d296d94",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4422,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/sync-camara-gemini-batch-queue/proposal.md",
+      "type": "file",
+      "sha": "057099285909b951a9dc22a86a1940fce8af75f2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2323,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/sync-camara-gemini-batch-queue/tasks.md",
+      "type": "file",
+      "sha": "509365cd97e51239ee1b830b2b4e7203339c6181",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1965,
+      "is_binary": false
+    },
+    {
+      "name": "sync-proposicoes-camara-ia",
+      "path": "openspec/changes/sync-proposicoes-camara-ia",
+      "type": "directory",
+      "sha": "5e1375bf87245fba0de4aa276f27b15d5affb239",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".openspec.yaml",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/.openspec.yaml",
+      "type": "file",
+      "sha": "578bd54974023c24c0034114ba2599e932d05ec5",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "design.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/design.md",
+      "type": "file",
+      "sha": "ef005322ecd860b2b7bed997bf326fb52d529a9a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6326,
+      "is_binary": false
+    },
+    {
+      "name": "proposal.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/proposal.md",
+      "type": "file",
+      "sha": "5f4483509c90905da326cf0e4d8224a3ce3020e5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2761,
+      "is_binary": false
+    },
+    {
+      "name": "specs",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs",
+      "type": "directory",
+      "sha": "c187def3112968d9237ba20c73b45763a1741bde",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "camara-ai-categorization",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/camara-ai-categorization",
+      "type": "directory",
+      "sha": "203e2c45044df53c403256edca8109a09e10bd8b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/camara-ai-categorization/spec.md",
+      "type": "file",
+      "sha": "a7bc6daf84e805a5a362667ebee783ca9c2a5ee2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3882,
+      "is_binary": false
+    },
+    {
+      "name": "camara-sync-job",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/camara-sync-job",
+      "type": "directory",
+      "sha": "c2403a7425373548cce439c21eb76ce92a3d41a5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/camara-sync-job/spec.md",
+      "type": "file",
+      "sha": "f8451b157a43b7ed24dc95258e1b605ff9d65c80",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4222,
+      "is_binary": false
+    },
+    {
+      "name": "schema-banco-de-dados",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/schema-banco-de-dados",
+      "type": "directory",
+      "sha": "32466aa1ac2ba6bb2b1242bec38615edb4a75f2f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/schema-banco-de-dados/spec.md",
+      "type": "file",
+      "sha": "5edf06a5cbc0f49efcd224e80a3b5bc2c6300f64",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3924,
+      "is_binary": false
+    },
+    {
+      "name": "sync-execution-tracking",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/sync-execution-tracking",
+      "type": "directory",
+      "sha": "76cc76df9713c9f55500f1c87e62ef91cb2d5177",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/specs/sync-execution-tracking/spec.md",
+      "type": "file",
+      "sha": "51f6a792214b6168e2954d886e7e998fbf42e947",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3275,
+      "is_binary": false
+    },
+    {
+      "name": "tasks.md",
+      "path": "openspec/changes/sync-proposicoes-camara-ia/tasks.md",
+      "type": "file",
+      "sha": "1b9b36a73f8b2ba698caf5df471f228f5682baa7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5013,
+      "is_binary": false
+    },
+    {
       "name": "config.yaml",
       "path": "openspec/config.yaml",
       "type": "file",
@@ -1621,10 +3955,328 @@
       "is_binary": false
     },
     {
+      "name": "specs",
+      "path": "openspec/specs",
+      "type": "directory",
+      "sha": "b95584dee11f8d921ebc433363a327699490f30a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api-estatisticas",
+      "path": "openspec/specs/api-estatisticas",
+      "type": "directory",
+      "sha": "e1353b8900b7f7b2726bbc09a87880e667091b8d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/api-estatisticas/spec.md",
+      "type": "file",
+      "sha": "d6d70058497c342d77c554a8c66903287e1ef6d3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2999,
+      "is_binary": false
+    },
+    {
+      "name": "api-proposicoes-detail",
+      "path": "openspec/specs/api-proposicoes-detail",
+      "type": "directory",
+      "sha": "4de66db59b52b74560a87f7b3816e9c6defec8f1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/api-proposicoes-detail/spec.md",
+      "type": "file",
+      "sha": "edc32875e1cbaec77345494cfd32d8395b871237",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2314,
+      "is_binary": false
+    },
+    {
+      "name": "api-proposicoes-list",
+      "path": "openspec/specs/api-proposicoes-list",
+      "type": "directory",
+      "sha": "15072fbe6d5676047dccc5b2efd9ef0a351fe01f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/api-proposicoes-list/spec.md",
+      "type": "file",
+      "sha": "85af1f76deede5f8c96c4dc19f50b4572e56d0fc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3425,
+      "is_binary": false
+    },
+    {
+      "name": "api-temas",
+      "path": "openspec/specs/api-temas",
+      "type": "directory",
+      "sha": "dfd2527e1cc091594d8fa3b6f884db72f2a374c6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/api-temas/spec.md",
+      "type": "file",
+      "sha": "4eda4280db848951213845a35da4eea4cee540d5",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1494,
+      "is_binary": false
+    },
+    {
+      "name": "chart-visualizations",
+      "path": "openspec/specs/chart-visualizations",
+      "type": "directory",
+      "sha": "364e64a51e1c6ae748e1f0f5648027f538501f5b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/chart-visualizations/spec.md",
+      "type": "file",
+      "sha": "fb16ef67de6585d62361ea93796feddc5ea61058",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4349,
+      "is_binary": false
+    },
+    {
+      "name": "database-url-config",
+      "path": "openspec/specs/database-url-config",
+      "type": "directory",
+      "sha": "2d80b339269201376bf4f67c4ec25319fb9d6d81",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/database-url-config/spec.md",
+      "type": "file",
+      "sha": "dc20d6a64fced87d6e0f44fa0d3704b69769abc7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6207,
+      "is_binary": false
+    },
+    {
+      "name": "db-migrations-fresh-install",
+      "path": "openspec/specs/db-migrations-fresh-install",
+      "type": "directory",
+      "sha": "0018818ee817407613286fc94e4d403466edb1e9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/db-migrations-fresh-install/spec.md",
+      "type": "file",
+      "sha": "4d9ab0c0c2882e3e767fc1e7e5322ba849503960",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1701,
+      "is_binary": false
+    },
+    {
+      "name": "deploy-vercel",
+      "path": "openspec/specs/deploy-vercel",
+      "type": "directory",
+      "sha": "a14d532ba33243322685406f3cca1f9e137abb0c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/deploy-vercel/spec.md",
+      "type": "file",
+      "sha": "8c785762965096389ca85564a54cf365ff34980c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4334,
+      "is_binary": false
+    },
+    {
+      "name": "pinia-state",
+      "path": "openspec/specs/pinia-state",
+      "type": "directory",
+      "sha": "1d2c8639e42fc21bec94207a4fc91ce4573e8f58",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/pinia-state/spec.md",
+      "type": "file",
+      "sha": "d4e2c4d1091a097df2a951be30f98f960fe88bc0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2620,
+      "is_binary": false
+    },
+    {
+      "name": "schema-banco-de-dados",
+      "path": "openspec/specs/schema-banco-de-dados",
+      "type": "directory",
+      "sha": "e7d46818421b74530904851511ad20868fa78053",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/schema-banco-de-dados/spec.md",
+      "type": "file",
+      "sha": "192cf03a8d0d18112bdcaca38c289fb5862a0d2c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6183,
+      "is_binary": false
+    },
+    {
+      "name": "vue-components-ui",
+      "path": "openspec/specs/vue-components-ui",
+      "type": "directory",
+      "sha": "fa56a49a4255ca38b5846f85830ea0e33a01eefe",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/vue-components-ui/spec.md",
+      "type": "file",
+      "sha": "a0b72f52e7a77fe271fc8b425d8a2b5d79644d0a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7403,
+      "is_binary": false
+    },
+    {
+      "name": "vue-detalhe-visual-parity",
+      "path": "openspec/specs/vue-detalhe-visual-parity",
+      "type": "directory",
+      "sha": "373a0f5add10c5532d429bce48b99e43ad1bd3ff",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/vue-detalhe-visual-parity/spec.md",
+      "type": "file",
+      "sha": "376dce9cac6b139243666a6383e6f182505bb627",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5469,
+      "is_binary": false
+    },
+    {
+      "name": "vue-project-scaffold",
+      "path": "openspec/specs/vue-project-scaffold",
+      "type": "directory",
+      "sha": "6c21ccf40ddba012b7db7f85d5f08e1f535e458d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/vue-project-scaffold/spec.md",
+      "type": "file",
+      "sha": "853dbbca922623cf49aa876debd6834b504bbcfe",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3046,
+      "is_binary": false
+    },
+    {
+      "name": "vue-router-pages",
+      "path": "openspec/specs/vue-router-pages",
+      "type": "directory",
+      "sha": "42bc4e07d70af6499b56ce09a702f119a8635943",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/vue-router-pages/spec.md",
+      "type": "file",
+      "sha": "f98825415cdfcf94a0444a37eab7babb1b396156",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 4612,
+      "is_binary": false
+    },
+    {
+      "name": "vue-settings-notifications-pages",
+      "path": "openspec/specs/vue-settings-notifications-pages",
+      "type": "directory",
+      "sha": "a236ed3b00ac9fe29172c38a581f35c29b1285b7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "spec.md",
+      "path": "openspec/specs/vue-settings-notifications-pages/spec.md",
+      "type": "file",
+      "sha": "fbf9bed280d9b3e1ad9b4f3ca5f6c4ca5cb4f088",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1627,
+      "is_binary": false
+    },
+    {
+      "name": "pyproject.toml",
+      "path": "pyproject.toml",
+      "type": "file",
+      "sha": "7af717bb90da635be3ff2c59dac8d8e7d6670e28",
+      "mode": "100644",
+      "extension": ".toml",
+      "size": 388,
+      "is_binary": false
+    },
+    {
+      "name": "requirements-dev.txt",
+      "path": "requirements-dev.txt",
+      "type": "file",
+      "sha": "eaae744712e5a4d59a0e4d711566313bcfde68c8",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 46,
+      "is_binary": false
+    },
+    {
+      "name": "requirements-docs.txt",
+      "path": "requirements-docs.txt",
+      "type": "file",
+      "sha": "d752c762d069381862ce4d18e1af0e2cff88935b",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "type": "file",
+      "sha": "0d5a49e55b4d91e53f636ca8ec41e81658e6c331",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 263,
+      "is_binary": false
+    },
+    {
       "name": "scripts",
       "path": "scripts",
       "type": "directory",
-      "sha": "eafa7be6de8b40c1e2361bbf3b1e85a2421c7834",
+      "sha": "cb66033fab5e90ac2a162e8acd0f7fc8ec2a53bc",
       "mode": "040000",
       "children": []
     },
@@ -1639,1620 +4291,30 @@
       "is_binary": false
     },
     {
-      "name": "site",
-      "path": "site",
-      "type": "directory",
-      "sha": "2dc705dc1f2ffc10757b47b6dd112d5acf39c057",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "404.html",
-      "path": "site/404.html",
-      "type": "file",
-      "sha": "c111ebd12c9af8c5c6da472042370beec6f0041d",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 50045,
-      "is_binary": false
-    },
-    {
-      "name": "assets",
-      "path": "site/assets",
-      "type": "directory",
-      "sha": "4523d0491146636dddd1515057b052ab3b3b7a9d",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "images",
-      "path": "site/assets/images",
-      "type": "directory",
-      "sha": "a672c2e722b34d718bc54b649ec9426f358cbb25",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "favicon.png",
-      "path": "site/assets/images/favicon.png",
-      "type": "file",
-      "sha": "1cf13b9f9d978896599290a74f77d5dbe7d1655c",
-      "mode": "100644",
-      "extension": ".png",
-      "size": 1870,
-      "is_binary": false
-    },
-    {
-      "name": "team",
-      "path": "site/assets/images/team",
-      "type": "directory",
-      "sha": "07faa1384503d21975d7b34047d5b92e6bb49386",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "arthur-palhares.jpg",
-      "path": "site/assets/images/team/arthur-palhares.jpg",
-      "type": "file",
-      "sha": "68bef5fec5048a55cf44c5136cfef8fab547d001",
-      "mode": "100644",
-      "extension": ".jpg",
-      "size": 28587,
-      "is_binary": false
-    },
-    {
-      "name": "caio-bechepeche.jpg",
-      "path": "site/assets/images/team/caio-bechepeche.jpg",
-      "type": "file",
-      "sha": "bc4be1a87e98f88302f1d0025b49ac07f9a59946",
-      "mode": "100644",
-      "extension": ".jpg",
-      "size": 325932,
-      "is_binary": false
-    },
-    {
-      "name": "italo-lacerda.jpg",
-      "path": "site/assets/images/team/italo-lacerda.jpg",
-      "type": "file",
-      "sha": "8d8a663b750b1438eaef305fbeb9aeb0d54f3cb9",
-      "mode": "100644",
-      "extension": ".jpg",
-      "size": 88779,
-      "is_binary": false
-    },
-    {
-      "name": "luis-henrique.jpg",
-      "path": "site/assets/images/team/luis-henrique.jpg",
-      "type": "file",
-      "sha": "1859c08081d4470a7a484b880245e835206d0dd2",
-      "mode": "100644",
-      "extension": ".jpg",
-      "size": 22683,
-      "is_binary": false
-    },
-    {
-      "name": "renan-curione.jpg",
-      "path": "site/assets/images/team/renan-curione.jpg",
-      "type": "file",
-      "sha": "981917ef672d164b497819ac0b2e8ea024615e88",
-      "mode": "100644",
-      "extension": ".jpg",
-      "size": 321946,
-      "is_binary": false
-    },
-    {
-      "name": "javascripts",
-      "path": "site/assets/javascripts",
-      "type": "directory",
-      "sha": "338a3392712e157f267de1d710e0fa3e6a13b1c2",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "bundle.79ae519e.min.js",
-      "path": "site/assets/javascripts/bundle.79ae519e.min.js",
-      "type": "file",
-      "sha": "3df3e5e61bb9004415ba504773c0cca6e9479032",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 114308,
-      "is_binary": false
-    },
-    {
-      "name": "bundle.79ae519e.min.js.map",
-      "path": "site/assets/javascripts/bundle.79ae519e.min.js.map",
-      "type": "file",
-      "sha": "5cf02892ca5db25831df9452e02979a96fbc0f6e",
-      "mode": "100644",
-      "extension": ".map",
-      "size": 1026989,
-      "is_binary": false
-    },
-    {
-      "name": "lunr",
-      "path": "site/assets/javascripts/lunr",
-      "type": "directory",
-      "sha": "3c0796dbd64c7013298c7f65b7e5844b13c79446",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "min",
-      "path": "site/assets/javascripts/lunr/min",
-      "type": "directory",
-      "sha": "707fbea9e8f05dac5949127cda72e63550da8d8c",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "lunr.ar.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ar.min.js",
-      "type": "file",
-      "sha": "9b06c26c1fc331ff8f95cfd719f40812a97f75cd",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 17074,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.da.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.da.min.js",
-      "type": "file",
-      "sha": "b9d8509865dd5eb9f23b3fa7ad77e0e6fc888b6d",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 4654,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.de.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.de.min.js",
-      "type": "file",
-      "sha": "f3b5c108c9eebfe8a207e9fad1dc3ab571aa0d5c",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 6119,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.du.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.du.min.js",
-      "type": "file",
-      "sha": "49a0f3f0ac1786344ef7edbb969356f1b2ee8d48",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 6208,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.el.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.el.min.js",
-      "type": "file",
-      "sha": "ace017bd650d2f66a4929d431e0d133a45f2d5a7",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 14950,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.es.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.es.min.js",
-      "type": "file",
-      "sha": "2989d34265c9c7953c52b26d90cd87a24e9b927b",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 11499,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.fi.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.fi.min.js",
-      "type": "file",
-      "sha": "29f5dfcea8f3dbc6d2331345b68156607e233eab",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 9342,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.fr.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.fr.min.js",
-      "type": "file",
-      "sha": "68cd0094ae03737ba72923d2ea1a3919a57b4f0b",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 10669,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.he.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.he.min.js",
-      "type": "file",
-      "sha": "b863d3eae0a33c7ce6590037a89cbb57255290b0",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 6882,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.hi.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.hi.min.js",
-      "type": "file",
-      "sha": "7dbc41402cf33eef80e038eeaaa4c89b9ec53ce8",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 3383,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.hu.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.hu.min.js",
-      "type": "file",
-      "sha": "ed9d909f734464b707bc804eba5ef220618ed82a",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 9437,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.hy.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.hy.min.js",
-      "type": "file",
-      "sha": "b37f79298555285a4ae1b01d5074ca37ef9997bd",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 1264,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.it.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.it.min.js",
-      "type": "file",
-      "sha": "344b6a3c0cf8e9d936ace3129b99158631ecdf6b",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 11232,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.ja.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ja.min.js",
-      "type": "file",
-      "sha": "5f254ebe91fa9ef0e78132f4c9e4142d845ed9c9",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 2313,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.jp.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.jp.min.js",
-      "type": "file",
-      "sha": "c055ebaf37a904fafc2815f4f8d0e810db0b0984",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 36,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.kn.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.kn.min.js",
-      "type": "file",
-      "sha": "1cef9befdac27c3d5ed23bf1e40b0701c8e0f729",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 3494,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.ko.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ko.min.js",
-      "type": "file",
-      "sha": "eaf9dabf71030b544140a5a6e11471a0d46e42ae",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 7972,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.multi.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.multi.min.js",
-      "type": "file",
-      "sha": "7debad0961d78f02d916fdb7de8ab4194db917b2",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 817,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.nl.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.nl.min.js",
-      "type": "file",
-      "sha": "c4a253594802c1066c646bfd2393f3c36a875deb",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 6026,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.no.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.no.min.js",
-      "type": "file",
-      "sha": "92bc7e4e89446adda1cbf816e949896f37b713fb",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 4754,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.pt.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.pt.min.js",
-      "type": "file",
-      "sha": "6c16996d65099c5de1f0ce3fd8bc9c92c5f2bcbb",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 10171,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.ro.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ro.min.js",
-      "type": "file",
-      "sha": "727714018182a6cb94ba2bc2a4b2befb7a5770a8",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 10958,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.ru.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ru.min.js",
-      "type": "file",
-      "sha": "186cc485c23848c65769fdef7373d00b30448cbf",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 10331,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.sa.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.sa.min.js",
-      "type": "file",
-      "sha": "50ee564205da301761c61a36820f187bf343ad71",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 4901,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.stemmer.support.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.stemmer.support.min.js",
-      "type": "file",
-      "sha": "abd4475bb103339959c3319e5390b29164d526a3",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 3647,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.sv.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.sv.min.js",
-      "type": "file",
-      "sha": "3e5eb6400026110fb17e1a6b932276363275997d",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 4523,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.ta.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.ta.min.js",
-      "type": "file",
-      "sha": "a644bed2280922ebbd20c736e20efb436c8a144b",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 2406,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.te.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.te.min.js",
-      "type": "file",
-      "sha": "9fa7a93b9913aea766276903781c899cf485afe9",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 2330,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.th.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.th.min.js",
-      "type": "file",
-      "sha": "dee3aac6e5cb6e65fb411e6e64f31d1289d6798c",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 1031,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.tr.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.tr.min.js",
-      "type": "file",
-      "sha": "563f6ec1f5259556445d6d725394d4651ab1925f",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 15009,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.vi.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.vi.min.js",
-      "type": "file",
-      "sha": "22aed28c49b895da20256b02a62dd0bcba9cc6a5",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 784,
-      "is_binary": false
-    },
-    {
-      "name": "lunr.zh.min.js",
-      "path": "site/assets/javascripts/lunr/min/lunr.zh.min.js",
-      "type": "file",
-      "sha": "fda66e9c5725876e3e6449d7cd3cac78c94f81bb",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 2158,
-      "is_binary": false
-    },
-    {
-      "name": "tinyseg.js",
-      "path": "site/assets/javascripts/lunr/tinyseg.js",
-      "type": "file",
-      "sha": "167fa6dd69e074b43de3aa48005d0b748b8e83e7",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 22878,
-      "is_binary": false
-    },
-    {
-      "name": "wordcut.js",
-      "path": "site/assets/javascripts/lunr/wordcut.js",
-      "type": "file",
-      "sha": "0d898c9ed144b1e677355833c2d43e6e8a665a27",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 677463,
-      "is_binary": false
-    },
-    {
-      "name": "workers",
-      "path": "site/assets/javascripts/workers",
-      "type": "directory",
-      "sha": "f33b857b08447e57509dbb68c3e751ce2d8e0cea",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "search.2c215733.min.js",
-      "path": "site/assets/javascripts/workers/search.2c215733.min.js",
-      "type": "file",
-      "sha": "6e2e3ea40dd892e3d050b9a2b97f6b0ca47d6070",
-      "mode": "100644",
-      "extension": ".js",
-      "size": 39481,
-      "is_binary": false
-    },
-    {
-      "name": "search.2c215733.min.js.map",
-      "path": "site/assets/javascripts/workers/search.2c215733.min.js.map",
-      "type": "file",
-      "sha": "1e0428936ca7ad8cee0b93e1300b2bab0bea1594",
-      "mode": "100644",
-      "extension": ".map",
-      "size": 216029,
-      "is_binary": false
-    },
-    {
-      "name": "stylesheets",
-      "path": "site/assets/stylesheets",
-      "type": "directory",
-      "sha": "1ddd1fa78e3f4f64a78aba45d0b9e8e9b28d24dc",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "main.484c7ddc.min.css",
-      "path": "site/assets/stylesheets/main.484c7ddc.min.css",
-      "type": "file",
-      "sha": "714c565cf5a568e71ee1b676c4f74dc6e96e0659",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 139849,
-      "is_binary": false
-    },
-    {
-      "name": "main.484c7ddc.min.css.map",
-      "path": "site/assets/stylesheets/main.484c7ddc.min.css.map",
-      "type": "file",
-      "sha": "8186f37d0ffb7ea2cf12618b693dd9d1ad7a52f3",
-      "mode": "100644",
-      "extension": ".map",
-      "size": 47588,
-      "is_binary": false
-    },
-    {
-      "name": "palette.ab4e12ef.min.css",
-      "path": "site/assets/stylesheets/palette.ab4e12ef.min.css",
-      "type": "file",
-      "sha": "75aaf84253d98be952d99c5507d0b59e03e73334",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 12641,
-      "is_binary": false
-    },
-    {
-      "name": "palette.ab4e12ef.min.css.map",
-      "path": "site/assets/stylesheets/palette.ab4e12ef.min.css.map",
-      "type": "file",
-      "sha": "1026d57ca89754f609ed9b2dc300575ac5118395",
-      "mode": "100644",
-      "extension": ".map",
-      "size": 3670,
-      "is_binary": false
-    },
-    {
-      "name": "estudos",
-      "path": "site/estudos",
-      "type": "directory",
-      "sha": "f1a4ae2a5b3d2d7073779bf2e2fc7cb0871ff127",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "API",
-      "path": "site/estudos/API",
-      "type": "directory",
-      "sha": "7470c17d816c718b68080f9f8384b974171a391b",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/API/index.html",
-      "type": "file",
-      "sha": "8210d8cb7f39d1fc43ac766f7c8df619f157bac3",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51507,
-      "is_binary": false
-    },
-    {
-      "name": "levantamento_api",
-      "path": "site/estudos/API/levantamento_api",
-      "type": "directory",
-      "sha": "b4a39115475caffe81c530109425d9a239575e11",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/API/levantamento_api/index.html",
-      "type": "file",
-      "sha": "a08115747ad7f7c911b5d3b971c3a26888e61f2c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 62096,
-      "is_binary": false
-    },
-    {
-      "name": "arquitetura",
-      "path": "site/estudos/arquitetura",
-      "type": "directory",
-      "sha": "f6f7838f2f8765209dc1d96a41b7e26ef34c1d36",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "checando_tecnologias",
-      "path": "site/estudos/arquitetura/checando_tecnologias",
-      "type": "directory",
-      "sha": "b67df763dd192f5a7f8bec1be6173fef9bcdb572",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/checando_tecnologias/index.html",
-      "type": "file",
-      "sha": "d3943a3c49a15bb495b6dbc78aaf674d305c10ea",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 86885,
-      "is_binary": false
-    },
-    {
-      "name": "diagrama_arquitetura_v1",
-      "path": "site/estudos/arquitetura/diagrama_arquitetura_v1",
-      "type": "directory",
-      "sha": "6f337834b1bcb7316c28208ab64079258c8e2268",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/diagrama_arquitetura_v1/index.html",
-      "type": "file",
-      "sha": "3849c6f76905094f09997ce4731094d9bb182fe0",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 76323,
-      "is_binary": false
-    },
-    {
-      "name": "diagrama_arquitetura_v2",
-      "path": "site/estudos/arquitetura/diagrama_arquitetura_v2",
-      "type": "directory",
-      "sha": "e2c08a9f985abc7e0bf55bc0fd7fc52473aea4e2",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/diagrama_arquitetura_v2/index.html",
-      "type": "file",
-      "sha": "9a08e7415f4e16825362878acaaef63baf33c529",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 71971,
-      "is_binary": false
-    },
-    {
-      "name": "escolha_arquitetura",
-      "path": "site/estudos/arquitetura/escolha_arquitetura",
-      "type": "directory",
-      "sha": "5702a03b0a7c859673756181e0c636015152ec43",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/escolha_arquitetura/index.html",
-      "type": "file",
-      "sha": "7dad46277a267b55874be3ccd0854a1a6f62c45f",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 59038,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_arquiteturas",
-      "path": "site/estudos/arquitetura/estudo_arquiteturas",
-      "type": "directory",
-      "sha": "d17ca38dea86e60ba0cf5eb8182d83f53e031d33",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/estudo_arquiteturas/index.html",
-      "type": "file",
-      "sha": "bd654cc09858504cb3eba22737be02d2532fbc8e",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 80902,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_fluxo_de_dados",
-      "path": "site/estudos/arquitetura/estudo_fluxo_de_dados",
-      "type": "directory",
-      "sha": "064d7e6dfb841ca98a0b4cd4df65be49600c5939",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/estudo_fluxo_de_dados/index.html",
-      "type": "file",
-      "sha": "4c0e2f1af3be24e137aff8d84e618a1c7d9b36e6",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 73712,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_login",
-      "path": "site/estudos/arquitetura/estudo_login",
-      "type": "directory",
-      "sha": "dce4484742ecdace814489b6ef57b29367cd7d09",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/estudo_login/index.html",
-      "type": "file",
-      "sha": "86892202b4fa6f0ad306c113f3d66e2685383f43",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 55538,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/arquitetura/index.html",
-      "type": "file",
-      "sha": "f73433acf2437107348934c21dd84d4f3f6eee19",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51728,
-      "is_binary": false
-    },
-    {
-      "name": "backend",
-      "path": "site/estudos/backend",
-      "type": "directory",
-      "sha": "5eeb10bbc52e5689fd23488d2e2a19a5d67155bd",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "comparacao_stacks_backend",
-      "path": "site/estudos/backend/comparacao_stacks_backend",
-      "type": "directory",
-      "sha": "15a81565ac7ab3ebcf00026118d444cf05bac9b7",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/backend/comparacao_stacks_backend/index.html",
-      "type": "file",
-      "sha": "d5f76bfc82fadbdd68ef59ed3e0bd15082500223",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 60952,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_stack_backend_definida",
-      "path": "site/estudos/backend/estudo_stack_backend_definida",
-      "type": "directory",
-      "sha": "57b6cfac9b8fb26795a6cd1a84fe325583dc3bc6",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/backend/estudo_stack_backend_definida/index.html",
-      "type": "file",
-      "sha": "abf0547ad6c66093baf091933eaade1bf8fdd702",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 74163,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_tecnologias_backend",
-      "path": "site/estudos/backend/estudo_tecnologias_backend",
-      "type": "directory",
-      "sha": "a1fd3729dd1233e27682695d0aea62c0bd80581e",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/backend/estudo_tecnologias_backend/index.html",
-      "type": "file",
-      "sha": "589eca83ac812c406028cfa94c7d175bfe37bb54",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 60298,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/backend/index.html",
-      "type": "file",
-      "sha": "27829b83088c8eda296c922cde8ec59d11e031ec",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51773,
-      "is_binary": false
-    },
-    {
-      "name": "banco_de_dados",
-      "path": "site/estudos/banco_de_dados",
-      "type": "directory",
-      "sha": "b193aba65f73a98f47382e3d7085f0da467a229a",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "definicao_banco_de_dados",
-      "path": "site/estudos/banco_de_dados/definicao_banco_de_dados",
-      "type": "directory",
-      "sha": "a5ddf87f480c7f0446c92c00d6581d484e94a190",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/definicao_banco_de_dados/index.html",
-      "type": "file",
-      "sha": "b43b7064b345540416c1b491a95d961d889d164e",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 66709,
-      "is_binary": false
-    },
-    {
-      "name": "definicao_campos",
-      "path": "site/estudos/banco_de_dados/definicao_campos",
-      "type": "directory",
-      "sha": "b2149a65447f4c11990fd9103bed83793c402ebc",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/definicao_campos/index.html",
-      "type": "file",
-      "sha": "c20ff1975811861ed9c8bc6f3cac0c30024eb260",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 63232,
-      "is_binary": false
-    },
-    {
-      "name": "definicao_dados",
-      "path": "site/estudos/banco_de_dados/definicao_dados",
-      "type": "directory",
-      "sha": "2a70e8491a6554cdd81f9b390058a725e4e7e919",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/definicao_dados/index.html",
-      "type": "file",
-      "sha": "c475157e28e9b66cef009e9f9dedfe852afdb102",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 62219,
-      "is_binary": false
-    },
-    {
-      "name": "definicao_tabelas",
-      "path": "site/estudos/banco_de_dados/definicao_tabelas",
-      "type": "directory",
-      "sha": "38215327f7f58b929dec20b69a6bae7c0355a939",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/definicao_tabelas/index.html",
-      "type": "file",
-      "sha": "ca7362979871f906840af5db8349b8baea7078ac",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 73084,
-      "is_binary": false
-    },
-    {
-      "name": "definicao_tratamento_dados",
-      "path": "site/estudos/banco_de_dados/definicao_tratamento_dados",
-      "type": "directory",
-      "sha": "6b4542eb1cea97b4f9767d51d3bbb2846a548779",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/definicao_tratamento_dados/index.html",
-      "type": "file",
-      "sha": "b76d0d6cf350cde280f1cf8bddce41ed2c8d3e9c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 70983,
-      "is_binary": false
-    },
-    {
-      "name": "estudo_banco_de_dados",
-      "path": "site/estudos/banco_de_dados/estudo_banco_de_dados",
-      "type": "directory",
-      "sha": "7e127d015ccd796c20a6169074e10396be2050eb",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/estudo_banco_de_dados/index.html",
-      "type": "file",
-      "sha": "50402e8150197c16a51bd53c03b5bd3d2fa3be50",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 71734,
-      "is_binary": false
-    },
-    {
-      "name": "hospedagem_banco_de_dados",
-      "path": "site/estudos/banco_de_dados/hospedagem_banco_de_dados",
-      "type": "directory",
-      "sha": "5a86a2026aba1743a3a7dd15d05f3dec2d91fdb9",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/hospedagem_banco_de_dados/index.html",
-      "type": "file",
-      "sha": "083b398f0cbe5e7430fc04fbc265d124d82ba059",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 66683,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/banco_de_dados/index.html",
-      "type": "file",
-      "sha": "bfd63ab7d6f3609ffd283d1d2b16d08c5c39a62e",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51810,
-      "is_binary": false
-    },
-    {
-      "name": "design",
-      "path": "site/estudos/design",
-      "type": "directory",
-      "sha": "e85966938883b7be5d26dfa58e6514bcca762b62",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "definicao_dashboards",
-      "path": "site/estudos/design/definicao_dashboards",
-      "type": "directory",
-      "sha": "a4e1f286a162c3d16487a4d0764ddd27dd6b76c0",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/design/definicao_dashboards/index.html",
-      "type": "file",
-      "sha": "83c6a6ae4e6c55b0d9a9f95be0037b26a2fb38e3",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 60376,
-      "is_binary": false
-    },
-    {
-      "name": "identidade_visual",
-      "path": "site/estudos/design/identidade_visual",
-      "type": "directory",
-      "sha": "46fd09ee315bd2e4a5c9b6817f1492a9255697e7",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/design/identidade_visual/index.html",
-      "type": "file",
-      "sha": "7b7105b729ddab61ec10eb0e0136fa20c894a014",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 95155,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/design/index.html",
-      "type": "file",
-      "sha": "2c44317d8281fbd5563acd0ebc0f82ca05f31edd",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51441,
-      "is_binary": false
-    },
-    {
-      "name": "prototipo_interativo",
-      "path": "site/estudos/design/prototipo_interativo",
-      "type": "directory",
-      "sha": "f8e17480db8c3c4a261879f8bfb4c67af3167ff7",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/design/prototipo_interativo/index.html",
-      "type": "file",
-      "sha": "b65b989218556d74c993ac52c8edb08fc1dc942f",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51133,
-      "is_binary": false
-    },
-    {
-      "name": "frontend",
-      "path": "site/estudos/frontend",
-      "type": "directory",
-      "sha": "a06665a286aaada6b1f249bc2fd6137ee499349f",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/frontend/index.html",
-      "type": "file",
-      "sha": "70462e2894a039a20d96476136ee908944f47421",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51340,
-      "is_binary": false
-    },
-    {
-      "name": "tecnologias_estrutura",
-      "path": "site/estudos/frontend/tecnologias_estrutura",
-      "type": "directory",
-      "sha": "2925888f9bed2157dcc2a4f8b1a3cf3709c07b04",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/frontend/tecnologias_estrutura/index.html",
-      "type": "file",
-      "sha": "b8bdb8f2a5a6be9d6c55e1a14b64e06ccff1f5e4",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 56284,
-      "is_binary": false
-    },
-    {
-      "name": "git_github",
-      "path": "site/estudos/git_github",
-      "type": "directory",
-      "sha": "c59604597c17955868a7fefde7d7a74e0ac17a31",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "estudo_github",
-      "path": "site/estudos/git_github/estudo_github",
-      "type": "directory",
-      "sha": "8225ae8680e22616f375fd40f0201e1ee41811e0",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/git_github/estudo_github/index.html",
-      "type": "file",
-      "sha": "7a7916f57a4b7178d96d800ab58928fcb9323e25",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 57522,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/git_github/index.html",
-      "type": "file",
-      "sha": "c5d70b595b7e6d42f0c5985facdd02b023da3d45",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51370,
-      "is_binary": false
-    },
-    {
-      "name": "labels_tamanho_issue",
-      "path": "site/estudos/git_github/labels_tamanho_issue",
-      "type": "directory",
-      "sha": "60d4f40455454f27a016fcd7b97dc9eef995dce8",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/git_github/labels_tamanho_issue/index.html",
-      "type": "file",
-      "sha": "04b6fa9db1f9856de1cd0afde6ee15f2195a4a12",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 57461,
-      "is_binary": false
-    },
-    {
-      "name": "inteligencia_artificial",
-      "path": "site/estudos/inteligencia_artificial",
-      "type": "directory",
-      "sha": "b6fbe95810ff29e5d1e458ea88937abe3afce72c",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "estudo_ia",
-      "path": "site/estudos/inteligencia_artificial/estudo_ia",
-      "type": "directory",
-      "sha": "3d64bf30980cacdc87902c81a53efa2b5a5bfa12",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/inteligencia_artificial/estudo_ia/index.html",
-      "type": "file",
-      "sha": "d6ceb7fb54f46432225f8b6b4c38562e71aed22a",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 57909,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/inteligencia_artificial/index.html",
-      "type": "file",
-      "sha": "a80458d37ba97f2953eeff5eeca637003888d5f5",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51308,
-      "is_binary": false
-    },
-    {
-      "name": "metodos_ageis",
-      "path": "site/estudos/metodos_ageis",
-      "type": "directory",
-      "sha": "4272e909c80f2f8ba358d4e3bd6db1425a8727d4",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/metodos_ageis/index.html",
-      "type": "file",
-      "sha": "2a80fb3ff44ed0f4a10507eac8847446244bd841",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51273,
-      "is_binary": false
-    },
-    {
-      "name": "metodos_ageis",
-      "path": "site/estudos/metodos_ageis/metodos_ageis",
-      "type": "directory",
-      "sha": "4923fbdaecd394233e3de3804e35f11d0124ce71",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/metodos_ageis/metodos_ageis/index.html",
-      "type": "file",
-      "sha": "213a5b68d6809993ae6a861ff36ba0bd99efea97",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 53286,
-      "is_binary": false
-    },
-    {
-      "name": "requisitos",
-      "path": "site/estudos/requisitos",
-      "type": "directory",
-      "sha": "5e96d3ee96194c453e4770f4b319834a94137774",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "estudo_requisitos_software",
-      "path": "site/estudos/requisitos/estudo_requisitos_software",
-      "type": "directory",
-      "sha": "3c4eda959b597ad1722ec365edc93a7df40804fe",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/requisitos/estudo_requisitos_software/index.html",
-      "type": "file",
-      "sha": "446fd9a0fae2b76c0ea6932d373d2ca7077fcd5b",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 77754,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/requisitos/index.html",
-      "type": "file",
-      "sha": "c1044d9f3b646aa849235d96527133f4287131ad",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51361,
-      "is_binary": false
-    },
-    {
-      "name": "requisitos_de_software",
-      "path": "site/estudos/requisitos/requisitos_de_software",
-      "type": "directory",
-      "sha": "faeb52bbd9974dc2c064fbc137e639f215748451",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/requisitos/requisitos_de_software/index.html",
-      "type": "file",
-      "sha": "0c585b8d47871e0b4da011db3748dbd18b13f1ab",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 96718,
-      "is_binary": false
-    },
-    {
-      "name": "sdd",
-      "path": "site/estudos/sdd",
-      "type": "directory",
-      "sha": "3c4c1b8bf500cd27ce9c2aa1ccf5eb7019c5a86c",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/sdd/index.html",
-      "type": "file",
-      "sha": "f569683bbc95044ea12ef9e69ef62d42f656169f",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51252,
-      "is_binary": false
-    },
-    {
-      "name": "sddEstudo",
-      "path": "site/estudos/sdd/sddEstudo",
-      "type": "directory",
-      "sha": "d647d2c9d0c9720acc42c2793bc0c8cac1bfb486",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/estudos/sdd/sddEstudo/index.html",
-      "type": "file",
-      "sha": "d8c224f22747324be73e34e25e9547cb3dfb1df2",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 90855,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/index.html",
-      "type": "file",
-      "sha": "04613a79636752adfb391d117743a6f457f26ca2",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 56181,
-      "is_binary": false
-    },
-    {
-      "name": "padrao_organizacao",
-      "path": "site/padrao_organizacao",
-      "type": "directory",
-      "sha": "0eba9bc377dc289e36b871682441321f610b9c80",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/index.html",
-      "type": "file",
-      "sha": "dce60349de024fd118c28c7d615a4ff6a4570957",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51765,
-      "is_binary": false
-    },
-    {
-      "name": "organizacao_geral",
-      "path": "site/padrao_organizacao/organizacao_geral",
-      "type": "directory",
-      "sha": "78bf78cf4ca57d8a83bbd544d18f45e6ecc57e7d",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/organizacao_geral/index.html",
-      "type": "file",
-      "sha": "7d52606a87a506e3b42c00951b732375446d9600",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 53607,
-      "is_binary": false
-    },
-    {
-      "name": "padrao_PR",
-      "path": "site/padrao_organizacao/padrao_PR",
-      "type": "directory",
-      "sha": "e01be102840800e4a419d9958a2af5d5f52ce8e6",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/padrao_PR/index.html",
-      "type": "file",
-      "sha": "39c2ae5c8a0c77ab5fc41d305ef8a8d72fae3904",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 67959,
-      "is_binary": false
-    },
-    {
-      "name": "padrao_commits",
-      "path": "site/padrao_organizacao/padrao_commits",
-      "type": "directory",
-      "sha": "5c4f4febedbfba71c6218638581247efc61d5f6e",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/padrao_commits/index.html",
-      "type": "file",
-      "sha": "3353e77e9de03b4db41cec080b357db7ecc8b27c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 55755,
-      "is_binary": false
-    },
-    {
-      "name": "padrao_kanban",
-      "path": "site/padrao_organizacao/padrao_kanban",
-      "type": "directory",
-      "sha": "b016b55e43f20cc5bd2adce84f1198b1cb952086",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/padrao_kanban/index.html",
-      "type": "file",
-      "sha": "1ad1e1800aae59b0d7a1e0b2a19fd8600e497eb9",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 59479,
-      "is_binary": false
-    },
-    {
-      "name": "padrao_nomes_arquivos",
-      "path": "site/padrao_organizacao/padrao_nomes_arquivos",
-      "type": "directory",
-      "sha": "db0927ec77e769d34bc40a3258c757e0238109a0",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/padrao_organizacao/padrao_nomes_arquivos/index.html",
-      "type": "file",
-      "sha": "10b70ea327ba8482e251fd710f3af1660e3f3cb0",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 53758,
-      "is_binary": false
-    },
-    {
-      "name": "performance",
-      "path": "site/performance",
-      "type": "directory",
-      "sha": "ab24e98d221f9af0460766f04587f5b258aaea70",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "dashboard.html",
-      "path": "site/performance/dashboard.html",
-      "type": "file",
-      "sha": "cc0aa4e843126922e0a7ddf6657731ccc218239c",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 165782,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/performance/index.html",
+      "name": "seed.py",
+      "path": "scripts/seed.py",
       "type": "file",
-      "sha": "d2f738962cc02ddd28212cdb617c3445c112350e",
+      "sha": "609ccb03240f7878333514321a314a1c9c63032d",
       "mode": "100644",
-      "extension": ".html",
-      "size": 51846,
+      "extension": ".py",
+      "size": 5863,
       "is_binary": false
     },
     {
-      "name": "metrics.json",
-      "path": "site/performance/metrics.json",
+      "name": "skills-lock.json",
+      "path": "skills-lock.json",
       "type": "file",
-      "sha": "d6c43bebe977211e1bd54d28a5d28d1e5561da73",
+      "sha": "29f713faa0a43d236bfe902dd8bebd222c0c8ffa",
       "mode": "100644",
       "extension": ".json",
-      "size": 171308,
-      "is_binary": false
-    },
-    {
-      "name": "projeto",
-      "path": "site/projeto",
-      "type": "directory",
-      "sha": "f29d39bf5a0946e11c87896ea32cd2482659bcb6",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "ideia_escolhida_projeto",
-      "path": "site/projeto/ideia_escolhida_projeto",
-      "type": "directory",
-      "sha": "76d9fea7fb689712b4d3bdeee127d020639682bb",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/projeto/ideia_escolhida_projeto/index.html",
-      "type": "file",
-      "sha": "27f0c7fbbdc1b73849d62e006338b062a828b14b",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 65198,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/projeto/index.html",
-      "type": "file",
-      "sha": "0545d2d4306fc9f15695ae0f64df30688308fc92",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51269,
-      "is_binary": false
-    },
-    {
-      "name": "reunioes",
-      "path": "site/reunioes",
-      "type": "directory",
-      "sha": "557382301091ba9c929dd9af1706c0bc495be7b3",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "dailies",
-      "path": "site/reunioes/dailies",
-      "type": "directory",
-      "sha": "59ebf7678fe019be73ffb071f358c757c8c025ef",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/reunioes/dailies/index.html",
-      "type": "file",
-      "sha": "7e25bd7719045d3335ce7a70bbc485e62ef4d93e",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 71695,
-      "is_binary": false
-    },
-    {
-      "name": "horarios",
-      "path": "site/reunioes/horarios",
-      "type": "directory",
-      "sha": "0654600691114577d0c6342d4e7622cfa9d1fc29",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/reunioes/horarios/index.html",
-      "type": "file",
-      "sha": "431bf321477efa2595d3945b446602f97da2d4a2",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 54151,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "site/reunioes/index.html",
-      "type": "file",
-      "sha": "0bcef257843bf014501ab7ba09378e97ca190183",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 51655,
-      "is_binary": false
-    },
-    {
-      "name": "reviews_retrospectives",
-      "path": "site/reunioes/reviews_retrospectives",
-      "type": "directory",
-      "sha": "daa3a51cad9e0ebe5a69f849edd0ff24f539f1ae",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/reunioes/reviews_retrospectives/index.html",
-      "type": "file",
-      "sha": "d371a6df329330b8dcb86a240f5c9b58bf6d025e",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 57201,
-      "is_binary": false
-    },
-    {
-      "name": "sprint_plannings",
-      "path": "site/reunioes/sprint_plannings",
-      "type": "directory",
-      "sha": "63015e408a98ed76c9e572909abab55b69a9ae90",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "index.html",
-      "path": "site/reunioes/sprint_plannings/index.html",
-      "type": "file",
-      "sha": "cddb4b6497d8dffcc5961ed6fec5445362ab0551",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 63430,
-      "is_binary": false
-    },
-    {
-      "name": "search",
-      "path": "site/search",
-      "type": "directory",
-      "sha": "0d36aff03506ae86a38238e994577e2c97829c87",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "search_index.json",
-      "path": "site/search/search_index.json",
-      "type": "file",
-      "sha": "acb49ac36de4746979094488a67a6e4fcb7c3bdd",
-      "mode": "100644",
-      "extension": ".json",
-      "size": 359194,
-      "is_binary": false
-    },
-    {
-      "name": "sitemap.xml",
-      "path": "site/sitemap.xml",
-      "type": "file",
-      "sha": "a43529bb334e1c720e4125ce8dcc4168c6650aa7",
-      "mode": "100644",
-      "extension": ".xml",
-      "size": 8644,
-      "is_binary": false
-    },
-    {
-      "name": "sitemap.xml.gz",
-      "path": "site/sitemap.xml.gz",
-      "type": "file",
-      "sha": "35a91cd3e6f399a9a79d729153c5f0f016bdd49f",
-      "mode": "100644",
-      "extension": ".gz",
-      "size": 691,
+      "size": 283,
       "is_binary": false
     },
     {
       "name": "src",
       "path": "src",
       "type": "directory",
-      "sha": "2514aae97c1fa66f1ec56d55759803cb3f3a0a4d",
+      "sha": "8ddcbd9a5222f06aaf7de0c9c3ceb4dd395f247d",
       "mode": "040000",
       "children": []
     },
@@ -3260,57 +4322,229 @@
       "name": "backend",
       "path": "src/backend",
       "type": "directory",
-      "sha": "dc64fdfb9b2ab3987e9b10c4cdd681c34f7c5469",
+      "sha": "1f0c7d3c9979ff3d6792b7e00b6b6319f421bae7",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "main.py",
-      "path": "src/backend/main.py",
+      "name": "app.py",
+      "path": "src/backend/app.py",
       "type": "file",
-      "sha": "a63bb1680c3ce0e5081a64d80d1283a4457c0830",
+      "sha": "581523c8ef4748eadaf2617b95a9d35cef45cc37",
       "mode": "100644",
       "extension": ".py",
-      "size": 5809,
+      "size": 3564,
+      "is_binary": false
+    },
+    {
+      "name": "controllers",
+      "path": "src/backend/controllers",
+      "type": "directory",
+      "sha": "e96445e5d1a0b13ebdd789ed6c37a04c7f7954c1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/backend/controllers/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "cron_controller.py",
+      "path": "src/backend/controllers/cron_controller.py",
+      "type": "file",
+      "sha": "79863090bb8e3fe847aa98713147d2e9a73dfe8b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1156,
+      "is_binary": false
+    },
+    {
+      "name": "proposicoes_controller.py",
+      "path": "src/backend/controllers/proposicoes_controller.py",
+      "type": "file",
+      "sha": "52e699647df833a4a0369bacda05000d7ed98958",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3986,
+      "is_binary": false
+    },
+    {
+      "name": "database.py",
+      "path": "src/backend/database.py",
+      "type": "file",
+      "sha": "f0b13d6f2a9e2ae530f20551b37f3fe890ed8823",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 59,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "src/backend/models.py",
+      "type": "file",
+      "sha": "0082d0daeab1d43b9f4df5b603c71fc54eceb259",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 14410,
+      "is_binary": false
+    },
+    {
+      "name": "repository",
+      "path": "src/backend/repository",
+      "type": "directory",
+      "sha": "51bf99cd0e06b155fbddb0405439ccba26f93c21",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/backend/repository/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "camara_repository.py",
+      "path": "src/backend/repository/camara_repository.py",
+      "type": "file",
+      "sha": "74308c208a4f6eca0fa527a106c51cf6e224d7bf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15374,
+      "is_binary": false
+    },
+    {
+      "name": "schedulers",
+      "path": "src/backend/schedulers",
+      "type": "directory",
+      "sha": "4a3833b96ec193543c6f4daaf7332295d03122dc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/backend/schedulers/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "camara_scheduler.py",
+      "path": "src/backend/schedulers/camara_scheduler.py",
+      "type": "file",
+      "sha": "7dee5153ae8a2fe3de335bc7c0978925d8b94283",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1168,
       "is_binary": false
     },
     {
       "name": "services",
       "path": "src/backend/services",
       "type": "directory",
-      "sha": "b55a62de3eefea34c0186f15c33d0b868e695e11",
+      "sha": "43d9079b9d521bb6002f295a0ee27dcb941369b2",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "camara_api.py",
-      "path": "src/backend/services/camara_api.py",
+      "name": "camara_service.py",
+      "path": "src/backend/services/camara_service.py",
       "type": "file",
-      "sha": "75dd46ace1af3e21cde0efd286eeebd88d5593a3",
+      "sha": "1650a732246d74ca885e00baaef84f4c8d32d2fa",
       "mode": "100644",
       "extension": ".py",
-      "size": 3035,
+      "size": 21321,
       "is_binary": false
     },
     {
       "name": "frontend",
       "path": "src/frontend",
       "type": "directory",
-      "sha": "4443a034254e4497da88fea9ea0c83bdea01e98e",
+      "sha": "a70b45264f3f5e0b8218f7595e48b21090341062",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "assets",
-      "path": "src/frontend/assets",
+      "name": ".env.example",
+      "path": "src/frontend/.env.example",
+      "type": "file",
+      "sha": "54c522f5da07b4e9e67525dd8a2afd28dde2f111",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 40,
+      "is_binary": false
+    },
+    {
+      "name": "eslint.config.js",
+      "path": "src/frontend/eslint.config.js",
+      "type": "file",
+      "sha": "823850166d86a32ad5951ab47984f76b2ad20a40",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 395,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "src/frontend/index.html",
+      "type": "file",
+      "sha": "e1c3c36e5706696cf31031391bda13ca724d5a7e",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 690,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "src/frontend/package.json",
+      "type": "file",
+      "sha": "93839773fa8d1cdfc8a95ea7edfacf9267ee03b6",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 541,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "src/frontend/src",
       "type": "directory",
-      "sha": "1fed81af6a0d8e4339d0663ed12ff0a5807d6c8e",
+      "sha": "b5419a6980c72b3e264422e1a410f5252298a2a6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "App.vue",
+      "path": "src/frontend/src/App.vue",
+      "type": "file",
+      "sha": "12cd2d58b8dcecb82153a401404307761bbf893d",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 1156,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "src/frontend/src/assets",
+      "type": "directory",
+      "sha": "0f1ae05b9fb890cd5483a84eabb5c988bd7e6888",
       "mode": "040000",
       "children": []
     },
     {
       "name": "images",
-      "path": "src/frontend/assets/images",
+      "path": "src/frontend/src/assets/images",
       "type": "directory",
       "sha": "312e848399343ed36c4e70bf9d03b357013cfa6e",
       "mode": "040000",
@@ -3318,7 +4552,7 @@
     },
     {
       "name": "logo-legiskids.png",
-      "path": "src/frontend/assets/images/logo-legiskids.png",
+      "path": "src/frontend/src/assets/images/logo-legiskids.png",
       "type": "file",
       "sha": "db92f8d8530d03c2b08525152137ea6257e3a881",
       "mode": "100644",
@@ -3327,206 +4561,450 @@
       "is_binary": false
     },
     {
-      "name": "css",
-      "path": "src/frontend/css",
-      "type": "directory",
-      "sha": "ef2c56c9ae5f654136d0e5be3e09ae14cdbf30c4",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "detalhe.css",
-      "path": "src/frontend/css/detalhe.css",
+      "name": "main.css",
+      "path": "src/frontend/src/assets/main.css",
       "type": "file",
-      "sha": "de126a2615179176197a613d7eaa60898f5ec5f0",
+      "sha": "3c34d9ab313db0978a9662871d78a439b2473555",
       "mode": "100644",
       "extension": ".css",
-      "size": 17938,
+      "size": 3429,
       "is_binary": false
-    },
-    {
-      "name": "pesquisa.css",
-      "path": "src/frontend/css/pesquisa.css",
-      "type": "file",
-      "sha": "b3565636b9de0376d67b6204f1e981dfe44c74d2",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 9139,
-      "is_binary": false
-    },
-    {
-      "name": "style.css",
-      "path": "src/frontend/css/style.css",
-      "type": "file",
-      "sha": "161d292f1005640925a0241c3d88e881af835028",
-      "mode": "100644",
-      "extension": ".css",
-      "size": 14201,
-      "is_binary": false
-    },
-    {
-      "name": "js",
-      "path": "src/frontend/js",
-      "type": "directory",
-      "sha": "520f2eb3e72da7f8a4a46d1b6aa06cf5843a45f5",
-      "mode": "040000",
-      "children": []
     },
     {
       "name": "components",
-      "path": "src/frontend/js/components",
+      "path": "src/frontend/src/components",
       "type": "directory",
-      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "sha": "b1044a8742f34bd6733570cd12201c528495d7c8",
       "mode": "040000",
       "children": []
     },
     {
-      "name": ".gitkeep",
-      "path": "src/frontend/js/components/.gitkeep",
+      "name": "FilterBar.vue",
+      "path": "src/frontend/src/components/FilterBar.vue",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "0e427924b04fb148f44d06e8a782d9e892bbe110",
       "mode": "100644",
-      "extension": ".gitkeep",
-      "size": 0,
+      "extension": ".vue",
+      "size": 6608,
       "is_binary": false
     },
     {
-      "name": "detalhe.js",
-      "path": "src/frontend/js/detalhe.js",
+      "name": "LoadingSpinner.vue",
+      "path": "src/frontend/src/components/LoadingSpinner.vue",
       "type": "file",
-      "sha": "5e1bcd0d17afc01903ff765fca590c25687960a5",
+      "sha": "19cc316d4ca1fd51f914bcdfde03e9ca81381f30",
       "mode": "100644",
-      "extension": ".js",
-      "size": 6934,
+      "extension": ".vue",
+      "size": 687,
       "is_binary": false
     },
     {
-      "name": "pesquisa.js",
-      "path": "src/frontend/js/pesquisa.js",
+      "name": "Navbar.vue",
+      "path": "src/frontend/src/components/Navbar.vue",
       "type": "file",
-      "sha": "1d108bb22dab0c4d2a6916873b144860aa557318",
+      "sha": "449cf0f263a40a89215a43da900c994986bf3d24",
       "mode": "100644",
-      "extension": ".js",
-      "size": 9117,
+      "extension": ".vue",
+      "size": 8876,
       "is_binary": false
     },
     {
-      "name": "script.js",
-      "path": "src/frontend/js/script.js",
+      "name": "Pagination.vue",
+      "path": "src/frontend/src/components/Pagination.vue",
       "type": "file",
-      "sha": "19ea92b576169c44ff33d7f2f0c6fe4452d464f0",
+      "sha": "2da676becba5234c371241579af2e6232dd30582",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 4676,
+      "is_binary": false
+    },
+    {
+      "name": "ProposicaoCard.vue",
+      "path": "src/frontend/src/components/ProposicaoCard.vue",
+      "type": "file",
+      "sha": "061e2a9d524de350b3c9159eda95060e49a4cc06",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 4098,
+      "is_binary": false
+    },
+    {
+      "name": "StatusBadge.vue",
+      "path": "src/frontend/src/components/StatusBadge.vue",
+      "type": "file",
+      "sha": "c02c0296f71ac7b78644de04287cca2afd1c1b35",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 1154,
+      "is_binary": false
+    },
+    {
+      "name": "charts",
+      "path": "src/frontend/src/components/charts",
+      "type": "directory",
+      "sha": "a0c6028f3eadf39276f1de3a934f044424e76f2c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "GraficoStatus.vue",
+      "path": "src/frontend/src/components/charts/GraficoStatus.vue",
+      "type": "file",
+      "sha": "06312a1851d6d8804f2260d77e79735318138644",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 1963,
+      "is_binary": false
+    },
+    {
+      "name": "GraficoSubtemas.vue",
+      "path": "src/frontend/src/components/charts/GraficoSubtemas.vue",
+      "type": "file",
+      "sha": "ae2b9d0e15de94f5dad39c5864d7f18096023273",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 2165,
+      "is_binary": false
+    },
+    {
+      "name": "GraficoTemasTempo.vue",
+      "path": "src/frontend/src/components/charts/GraficoTemasTempo.vue",
+      "type": "file",
+      "sha": "0b387ba2ec513b38e24534c26062c6ff1b8f4d85",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 2463,
+      "is_binary": false
+    },
+    {
+      "name": "GraficoTemporal.vue",
+      "path": "src/frontend/src/components/charts/GraficoTemporal.vue",
+      "type": "file",
+      "sha": "14e0b6dd5501e3bce42b833c265a99639a28fa18",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 2153,
+      "is_binary": false
+    },
+    {
+      "name": "main.js",
+      "path": "src/frontend/src/main.js",
+      "type": "file",
+      "sha": "77b04e95d612a5956c428de0ab53c43bc3d68693",
       "mode": "100644",
       "extension": ".js",
-      "size": 3673,
+      "size": 238,
+      "is_binary": false
+    },
+    {
+      "name": "router",
+      "path": "src/frontend/src/router",
+      "type": "directory",
+      "sha": "47cfcd79b14943d12b95210f29b15cc84eb4a991",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "index.js",
+      "path": "src/frontend/src/router/index.js",
+      "type": "file",
+      "sha": "72950c64a32392dfe03328e368b223404cd7af75",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1150,
       "is_binary": false
     },
     {
       "name": "services",
-      "path": "src/frontend/js/services",
+      "path": "src/frontend/src/services",
       "type": "directory",
-      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "sha": "5e56e914f6e681db7ef67b7a4cce7c6a7a3e5f3a",
       "mode": "040000",
       "children": []
     },
     {
-      "name": ".gitkeep",
-      "path": "src/frontend/js/services/.gitkeep",
+      "name": "estatisticas.js",
+      "path": "src/frontend/src/services/estatisticas.js",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "4ddc76e5ca44d4fdb6b06881359de4b9790f2a3d",
       "mode": "100644",
-      "extension": ".gitkeep",
-      "size": 0,
+      "extension": ".js",
+      "size": 267,
+      "is_binary": false
+    },
+    {
+      "name": "proposicoes.js",
+      "path": "src/frontend/src/services/proposicoes.js",
+      "type": "file",
+      "sha": "7aefe2804bf31c14f87e77f441bcd83cbfcf9d56",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 1007,
+      "is_binary": false
+    },
+    {
+      "name": "temas.js",
+      "path": "src/frontend/src/services/temas.js",
+      "type": "file",
+      "sha": "fa57493e086acb71997f5bcb7365bb0083de8f0b",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 253,
+      "is_binary": false
+    },
+    {
+      "name": "stores",
+      "path": "src/frontend/src/stores",
+      "type": "directory",
+      "sha": "1ae4ffd2e5c53f49f7c435074de1e3943f7f5e12",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "busca.js",
+      "path": "src/frontend/src/stores/busca.js",
+      "type": "file",
+      "sha": "233bb1d82412e71c0fc0b8b1dff7df18bb728cc6",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 606,
+      "is_binary": false
+    },
+    {
+      "name": "proposicoes.js",
+      "path": "src/frontend/src/stores/proposicoes.js",
+      "type": "file",
+      "sha": "c5329e5decf996332c12a70083e3c9330d04fbbd",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 924,
       "is_binary": false
     },
     {
       "name": "utils",
-      "path": "src/frontend/js/utils",
+      "path": "src/frontend/src/utils",
       "type": "directory",
-      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "sha": "9f617e7c912887fd0b075fc9fe8129ec65272b15",
       "mode": "040000",
       "children": []
     },
     {
-      "name": ".gitkeep",
-      "path": "src/frontend/js/utils/.gitkeep",
+      "name": "proposicao.js",
+      "path": "src/frontend/src/utils/proposicao.js",
+      "type": "file",
+      "sha": "a219f5c211128310e0d49aeaf19835bc01ab4e43",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 367,
+      "is_binary": false
+    },
+    {
+      "name": "views",
+      "path": "src/frontend/src/views",
+      "type": "directory",
+      "sha": "f8cbef741d3a1cbf5f0005716af58177e5384565",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "AnalisesView.vue",
+      "path": "src/frontend/src/views/AnalisesView.vue",
+      "type": "file",
+      "sha": "4c9fbdf07f8ff9a99a650247d09a6f83af58fee3",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 10992,
+      "is_binary": false
+    },
+    {
+      "name": "BuscaView.vue",
+      "path": "src/frontend/src/views/BuscaView.vue",
+      "type": "file",
+      "sha": "9b1cd7e4a0613ef4ad1ac81babe1a8147e9bdd9f",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 5852,
+      "is_binary": false
+    },
+    {
+      "name": "ConfiguracoesView.vue",
+      "path": "src/frontend/src/views/ConfiguracoesView.vue",
+      "type": "file",
+      "sha": "b44aba5e9adb8da70ece2cb3afca30cc60530a47",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 2016,
+      "is_binary": false
+    },
+    {
+      "name": "DashboardView.vue",
+      "path": "src/frontend/src/views/DashboardView.vue",
+      "type": "file",
+      "sha": "3c9f1029ff8250e04e283dd8e1745a7d63ae59b8",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 17544,
+      "is_binary": false
+    },
+    {
+      "name": "DetalheView.vue",
+      "path": "src/frontend/src/views/DetalheView.vue",
+      "type": "file",
+      "sha": "abeefb7a27c9bd3cc3c441055c3edd3cc448eb6b",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 32467,
+      "is_binary": false
+    },
+    {
+      "name": "NotificacoesView.vue",
+      "path": "src/frontend/src/views/NotificacoesView.vue",
+      "type": "file",
+      "sha": "a7e9d5890549f8064c106ed90dbd0a051323955b",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 1477,
+      "is_binary": false
+    },
+    {
+      "name": "SobreView.vue",
+      "path": "src/frontend/src/views/SobreView.vue",
+      "type": "file",
+      "sha": "e7a2ab91c229766192d535294a94f1b981f59ef0",
+      "mode": "100644",
+      "extension": ".vue",
+      "size": 6811,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.js",
+      "path": "src/frontend/vite.config.js",
+      "type": "file",
+      "sha": "5d97fbc4c1c7aad936ed7216911eb91194f3a22d",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 301,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "tests",
+      "type": "directory",
+      "sha": "f23473fa0bb03deec56c35e628b0b95e89674ac7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/__init__.py",
       "type": "file",
       "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
       "mode": "100644",
-      "extension": ".gitkeep",
+      "extension": ".py",
       "size": 0,
       "is_binary": false
     },
     {
-      "name": "pages",
-      "path": "src/frontend/pages",
+      "name": "integration",
+      "path": "tests/integration",
       "type": "directory",
-      "sha": "4d8521a00b31dce37c08543698b1d83f15d3d1ad",
+      "sha": "432a48b085dc0bcd7a6d605156dfd40dc05cb7ec",
       "mode": "040000",
       "children": []
     },
     {
-      "name": "detalhe-projeto.html",
-      "path": "src/frontend/pages/detalhe-projeto.html",
+      "name": "__init__.py",
+      "path": "tests/integration/__init__.py",
       "type": "file",
-      "sha": "65b3020bb4744a7d0c1fa8829af7da04ff1fd290",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 35180,
-      "is_binary": false
-    },
-    {
-      "name": "index.html",
-      "path": "src/frontend/pages/index.html",
-      "type": "file",
-      "sha": "3fcf8ad27b7c97b434885aed685db65601df34d1",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 17944,
-      "is_binary": false
-    },
-    {
-      "name": "pesquisa.html",
-      "path": "src/frontend/pages/pesquisa.html",
-      "type": "file",
-      "sha": "c83e9f443f3fde44cea6c9b003b923565a858a43",
-      "mode": "100644",
-      "extension": ".html",
-      "size": 7998,
-      "is_binary": false
-    },
-    {
-      "name": "src",
-      "path": "src/src",
-      "type": "directory",
-      "sha": "4cb46a72dc2dd61ff9f2dc698b4f8d5fc0f18a81",
-      "mode": "040000",
-      "children": []
-    },
-    {
-      "name": "main.py",
-      "path": "src/src/main.py",
-      "type": "file",
-      "sha": "a63bb1680c3ce0e5081a64d80d1283a4457c0830",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
       "mode": "100644",
       "extension": ".py",
-      "size": 5809,
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_camara_repository.py",
+      "path": "tests/integration/test_camara_repository.py",
+      "type": "file",
+      "sha": "cf5a475bc2d2e1932d0326adeefc4c6daacf5dcb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 22123,
+      "is_binary": false
+    },
+    {
+      "name": "test_models.py",
+      "path": "tests/integration/test_models.py",
+      "type": "file",
+      "sha": "997769c6936174b79e598ddadb8903fc170e13de",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3496,
+      "is_binary": false
+    },
+    {
+      "name": "test_proposicoes_controller.py",
+      "path": "tests/integration/test_proposicoes_controller.py",
+      "type": "file",
+      "sha": "86a5bdfc22b180c2182b2c8b966d7b79a7728e0a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4804,
+      "is_binary": false
+    },
+    {
+      "name": "unit",
+      "path": "tests/unit",
+      "type": "directory",
+      "sha": "55ea561eb894a275546c5f6dc0a4a15f9b33b518",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/unit/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_camara_service.py",
+      "path": "tests/unit/test_camara_service.py",
+      "type": "file",
+      "sha": "7e892965f42fc75dd7f4b8c153ebc49c2099d855",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 16059,
+      "is_binary": false
+    },
+    {
+      "name": "vercel.json",
+      "path": "vercel.json",
+      "type": "file",
+      "sha": "dd65ff10f95e0a4a55ebf3c6f64421b3126f6696",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 668,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-07-01T09:40:09.619458",
+  "extracted_at": "2026-07-02T08:55:41.339672",
   "method": "rest",
-  "total_items": 378,
+  "total_items": 536,
   "repository_metadata": {
     "id": 1185583625,
     "full_name": "unb-mds/2026-1-LegisKids",
     "description": null,
     "created_at": "2026-03-18T18:28:32Z",
-    "updated_at": "2026-05-27T03:25:00Z",
-    "language": "HTML",
-    "size": 12827,
+    "updated_at": "2026-07-02T00:49:57Z",
+    "language": "Python",
+    "size": 13267,
     "stars": 0,
     "forks": 0,
-    "open_issues": 45
+    "open_issues": 37
   }
 }
