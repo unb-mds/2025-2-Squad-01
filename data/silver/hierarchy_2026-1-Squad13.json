@@ -2,50 +2,354 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-07-01T09:40:12.207881",
+  "extracted_at": "2026-07-02T08:55:43.234931",
   "hierarchy": {
     "name": "root",
     "type": "directory",
     "children": [
       {
-        "name": ".gemini",
+        "name": ".agents",
         "type": "directory",
-        "path": ".gemini",
+        "path": ".agents",
         "children": []
       },
       {
         "name": "skills",
         "type": "directory",
-        "path": ".gemini/skills",
+        "path": ".agents/skills",
         "children": []
       },
       {
-        "name": "github-issue-governor",
+        "name": "architecture-compliance-checker",
         "type": "directory",
-        "path": ".gemini/skills/github-issue-governor",
+        "path": ".agents/skills/architecture-compliance-checker",
         "children": []
       },
       {
         "name": "SKILL.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2043,
+        "size": 2445,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/SKILL.md"
+        "path": ".agents/skills/architecture-compliance-checker/SKILL.md"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": ".agents/skills/architecture-compliance-checker/scripts",
+        "children": []
+      },
+      {
+        "name": "check-imports.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4175,
+        "extension": ".py",
+        "path": ".agents/skills/architecture-compliance-checker/scripts/check-imports.py"
+      },
+      {
+        "name": "verify-layers.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1307,
+        "extension": ".sh",
+        "path": ".agents/skills/architecture-compliance-checker/scripts/verify-layers.sh"
+      },
+      {
+        "name": "db-migration-governor",
+        "type": "directory",
+        "path": ".agents/skills/db-migration-governor",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2593,
+        "extension": ".md",
+        "path": ".agents/skills/db-migration-governor/SKILL.md"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": ".agents/skills/db-migration-governor/scripts",
+        "children": []
+      },
+      {
+        "name": "run-db-init.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 842,
+        "extension": ".sh",
+        "path": ".agents/skills/db-migration-governor/scripts/run-db-init.sh"
+      },
+      {
+        "name": "validate-seed.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 779,
+        "extension": ".sh",
+        "path": ".agents/skills/db-migration-governor/scripts/validate-seed.sh"
+      },
+      {
+        "name": "frontend-audit-orchestrator",
+        "type": "directory",
+        "path": ".agents/skills/frontend-audit-orchestrator",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2525,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/SKILL.md"
       },
       {
         "name": "references",
         "type": "directory",
-        "path": ".gemini/skills/github-issue-governor/references",
+        "path": ".agents/skills/frontend-audit-orchestrator/references",
+        "children": []
+      },
+      {
+        "name": "audit-scope.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 975,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/references/audit-scope.md"
+      },
+      {
+        "name": "backlog-rules.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 787,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/references/backlog-rules.md"
+      },
+      {
+        "name": "docs-index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 871,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/references/docs-index.md"
+      },
+      {
+        "name": "drift-categories.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 817,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/references/drift-categories.md"
+      },
+      {
+        "name": "issue-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 543,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/references/issue-template.md"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": ".agents/skills/frontend-audit-orchestrator/scripts",
+        "children": []
+      },
+      {
+        "name": "collect-audit-inputs.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 474,
+        "extension": ".sh",
+        "path": ".agents/skills/frontend-audit-orchestrator/scripts/collect-audit-inputs.sh"
+      },
+      {
+        "name": "generate-audit-summary.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 408,
+        "extension": ".sh",
+        "path": ".agents/skills/frontend-audit-orchestrator/scripts/generate-audit-summary.sh"
+      },
+      {
+        "name": "templates",
+        "type": "directory",
+        "path": ".agents/skills/frontend-audit-orchestrator/templates",
+        "children": []
+      },
+      {
+        "name": "audit-report-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 647,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/templates/audit-report-template.md"
+      },
+      {
+        "name": "gap-analysis-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 351,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/templates/gap-analysis-template.md"
+      },
+      {
+        "name": "issue-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 91,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-audit-orchestrator/templates/issue-template.md"
+      },
+      {
+        "name": "frontend-governance",
+        "type": "directory",
+        "path": ".agents/skills/frontend-governance",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2901,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/SKILL.md"
+      },
+      {
+        "name": "references",
+        "type": "directory",
+        "path": ".agents/skills/frontend-governance/references",
+        "children": []
+      },
+      {
+        "name": "decision-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 377,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/references/decision-template.md"
+      },
+      {
+        "name": "docs-index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 917,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/references/docs-index.md"
+      },
+      {
+        "name": "frontend-context.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1130,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/references/frontend-context.md"
+      },
+      {
+        "name": "review-checklist.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 749,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/references/review-checklist.md"
+      },
+      {
+        "name": "update-rules.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 927,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/references/update-rules.md"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": ".agents/skills/frontend-governance/scripts",
+        "children": []
+      },
+      {
+        "name": "scan-frontend-context.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 306,
+        "extension": ".sh",
+        "path": ".agents/skills/frontend-governance/scripts/scan-frontend-context.sh"
+      },
+      {
+        "name": "summarize-doc-status.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 391,
+        "extension": ".sh",
+        "path": ".agents/skills/frontend-governance/scripts/summarize-doc-status.sh"
+      },
+      {
+        "name": "templates",
+        "type": "directory",
+        "path": ".agents/skills/frontend-governance/templates",
+        "children": []
+      },
+      {
+        "name": "adr-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 444,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/templates/adr-template.md"
+      },
+      {
+        "name": "change-log-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 262,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/templates/change-log-template.md"
+      },
+      {
+        "name": "doc-update-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 354,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/templates/doc-update-template.md"
+      },
+      {
+        "name": "ui-decision-template.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 192,
+        "extension": ".md",
+        "path": ".agents/skills/frontend-governance/templates/ui-decision-template.md"
+      },
+      {
+        "name": "github-issue-governor",
+        "type": "directory",
+        "path": ".agents/skills/github-issue-governor",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4173,
+        "extension": ".md",
+        "path": ".agents/skills/github-issue-governor/SKILL.md"
+      },
+      {
+        "name": "references",
+        "type": "directory",
+        "path": ".agents/skills/github-issue-governor/references",
         "children": []
       },
       {
         "name": "issue-guide.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2646,
+        "size": 2682,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/references/issue-guide.md"
+        "path": ".agents/skills/github-issue-governor/references/issue-guide.md"
       },
       {
         "name": "label-mapping.md",
@@ -53,21 +357,29 @@
         "language": "Markdown",
         "size": 1392,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/references/label-mapping.md"
+        "path": ".agents/skills/github-issue-governor/references/label-mapping.md"
       },
       {
         "name": "scripts",
         "type": "directory",
-        "path": ".gemini/skills/github-issue-governor/scripts",
+        "path": ".agents/skills/github-issue-governor/scripts",
         "children": []
+      },
+      {
+        "name": "check-duplicate-issues.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2876,
+        "extension": ".py",
+        "path": ".agents/skills/github-issue-governor/scripts/check-duplicate-issues.py"
       },
       {
         "name": "create-issue.sh",
         "type": "file",
         "language": "Shell",
-        "size": 166,
+        "size": 3267,
         "extension": ".sh",
-        "path": ".gemini/skills/github-issue-governor/scripts/create-issue.sh"
+        "path": ".agents/skills/github-issue-governor/scripts/create-issue.sh"
       },
       {
         "name": "list-open-issues.sh",
@@ -75,7 +387,7 @@
         "language": "Shell",
         "size": 108,
         "extension": ".sh",
-        "path": ".gemini/skills/github-issue-governor/scripts/list-open-issues.sh"
+        "path": ".agents/skills/github-issue-governor/scripts/list-open-issues.sh"
       },
       {
         "name": "validate-labels.sh",
@@ -83,29 +395,29 @@
         "language": "Shell",
         "size": 278,
         "extension": ".sh",
-        "path": ".gemini/skills/github-issue-governor/scripts/validate-labels.sh"
+        "path": ".agents/skills/github-issue-governor/scripts/validate-labels.sh"
       },
       {
         "name": "templates",
         "type": "directory",
-        "path": ".gemini/skills/github-issue-governor/templates",
+        "path": ".agents/skills/github-issue-governor/templates",
         "children": []
       },
       {
         "name": "bug.md",
         "type": "file",
         "language": "Markdown",
-        "size": 0,
+        "size": 819,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/bug.md"
+        "path": ".agents/skills/github-issue-governor/templates/bug.md"
       },
       {
         "name": "feature.md",
         "type": "file",
         "language": "Markdown",
-        "size": 0,
+        "size": 873,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/feature.md"
+        "path": ".agents/skills/github-issue-governor/templates/feature.md"
       },
       {
         "name": "issue_async_migration.md",
@@ -113,7 +425,7 @@
         "language": "Markdown",
         "size": 1188,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/issue_async_migration.md"
+        "path": ".agents/skills/github-issue-governor/templates/issue_async_migration.md"
       },
       {
         "name": "issue_contract_testing.md",
@@ -121,7 +433,7 @@
         "language": "Markdown",
         "size": 959,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/issue_contract_testing.md"
+        "path": ".agents/skills/github-issue-governor/templates/issue_contract_testing.md"
       },
       {
         "name": "issue_presentation_di.md",
@@ -129,7 +441,7 @@
         "language": "Markdown",
         "size": 1206,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/issue_presentation_di.md"
+        "path": ".agents/skills/github-issue-governor/templates/issue_presentation_di.md"
       },
       {
         "name": "issue_robust_healthcheck.md",
@@ -137,42 +449,42 @@
         "language": "Markdown",
         "size": 1012,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/issue_robust_healthcheck.md"
+        "path": ".agents/skills/github-issue-governor/templates/issue_robust_healthcheck.md"
       },
       {
         "name": "refactor.md",
         "type": "file",
         "language": "Markdown",
-        "size": 0,
+        "size": 797,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/refactor.md"
+        "path": ".agents/skills/github-issue-governor/templates/refactor.md"
       },
       {
         "name": "technical-debt.md",
         "type": "file",
         "language": "Markdown",
-        "size": 0,
+        "size": 778,
         "extension": ".md",
-        "path": ".gemini/skills/github-issue-governor/templates/technical-debt.md"
+        "path": ".agents/skills/github-issue-governor/templates/technical-debt.md"
       },
       {
-        "name": "pr-reviewer",
+        "name": "pr-manager",
         "type": "directory",
-        "path": ".gemini/skills/pr-reviewer",
+        "path": ".agents/skills/pr-manager",
         "children": []
       },
       {
         "name": "SKILL.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4393,
+        "size": 12983,
         "extension": ".md",
-        "path": ".gemini/skills/pr-reviewer/SKILL.md"
+        "path": ".agents/skills/pr-manager/SKILL.md"
       },
       {
         "name": "references",
         "type": "directory",
-        "path": ".gemini/skills/pr-reviewer/references",
+        "path": ".agents/skills/pr-manager/references",
         "children": []
       },
       {
@@ -181,7 +493,7 @@
         "language": "Markdown",
         "size": 3368,
         "extension": ".md",
-        "path": ".gemini/skills/pr-reviewer/references/project-context.md"
+        "path": ".agents/skills/pr-manager/references/project-context.md"
       },
       {
         "name": "project-memory.md",
@@ -189,29 +501,65 @@
         "language": "Markdown",
         "size": 5840,
         "extension": ".md",
-        "path": ".gemini/skills/pr-reviewer/references/project-memory.md"
+        "path": ".agents/skills/pr-manager/references/project-memory.md"
       },
       {
         "name": "review-criteria.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1043,
+        "size": 1042,
         "extension": ".md",
-        "path": ".gemini/skills/pr-reviewer/references/review-criteria.md"
+        "path": ".agents/skills/pr-manager/references/review-criteria.md"
       },
       {
         "name": "scripts",
         "type": "directory",
-        "path": ".gemini/skills/pr-reviewer/scripts",
+        "path": ".agents/skills/pr-manager/scripts",
         "children": []
       },
       {
         "name": "review-pr.sh",
         "type": "file",
         "language": "Shell",
-        "size": 933,
+        "size": 4120,
         "extension": ".sh",
-        "path": ".gemini/skills/pr-reviewer/scripts/review-pr.sh"
+        "path": ".agents/skills/pr-manager/scripts/review-pr.sh"
+      },
+      {
+        "name": "test-coverage-enforcer",
+        "type": "directory",
+        "path": ".agents/skills/test-coverage-enforcer",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2126,
+        "extension": ".md",
+        "path": ".agents/skills/test-coverage-enforcer/SKILL.md"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": ".agents/skills/test-coverage-enforcer/scripts",
+        "children": []
+      },
+      {
+        "name": "check-test-coverage.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 2547,
+        "extension": ".sh",
+        "path": ".agents/skills/test-coverage-enforcer/scripts/check-test-coverage.sh"
+      },
+      {
+        "name": ".env.example",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1503,
+        "extension": ".example",
+        "path": ".env.example"
       },
       {
         "name": ".github",
@@ -259,7 +607,7 @@
         "name": "backend.yml",
         "type": "file",
         "language": "YAML",
-        "size": 841,
+        "size": 974,
         "extension": ".yml",
         "path": ".github/workflows/backend.yml"
       },
@@ -296,6 +644,14 @@
         "path": ".github/workflows/deploy-squad-dashboard.yml"
       },
       {
+        "name": "deploy-vercel-frontend.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 2112,
+        "extension": ".yml",
+        "path": ".github/workflows/deploy-vercel-frontend.yml"
+      },
+      {
         "name": "frontend.yml",
         "type": "file",
         "language": "YAML",
@@ -323,15 +679,31 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 668,
+        "size": 703,
         "extension": ".gitignore",
         "path": ".gitignore"
+      },
+      {
+        "name": ".mailmap",
+        "type": "file",
+        "language": "Unknown",
+        "size": 772,
+        "extension": ".mailmap",
+        "path": ".mailmap"
+      },
+      {
+        "name": "AGENTS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8098,
+        "extension": ".md",
+        "path": "AGENTS.md"
       },
       {
         "name": "ARCHITECTURE.md",
         "type": "file",
         "language": "Markdown",
-        "size": 12045,
+        "size": 9850,
         "extension": ".md",
         "path": "ARCHITECTURE.md"
       },
@@ -339,7 +711,7 @@
         "name": "CLAUDE.md",
         "type": "file",
         "language": "Markdown",
-        "size": 21921,
+        "size": 155,
         "extension": ".md",
         "path": "CLAUDE.md"
       },
@@ -347,39 +719,9 @@
         "name": "CONTRIBUTING.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3453,
+        "size": 3922,
         "extension": ".md",
         "path": "CONTRIBUTING.md"
-      },
-      {
-        "name": "Estudos",
-        "type": "directory",
-        "path": "Estudos",
-        "children": []
-      },
-      {
-        "name": "git_e_gitHub.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 3744,
-        "extension": ".md",
-        "path": "Estudos/git_e_gitHub.md"
-      },
-      {
-        "name": "requisitos.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 1415,
-        "extension": ".md",
-        "path": "Estudos/requisitos.md"
-      },
-      {
-        "name": "GEMINI.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 2143,
-        "extension": ".md",
-        "path": "GEMINI.md"
       },
       {
         "name": "LICENSE",
@@ -393,7 +735,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5608,
+        "size": 7646,
         "extension": ".md",
         "path": "README.md"
       },
@@ -404,26 +746,58 @@
         "children": []
       },
       {
+        "name": ".coveragerc",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1071,
+        "extension": ".coveragerc",
+        "path": "backend/.coveragerc"
+      },
+      {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 102,
+        "extension": ".dockerignore",
+        "path": "backend/.dockerignore"
+      },
+      {
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 658,
+        "size": 844,
         "extension": ".example",
         "path": "backend/.env.example"
+      },
+      {
+        "name": "AGENTS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3639,
+        "extension": ".md",
+        "path": "backend/AGENTS.md"
       },
       {
         "name": "Dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 919,
+        "size": 979,
         "extension": "",
         "path": "backend/Dockerfile"
+      },
+      {
+        "name": "alembic.ini",
+        "type": "file",
+        "language": "INI",
+        "size": 5036,
+        "extension": ".ini",
+        "path": "backend/alembic.ini"
       },
       {
         "name": "export_pl.py",
         "type": "file",
         "language": "Python",
-        "size": 1554,
+        "size": 1555,
         "extension": ".py",
         "path": "backend/export_pl.py"
       },
@@ -431,7 +805,7 @@
         "name": "pyproject.toml",
         "type": "file",
         "language": "TOML",
-        "size": 1091,
+        "size": 1515,
         "extension": ".toml",
         "path": "backend/pyproject.toml"
       },
@@ -478,12 +852,60 @@
         "path": "backend/src/application/ports/__init__.py"
       },
       {
+        "name": "apensamento_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 631,
+        "extension": ".py",
+        "path": "backend/src/application/ports/apensamento_repository.py"
+      },
+      {
+        "name": "auditoria_coleta_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1147,
+        "extension": ".py",
+        "path": "backend/src/application/ports/auditoria_coleta_repository.py"
+      },
+      {
+        "name": "baseline_tramitacao_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1047,
+        "extension": ".py",
+        "path": "backend/src/application/ports/baseline_tramitacao_repository.py"
+      },
+      {
         "name": "cache_provider.py",
         "type": "file",
         "language": "Python",
-        "size": 739,
+        "size": 1350,
         "extension": ".py",
         "path": "backend/src/application/ports/cache_provider.py"
+      },
+      {
+        "name": "camara_adapter.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1531,
+        "extension": ".py",
+        "path": "backend/src/application/ports/camara_adapter.py"
+      },
+      {
+        "name": "cobertura_snapshot_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1237,
+        "extension": ".py",
+        "path": "backend/src/application/ports/cobertura_snapshot_repository.py"
+      },
+      {
+        "name": "dashboard_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2094,
+        "extension": ".py",
+        "path": "backend/src/application/ports/dashboard_repository.py"
       },
       {
         "name": "email_sender_provider.py",
@@ -494,28 +916,60 @@
         "path": "backend/src/application/ports/email_sender_provider.py"
       },
       {
-        "name": "password_reset_token_provider.py",
+        "name": "evento_tramitacao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 641,
+        "size": 1570,
         "extension": ".py",
-        "path": "backend/src/application/ports/password_reset_token_provider.py"
+        "path": "backend/src/application/ports/evento_tramitacao_repository.py"
       },
       {
-        "name": "token_blacklist_provider.py",
+        "name": "fase_analitica_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 550,
+        "size": 575,
         "extension": ".py",
-        "path": "backend/src/application/ports/token_blacklist_provider.py"
+        "path": "backend/src/application/ports/fase_analitica_repository.py"
       },
       {
-        "name": "user_repository.py",
+        "name": "log_coleta_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 227,
+        "size": 488,
         "extension": ".py",
-        "path": "backend/src/application/ports/user_repository.py"
+        "path": "backend/src/application/ports/log_coleta_repository.py"
+      },
+      {
+        "name": "orgao_legislativo_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 755,
+        "extension": ".py",
+        "path": "backend/src/application/ports/orgao_legislativo_repository.py"
+      },
+      {
+        "name": "periodo_fase_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 671,
+        "extension": ".py",
+        "path": "backend/src/application/ports/periodo_fase_repository.py"
+      },
+      {
+        "name": "proposicao_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2446,
+        "extension": ".py",
+        "path": "backend/src/application/ports/proposicao_repository.py"
+      },
+      {
+        "name": "senado_adapter.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1572,
+        "extension": ".py",
+        "path": "backend/src/application/ports/senado_adapter.py"
       },
       {
         "name": "services",
@@ -532,26 +986,58 @@
         "path": "backend/src/application/services/__init__.py"
       },
       {
-        "name": "auth_service.py",
+        "name": "agregar_por_fase_service.py",
         "type": "file",
         "language": "Python",
-        "size": 5038,
+        "size": 6261,
         "extension": ".py",
-        "path": "backend/src/application/services/auth_service.py"
+        "path": "backend/src/application/services/agregar_por_fase_service.py"
+      },
+      {
+        "name": "atualizar_cobertura_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 8472,
+        "extension": ".py",
+        "path": "backend/src/application/services/atualizar_cobertura_service.py"
+      },
+      {
+        "name": "atualizar_transit_steps_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3298,
+        "extension": ".py",
+        "path": "backend/src/application/services/atualizar_transit_steps_service.py"
+      },
+      {
+        "name": "backfill_emendas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3017,
+        "extension": ".py",
+        "path": "backend/src/application/services/backfill_emendas_service.py"
       },
       {
         "name": "buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1530,
+        "size": 1689,
         "extension": ".py",
         "path": "backend/src/application/services/buscar_proposicoes_service.py"
+      },
+      {
+        "name": "coletar_em_lote_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 17003,
+        "extension": ".py",
+        "path": "backend/src/application/services/coletar_em_lote_service.py"
       },
       {
         "name": "dashboard_service.py",
         "type": "file",
         "language": "Python",
-        "size": 22471,
+        "size": 18678,
         "extension": ".py",
         "path": "backend/src/application/services/dashboard_service.py"
       },
@@ -559,7 +1045,7 @@
         "name": "detalhe_proposicao_service.py",
         "type": "file",
         "language": "Python",
-        "size": 2558,
+        "size": 3513,
         "extension": ".py",
         "path": "backend/src/application/services/detalhe_proposicao_service.py"
       },
@@ -567,7 +1053,7 @@
         "name": "gerar_estimativa_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1382,
+        "size": 1359,
         "extension": ".py",
         "path": "backend/src/application/services/gerar_estimativa_service.py"
       },
@@ -575,7 +1061,7 @@
         "name": "listar_movimentacoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 4573,
+        "size": 26858,
         "extension": ".py",
         "path": "backend/src/application/services/listar_movimentacoes_service.py"
       },
@@ -583,25 +1069,65 @@
         "name": "normalizar_tramitacao_service.py",
         "type": "file",
         "language": "Python",
-        "size": 7163,
+        "size": 7294,
         "extension": ".py",
         "path": "backend/src/application/services/normalizar_tramitacao_service.py"
       },
       {
-        "name": "recuperacao_senha_service.py",
+        "name": "obter_confiabilidade_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1874,
+        "size": 4353,
         "extension": ".py",
-        "path": "backend/src/application/services/recuperacao_senha_service.py"
+        "path": "backend/src/application/services/obter_confiabilidade_service.py"
+      },
+      {
+        "name": "preencher_lacunas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 35888,
+        "extension": ".py",
+        "path": "backend/src/application/services/preencher_lacunas_service.py"
+      },
+      {
+        "name": "processar_metricas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6052,
+        "extension": ".py",
+        "path": "backend/src/application/services/processar_metricas_service.py"
+      },
+      {
+        "name": "recalcular_baselines_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7815,
+        "extension": ".py",
+        "path": "backend/src/application/services/recalcular_baselines_service.py"
+      },
+      {
+        "name": "reconstruir_periodos_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11695,
+        "extension": ".py",
+        "path": "backend/src/application/services/reconstruir_periodos_service.py"
       },
       {
         "name": "audit_db.py",
         "type": "file",
         "language": "Python",
-        "size": 2919,
+        "size": 2986,
         "extension": ".py",
         "path": "backend/src/audit_db.py"
+      },
+      {
+        "name": "debug_transit.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4675,
+        "extension": ".py",
+        "path": "backend/src/debug_transit.py"
       },
       {
         "name": "domain",
@@ -618,12 +1144,28 @@
         "path": "backend/src/domain/__init__.py"
       },
       {
+        "name": "classificacao_preditiva.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2007,
+        "extension": ".py",
+        "path": "backend/src/domain/classificacao_preditiva.py"
+      },
+      {
         "name": "classificar_evento.py",
         "type": "file",
         "language": "Python",
-        "size": 8604,
+        "size": 9232,
         "extension": ".py",
         "path": "backend/src/domain/classificar_evento.py"
+      },
+      {
+        "name": "constants.py",
+        "type": "file",
+        "language": "Python",
+        "size": 269,
+        "extension": ".py",
+        "path": "backend/src/domain/constants.py"
       },
       {
         "name": "entities",
@@ -635,7 +1177,7 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 523,
+        "size": 983,
         "extension": ".py",
         "path": "backend/src/domain/entities/__init__.py"
       },
@@ -643,15 +1185,31 @@
         "name": "apensamento.py",
         "type": "file",
         "language": "Python",
-        "size": 401,
+        "size": 364,
         "extension": ".py",
         "path": "backend/src/domain/entities/apensamento.py"
+      },
+      {
+        "name": "baseline_tramitacao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 386,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/baseline_tramitacao.py"
+      },
+      {
+        "name": "cobertura_snapshot.py",
+        "type": "file",
+        "language": "Python",
+        "size": 644,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/cobertura_snapshot.py"
       },
       {
         "name": "evento_tramitacao.py",
         "type": "file",
         "language": "Python",
-        "size": 3511,
+        "size": 5545,
         "extension": ".py",
         "path": "backend/src/domain/entities/evento_tramitacao.py"
       },
@@ -659,7 +1217,7 @@
         "name": "fase_analitica.py",
         "type": "file",
         "language": "Python",
-        "size": 1105,
+        "size": 3556,
         "extension": ".py",
         "path": "backend/src/domain/entities/fase_analitica.py"
       },
@@ -667,23 +1225,55 @@
         "name": "fase_codigo.py",
         "type": "file",
         "language": "Python",
-        "size": 1248,
+        "size": 1249,
         "extension": ".py",
         "path": "backend/src/domain/entities/fase_codigo.py"
+      },
+      {
+        "name": "motivo_travamento.py",
+        "type": "file",
+        "language": "Python",
+        "size": 336,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/motivo_travamento.py"
+      },
+      {
+        "name": "natureza_fase.py",
+        "type": "file",
+        "language": "Python",
+        "size": 202,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/natureza_fase.py"
       },
       {
         "name": "orgao_legislativo.py",
         "type": "file",
         "language": "Python",
-        "size": 890,
+        "size": 855,
         "extension": ".py",
         "path": "backend/src/domain/entities/orgao_legislativo.py"
+      },
+      {
+        "name": "papel_fluxo.py",
+        "type": "file",
+        "language": "Python",
+        "size": 255,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/papel_fluxo.py"
+      },
+      {
+        "name": "periodo_fase.py",
+        "type": "file",
+        "language": "Python",
+        "size": 616,
+        "extension": ".py",
+        "path": "backend/src/domain/entities/periodo_fase.py"
       },
       {
         "name": "proposicao.py",
         "type": "file",
         "language": "Python",
-        "size": 4025,
+        "size": 6024,
         "extension": ".py",
         "path": "backend/src/domain/entities/proposicao.py"
       },
@@ -691,7 +1281,7 @@
         "name": "tipo_evento.py",
         "type": "file",
         "language": "Python",
-        "size": 1648,
+        "size": 1649,
         "extension": ".py",
         "path": "backend/src/domain/entities/tipo_evento.py"
       },
@@ -699,25 +1289,63 @@
         "name": "tramitacao.py",
         "type": "file",
         "language": "Python",
-        "size": 1300,
+        "size": 1254,
         "extension": ".py",
         "path": "backend/src/domain/entities/tramitacao.py"
-      },
-      {
-        "name": "user.py",
-        "type": "file",
-        "language": "Python",
-        "size": 635,
-        "extension": ".py",
-        "path": "backend/src/domain/entities/user.py"
       },
       {
         "name": "exceptions.py",
         "type": "file",
         "language": "Python",
-        "size": 1287,
+        "size": 2122,
         "extension": ".py",
         "path": "backend/src/domain/exceptions.py"
+      },
+      {
+        "name": "fsm",
+        "type": "directory",
+        "path": "backend/src/domain/fsm",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 259,
+        "extension": ".py",
+        "path": "backend/src/domain/fsm/__init__.py"
+      },
+      {
+        "name": "build.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2587,
+        "extension": ".py",
+        "path": "backend/src/domain/fsm/build.py"
+      },
+      {
+        "name": "classify.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2595,
+        "extension": ".py",
+        "path": "backend/src/domain/fsm/classify.py"
+      },
+      {
+        "name": "transition.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2520,
+        "extension": ".py",
+        "path": "backend/src/domain/fsm/transition.py"
+      },
+      {
+        "name": "types.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1061,
+        "extension": ".py",
+        "path": "backend/src/domain/fsm/types.py"
       },
       {
         "name": "services",
@@ -729,31 +1357,61 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 26,
+        "size": 363,
         "extension": ".py",
         "path": "backend/src/domain/services/__init__.py"
+      },
+      {
+        "name": "calcular_metricas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5013,
+        "extension": ".py",
+        "path": "backend/src/domain/services/calcular_metricas_service.py"
       },
       {
         "name": "estimativa_aprovacao_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1602,
+        "size": 1565,
         "extension": ".py",
         "path": "backend/src/domain/services/estimativa_aprovacao_service.py"
       },
       {
-        "name": "login_attempt_service.py",
+        "name": "heuristica_travamento_service.py",
         "type": "file",
         "language": "Python",
-        "size": 893,
+        "size": 2163,
         "extension": ".py",
-        "path": "backend/src/domain/services/login_attempt_service.py"
+        "path": "backend/src/domain/services/heuristica_travamento_service.py"
+      },
+      {
+        "name": "value_objects",
+        "type": "directory",
+        "path": "backend/src/domain/value_objects",
+        "children": []
+      },
+      {
+        "name": "modo_movimentacao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 140,
+        "extension": ".py",
+        "path": "backend/src/domain/value_objects/modo_movimentacao.py"
+      },
+      {
+        "name": "periodo_fase.py",
+        "type": "file",
+        "language": "Python",
+        "size": 618,
+        "extension": ".py",
+        "path": "backend/src/domain/value_objects/periodo_fase.py"
       },
       {
         "name": "drop_legacy_tables.py",
         "type": "file",
         "language": "Python",
-        "size": 718,
+        "size": 719,
         "extension": ".py",
         "path": "backend/src/drop_legacy_tables.py"
       },
@@ -805,7 +1463,7 @@
         "name": "camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 6063,
+        "size": 20437,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/camara_adapter.py"
       },
@@ -826,34 +1484,10 @@
         "path": "backend/src/infrastructure/adapters/dummy_email_sender.py"
       },
       {
-        "name": "redis_blacklist_adapter.py",
-        "type": "file",
-        "language": "Python",
-        "size": 1571,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/adapters/redis_blacklist_adapter.py"
-      },
-      {
-        "name": "redis_login_attempt_adapter.py",
-        "type": "file",
-        "language": "Python",
-        "size": 2773,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/adapters/redis_login_attempt_adapter.py"
-      },
-      {
-        "name": "security_adapter.py",
-        "type": "file",
-        "language": "Python",
-        "size": 1368,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/adapters/security_adapter.py"
-      },
-      {
         "name": "senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 12420,
+        "size": 39174,
         "extension": ".py",
         "path": "backend/src/infrastructure/adapters/senado_adapter.py"
       },
@@ -891,23 +1525,15 @@
         "name": "redis_client.py",
         "type": "file",
         "language": "Python",
-        "size": 1881,
+        "size": 4637,
         "extension": ".py",
         "path": "backend/src/infrastructure/cache/redis_client.py"
-      },
-      {
-        "name": "redis_token_provider.py",
-        "type": "file",
-        "language": "Python",
-        "size": 3124,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/cache/redis_token_provider.py"
       },
       {
         "name": "config.py",
         "type": "file",
         "language": "Python",
-        "size": 1948,
+        "size": 2505,
         "extension": ".py",
         "path": "backend/src/infrastructure/config.py"
       },
@@ -921,9 +1547,125 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 2173,
+        "size": 2746,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/__init__.py"
+      },
+      {
+        "name": "alembic",
+        "type": "directory",
+        "path": "backend/src/infrastructure/database/alembic",
+        "children": []
+      },
+      {
+        "name": "README",
+        "type": "file",
+        "language": "No Extension",
+        "size": 38,
+        "extension": "",
+        "path": "backend/src/infrastructure/database/alembic/README"
+      },
+      {
+        "name": "env.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1973,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/env.py"
+      },
+      {
+        "name": "script.py.mako",
+        "type": "file",
+        "language": "Unknown",
+        "size": 704,
+        "extension": ".mako",
+        "path": "backend/src/infrastructure/database/alembic/script.py.mako"
+      },
+      {
+        "name": "versions",
+        "type": "directory",
+        "path": "backend/src/infrastructure/database/alembic/versions",
+        "children": []
+      },
+      {
+        "name": "0d164b88bc9d_add_status_original_to_proposicao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3034,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/0d164b88bc9d_add_status_original_to_proposicao.py"
+      },
+      {
+        "name": "102767e9a1c3_create_transit_steps_table.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2531,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/102767e9a1c3_create_transit_steps_table.py"
+      },
+      {
+        "name": "613a85bc4cae_evolve_fase_analitica_and_add_periodo_.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7185,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/613a85bc4cae_evolve_fase_analitica_and_add_periodo_.py"
+      },
+      {
+        "name": "71f8ba3e30f7_baseline_and_delay_metrics.py",
+        "type": "file",
+        "language": "Python",
+        "size": 17258,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/71f8ba3e30f7_baseline_and_delay_metrics.py"
+      },
+      {
+        "name": "86d18f3dcdb0_create_auditoria_coleta_table.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1679,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/86d18f3dcdb0_create_auditoria_coleta_table.py"
+      },
+      {
+        "name": "a1e102f30d5f_add_ml_fields_to_proposicao.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1392,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/a1e102f30d5f_add_ml_fields_to_proposicao.py"
+      },
+      {
+        "name": "b3f102f30e6g_reset_numero_emendas_to_null.py",
+        "type": "file",
+        "language": "Python",
+        "size": 978,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/b3f102f30e6g_reset_numero_emendas_to_null.py"
+      },
+      {
+        "name": "c85c284bb3a7_add_bloco_legislativo_and_parecer_ccj_.py",
+        "type": "file",
+        "language": "Python",
+        "size": 897,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/c85c284bb3a7_add_bloco_legislativo_and_parecer_ccj_.py"
+      },
+      {
+        "name": "e1dbfbfbec74_merge_heads_c85c284bb3a7_f09c304ef8f1.py",
+        "type": "file",
+        "language": "Python",
+        "size": 556,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/e1dbfbfbec74_merge_heads_c85c284bb3a7_f09c304ef8f1.py"
+      },
+      {
+        "name": "f09c304ef8f1_add_fonte_column_cobertura_snapshot.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1062,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/alembic/versions/f09c304ef8f1_add_fonte_column_cobertura_snapshot.py"
       },
       {
         "name": "models",
@@ -943,15 +1685,39 @@
         "name": "apensamento_model.py",
         "type": "file",
         "language": "Python",
-        "size": 812,
+        "size": 775,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/models/apensamento_model.py"
+      },
+      {
+        "name": "auditoria_coleta_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1227,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/models/auditoria_coleta_model.py"
+      },
+      {
+        "name": "baseline_tramitacao_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1309,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/models/baseline_tramitacao_model.py"
+      },
+      {
+        "name": "cobertura_snapshot_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 724,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/models/cobertura_snapshot_model.py"
       },
       {
         "name": "evento_tramitacao_model.py",
         "type": "file",
         "language": "Python",
-        "size": 2284,
+        "size": 2390,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/models/evento_tramitacao_model.py"
       },
@@ -959,33 +1725,77 @@
         "name": "fase_analitica_model.py",
         "type": "file",
         "language": "Python",
-        "size": 389,
+        "size": 674,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/models/fase_analitica_model.py"
+      },
+      {
+        "name": "log_coleta_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 606,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/models/log_coleta_model.py"
       },
       {
         "name": "orgao_legislativo_model.py",
         "type": "file",
         "language": "Python",
-        "size": 721,
+        "size": 686,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/models/orgao_legislativo_model.py"
+      },
+      {
+        "name": "periodo_fase_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1492,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/database/models/periodo_fase_model.py"
       },
       {
         "name": "proposicao_model.py",
         "type": "file",
         "language": "Python",
-        "size": 1288,
+        "size": 2798,
         "extension": ".py",
         "path": "backend/src/infrastructure/database/models/proposicao_model.py"
       },
       {
-        "name": "user_model.py",
+        "name": "transit_step_model.py",
         "type": "file",
         "language": "Python",
-        "size": 373,
+        "size": 792,
         "extension": ".py",
-        "path": "backend/src/infrastructure/database/models/user_model.py"
+        "path": "backend/src/infrastructure/database/models/transit_step_model.py"
+      },
+      {
+        "name": "seeds",
+        "type": "directory",
+        "path": "backend/src/infrastructure/database/seeds",
+        "children": []
+      },
+      {
+        "name": "bootstrap_seeds.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 1661,
+        "extension": ".sql",
+        "path": "backend/src/infrastructure/database/seeds/bootstrap_seeds.sql"
+      },
+      {
+        "name": "logging",
+        "type": "directory",
+        "path": "backend/src/infrastructure/logging",
+        "children": []
+      },
+      {
+        "name": "json_logger.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1671,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/logging/json_logger.py"
       },
       {
         "name": "repositories",
@@ -1002,26 +1812,50 @@
         "path": "backend/src/infrastructure/repositories/__init__.py"
       },
       {
-        "name": "proposicao_repository.py",
-        "type": "file",
-        "language": "Python",
-        "size": 2775,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/repositories/proposicao_repository.py"
-      },
-      {
         "name": "sql_apensamento_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 1450,
+        "size": 1414,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_apensamento_repository.py"
+      },
+      {
+        "name": "sql_auditoria_coleta_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3649,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_auditoria_coleta_repository.py"
+      },
+      {
+        "name": "sql_baseline_tramitacao_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4346,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_baseline_tramitacao_repository.py"
+      },
+      {
+        "name": "sql_cobertura_snapshot_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3736,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_cobertura_snapshot_repository.py"
+      },
+      {
+        "name": "sql_dashboard_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 38196,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_dashboard_repository.py"
       },
       {
         "name": "sql_evento_tramitacao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 4843,
+        "size": 5296,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_evento_tramitacao_repository.py"
       },
@@ -1029,33 +1863,41 @@
         "name": "sql_fase_analitica_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 1916,
+        "size": 2154,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_fase_analitica_repository.py"
+      },
+      {
+        "name": "sql_log_coleta_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 913,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_log_coleta_repository.py"
       },
       {
         "name": "sql_orgao_legislativo_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 2537,
+        "size": 2496,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_orgao_legislativo_repository.py"
+      },
+      {
+        "name": "sql_periodo_fase_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1900,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/repositories/sql_periodo_fase_repository.py"
       },
       {
         "name": "sql_proposicao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 7255,
+        "size": 14671,
         "extension": ".py",
         "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py"
-      },
-      {
-        "name": "sql_user_repository.py",
-        "type": "file",
-        "language": "Python",
-        "size": 1421,
-        "extension": ".py",
-        "path": "backend/src/infrastructure/repositories/sql_user_repository.py"
       },
       {
         "name": "workers",
@@ -1080,10 +1922,34 @@
         "path": "backend/src/infrastructure/workers/__init__.py"
       },
       {
+        "name": "celery_app.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1410,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/workers/celery_app.py"
+      },
+      {
+        "name": "coleta_worker.py",
+        "type": "file",
+        "language": "Python",
+        "size": 12398,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/workers/coleta_worker.py"
+      },
+      {
+        "name": "metricas_worker.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4336,
+        "extension": ".py",
+        "path": "backend/src/infrastructure/workers/metricas_worker.py"
+      },
+      {
         "name": "init_db.py",
         "type": "file",
         "language": "Python",
-        "size": 1426,
+        "size": 7479,
         "extension": ".py",
         "path": "backend/src/init_db.py"
       },
@@ -1091,7 +1957,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 2140,
+        "size": 1920,
         "extension": ".py",
         "path": "backend/src/main.py"
       },
@@ -1110,14 +1976,6 @@
         "path": "backend/src/presentation/__init__.py"
       },
       {
-        "name": "auth_dependencies.py",
-        "type": "file",
-        "language": "Python",
-        "size": 3395,
-        "extension": ".py",
-        "path": "backend/src/presentation/auth_dependencies.py"
-      },
-      {
         "name": "controllers",
         "type": "directory",
         "path": "backend/src/presentation/controllers",
@@ -1127,41 +1985,89 @@
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 0,
+        "size": 242,
         "extension": ".py",
         "path": "backend/src/presentation/controllers/__init__.py"
-      },
-      {
-        "name": "auth_controller.py",
-        "type": "file",
-        "language": "Python",
-        "size": 3793,
-        "extension": ".py",
-        "path": "backend/src/presentation/controllers/auth_controller.py"
       },
       {
         "name": "dashboard_controller.py",
         "type": "file",
         "language": "Python",
-        "size": 7014,
+        "size": 9405,
         "extension": ".py",
         "path": "backend/src/presentation/controllers/dashboard_controller.py"
+      },
+      {
+        "name": "health_controller.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5603,
+        "extension": ".py",
+        "path": "backend/src/presentation/controllers/health_controller.py"
+      },
+      {
+        "name": "internal_tasks_controller.py",
+        "type": "file",
+        "language": "Python",
+        "size": 12996,
+        "extension": ".py",
+        "path": "backend/src/presentation/controllers/internal_tasks_controller.py"
       },
       {
         "name": "proposicao_controller.py",
         "type": "file",
         "language": "Python",
-        "size": 9468,
+        "size": 15360,
         "extension": ".py",
         "path": "backend/src/presentation/controllers/proposicao_controller.py"
       },
       {
-        "name": "seed.py",
+        "name": "dashboard_dependencies.py",
         "type": "file",
         "language": "Python",
-        "size": 7340,
+        "size": 2346,
         "extension": ".py",
-        "path": "backend/src/seed.py"
+        "path": "backend/src/presentation/dashboard_dependencies.py"
+      },
+      {
+        "name": "internal_auth.py",
+        "type": "file",
+        "language": "Python",
+        "size": 597,
+        "extension": ".py",
+        "path": "backend/src/presentation/internal_auth.py"
+      },
+      {
+        "name": "proposicao_dependencies.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4616,
+        "extension": ".py",
+        "path": "backend/src/presentation/proposicao_dependencies.py"
+      },
+      {
+        "name": "trigger_backfill.py",
+        "type": "file",
+        "language": "Python",
+        "size": 989,
+        "extension": ".py",
+        "path": "backend/src/trigger_backfill.py"
+      },
+      {
+        "name": "trigger_seed.py",
+        "type": "file",
+        "language": "Python",
+        "size": 830,
+        "extension": ".py",
+        "path": "backend/src/trigger_seed.py"
+      },
+      {
+        "name": "update_ids_migration.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4099,
+        "extension": ".py",
+        "path": "backend/src/update_ids_migration.py"
       },
       {
         "name": "tests",
@@ -1181,7 +2087,7 @@
         "name": "conftest.py",
         "type": "file",
         "language": "Python",
-        "size": 2866,
+        "size": 3929,
         "extension": ".py",
         "path": "backend/tests/conftest.py"
       },
@@ -1203,7 +2109,7 @@
         "name": "conftest.py",
         "type": "file",
         "language": "Python",
-        "size": 2722,
+        "size": 3246,
         "extension": ".py",
         "path": "backend/tests/integration/conftest.py"
       },
@@ -1211,31 +2117,79 @@
         "name": "test_app.py",
         "type": "file",
         "language": "Python",
-        "size": 1205,
+        "size": 2375,
         "extension": ".py",
         "path": "backend/tests/integration/test_app.py"
       },
       {
-        "name": "test_auth_api.py",
+        "name": "test_backfill_performance.py",
         "type": "file",
         "language": "Python",
-        "size": 2565,
+        "size": 1882,
         "extension": ".py",
-        "path": "backend/tests/integration/test_auth_api.py"
+        "path": "backend/tests/integration/test_backfill_performance.py"
       },
       {
         "name": "test_camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1157,
+        "size": 1783,
         "extension": ".py",
         "path": "backend/tests/integration/test_camara_adapter.py"
+      },
+      {
+        "name": "test_coleta_worker.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1292,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_coleta_worker.py"
+      },
+      {
+        "name": "test_coletar_em_lote_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5134,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_coletar_em_lote_service.py"
+      },
+      {
+        "name": "test_cors.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1570,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_cors.py"
+      },
+      {
+        "name": "test_dashboard_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3133,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_dashboard_api.py"
+      },
+      {
+        "name": "test_health_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6577,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_health_api.py"
+      },
+      {
+        "name": "test_metricas_worker.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2541,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_metricas_worker.py"
       },
       {
         "name": "test_movimentacoes_api.py",
         "type": "file",
         "language": "Python",
-        "size": 4437,
+        "size": 10385,
         "extension": ".py",
         "path": "backend/tests/integration/test_movimentacoes_api.py"
       },
@@ -1243,7 +2197,7 @@
         "name": "test_proposicao_api.py",
         "type": "file",
         "language": "Python",
-        "size": 1986,
+        "size": 1860,
         "extension": ".py",
         "path": "backend/tests/integration/test_proposicao_api.py"
       },
@@ -1251,7 +2205,7 @@
         "name": "test_proposicao_detalhe.py",
         "type": "file",
         "language": "Python",
-        "size": 3532,
+        "size": 3721,
         "extension": ".py",
         "path": "backend/tests/integration/test_proposicao_detalhe.py"
       },
@@ -1259,7 +2213,7 @@
         "name": "test_senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 1003,
+        "size": 1078,
         "extension": ".py",
         "path": "backend/tests/integration/test_senado_adapter.py"
       },
@@ -1281,47 +2235,95 @@
         "name": "conftest.py",
         "type": "file",
         "language": "Python",
-        "size": 649,
+        "size": 651,
         "extension": ".py",
         "path": "backend/tests/unit/conftest.py"
       },
       {
-        "name": "test_auth_lockout.py",
+        "name": "test_agregar_por_fase_service.py",
         "type": "file",
         "language": "Python",
-        "size": 4433,
+        "size": 4184,
         "extension": ".py",
-        "path": "backend/tests/unit/test_auth_lockout.py"
+        "path": "backend/tests/unit/test_agregar_por_fase_service.py"
+      },
+      {
+        "name": "test_atualizar_cobertura_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11798,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_atualizar_cobertura_service.py"
+      },
+      {
+        "name": "test_backfill_emendas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5407,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_backfill_emendas_service.py"
       },
       {
         "name": "test_buscar_proposicoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 2589,
+        "size": 3405,
         "extension": ".py",
         "path": "backend/tests/unit/test_buscar_proposicoes_service.py"
+      },
+      {
+        "name": "test_calcular_metricas_domain_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5389,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_calcular_metricas_domain_service.py"
+      },
+      {
+        "name": "test_calcular_tempo_por_fase.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2695,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_calcular_tempo_por_fase.py"
       },
       {
         "name": "test_camara_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 3635,
+        "size": 6549,
         "extension": ".py",
         "path": "backend/tests/unit/test_camara_adapter.py"
+      },
+      {
+        "name": "test_classificacao_preditiva.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4456,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_classificacao_preditiva.py"
       },
       {
         "name": "test_classificar_evento.py",
         "type": "file",
         "language": "Python",
-        "size": 9742,
+        "size": 9741,
         "extension": ".py",
         "path": "backend/tests/unit/test_classificar_evento.py"
+      },
+      {
+        "name": "test_coletar_em_lote_service_bugs.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5348,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_coletar_em_lote_service_bugs.py"
       },
       {
         "name": "test_dashboard_on_the_fly.py",
         "type": "file",
         "language": "Python",
-        "size": 2232,
+        "size": 2234,
         "extension": ".py",
         "path": "backend/tests/unit/test_dashboard_on_the_fly.py"
       },
@@ -1329,7 +2331,7 @@
         "name": "test_dashboard_service.py",
         "type": "file",
         "language": "Python",
-        "size": 4879,
+        "size": 5886,
         "extension": ".py",
         "path": "backend/tests/unit/test_dashboard_service.py"
       },
@@ -1337,7 +2339,7 @@
         "name": "test_dashboard_service_analitico.py",
         "type": "file",
         "language": "Python",
-        "size": 4037,
+        "size": 4404,
         "extension": ".py",
         "path": "backend/tests/unit/test_dashboard_service_analitico.py"
       },
@@ -1345,7 +2347,7 @@
         "name": "test_dashboard_service_extended.py",
         "type": "file",
         "language": "Python",
-        "size": 12754,
+        "size": 16592,
         "extension": ".py",
         "path": "backend/tests/unit/test_dashboard_service_extended.py"
       },
@@ -1361,7 +2363,7 @@
         "name": "test_estimativa_aprovacao_service.py",
         "type": "file",
         "language": "Python",
-        "size": 1112,
+        "size": 1113,
         "extension": ".py",
         "path": "backend/tests/unit/test_estimativa_aprovacao_service.py"
       },
@@ -1369,7 +2371,7 @@
         "name": "test_evento_dto.py",
         "type": "file",
         "language": "Python",
-        "size": 2281,
+        "size": 2339,
         "extension": ".py",
         "path": "backend/tests/unit/test_evento_dto.py"
       },
@@ -1382,50 +2384,130 @@
         "path": "backend/tests/unit/test_evento_tramitacao_entity.py"
       },
       {
+        "name": "test_evento_tramitacao_relevante.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2432,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_evento_tramitacao_relevante.py"
+      },
+      {
+        "name": "test_fsm.py",
+        "type": "file",
+        "language": "Python",
+        "size": 11981,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_fsm.py"
+      },
+      {
+        "name": "test_heuristica_travamento_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1813,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_heuristica_travamento_service.py"
+      },
+      {
+        "name": "test_internal_auth.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1116,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_internal_auth.py"
+      },
+      {
+        "name": "test_internal_tasks_coleta.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9776,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_internal_tasks_coleta.py"
+      },
+      {
+        "name": "test_json_logger.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1627,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_json_logger.py"
+      },
+      {
         "name": "test_listar_movimentacoes_service.py",
         "type": "file",
         "language": "Python",
-        "size": 5054,
+        "size": 21722,
         "extension": ".py",
         "path": "backend/tests/unit/test_listar_movimentacoes_service.py"
-      },
-      {
-        "name": "test_logout.py",
-        "type": "file",
-        "language": "Python",
-        "size": 2764,
-        "extension": ".py",
-        "path": "backend/tests/unit/test_logout.py"
       },
       {
         "name": "test_normalizar_tramitacao_service.py",
         "type": "file",
         "language": "Python",
-        "size": 5229,
+        "size": 5853,
         "extension": ".py",
         "path": "backend/tests/unit/test_normalizar_tramitacao_service.py"
+      },
+      {
+        "name": "test_obter_confiabilidade_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7057,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_obter_confiabilidade_service.py"
+      },
+      {
+        "name": "test_preencher_lacunas_com_eventos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 10298,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_preencher_lacunas_com_eventos.py"
+      },
+      {
+        "name": "test_preencher_lacunas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 24865,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_preencher_lacunas_service.py"
+      },
+      {
+        "name": "test_processar_metricas_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4572,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_processar_metricas_service.py"
       },
       {
         "name": "test_proposicao_entity.py",
         "type": "file",
         "language": "Python",
-        "size": 1605,
+        "size": 5565,
         "extension": ".py",
         "path": "backend/tests/unit/test_proposicao_entity.py"
       },
       {
-        "name": "test_recuperacao_senha.py",
+        "name": "test_recalcular_baselines_service.py",
         "type": "file",
         "language": "Python",
-        "size": 6028,
+        "size": 6410,
         "extension": ".py",
-        "path": "backend/tests/unit/test_recuperacao_senha.py"
+        "path": "backend/tests/unit/test_recalcular_baselines_service.py"
+      },
+      {
+        "name": "test_reconstruir_periodos_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5960,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_reconstruir_periodos_service.py"
       },
       {
         "name": "test_repository_filtering.py",
         "type": "file",
         "language": "Python",
-        "size": 5551,
+        "size": 5673,
         "extension": ".py",
         "path": "backend/tests/unit/test_repository_filtering.py"
       },
@@ -1433,15 +2515,55 @@
         "name": "test_senado_adapter.py",
         "type": "file",
         "language": "Python",
-        "size": 5289,
+        "size": 15082,
         "extension": ".py",
         "path": "backend/tests/unit/test_senado_adapter.py"
+      },
+      {
+        "name": "test_sql_apensamento_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1231,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_apensamento_repository.py"
+      },
+      {
+        "name": "test_sql_auditoria_coleta_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1921,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_auditoria_coleta_repository.py"
+      },
+      {
+        "name": "test_sql_baseline_tramitacao_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4199,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_baseline_tramitacao_repository.py"
+      },
+      {
+        "name": "test_sql_cobertura_snapshot_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2449,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_cobertura_snapshot_repository.py"
+      },
+      {
+        "name": "test_sql_dashboard_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 8318,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_dashboard_repository.py"
       },
       {
         "name": "test_sql_evento_tramitacao_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 8405,
+        "size": 9607,
         "extension": ".py",
         "path": "backend/tests/unit/test_sql_evento_tramitacao_repository.py"
       },
@@ -1449,7 +2571,7 @@
         "name": "test_sql_fase_analitica_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 2645,
+        "size": 2667,
         "extension": ".py",
         "path": "backend/tests/unit/test_sql_fase_analitica_repository.py"
       },
@@ -1457,15 +2579,31 @@
         "name": "test_sql_orgao_legislativo_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 3562,
+        "size": 3584,
         "extension": ".py",
         "path": "backend/tests/unit/test_sql_orgao_legislativo_repository.py"
+      },
+      {
+        "name": "test_sql_periodo_fase_repository.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3358,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_periodo_fase_repository.py"
+      },
+      {
+        "name": "test_sql_proposicao_repository_upsert.py",
+        "type": "file",
+        "language": "Python",
+        "size": 8579,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_sql_proposicao_repository_upsert.py"
       },
       {
         "name": "test_sql_repository.py",
         "type": "file",
         "language": "Python",
-        "size": 2046,
+        "size": 2069,
         "extension": ".py",
         "path": "backend/tests/unit/test_sql_repository.py"
       },
@@ -1473,7 +2611,7 @@
         "name": "uv.lock",
         "type": "file",
         "language": "Lock File",
-        "size": 408334,
+        "size": 391520,
         "extension": ".lock",
         "path": "backend/uv.lock"
       },
@@ -1489,7 +2627,7 @@
         "name": "docker-compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1673,
+        "size": 3375,
         "extension": ".yml",
         "path": "docker-compose.yml"
       },
@@ -1503,23 +2641,23 @@
         "name": "BACKLOG.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1835,
+        "size": 3163,
         "extension": ".md",
         "path": "docs/BACKLOG.md"
       },
       {
-        "name": "MIGRATION_SCOPE.md",
+        "name": "RELEASE_1_REPORT.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5584,
+        "size": 8293,
         "extension": ".md",
-        "path": "docs/MIGRATION_SCOPE.md"
+        "path": "docs/RELEASE_1_REPORT.md"
       },
       {
         "name": "SRS.md",
         "type": "file",
         "language": "Markdown",
-        "size": 9712,
+        "size": 9738,
         "extension": ".md",
         "path": "docs/SRS.md"
       },
@@ -1597,7 +2735,7 @@
         "name": "ADR-008-github-actions-data-pipeline.md",
         "type": "file",
         "language": "Markdown",
-        "size": 7052,
+        "size": 7100,
         "extension": ".md",
         "path": "docs/adr/ADR-008-github-actions-data-pipeline.md"
       },
@@ -1610,42 +2748,292 @@
         "path": "docs/adr/ADR-009-squad-dashboard-ghpages.md"
       },
       {
-        "name": "ai",
+        "name": "ADR-010-status-normalization.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4610,
+        "extension": ".md",
+        "path": "docs/adr/ADR-010-status-normalization.md"
+      },
+      {
+        "name": "ADR-012-frontend-governance.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4421,
+        "extension": ".md",
+        "path": "docs/adr/ADR-012-frontend-governance.md"
+      },
+      {
+        "name": "ADR-013-llm-time-estimation.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8876,
+        "extension": ".md",
+        "path": "docs/adr/ADR-013-llm-time-estimation.md"
+      },
+      {
+        "name": "domain",
         "type": "directory",
-        "path": "docs/ai",
+        "path": "docs/domain",
         "children": []
       },
       {
-        "name": "project-context.md",
+        "name": "delay-metrics.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3368,
+        "size": 6415,
         "extension": ".md",
-        "path": "docs/ai/project-context.md"
+        "path": "docs/domain/delay-metrics.md"
       },
       {
-        "name": "project-memory.md",
+        "name": "juridical-validation.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5840,
+        "size": 7155,
         "extension": ".md",
-        "path": "docs/ai/project-memory.md"
+        "path": "docs/domain/juridical-validation.md"
       },
       {
-        "name": "cheat-sheet.md",
+        "name": "status-normalization.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2203,
+        "size": 25535,
         "extension": ".md",
-        "path": "docs/cheat-sheet.md"
+        "path": "docs/domain/status-normalization.md"
+      },
+      {
+        "name": "timeline-walkthrough.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10995,
+        "extension": ".md",
+        "path": "docs/domain/timeline-walkthrough.md"
+      },
+      {
+        "name": "frontend",
+        "type": "directory",
+        "path": "docs/frontend",
+        "children": []
+      },
+      {
+        "name": "00-visao-geral-frontend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4155,
+        "extension": ".md",
+        "path": "docs/frontend/00-visao-geral-frontend.md"
+      },
+      {
+        "name": "01-arquitetura-de-telas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4357,
+        "extension": ".md",
+        "path": "docs/frontend/01-arquitetura-de-telas.md"
+      },
+      {
+        "name": "01b-layout-shell.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3364,
+        "extension": ".md",
+        "path": "docs/frontend/01b-layout-shell.md"
+      },
+      {
+        "name": "02-design-principles.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3749,
+        "extension": ".md",
+        "path": "docs/frontend/02-design-principles.md"
+      },
+      {
+        "name": "03-design-tokens.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3993,
+        "extension": ".md",
+        "path": "docs/frontend/03-design-tokens.md"
+      },
+      {
+        "name": "04-componentes",
+        "type": "directory",
+        "path": "docs/frontend/04-componentes",
+        "children": []
+      },
+      {
+        "name": "charts-and-visualizations.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3973,
+        "extension": ".md",
+        "path": "docs/frontend/04-componentes/charts-and-visualizations.md"
+      },
+      {
+        "name": "forms-and-inputs.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5133,
+        "extension": ".md",
+        "path": "docs/frontend/04-componentes/forms-and-inputs.md"
+      },
+      {
+        "name": "kpi-card.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3318,
+        "extension": ".md",
+        "path": "docs/frontend/04-componentes/kpi-card.md"
+      },
+      {
+        "name": "tables-and-lists.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4054,
+        "extension": ".md",
+        "path": "docs/frontend/04-componentes/tables-and-lists.md"
+      },
+      {
+        "name": "05-padroes",
+        "type": "directory",
+        "path": "docs/frontend/05-padroes",
+        "children": []
+      },
+      {
+        "name": "collapsible-timeline.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4483,
+        "extension": ".md",
+        "path": "docs/frontend/05-padroes/collapsible-timeline.md"
+      },
+      {
+        "name": "parallel-loading-pattern.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4673,
+        "extension": ".md",
+        "path": "docs/frontend/05-padroes/parallel-loading-pattern.md"
+      },
+      {
+        "name": "states-and-contingency.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4392,
+        "extension": ".md",
+        "path": "docs/frontend/05-padroes/states-and-contingency.md"
+      },
+      {
+        "name": "06-auditoria",
+        "type": "directory",
+        "path": "docs/frontend/06-auditoria",
+        "children": []
+      },
+      {
+        "name": "decisoes-aceitas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2213,
+        "extension": ".md",
+        "path": "docs/frontend/06-auditoria/decisoes-aceitas.md"
+      },
+      {
+        "name": "inconsistencias.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3419,
+        "extension": ".md",
+        "path": "docs/frontend/06-auditoria/inconsistencias.md"
+      },
+      {
+        "name": "inventario-ui.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4773,
+        "extension": ".md",
+        "path": "docs/frontend/06-auditoria/inventario-ui.md"
+      },
+      {
+        "name": "oportunidades.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2980,
+        "extension": ".md",
+        "path": "docs/frontend/06-auditoria/oportunidades.md"
+      },
+      {
+        "name": "07-governanca",
+        "type": "directory",
+        "path": "docs/frontend/07-governanca",
+        "children": []
+      },
+      {
+        "name": "checklist-review-ui.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2737,
+        "extension": ".md",
+        "path": "docs/frontend/07-governanca/checklist-review-ui.md"
+      },
+      {
+        "name": "regras-de-evolucao-ui.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3661,
+        "extension": ".md",
+        "path": "docs/frontend/07-governanca/regras-de-evolucao-ui.md"
+      },
+      {
+        "name": "08-legacy-monolithic-spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 25814,
+        "extension": ".md",
+        "path": "docs/frontend/08-legacy-monolithic-spec.md"
+      },
+      {
+        "name": "09-prototype-spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5392,
+        "extension": ".md",
+        "path": "docs/frontend/09-prototype-spec.md"
+      },
+      {
+        "name": "infrastructure",
+        "type": "directory",
+        "path": "docs/infrastructure",
+        "children": []
       },
       {
         "name": "deploy-gcp.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4406,
+        "size": 8077,
         "extension": ".md",
-        "path": "docs/deploy-gcp.md"
+        "path": "docs/infrastructure/deploy-gcp.md"
+      },
+      {
+        "name": "ingestion-architecture.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 21169,
+        "extension": ".md",
+        "path": "docs/infrastructure/ingestion-architecture.md"
+      },
+      {
+        "name": "operational",
+        "type": "directory",
+        "path": "docs/operational",
+        "children": []
+      },
+      {
+        "name": "gapfiller-event-ingestion.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4342,
+        "extension": ".md",
+        "path": "docs/operational/gapfiller-event-ingestion.md"
       },
       {
         "name": "personas.md",
@@ -1659,7 +3047,7 @@
         "name": "risks.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2740,
+        "size": 2678,
         "extension": ".md",
         "path": "docs/risks.md"
       },
@@ -1667,7 +3055,7 @@
         "name": "story-map.md",
         "type": "file",
         "language": "Markdown",
-        "size": 19153,
+        "size": 23013,
         "extension": ".md",
         "path": "docs/story-map.md"
       },
@@ -1675,7 +3063,7 @@
         "name": "tech-stack.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3911,
+        "size": 4355,
         "extension": ".md",
         "path": "docs/tech-stack.md"
       },
@@ -1686,12 +3074,28 @@
         "children": []
       },
       {
+        "name": ".dockerignore",
+        "type": "file",
+        "language": "Docker Ignore",
+        "size": 71,
+        "extension": ".dockerignore",
+        "path": "frontend/.dockerignore"
+      },
+      {
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
         "size": 35,
         "extension": ".example",
         "path": "frontend/.env.example"
+      },
+      {
+        "name": "AGENTS.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1554,
+        "extension": ".md",
+        "path": "frontend/AGENTS.md"
       },
       {
         "name": "Dockerfile",
@@ -1763,31 +3167,9 @@
         "name": "AppLayout.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3842,
+        "size": 657,
         "extension": ".tsx",
         "path": "frontend/src/app/layouts/AppLayout.tsx"
-      },
-      {
-        "name": "providers",
-        "type": "directory",
-        "path": "frontend/src/app/providers",
-        "children": []
-      },
-      {
-        "name": "AuthContext.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 529,
-        "extension": ".tsx",
-        "path": "frontend/src/app/providers/AuthContext.tsx"
-      },
-      {
-        "name": "AuthProvider.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 2028,
-        "extension": ".tsx",
-        "path": "frontend/src/app/providers/AuthProvider.tsx"
       },
       {
         "name": "router",
@@ -1799,7 +3181,7 @@
         "name": "index.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1714,
+        "size": 965,
         "extension": ".tsx",
         "path": "frontend/src/app/router/index.tsx"
       },
@@ -1810,62 +3192,18 @@
         "children": []
       },
       {
-        "name": "auth",
-        "type": "directory",
-        "path": "frontend/src/features/auth",
-        "children": []
-      },
-      {
-        "name": "CadastroForm.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 3464,
-        "extension": ".tsx",
-        "path": "frontend/src/features/auth/CadastroForm.tsx"
-      },
-      {
-        "name": "LoginForm.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 4518,
-        "extension": ".tsx",
-        "path": "frontend/src/features/auth/LoginForm.tsx"
-      },
-      {
-        "name": "RecuperarSenhaForm.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 2845,
-        "extension": ".tsx",
-        "path": "frontend/src/features/auth/RecuperarSenhaForm.tsx"
-      },
-      {
-        "name": "dashboard",
-        "type": "directory",
-        "path": "frontend/src/features/dashboard",
-        "children": []
-      },
-      {
-        "name": "DashboardComponents.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 9350,
-        "extension": ".tsx",
-        "path": "frontend/src/features/dashboard/DashboardComponents.tsx"
-      },
-      {
         "name": "filtros",
         "type": "directory",
         "path": "frontend/src/features/filtros",
         "children": []
       },
       {
-        "name": "PainelFiltros.tsx",
+        "name": "FilterChips.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 6766,
+        "size": 1168,
         "extension": ".tsx",
-        "path": "frontend/src/features/filtros/PainelFiltros.tsx"
+        "path": "frontend/src/features/filtros/FilterChips.tsx"
       },
       {
         "name": "proposicoes",
@@ -1877,51 +3215,101 @@
         "name": "ProposicaoCard.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4008,
+        "size": 4085,
         "extension": ".tsx",
         "path": "frontend/src/features/proposicoes/ProposicaoCard.tsx"
       },
       {
-        "name": "relatorios",
+        "name": "components",
         "type": "directory",
-        "path": "frontend/src/features/relatorios",
+        "path": "frontend/src/features/proposicoes/components",
         "children": []
       },
       {
-        "name": "RelatorioComponents.tsx",
+        "name": "AIInsightsCard.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 6941,
+        "size": 13641,
         "extension": ".tsx",
-        "path": "frontend/src/features/relatorios/RelatorioComponents.tsx"
+        "path": "frontend/src/features/proposicoes/components/AIInsightsCard.tsx"
       },
       {
-        "name": "tramitacoes",
-        "type": "directory",
-        "path": "frontend/src/features/tramitacoes",
-        "children": []
-      },
-      {
-        "name": "CardPrevisaoIA.tsx",
+        "name": "BottleneckAnalytics.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2101,
+        "size": 5671,
         "extension": ".tsx",
-        "path": "frontend/src/features/tramitacoes/CardPrevisaoIA.tsx"
+        "path": "frontend/src/features/proposicoes/components/BottleneckAnalytics.tsx"
       },
       {
-        "name": "TimelineTramitacao.tsx",
+        "name": "BreakdownFaseCard.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 3703,
+        "size": 1822,
         "extension": ".tsx",
-        "path": "frontend/src/features/tramitacoes/TimelineTramitacao.tsx"
+        "path": "frontend/src/features/proposicoes/components/BreakdownFaseCard.tsx"
+      },
+      {
+        "name": "DataReliability.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4889,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/DataReliability.tsx"
+      },
+      {
+        "name": "EventTimeline.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 19712,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/EventTimeline.tsx"
+      },
+      {
+        "name": "HouseTransitDiagram.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4698,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/HouseTransitDiagram.tsx"
+      },
+      {
+        "name": "HouseTransitions.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5792,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/HouseTransitions.tsx"
+      },
+      {
+        "name": "PhaseTimeline.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 10986,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/PhaseTimeline.tsx"
+      },
+      {
+        "name": "PipelineStage.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2019,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/PipelineStage.tsx"
+      },
+      {
+        "name": "PropositionsTable.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 8748,
+        "extension": ".tsx",
+        "path": "frontend/src/features/proposicoes/components/PropositionsTable.tsx"
       },
       {
         "name": "index.css",
         "type": "file",
         "language": "CSS",
-        "size": 854,
+        "size": 3042,
         "extension": ".css",
         "path": "frontend/src/index.css"
       },
@@ -1929,7 +3317,7 @@
         "name": "main.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 355,
+        "size": 360,
         "extension": ".tsx",
         "path": "frontend/src/main.tsx"
       },
@@ -1940,26 +3328,10 @@
         "children": []
       },
       {
-        "name": "cadastro-page.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 119,
-        "extension": ".tsx",
-        "path": "frontend/src/pages/cadastro-page.tsx"
-      },
-      {
-        "name": "consulta-proposicoes-page.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 2891,
-        "extension": ".tsx",
-        "path": "frontend/src/pages/consulta-proposicoes-page.tsx"
-      },
-      {
         "name": "dashboard-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1470,
+        "size": 30803,
         "extension": ".tsx",
         "path": "frontend/src/pages/dashboard-page.tsx"
       },
@@ -1967,39 +3339,53 @@
         "name": "detalhe-proposicao-page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 7607,
+        "size": 16340,
         "extension": ".tsx",
         "path": "frontend/src/pages/detalhe-proposicao-page.tsx"
-      },
-      {
-        "name": "login-page.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 107,
-        "extension": ".tsx",
-        "path": "frontend/src/pages/login-page.tsx"
-      },
-      {
-        "name": "recuperar-senha-page.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 143,
-        "extension": ".tsx",
-        "path": "frontend/src/pages/recuperar-senha-page.tsx"
-      },
-      {
-        "name": "relatorios-page.tsx",
-        "type": "file",
-        "language": "TypeScript",
-        "size": 4236,
-        "extension": ".tsx",
-        "path": "frontend/src/pages/relatorios-page.tsx"
       },
       {
         "name": "shared",
         "type": "directory",
         "path": "frontend/src/shared",
         "children": []
+      },
+      {
+        "name": "components",
+        "type": "directory",
+        "path": "frontend/src/shared/components",
+        "children": []
+      },
+      {
+        "name": "InfoTooltip.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1056,
+        "extension": ".tsx",
+        "path": "frontend/src/shared/components/InfoTooltip.tsx"
+      },
+      {
+        "name": "KPICard.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3558,
+        "extension": ".tsx",
+        "path": "frontend/src/shared/components/KPICard.tsx"
+      },
+      {
+        "name": "MetricCard.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1032,
+        "extension": ".tsx",
+        "path": "frontend/src/shared/components/MetricCard.tsx"
+      },
+      {
+        "name": "ThemeToggle.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1254,
+        "extension": ".tsx",
+        "path": "frontend/src/shared/components/ThemeToggle.tsx"
       },
       {
         "name": "constants",
@@ -2011,9 +3397,31 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 809,
+        "size": 556,
         "extension": ".ts",
         "path": "frontend/src/shared/constants/index.ts"
+      },
+      {
+        "name": "kpi-config.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2686,
+        "extension": ".ts",
+        "path": "frontend/src/shared/constants/kpi-config.ts"
+      },
+      {
+        "name": "contexts",
+        "type": "directory",
+        "path": "frontend/src/shared/contexts",
+        "children": []
+      },
+      {
+        "name": "ThemeContext.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1880,
+        "extension": ".tsx",
+        "path": "frontend/src/shared/contexts/ThemeContext.tsx"
       },
       {
         "name": "lib",
@@ -2025,7 +3433,7 @@
         "name": "api.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6552,
+        "size": 8886,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/api.ts"
       },
@@ -2044,10 +3452,34 @@
         "path": "frontend/src/shared/lib/hooks/use-debounce.ts"
       },
       {
+        "name": "useDashboard.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 11492,
+        "extension": ".ts",
+        "path": "frontend/src/shared/lib/hooks/useDashboard.ts"
+      },
+      {
+        "name": "useProposicao.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 14629,
+        "extension": ".ts",
+        "path": "frontend/src/shared/lib/hooks/useProposicao.ts"
+      },
+      {
+        "name": "mappers.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 9657,
+        "extension": ".ts",
+        "path": "frontend/src/shared/lib/mappers.ts"
+      },
+      {
         "name": "mock-data.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 15012,
+        "size": 15647,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/mock-data.ts"
       },
@@ -2055,7 +3487,7 @@
         "name": "utils.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2323,
+        "size": 2600,
         "extension": ".ts",
         "path": "frontend/src/shared/lib/utils.ts"
       },
@@ -2069,7 +3501,7 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2294,
+        "size": 3425,
         "extension": ".ts",
         "path": "frontend/src/shared/types/index.ts"
       },
@@ -2083,7 +3515,7 @@
         "name": "index.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 7926,
+        "size": 7229,
         "extension": ".tsx",
         "path": "frontend/src/shared/ui/index.tsx"
       },
@@ -2097,9 +3529,17 @@
         "name": "ProposicaoCard.test.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1972,
+        "size": 2219,
         "extension": ".tsx",
         "path": "frontend/src/test/ProposicaoCard.test.tsx"
+      },
+      {
+        "name": "ThemeToggle.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1738,
+        "extension": ".tsx",
+        "path": "frontend/src/test/ThemeToggle.test.tsx"
       },
       {
         "name": "badge.test.tsx",
@@ -2126,6 +3566,14 @@
         "path": "frontend/src/test/empty-state.test.tsx"
       },
       {
+        "name": "mappers.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 10030,
+        "extension": ".ts",
+        "path": "frontend/src/test/mappers.test.ts"
+      },
+      {
         "name": "setup.test.ts",
         "type": "file",
         "language": "TypeScript",
@@ -2150,10 +3598,18 @@
         "path": "frontend/src/test/spinner.test.tsx"
       },
       {
+        "name": "use-debounce.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1907,
+        "extension": ".ts",
+        "path": "frontend/src/test/use-debounce.test.ts"
+      },
+      {
         "name": "utils.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1854,
+        "size": 2057,
         "extension": ".ts",
         "path": "frontend/src/test/utils.test.ts"
       },
@@ -2169,7 +3625,7 @@
         "name": "tailwind.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 1660,
+        "size": 3178,
         "extension": ".js",
         "path": "frontend/tailwind.config.js"
       },
@@ -2190,36 +3646,182 @@
         "path": "frontend/tsconfig.node.json"
       },
       {
+        "name": "vercel.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 80,
+        "extension": ".json",
+        "path": "frontend/vercel.json"
+      },
+      {
         "name": "vite.config.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1114,
+        "size": 1295,
         "extension": ".ts",
         "path": "frontend/vite.config.ts"
       },
       {
-        "name": "issue_mapping.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 9994,
-        "extension": ".json",
-        "path": "issue_mapping.json"
+        "name": "infra",
+        "type": "directory",
+        "path": "infra",
+        "children": []
       },
       {
-        "name": "issues_all.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 64432,
-        "extension": ".json",
-        "path": "issues_all.json"
+        "name": "homelab",
+        "type": "directory",
+        "path": "infra/homelab",
+        "children": []
       },
       {
-        "name": "pr_body.txt",
+        "name": "docker-compose.yml",
         "type": "file",
-        "language": "Text",
-        "size": 1951,
-        "extension": ".txt",
-        "path": "pr_body.txt"
+        "language": "YAML",
+        "size": 2114,
+        "extension": ".yml",
+        "path": "infra/homelab/docker-compose.yml"
+      },
+      {
+        "name": "frontend.Dockerfile",
+        "type": "file",
+        "language": "Unknown",
+        "size": 648,
+        "extension": ".Dockerfile",
+        "path": "infra/homelab/frontend.Dockerfile"
+      },
+      {
+        "name": "nginx.conf",
+        "type": "file",
+        "language": "Config",
+        "size": 1024,
+        "extension": ".conf",
+        "path": "infra/homelab/nginx.conf"
+      },
+      {
+        "name": "scripts",
+        "type": "directory",
+        "path": "scripts",
+        "children": []
+      },
+      {
+        "name": "ci",
+        "type": "directory",
+        "path": "scripts/ci",
+        "children": []
+      },
+      {
+        "name": "backend.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1949,
+        "extension": ".sh",
+        "path": "scripts/ci/backend.sh"
+      },
+      {
+        "name": "frontend.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 631,
+        "extension": ".sh",
+        "path": "scripts/ci/frontend.sh"
+      },
+      {
+        "name": "test.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 275,
+        "extension": ".sh",
+        "path": "scripts/ci/test.sh"
+      },
+      {
+        "name": "common.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1422,
+        "extension": ".sh",
+        "path": "scripts/common.sh"
+      },
+      {
+        "name": "db",
+        "type": "directory",
+        "path": "scripts/db",
+        "children": []
+      },
+      {
+        "name": "init.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 293,
+        "extension": ".sh",
+        "path": "scripts/db/init.sh"
+      },
+      {
+        "name": "migrate.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 477,
+        "extension": ".sh",
+        "path": "scripts/db/migrate.sh"
+      },
+      {
+        "name": "dev",
+        "type": "directory",
+        "path": "scripts/dev",
+        "children": []
+      },
+      {
+        "name": "down.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 338,
+        "extension": ".sh",
+        "path": "scripts/dev/down.sh"
+      },
+      {
+        "name": "seed.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 254,
+        "extension": ".sh",
+        "path": "scripts/dev/seed.sh"
+      },
+      {
+        "name": "setup-hooks.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 4750,
+        "extension": ".sh",
+        "path": "scripts/dev/setup-hooks.sh"
+      },
+      {
+        "name": "up.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1060,
+        "extension": ".sh",
+        "path": "scripts/dev/up.sh"
+      },
+      {
+        "name": "workers.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 275,
+        "extension": ".sh",
+        "path": "scripts/dev/workers.sh"
+      },
+      {
+        "name": "gcp",
+        "type": "directory",
+        "path": "scripts/gcp",
+        "children": []
+      },
+      {
+        "name": "up.sh",
+        "type": "file",
+        "language": "Shell",
+        "size": 1642,
+        "extension": ".sh",
+        "path": "scripts/gcp/up.sh"
       },
       {
         "name": "squad-dashboard",
@@ -2236,12 +3838,12 @@
         "path": "squad-dashboard/.gitignore"
       },
       {
-        "name": "AUTOMATION.md",
+        "name": "AGENTS.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1726,
+        "size": 926,
         "extension": ".md",
-        "path": "squad-dashboard/AUTOMATION.md"
+        "path": "squad-dashboard/AGENTS.md"
       },
       {
         "name": "METRICS.md",
@@ -2255,7 +3857,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 8791,
+        "size": 10547,
         "extension": ".md",
         "path": "squad-dashboard/README.md"
       },
@@ -2321,7 +3923,7 @@
         "name": "generate-github-data.mjs",
         "type": "file",
         "language": "Unknown",
-        "size": 14448,
+        "size": 14784,
         "extension": ".mjs",
         "path": "squad-dashboard/scripts/generate-github-data.mjs"
       },
@@ -2810,35 +4412,11 @@
         "size": 456,
         "extension": ".ts",
         "path": "squad-dashboard/vitest.config.ts"
-      },
-      {
-        "name": "start_dev.sh",
-        "type": "file",
-        "language": "Shell",
-        "size": 2896,
-        "extension": ".sh",
-        "path": "start_dev.sh"
-      },
-      {
-        "name": "start_gcp.sh",
-        "type": "file",
-        "language": "Shell",
-        "size": 2805,
-        "extension": ".sh",
-        "path": "start_gcp.sh"
-      },
-      {
-        "name": "test_all.sh",
-        "type": "file",
-        "language": "Shell",
-        "size": 2528,
-        "extension": ".sh",
-        "path": "test_all.sh"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-07-01T09:43:17.333669",
+    "extracted_at": "2026-07-02T08:58:49.380482",
     "file_path": "data/silver/hierarchy_2026-1-Squad13.json"
   }
 }

@@ -2,7 +2,7 @@
   "repository": "2026-1-Mapa_L.I.L.A.S",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-07-01T09:40:05.594985",
+  "extracted_at": "2026-07-02T08:55:37.642863",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -102,6 +102,14 @@
         "children": []
       },
       {
+        "name": "backend-tests.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 933,
+        "extension": ".yml",
+        "path": ".github/workflows/backend-tests.yml"
+      },
+      {
         "name": "ci-docker.yml",
         "type": "file",
         "language": "YAML",
@@ -132,6 +140,14 @@
         "size": 615,
         "extension": ".yml",
         "path": ".github/workflows/deploy-frontend.yml"
+      },
+      {
+        "name": "frontend-e2e.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 730,
+        "extension": ".yml",
+        "path": ".github/workflows/frontend-e2e.yml"
       },
       {
         "name": "lint.yml",
@@ -360,12 +376,28 @@
         "path": "backend/app/schemas/camara.py"
       },
       {
+        "name": "external_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 594,
+        "extension": ".py",
+        "path": "backend/app/schemas/external_api.py"
+      },
+      {
         "name": "graficos.py",
         "type": "file",
         "language": "Python",
         "size": 1293,
         "extension": ".py",
         "path": "backend/app/schemas/graficos.py"
+      },
+      {
+        "name": "projeto.py",
+        "type": "file",
+        "language": "Python",
+        "size": 852,
+        "extension": ".py",
+        "path": "backend/app/schemas/projeto.py"
       },
       {
         "name": "senado.py",
@@ -385,7 +417,7 @@
         "name": "camara_client.py",
         "type": "file",
         "language": "Python",
-        "size": 3119,
+        "size": 3268,
         "extension": ".py",
         "path": "backend/app/services/camara_client.py"
       },
@@ -409,7 +441,7 @@
         "name": "nlp_service.py",
         "type": "file",
         "language": "Python",
-        "size": 2118,
+        "size": 3764,
         "extension": ".py",
         "path": "backend/app/services/nlp_service.py"
       },
@@ -417,7 +449,7 @@
         "name": "normalizer.py",
         "type": "file",
         "language": "Python",
-        "size": 16421,
+        "size": 16450,
         "extension": ".py",
         "path": "backend/app/services/normalizer.py"
       },
@@ -425,7 +457,7 @@
         "name": "senado_client.py",
         "type": "file",
         "language": "Python",
-        "size": 2464,
+        "size": 2724,
         "extension": ".py",
         "path": "backend/app/services/senado_client.py"
       },
@@ -484,6 +516,20 @@
         "path": "backend/tests/conftest.py"
       },
       {
+        "name": "fixtures",
+        "type": "directory",
+        "path": "backend/tests/fixtures",
+        "children": []
+      },
+      {
+        "name": "golden_dataset.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 687,
+        "extension": ".json",
+        "path": "backend/tests/fixtures/golden_dataset.json"
+      },
+      {
         "name": "test_cache_endpoints.py",
         "type": "file",
         "language": "Python",
@@ -495,7 +541,7 @@
         "name": "test_camara_client_unit.py",
         "type": "file",
         "language": "Python",
-        "size": 2626,
+        "size": 3300,
         "extension": ".py",
         "path": "backend/tests/test_camara_client_unit.py"
       },
@@ -511,17 +557,17 @@
         "name": "test_collector_unit.py",
         "type": "file",
         "language": "Python",
-        "size": 4280,
+        "size": 4458,
         "extension": ".py",
         "path": "backend/tests/test_collector_unit.py"
       },
       {
-        "name": "test_dashboard.py",
+        "name": "test_frontend_contract.py",
         "type": "file",
         "language": "Python",
-        "size": 2172,
+        "size": 1857,
         "extension": ".py",
-        "path": "backend/tests/test_dashboard.py"
+        "path": "backend/tests/test_frontend_contract.py"
       },
       {
         "name": "test_graficos_resumo.py",
@@ -548,6 +594,14 @@
         "path": "backend/tests/test_merge_reports.py"
       },
       {
+        "name": "test_nlp_accuracy.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1755,
+        "extension": ".py",
+        "path": "backend/tests/test_nlp_accuracy.py"
+      },
+      {
         "name": "test_nlp_service.py",
         "type": "file",
         "language": "Python",
@@ -559,7 +613,7 @@
         "name": "test_normalizer_unit.py",
         "type": "file",
         "language": "Python",
-        "size": 5561,
+        "size": 5807,
         "extension": ".py",
         "path": "backend/tests/test_normalizer_unit.py"
       },
@@ -575,7 +629,7 @@
         "name": "test_senado_client_unit.py",
         "type": "file",
         "language": "Python",
-        "size": 2536,
+        "size": 2925,
         "extension": ".py",
         "path": "backend/tests/test_senado_client_unit.py"
       },
@@ -702,12 +756,36 @@
         "path": "docs/Arquitetura/Arquitetura_Tecnica.md"
       },
       {
+        "name": "Automacao_Ingestao.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3416,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Automacao_Ingestao.md"
+      },
+      {
         "name": "C4_Model.md",
         "type": "file",
         "language": "Markdown",
         "size": 3173,
         "extension": ".md",
         "path": "docs/Arquitetura/C4_Model.md"
+      },
+      {
+        "name": "CI_CD.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2751,
+        "extension": ".md",
+        "path": "docs/Arquitetura/CI_CD.md"
+      },
+      {
+        "name": "Deploy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2285,
+        "extension": ".md",
+        "path": "docs/Arquitetura/Deploy.md"
       },
       {
         "name": "Docker.md",
@@ -1168,32 +1246,26 @@
         "path": "docs/Estudos/Sprint11/viabilidade_ranking_parlamentares.md"
       },
       {
-        "name": "NLP com AI",
-        "type": "directory",
-        "path": "docs/NLP com AI",
-        "children": []
-      },
-      {
-        "name": "ai_integration_nlp.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 3945,
-        "extension": ".md",
-        "path": "docs/NLP com AI/ai_integration_nlp.md"
-      },
-      {
         "name": "Qualidade",
         "type": "directory",
         "path": "docs/Qualidade",
         "children": []
       },
       {
-        "name": "Mapeamento SonarQube.pdf",
+        "name": "Linter.md",
         "type": "file",
-        "language": "PDF",
-        "size": 45306,
-        "extension": ".pdf",
-        "path": "docs/Qualidade/Mapeamento SonarQube.pdf"
+        "language": "Markdown",
+        "size": 1290,
+        "extension": ".md",
+        "path": "docs/Qualidade/Linter.md"
+      },
+      {
+        "name": "Testes.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1246,
+        "extension": ".md",
+        "path": "docs/Qualidade/Testes.md"
       },
       {
         "name": "image.png",
@@ -1207,7 +1279,7 @@
         "name": "index.md",
         "type": "file",
         "language": "Markdown",
-        "size": 312,
+        "size": 1521,
         "extension": ".md",
         "path": "docs/Qualidade/index.md"
       },
@@ -1229,7 +1301,7 @@
         "name": "release_02.md",
         "type": "file",
         "language": "Markdown",
-        "size": 4132,
+        "size": 4607,
         "extension": ".md",
         "path": "docs/Release Notes/release_02.md"
       },
@@ -1477,7 +1549,7 @@
         "name": "ingestion-history.json",
         "type": "file",
         "language": "JSON",
-        "size": 4878,
+        "size": 5163,
         "extension": ".json",
         "path": "docs/ingestion/ingestion-history.json"
       },
@@ -1550,10 +1622,92 @@
         "path": "frontend/README.md"
       },
       {
+        "name": "cypress.config.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 226,
+        "extension": ".js",
+        "path": "frontend/cypress.config.js"
+      },
+      {
+        "name": "cypress",
+        "type": "directory",
+        "path": "frontend/cypress",
+        "children": []
+      },
+      {
+        "name": "e2e",
+        "type": "directory",
+        "path": "frontend/cypress/e2e",
+        "children": []
+      },
+      {
+        "name": "graficos.cy.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 448,
+        "extension": ".js",
+        "path": "frontend/cypress/e2e/graficos.cy.js"
+      },
+      {
+        "name": "home.cy.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 776,
+        "extension": ".js",
+        "path": "frontend/cypress/e2e/home.cy.js"
+      },
+      {
+        "name": "projetos.cy.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 595,
+        "extension": ".js",
+        "path": "frontend/cypress/e2e/projetos.cy.js"
+      },
+      {
+        "name": "fixtures",
+        "type": "directory",
+        "path": "frontend/cypress/fixtures",
+        "children": []
+      },
+      {
+        "name": "graficos_resumo.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 318,
+        "extension": ".json",
+        "path": "frontend/cypress/fixtures/graficos_resumo.json"
+      },
+      {
+        "name": "projetos_filtros.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 78,
+        "extension": ".json",
+        "path": "frontend/cypress/fixtures/projetos_filtros.json"
+      },
+      {
+        "name": "projetos_lista.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 437,
+        "extension": ".json",
+        "path": "frontend/cypress/fixtures/projetos_lista.json"
+      },
+      {
+        "name": "stats.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 81,
+        "extension": ".json",
+        "path": "frontend/cypress/fixtures/stats.json"
+      },
+      {
         "name": "eslint.config.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 568,
+        "size": 945,
         "extension": ".js",
         "path": "frontend/eslint.config.js"
       },
@@ -1569,7 +1723,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 108472,
+        "size": 179633,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -1577,7 +1731,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 725,
+        "size": 814,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -2121,7 +2275,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 3401,
+        "size": 4485,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -2135,7 +2289,7 @@
         "name": "main.html",
         "type": "file",
         "language": "HTML",
-        "size": 48276,
+        "size": 52859,
         "extension": ".html",
         "path": "overrides/main.html"
       },
@@ -3134,7 +3288,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-07-01T09:43:15.243577",
+    "extracted_at": "2026-07-02T08:58:47.352256",
     "file_path": "data/silver/hierarchy_2026-1-Mapa_L.I.L.A.S.json"
   }
 }

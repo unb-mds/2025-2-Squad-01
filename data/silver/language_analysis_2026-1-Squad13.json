@@ -2,19 +2,87 @@
   "repository": "2026-1-Squad13",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-07-01T09:40:12.207881",
+  "analyzed_at": "2026-07-02T08:55:43.234931",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 295,
-  "total_bytes": 1746683,
+  "total_files": 469,
+  "total_bytes": 2618639,
   "languages": [
     {
+      "language": "Python",
+      "file_count": 203,
+      "total_bytes": 896155,
+      "percentage": 34.22,
+      "files": [
+        {
+          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
+          "name": "senado_adapter.py",
+          "size": 39174,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/infrastructure/repositories/sql_dashboard_repository.py",
+          "name": "sql_dashboard_repository.py",
+          "size": 38196,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/application/services/preencher_lacunas_service.py",
+          "name": "preencher_lacunas_service.py",
+          "size": 35888,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/application/services/listar_movimentacoes_service.py",
+          "name": "listar_movimentacoes_service.py",
+          "size": 26858,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_preencher_lacunas_service.py",
+          "name": "test_preencher_lacunas_service.py",
+          "size": 24865,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_listar_movimentacoes_service.py",
+          "name": "test_listar_movimentacoes_service.py",
+          "size": 21722,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/infrastructure/adapters/camara_adapter.py",
+          "name": "camara_adapter.py",
+          "size": 20437,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/application/services/dashboard_service.py",
+          "name": "dashboard_service.py",
+          "size": 18678,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/infrastructure/database/alembic/versions/71f8ba3e30f7_baseline_and_delay_metrics.py",
+          "name": "71f8ba3e30f7_baseline_and_delay_metrics.py",
+          "size": 17258,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/src/application/services/coletar_em_lote_service.py",
+          "name": "coletar_em_lote_service.py",
+          "size": 17003,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
       "language": "JSON",
-      "file_count": 11,
-      "total_bytes": 562306,
-      "percentage": 32.19,
+      "file_count": 10,
+      "total_bytes": 487960,
+      "percentage": 18.63,
       "files": [
         {
           "path": "frontend/package-lock.json",
@@ -32,18 +100,6 @@
           "path": "squad-dashboard/public/data/github-stats.json",
           "name": "github-stats.json",
           "size": 67923,
-          "extension": ".json"
-        },
-        {
-          "path": "issues_all.json",
-          "name": "issues_all.json",
-          "size": 64432,
-          "extension": ".json"
-        },
-        {
-          "path": "issue_mapping.json",
-          "name": "issue_mapping.json",
-          "size": 9994,
           "extension": ".json"
         },
         {
@@ -75,175 +131,49 @@
           "name": "tsconfig.node.json",
           "size": 213,
           "extension": ".json"
-        }
-      ]
-    },
-    {
-      "language": "Lock File",
-      "file_count": 1,
-      "total_bytes": 408334,
-      "percentage": 23.38,
-      "files": [
-        {
-          "path": "backend/uv.lock",
-          "name": "uv.lock",
-          "size": 408334,
-          "extension": ".lock"
-        }
-      ]
-    },
-    {
-      "language": "Python",
-      "file_count": 113,
-      "total_bytes": 318902,
-      "percentage": 18.26,
-      "files": [
-        {
-          "path": "backend/src/application/services/dashboard_service.py",
-          "name": "dashboard_service.py",
-          "size": 22471,
-          "extension": ".py"
         },
         {
-          "path": "backend/tests/unit/test_dashboard_service_extended.py",
-          "name": "test_dashboard_service_extended.py",
-          "size": 12754,
-          "extension": ".py"
+          "path": "squad-dashboard/tsconfig.node.json",
+          "name": "tsconfig.node.json",
+          "size": 213,
+          "extension": ".json"
         },
         {
-          "path": "backend/src/infrastructure/adapters/senado_adapter.py",
-          "name": "senado_adapter.py",
-          "size": 12420,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_classificar_evento.py",
-          "name": "test_classificar_evento.py",
-          "size": 9742,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/presentation/controllers/proposicao_controller.py",
-          "name": "proposicao_controller.py",
-          "size": 9468,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/domain/classificar_evento.py",
-          "name": "classificar_evento.py",
-          "size": 8604,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/unit/test_sql_evento_tramitacao_repository.py",
-          "name": "test_sql_evento_tramitacao_repository.py",
-          "size": 8405,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/seed.py",
-          "name": "seed.py",
-          "size": 7340,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/infrastructure/repositories/sql_proposicao_repository.py",
-          "name": "sql_proposicao_repository.py",
-          "size": 7255,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/src/application/services/normalizar_tramitacao_service.py",
-          "name": "normalizar_tramitacao_service.py",
-          "size": 7163,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
-      "language": "TypeScript",
-      "file_count": 81,
-      "total_bytes": 214759,
-      "percentage": 12.3,
-      "files": [
-        {
-          "path": "frontend/src/shared/lib/mock-data.ts",
-          "name": "mock-data.ts",
-          "size": 15012,
-          "extension": ".ts"
-        },
-        {
-          "path": "squad-dashboard/src/pages/board-page.tsx",
-          "name": "board-page.tsx",
-          "size": 12399,
-          "extension": ".tsx"
-        },
-        {
-          "path": "squad-dashboard/src/widgets/project-burnup-chart.tsx",
-          "name": "project-burnup-chart.tsx",
-          "size": 10987,
-          "extension": ".tsx"
-        },
-        {
-          "path": "squad-dashboard/src/mocks/tasks.ts",
-          "name": "tasks.ts",
-          "size": 10332,
-          "extension": ".ts"
-        },
-        {
-          "path": "frontend/src/features/dashboard/DashboardComponents.tsx",
-          "name": "DashboardComponents.tsx",
-          "size": 9350,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/src/shared/ui/index.tsx",
-          "name": "index.tsx",
-          "size": 7926,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/src/pages/detalhe-proposicao-page.tsx",
-          "name": "detalhe-proposicao-page.tsx",
-          "size": 7607,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/src/features/relatorios/RelatorioComponents.tsx",
-          "name": "RelatorioComponents.tsx",
-          "size": 6941,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/src/features/filtros/PainelFiltros.tsx",
-          "name": "PainelFiltros.tsx",
-          "size": 6766,
-          "extension": ".tsx"
-        },
-        {
-          "path": "frontend/src/shared/lib/api.ts",
-          "name": "api.ts",
-          "size": 6552,
-          "extension": ".ts"
+          "path": "frontend/vercel.json",
+          "name": "vercel.json",
+          "size": 80,
+          "extension": ".json"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 49,
-      "total_bytes": 193868,
-      "percentage": 11.1,
+      "file_count": 97,
+      "total_bytes": 411169,
+      "percentage": 15.7,
       "files": [
         {
-          "path": "CLAUDE.md",
-          "name": "CLAUDE.md",
-          "size": 21921,
+          "path": "docs/frontend/08-legacy-monolithic-spec.md",
+          "name": "08-legacy-monolithic-spec.md",
+          "size": 25814,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/domain/status-normalization.md",
+          "name": "status-normalization.md",
+          "size": 25535,
           "extension": ".md"
         },
         {
           "path": "docs/story-map.md",
           "name": "story-map.md",
-          "size": 19153,
+          "size": 23013,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/infrastructure/ingestion-architecture.md",
+          "name": "ingestion-architecture.md",
+          "size": 21169,
           "extension": ".md"
         },
         {
@@ -253,66 +183,234 @@
           "extension": ".md"
         },
         {
-          "path": "ARCHITECTURE.md",
-          "name": "ARCHITECTURE.md",
-          "size": 12045,
+          "path": ".agents/skills/pr-manager/SKILL.md",
+          "name": "SKILL.md",
+          "size": 12983,
           "extension": ".md"
         },
         {
-          "path": "docs/SRS.md",
-          "name": "SRS.md",
-          "size": 9712,
+          "path": "docs/domain/timeline-walkthrough.md",
+          "name": "timeline-walkthrough.md",
+          "size": 10995,
           "extension": ".md"
         },
         {
           "path": "squad-dashboard/README.md",
           "name": "README.md",
-          "size": 8791,
+          "size": 10547,
           "extension": ".md"
         },
         {
-          "path": "docs/adr/ADR-008-github-actions-data-pipeline.md",
-          "name": "ADR-008-github-actions-data-pipeline.md",
-          "size": 7052,
+          "path": "ARCHITECTURE.md",
+          "name": "ARCHITECTURE.md",
+          "size": 9850,
           "extension": ".md"
         },
         {
-          "path": ".gemini/skills/pr-reviewer/references/project-memory.md",
-          "name": "project-memory.md",
-          "size": 5840,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/ai/project-memory.md",
-          "name": "project-memory.md",
-          "size": 5840,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/adr/ADR-009-squad-dashboard-ghpages.md",
-          "name": "ADR-009-squad-dashboard-ghpages.md",
-          "size": 5654,
+          "path": "docs/SRS.md",
+          "name": "SRS.md",
+          "size": 9738,
           "extension": ".md"
         }
       ]
     },
     {
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 391520,
+      "percentage": 14.95,
+      "files": [
+        {
+          "path": "backend/uv.lock",
+          "name": "uv.lock",
+          "size": 391520,
+          "extension": ".lock"
+        }
+      ]
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 89,
+      "total_bytes": 343355,
+      "percentage": 13.11,
+      "files": [
+        {
+          "path": "frontend/src/pages/dashboard-page.tsx",
+          "name": "dashboard-page.tsx",
+          "size": 30803,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/features/proposicoes/components/EventTimeline.tsx",
+          "name": "EventTimeline.tsx",
+          "size": 19712,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/pages/detalhe-proposicao-page.tsx",
+          "name": "detalhe-proposicao-page.tsx",
+          "size": 16340,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/shared/lib/mock-data.ts",
+          "name": "mock-data.ts",
+          "size": 15647,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/src/shared/lib/hooks/useProposicao.ts",
+          "name": "useProposicao.ts",
+          "size": 14629,
+          "extension": ".ts"
+        },
+        {
+          "path": "frontend/src/features/proposicoes/components/AIInsightsCard.tsx",
+          "name": "AIInsightsCard.tsx",
+          "size": 13641,
+          "extension": ".tsx"
+        },
+        {
+          "path": "squad-dashboard/src/pages/board-page.tsx",
+          "name": "board-page.tsx",
+          "size": 12399,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/shared/lib/hooks/useDashboard.ts",
+          "name": "useDashboard.ts",
+          "size": 11492,
+          "extension": ".ts"
+        },
+        {
+          "path": "squad-dashboard/src/widgets/project-burnup-chart.tsx",
+          "name": "project-burnup-chart.tsx",
+          "size": 10987,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/features/proposicoes/components/PhaseTimeline.tsx",
+          "name": "PhaseTimeline.tsx",
+          "size": 10986,
+          "extension": ".tsx"
+        }
+      ]
+    },
+    {
+      "language": "Shell",
+      "file_count": 25,
+      "total_bytes": 29710,
+      "percentage": 1.13,
+      "files": [
+        {
+          "path": "scripts/dev/setup-hooks.sh",
+          "name": "setup-hooks.sh",
+          "size": 4750,
+          "extension": ".sh"
+        },
+        {
+          "path": ".agents/skills/pr-manager/scripts/review-pr.sh",
+          "name": "review-pr.sh",
+          "size": 4120,
+          "extension": ".sh"
+        },
+        {
+          "path": ".agents/skills/github-issue-governor/scripts/create-issue.sh",
+          "name": "create-issue.sh",
+          "size": 3267,
+          "extension": ".sh"
+        },
+        {
+          "path": ".agents/skills/test-coverage-enforcer/scripts/check-test-coverage.sh",
+          "name": "check-test-coverage.sh",
+          "size": 2547,
+          "extension": ".sh"
+        },
+        {
+          "path": "scripts/ci/backend.sh",
+          "name": "backend.sh",
+          "size": 1949,
+          "extension": ".sh"
+        },
+        {
+          "path": "scripts/gcp/up.sh",
+          "name": "up.sh",
+          "size": 1642,
+          "extension": ".sh"
+        },
+        {
+          "path": "squad-dashboard/scripts/sync-github-metadata.sh",
+          "name": "sync-github-metadata.sh",
+          "size": 1517,
+          "extension": ".sh"
+        },
+        {
+          "path": "scripts/common.sh",
+          "name": "common.sh",
+          "size": 1422,
+          "extension": ".sh"
+        },
+        {
+          "path": ".agents/skills/architecture-compliance-checker/scripts/verify-layers.sh",
+          "name": "verify-layers.sh",
+          "size": 1307,
+          "extension": ".sh"
+        },
+        {
+          "path": "scripts/dev/up.sh",
+          "name": "up.sh",
+          "size": 1060,
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
       "language": "Unknown",
-      "file_count": 6,
-      "total_bytes": 15141,
-      "percentage": 0.87,
+      "file_count": 11,
+      "total_bytes": 20361,
+      "percentage": 0.78,
       "files": [
         {
           "path": "squad-dashboard/scripts/generate-github-data.mjs",
           "name": "generate-github-data.mjs",
-          "size": 14448,
+          "size": 14784,
           "extension": ".mjs"
+        },
+        {
+          "path": ".env.example",
+          "name": ".env.example",
+          "size": 1503,
+          "extension": ".example"
+        },
+        {
+          "path": "backend/.coveragerc",
+          "name": ".coveragerc",
+          "size": 1071,
+          "extension": ".coveragerc"
         },
         {
           "path": "backend/.env.example",
           "name": ".env.example",
-          "size": 658,
+          "size": 844,
           "extension": ".example"
+        },
+        {
+          "path": ".mailmap",
+          "name": ".mailmap",
+          "size": 772,
+          "extension": ".mailmap"
+        },
+        {
+          "path": "backend/src/infrastructure/database/alembic/script.py.mako",
+          "name": "script.py.mako",
+          "size": 704,
+          "extension": ".mako"
+        },
+        {
+          "path": "infra/homelab/frontend.Dockerfile",
+          "name": "frontend.Dockerfile",
+          "size": 648,
+          "extension": ".Dockerfile"
         },
         {
           "path": "frontend/.env.example",
@@ -331,87 +429,43 @@
           "name": ".gitkeep",
           "size": 0,
           "extension": ".gitkeep"
-        },
-        {
-          "path": "backend/src/infrastructure/workers/.gitkeep",
-          "name": ".gitkeep",
-          "size": 0,
-          "extension": ".gitkeep"
-        }
-      ]
-    },
-    {
-      "language": "Shell",
-      "file_count": 8,
-      "total_bytes": 11231,
-      "percentage": 0.64,
-      "files": [
-        {
-          "path": "start_dev.sh",
-          "name": "start_dev.sh",
-          "size": 2896,
-          "extension": ".sh"
-        },
-        {
-          "path": "start_gcp.sh",
-          "name": "start_gcp.sh",
-          "size": 2805,
-          "extension": ".sh"
-        },
-        {
-          "path": "test_all.sh",
-          "name": "test_all.sh",
-          "size": 2528,
-          "extension": ".sh"
-        },
-        {
-          "path": "squad-dashboard/scripts/sync-github-metadata.sh",
-          "name": "sync-github-metadata.sh",
-          "size": 1517,
-          "extension": ".sh"
-        },
-        {
-          "path": ".gemini/skills/pr-reviewer/scripts/review-pr.sh",
-          "name": "review-pr.sh",
-          "size": 933,
-          "extension": ".sh"
-        },
-        {
-          "path": ".gemini/skills/github-issue-governor/scripts/validate-labels.sh",
-          "name": "validate-labels.sh",
-          "size": 278,
-          "extension": ".sh"
-        },
-        {
-          "path": ".gemini/skills/github-issue-governor/scripts/create-issue.sh",
-          "name": "create-issue.sh",
-          "size": 166,
-          "extension": ".sh"
-        },
-        {
-          "path": ".gemini/skills/github-issue-governor/scripts/list-open-issues.sh",
-          "name": "list-open-issues.sh",
-          "size": 108,
-          "extension": ".sh"
         }
       ]
     },
     {
       "language": "YAML",
-      "file_count": 10,
-      "total_bytes": 8784,
-      "percentage": 0.5,
+      "file_count": 12,
+      "total_bytes": 14845,
+      "percentage": 0.57,
       "files": [
         {
           "path": "docker-compose.yml",
           "name": "docker-compose.yml",
-          "size": 1673,
+          "size": 3375,
+          "extension": ".yml"
+        },
+        {
+          "path": "infra/homelab/docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 2114,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/deploy-vercel-frontend.yml",
+          "name": "deploy-vercel-frontend.yml",
+          "size": 2112,
           "extension": ".yml"
         },
         {
           "path": ".github/workflows/deploy-squad-dashboard.yml",
           "name": "deploy-squad-dashboard.yml",
           "size": 1268,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/backend.yml",
+          "name": "backend.yml",
+          "size": 974,
           "extension": ".yml"
         },
         {
@@ -424,12 +478,6 @@
           "path": ".github/workflows/squad-dashboard-ci.yml",
           "name": "squad-dashboard-ci.yml",
           "size": 865,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/backend.yml",
-          "name": "backend.yml",
-          "size": 841,
           "extension": ".yml"
         },
         {
@@ -449,31 +497,19 @@
           "name": "cron-coleta.yml",
           "size": 726,
           "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/frontend.yml",
-          "name": "frontend.yml",
-          "size": 567,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/update-squad-dashboard-data.yml",
-          "name": "update-squad-dashboard-data.yml",
-          "size": 400,
-          "extension": ".yml"
         }
       ]
     },
     {
       "language": "JavaScript",
       "file_count": 5,
-      "total_bytes": 4036,
-      "percentage": 0.23,
+      "total_bytes": 5554,
+      "percentage": 0.21,
       "files": [
         {
           "path": "frontend/tailwind.config.js",
           "name": "tailwind.config.js",
-          "size": 1660,
+          "size": 3178,
           "extension": ".js"
         },
         {
@@ -503,10 +539,44 @@
       ]
     },
     {
+      "language": "INI",
+      "file_count": 1,
+      "total_bytes": 5036,
+      "percentage": 0.19,
+      "files": [
+        {
+          "path": "backend/alembic.ini",
+          "name": "alembic.ini",
+          "size": 5036,
+          "extension": ".ini"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 4059,
+      "percentage": 0.16,
+      "files": [
+        {
+          "path": "frontend/src/index.css",
+          "name": "index.css",
+          "size": 3042,
+          "extension": ".css"
+        },
+        {
+          "path": "squad-dashboard/src/index.css",
+          "name": "index.css",
+          "size": 1017,
+          "extension": ".css"
+        }
+      ]
+    },
+    {
       "language": "No Extension",
-      "file_count": 3,
-      "total_bytes": 2406,
-      "percentage": 0.14,
+      "file_count": 4,
+      "total_bytes": 2504,
+      "percentage": 0.1,
       "files": [
         {
           "path": "LICENSE",
@@ -517,7 +587,7 @@
         {
           "path": "backend/Dockerfile",
           "name": "Dockerfile",
-          "size": 919,
+          "size": 979,
           "extension": ""
         },
         {
@@ -525,40 +595,40 @@
           "name": "Dockerfile",
           "size": 427,
           "extension": ""
-        }
-      ]
-    },
-    {
-      "language": "CSS",
-      "file_count": 2,
-      "total_bytes": 1871,
-      "percentage": 0.11,
-      "files": [
-        {
-          "path": "squad-dashboard/src/index.css",
-          "name": "index.css",
-          "size": 1017,
-          "extension": ".css"
         },
         {
-          "path": "frontend/src/index.css",
-          "name": "index.css",
-          "size": 854,
-          "extension": ".css"
+          "path": "backend/src/infrastructure/database/alembic/README",
+          "name": "README",
+          "size": 38,
+          "extension": ""
         }
       ]
     },
     {
-      "language": "Text",
+      "language": "TOML",
       "file_count": 1,
-      "total_bytes": 1951,
-      "percentage": 0.11,
+      "total_bytes": 1515,
+      "percentage": 0.06,
       "files": [
         {
-          "path": "pr_body.txt",
-          "name": "pr_body.txt",
-          "size": 1951,
-          "extension": ".txt"
+          "path": "backend/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 1515,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
+      "language": "SQL",
+      "file_count": 1,
+      "total_bytes": 1661,
+      "percentage": 0.06,
+      "files": [
+        {
+          "path": "backend/src/infrastructure/database/seeds/bootstrap_seeds.sql",
+          "name": "bootstrap_seeds.sql",
+          "size": 1661,
+          "extension": ".sql"
         }
       ]
     },
@@ -566,7 +636,7 @@
       "language": "HTML",
       "file_count": 2,
       "total_bytes": 1163,
-      "percentage": 0.07,
+      "percentage": 0.04,
       "files": [
         {
           "path": "frontend/index.html",
@@ -583,29 +653,29 @@
       ]
     },
     {
-      "language": "TOML",
+      "language": "Config",
       "file_count": 1,
-      "total_bytes": 1091,
-      "percentage": 0.06,
+      "total_bytes": 1024,
+      "percentage": 0.04,
       "files": [
         {
-          "path": "backend/pyproject.toml",
-          "name": "pyproject.toml",
-          "size": 1091,
-          "extension": ".toml"
+          "path": "infra/homelab/nginx.conf",
+          "name": "nginx.conf",
+          "size": 1024,
+          "extension": ".conf"
         }
       ]
     },
     {
       "language": "Git Ignore",
       "file_count": 2,
-      "total_bytes": 840,
-      "percentage": 0.05,
+      "total_bytes": 875,
+      "percentage": 0.03,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 668,
+          "size": 703,
           "extension": ".gitignore"
         },
         {
@@ -615,10 +685,30 @@
           "extension": ".gitignore"
         }
       ]
+    },
+    {
+      "language": "Docker Ignore",
+      "file_count": 2,
+      "total_bytes": 173,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "backend/.dockerignore",
+          "name": ".dockerignore",
+          "size": 102,
+          "extension": ".dockerignore"
+        },
+        {
+          "path": "frontend/.dockerignore",
+          "name": ".dockerignore",
+          "size": 71,
+          "extension": ".dockerignore"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-07-01T09:43:17.331401",
+    "extracted_at": "2026-07-02T08:58:49.377372",
     "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
   }
 }
