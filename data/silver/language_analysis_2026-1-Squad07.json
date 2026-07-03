@@ -2,36 +2,54 @@
   "repository": "2026-1-Squad07",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-07-02T08:55:40.123804",
+  "analyzed_at": "2026-07-03T08:47:16.486548",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 210,
-  "total_bytes": 1495443,
+  "total_files": 333,
+  "total_bytes": 9685376,
   "languages": [
     {
       "language": "JSON",
-      "file_count": 13,
-      "total_bytes": 495948,
-      "percentage": 33.16,
+      "file_count": 16,
+      "total_bytes": 5113639,
+      "percentage": 52.8,
       "files": [
+        {
+          "path": "backend/data/dataset_laws_camara_full.json",
+          "name": "dataset_laws_camara_full.json",
+          "size": 3061460,
+          "extension": ".json"
+        },
+        {
+          "path": "backend/data/dataset_laws_camara.json",
+          "name": "dataset_laws_camara.json",
+          "size": 1394127,
+          "extension": ".json"
+        },
         {
           "path": "frontend/package-lock.json",
           "name": "package-lock.json",
-          "size": 321391,
+          "size": 468668,
           "extension": ".json"
         },
         {
           "path": "package-lock.json",
           "name": "package-lock.json",
-          "size": 124249,
+          "size": 123435,
           "extension": ".json"
         },
         {
           "path": "docs/metricas/metrics.json",
           "name": "metrics.json",
-          "size": 39252,
+          "size": 47569,
+          "extension": ".json"
+        },
+        {
+          "path": "backend/data/dataset_laws.json",
+          "name": "dataset_laws.json",
+          "size": 6987,
           "extension": ".json"
         },
         {
@@ -43,7 +61,7 @@
         {
           "path": "frontend/package.json",
           "name": "package.json",
-          "size": 2077,
+          "size": 2362,
           "extension": ".json"
         },
         {
@@ -57,43 +75,93 @@
           "name": "speckit.manifest.json",
           "size": 1298,
           "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 8,
+      "total_bytes": 2961564,
+      "percentage": 30.58,
+      "files": [
+        {
+          "path": "backend/app/models/tfidf_classifier.pkl",
+          "name": "tfidf_classifier.pkl",
+          "size": 2954269,
+          "extension": ".pkl"
         },
         {
-          "path": ".specify/integrations/codex.manifest.json",
-          "name": "codex.manifest.json",
-          "size": 1168,
-          "extension": ".json"
+          "path": "estudos/sprint1/Estudo(Next.js)",
+          "name": "Estudo(Next.js)",
+          "size": 4195,
+          "extension": ".js)"
         },
         {
-          "path": "frontend/tsconfig.json",
-          "name": "tsconfig.json",
-          "size": 670,
-          "extension": ".json"
+          "path": "backend/prisma/schema.prisma",
+          "name": "schema.prisma",
+          "size": 2079,
+          "extension": ".prisma"
         },
         {
-          "path": ".specify/workflows/workflow-registry.json",
-          "name": "workflow-registry.json",
-          "size": 392,
-          "extension": ".json"
+          "path": "frontend/eslint.config.mjs",
+          "name": "eslint.config.mjs",
+          "size": 487,
+          "extension": ".mjs"
+        },
+        {
+          "path": ".env.example",
+          "name": ".env.example",
+          "size": 318,
+          "extension": ".example"
+        },
+        {
+          "path": "frontend/postcss.config.mjs",
+          "name": "postcss.config.mjs",
+          "size": 94,
+          "extension": ".mjs"
+        },
+        {
+          "path": "backend/.env.example",
+          "name": ".env.example",
+          "size": 80,
+          "extension": ".example"
+        },
+        {
+          "path": "frontend/.env.example",
+          "name": ".env.example",
+          "size": 42,
+          "extension": ".example"
         }
       ]
     },
     {
       "language": "Markdown",
-      "file_count": 73,
-      "total_bytes": 337896,
-      "percentage": 22.6,
+      "file_count": 131,
+      "total_bytes": 692114,
+      "percentage": 7.15,
       "files": [
+        {
+          "path": "docs/architecture/ai-integration.md",
+          "name": "ai-integration.md",
+          "size": 24493,
+          "extension": ".md"
+        },
         {
           "path": "docs/metricas/AGENT.md",
           "name": "AGENT.md",
-          "size": 24213,
+          "size": 23649,
           "extension": ".md"
         },
         {
           "path": ".agents/skills/speckit-checklist/SKILL.md",
           "name": "SKILL.md",
           "size": 20311,
+          "extension": ".md"
+        },
+        {
+          "path": "specs/005-warnings-sidebar/tasks.md",
+          "name": "tasks.md",
+          "size": 19375,
           "extension": ".md"
         },
         {
@@ -109,53 +177,53 @@
           "extension": ".md"
         },
         {
+          "path": "estudos/sprint10/estudo_TDD_e_frameworks_de_teste.md",
+          "name": "estudo_TDD_e_frameworks_de_teste.md",
+          "size": 14808,
+          "extension": ".md"
+        },
+        {
           "path": ".agents/skills/speckit-clarify/SKILL.md",
           "name": "SKILL.md",
           "size": 14465,
           "extension": ".md"
         },
         {
-          "path": "docs/requisitos/rastreabilidade.md",
-          "name": "rastreabilidade.md",
-          "size": 12439,
+          "path": "specs/002-requirements-r2/ai-integration.md",
+          "name": "ai-integration.md",
+          "size": 13594,
           "extension": ".md"
         },
         {
-          "path": "docs/escopo/escopo_projeto.md",
-          "name": "escopo_projeto.md",
-          "size": 11539,
-          "extension": ".md"
-        },
-        {
-          "path": ".agents/skills/speckit-implement/SKILL.md",
-          "name": "SKILL.md",
-          "size": 10975,
-          "extension": ".md"
-        },
-        {
-          "path": ".agents/skills/speckit-analyze/SKILL.md",
-          "name": "SKILL.md",
-          "size": 10866,
-          "extension": ".md"
-        },
-        {
-          "path": ".agents/skills/speckit-tasks/SKILL.md",
-          "name": "SKILL.md",
-          "size": 9730,
+          "path": "estudos/sprint10/arquitetura-ia-nlp.md",
+          "name": "arquitetura-ia-nlp.md",
+          "size": 12859,
           "extension": ".md"
         }
       ]
     },
     {
       "language": "TypeScript",
-      "file_count": 64,
-      "total_bytes": 211502,
-      "percentage": 14.14,
+      "file_count": 86,
+      "total_bytes": 284342,
+      "percentage": 2.94,
       "files": [
         {
           "path": "frontend/src/components/ui/sidebar.tsx",
           "name": "sidebar.tsx",
           "size": 21547,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/app/law/[id]/page.tsx",
+          "name": "page.tsx",
+          "size": 16172,
+          "extension": ".tsx"
+        },
+        {
+          "path": "frontend/src/app/page.tsx",
+          "name": "page.tsx",
+          "size": 10199,
           "extension": ".tsx"
         },
         {
@@ -165,15 +233,9 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/src/app/page.tsx",
-          "name": "page.tsx",
-          "size": 9109,
-          "extension": ".tsx"
-        },
-        {
           "path": "frontend/src/app/upload/page.tsx",
           "name": "page.tsx",
-          "size": 8975,
+          "size": 9922,
           "extension": ".tsx"
         },
         {
@@ -195,22 +257,84 @@
           "extension": ".tsx"
         },
         {
-          "path": "frontend/src/app/law/[id]/page.tsx",
-          "name": "page.tsx",
-          "size": 8244,
+          "path": "frontend/src/app/profile/__tests__/page.test.tsx",
+          "name": "page.test.tsx",
+          "size": 7487,
           "extension": ".tsx"
         },
         {
           "path": "frontend/src/components/pages/SearchPage.tsx",
           "name": "SearchPage.tsx",
-          "size": 7248,
+          "size": 7400,
           "extension": ".tsx"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 59,
+      "total_bytes": 248555,
+      "percentage": 2.57,
+      "files": [
+        {
+          "path": "backend/scripts/train_classifier.py",
+          "name": "train_classifier.py",
+          "size": 30304,
+          "extension": ".py"
         },
         {
-          "path": "frontend/src/app/register/page.tsx",
-          "name": "page.tsx",
-          "size": 7030,
-          "extension": ".tsx"
+          "path": "docs/metricas/collect_metrics.py",
+          "name": "collect_metrics.py",
+          "size": 20977,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/scripts/build_dataset_camara.py",
+          "name": "build_dataset_camara.py",
+          "size": 17663,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_users.py",
+          "name": "test_users.py",
+          "size": 11534,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_laws.py",
+          "name": "test_laws.py",
+          "size": 9449,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_laws.py",
+          "name": "test_laws.py",
+          "size": 9449,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/unit/test_users.py",
+          "name": "test_users.py",
+          "size": 9266,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/services/analysis_provider.py",
+          "name": "analysis_provider.py",
+          "size": 9226,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/integration/test_analysis_api.py",
+          "name": "test_analysis_api.py",
+          "size": 8768,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/scripts/seed_demo_laws.py",
+          "name": "seed_demo_laws.py",
+          "size": 7955,
+          "extension": ".py"
         }
       ]
     },
@@ -218,7 +342,7 @@
       "language": "PNG Image",
       "file_count": 1,
       "total_bytes": 170822,
-      "percentage": 11.42,
+      "percentage": 1.76,
       "files": [
         {
           "path": "docs/prototipo/preview.png",
@@ -229,78 +353,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 25,
-      "total_bytes": 64150,
-      "percentage": 4.29,
-      "files": [
-        {
-          "path": "docs/metricas/collect_metrics.py",
-          "name": "collect_metrics.py",
-          "size": 20200,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_users.py",
-          "name": "test_users.py",
-          "size": 8694,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/scripts/seed_demo_laws.py",
-          "name": "seed_demo_laws.py",
-          "size": 7955,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_auth.py",
-          "name": "test_auth.py",
-          "size": 5691,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/tests/test_laws.py",
-          "name": "test_laws.py",
-          "size": 5292,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/api/users.py",
-          "name": "users.py",
-          "size": 2947,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/services/security.py",
-          "name": "security.py",
-          "size": 2852,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/models/user.py",
-          "name": "user.py",
-          "size": 1851,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/api/dependencies.py",
-          "name": "dependencies.py",
-          "size": 1789,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/api/auth.py",
-          "name": "auth.py",
-          "size": 1595,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "JPEG Image",
       "file_count": 1,
       "total_bytes": 59542,
-      "percentage": 3.98,
+      "percentage": 0.61,
       "files": [
         {
           "path": "docs/architecture/c4_system_context.jpeg",
@@ -314,7 +370,7 @@
       "language": "PowerShell",
       "file_count": 5,
       "total_bytes": 51815,
-      "percentage": 3.46,
+      "percentage": 0.53,
       "files": [
         {
           "path": ".specify/scripts/powershell/common.ps1",
@@ -351,13 +407,13 @@
     {
       "language": "HTML",
       "file_count": 1,
-      "total_bytes": 47316,
-      "percentage": 3.16,
+      "total_bytes": 48355,
+      "percentage": 0.5,
       "files": [
         {
           "path": "docs/metricas/index.html",
           "name": "index.html",
-          "size": 47316,
+          "size": 48355,
           "extension": ".html"
         }
       ]
@@ -366,7 +422,7 @@
       "language": "Icon",
       "file_count": 1,
       "total_bytes": 25931,
-      "percentage": 1.73,
+      "percentage": 0.27,
       "files": [
         {
           "path": "frontend/src/app/favicon.ico",
@@ -379,9 +435,15 @@
     {
       "language": "YAML",
       "file_count": 5,
-      "total_bytes": 9748,
-      "percentage": 0.65,
+      "total_bytes": 10785,
+      "percentage": 0.11,
       "files": [
+        {
+          "path": ".github/workflows/main.yml",
+          "name": "main.yml",
+          "size": 2507,
+          "extension": ".yml"
+        },
         {
           "path": ".specify/workflows/speckit/workflow.yml",
           "name": "workflow.yml",
@@ -395,15 +457,9 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/main.yml",
-          "name": "main.yml",
-          "size": 1979,
-          "extension": ".yml"
-        },
-        {
           "path": "mkdocs.yml",
           "name": "mkdocs.yml",
-          "size": 1821,
+          "size": 2330,
           "extension": ".yml"
         },
         {
@@ -415,66 +471,42 @@
       ]
     },
     {
-      "language": "Unknown",
-      "file_count": 7,
-      "total_bytes": 6725,
-      "percentage": 0.45,
-      "files": [
-        {
-          "path": "estudos/sprint1/Estudo(Next.js)",
-          "name": "Estudo(Next.js)",
-          "size": 4195,
-          "extension": ".js)"
-        },
-        {
-          "path": "backend/prisma/schema.prisma",
-          "name": "schema.prisma",
-          "size": 1606,
-          "extension": ".prisma"
-        },
-        {
-          "path": "frontend/eslint.config.mjs",
-          "name": "eslint.config.mjs",
-          "size": 465,
-          "extension": ".mjs"
-        },
-        {
-          "path": ".env.example",
-          "name": ".env.example",
-          "size": 243,
-          "extension": ".example"
-        },
-        {
-          "path": "frontend/postcss.config.mjs",
-          "name": "postcss.config.mjs",
-          "size": 94,
-          "extension": ".mjs"
-        },
-        {
-          "path": "backend/.env.example",
-          "name": ".env.example",
-          "size": 80,
-          "extension": ".example"
-        },
-        {
-          "path": "frontend/.env.example",
-          "name": ".env.example",
-          "size": 42,
-          "extension": ".example"
-        }
-      ]
-    },
-    {
       "language": "CSS",
       "file_count": 1,
-      "total_bytes": 5011,
-      "percentage": 0.34,
+      "total_bytes": 5493,
+      "percentage": 0.06,
       "files": [
         {
           "path": "frontend/src/app/globals.css",
           "name": "globals.css",
-          "size": 5011,
+          "size": 5493,
           "extension": ".css"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 3,
+      "total_bytes": 2645,
+      "percentage": 0.03,
+      "files": [
+        {
+          "path": "backend/requirements-train.txt",
+          "name": "requirements-train.txt",
+          "size": 1458,
+          "extension": ".txt"
+        },
+        {
+          "path": "docs/architecture/estrutura_de_pastas.txt",
+          "name": "estrutura_de_pastas.txt",
+          "size": 1034,
+          "extension": ".txt"
+        },
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 153,
+          "extension": ".txt"
         }
       ]
     },
@@ -482,7 +514,7 @@
       "language": "SVG Image",
       "file_count": 5,
       "total_bytes": 3314,
-      "percentage": 0.22,
+      "percentage": 0.03,
       "files": [
         {
           "path": "frontend/public/next.svg",
@@ -519,8 +551,8 @@
     {
       "language": "No Extension",
       "file_count": 2,
-      "total_bytes": 1958,
-      "percentage": 0.13,
+      "total_bytes": 1989,
+      "percentage": 0.02,
       "files": [
         {
           "path": "LICENSE",
@@ -531,65 +563,63 @@
         {
           "path": "backend/Dockerfile",
           "name": "Dockerfile",
-          "size": 898,
+          "size": 929,
           "extension": ""
         }
       ]
     },
     {
       "language": "SQL",
-      "file_count": 1,
-      "total_bytes": 1287,
-      "percentage": 0.09,
+      "file_count": 3,
+      "total_bytes": 1907,
+      "percentage": 0.02,
       "files": [
         {
           "path": "backend/prisma/migrations/20260515140903_init_users_and_laws/migration.sql",
           "name": "migration.sql",
           "size": 1287,
           "extension": ".sql"
-        }
-      ]
-    },
-    {
-      "language": "Text",
-      "file_count": 2,
-      "total_bytes": 1140,
-      "percentage": 0.08,
-      "files": [
-        {
-          "path": "docs/architecture/estrutura_de_pastas.txt",
-          "name": "estrutura_de_pastas.txt",
-          "size": 1034,
-          "extension": ".txt"
         },
         {
-          "path": "backend/requirements.txt",
-          "name": "requirements.txt",
-          "size": 106,
-          "extension": ".txt"
+          "path": "backend/prisma/migrations/20260619140510_add_analysis_table/migration.sql",
+          "name": "migration.sql",
+          "size": 556,
+          "extension": ".sql"
+        },
+        {
+          "path": "backend/prisma/migrations/20260701011200_add_summary_to_analysis/migration.sql",
+          "name": "migration.sql",
+          "size": 64,
+          "extension": ".sql"
         }
       ]
     },
     {
       "language": "Git Ignore",
       "file_count": 1,
-      "total_bytes": 671,
-      "percentage": 0.04,
+      "total_bytes": 1115,
+      "percentage": 0.01,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 671,
+          "size": 1115,
           "extension": ".gitignore"
         }
       ]
     },
     {
       "language": "JavaScript",
-      "file_count": 1,
-      "total_bytes": 541,
-      "percentage": 0.04,
+      "file_count": 2,
+      "total_bytes": 1177,
+      "percentage": 0.01,
       "files": [
+        {
+          "path": "frontend/jest.config.js",
+          "name": "jest.config.js",
+          "size": 636,
+          "extension": ".js"
+        },
         {
           "path": "docs/js/mermaid-init.js",
           "name": "mermaid-init.js",
@@ -602,7 +632,7 @@
       "language": "TOML",
       "file_count": 1,
       "total_bytes": 126,
-      "percentage": 0.01,
+      "percentage": 0.0,
       "files": [
         {
           "path": "backend/prisma/migrations/migration_lock.toml",
@@ -611,10 +641,24 @@
           "extension": ".toml"
         }
       ]
+    },
+    {
+      "language": "INI",
+      "file_count": 1,
+      "total_bytes": 146,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/pytest.ini",
+          "name": "pytest.ini",
+          "size": 146,
+          "extension": ".ini"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-07-02T08:58:47.724290",
+    "extracted_at": "2026-07-03T08:50:21.444606",
     "file_path": "data/silver/language_analysis_2026-1-Squad07.json"
   }
 }

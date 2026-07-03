@@ -2,7 +2,7 @@
   "repository": "2026-1-Squad07",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-07-02T08:55:40.123804",
+  "extracted_at": "2026-07-03T08:47:16.486548",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -177,7 +177,7 @@
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 243,
+        "size": 318,
         "extension": ".example",
         "path": ".env.example"
       },
@@ -243,7 +243,7 @@
         "name": "main.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1979,
+        "size": 2507,
         "extension": ".yml",
         "path": ".github/workflows/main.yml"
       },
@@ -259,7 +259,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 671,
+        "size": 1115,
         "extension": ".gitignore",
         "path": ".gitignore"
       },
@@ -464,6 +464,22 @@
         "path": "AGENTS.md"
       },
       {
+        "name": "CODE_OF_CONDUCT.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6222,
+        "extension": ".md",
+        "path": "CODE_OF_CONDUCT.md"
+      },
+      {
+        "name": "CONTRIBUTING.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3329,
+        "extension": ".md",
+        "path": "CONTRIBUTING.md"
+      },
+      {
         "name": "LICENSE",
         "type": "file",
         "language": "No Extension",
@@ -478,6 +494,14 @@
         "size": 5053,
         "extension": ".md",
         "path": "README.md"
+      },
+      {
+        "name": "SECURITY.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2785,
+        "extension": ".md",
+        "path": "SECURITY.md"
       },
       {
         "name": "backend",
@@ -497,7 +521,7 @@
         "name": "Dockerfile",
         "type": "file",
         "language": "No Extension",
-        "size": 898,
+        "size": 929,
         "extension": "",
         "path": "backend/Dockerfile"
       },
@@ -530,6 +554,14 @@
         "path": "backend/app/api/__init__.py"
       },
       {
+        "name": "analysis.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4444,
+        "extension": ".py",
+        "path": "backend/app/api/analysis.py"
+      },
+      {
         "name": "auth.py",
         "type": "file",
         "language": "Python",
@@ -557,7 +589,7 @@
         "name": "laws.py",
         "type": "file",
         "language": "Python",
-        "size": 1395,
+        "size": 4886,
         "extension": ".py",
         "path": "backend/app/api/laws.py"
       },
@@ -565,7 +597,7 @@
         "name": "users.py",
         "type": "file",
         "language": "Python",
-        "size": 2947,
+        "size": 3837,
         "extension": ".py",
         "path": "backend/app/api/users.py"
       },
@@ -609,7 +641,7 @@
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 826,
+        "size": 981,
         "extension": ".py",
         "path": "backend/app/main.py"
       },
@@ -628,12 +660,28 @@
         "path": "backend/app/models/__init__.py"
       },
       {
+        "name": "analysis.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1954,
+        "extension": ".py",
+        "path": "backend/app/models/analysis.py"
+      },
+      {
         "name": "law.py",
         "type": "file",
         "language": "Python",
-        "size": 1321,
+        "size": 1778,
         "extension": ".py",
         "path": "backend/app/models/law.py"
+      },
+      {
+        "name": "tfidf_classifier.pkl",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2954269,
+        "extension": ".pkl",
+        "path": "backend/app/models/tfidf_classifier.pkl"
       },
       {
         "name": "user.py",
@@ -658,12 +706,104 @@
         "path": "backend/app/services/__init__.py"
       },
       {
+        "name": "analysis",
+        "type": "directory",
+        "path": "backend/app/services/analysis",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 77,
+        "extension": ".py",
+        "path": "backend/app/services/analysis/__init__.py"
+      },
+      {
+        "name": "cache.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1351,
+        "extension": ".py",
+        "path": "backend/app/services/analysis/cache.py"
+      },
+      {
+        "name": "scoring.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2773,
+        "extension": ".py",
+        "path": "backend/app/services/analysis/scoring.py"
+      },
+      {
+        "name": "service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3366,
+        "extension": ".py",
+        "path": "backend/app/services/analysis/service.py"
+      },
+      {
+        "name": "analysis_provider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9226,
+        "extension": ".py",
+        "path": "backend/app/services/analysis_provider.py"
+      },
+      {
+        "name": "readability.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3249,
+        "extension": ".py",
+        "path": "backend/app/services/readability.py"
+      },
+      {
         "name": "security.py",
         "type": "file",
         "language": "Python",
-        "size": 2852,
+        "size": 2851,
         "extension": ".py",
         "path": "backend/app/services/security.py"
+      },
+      {
+        "name": "summary_provider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 5705,
+        "extension": ".py",
+        "path": "backend/app/services/summary_provider.py"
+      },
+      {
+        "name": "data",
+        "type": "directory",
+        "path": "backend/data",
+        "children": []
+      },
+      {
+        "name": "dataset_laws.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 6987,
+        "extension": ".json",
+        "path": "backend/data/dataset_laws.json"
+      },
+      {
+        "name": "dataset_laws_camara.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 1394127,
+        "extension": ".json",
+        "path": "backend/data/dataset_laws_camara.json"
+      },
+      {
+        "name": "dataset_laws_camara_full.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 3061460,
+        "extension": ".json",
+        "path": "backend/data/dataset_laws_camara_full.json"
       },
       {
         "name": "prisma",
@@ -692,6 +832,34 @@
         "path": "backend/prisma/migrations/20260515140903_init_users_and_laws/migration.sql"
       },
       {
+        "name": "20260619140510_add_analysis_table",
+        "type": "directory",
+        "path": "backend/prisma/migrations/20260619140510_add_analysis_table",
+        "children": []
+      },
+      {
+        "name": "migration.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 556,
+        "extension": ".sql",
+        "path": "backend/prisma/migrations/20260619140510_add_analysis_table/migration.sql"
+      },
+      {
+        "name": "20260701011200_add_summary_to_analysis",
+        "type": "directory",
+        "path": "backend/prisma/migrations/20260701011200_add_summary_to_analysis",
+        "children": []
+      },
+      {
+        "name": "migration.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 64,
+        "extension": ".sql",
+        "path": "backend/prisma/migrations/20260701011200_add_summary_to_analysis/migration.sql"
+      },
+      {
         "name": "migration_lock.toml",
         "type": "file",
         "language": "TOML",
@@ -703,15 +871,31 @@
         "name": "schema.prisma",
         "type": "file",
         "language": "Unknown",
-        "size": 1606,
+        "size": 2079,
         "extension": ".prisma",
         "path": "backend/prisma/schema.prisma"
+      },
+      {
+        "name": "pytest.ini",
+        "type": "file",
+        "language": "INI",
+        "size": 146,
+        "extension": ".ini",
+        "path": "backend/pytest.ini"
+      },
+      {
+        "name": "requirements-train.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 1458,
+        "extension": ".txt",
+        "path": "backend/requirements-train.txt"
       },
       {
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 106,
+        "size": 153,
         "extension": ".txt",
         "path": "backend/requirements.txt"
       },
@@ -730,12 +914,68 @@
         "path": "backend/scripts/__init__.py"
       },
       {
+        "name": "build_dataset_camara.py",
+        "type": "file",
+        "language": "Python",
+        "size": 17663,
+        "extension": ".py",
+        "path": "backend/scripts/build_dataset_camara.py"
+      },
+      {
+        "name": "ingest_catalog.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6495,
+        "extension": ".py",
+        "path": "backend/scripts/ingest_catalog.py"
+      },
+      {
         "name": "seed_demo_laws.py",
         "type": "file",
         "language": "Python",
         "size": 7955,
         "extension": ".py",
         "path": "backend/scripts/seed_demo_laws.py"
+      },
+      {
+        "name": "test_classifier_local.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2986,
+        "extension": ".py",
+        "path": "backend/scripts/test_classifier_local.py"
+      },
+      {
+        "name": "train_classifier.py",
+        "type": "file",
+        "language": "Python",
+        "size": 30304,
+        "extension": ".py",
+        "path": "backend/scripts/train_classifier.py"
+      },
+      {
+        "name": "train_tfidf.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7539,
+        "extension": ".py",
+        "path": "backend/scripts/train_tfidf.py"
+      },
+      {
+        "name": "upload_model.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3058,
+        "extension": ".py",
+        "path": "backend/scripts/upload_model.py"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1189,
+        "extension": ".md",
+        "path": "backend/test-plan.md"
       },
       {
         "name": "tests",
@@ -750,6 +990,44 @@
         "size": 0,
         "extension": ".py",
         "path": "backend/tests/__init__.py"
+      },
+      {
+        "name": "conftest.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2365,
+        "extension": ".py",
+        "path": "backend/tests/conftest.py"
+      },
+      {
+        "name": "integration",
+        "type": "directory",
+        "path": "backend/tests/integration",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/tests/integration/__init__.py"
+      },
+      {
+        "name": "test_analysis_api.py",
+        "type": "file",
+        "language": "Python",
+        "size": 8768,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_analysis_api.py"
+      },
+      {
+        "name": "test_readability_routes.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1889,
+        "extension": ".py",
+        "path": "backend/tests/integration/test_readability_routes.py"
       },
       {
         "name": "test_auth.py",
@@ -771,7 +1049,7 @@
         "name": "test_laws.py",
         "type": "file",
         "language": "Python",
-        "size": 5292,
+        "size": 9449,
         "extension": ".py",
         "path": "backend/tests/test_laws.py"
       },
@@ -787,9 +1065,135 @@
         "name": "test_users.py",
         "type": "file",
         "language": "Python",
-        "size": 8694,
+        "size": 11534,
         "extension": ".py",
         "path": "backend/tests/test_users.py"
+      },
+      {
+        "name": "unit",
+        "type": "directory",
+        "path": "backend/tests/unit",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "backend/tests/unit/__init__.py"
+      },
+      {
+        "name": "test_analysis.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3664,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_analysis.py"
+      },
+      {
+        "name": "test_analysis_cache.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1291,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_analysis_cache.py"
+      },
+      {
+        "name": "test_analysis_provider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6355,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_analysis_provider.py"
+      },
+      {
+        "name": "test_analysis_scoring.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2850,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_analysis_scoring.py"
+      },
+      {
+        "name": "test_analysis_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7213,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_analysis_service.py"
+      },
+      {
+        "name": "test_auth.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4370,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_auth.py"
+      },
+      {
+        "name": "test_dependencies.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3959,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_dependencies.py"
+      },
+      {
+        "name": "test_health.py",
+        "type": "file",
+        "language": "Python",
+        "size": 272,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_health.py"
+      },
+      {
+        "name": "test_laws.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9449,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_laws.py"
+      },
+      {
+        "name": "test_readability_service.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2393,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_readability_service.py"
+      },
+      {
+        "name": "test_security.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3554,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_security.py"
+      },
+      {
+        "name": "test_seed_demo_laws.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1149,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_seed_demo_laws.py"
+      },
+      {
+        "name": "test_summary_provider.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2642,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_summary_provider.py"
+      },
+      {
+        "name": "test_users.py",
+        "type": "file",
+        "language": "Python",
+        "size": 9266,
+        "extension": ".py",
+        "path": "backend/tests/unit/test_users.py"
       },
       {
         "name": "docker-compose.yml",
@@ -818,6 +1222,22 @@
         "type": "directory",
         "path": "docs/architecture",
         "children": []
+      },
+      {
+        "name": "ai-integration.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 24493,
+        "extension": ".md",
+        "path": "docs/architecture/ai-integration.md"
+      },
+      {
+        "name": "ai-success-metrics.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12841,
+        "extension": ".md",
+        "path": "docs/architecture/ai-success-metrics.md"
       },
       {
         "name": "c4_system_context.jpeg",
@@ -866,6 +1286,36 @@
         "size": 6806,
         "extension": ".md",
         "path": "docs/como_atualizar_mkdocs.md"
+      },
+      {
+        "name": "dev",
+        "type": "directory",
+        "path": "docs/dev",
+        "children": []
+      },
+      {
+        "name": "ci-setup.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3951,
+        "extension": ".md",
+        "path": "docs/dev/ci-setup.md"
+      },
+      {
+        "name": "deploy.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7998,
+        "extension": ".md",
+        "path": "docs/dev/deploy.md"
+      },
+      {
+        "name": "plano-expansao-ml.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6991,
+        "extension": ".md",
+        "path": "docs/dev/plano-expansao-ml.md"
       },
       {
         "name": "escopo",
@@ -921,7 +1371,7 @@
         "name": "AGENT.md",
         "type": "file",
         "language": "Markdown",
-        "size": 24213,
+        "size": 23649,
         "extension": ".md",
         "path": "docs/metricas/AGENT.md"
       },
@@ -929,7 +1379,7 @@
         "name": "collect_metrics.py",
         "type": "file",
         "language": "Python",
-        "size": 20200,
+        "size": 20977,
         "extension": ".py",
         "path": "docs/metricas/collect_metrics.py"
       },
@@ -937,7 +1387,7 @@
         "name": "index.html",
         "type": "file",
         "language": "HTML",
-        "size": 47316,
+        "size": 48355,
         "extension": ".html",
         "path": "docs/metricas/index.html"
       },
@@ -945,9 +1395,31 @@
         "name": "metrics.json",
         "type": "file",
         "language": "JSON",
-        "size": 39252,
+        "size": 47569,
         "extension": ".json",
         "path": "docs/metricas/metrics.json"
+      },
+      {
+        "name": "processo",
+        "type": "directory",
+        "path": "docs/processo",
+        "children": []
+      },
+      {
+        "name": "aprovacao-merge.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4162,
+        "extension": ".md",
+        "path": "docs/processo/aprovacao-merge.md"
+      },
+      {
+        "name": "historico-sprints.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 9608,
+        "extension": ".md",
+        "path": "docs/processo/historico-sprints.md"
       },
       {
         "name": "prototipo",
@@ -1032,6 +1504,14 @@
         "path": "docs/sdd/instalacao.md"
       },
       {
+        "name": "tdd-estrategia-r2.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10759,
+        "extension": ".md",
+        "path": "docs/sdd/tdd-estrategia-r2.md"
+      },
+      {
         "name": "templates.md",
         "type": "file",
         "language": "Markdown",
@@ -1043,7 +1523,7 @@
         "name": "user_story_map.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2204,
+        "size": 8863,
         "extension": ".md",
         "path": "docs/user_story_map.md"
       },
@@ -1162,6 +1642,36 @@
         "path": "estudos/sprint1/template_issues.md"
       },
       {
+        "name": "sprint10",
+        "type": "directory",
+        "path": "estudos/sprint10",
+        "children": []
+      },
+      {
+        "name": "arquitetura-ia-nlp.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12859,
+        "extension": ".md",
+        "path": "estudos/sprint10/arquitetura-ia-nlp.md"
+      },
+      {
+        "name": "estudo_TDD_e_frameworks_de_teste.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 14808,
+        "extension": ".md",
+        "path": "estudos/sprint10/estudo_TDD_e_frameworks_de_teste.md"
+      },
+      {
+        "name": "estudos_Pipelines.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 10555,
+        "extension": ".md",
+        "path": "estudos/sprint10/estudos_Pipelines.md"
+      },
+      {
         "name": "sprint2",
         "type": "directory",
         "path": "estudos/sprint2",
@@ -1253,9 +1763,25 @@
         "name": "eslint.config.mjs",
         "type": "file",
         "language": "Unknown",
-        "size": 465,
+        "size": 487,
         "extension": ".mjs",
         "path": "frontend/eslint.config.mjs"
+      },
+      {
+        "name": "jest.config.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 636,
+        "extension": ".js",
+        "path": "frontend/jest.config.js"
+      },
+      {
+        "name": "jest.setup.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 36,
+        "extension": ".ts",
+        "path": "frontend/jest.setup.ts"
       },
       {
         "name": "next.config.ts",
@@ -1269,7 +1795,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 321391,
+        "size": 468668,
         "extension": ".json",
         "path": "frontend/package-lock.json"
       },
@@ -1277,7 +1803,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 2077,
+        "size": 2362,
         "extension": ".json",
         "path": "frontend/package.json"
       },
@@ -1350,6 +1876,20 @@
         "children": []
       },
       {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "frontend/src/__tests__",
+        "children": []
+      },
+      {
+        "name": "api-client.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3922,
+        "extension": ".ts",
+        "path": "frontend/src/__tests__/api-client.test.ts"
+      },
+      {
         "name": "app",
         "type": "directory",
         "path": "frontend/src/app",
@@ -1367,7 +1907,7 @@
         "name": "globals.css",
         "type": "file",
         "language": "CSS",
-        "size": 5011,
+        "size": 5493,
         "extension": ".css",
         "path": "frontend/src/app/globals.css"
       },
@@ -1384,10 +1924,18 @@
         "children": []
       },
       {
+        "name": "page.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5912,
+        "extension": ".tsx",
+        "path": "frontend/src/app/law/[id]/page.test.tsx"
+      },
+      {
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 8244,
+        "size": 16172,
         "extension": ".tsx",
         "path": "frontend/src/app/law/[id]/page.tsx"
       },
@@ -1395,7 +1943,7 @@
         "name": "layout.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 623,
+        "size": 626,
         "extension": ".tsx",
         "path": "frontend/src/app/layout.tsx"
       },
@@ -1409,7 +1957,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4771,
+        "size": 4850,
         "extension": ".tsx",
         "path": "frontend/src/app/login/page.tsx"
       },
@@ -1417,9 +1965,37 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 9109,
+        "size": 10199,
         "extension": ".tsx",
         "path": "frontend/src/app/page.tsx"
+      },
+      {
+        "name": "profile",
+        "type": "directory",
+        "path": "frontend/src/app/profile",
+        "children": []
+      },
+      {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "frontend/src/app/profile/__tests__",
+        "children": []
+      },
+      {
+        "name": "page.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 7487,
+        "extension": ".tsx",
+        "path": "frontend/src/app/profile/__tests__/page.test.tsx"
+      },
+      {
+        "name": "page.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6289,
+        "extension": ".tsx",
+        "path": "frontend/src/app/profile/page.tsx"
       },
       {
         "name": "register",
@@ -1431,7 +2007,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 7030,
+        "size": 7133,
         "extension": ".tsx",
         "path": "frontend/src/app/register/page.tsx"
       },
@@ -1445,7 +2021,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 358,
+        "size": 378,
         "extension": ".tsx",
         "path": "frontend/src/app/search/page.tsx"
       },
@@ -1459,7 +2035,7 @@
         "name": "page.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 8975,
+        "size": 9922,
         "extension": ".tsx",
         "path": "frontend/src/app/upload/page.tsx"
       },
@@ -1473,7 +2049,7 @@
         "name": "AppShell.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 4698,
+        "size": 5452,
         "extension": ".tsx",
         "path": "frontend/src/components/AppShell.tsx"
       },
@@ -1481,9 +2057,95 @@
         "name": "RadialProgress.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 1571,
+        "size": 1596,
         "extension": ".tsx",
         "path": "frontend/src/components/RadialProgress.tsx"
+      },
+      {
+        "name": "WarningCard.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3242,
+        "extension": ".tsx",
+        "path": "frontend/src/components/WarningCard.tsx"
+      },
+      {
+        "name": "WarningsSidebar.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3155,
+        "extension": ".tsx",
+        "path": "frontend/src/components/WarningsSidebar.tsx"
+      },
+      {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "frontend/src/components/__tests__",
+        "children": []
+      },
+      {
+        "name": "AppShell.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1311,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/AppShell.test.tsx"
+      },
+      {
+        "name": "WarningCard.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1811,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/WarningCard.test.tsx"
+      },
+      {
+        "name": "WarningsSidebar.integration.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2565,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/WarningsSidebar.integration.test.tsx"
+      },
+      {
+        "name": "WarningsSidebar.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2384,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/WarningsSidebar.test.tsx"
+      },
+      {
+        "name": "badge.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1010,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/badge.test.tsx"
+      },
+      {
+        "name": "button.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1060,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/button.test.tsx"
+      },
+      {
+        "name": "input.test.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1015,
+        "extension": ".tsx",
+        "path": "frontend/src/components/__tests__/input.test.tsx"
+      },
+      {
+        "name": "utils.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 762,
+        "extension": ".ts",
+        "path": "frontend/src/components/__tests__/utils.test.ts"
       },
       {
         "name": "pages",
@@ -1495,7 +2157,7 @@
         "name": "SearchPage.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 7248,
+        "size": 7400,
         "extension": ".tsx",
         "path": "frontend/src/components/pages/SearchPage.tsx"
       },
@@ -1504,6 +2166,14 @@
         "type": "directory",
         "path": "frontend/src/components/ui",
         "children": []
+      },
+      {
+        "name": "DarkModeToggle.tsx",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1729,
+        "extension": ".tsx",
+        "path": "frontend/src/components/ui/DarkModeToggle.tsx"
       },
       {
         "name": "accordion.tsx",
@@ -1899,9 +2569,53 @@
         "name": "AuthContext.tsx",
         "type": "file",
         "language": "TypeScript",
-        "size": 2058,
+        "size": 2323,
         "extension": ".tsx",
         "path": "frontend/src/contexts/AuthContext.tsx"
+      },
+      {
+        "name": "hooks",
+        "type": "directory",
+        "path": "frontend/src/hooks",
+        "children": []
+      },
+      {
+        "name": "__tests__",
+        "type": "directory",
+        "path": "frontend/src/hooks/__tests__",
+        "children": []
+      },
+      {
+        "name": "useAnalysis.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3634,
+        "extension": ".ts",
+        "path": "frontend/src/hooks/__tests__/useAnalysis.test.ts"
+      },
+      {
+        "name": "useTextHighlight.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3014,
+        "extension": ".ts",
+        "path": "frontend/src/hooks/__tests__/useTextHighlight.test.ts"
+      },
+      {
+        "name": "useAnalysis.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4173,
+        "extension": ".ts",
+        "path": "frontend/src/hooks/useAnalysis.ts"
+      },
+      {
+        "name": "useTextHighlight.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4156,
+        "extension": ".ts",
+        "path": "frontend/src/hooks/useTextHighlight.ts"
       },
       {
         "name": "lib",
@@ -1935,9 +2649,17 @@
         "name": "laws.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1033,
+        "size": 2119,
         "extension": ".ts",
         "path": "frontend/src/lib/api/laws.ts"
+      },
+      {
+        "name": "users.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 428,
+        "extension": ".ts",
+        "path": "frontend/src/lib/api/users.ts"
       },
       {
         "name": "demo-analysis.ts",
@@ -1948,10 +2670,24 @@
         "path": "frontend/src/lib/demo-analysis.ts"
       },
       {
+        "name": "types",
+        "type": "directory",
+        "path": "frontend/src/types",
+        "children": []
+      },
+      {
+        "name": "analysis.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1293,
+        "extension": ".ts",
+        "path": "frontend/src/types/analysis.ts"
+      },
+      {
         "name": "tsconfig.json",
         "type": "file",
         "language": "JSON",
-        "size": 670,
+        "size": 722,
         "extension": ".json",
         "path": "frontend/tsconfig.json"
       },
@@ -1959,7 +2695,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1821,
+        "size": 2330,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -1967,7 +2703,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 124249,
+        "size": 123435,
         "extension": ".json",
         "path": "package-lock.json"
       },
@@ -2100,6 +2836,410 @@
         "path": "specs/001-integracao-frontend-backend/test-plan.md"
       },
       {
+        "name": "002-requirements-r2",
+        "type": "directory",
+        "path": "specs/002-requirements-r2",
+        "children": []
+      },
+      {
+        "name": "acceptance-criteria.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 9787,
+        "extension": ".md",
+        "path": "specs/002-requirements-r2/acceptance-criteria.md"
+      },
+      {
+        "name": "ai-integration.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 13594,
+        "extension": ".md",
+        "path": "specs/002-requirements-r2/ai-integration.md"
+      },
+      {
+        "name": "business-rules.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7006,
+        "extension": ".md",
+        "path": "specs/002-requirements-r2/business-rules.md"
+      },
+      {
+        "name": "003-analysis-classifier",
+        "type": "directory",
+        "path": "specs/003-analysis-classifier",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3542,
+        "extension": ".md",
+        "path": "specs/003-analysis-classifier/plan.md"
+      },
+      {
+        "name": "quickstart.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2587,
+        "extension": ".md",
+        "path": "specs/003-analysis-classifier/quickstart.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8046,
+        "extension": ".md",
+        "path": "specs/003-analysis-classifier/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2084,
+        "extension": ".md",
+        "path": "specs/003-analysis-classifier/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4006,
+        "extension": ".md",
+        "path": "specs/003-analysis-classifier/test-plan.md"
+      },
+      {
+        "name": "003-framework-testes",
+        "type": "directory",
+        "path": "specs/003-framework-testes",
+        "children": []
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3435,
+        "extension": ".md",
+        "path": "specs/003-framework-testes/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1655,
+        "extension": ".md",
+        "path": "specs/003-framework-testes/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1757,
+        "extension": ".md",
+        "path": "specs/003-framework-testes/test-plan.md"
+      },
+      {
+        "name": "004-automatic-summary",
+        "type": "directory",
+        "path": "specs/004-automatic-summary",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4214,
+        "extension": ".md",
+        "path": "specs/004-automatic-summary/plan.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5600,
+        "extension": ".md",
+        "path": "specs/004-automatic-summary/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2786,
+        "extension": ".md",
+        "path": "specs/004-automatic-summary/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3454,
+        "extension": ".md",
+        "path": "specs/004-automatic-summary/test-plan.md"
+      },
+      {
+        "name": "004-readability-score",
+        "type": "directory",
+        "path": "specs/004-readability-score",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5162,
+        "extension": ".md",
+        "path": "specs/004-readability-score/plan.md"
+      },
+      {
+        "name": "quickstart.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3289,
+        "extension": ".md",
+        "path": "specs/004-readability-score/quickstart.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7673,
+        "extension": ".md",
+        "path": "specs/004-readability-score/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4278,
+        "extension": ".md",
+        "path": "specs/004-readability-score/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6044,
+        "extension": ".md",
+        "path": "specs/004-readability-score/test-plan.md"
+      },
+      {
+        "name": "004-resumo-ia-frontend",
+        "type": "directory",
+        "path": "specs/004-resumo-ia-frontend",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1018,
+        "extension": ".md",
+        "path": "specs/004-resumo-ia-frontend/plan.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1618,
+        "extension": ".md",
+        "path": "specs/004-resumo-ia-frontend/spec.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1351,
+        "extension": ".md",
+        "path": "specs/004-resumo-ia-frontend/test-plan.md"
+      },
+      {
+        "name": "005-user-profile",
+        "type": "directory",
+        "path": "specs/005-user-profile",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4576,
+        "extension": ".md",
+        "path": "specs/005-user-profile/plan.md"
+      },
+      {
+        "name": "quickstart.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2363,
+        "extension": ".md",
+        "path": "specs/005-user-profile/quickstart.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4487,
+        "extension": ".md",
+        "path": "specs/005-user-profile/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2967,
+        "extension": ".md",
+        "path": "specs/005-user-profile/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3657,
+        "extension": ".md",
+        "path": "specs/005-user-profile/test-plan.md"
+      },
+      {
+        "name": "005-warnings-sidebar",
+        "type": "directory",
+        "path": "specs/005-warnings-sidebar",
+        "children": []
+      },
+      {
+        "name": "contracts.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 9168,
+        "extension": ".md",
+        "path": "specs/005-warnings-sidebar/contracts.md"
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 11713,
+        "extension": ".md",
+        "path": "specs/005-warnings-sidebar/plan.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8543,
+        "extension": ".md",
+        "path": "specs/005-warnings-sidebar/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 19375,
+        "extension": ".md",
+        "path": "specs/005-warnings-sidebar/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8688,
+        "extension": ".md",
+        "path": "specs/005-warnings-sidebar/test-plan.md"
+      },
+      {
+        "name": "006-ingestion-training-legalbert",
+        "type": "directory",
+        "path": "specs/006-ingestion-training-legalbert",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6499,
+        "extension": ".md",
+        "path": "specs/006-ingestion-training-legalbert/plan.md"
+      },
+      {
+        "name": "quickstart.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3592,
+        "extension": ".md",
+        "path": "specs/006-ingestion-training-legalbert/quickstart.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 6459,
+        "extension": ".md",
+        "path": "specs/006-ingestion-training-legalbert/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1973,
+        "extension": ".md",
+        "path": "specs/006-ingestion-training-legalbert/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2980,
+        "extension": ".md",
+        "path": "specs/006-ingestion-training-legalbert/test-plan.md"
+      },
+      {
+        "name": "007-remove-mockdata-and-restrict-submission",
+        "type": "directory",
+        "path": "specs/007-remove-mockdata-and-restrict-submission",
+        "children": []
+      },
+      {
+        "name": "plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4261,
+        "extension": ".md",
+        "path": "specs/007-remove-mockdata-and-restrict-submission/plan.md"
+      },
+      {
+        "name": "quickstart.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 1626,
+        "extension": ".md",
+        "path": "specs/007-remove-mockdata-and-restrict-submission/quickstart.md"
+      },
+      {
+        "name": "spec.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3374,
+        "extension": ".md",
+        "path": "specs/007-remove-mockdata-and-restrict-submission/spec.md"
+      },
+      {
+        "name": "tasks.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2345,
+        "extension": ".md",
+        "path": "specs/007-remove-mockdata-and-restrict-submission/tasks.md"
+      },
+      {
+        "name": "test-plan.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2941,
+        "extension": ".md",
+        "path": "specs/007-remove-mockdata-and-restrict-submission/test-plan.md"
+      },
+      {
         "name": "AGENTS.md",
         "type": "file",
         "language": "Markdown",
@@ -2110,7 +3250,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-07-02T08:58:47.726134",
+    "extracted_at": "2026-07-03T08:50:21.447063",
     "file_path": "data/silver/hierarchy_2026-1-Squad07.json"
   }
 }
