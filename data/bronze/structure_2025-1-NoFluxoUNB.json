@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2025-1-NoFluxoUNB",
   "branch": "main",
-  "sha": "475a94b4a21bb73d40448ddc4c0cb20b673be8e8",
+  "sha": "06fd2b8d0f7d74e0a8bef8bbd2289f6c88af116f",
   "tree": [
     {
       "name": ".dockerignore",
@@ -38,7 +38,7 @@
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "c3112564dd6e7540279f0ec493c6400605674be4",
+      "sha": "324e1222dd33c79ad39fe4bc50b22b134414fe5c",
       "mode": "040000",
       "children": []
     },
@@ -84,19 +84,9 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "760d467adafb482c20e66c07777f2810c404ce3a",
+      "sha": "da5a2f61d686f5dac19a7bbbe639621131b8df8c",
       "mode": "040000",
       "children": []
-    },
-    {
-      "name": "actions.yml",
-      "path": ".github/workflows/actions.yml",
-      "type": "file",
-      "sha": "136d376879456d91c49cc1deebce3110afecf977",
-      "mode": "100644",
-      "extension": ".yml",
-      "size": 6168,
-      "is_binary": false
     },
     {
       "name": "ci.yml",
@@ -126,6 +116,36 @@
       "mode": "100644",
       "extension": ".yml",
       "size": 2846,
+      "is_binary": false
+    },
+    {
+      "name": "scrape_ementa.yml",
+      "path": ".github/workflows/scrape_ementa.yml",
+      "type": "file",
+      "sha": "8d0fb1a6bfebc686a3a59c2f67afbcd4bee57c33",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1909,
+      "is_binary": false
+    },
+    {
+      "name": "scrape_equivalencias.yml",
+      "path": ".github/workflows/scrape_equivalencias.yml",
+      "type": "file",
+      "sha": "a4dca02a55c8a6e5ad633ccd7c24747fc25da525",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1984,
+      "is_binary": false
+    },
+    {
+      "name": "scrape_turmas_lite.yml",
+      "path": ".github/workflows/scrape_turmas_lite.yml",
+      "type": "file",
+      "sha": "00f9c8ca55acc729fbfbf3aff4f2de3aab6a6954",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 4906,
       "is_binary": false
     },
     {
@@ -220,7 +240,7 @@
       "name": "DBA",
       "path": "DBA",
       "type": "directory",
-      "sha": "a34c6e8b6a8d900c68ff927eddf71974ffde3d2c",
+      "sha": "2256cbcd34e04cabc8c44e9086134fb51ec5a058",
       "mode": "040000",
       "children": []
     },
@@ -246,7 +266,7 @@
       "name": "database",
       "path": "DBA/database",
       "type": "directory",
-      "sha": "8cf982db520f06b133fe0386d66202e0ae7da0f2",
+      "sha": "02d8bfb81f7b8eab7ba393978eccfe99af284f37",
       "mode": "040000",
       "children": []
     },
@@ -274,10 +294,20 @@
       "name": "03_insert_turmas.py",
       "path": "DBA/database/03_insert_turmas.py",
       "type": "file",
-      "sha": "536af79a2341cf6c64c31eb62b78b1e14f82c605",
+      "sha": "a9fb1aa0811f3fab384d7e75db7e6711f9c165c2",
       "mode": "100644",
       "extension": ".py",
-      "size": 7782,
+      "size": 8265,
+      "is_binary": false
+    },
+    {
+      "name": "04_reconciliar_turmas.py",
+      "path": "DBA/database/04_reconciliar_turmas.py",
+      "type": "file",
+      "sha": "1df01a23003f6b27715783e3f21b801aad05649e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4195,
       "is_binary": false
     },
     {
@@ -382,9 +412,19 @@
       "name": "scraping",
       "path": "DBA/scraping",
       "type": "directory",
-      "sha": "afce0a72db37287246621deb7a6b1f5cc693cb75",
+      "sha": "2419a4c21a1d9e54e7c16948661154215d8543d7",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "atualizar_departamentos_id.py",
+      "path": "DBA/scraping/atualizar_departamentos_id.py",
+      "type": "file",
+      "sha": "b3493ed6c3ed890b46ee4a13a34463e5506ff1f6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3812,
+      "is_binary": false
     },
     {
       "name": "departamentos_ID_unb.csv",
@@ -394,16 +434,6 @@
       "mode": "100644",
       "extension": ".csv",
       "size": 880,
-      "is_binary": false
-    },
-    {
-      "name": "extrair_turmas_sigaa.py",
-      "path": "DBA/scraping/extrair_turmas_sigaa.py",
-      "type": "file",
-      "sha": "e4552ae9fdb74e3dcacdbe504e7bfe2e1d1c38f2",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 16272,
       "is_binary": false
     },
     {
@@ -440,10 +470,10 @@
       "name": "scraping_turmas.py",
       "path": "DBA/scraping/scraping_turmas.py",
       "type": "file",
-      "sha": "4e49e3509f77f85214cee71b0048de31b5831243",
+      "sha": "d10e6da7ba54527056d97bc0663b0aec0a6f028b",
       "mode": "100644",
       "extension": ".py",
-      "size": 26827,
+      "size": 27599,
       "is_binary": false
     },
     {
@@ -7594,7 +7624,7 @@
       "name": "no_fluxo_frontend_svelte",
       "path": "no_fluxo_frontend_svelte",
       "type": "directory",
-      "sha": "6cebd63f93ef435bc7f6b25931d1c21cfc5da120",
+      "sha": "be3ca5c2a91b54c7e66ae78e3b3eafd8dbb803c8",
       "mode": "040000",
       "children": []
     },
@@ -7760,7 +7790,7 @@
       "name": "src",
       "path": "no_fluxo_frontend_svelte/src",
       "type": "directory",
-      "sha": "3a7ecc89a56f6f60192d3e8427a7fc4c5be718d5",
+      "sha": "cb076d46bd270d90d6d66f462d4f9b2652f296ea",
       "mode": "040000",
       "children": []
     },
@@ -7808,7 +7838,7 @@
       "name": "lib",
       "path": "no_fluxo_frontend_svelte/src/lib",
       "type": "directory",
-      "sha": "98ce9f85ab401a040fad7ae70d017bcb0479b8c7",
+      "sha": "67fe35c4ffdfbdabf0f68d39e66abc484fa1466c",
       "mode": "040000",
       "children": []
     },
@@ -7864,7 +7894,7 @@
       "name": "components",
       "path": "no_fluxo_frontend_svelte/src/lib/components",
       "type": "directory",
-      "sha": "2c7ddb679cfb6168d103c2a510351dd671b20954",
+      "sha": "6dfe043683a7c3ce11d677290c3365c75d25e3be",
       "mode": "040000",
       "children": []
     },
@@ -7872,7 +7902,7 @@
       "name": "admin",
       "path": "no_fluxo_frontend_svelte/src/lib/components/admin",
       "type": "directory",
-      "sha": "7ecbf6094761abf189a6e1105bea6aa717e13e93",
+      "sha": "7c3b28c7b95c240a371152bfb8c8282df0fb8a4b",
       "mode": "040000",
       "children": []
     },
@@ -7880,10 +7910,10 @@
       "name": "AdminNav.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/admin/AdminNav.svelte",
       "type": "file",
-      "sha": "e45406d20d274fda08e930c0f2b33fcee954b4e4",
+      "sha": "692929bc1fe35a9f8ec5d8edd796b3cf43803df2",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 1297,
+      "size": 1389,
       "is_binary": false
     },
     {
@@ -7968,7 +7998,7 @@
       "name": "disciplinas",
       "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas",
       "type": "directory",
-      "sha": "3b2196219fb164f7dcfa3a081a610465813f872c",
+      "sha": "9b76431954f29520606e39e7102c58d08e9d7121",
       "mode": "040000",
       "children": []
     },
@@ -7980,6 +8010,16 @@
       "mode": "100644",
       "extension": ".svelte",
       "size": 21970,
+      "is_binary": false
+    },
+    {
+      "name": "TurmasVagasPanel.svelte",
+      "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas/TurmasVagasPanel.svelte",
+      "type": "file",
+      "sha": "a8fb9d98e4151a6884f6a48920e9d6017ce5c7da",
+      "mode": "100644",
+      "extension": ".svelte",
+      "size": 8062,
       "is_binary": false
     },
     {
@@ -8376,7 +8416,7 @@
       "name": "layout",
       "path": "no_fluxo_frontend_svelte/src/lib/components/layout",
       "type": "directory",
-      "sha": "7f9dfa6667f0164b53e45672f6485e67d6efae92",
+      "sha": "db4a352776ec16828042201a8c86a298fc555213",
       "mode": "040000",
       "children": []
     },
@@ -8454,10 +8494,10 @@
       "name": "Navbar.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte",
       "type": "file",
-      "sha": "5ae5c394fc51ff4a4234370f5fe4d36a88b091ec",
+      "sha": "a2cbb993ce5f70c08d2963c336c509134f710c2f",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 16923,
+      "size": 23180,
       "is_binary": false
     },
     {
@@ -9568,7 +9608,7 @@
       "name": "config",
       "path": "no_fluxo_frontend_svelte/src/lib/config",
       "type": "directory",
-      "sha": "d7f8a95fcf648d2f25944b89726b4421d23b29f7",
+      "sha": "dda83a7b9699bf6f1bd0f023a25cf9fe88ee4280",
       "mode": "040000",
       "children": []
     },
@@ -9576,10 +9616,10 @@
       "name": "routes.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/config/routes.ts",
       "type": "file",
-      "sha": "0cc93d76b2110465364ecf5378dfb78fcda21fe0",
+      "sha": "480e0ace70cc7750fadda846a0bf907884c9e3c1",
       "mode": "100644",
       "extension": ".ts",
-      "size": 2460,
+      "size": 2547,
       "is_binary": false
     },
     {
@@ -9706,7 +9746,7 @@
       "name": "services",
       "path": "no_fluxo_frontend_svelte/src/lib/services",
       "type": "directory",
-      "sha": "9454e9caa9f92dffd10e479086714d82e24db71d",
+      "sha": "101b618cf007f64c61c271f1933cc5006437d185",
       "mode": "040000",
       "children": []
     },
@@ -9849,6 +9889,16 @@
       "is_binary": false
     },
     {
+      "name": "system-settings.service.ts",
+      "path": "no_fluxo_frontend_svelte/src/lib/services/system-settings.service.ts",
+      "type": "file",
+      "sha": "7f01eb80fb03496d937b6329d97e8ce772b37ec7",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1076,
+      "is_binary": false
+    },
+    {
       "name": "ticket.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/ticket.service.ts",
       "type": "file",
@@ -9876,6 +9926,16 @@
       "mode": "100644",
       "extension": ".ts",
       "size": 2430,
+      "is_binary": false
+    },
+    {
+      "name": "vaga-notificacao.service.ts",
+      "path": "no_fluxo_frontend_svelte/src/lib/services/vaga-notificacao.service.ts",
+      "type": "file",
+      "sha": "ae4c14edaaed6046549d78f88042a2c0f5067595",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1844,
       "is_binary": false
     },
     {
@@ -10014,7 +10074,7 @@
       "name": "types",
       "path": "no_fluxo_frontend_svelte/src/lib/types",
       "type": "directory",
-      "sha": "0825bfc4c67b35a1a53bdf7e81a0d1674bf96984",
+      "sha": "c2034bd77950d492f90ab9b79cd9dd57c55ff340",
       "mode": "040000",
       "children": []
     },
@@ -10116,6 +10176,16 @@
       "mode": "100644",
       "extension": ".ts",
       "size": 3256,
+      "is_binary": false
+    },
+    {
+      "name": "notificacao.ts",
+      "path": "no_fluxo_frontend_svelte/src/lib/types/notificacao.ts",
+      "type": "file",
+      "sha": "5f6063c460d6e6feaf1b5f2a24203fcec4c1aef3",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 390,
       "is_binary": false
     },
     {
@@ -10330,7 +10400,7 @@
       "name": "routes",
       "path": "no_fluxo_frontend_svelte/src/routes",
       "type": "directory",
-      "sha": "f8ee71ee88327662098c7d253ec4e1ebcba42c17",
+      "sha": "e9eda16e5cbfc3c8ccfe4d9d10628182609e5a3f",
       "mode": "040000",
       "children": []
     },
@@ -10388,9 +10458,27 @@
       "name": "admin",
       "path": "no_fluxo_frontend_svelte/src/routes/admin",
       "type": "directory",
-      "sha": "d224c85b503d39c04f650ef6acd2361028c003d5",
+      "sha": "54e2fecbc8c25fda371e7c0c17a6631c3dbd3220",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "configuracoes",
+      "path": "no_fluxo_frontend_svelte/src/routes/admin/configuracoes",
+      "type": "directory",
+      "sha": "cdaea0513a65029e4ab79c7f29513fe283c013d0",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "+page.svelte",
+      "path": "no_fluxo_frontend_svelte/src/routes/admin/configuracoes/+page.svelte",
+      "type": "file",
+      "sha": "1a7cb7f0593749937d27a0301581af0161a7c72f",
+      "mode": "100644",
+      "extension": ".svelte",
+      "size": 4859,
+      "is_binary": false
     },
     {
       "name": "dashboard",
@@ -10566,7 +10654,7 @@
       "name": "disciplinas",
       "path": "no_fluxo_frontend_svelte/src/routes/disciplinas",
       "type": "directory",
-      "sha": "ba7902714da601f0f7874aab336a537e0205457d",
+      "sha": "1cecefe64c10ed40249a6b10bcb8948a9af74af1",
       "mode": "040000",
       "children": []
     },
@@ -10574,10 +10662,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte",
       "type": "file",
-      "sha": "513fec567cb8ef359a2075d989af9837259480f5",
+      "sha": "eb5b8cc9240c96a1ff5c7ab116b3f6f2df53c754",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 43481,
+      "size": 43938,
       "is_binary": false
     },
     {
@@ -12704,7 +12792,7 @@
       "name": "tests-python",
       "path": "tests-python",
       "type": "directory",
-      "sha": "2830a7d84675809fff6720219eb8e503f381445f",
+      "sha": "a641f996e0e1e0202d9cc3d1537604f90993149e",
       "mode": "040000",
       "children": []
     },
@@ -12779,16 +12867,6 @@
       "is_binary": false
     },
     {
-      "name": "test_extrair_turmas_sigaa.py",
-      "path": "tests-python/test_extrair_turmas_sigaa.py",
-      "type": "file",
-      "sha": "e0c5bbfa2d9e3ce189b7e9933557498a69be4b41",
-      "mode": "100644",
-      "extension": ".py",
-      "size": 10476,
-      "is_binary": false
-    },
-    {
       "name": "test_scraping_equivalencias.py",
       "path": "tests-python/test_scraping_equivalencias.py",
       "type": "file",
@@ -12810,17 +12888,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-07-15T07:59:29.068537",
+  "extracted_at": "2026-07-16T08:14:50.430488",
   "method": "rest",
-  "total_items": 1336,
+  "total_items": 1344,
   "repository_metadata": {
     "id": 957040204,
     "full_name": "unb-mds/2025-1-NoFluxoUNB",
     "description": "Fluxograma interativo com chat-bot que auxilia na escolha e visualização da sua estrutura curricular da UnB.",
     "created_at": "2025-03-29T12:09:56Z",
-    "updated_at": "2026-07-15T00:53:54Z",
+    "updated_at": "2026-07-15T21:50:40Z",
     "language": "JavaScript",
-    "size": 139271,
+    "size": 139317,
     "stars": 17,
     "forks": 6,
     "open_issues": 7
