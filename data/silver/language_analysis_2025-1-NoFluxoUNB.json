@@ -2,19 +2,19 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-07-15T07:59:29.068537",
+  "analyzed_at": "2026-07-16T08:14:50.430488",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1058,
-  "total_bytes": 35182359,
+  "total_files": 1065,
+  "total_bytes": 35190628,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 110,
       "total_bytes": 20535125,
-      "percentage": 58.37,
+      "percentage": 58.35,
       "files": [
         {
           "path": "documentacao/estudos/Github/Assets/ex_repositorio.png",
@@ -80,9 +80,9 @@
     },
     {
       "language": "Unknown",
-      "file_count": 296,
-      "total_bytes": 3453415,
-      "percentage": 9.82,
+      "file_count": 298,
+      "total_bytes": 3473142,
+      "percentage": 9.87,
       "files": [
         {
           "path": "no_fluxo_frontend_svelte/static/pdf.worker.min.mjs",
@@ -117,7 +117,7 @@
         {
           "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte",
           "name": "+page.svelte",
-          "size": 43481,
+          "size": 43938,
           "extension": ".svelte"
         },
         {
@@ -150,7 +150,7 @@
       "language": "JSON",
       "file_count": 117,
       "total_bytes": 2996325,
-      "percentage": 8.52,
+      "percentage": 8.51,
       "files": [
         {
           "path": "no_fluxo_backend/docs/database_schema.json",
@@ -384,9 +384,9 @@
     },
     {
       "language": "TypeScript",
-      "file_count": 137,
-      "total_bytes": 747161,
-      "percentage": 2.12,
+      "file_count": 140,
+      "total_bytes": 750558,
+      "percentage": 2.13,
       "files": [
         {
           "path": "no_fluxo_backend/scripts/export_schema.ts",
@@ -533,78 +533,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 34,
-      "total_bytes": 425329,
-      "percentage": 1.21,
-      "files": [
-        {
-          "path": "no_fluxo_backend/parse-pdf/pdf_parser_final.py",
-          "name": "pdf_parser_final.py",
-          "size": 39533,
-          "extension": ".py"
-        },
-        {
-          "path": "no_fluxo_backend/parse-pdf/pdf_parser_ocr.py",
-          "name": "pdf_parser_ocr.py",
-          "size": 32830,
-          "extension": ".py"
-        },
-        {
-          "path": "DBA/database/01_insert_cursos_matrizes_materias.py",
-          "name": "01_insert_cursos_matrizes_materias.py",
-          "size": 30178,
-          "extension": ".py"
-        },
-        {
-          "path": "no_fluxo_backend/start_and_monitor.py",
-          "name": "start_and_monitor.py",
-          "size": 29908,
-          "extension": ".py"
-        },
-        {
-          "path": "scripts/deploy/deploy_local.py",
-          "name": "deploy_local.py",
-          "size": 27406,
-          "extension": ".py"
-        },
-        {
-          "path": "kubernetes_docs/local_build_and_deploy/deploy_local.py",
-          "name": "deploy_local.py",
-          "size": 26996,
-          "extension": ".py"
-        },
-        {
-          "path": "DBA/scraping/scraping_turmas.py",
-          "name": "scraping_turmas.py",
-          "size": 26827,
-          "extension": ".py"
-        },
-        {
-          "path": "DBA/scraping/scraping_equivalencias.py",
-          "name": "scraping_equivalencias.py",
-          "size": 24509,
-          "extension": ".py"
-        },
-        {
-          "path": "DBA/scraping/scraping_ementa.py",
-          "name": "scraping_ementa.py",
-          "size": 22126,
-          "extension": ".py"
-        },
-        {
-          "path": "mcp_agent/api_producao.py",
-          "name": "api_producao.py",
-          "size": 21710,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "YAML",
-      "file_count": 13,
-      "total_bytes": 404589,
-      "percentage": 1.15,
+      "file_count": 15,
+      "total_bytes": 407220,
+      "percentage": 1.16,
       "files": [
         {
           "path": "pnpm-lock.yaml",
@@ -625,15 +557,15 @@
           "extension": ".yml"
         },
         {
-          "path": ".github/workflows/actions.yml",
-          "name": "actions.yml",
-          "size": 6168,
-          "extension": ".yml"
-        },
-        {
           "path": ".github/workflows/security-and-quality.yml",
           "name": "security-and-quality.yml",
           "size": 5532,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/scrape_turmas_lite.yml",
+          "name": "scrape_turmas_lite.yml",
+          "size": 4906,
           "extension": ".yml"
         },
         {
@@ -661,10 +593,78 @@
           "extension": ".yml"
         },
         {
-          "path": "no_fluxo_frontend/analysis_options.yaml",
-          "name": "analysis_options.yaml",
-          "size": 1420,
-          "extension": ".yaml"
+          "path": ".github/workflows/scrape_equivalencias.yml",
+          "name": "scrape_equivalencias.yml",
+          "size": 1984,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 34,
+      "total_bytes": 407843,
+      "percentage": 1.16,
+      "files": [
+        {
+          "path": "no_fluxo_backend/parse-pdf/pdf_parser_final.py",
+          "name": "pdf_parser_final.py",
+          "size": 39533,
+          "extension": ".py"
+        },
+        {
+          "path": "no_fluxo_backend/parse-pdf/pdf_parser_ocr.py",
+          "name": "pdf_parser_ocr.py",
+          "size": 32830,
+          "extension": ".py"
+        },
+        {
+          "path": "DBA/database/01_insert_cursos_matrizes_materias.py",
+          "name": "01_insert_cursos_matrizes_materias.py",
+          "size": 30178,
+          "extension": ".py"
+        },
+        {
+          "path": "no_fluxo_backend/start_and_monitor.py",
+          "name": "start_and_monitor.py",
+          "size": 29908,
+          "extension": ".py"
+        },
+        {
+          "path": "DBA/scraping/scraping_turmas.py",
+          "name": "scraping_turmas.py",
+          "size": 27599,
+          "extension": ".py"
+        },
+        {
+          "path": "scripts/deploy/deploy_local.py",
+          "name": "deploy_local.py",
+          "size": 27406,
+          "extension": ".py"
+        },
+        {
+          "path": "kubernetes_docs/local_build_and_deploy/deploy_local.py",
+          "name": "deploy_local.py",
+          "size": 26996,
+          "extension": ".py"
+        },
+        {
+          "path": "DBA/scraping/scraping_equivalencias.py",
+          "name": "scraping_equivalencias.py",
+          "size": 24509,
+          "extension": ".py"
+        },
+        {
+          "path": "DBA/scraping/scraping_ementa.py",
+          "name": "scraping_ementa.py",
+          "size": 22126,
+          "extension": ".py"
+        },
+        {
+          "path": "mcp_agent/api_producao.py",
+          "name": "api_producao.py",
+          "size": 21710,
+          "extension": ".py"
         }
       ]
     },
@@ -1562,7 +1562,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-07-15T08:02:58.563606",
+    "extracted_at": "2026-07-16T08:18:37.585243",
     "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
   }
 }

@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-07-15T07:59:29.068537",
+  "extracted_at": "2026-07-16T08:14:50.430488",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -74,14 +74,6 @@
         "children": []
       },
       {
-        "name": "actions.yml",
-        "type": "file",
-        "language": "YAML",
-        "size": 6168,
-        "extension": ".yml",
-        "path": ".github/workflows/actions.yml"
-      },
-      {
         "name": "ci.yml",
         "type": "file",
         "language": "YAML",
@@ -104,6 +96,30 @@
         "size": 2846,
         "extension": ".yml",
         "path": ".github/workflows/pipelineCI.yml"
+      },
+      {
+        "name": "scrape_ementa.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1909,
+        "extension": ".yml",
+        "path": ".github/workflows/scrape_ementa.yml"
+      },
+      {
+        "name": "scrape_equivalencias.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 1984,
+        "extension": ".yml",
+        "path": ".github/workflows/scrape_equivalencias.yml"
+      },
+      {
+        "name": "scrape_turmas_lite.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 4906,
+        "extension": ".yml",
+        "path": ".github/workflows/scrape_turmas_lite.yml"
       },
       {
         "name": "security-and-quality.yml",
@@ -221,9 +237,17 @@
         "name": "03_insert_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 7782,
+        "size": 8265,
         "extension": ".py",
         "path": "DBA/database/03_insert_turmas.py"
+      },
+      {
+        "name": "04_reconciliar_turmas.py",
+        "type": "file",
+        "language": "Python",
+        "size": 4195,
+        "extension": ".py",
+        "path": "DBA/database/04_reconciliar_turmas.py"
       },
       {
         "name": "README.md",
@@ -310,20 +334,20 @@
         "children": []
       },
       {
+        "name": "atualizar_departamentos_id.py",
+        "type": "file",
+        "language": "Python",
+        "size": 3812,
+        "extension": ".py",
+        "path": "DBA/scraping/atualizar_departamentos_id.py"
+      },
+      {
         "name": "departamentos_ID_unb.csv",
         "type": "file",
         "language": "Unknown",
         "size": 880,
         "extension": ".csv",
         "path": "DBA/scraping/departamentos_ID_unb.csv"
-      },
-      {
-        "name": "extrair_turmas_sigaa.py",
-        "type": "file",
-        "language": "Python",
-        "size": 16272,
-        "extension": ".py",
-        "path": "DBA/scraping/extrair_turmas_sigaa.py"
       },
       {
         "name": "requirements.txt",
@@ -353,7 +377,7 @@
         "name": "scraping_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 26827,
+        "size": 27599,
         "extension": ".py",
         "path": "DBA/scraping/scraping_turmas.py"
       },
@@ -6241,7 +6265,7 @@
         "name": "AdminNav.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 1297,
+        "size": 1389,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/admin/AdminNav.svelte"
       },
@@ -6320,6 +6344,14 @@
         "size": 21970,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas/SubjectChainView.svelte"
+      },
+      {
+        "name": "TurmasVagasPanel.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 8062,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas/TurmasVagasPanel.svelte"
       },
       {
         "name": "effects",
@@ -6697,7 +6729,7 @@
         "name": "Navbar.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 16923,
+        "size": 23180,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte"
       },
@@ -7587,7 +7619,7 @@
         "name": "routes.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2460,
+        "size": 2547,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/config/routes.ts"
       },
@@ -7802,6 +7834,14 @@
         "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts"
       },
       {
+        "name": "system-settings.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1076,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/system-settings.service.ts"
+      },
+      {
         "name": "ticket.service.ts",
         "type": "file",
         "language": "TypeScript",
@@ -7824,6 +7864,14 @@
         "size": 2430,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/user.service.ts"
+      },
+      {
+        "name": "vaga-notificacao.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1844,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/vaga-notificacao.service.ts"
       },
       {
         "name": "stores",
@@ -8014,6 +8062,14 @@
         "size": 3256,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/matriz.ts"
+      },
+      {
+        "name": "notificacao.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 390,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/types/notificacao.ts"
       },
       {
         "name": "prerequisite-tree.ts",
@@ -8234,6 +8290,20 @@
         "children": []
       },
       {
+        "name": "configuracoes",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/routes/admin/configuracoes",
+        "children": []
+      },
+      {
+        "name": "+page.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4859,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/routes/admin/configuracoes/+page.svelte"
+      },
+      {
         "name": "dashboard",
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/src/routes/admin/dashboard",
@@ -8375,7 +8445,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 43481,
+        "size": 43938,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte"
       },
@@ -10116,14 +10186,6 @@
         "path": "tests-python/test_expressao_parser.py"
       },
       {
-        "name": "test_extrair_turmas_sigaa.py",
-        "type": "file",
-        "language": "Python",
-        "size": 10476,
-        "extension": ".py",
-        "path": "tests-python/test_extrair_turmas_sigaa.py"
-      },
-      {
         "name": "test_scraping_equivalencias.py",
         "type": "file",
         "language": "Python",
@@ -10142,7 +10204,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-07-15T08:02:58.570656",
+    "extracted_at": "2026-07-16T08:18:37.592002",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }
