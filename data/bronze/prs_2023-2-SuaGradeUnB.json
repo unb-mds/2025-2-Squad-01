@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-07-19T07:19:29.662671",
+      "extracted_at": "2026-07-20T07:49:30.585771",
       "file_path": "data/bronze/prs_2023-2-SuaGradeUnB.json",
       "record_count": 77
     }
@@ -2302,7 +2302,7 @@
         "description": "Tests added to feature or bug"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2330,8 +2330,8 @@
     "milestone": null,
     "comments": 3,
     "created_at": "2024-07-22T17:54:48Z",
-    "updated_at": "2025-02-03T14:01:58Z",
-    "closed_at": null,
+    "updated_at": "2026-07-20T00:47:49Z",
+    "closed_at": "2026-07-20T00:47:49Z",
     "assignee": {
       "login": "artrsousa1",
       "id": 109052099,
@@ -2366,7 +2366,27 @@
       "merged_at": null
     },
     "body": "<!-- ## Modelo de Solicitação de Pull Request\r\n\r\nPor favor, siga estas etapas antes de enviar um PR.\r\n\r\n1. Certifique-se de que seu PR não seja duplicado.\r\n\r\n2. Se não for, então certifique-se de que:\r\n\r\na. Você fez suas alterações em um branch separado. Os branches DEVEM ter nomes descritivos que comecem com os prefixos `fix/` ou `task`. Bons exemplos são: `fix/signin-issue`,`task/issue-templates` ou `task/add-search-by-name`.\r\n\r\nb. Você sincronizou sua branch com a branch `main` do repositório, para que seu PR possa ser mesclado facilmente.(`git pull origin main`)\r\n\r\nc. Você tem mensagens de commit descritivas com um título curto (primeira linha).\r\n\r\nd. `make testfull` não gera nenhum erro e possui mais de 90% de *code coverage*. Se ocorrerem erros, corrija-os primeiro e emende seu commit (`git commit --amend`).\r\n\r\n3. **Após** essas etapas, você está pronto para abrir um pull request.\r\n\r\na. Dê um título descritivo ao seu PR.\r\n\r\nb. Descreva suas alterações.\r\n\r\nc. Escreva `closes #XXXX` em seu comentário para fechar automaticamente a issue que seu PR corrige (se houver).\r\n\r\nIMPORTANTE: Por favor, revise a paǵina de \"COMO CONTRIBUIR?\" (https://unb-mds.github.io/2023-2-SuaGradeUnB/contributing/) para obter diretrizes detalhadas sobre contribuições.\r\n-->\r\n\r\n# Descrição\r\n\r\n<!-- Por favor, inclua um resumo das alterações e a issue relacionada. Também inclua motivação e contexto relevantes. Liste quaisquer dependências necessárias para essa alteração.\r\n\r\nRemova o comentário da linha a seguir caso exista uma issue relacionada a seu PR : -->\r\n\r\n<!-- **closes #(issue) **-->\r\n\r\n## Tipo de alteração\r\n\r\n<!-- Por favor, exclua as opções que não são relevantes. -->\r\n\r\n* \\[ ]   **Bug fix** (alteração que corrige um problema)\r\n* \\[ ]   **New feature** (alteração que adiciona funcionalidade)\r\n* \\[ ]   **Breaking change** (correção ou funcionalidade que altera o comportamento de outras partes do sistema de maneira significativa)\r\n* \\[ ]   **Documentation update** (alteração na documentação)\r\n\r\n## Como isso foi testado?\r\n\r\n<!-- Por favor, descreva abaixo os testes que você executou para verificar suas alterações. Forneça instruções para que possamos reproduzir. Liste também quaisquer detalhes relevantes para a configuração de seus testes.\r\nPara testes de UI(User Interface), você pode usar uma imagem, GIF ou vídeo para mostrar como o sistema se comporta antes e depois de sua alteração. Você pode usar o [LICEcap](https://www.cockos.com/licecap/) para gravar GIFs facilmente no Windows e MAC ou ferramentas nativas do seu sistema operacional. -->\r\n\r\n* \\[ ]   Teste A\r\n* \\[ ]   Teste B\r\n\r\n## Checklist\r\n\r\n<!-- Você deve marcar todas as as opções aplicáveis ao seu PR. -->\r\n\r\n* \\[ ]   Meu código segue as diretrizes de contribuição deste projeto\r\n* \\[ ]   Realizei uma revisão pessoal do meu código\r\n* \\[ ]   Comentei meu código, especialmente em áreas de difícil compreensão\r\n* \\[ ]   Fiz alterações correspondentes na documentação <!--*( caso aplicável)* -->\r\n* \\[ ]   Minhas alterações não geram novos *warnings* ou erros\r\n* \\[ ]   Adicionei testes que comprovam que minha correção é eficaz ou que minha funcionalidade está funcionando corretamente <!--*( caso aplicável)* -->\r\n* \\[ ]   Todos os testes unitários novos e existentes passam localmente com minhas alterações <!-- Use 'make test' ou 'make testfull' -->\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "artrsousa1",
+      "id": 109052099,
+      "node_id": "U_kgDOBoAAww",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109052099?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/artrsousa1",
+      "html_url": "https://github.com/artrsousa1",
+      "followers_url": "https://api.github.com/users/artrsousa1/followers",
+      "following_url": "https://api.github.com/users/artrsousa1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/artrsousa1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/artrsousa1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/artrsousa1/subscriptions",
+      "organizations_url": "https://api.github.com/users/artrsousa1/orgs",
+      "repos_url": "https://api.github.com/users/artrsousa1/repos",
+      "events_url": "https://api.github.com/users/artrsousa1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/artrsousa1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2023-2-SuaGradeUnB/issues/224/reactions",
       "total_count": 0,
