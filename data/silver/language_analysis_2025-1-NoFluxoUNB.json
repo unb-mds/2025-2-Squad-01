@@ -2,19 +2,19 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-03T09:19:31.685007",
+  "analyzed_at": "2026-08-04T08:31:33.349677",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 849,
-  "total_bytes": 33678158,
+  "total_files": 967,
+  "total_bytes": 35053345,
   "languages": [
     {
       "language": "PNG Image",
       "file_count": 72,
       "total_bytes": 20107411,
-      "percentage": 59.7,
+      "percentage": 57.36,
       "files": [
         {
           "path": "documentacao/estudos/Github/Assets/ex_repositorio.png",
@@ -80,26 +80,26 @@
     },
     {
       "language": "JSON",
-      "file_count": 110,
-      "total_bytes": 2990583,
-      "percentage": 8.88,
+      "file_count": 111,
+      "total_bytes": 3299264,
+      "percentage": 9.41,
       "files": [
         {
           "path": "no_fluxo_backend/docs/database_schema.json",
           "name": "database_schema.json",
-          "size": 368874,
-          "extension": ".json"
-        },
-        {
-          "path": "no_fluxo_backend/package-lock.json",
-          "name": "package-lock.json",
-          "size": 284955,
+          "size": 459524,
           "extension": ".json"
         },
         {
           "path": "no_fluxo_frontend_svelte/package-lock.json",
           "name": "package-lock.json",
-          "size": 193108,
+          "size": 366007,
+          "extension": ".json"
+        },
+        {
+          "path": "no_fluxo_backend/package-lock.json",
+          "name": "package-lock.json",
+          "size": 311732,
           "extension": ".json"
         },
         {
@@ -148,9 +148,9 @@
     },
     {
       "language": "Unknown",
-      "file_count": 185,
-      "total_bytes": 2613847,
-      "percentage": 7.76,
+      "file_count": 217,
+      "total_bytes": 2736381,
+      "percentage": 7.81,
       "files": [
         {
           "path": "no_fluxo_frontend_svelte/static/pdf.worker.min.mjs",
@@ -171,15 +171,9 @@
           "extension": ".svelte"
         },
         {
-          "path": "no_fluxo_frontend_svelte/src/routes/assistente/+page.svelte",
-          "name": "+page.svelte",
-          "size": 36974,
-          "extension": ".svelte"
-        },
-        {
           "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteConnections.svelte",
           "name": "PrerequisiteConnections.svelte",
-          "size": 31438,
+          "size": 32481,
           "extension": ".svelte"
         },
         {
@@ -189,21 +183,15 @@
           "extension": ".mjs"
         },
         {
-          "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte",
-          "name": "Navbar.svelte",
-          "size": 23180,
-          "extension": ".svelte"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/routes/admin/tickets/+page.svelte",
-          "name": "+page.svelte",
-          "size": 22961,
-          "extension": ".svelte"
-        },
-        {
           "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramViewportChrome.svelte",
           "name": "FluxogramViewportChrome.svelte",
-          "size": 22462,
+          "size": 24765,
+          "extension": ".svelte"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/routes/(protected)/admin/tickets/+page.svelte",
+          "name": "+page.svelte",
+          "size": 22498,
           "extension": ".svelte"
         },
         {
@@ -211,6 +199,18 @@
           "name": "SubjectChainView.svelte",
           "size": 21970,
           "extension": ".svelte"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/[courseName]/+page.svelte",
+          "name": "+page.svelte",
+          "size": 21818,
+          "extension": ".svelte"
+        },
+        {
+          "path": ".pylintrc",
+          "name": ".pylintrc",
+          "size": 21341,
+          "extension": ".pylintrc"
         }
       ]
     },
@@ -218,7 +218,7 @@
       "language": "PDF",
       "file_count": 28,
       "total_bytes": 1752130,
-      "percentage": 5.2,
+      "percentage": 5.0,
       "files": [
         {
           "path": "documentacao/estudos/SCRUM e Programação eXtrema/SRUM e programação eXtrema.pdf",
@@ -284,9 +284,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 118,
-      "total_bytes": 1643802,
-      "percentage": 4.88,
+      "file_count": 128,
+      "total_bytes": 1742654,
+      "percentage": 4.97,
       "files": [
         {
           "path": "plans/05-MODELS-TYPES.md",
@@ -304,6 +304,12 @@
           "path": "plans/11-FLUXOGRAMA.md",
           "name": "11-FLUXOGRAMA.md",
           "size": 70961,
+          "extension": ".md"
+        },
+        {
+          "path": "plans/2026-07-04-chat-agente-planejador.md",
+          "name": "2026-07-04-chat-agente-planejador.md",
+          "size": 68224,
           "extension": ".md"
         },
         {
@@ -341,12 +347,74 @@
           "name": "08-AUTH-PAGES.md",
           "size": 52265,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 208,
+      "total_bytes": 1286802,
+      "percentage": 3.67,
+      "files": [
+        {
+          "path": "no_fluxo_backend/scripts/export_schema.ts",
+          "name": "export_schema.ts",
+          "size": 55828,
+          "extension": ".ts"
         },
         {
-          "path": "plans/04-SERVICES-API.md",
-          "name": "04-SERVICES-API.md",
-          "size": 51033,
-          "extension": ".md"
+          "path": "no_fluxo_backend/src/controllers/fluxograma_controller.ts",
+          "name": "fluxograma_controller.ts",
+          "size": 52632,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/src/services/plano_formatura.service.ts",
+          "name": "plano_formatura.service.ts",
+          "size": 48855,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/tests-ts/grade-actuator.test.ts",
+          "name": "grade-actuator.test.ts",
+          "size": 44040,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfDataExtractor.ts",
+          "name": "pdfDataExtractor.ts",
+          "size": 37866,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/src/controllers/PlanejamentoController.ts",
+          "name": "PlanejamentoController.ts",
+          "size": 33473,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts",
+          "name": "supabase-data.service.ts",
+          "size": 32346,
+          "extension": ".ts"
+        },
+        {
+          "path": "supabase/functions/casar-disciplinas/index.ts",
+          "name": "index.ts",
+          "size": 30690,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts",
+          "name": "index.ts",
+          "size": 29470,
+          "extension": ".ts"
+        },
+        {
+          "path": "no_fluxo_backend/scripts/import_avaliacoes_disciplinas.ts",
+          "name": "import_avaliacoes_disciplinas.ts",
+          "size": 28853,
+          "extension": ".ts"
         }
       ]
     },
@@ -354,7 +422,7 @@
       "language": "JPEG Image",
       "file_count": 4,
       "total_bytes": 774924,
-      "percentage": 2.3,
+      "percentage": 2.21,
       "files": [
         {
           "path": "assets/Logo_eu_3 editada.JPG",
@@ -383,78 +451,10 @@
       ]
     },
     {
-      "language": "TypeScript",
-      "file_count": 140,
-      "total_bytes": 754489,
-      "percentage": 2.24,
-      "files": [
-        {
-          "path": "no_fluxo_backend/scripts/export_schema.ts",
-          "name": "export_schema.ts",
-          "size": 55304,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_backend/src/controllers/fluxograma_controller.ts",
-          "name": "fluxograma_controller.ts",
-          "size": 52632,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfDataExtractor.ts",
-          "name": "pdfDataExtractor.ts",
-          "size": 37665,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/supabase-data.service.ts",
-          "name": "supabase-data.service.ts",
-          "size": 30928,
-          "extension": ".ts"
-        },
-        {
-          "path": "supabase/functions/casar-disciplinas/index.ts",
-          "name": "index.ts",
-          "size": 30690,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts",
-          "name": "index.ts",
-          "size": 29470,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_backend/src/controllers/testes_controller.ts",
-          "name": "testes_controller.ts",
-          "size": 24519,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/stores/fluxograma.store.svelte.ts",
-          "name": "fluxograma.store.svelte.ts",
-          "size": 23441,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfPositionExtractor.ts",
-          "name": "pdfPositionExtractor.ts",
-          "size": 17155,
-          "extension": ".ts"
-        },
-        {
-          "path": "no_fluxo_backend/src/controllers/assistente_controller.ts",
-          "name": "assistente_controller.ts",
-          "size": 15455,
-          "extension": ".ts"
-        }
-      ]
-    },
-    {
       "language": "Log File",
       "file_count": 1,
       "total_bytes": 657761,
-      "percentage": 1.95,
+      "percentage": 1.88,
       "files": [
         {
           "path": "logs/ai_agent.log",
@@ -465,10 +465,78 @@
       ]
     },
     {
+      "language": "YAML",
+      "file_count": 13,
+      "total_bytes": 644218,
+      "percentage": 1.84,
+      "files": [
+        {
+          "path": "pnpm-lock.yaml",
+          "name": "pnpm-lock.yaml",
+          "size": 378450,
+          "extension": ".yaml"
+        },
+        {
+          "path": "no_fluxo_frontend_svelte/pnpm-lock.yaml",
+          "name": "pnpm-lock.yaml",
+          "size": 231158,
+          "extension": ".yaml"
+        },
+        {
+          "path": "kubernetes_docs/templates/github-workflow.yml",
+          "name": "github-workflow.yml",
+          "size": 11497,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/security-and-quality.yml",
+          "name": "security-and-quality.yml",
+          "size": 5532,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/scrape_turmas_lite.yml",
+          "name": "scrape_turmas_lite.yml",
+          "size": 4906,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/pipelineCI.yml",
+          "name": "pipelineCI.yml",
+          "size": 2846,
+          "extension": ".yml"
+        },
+        {
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 2502,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/deploy.yml",
+          "name": "deploy.yml",
+          "size": 2016,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/scrape_equivalencias.yml",
+          "name": "scrape_equivalencias.yml",
+          "size": 1984,
+          "extension": ".yml"
+        },
+        {
+          "path": ".github/workflows/scrape_ementa.yml",
+          "name": "scrape_ementa.yml",
+          "size": 1909,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
       "language": "Text",
       "file_count": 36,
       "total_bytes": 512314,
-      "percentage": 1.52,
+      "percentage": 1.46,
       "files": [
         {
           "path": "test_historicos/extracted_texts/historico_211029503 (1)_numbered.txt",
@@ -533,10 +601,78 @@
       ]
     },
     {
+      "language": "SQL",
+      "file_count": 12,
+      "total_bytes": 446559,
+      "percentage": 1.27,
+      "files": [
+        {
+          "path": "no_fluxo_backend/docs/database_functions.sql",
+          "name": "database_functions.sql",
+          "size": 135880,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql",
+          "name": "latest_init_from_export.sql",
+          "size": 134542,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20260312120000_schema_snapshot_from_export.sql",
+          "name": "20260312120000_schema_snapshot_from_export.sql",
+          "size": 96000,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
+          "name": "casar_disciplinas_function.sql",
+          "size": 32906,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql",
+          "name": "export_schema_rpc.sql",
+          "size": 20844,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/rls_policies.sql",
+          "name": "rls_policies.sql",
+          "size": 12045,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/docs/database_triggers.sql",
+          "name": "database_triggers.sql",
+          "size": 7418,
+          "extension": ".sql"
+        },
+        {
+          "path": "no_fluxo_backend/nova_view_equivalencias.sql",
+          "name": "nova_view_equivalencias.sql",
+          "size": 3326,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20250304193000_create_historicos_usuarios.sql",
+          "name": "20250304193000_create_historicos_usuarios.sql",
+          "size": 2397,
+          "extension": ".sql"
+        },
+        {
+          "path": "supabase/migrations/20260522_add_preferencias_plano.sql",
+          "name": "20260522_add_preferencias_plano.sql",
+          "size": 548,
+          "extension": ".sql"
+        }
+      ]
+    },
+    {
       "language": "Python",
-      "file_count": 34,
-      "total_bytes": 409413,
-      "percentage": 1.22,
+      "file_count": 37,
+      "total_bytes": 423256,
+      "percentage": 1.21,
       "files": [
         {
           "path": "no_fluxo_backend/parse-pdf/pdf_parser_final.py",
@@ -560,6 +696,12 @@
           "path": "no_fluxo_backend/start_and_monitor.py",
           "name": "start_and_monitor.py",
           "size": 29908,
+          "extension": ".py"
+        },
+        {
+          "path": "mcp_agent/api_producao.py",
+          "name": "api_producao.py",
+          "size": 28104,
           "extension": ".py"
         },
         {
@@ -591,156 +733,14 @@
           "name": "scraping_ementa.py",
           "size": 22305,
           "extension": ".py"
-        },
-        {
-          "path": "mcp_agent/api_producao.py",
-          "name": "api_producao.py",
-          "size": 21710,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
-      "language": "YAML",
-      "file_count": 13,
-      "total_bytes": 401569,
-      "percentage": 1.19,
-      "files": [
-        {
-          "path": "pnpm-lock.yaml",
-          "name": "pnpm-lock.yaml",
-          "size": 248942,
-          "extension": ".yaml"
-        },
-        {
-          "path": "no_fluxo_frontend_svelte/pnpm-lock.yaml",
-          "name": "pnpm-lock.yaml",
-          "size": 118017,
-          "extension": ".yaml"
-        },
-        {
-          "path": "kubernetes_docs/templates/github-workflow.yml",
-          "name": "github-workflow.yml",
-          "size": 11497,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/security-and-quality.yml",
-          "name": "security-and-quality.yml",
-          "size": 5532,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/scrape_turmas_lite.yml",
-          "name": "scrape_turmas_lite.yml",
-          "size": 4906,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/pipelineCI.yml",
-          "name": "pipelineCI.yml",
-          "size": 2846,
-          "extension": ".yml"
-        },
-        {
-          "path": "mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 2502,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/deploy.yml",
-          "name": "deploy.yml",
-          "size": 2016,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/scrape_equivalencias.yml",
-          "name": "scrape_equivalencias.yml",
-          "size": 1984,
-          "extension": ".yml"
-        },
-        {
-          "path": ".github/workflows/scrape_ementa.yml",
-          "name": "scrape_ementa.yml",
-          "size": 1909,
-          "extension": ".yml"
-        }
-      ]
-    },
-    {
-      "language": "SQL",
-      "file_count": 11,
-      "total_bytes": 394690,
-      "percentage": 1.17,
-      "files": [
-        {
-          "path": "no_fluxo_backend/docs/database_functions.sql",
-          "name": "database_functions.sql",
-          "size": 116041,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql",
-          "name": "latest_init_from_export.sql",
-          "size": 110230,
-          "extension": ".sql"
-        },
-        {
-          "path": "supabase/migrations/20260312120000_schema_snapshot_from_export.sql",
-          "name": "20260312120000_schema_snapshot_from_export.sql",
-          "size": 96000,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
-          "name": "casar_disciplinas_function.sql",
-          "size": 32906,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql",
-          "name": "export_schema_rpc.sql",
-          "size": 20844,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/rls_policies.sql",
-          "name": "rls_policies.sql",
-          "size": 8213,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/docs/database_triggers.sql",
-          "name": "database_triggers.sql",
-          "size": 4080,
-          "extension": ".sql"
-        },
-        {
-          "path": "no_fluxo_backend/nova_view_equivalencias.sql",
-          "name": "nova_view_equivalencias.sql",
-          "size": 3326,
-          "extension": ".sql"
-        },
-        {
-          "path": "supabase/migrations/20250304193000_create_historicos_usuarios.sql",
-          "name": "20250304193000_create_historicos_usuarios.sql",
-          "size": 2397,
-          "extension": ".sql"
-        },
-        {
-          "path": "supabase/migrations/20250304192200_add_carga_horaria_integralizada.sql",
-          "name": "20250304192200_add_carga_horaria_integralizada.sql",
-          "size": 532,
-          "extension": ".sql"
         }
       ]
     },
     {
       "language": "HTML",
       "file_count": 14,
-      "total_bytes": 268146,
-      "percentage": 0.8,
+      "total_bytes": 268399,
+      "percentage": 0.77,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.html",
@@ -806,9 +806,9 @@
     },
     {
       "language": "JavaScript",
-      "file_count": 29,
-      "total_bytes": 173246,
-      "percentage": 0.51,
+      "file_count": 31,
+      "total_bytes": 175519,
+      "percentage": 0.5,
       "files": [
         {
           "path": "prototipo/src/pages/fluxogramas/engenharia-software.js",
@@ -875,8 +875,8 @@
     {
       "language": "CSS",
       "file_count": 12,
-      "total_bytes": 75793,
-      "percentage": 0.23,
+      "total_bytes": 76210,
+      "percentage": 0.22,
       "files": [
         {
           "path": "prototipo/prototipo-identidade-unb/styles.css",
@@ -905,7 +905,7 @@
         {
           "path": "no_fluxo_frontend_svelte/src/app.css",
           "name": "app.css",
-          "size": 7334,
+          "size": 7751,
           "extension": ".css"
         },
         {
@@ -944,7 +944,7 @@
       "language": "LaTeX",
       "file_count": 3,
       "total_bytes": 64227,
-      "percentage": 0.19,
+      "percentage": 0.18,
       "files": [
         {
           "path": "docs/PROJECT_DOCUMENTATION.tex",
@@ -970,7 +970,7 @@
       "language": "No Extension",
       "file_count": 4,
       "total_bytes": 39067,
-      "percentage": 0.12,
+      "percentage": 0.11,
       "files": [
         {
           "path": "LICENSE",
@@ -1070,7 +1070,7 @@
       "language": "SVG Image",
       "file_count": 3,
       "total_bytes": 8637,
-      "percentage": 0.03,
+      "percentage": 0.02,
       "files": [
         {
           "path": "no_fluxo_frontend_svelte/static/icons/computer_phone.svg",
@@ -1095,13 +1095,13 @@
     {
       "language": "Docker Ignore",
       "file_count": 3,
-      "total_bytes": 1948,
+      "total_bytes": 2029,
       "percentage": 0.01,
       "files": [
         {
           "path": ".dockerignore",
           "name": ".dockerignore",
-          "size": 1045,
+          "size": 1126,
           "extension": ".dockerignore"
         },
         {
@@ -1121,13 +1121,13 @@
     {
       "language": "Git Ignore",
       "file_count": 3,
-      "total_bytes": 2470,
+      "total_bytes": 3704,
       "percentage": 0.01,
       "files": [
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 1964,
+          "size": 3198,
           "extension": ".gitignore"
         },
         {
@@ -1141,6 +1141,26 @@
           "name": ".gitignore",
           "size": 132,
           "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "PowerShell",
+      "file_count": 2,
+      "total_bytes": 4244,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "no_fluxo_backend/testes_exemplo.ps1",
+          "name": "testes_exemplo.ps1",
+          "size": 4056,
+          "extension": ".ps1"
+        },
+        {
+          "path": "RUN_BACKEND.ps1",
+          "name": "RUN_BACKEND.ps1",
+          "size": 188,
+          "extension": ".ps1"
         }
       ]
     },
@@ -1173,20 +1193,6 @@
           "name": "start_api.bat",
           "size": 386,
           "extension": ".bat"
-        }
-      ]
-    },
-    {
-      "language": "PowerShell",
-      "file_count": 1,
-      "total_bytes": 4056,
-      "percentage": 0.01,
-      "files": [
-        {
-          "path": "no_fluxo_backend/testes_exemplo.ps1",
-          "name": "testes_exemplo.ps1",
-          "size": 4056,
-          "extension": ".ps1"
         }
       ]
     },
@@ -1260,7 +1266,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-03T09:28:56.635199",
+    "extracted_at": "2026-08-04T08:40:19.750158",
     "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
   }
 }
