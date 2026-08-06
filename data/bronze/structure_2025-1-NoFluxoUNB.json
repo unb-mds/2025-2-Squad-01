@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "2025-1-NoFluxoUNB",
   "branch": "main",
-  "sha": "9e5dba10679e0976613147b44c99f02dcef34f0c",
+  "sha": "bef20ac32544cca8c9a77f7e4174bfb4feb23203",
   "tree": [
     {
       "name": ".claude",
@@ -124,7 +124,7 @@
       "name": ".github",
       "path": ".github",
       "type": "directory",
-      "sha": "324e1222dd33c79ad39fe4bc50b22b134414fe5c",
+      "sha": "36873c9fa28314de92f2cf4640d16b6f8be05813",
       "mode": "040000",
       "children": []
     },
@@ -170,7 +170,7 @@
       "name": "workflows",
       "path": ".github/workflows",
       "type": "directory",
-      "sha": "da5a2f61d686f5dac19a7bbbe639621131b8df8c",
+      "sha": "6e5297c93757d58dbcb45eebc18f28a60e8cddd3",
       "mode": "040000",
       "children": []
     },
@@ -185,13 +185,23 @@
       "is_binary": false
     },
     {
+      "name": "deploy-auto-retry.yml",
+      "path": ".github/workflows/deploy-auto-retry.yml",
+      "type": "file",
+      "sha": "4225e288d252e9d75b90d53999cc0dd958d30860",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 1185,
+      "is_binary": false
+    },
+    {
       "name": "deploy.yml",
       "path": ".github/workflows/deploy.yml",
       "type": "file",
-      "sha": "010e1e228206691c16de410718ddfcceb4d2adc7",
+      "sha": "ca8bd7e8b8d2457272e6f6255b4c383fd2378a17",
       "mode": "100644",
       "extension": ".yml",
-      "size": 2016,
+      "size": 2143,
       "is_binary": false
     },
     {
@@ -5356,7 +5366,7 @@
       "name": "no_fluxo_frontend_svelte",
       "path": "no_fluxo_frontend_svelte",
       "type": "directory",
-      "sha": "244a1b931ce3acb31eb330d296c96c20c3c4e6ea",
+      "sha": "1f138f9108242254467ca5d26dae5f23b696bb3a",
       "mode": "040000",
       "children": []
     },
@@ -5512,7 +5522,7 @@
       "name": "src",
       "path": "no_fluxo_frontend_svelte/src",
       "type": "directory",
-      "sha": "6b4bdf5408e07bfdec9cb3714bb623028444188f",
+      "sha": "cc9646907598e59b1f1b39043e7a676e4c95c896",
       "mode": "040000",
       "children": []
     },
@@ -5560,7 +5570,7 @@
       "name": "lib",
       "path": "no_fluxo_frontend_svelte/src/lib",
       "type": "directory",
-      "sha": "aacdd7d76c5da47d483a88ba1bcd5a661b010471",
+      "sha": "bc465991674a81e2ec9263a7ba663c6317d01406",
       "mode": "040000",
       "children": []
     },
@@ -5616,7 +5626,7 @@
       "name": "components",
       "path": "no_fluxo_frontend_svelte/src/lib/components",
       "type": "directory",
-      "sha": "1dc0d5640b835e1aec4cb452212444d6fdb99924",
+      "sha": "9681836522a4c6920d82517318f29bb86bc9d037",
       "mode": "040000",
       "children": []
     },
@@ -5768,7 +5778,7 @@
       "name": "disciplinas",
       "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas",
       "type": "directory",
-      "sha": "c7f45a7e434917fd78da341b9cbb6d31ac55eb21",
+      "sha": "cbfd6c0af52aac92b5a205caa7cc9b1ac9a06602",
       "mode": "040000",
       "children": []
     },
@@ -5786,10 +5796,10 @@
       "name": "TurmasVagasPanel.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/disciplinas/TurmasVagasPanel.svelte",
       "type": "file",
-      "sha": "221e1f880bd203aac8bc7e6673efc85a64ed6060",
+      "sha": "1c820f376a34669451e6ae1563ebf97fc7d92450",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 8272,
+      "size": 8844,
       "is_binary": false
     },
     {
@@ -5814,7 +5824,7 @@
       "name": "fluxograma",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma",
       "type": "directory",
-      "sha": "ceb53445cede5cf2b9e7e66a9fb44bd51fc29f2a",
+      "sha": "40898b8840cb17773816d15319ff7114b7642cdf",
       "mode": "040000",
       "children": []
     },
@@ -5872,10 +5882,10 @@
       "name": "FluxogramaHeader.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramaHeader.svelte",
       "type": "file",
-      "sha": "1d49246733982351d385e958cc82b3d3ee7d1886",
+      "sha": "aa006efa6beee00af7a41bf64087d0c1c70ed6eb",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 12194,
+      "size": 12200,
       "is_binary": false
     },
     {
@@ -6052,10 +6062,10 @@
       "name": "SubjectDetailsModal.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectDetailsModal.svelte",
       "type": "file",
-      "sha": "483006305fff4c260abeab73faf9033c27f806c6",
+      "sha": "fedc9b00db9c0580fafe95832e826f386037f2d4",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 20088,
+      "size": 20673,
       "is_binary": false
     },
     {
@@ -6382,7 +6392,7 @@
       "name": "planejamento",
       "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento",
       "type": "directory",
-      "sha": "8c0fc23adbe58dc2da15c9595e6ccdcf0cf09e7a",
+      "sha": "0509664c7cb6342967e0906d9fd6a94e15dbfb7b",
       "mode": "040000",
       "children": []
     },
@@ -6430,20 +6440,20 @@
       "name": "ScheduleGrid.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/ScheduleGrid.svelte",
       "type": "file",
-      "sha": "751abfc0697acf4d4f878d70f38ce71d60d3f482",
+      "sha": "71f1faf82d31700c39ca7af3c08cdac0d05af0a9",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 6756,
+      "size": 17471,
       "is_binary": false
     },
     {
       "name": "SubjectTurmaSelector.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/SubjectTurmaSelector.svelte",
       "type": "file",
-      "sha": "b1129d303c7632e38b2713c54ba3231812ed8815",
+      "sha": "f62cefde0b028387ee44d530e2fb82080244b492",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 3903,
+      "size": 8218,
       "is_binary": false
     },
     {
@@ -6460,17 +6470,17 @@
       "name": "TurmaOption.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/TurmaOption.svelte",
       "type": "file",
-      "sha": "ac179e0cf846f31c38d45868b539a5d2a7fc75a4",
+      "sha": "84d84cd1068fbd28de4d86b3bdac26a635809022",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 4359,
+      "size": 4835,
       "is_binary": false
     },
     {
       "name": "plano-formatura",
       "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura",
       "type": "directory",
-      "sha": "0271affc70bb6e72c9e1053058b9abb3810d8227",
+      "sha": "e7f0cae2102e7842947da439c76bfc25d736865a",
       "mode": "040000",
       "children": []
     },
@@ -6478,10 +6488,10 @@
       "name": "MateriaPlanCard.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/MateriaPlanCard.svelte",
       "type": "file",
-      "sha": "348cc8fd7ca54105423e34d7aa82121179b75afe",
+      "sha": "60273352349fb6addbf6a0debfa0689574c58911",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 4844,
+      "size": 5334,
       "is_binary": false
     },
     {
@@ -6518,20 +6528,20 @@
       "name": "PlannerSvelteFlow.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/PlannerSvelteFlow.svelte",
       "type": "file",
-      "sha": "62f6d3d690ecd0f892d002c8509bcdf059040576",
+      "sha": "88eb18e301b4d5394a3ad060b705c36709a3c8fe",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 5081,
+      "size": 7774,
       "is_binary": false
     },
     {
       "name": "PlanoFormaturaView.svelte",
       "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/PlanoFormaturaView.svelte",
       "type": "file",
-      "sha": "9fefc08753f6c523b1771bc0684ebd0de4d188bf",
+      "sha": "7342fe9a057179de4a809ed824134939065b0b58",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 19618,
+      "size": 20531,
       "is_binary": false
     },
     {
@@ -7672,7 +7682,7 @@
       "name": "config",
       "path": "no_fluxo_frontend_svelte/src/lib/config",
       "type": "directory",
-      "sha": "d892d8668426643739b1eed38fe94e82ae4babd6",
+      "sha": "c90a49ec22a8c6760cea083a42d2984887fa07ad",
       "mode": "040000",
       "children": []
     },
@@ -7680,10 +7690,10 @@
       "name": "routes.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/config/routes.ts",
       "type": "file",
-      "sha": "fcad07785c7925cb93928bc2027d6511f72196d7",
+      "sha": "b23e8364d9dbc990ff5b0aea5b6edf748d63396c",
       "mode": "100644",
       "extension": ".ts",
-      "size": 2668,
+      "size": 2709,
       "is_binary": false
     },
     {
@@ -7708,7 +7718,7 @@
       "name": "guards",
       "path": "no_fluxo_frontend_svelte/src/lib/guards",
       "type": "directory",
-      "sha": "0d5db0eb278c2c1906a54faacdcad336a21709de",
+      "sha": "a3306e29dfb508bb3f9cb88a13808720cc8e5e06",
       "mode": "040000",
       "children": []
     },
@@ -7716,10 +7726,10 @@
       "name": "authGuard.test.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/guards/authGuard.test.ts",
       "type": "file",
-      "sha": "103d7540774bae4983b062a085497021065300e4",
+      "sha": "8de77bfe64f6e076d3ddefafe8b20a1a0dc51088",
       "mode": "100644",
       "extension": ".ts",
-      "size": 3120,
+      "size": 3847,
       "is_binary": false
     },
     {
@@ -7820,7 +7830,7 @@
       "name": "services",
       "path": "no_fluxo_frontend_svelte/src/lib/services",
       "type": "directory",
-      "sha": "3189e13e7cd6eb3a452d00a46ed1f9e376fbecbe",
+      "sha": "bd9131e716cb661e0d4670d727ecac95de0cfb12",
       "mode": "040000",
       "children": []
     },
@@ -7935,6 +7945,16 @@
       "is_binary": false
     },
     {
+      "name": "oferta-turmas.service.ts",
+      "path": "no_fluxo_frontend_svelte/src/lib/services/oferta-turmas.service.ts",
+      "type": "file",
+      "sha": "dbf3534084492ea880dbdbd2741119034111cbab",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 4036,
+      "is_binary": false
+    },
+    {
       "name": "pdf",
       "path": "no_fluxo_frontend_svelte/src/lib/services/pdf",
       "type": "directory",
@@ -8036,10 +8056,10 @@
       "name": "turmas.service.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/services/turmas.service.ts",
       "type": "file",
-      "sha": "b0f4ae1ce901e19f6b0f3fae4e6009bb9676526b",
+      "sha": "5022082d69a96b19c7a1ff9bea42c99488aec05b",
       "mode": "100644",
       "extension": ".ts",
-      "size": 1769,
+      "size": 4827,
       "is_binary": false
     },
     {
@@ -8076,7 +8096,7 @@
       "name": "stores",
       "path": "no_fluxo_frontend_svelte/src/lib/stores",
       "type": "directory",
-      "sha": "59ad11cc37d9d6734557c94bb6b405da39b5b809",
+      "sha": "c795ad24b838e68e590d67299ce8ca00a197ca55",
       "mode": "040000",
       "children": []
     },
@@ -8144,10 +8164,10 @@
       "name": "grade.store.svelte.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.svelte.ts",
       "type": "file",
-      "sha": "c5e6598d97efe7b9ba11c1de789573dfd7f5bbc3",
+      "sha": "1d5e94615b8d5d18a35a519dd075c80d442efa9e",
       "mode": "100644",
       "extension": ".ts",
-      "size": 16511,
+      "size": 22117,
       "is_binary": false
     },
     {
@@ -8446,7 +8466,7 @@
       "name": "utils",
       "path": "no_fluxo_frontend_svelte/src/lib/utils",
       "type": "directory",
-      "sha": "bcc8649b8a2102516bb8d20cafe5264cf1e0d5d5",
+      "sha": "4d25e6ca14f1bd2c7d86d7df3951e4de47d32297",
       "mode": "040000",
       "children": []
     },
@@ -8564,20 +8584,20 @@
       "name": "horario-slots.test.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/utils/horario-slots.test.ts",
       "type": "file",
-      "sha": "29be95099057ad005ddf3245027d7a4cc2bcebb6",
+      "sha": "1ed77e4b52fdda1315fa4bf77f9192386e3183ec",
       "mode": "100644",
       "extension": ".ts",
-      "size": 7133,
+      "size": 10075,
       "is_binary": false
     },
     {
       "name": "horario-slots.ts",
       "path": "no_fluxo_frontend_svelte/src/lib/utils/horario-slots.ts",
       "type": "file",
-      "sha": "fcfaa0865d8e1d6142a4ff4ef9197086c8185c11",
+      "sha": "996803e1385ce09465bbc885f1fc2b3a8b72bf78",
       "mode": "100644",
       "extension": ".ts",
-      "size": 9244,
+      "size": 11180,
       "is_binary": false
     },
     {
@@ -8704,7 +8724,7 @@
       "name": "routes",
       "path": "no_fluxo_frontend_svelte/src/routes",
       "type": "directory",
-      "sha": "9f576edf7e3c9ff1c4640fd7affaff9ea491291c",
+      "sha": "d37287ddea3eb32f15c4f38be849ef5a2855e6e0",
       "mode": "040000",
       "children": []
     },
@@ -8712,7 +8732,7 @@
       "name": "(protected)",
       "path": "no_fluxo_frontend_svelte/src/routes/(protected)",
       "type": "directory",
-      "sha": "86c895537741a2c11609f62ce46372fb0bbf0f4e",
+      "sha": "7a4eb6f42db43984ef427ace2731bcd2ebc4c2a5",
       "mode": "040000",
       "children": []
     },
@@ -8810,7 +8830,7 @@
       "name": "planejamento",
       "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento",
       "type": "directory",
-      "sha": "4af29d77d31159edf23ec8549fdd260d65f041b4",
+      "sha": "2c8e8cf8899447b4eb2ef89ea817b1ace9d8331d",
       "mode": "040000",
       "children": []
     },
@@ -8818,7 +8838,7 @@
       "name": "grade",
       "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/grade",
       "type": "directory",
-      "sha": "24f1c448a318fe8e88f999878d64fe95c9092340",
+      "sha": "d20b7998d1f56847f6b90fe3bf04ec5e009a8434",
       "mode": "040000",
       "children": []
     },
@@ -8826,10 +8846,28 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/grade/+page.svelte",
       "type": "file",
-      "sha": "57a7b131a381d76080a4edde84a3fe61167a9682",
+      "sha": "758614de5585735f7bb1f4c6a292b5d22e43ece0",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 18560,
+      "size": 18221,
+      "is_binary": false
+    },
+    {
+      "name": "turmas",
+      "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/turmas",
+      "type": "directory",
+      "sha": "e7c6015bc37756e19371df17c2fca1c1eb5fed5d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "+page.svelte",
+      "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/turmas/+page.svelte",
+      "type": "file",
+      "sha": "b908e9d2425a3177bf13ab528e96469ae22eafc0",
+      "mode": "100644",
+      "extension": ".svelte",
+      "size": 8998,
       "is_binary": false
     },
     {
@@ -9056,7 +9094,7 @@
       "name": "disciplinas",
       "path": "no_fluxo_frontend_svelte/src/routes/disciplinas",
       "type": "directory",
-      "sha": "1cecefe64c10ed40249a6b10bcb8948a9af74af1",
+      "sha": "c81351cc110246408e6b96761d20676e9913fe91",
       "mode": "040000",
       "children": []
     },
@@ -9064,10 +9102,10 @@
       "name": "+page.svelte",
       "path": "no_fluxo_frontend_svelte/src/routes/disciplinas/+page.svelte",
       "type": "file",
-      "sha": "eb5b8cc9240c96a1ff5c7ab116b3f6f2df53c754",
+      "sha": "4044595655038e71efa66b8290f4e4e39533fa2d",
       "mode": "100644",
       "extension": ".svelte",
-      "size": 43938,
+      "size": 44036,
       "is_binary": false
     },
     {
@@ -11284,17 +11322,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-08-05T08:26:02.367605",
+  "extracted_at": "2026-08-06T08:25:45.164799",
   "method": "rest",
-  "total_items": 1168,
+  "total_items": 1172,
   "repository_metadata": {
     "id": 957040204,
     "full_name": "unb-mds/2025-1-NoFluxoUNB",
     "description": "Fluxograma interativo com chat-bot que auxilia na escolha e visualização da sua estrutura curricular da UnB.",
     "created_at": "2025-03-29T12:09:56Z",
-    "updated_at": "2026-08-03T23:12:47Z",
+    "updated_at": "2026-08-05T12:40:38Z",
     "language": "JavaScript",
-    "size": 141297,
+    "size": 141363,
     "stars": 19,
     "forks": 7,
     "open_issues": 8
