@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-08-07T06:03:09.084337",
+      "extracted_at": "2026-08-08T05:33:51.774567",
       "file_path": "data/bronze/issues_2025-1-NoFluxoUNB.json",
       "record_count": 51
     }
@@ -562,14 +562,14 @@
         "description": "Geração ou utilização de API's"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 1,
     "created_at": "2026-04-02T11:36:37Z",
-    "updated_at": "2026-07-09T13:41:48Z",
-    "closed_at": null,
+    "updated_at": "2026-08-07T11:13:11Z",
+    "closed_at": "2026-08-07T11:13:11Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -597,7 +597,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título\nPermitir ajuste manual das grades futuras sugeridas pelo aluno\n\n## 📋 Descrição\nPermitir que o aluno faça ajustes no planejamento sugerido pelo sistema, reorganizando disciplinas entre semestres futuros sem perder a coerência acadêmica. O objetivo é dar flexibilidade ao usuário para adaptar a sugestão à sua realidade.\n\nAs alterações manuais devem ser validadas para evitar violações de pré-requisitos, co-requisitos e outras regras curriculares.\n\n---\n\n## ⚠️ Prioridade\n- [x] Baixa\n- [ ] Média\n- [ ] Alta\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Definir interações de edição manual do planejamento.\n- [ ] Permitir mover disciplinas entre semestres futuros.\n- [ ] Validar conflitos curriculares após edição.\n- [ ] Exibir mensagens de inconsistência quando houver bloqueios.\n- [ ] Permitir salvar ou redefinir planejamento ajustado.\n- [ ] Escrever testes de edição e validação.\n\n## 🧠 Notas Adicionais\nEssa feature pode ser tratada como etapa posterior ao MVP, depois da entrega da geração automática e da visualização.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/115/reactions",
       "total_count": 0,
@@ -612,7 +632,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/115/timeline",
     "performed_via_github_app": null,
-    "state_reason": "reopened",
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
@@ -722,14 +742,14 @@
         "description": "Geração ou utilização de API's"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 1,
     "created_at": "2026-04-02T11:36:09Z",
-    "updated_at": "2026-07-09T13:42:12Z",
-    "closed_at": null,
+    "updated_at": "2026-08-07T11:13:18Z",
+    "closed_at": "2026-08-07T11:13:18Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -757,7 +777,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título\nCriar interface para visualização de grades futuras sugeridas\n\n## 📋 Descrição\nCriar a interface que exibirá ao aluno as grades futuras sugeridas semestre a semestre até a formatura. A visualização deve ser clara, progressiva e permitir entender facilmente quais disciplinas foram sugeridas, em qual ordem e com qual objetivo no planejamento.\n\nA interface deve apresentar os semestres futuros como blocos organizados, facilitando a leitura da trajetória sugerida pelo sistema.\n\n---\n\n## ⚠️ Prioridade\n- [ ] Baixa\n- [ ] Média\n- [x] Alta\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Definir layout da visualização de semestres futuros.\n- [ ] Exibir lista de disciplinas por semestre projetado.\n- [ ] Destacar disciplinas obrigatórias e optativas.\n- [ ] Exibir indicadores de progresso até a formatura.\n- [ ] Tratar estados vazios, carregamento e erro.\n- [ ] Validar experiência de uso com dados reais.\n\n## 🧠 Notas Adicionais\nA base já armazena informações ligadas a `fluxogramaatual`, o que pode orientar a modelagem da nova visualização futura.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/114/reactions",
       "total_count": 0,
@@ -772,7 +812,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/114/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
@@ -855,14 +895,14 @@
         "description": "Geração ou utilização de API's"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 1,
     "created_at": "2026-04-02T11:35:23Z",
-    "updated_at": "2026-07-09T13:38:30Z",
-    "closed_at": null,
+    "updated_at": "2026-08-07T11:13:25Z",
+    "closed_at": "2026-08-07T11:13:25Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -890,7 +930,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título\nAdicionar personalização às sugestões de grades futuras\n\n## 📋 Descrição\nPermitir que a montagem das grades futuras seja personalizada conforme a necessidade do aluno. A personalização deve influenciar a forma como o sistema distribui as disciplinas nos próximos semestres, respeitando a base curricular e o progresso acadêmico já identificado.\n\nEntre os critérios possíveis estão carga horária desejada por semestre, preferência por avançar mais rápido, planejamento mais equilibrado e priorização de disciplinas obrigatórias.\n\n---\n\n## ⚠️ Prioridade\n- [ ] Baixa\n- [x] Média\n- [ ] Alta\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Definir parâmetros de personalização suportados.\n- [ ] Permitir configuração de carga acadêmica por semestre.\n- [ ] Definir estratégia para perfil conservador, equilibrado e acelerado.\n- [ ] Integrar personalização ao motor de sugestão.\n- [ ] Criar testes de comportamento conforme perfil escolhido.\n- [ ] Documentar regras de personalização.\n\n## 🧠 Notas Adicionais\nEssa feature pode ser entregue depois da primeira versão do motor de sugestão, como evolução incremental.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/113/reactions",
       "total_count": 0,
@@ -905,7 +965,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/113/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
@@ -1384,7 +1444,7 @@
         "description": "Parte maior que envolva várias features"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1412,8 +1472,8 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-04-02T11:26:02Z",
-    "updated_at": "2026-04-02T11:54:27Z",
-    "closed_at": null,
+    "updated_at": "2026-08-07T11:13:37Z",
+    "closed_at": "2026-08-07T11:13:37Z",
     "assignee": {
       "login": "darkymeubem",
       "id": 73255212,
@@ -1450,8 +1510,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 6,
-      "completed": 3,
-      "percent_completed": 50
+      "completed": 6,
+      "percent_completed": 100
     },
     "issue_dependencies_summary": {
       "blocked_by": 0,
@@ -1460,7 +1520,27 @@
       "total_blocking": 0
     },
     "body": "## 📝 Título\nPlanejamento de grades futuras personalizadas até a formatura\n\n## 📋 Descrição\nCriar um épico para permitir que o sistema gere **grades futuras sugeridas** com base nos dados extraídos do PDF do aluno. A proposta é montar os próximos semestres (ex.: 5º, 6º, 7º...) até a conclusão do curso, considerando a situação acadêmica atual, disciplinas já concluídas, pendências, optativas e regras da matriz curricular. [file:1][file:2]\n\nO planejamento deve ser **personalizado por aluno**, respeitando informações já existentes no sistema, como semestre atual, histórico, matriz curricular, pré-requisitos, co-requisitos e equivalências. A base atual já possui dados e funções que ajudam nessa construção, incluindo `historicosusuarios`, `dadosusers`, `materiasporcurso`, `matrizes`, `prerequisitos`, `corequisitos`, `equivalencias` e a função `casardisciplinas`. \n\nEste item deve ser tratado como **épico**, pois envolve regra de negócio, motor de sugestão, organização por semestre e visualização da jornada acadêmica futura. \n\n---\n\n## ⚠️ Prioridade\n- [ ] Baixa\n- [ ] Média\n- [x] Alta\n- [ ] Crítica\n\n## ✅ Checklist de Tarefas\n- [ ] Definir regras para geração de grades futuras\n- [ ] Identificar disciplinas pendentes e elegíveis por semestre\n- [ ] Considerar pré-requisitos, co-requisitos e equivalências\n- [ ] Montar sugestão de semestres até a formatura\n- [ ] Definir visualização da grade futura no sistema\n- [ ] Quebrar o épico em features menores\n\n## 🧠 Notas Adicionais\n- A feature deve começar a partir do semestre seguinte ao atual do aluno. \n- A solução deve reutilizar o processamento já existente de disciplinas concluídas, pendentes e optativas. \n- Esse épico pode ser quebrado depois em features de cálculo, recomendação, interface e personalização.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/109/reactions",
       "total_count": 0,
@@ -1475,7 +1555,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/109/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2025-1-NoFluxoUNB"
   },
