@@ -2,31 +2,127 @@
   "repository": "G7-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-19T06:18:23.408183",
+  "analyzed_at": "2026-08-20T06:23:27.925649",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1,
-  "total_bytes": 69,
+  "total_files": 30,
+  "total_bytes": 8987,
   "languages": [
+    {
+      "language": "Python",
+      "file_count": 27,
+      "total_bytes": 6654,
+      "percentage": 74.04,
+      "files": [
+        {
+          "path": "core/settings.py",
+          "name": "settings.py",
+          "size": 3443,
+          "extension": ".py"
+        },
+        {
+          "path": "core/urls.py",
+          "name": "urls.py",
+          "size": 760,
+          "extension": ".py"
+        },
+        {
+          "path": "manage.py",
+          "name": "manage.py",
+          "size": 660,
+          "extension": ".py"
+        },
+        {
+          "path": "core/asgi.py",
+          "name": "asgi.py",
+          "size": 385,
+          "extension": ".py"
+        },
+        {
+          "path": "core/wsgi.py",
+          "name": "wsgi.py",
+          "size": 385,
+          "extension": ".py"
+        },
+        {
+          "path": "integracao_sigaa/apps.py",
+          "name": "apps.py",
+          "size": 106,
+          "extension": ".py"
+        },
+        {
+          "path": "avaliacoes/apps.py",
+          "name": "apps.py",
+          "size": 95,
+          "extension": ".py"
+        },
+        {
+          "path": "usuarios/apps.py",
+          "name": "apps.py",
+          "size": 91,
+          "extension": ".py"
+        },
+        {
+          "path": "avaliacoes/admin.py",
+          "name": "admin.py",
+          "size": 63,
+          "extension": ".py"
+        },
+        {
+          "path": "avaliacoes/views.py",
+          "name": "views.py",
+          "size": 63,
+          "extension": ".py"
+        }
+      ]
+    },
     {
       "language": "Markdown",
       "file_count": 1,
-      "total_bytes": 69,
-      "percentage": 100.0,
+      "total_bytes": 2102,
+      "percentage": 23.39,
       "files": [
         {
           "path": "README.md",
           "name": "README.md",
-          "size": 69,
+          "size": 2102,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 176,
+      "percentage": 1.96,
+      "files": [
+        {
+          "path": "requirements.txt",
+          "name": "requirements.txt",
+          "size": 176,
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 55,
+      "percentage": 0.61,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 55,
+          "extension": ".gitignore"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-19T06:22:08.867437",
+    "extracted_at": "2026-08-20T06:26:35.057133",
     "file_path": "data/silver/language_analysis_G7-2026-2.json"
   }
 }
