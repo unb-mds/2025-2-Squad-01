@@ -2,19 +2,39 @@
   "repository": "G7-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-23T06:14:58.396180",
+  "analyzed_at": "2026-08-24T06:25:42.050563",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 30,
-  "total_bytes": 8987,
+  "total_files": 31,
+  "total_bytes": 18445,
   "languages": [
+    {
+      "language": "Markdown",
+      "file_count": 2,
+      "total_bytes": 11560,
+      "percentage": 62.67,
+      "files": [
+        {
+          "path": "sprints/spint00/git.md",
+          "name": "git.md",
+          "size": 9458,
+          "extension": ".md"
+        },
+        {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 2102,
+          "extension": ".md"
+        }
+      ]
+    },
     {
       "language": "Python",
       "file_count": 27,
       "total_bytes": 6654,
-      "percentage": 74.04,
+      "percentage": 36.07,
       "files": [
         {
           "path": "core/settings.py",
@@ -79,24 +99,10 @@
       ]
     },
     {
-      "language": "Markdown",
-      "file_count": 1,
-      "total_bytes": 2102,
-      "percentage": 23.39,
-      "files": [
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 2102,
-          "extension": ".md"
-        }
-      ]
-    },
-    {
       "language": "Text",
       "file_count": 1,
       "total_bytes": 176,
-      "percentage": 1.96,
+      "percentage": 0.95,
       "files": [
         {
           "path": "requirements.txt",
@@ -110,7 +116,7 @@
       "language": "Git Ignore",
       "file_count": 1,
       "total_bytes": 55,
-      "percentage": 0.61,
+      "percentage": 0.3,
       "files": [
         {
           "path": ".gitignore",
@@ -122,7 +128,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-23T06:18:04.950631",
+    "extracted_at": "2026-08-24T06:28:52.367141",
     "file_path": "data/silver/language_analysis_G7-2026-2.json"
   }
 }
