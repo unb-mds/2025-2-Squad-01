@@ -2,20 +2,46 @@
   "repository": "G4-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-25T06:20:36.117872",
+  "analyzed_at": "2026-08-26T06:20:18.923753",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 8,
-  "total_bytes": 114,
+  "total_files": 11,
+  "total_bytes": 2096,
   "languages": [
     {
-      "language": "Markdown",
-      "file_count": 8,
-      "total_bytes": 114,
-      "percentage": 100.0,
+      "language": "YAML",
+      "file_count": 2,
+      "total_bytes": 1518,
+      "percentage": 72.42,
       "files": [
+        {
+          "path": ".github/workflows/deploy-docs.yml",
+          "name": "deploy-docs.yml",
+          "size": 1001,
+          "extension": ".yml"
+        },
+        {
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 517,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Markdown",
+      "file_count": 9,
+      "total_bytes": 578,
+      "percentage": 27.58,
+      "files": [
+        {
+          "path": "docs/index.md",
+          "name": "index.md",
+          "size": 464,
+          "extension": ".md"
+        },
         {
           "path": "README.md",
           "name": "README.md",
@@ -68,7 +94,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-25T06:23:17.010718",
+    "extracted_at": "2026-08-26T06:23:41.698047",
     "file_path": "data/silver/language_analysis_G4-2026-2.json"
   }
 }
