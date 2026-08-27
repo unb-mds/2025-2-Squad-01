@@ -2,31 +2,559 @@
   "repository": "G8-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-26T06:20:21.792845",
+  "analyzed_at": "2026-08-27T17:03:19.198537",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1,
-  "total_bytes": 1901,
+  "total_files": 3815,
+  "total_bytes": 98711746,
   "languages": [
     {
-      "language": "Markdown",
-      "file_count": 1,
-      "total_bytes": 1901,
-      "percentage": 100.0,
+      "language": "JavaScript",
+      "file_count": 2780,
+      "total_bytes": 41146410,
+      "percentage": 41.68,
       "files": [
         {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 1901,
+          "path": "node_modules/three/build/three.webgpu.js",
+          "name": "three.webgpu.js",
+          "size": 1531442,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/three/build/three.webgpu.nodes.js",
+          "name": "three.webgpu.nodes.js",
+          "size": 1530175,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js",
+          "name": "dep-Dm0c1Wj2.js",
+          "size": 1504267,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/.vite/deps/chunk-FMH4HZXN.js",
+          "name": "chunk-FMH4HZXN.js",
+          "size": 1251470,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/react-dom/cjs/react-dom-profiling.development.js",
+          "name": "react-dom-profiling.development.js",
+          "size": 1082082,
+          "extension": ".js"
+        },
+        {
+          "path": "dist/assets/index-D9WKF4g5.js",
+          "name": "index-D9WKF4g5.js",
+          "size": 1074212,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/react-dom/cjs/react-dom-client.development.js",
+          "name": "react-dom-client.development.js",
+          "size": 1065698,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/.vite/deps/react-dom_client.js",
+          "name": "react-dom_client.js",
+          "size": 993548,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/three/examples/jsm/libs/draco/gltf/draco_encoder.js",
+          "name": "draco_encoder.js",
+          "size": 954360,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/rollup/dist/es/shared/node-entry.js",
+          "name": "node-entry.js",
+          "size": 954000,
+          "extension": ".js"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 554,
+      "total_bytes": 21092282,
+      "percentage": 21.37,
+      "files": [
+        {
+          "path": "node_modules/three/examples/jsm/libs/rhino3dm/rhino3dm.wasm",
+          "name": "rhino3dm.wasm",
+          "size": 2545991,
+          "extension": ".wasm"
+        },
+        {
+          "path": "node_modules/.vite/deps/chunk-FMH4HZXN.js.map",
+          "name": "chunk-FMH4HZXN.js.map",
+          "size": 2218627,
+          "extension": ".map"
+        },
+        {
+          "path": "node_modules/@rollup/rollup-linux-x64-musl/rollup.linux-x64-musl.node",
+          "name": "rollup.linux-x64-musl.node",
+          "size": 2134768,
+          "extension": ".node"
+        },
+        {
+          "path": "node_modules/@rollup/rollup-linux-x64-gnu/rollup.linux-x64-gnu.node",
+          "name": "rollup.linux-x64-gnu.node",
+          "size": 2096344,
+          "extension": ".node"
+        },
+        {
+          "path": "node_modules/.vite/deps/react-dom_client.js.map",
+          "name": "react-dom_client.js.map",
+          "size": 1540547,
+          "extension": ".map"
+        },
+        {
+          "path": "node_modules/@babel/parser/lib/index.js.map",
+          "name": "index.js.map",
+          "size": 1436340,
+          "extension": ".map"
+        },
+        {
+          "path": "node_modules/three/build/three.cjs",
+          "name": "three.cjs",
+          "size": 1330131,
+          "extension": ".cjs"
+        },
+        {
+          "path": "node_modules/.vite/deps/@react-three_fiber.js.map",
+          "name": "@react-three_fiber.js.map",
+          "size": 1053384,
+          "extension": ".map"
+        },
+        {
+          "path": "node_modules/three/examples/jsm/libs/ammo.wasm.wasm",
+          "name": "ammo.wasm.wasm",
+          "size": 651386,
+          "extension": ".wasm"
+        },
+        {
+          "path": "node_modules/three/examples/jsm/libs/basis/basis_transcoder.wasm",
+          "name": "basis_transcoder.wasm",
+          "size": 527333,
+          "extension": ".wasm"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 86,
+      "total_bytes": 20909713,
+      "percentage": 21.18,
+      "files": [
+        {
+          "path": "node_modules/@esbuild/linux-x64/bin/esbuild",
+          "name": "esbuild",
+          "size": 10358936,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/esbuild/bin/esbuild",
+          "name": "esbuild",
+          "size": 10358936,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/rollup/dist/bin/rollup",
+          "name": "rollup",
+          "size": 82112,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/caniuse-lite/LICENSE",
+          "name": "LICENSE",
+          "size": 18651,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/NOTICE",
+          "name": "NOTICE",
+          "size": 10695,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/jsesc/bin/jsesc",
+          "name": "jsesc",
+          "size": 3833,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/three/examples/fonts/LICENSE",
+          "name": "LICENSE",
+          "size": 2006,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/source-map-js/LICENSE",
+          "name": "LICENSE",
+          "size": 1526,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/ieee754/LICENSE",
+          "name": "LICENSE",
+          "size": 1465,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/@rolldown/pluginutils/LICENSE",
+          "name": "LICENSE",
+          "size": 1302,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "MP4 Video",
+      "file_count": 2,
+      "total_bytes": 5374376,
+      "percentage": 5.44,
+      "files": [
+        {
+          "path": "dist/video.mp4",
+          "name": "video.mp4",
+          "size": 2687188,
+          "extension": ".mp4"
+        },
+        {
+          "path": "public/video.mp4",
+          "name": "video.mp4",
+          "size": 2687188,
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 120,
+      "total_bytes": 3936018,
+      "percentage": 3.99,
+      "files": [
+        {
+          "path": "node_modules/three/examples/fonts/gentilis_bold.typeface.json",
+          "name": "gentilis_bold.typeface.json",
+          "size": 649318,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/gentilis_regular.typeface.json",
+          "name": "gentilis_regular.typeface.json",
+          "size": 627529,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/droid_serif_bold.typeface.json",
+          "name": "droid_serif_bold.typeface.json",
+          "size": 485403,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.json",
+          "name": "droid_serif_regular.typeface.json",
+          "size": 477058,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
+          "name": "droid_sans_bold.typeface.json",
+          "size": 329885,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/droid_sans_regular.typeface.json",
+          "name": "droid_sans_regular.typeface.json",
+          "size": 319895,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/droid_sans_mono_regular.typeface.json",
+          "name": "droid_sans_mono_regular.typeface.json",
+          "size": 190569,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/optimer_bold.typeface.json",
+          "name": "optimer_bold.typeface.json",
+          "size": 112249,
+          "extension": ".json"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/optimer_regular.typeface.json",
+          "name": "optimer_regular.typeface.json",
+          "size": 110666,
+          "extension": ".json"
+        },
+        {
+          "path": "package-lock.json",
+          "name": "package-lock.json",
+          "size": 64368,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "TypeScript",
+      "file_count": 168,
+      "total_bytes": 3005140,
+      "percentage": 3.04,
+      "files": [
+        {
+          "path": "node_modules/csstype/index.d.ts",
+          "name": "index.d.ts",
+          "size": 894969,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@babel/types/lib/index.d.ts",
+          "name": "index.d.ts",
+          "size": 665892,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@types/react/index.d.ts",
+          "name": "index.d.ts",
+          "size": 177882,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@types/react/ts5.0/index.d.ts",
+          "name": "index.d.ts",
+          "size": 176855,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@babel/types/lib/index-legacy.d.ts",
+          "name": "index-legacy.d.ts",
+          "size": 170875,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/vite/dist/node/index.d.ts",
+          "name": "index.d.ts",
+          "size": 153546,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@types/babel__traverse/index.d.ts",
+          "name": "index.d.ts",
+          "size": 82002,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@types/react-reconciler/index.d.ts",
+          "name": "index.d.ts",
+          "size": 44492,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@react-three/fiber/dist/declarations/react-reconciler/index.d.ts",
+          "name": "index.d.ts",
+          "size": 43814,
+          "extension": ".ts"
+        },
+        {
+          "path": "node_modules/@react-three/fiber/react-reconciler/index.d.ts",
+          "name": "index.d.ts",
+          "size": 43814,
+          "extension": ".ts"
+        }
+      ]
+    },
+    {
+      "language": "WebM Video",
+      "file_count": 2,
+      "total_bytes": 2615452,
+      "percentage": 2.65,
+      "files": [
+        {
+          "path": "dist/video.webm",
+          "name": "video.webm",
+          "size": 1307726,
+          "extension": ".webm"
+        },
+        {
+          "path": "public/video.webm",
+          "name": "video.webm",
+          "size": 1307726,
+          "extension": ".webm"
+        }
+      ]
+    },
+    {
+      "language": "Markdown",
+      "file_count": 94,
+      "total_bytes": 591758,
+      "percentage": 0.6,
+      "files": [
+        {
+          "path": "node_modules/vite/LICENSE.md",
+          "name": "LICENSE.md",
+          "size": 115624,
           "extension": ".md"
+        },
+        {
+          "path": "node_modules/@babel/parser/CHANGELOG.md",
+          "name": "CHANGELOG.md",
+          "size": 38238,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/rollup/LICENSE.md",
+          "name": "LICENSE.md",
+          "size": 35231,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/picomatch/README.md",
+          "name": "README.md",
+          "size": 28319,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/source-map-js/README.md",
+          "name": "README.md",
+          "size": 26040,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/baseline-browser-mapping/README.md",
+          "name": "README.md",
+          "size": 25357,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/debug/README.md",
+          "name": "README.md",
+          "size": 22115,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/@react-three/fiber/CHANGELOG.md",
+          "name": "CHANGELOG.md",
+          "size": 18617,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/zustand/README.md",
+          "name": "README.md",
+          "size": 17817,
+          "extension": ".md"
+        },
+        {
+          "path": "node_modules/buffer/README.md",
+          "name": "README.md",
+          "size": 17295,
+          "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "TrueType Font",
+      "file_count": 1,
+      "total_bytes": 18068,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "node_modules/three/examples/fonts/ttf/kenpixel.ttf",
+          "name": "kenpixel.ttf",
+          "size": 18068,
+          "extension": ".ttf"
+        }
+      ]
+    },
+    {
+      "language": "PNG Image",
+      "file_count": 2,
+      "total_bytes": 7884,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "dist/Marca-UnB.png",
+          "name": "Marca-UnB.png",
+          "size": 3942,
+          "extension": ".png"
+        },
+        {
+          "path": "public/Marca-UnB.png",
+          "name": "Marca-UnB.png",
+          "size": 3942,
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 3,
+      "total_bytes": 13126,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "node_modules/baseline-browser-mapping/LICENSE.txt",
+          "name": "LICENSE.txt",
+          "size": 11357,
+          "extension": ".txt"
+        },
+        {
+          "path": "node_modules/jsesc/LICENSE-MIT.txt",
+          "name": "LICENSE-MIT.txt",
+          "size": 1077,
+          "extension": ".txt"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/README.txt",
+          "name": "README.txt",
+          "size": 692,
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 17,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 17,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 2,
+      "total_bytes": 1502,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "name": "index.html",
+          "size": 763,
+          "extension": ".html"
+        },
+        {
+          "path": "index.html",
+          "name": "index.html",
+          "size": 739,
+          "extension": ".html"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-26T06:23:44.137472",
+    "extracted_at": "2026-08-27T17:11:25.367145",
     "file_path": "data/silver/language_analysis_G8-2026-2.json"
   }
 }
