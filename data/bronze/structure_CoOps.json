@@ -1,0 +1,2420 @@
+{
+  "owner": "unb-mds",
+  "repository": "CoOps",
+  "branch": "main",
+  "sha": "700acdae96b8593b8d4390f1ef4785d1617d4cf9",
+  "tree": [
+    {
+      "name": ".coveragerc",
+      "path": ".coveragerc",
+      "type": "file",
+      "sha": "9c6d0a1af42fecaa6c8e84b35a4966444e395ec2",
+      "mode": "100644",
+      "extension": ".coveragerc",
+      "size": 35,
+      "is_binary": false
+    },
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "87d5983c5fbcb85a8ac801d93017931617acc70d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "type": "directory",
+      "sha": "1f64d054569170b58af4722bd04f4a5d655cc379",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bug_report.md",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "file",
+      "sha": "efa99c322627e2edf57f9cb3cd49b7932032d6ab",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 725,
+      "is_binary": false
+    },
+    {
+      "name": "feature_request.md",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "type": "file",
+      "sha": "73b1e2fd368c633644a0c5da3c47cb0eb032716f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 944,
+      "is_binary": false
+    },
+    {
+      "name": "PULL_REQUEST_TEMPLATE.md",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "type": "file",
+      "sha": "1038d832f62c995a4ca2fbc68cb05049a4765574",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1232,
+      "is_binary": false
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "1c2c12551b95da377d86eb922324a712147d0919",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "bronze-extract.yaml",
+      "path": ".github/workflows/bronze-extract.yaml",
+      "type": "file",
+      "sha": "c7f0c39a45e97c2442889ba7c6d29a3004487e5b",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 4943,
+      "is_binary": false
+    },
+    {
+      "name": "deploy-pages.yaml",
+      "path": ".github/workflows/deploy-pages.yaml",
+      "type": "file",
+      "sha": "dcc8cbdde26bdec21c5a3fff114cdd07028b4909",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 1787,
+      "is_binary": false
+    },
+    {
+      "name": "gold-aggregate.yaml",
+      "path": ".github/workflows/gold-aggregate.yaml",
+      "type": "file",
+      "sha": "a93516991c12fd1fadcf5fb3d87bd5ab00b73578",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 8469,
+      "is_binary": false
+    },
+    {
+      "name": "gold-process.yaml",
+      "path": ".github/workflows/gold-process.yaml",
+      "type": "file",
+      "sha": "286aac43b87dee488324cf05367f0ae46bd83a71",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 10163,
+      "is_binary": false
+    },
+    {
+      "name": "python-integration-tests.yaml",
+      "path": ".github/workflows/python-integration-tests.yaml",
+      "type": "file",
+      "sha": "29ef8e77b13300b1620572901db9ab696af061bc",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 2566,
+      "is_binary": false
+    },
+    {
+      "name": "python-unit-tests.yaml",
+      "path": ".github/workflows/python-unit-tests.yaml",
+      "type": "file",
+      "sha": "9cffacea1c7be214ddf40a9c805f2a1ac2854ecd",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 4641,
+      "is_binary": false
+    },
+    {
+      "name": "save-issues.yaml",
+      "path": ".github/workflows/save-issues.yaml",
+      "type": "file",
+      "sha": "66e659554a5e59bc3e33a3d4bdce7772090ea760",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 1155,
+      "is_binary": false
+    },
+    {
+      "name": "silver-process.yaml",
+      "path": ".github/workflows/silver-process.yaml",
+      "type": "file",
+      "sha": "1e95bec1f86a990ea45cab030be44b270e518bd4",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 5719,
+      "is_binary": false
+    },
+    {
+      "name": "start.yaml",
+      "path": ".github/workflows/start.yaml",
+      "type": "file",
+      "sha": "c95a1ca856c87a904690453bf7f2da1b628041b8",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 1067,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "9c9034629627c4a12ac73be35afa708cbfa0dfe7",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 779,
+      "is_binary": false
+    },
+    {
+      "name": "ARCHITECTURE.md",
+      "path": "ARCHITECTURE.md",
+      "type": "file",
+      "sha": "15a510cdca200e350f7b4df278f115b7c197296a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7445,
+      "is_binary": false
+    },
+    {
+      "name": "CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "type": "file",
+      "sha": "edd870db35ee6e09092e198f80606d8654460a38",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2946,
+      "is_binary": false
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "type": "file",
+      "sha": "cd25b46b1a68f0f146677d3ee896106bd334ebf4",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2770,
+      "is_binary": false
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "type": "file",
+      "sha": "9bc54819404d21a29b8e1ebbb81f9a16a16dfc22",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 11910,
+      "is_binary": false
+    },
+    {
+      "name": "EXAMPLE.secrets",
+      "path": "EXAMPLE.secrets",
+      "type": "file",
+      "sha": "c4e5d802782a5192d653a076d19c430442aa27c3",
+      "mode": "100644",
+      "extension": ".secrets",
+      "size": 377,
+      "is_binary": false
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "type": "file",
+      "sha": "82af59c49396432436fa48d4b4431db169c6edb0",
+      "mode": "100644",
+      "extension": "",
+      "size": 35615,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "e0ecb67f9f5bf3e174eb85a3f2cfb7a69a996981",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6123,
+      "is_binary": false
+    },
+    {
+      "name": "README_AI_ANALYSIS.md",
+      "path": "README_AI_ANALYSIS.md",
+      "type": "file",
+      "sha": "06d87381867d384d80e91da8b15a692873bbb0af",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2450,
+      "is_binary": false
+    },
+    {
+      "name": "SECURITY.md",
+      "path": "SECURITY.md",
+      "type": "file",
+      "sha": "ad419887b728b2130b409d01b4ce05221818430a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2324,
+      "is_binary": false
+    },
+    {
+      "name": "_config.yml",
+      "path": "_config.yml",
+      "type": "file",
+      "sha": "90e689132425ed3a0a0a15ab36b77305f0022eeb",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 130,
+      "is_binary": false
+    },
+    {
+      "name": "dashboard",
+      "path": "dashboard",
+      "type": "directory",
+      "sha": "205507d881b00e5fe0e2a3573060c3a64b3d1bb7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".env.example",
+      "path": "dashboard/.env.example",
+      "type": "file",
+      "sha": "529673fdf9c0577de354b2a2d889dc1f9ec4e10d",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 688,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": "dashboard/.gitignore",
+      "type": "file",
+      "sha": "a264fe625afc8290759b192bb2f9e57c51ff2115",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 430,
+      "is_binary": false
+    },
+    {
+      "name": ".prettierignore",
+      "path": "dashboard/.prettierignore",
+      "type": "file",
+      "sha": "92edb8ce8c98df3ea323db1fc89d8b12013c0c3d",
+      "mode": "100644",
+      "extension": ".prettierignore",
+      "size": 116,
+      "is_binary": false
+    },
+    {
+      "name": ".prettierrc",
+      "path": "dashboard/.prettierrc",
+      "type": "file",
+      "sha": "b3837b5f27ae2edf23629128ee29a7f10c87f4ca",
+      "mode": "100644",
+      "extension": ".prettierrc",
+      "size": 175,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "dashboard/README.md",
+      "type": "file",
+      "sha": "3c4dd8da3beec9e4b3a91aedcc57c18c4c716ebd",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3362,
+      "is_binary": false
+    },
+    {
+      "name": "eslint.config.js",
+      "path": "dashboard/eslint.config.js",
+      "type": "file",
+      "sha": "b19330b103a5dff2c35a37637addb0cc87e9ac9f",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 621,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "dashboard/index.html",
+      "type": "file",
+      "sha": "5991c8fa2656b2d03ea3b69e7ba54897ecb5483f",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 2760,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "dashboard/package-lock.json",
+      "type": "file",
+      "sha": "7c0aa3f9ad280051e492215ce898decb0387d449",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 183793,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "dashboard/package.json",
+      "type": "file",
+      "sha": "53f54ce26b59fddd49df2587d185a0ff57a1fdba",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 1793,
+      "is_binary": false
+    },
+    {
+      "name": "pnpm-lock.yaml",
+      "path": "dashboard/pnpm-lock.yaml",
+      "type": "file",
+      "sha": "80cebdffaf3d29b83ff8b81534725f419af67349",
+      "mode": "100644",
+      "extension": ".yaml",
+      "size": 108980,
+      "is_binary": false
+    },
+    {
+      "name": "postcss.config.js",
+      "path": "dashboard/postcss.config.js",
+      "type": "file",
+      "sha": "af9d8dc352da0b7268b1c8ead7ee8e9bd67f2b71",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 90,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "dashboard/public",
+      "type": "directory",
+      "sha": "eae2f569f1e43ffb5520a4cc787b84cb2eecaa72",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".nojekyll",
+      "path": "dashboard/public/.nojekyll",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".nojekyll",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "android-chrome-192x192.png",
+      "path": "dashboard/public/android-chrome-192x192.png",
+      "type": "file",
+      "sha": "ca3f223efe458c25ab779c236628fe9d0bfd76d7",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 15439,
+      "is_binary": false
+    },
+    {
+      "name": "android-chrome-512x512.png",
+      "path": "dashboard/public/android-chrome-512x512.png",
+      "type": "file",
+      "sha": "5647fedde70ddd4c3cf7b18a1467054c91579902",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 87680,
+      "is_binary": false
+    },
+    {
+      "name": "apple-touch-icon.png",
+      "path": "dashboard/public/apple-touch-icon.png",
+      "type": "file",
+      "sha": "5354d86f2b983922cb615b9448ba0956afe49a1f",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 13856,
+      "is_binary": false
+    },
+    {
+      "name": "favicon-16x16.png",
+      "path": "dashboard/public/favicon-16x16.png",
+      "type": "file",
+      "sha": "29613fb74a9df39644fd411ae2823e083a433f55",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 369,
+      "is_binary": false
+    },
+    {
+      "name": "favicon-32x32.png",
+      "path": "dashboard/public/favicon-32x32.png",
+      "type": "file",
+      "sha": "9c4459fafe80be5c70def4f9fe32bf3da66d0506",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 947,
+      "is_binary": false
+    },
+    {
+      "name": "favicon.ico",
+      "path": "dashboard/public/favicon.ico",
+      "type": "file",
+      "sha": "b67b05518b55d861fa5544c04f69b88dd2700d3f",
+      "mode": "100644",
+      "extension": ".ico",
+      "size": 4314,
+      "is_binary": false
+    },
+    {
+      "name": "site.webmanifest",
+      "path": "dashboard/public/site.webmanifest",
+      "type": "file",
+      "sha": "29b0eca44508b990b301d359531b6e5b8deb8541",
+      "mode": "100644",
+      "extension": ".webmanifest",
+      "size": 489,
+      "is_binary": false
+    },
+    {
+      "name": "vite.svg",
+      "path": "dashboard/public/vite.svg",
+      "type": "file",
+      "sha": "e7b8dfb1b2a60bd50538bec9f876511b9cac21e3",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 1497,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "dashboard/src",
+      "type": "directory",
+      "sha": "0d7ac886636a9a9d3e18a0cb6d078a4a0ad0b75c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "App.tsx",
+      "path": "dashboard/src/App.tsx",
+      "type": "file",
+      "sha": "c2916ec96a2864ddebdd3b454665896f5bd7131e",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1954,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "dashboard/src/assets",
+      "type": "directory",
+      "sha": "4af6f8247babc42813ab44d8f307936361d02ba2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "alternative-banner.png",
+      "path": "dashboard/src/assets/alternative-banner.png",
+      "type": "file",
+      "sha": "3aa54709e740ef04b5ba9459f3e3b3b74c429ac6",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 3135878,
+      "is_binary": false
+    },
+    {
+      "name": "banner.png",
+      "path": "dashboard/src/assets/banner.png",
+      "type": "file",
+      "sha": "b763782dd61cd8c4df853655114bb125d0ab7419",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 2775407,
+      "is_binary": false
+    },
+    {
+      "name": "logo-no-background.png",
+      "path": "dashboard/src/assets/logo-no-background.png",
+      "type": "file",
+      "sha": "60538e05a8a5587292bd073e1b61ea4507f571a8",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 80729,
+      "is_binary": false
+    },
+    {
+      "name": "logo.webp",
+      "path": "dashboard/src/assets/logo.webp",
+      "type": "file",
+      "sha": "9041033b20334c1275336d49b36cbbd6674482b1",
+      "mode": "100644",
+      "extension": ".webp",
+      "size": 235500,
+      "is_binary": false
+    },
+    {
+      "name": "mascot-coops.png",
+      "path": "dashboard/src/assets/mascot-coops.png",
+      "type": "file",
+      "sha": "33652aa6de9ad3b59782634bb3228c1c11f56e96",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 1674726,
+      "is_binary": false
+    },
+    {
+      "name": "output.png",
+      "path": "dashboard/src/assets/output.png",
+      "type": "file",
+      "sha": "164ebddc0b858a20acfccb0a00798ca7c68b6808",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 373271,
+      "is_binary": false
+    },
+    {
+      "name": "react.svg",
+      "path": "dashboard/src/assets/react.svg",
+      "type": "file",
+      "sha": "6c87de9bb3358469122cc991d5cf578927246184",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 4126,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "dashboard/src/components",
+      "type": "directory",
+      "sha": "f8cd547d4f0a7450f9cedeaf50f9184a5ec96c47",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "AI.summary.test.tsx",
+      "path": "dashboard/src/components/AI.summary.test.tsx",
+      "type": "file",
+      "sha": "a29660d849fa61bcaec33fe6401d67425864e4ac",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 21382,
+      "is_binary": false
+    },
+    {
+      "name": "AI.summary.tsx",
+      "path": "dashboard/src/components/AI.summary.tsx",
+      "type": "file",
+      "sha": "763c510c387bcd2facc977af457352438dffac9a",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 25753,
+      "is_binary": false
+    },
+    {
+      "name": "BaseFilter.test.tsx",
+      "path": "dashboard/src/components/BaseFilter.test.tsx",
+      "type": "file",
+      "sha": "84d8bfb1b8a20944b8a2d31fddf7a13cd813472f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 10832,
+      "is_binary": false
+    },
+    {
+      "name": "BaseFilters.tsx",
+      "path": "dashboard/src/components/BaseFilters.tsx",
+      "type": "file",
+      "sha": "4943362f7cc6d529bcb1e1fc686c146da332e196",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2054,
+      "is_binary": false
+    },
+    {
+      "name": "CalendarHeatmap.test.tsx",
+      "path": "dashboard/src/components/CalendarHeatmap.test.tsx",
+      "type": "file",
+      "sha": "a86fd35d396610cb39bf93a52b90b318a548e478",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 14627,
+      "is_binary": false
+    },
+    {
+      "name": "CalendarHeatmap.tsx",
+      "path": "dashboard/src/components/CalendarHeatmap.tsx",
+      "type": "file",
+      "sha": "a46d3ba2a38ebb685071531b228fce173cc8563f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 15222,
+      "is_binary": false
+    },
+    {
+      "name": "DashBoardLayout.test.tsx",
+      "path": "dashboard/src/components/DashBoardLayout.test.tsx",
+      "type": "file",
+      "sha": "b6422b48bb5f3561e20cb50a077cbd8edc0536af",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 11741,
+      "is_binary": false
+    },
+    {
+      "name": "DashboardLayout.tsx",
+      "path": "dashboard/src/components/DashboardLayout.tsx",
+      "type": "file",
+      "sha": "e5f93696fc2385b2689d4590163f40a551b2c8f8",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 2509,
+      "is_binary": false
+    },
+    {
+      "name": "Filter.test.tsx",
+      "path": "dashboard/src/components/Filter.test.tsx",
+      "type": "file",
+      "sha": "73848b8c4f3605131ac4563a20a33967423e9261",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4630,
+      "is_binary": false
+    },
+    {
+      "name": "Filter.tsx",
+      "path": "dashboard/src/components/Filter.tsx",
+      "type": "file",
+      "sha": "ff7a7c5e7afb28e715ee9a8e77b71474d270c4a0",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1485,
+      "is_binary": false
+    },
+    {
+      "name": "Graphs.test.tsx",
+      "path": "dashboard/src/components/Graphs.test.tsx",
+      "type": "file",
+      "sha": "e8c4053a8c68717d1c4fe59c300acd1187c2be03",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 20272,
+      "is_binary": false
+    },
+    {
+      "name": "Graphs.tsx",
+      "path": "dashboard/src/components/Graphs.tsx",
+      "type": "file",
+      "sha": "157dcba4b6e35a92aa3a32ab78212df0a9bb871e",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 37656,
+      "is_binary": false
+    },
+    {
+      "name": "Histogram.test.tsx",
+      "path": "dashboard/src/components/Histogram.test.tsx",
+      "type": "file",
+      "sha": "0b7e048f5d410fe413c2c762f687dfcbcc3ac1d6",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4474,
+      "is_binary": false
+    },
+    {
+      "name": "LanguageLegend.tsx",
+      "path": "dashboard/src/components/LanguageLegend.tsx",
+      "type": "file",
+      "sha": "0253031c40363617be98f244f7eee2e9e167b147",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1667,
+      "is_binary": false
+    },
+    {
+      "name": "Loading.tsx",
+      "path": "dashboard/src/components/Loading.tsx",
+      "type": "file",
+      "sha": "e3111ba733065ccf020d1c4ee531ab9ae8329153",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1219,
+      "is_binary": false
+    },
+    {
+      "name": "MemberFilter.test.tsx",
+      "path": "dashboard/src/components/MemberFilter.test.tsx",
+      "type": "file",
+      "sha": "9ba0bc3d4fe8575ad2a07b20a103925f56fb8390",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 15264,
+      "is_binary": false
+    },
+    {
+      "name": "MemberFilter.tsx",
+      "path": "dashboard/src/components/MemberFilter.tsx",
+      "type": "file",
+      "sha": "60889f6024a4d216507386d36ac612c236887551",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5735,
+      "is_binary": false
+    },
+    {
+      "name": "OverviewToolbar.test.tsx",
+      "path": "dashboard/src/components/OverviewToolbar.test.tsx",
+      "type": "file",
+      "sha": "8d503d6b5c607dfb985e621f84c51b7879c733c6",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 16538,
+      "is_binary": false
+    },
+    {
+      "name": "OverviewToolbar.tsx",
+      "path": "dashboard/src/components/OverviewToolbar.tsx",
+      "type": "file",
+      "sha": "ddda2313254d902c8e1cd6ff24c9e8191413c9e3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3926,
+      "is_binary": false
+    },
+    {
+      "name": "PieChart.test.tsx",
+      "path": "dashboard/src/components/PieChart.test.tsx",
+      "type": "file",
+      "sha": "cb7d914e3549c00f419084baec941fc76b7e0ae1",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5638,
+      "is_binary": false
+    },
+    {
+      "name": "RepoFingerprint.tsx",
+      "path": "dashboard/src/components/RepoFingerprint.tsx",
+      "type": "file",
+      "sha": "2486bf9a211426bb2dd009d99cc4208e46bd4a4a",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 17439,
+      "is_binary": false
+    },
+    {
+      "name": "RepoStructureAnalysis.tsx",
+      "path": "dashboard/src/components/RepoStructureAnalysis.tsx",
+      "type": "file",
+      "sha": "c11a504886e55a8e365c204f316291d85c893911",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 11487,
+      "is_binary": false
+    },
+    {
+      "name": "RepoTreemap.tsx",
+      "path": "dashboard/src/components/RepoTreemap.tsx",
+      "type": "file",
+      "sha": "37c8dc4531ad9020d34fb6432b3b877b8d7e181a",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 8142,
+      "is_binary": false
+    },
+    {
+      "name": "RepositoryFilter.test.tsx",
+      "path": "dashboard/src/components/RepositoryFilter.test.tsx",
+      "type": "file",
+      "sha": "f5664ab7a3d90c520a9d4337b6d14e2b5a986906",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 14525,
+      "is_binary": false
+    },
+    {
+      "name": "RepositoryFilter.tsx",
+      "path": "dashboard/src/components/RepositoryFilter.tsx",
+      "type": "file",
+      "sha": "da95923ec85f6383c275d862f36f310ef03defb3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3492,
+      "is_binary": false
+    },
+    {
+      "name": "RepositoryToolbar.test.tsx",
+      "path": "dashboard/src/components/RepositoryToolbar.test.tsx",
+      "type": "file",
+      "sha": "d45ae634c551fc7739507f1a56a1a0891ffb00ba",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 23528,
+      "is_binary": false
+    },
+    {
+      "name": "RepositoryToolbar.tsx",
+      "path": "dashboard/src/components/RepositoryToolbar.tsx",
+      "type": "file",
+      "sha": "2ab61b5789766f21626e27ed453ccb9b56cd7e75",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 6251,
+      "is_binary": false
+    },
+    {
+      "name": "Sidebar.test.tsx",
+      "path": "dashboard/src/components/Sidebar.test.tsx",
+      "type": "file",
+      "sha": "868ab26139067f9e1e05c63efdde251bf1f079c4",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 23893,
+      "is_binary": false
+    },
+    {
+      "name": "Sidebar.tsx",
+      "path": "dashboard/src/components/Sidebar.tsx",
+      "type": "file",
+      "sha": "00c8cde0af696a4637d2eb04c6138be0edd46869",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5108,
+      "is_binary": false
+    },
+    {
+      "name": "VisualizationTabs.tsx",
+      "path": "dashboard/src/components/VisualizationTabs.tsx",
+      "type": "file",
+      "sha": "149516a937c27f1051cdccf235dd6a57c34aafc2",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1126,
+      "is_binary": false
+    },
+    {
+      "name": "charts",
+      "path": "dashboard/src/components/charts",
+      "type": "directory",
+      "sha": "d803c575332666edcc1a3c4f72a2dee8be00173b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "BarChart.tsx",
+      "path": "dashboard/src/components/charts/BarChart.tsx",
+      "type": "file",
+      "sha": "742e848ad586aa1090523d9e4fff75bc60b6718b",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5337,
+      "is_binary": false
+    },
+    {
+      "name": "Heatmap.tsx",
+      "path": "dashboard/src/components/charts/Heatmap.tsx",
+      "type": "file",
+      "sha": "f7618e8475a55b7d501f72d2fe59485be32f22bb",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5965,
+      "is_binary": false
+    },
+    {
+      "name": "Histogram.tsx",
+      "path": "dashboard/src/components/charts/Histogram.tsx",
+      "type": "file",
+      "sha": "1d61bf500c884e3fd40791bc2e25ef3761b2365f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 3836,
+      "is_binary": false
+    },
+    {
+      "name": "LineChart.tsx",
+      "path": "dashboard/src/components/charts/LineChart.tsx",
+      "type": "file",
+      "sha": "4c4a7e017d8a65158a5141f1394a4a0e8b91050f",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5304,
+      "is_binary": false
+    },
+    {
+      "name": "NetworkGraph.tsx",
+      "path": "dashboard/src/components/charts/NetworkGraph.tsx",
+      "type": "file",
+      "sha": "0cf89c8b921ff61163c328226f4189a89a2d5c85",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4555,
+      "is_binary": false
+    },
+    {
+      "name": "PieChart.tsx",
+      "path": "dashboard/src/components/charts/PieChart.tsx",
+      "type": "file",
+      "sha": "d2fa9bf5c32e00c53fe415ed7fccd08c71fab665",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4582,
+      "is_binary": false
+    },
+    {
+      "name": "ScatterPlot.tsx",
+      "path": "dashboard/src/components/charts/ScatterPlot.tsx",
+      "type": "file",
+      "sha": "baba7e826a89286b3fa3c7649f79d295bc779ec7",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4503,
+      "is_binary": false
+    },
+    {
+      "name": "StackedBarChart.tsx",
+      "path": "dashboard/src/components/charts/StackedBarChart.tsx",
+      "type": "file",
+      "sha": "5df285aee40fe0ccc8355f5f016213dcd731f73d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 4868,
+      "is_binary": false
+    },
+    {
+      "name": "index.ts",
+      "path": "dashboard/src/components/charts/index.ts",
+      "type": "file",
+      "sha": "109eeceeae473306f0d0909a94a0f44a0c293f49",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 662,
+      "is_binary": false
+    },
+    {
+      "name": "contexts",
+      "path": "dashboard/src/contexts",
+      "type": "directory",
+      "sha": "bd00981e3ee26557e23aa4a24283520bd1faed03",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SidebarContext.test.tsx",
+      "path": "dashboard/src/contexts/SidebarContext.test.tsx",
+      "type": "file",
+      "sha": "0726a23d301652b88356607e4119b46ffd8cd30e",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 21594,
+      "is_binary": false
+    },
+    {
+      "name": "SidebarContext.tsx",
+      "path": "dashboard/src/contexts/SidebarContext.tsx",
+      "type": "file",
+      "sha": "688eb35074488e74719f2c735ec9d87e80b2f87e",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 947,
+      "is_binary": false
+    },
+    {
+      "name": "index.css",
+      "path": "dashboard/src/index.css",
+      "type": "file",
+      "sha": "0e4a3c365c48757523eda350df8a16f5f9f62ac2",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 11118,
+      "is_binary": false
+    },
+    {
+      "name": "main.tsx",
+      "path": "dashboard/src/main.tsx",
+      "type": "file",
+      "sha": "ccb955fe5bd817377dff6a1e84c82462c0d36d60",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 631,
+      "is_binary": false
+    },
+    {
+      "name": "pages",
+      "path": "dashboard/src/pages",
+      "type": "directory",
+      "sha": "01fe13d68b5d0a80a1e11f88632e92ab7057dce6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Analytics.tsx",
+      "path": "dashboard/src/pages/Analytics.tsx",
+      "type": "file",
+      "sha": "b4b22b5324699a55ef8d7e119c22a8718eb4ecca",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 14832,
+      "is_binary": false
+    },
+    {
+      "name": "Collaboration.test.tsx",
+      "path": "dashboard/src/pages/Collaboration.test.tsx",
+      "type": "file",
+      "sha": "703ae142e50c21bcdf82233ff3b7f41fe78b6734",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 26017,
+      "is_binary": false
+    },
+    {
+      "name": "Collaboration.tsx",
+      "path": "dashboard/src/pages/Collaboration.tsx",
+      "type": "file",
+      "sha": "344b0292d51ad7e906a372712dd4a78826521634",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 7160,
+      "is_binary": false
+    },
+    {
+      "name": "Commits.test.tsx",
+      "path": "dashboard/src/pages/Commits.test.tsx",
+      "type": "file",
+      "sha": "838e0e50acfaedc39333cf37f0b7e5053b710e24",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 30845,
+      "is_binary": false
+    },
+    {
+      "name": "Commits.tsx",
+      "path": "dashboard/src/pages/Commits.tsx",
+      "type": "file",
+      "sha": "5d47c2b7c6a8666923c882e90b90fe261db0bf47",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 8380,
+      "is_binary": false
+    },
+    {
+      "name": "Heatmap.test.tsx",
+      "path": "dashboard/src/pages/Heatmap.test.tsx",
+      "type": "file",
+      "sha": "d2ae18f47f014f3395933e3f46d57cc074af4249",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 32195,
+      "is_binary": false
+    },
+    {
+      "name": "Heatmap.tsx",
+      "path": "dashboard/src/pages/Heatmap.tsx",
+      "type": "file",
+      "sha": "416ab229d091ba532973bbc1cbd36481c1f8493d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 8907,
+      "is_binary": false
+    },
+    {
+      "name": "HomePage.test.tsx",
+      "path": "dashboard/src/pages/HomePage.test.tsx",
+      "type": "file",
+      "sha": "c3179d55b0cbebb07b782104a435a3e439012318",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 22053,
+      "is_binary": false
+    },
+    {
+      "name": "HomePage.tsx",
+      "path": "dashboard/src/pages/HomePage.tsx",
+      "type": "file",
+      "sha": "b115e2b0756095791a6749fc2cd9f0ae558b515d",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 11575,
+      "is_binary": false
+    },
+    {
+      "name": "Issues.test.tsx",
+      "path": "dashboard/src/pages/Issues.test.tsx",
+      "type": "file",
+      "sha": "3208b4b48711eecdde86ae3ef76960a9b18fc8b6",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 27615,
+      "is_binary": false
+    },
+    {
+      "name": "Issues.tsx",
+      "path": "dashboard/src/pages/Issues.tsx",
+      "type": "file",
+      "sha": "21580c1087b7844030baa8ad0177bee4e548f831",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 6552,
+      "is_binary": false
+    },
+    {
+      "name": "NotFound.test.tsx",
+      "path": "dashboard/src/pages/NotFound.test.tsx",
+      "type": "file",
+      "sha": "414ddf89d6a7719814820811cbc50f8a496afdd2",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 18502,
+      "is_binary": false
+    },
+    {
+      "name": "NotFound.tsx",
+      "path": "dashboard/src/pages/NotFound.tsx",
+      "type": "file",
+      "sha": "eede1ea2a3d7624faa510a2cabc1f486f4852b95",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 1652,
+      "is_binary": false
+    },
+    {
+      "name": "Organization.tsx",
+      "path": "dashboard/src/pages/Organization.tsx",
+      "type": "file",
+      "sha": "3468eba7a41d9c43dc7d0ae211469fcb6280ceb3",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 6260,
+      "is_binary": false
+    },
+    {
+      "name": "PullRequests.test.tsx",
+      "path": "dashboard/src/pages/PullRequests.test.tsx",
+      "type": "file",
+      "sha": "eabd6ad6999e5427005ee82399052700a6fe7990",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 20798,
+      "is_binary": false
+    },
+    {
+      "name": "PullRequests.tsx",
+      "path": "dashboard/src/pages/PullRequests.tsx",
+      "type": "file",
+      "sha": "e5b5274b08e7ad2154aa1c9a48c97470dfbdae79",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 6598,
+      "is_binary": false
+    },
+    {
+      "name": "Structure.tsx",
+      "path": "dashboard/src/pages/Structure.tsx",
+      "type": "file",
+      "sha": "8142488a30c48d7e7159971c0b973b44e3c6a891",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5857,
+      "is_binary": false
+    },
+    {
+      "name": "Timeline.test.tsx",
+      "path": "dashboard/src/pages/Timeline.test.tsx",
+      "type": "file",
+      "sha": "3f8d08c960612bf8f4a07b35d6d50ad0dd9ff5e9",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 19583,
+      "is_binary": false
+    },
+    {
+      "name": "Timeline.tsx",
+      "path": "dashboard/src/pages/Timeline.tsx",
+      "type": "file",
+      "sha": "bdb06b1741f86a855758374354b8f38cb71906da",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 12363,
+      "is_binary": false
+    },
+    {
+      "name": "TimelineExtraction.test.ts",
+      "path": "dashboard/src/pages/TimelineExtraction.test.ts",
+      "type": "file",
+      "sha": "3552ba174dc214e5dffaabe5f85a302f7b286e32",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 25090,
+      "is_binary": false
+    },
+    {
+      "name": "TimelineExtraction.ts",
+      "path": "dashboard/src/pages/TimelineExtraction.ts",
+      "type": "file",
+      "sha": "41bf326fcd484c3b40cffe4b023536ba53e5e485",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 2626,
+      "is_binary": false
+    },
+    {
+      "name": "TimelineExtraction.validation.js",
+      "path": "dashboard/src/pages/TimelineExtraction.validation.js",
+      "type": "file",
+      "sha": "714dc0778a5adb62125c0fd7b848cf8b11d50345",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 5778,
+      "is_binary": false
+    },
+    {
+      "name": "Utils.test.ts",
+      "path": "dashboard/src/pages/Utils.test.ts",
+      "type": "file",
+      "sha": "1fb204a2269dae31e7ecde05186afcdc6b1cf7ad",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 30641,
+      "is_binary": false
+    },
+    {
+      "name": "Utils.ts",
+      "path": "dashboard/src/pages/Utils.ts",
+      "type": "file",
+      "sha": "083ecc53d44c8d87837c60d8419da3ddabde7126",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 12229,
+      "is_binary": false
+    },
+    {
+      "name": "Visualization.tsx",
+      "path": "dashboard/src/pages/Visualization.tsx",
+      "type": "file",
+      "sha": "086db1d4cc0080b16fc0cfe4ec4076c10eef5644",
+      "mode": "100644",
+      "extension": ".tsx",
+      "size": 5939,
+      "is_binary": false
+    },
+    {
+      "name": "VisualizationUtils.ts",
+      "path": "dashboard/src/pages/VisualizationUtils.ts",
+      "type": "file",
+      "sha": "a3f3a6264b021f0b995b21720812654d13f64191",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 4262,
+      "is_binary": false
+    },
+    {
+      "name": "services",
+      "path": "dashboard/src/services",
+      "type": "directory",
+      "sha": "fe6359728f76974dac2be1e9e97daa09e02595d2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "dataSource.ts",
+      "path": "dashboard/src/services/dataSource.ts",
+      "type": "file",
+      "sha": "ed86974a8e03299f8cb0fa6df0b648a84d6b16a6",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 1672,
+      "is_binary": false
+    },
+    {
+      "name": "setupTests.ts",
+      "path": "dashboard/src/setupTests.ts",
+      "type": "file",
+      "sha": "4666791a724cf7336673e18b208a4c1842a3d9b5",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 582,
+      "is_binary": false
+    },
+    {
+      "name": "types",
+      "path": "dashboard/src/types",
+      "type": "directory",
+      "sha": "fa485a901f79e2476cb66c5ea4c4bb62daad6702",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "charts.test.ts",
+      "path": "dashboard/src/types/charts.test.ts",
+      "type": "file",
+      "sha": "e741648d4434076206d1aa89d1d2ec2729b8beb9",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 25726,
+      "is_binary": false
+    },
+    {
+      "name": "charts.ts",
+      "path": "dashboard/src/types/charts.ts",
+      "type": "file",
+      "sha": "d261c0fca3a35efc7359b0a4598d01c0ea06b7d8",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 588,
+      "is_binary": false
+    },
+    {
+      "name": "github.test.ts",
+      "path": "dashboard/src/types/github.test.ts",
+      "type": "file",
+      "sha": "8821d259646ac74d6425990b8e9d0cc4267dfc84",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 35055,
+      "is_binary": false
+    },
+    {
+      "name": "github.ts",
+      "path": "dashboard/src/types/github.ts",
+      "type": "file",
+      "sha": "12e2aeaaaab4d627a3670131d49925b1291adc29",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 500,
+      "is_binary": false
+    },
+    {
+      "name": "index.test.ts",
+      "path": "dashboard/src/types/index.test.ts",
+      "type": "file",
+      "sha": "363aa8f9a139b6c09f3eea33c19371c7f99cb6fc",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 29088,
+      "is_binary": false
+    },
+    {
+      "name": "index.ts",
+      "path": "dashboard/src/types/index.ts",
+      "type": "file",
+      "sha": "ede03eae3f2982db74a10d8fa92dc81af6d050a6",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 261,
+      "is_binary": false
+    },
+    {
+      "name": "repoVisualization.ts",
+      "path": "dashboard/src/types/repoVisualization.ts",
+      "type": "file",
+      "sha": "c05627b4d8859420652b4762ad20d5088b24596a",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 408,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "dashboard/src/utils",
+      "type": "directory",
+      "sha": "6d639283bdcd0ed6564087100d8e971b2f739f90",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "sanitize.ts",
+      "path": "dashboard/src/utils/sanitize.ts",
+      "type": "file",
+      "sha": "28d27159611062d3b4ebd12574e336710ff75b52",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 288,
+      "is_binary": false
+    },
+    {
+      "name": "vite-env.d.ts",
+      "path": "dashboard/src/vite-env.d.ts",
+      "type": "file",
+      "sha": "b2af1ed05c0604f86a37b2ab9df2afaf8f28b160",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 603,
+      "is_binary": false
+    },
+    {
+      "name": "tailwind.config.js",
+      "path": "dashboard/tailwind.config.js",
+      "type": "file",
+      "sha": "f450de14dfa3eeaa8a17a5a95083d83a2c4cc2fc",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 300,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.app.json",
+      "path": "dashboard/tsconfig.app.json",
+      "type": "file",
+      "sha": "65c7456cde8e3f19ab09b19d0f52c172285255ef",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 462,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.json",
+      "path": "dashboard/tsconfig.json",
+      "type": "file",
+      "sha": "1ffef600d959ec9e396d5a260bd3f5b927b2cef8",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 119,
+      "is_binary": false
+    },
+    {
+      "name": "tsconfig.node.json",
+      "path": "dashboard/tsconfig.node.json",
+      "type": "file",
+      "sha": "8a67f62f4ceebff3424e6e8cd4b3c25b17347546",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 653,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.ts",
+      "path": "dashboard/vite.config.ts",
+      "type": "file",
+      "sha": "d82ca43bb11dafa0e1c197a355442174d3ead3bf",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 357,
+      "is_binary": false
+    },
+    {
+      "name": "vitest.config.ts",
+      "path": "dashboard/vitest.config.ts",
+      "type": "file",
+      "sha": "67359ad1c8c5dba8fbc51bd8ea10bc1ab64b5b20",
+      "mode": "100644",
+      "extension": ".ts",
+      "size": 921,
+      "is_binary": false
+    },
+    {
+      "name": "data",
+      "path": "data",
+      "type": "directory",
+      "sha": "fa3abd4175d4ad0e8721dcf2f1f96803295b11f6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "data_catalog.json",
+      "path": "data/data_catalog.json",
+      "type": "file",
+      "sha": "3337a1dfc0a8c2a91bc826768d419fc16c9d8cc4",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 3020,
+      "is_binary": false
+    },
+    {
+      "name": "master_registry.json",
+      "path": "data/master_registry.json",
+      "type": "file",
+      "sha": "43884cc4ec96eff2dc591722e66d583738decbbd",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 16244,
+      "is_binary": false
+    },
+    {
+      "name": "desenvolvimento.md",
+      "path": "desenvolvimento.md",
+      "type": "file",
+      "sha": "a0c7291ffea7908f60c8d70d7ff6132be774a8c0",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7882,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "3204c6b9dabad8cfa901c736082df4210fee1539",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "architecture",
+      "path": "docs/architecture",
+      "type": "directory",
+      "sha": "752df9a6f93bb9a10ffd34065b3855807b72d004",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "dag-medallion.mmd",
+      "path": "docs/architecture/dag-medallion.mmd",
+      "type": "file",
+      "sha": "e2e2d55950378a3480cd58ef166901c717728f4e",
+      "mode": "100644",
+      "extension": ".mmd",
+      "size": 3828,
+      "is_binary": false
+    },
+    {
+      "name": "sequential-etl.mmd",
+      "path": "docs/architecture/sequential-etl.mmd",
+      "type": "file",
+      "sha": "c072d6ca820560fa381c98d5bde2a86c01739357",
+      "mode": "100644",
+      "extension": ".mmd",
+      "size": 2864,
+      "is_binary": false
+    },
+    {
+      "name": "topologia-dashboard.mmd",
+      "path": "docs/architecture/topologia-dashboard.mmd",
+      "type": "file",
+      "sha": "769fd9451beaf7724e9a19e5d77862f388b9b099",
+      "mode": "100644",
+      "extension": ".mmd",
+      "size": 2116,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "docs/backend",
+      "type": "directory",
+      "sha": "401bba11751339b56ccf31522aecc06d84722765",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "graphql-commits-extraction.md",
+      "path": "docs/backend/graphql-commits-extraction.md",
+      "type": "file",
+      "sha": "d94cf4e82d958652720bde193106b96c757d0464",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7123,
+      "is_binary": false
+    },
+    {
+      "name": "graphql-queries-examples.md",
+      "path": "docs/backend/graphql-queries-examples.md",
+      "type": "file",
+      "sha": "6092340523bf405ed5825bda5742e6ad572955df",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6420,
+      "is_binary": false
+    },
+    {
+      "name": "pytest.ini",
+      "path": "pytest.ini",
+      "type": "file",
+      "sha": "b7c1fdb3ebf0b58bab1e1f9494033a55056b84f1",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 493,
+      "is_binary": false
+    },
+    {
+      "name": "requirements-dev.txt",
+      "path": "requirements-dev.txt",
+      "type": "file",
+      "sha": "7bf5bdde6bbdeaa1fa6fd2076884952029a04cef",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 68,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "type": "file",
+      "sha": "44347f7f5003d64cc052e7403a17bd8be5e25787",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 95,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "src",
+      "type": "directory",
+      "sha": "b4ec96bbd6f0246b83ce8f3fbd829edd9928420f",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "ai_analysis",
+      "path": "src/ai_analysis",
+      "type": "directory",
+      "sha": "fb63538bb8e8b8cb22b6cd44d2b56a6a15d2d5e9",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/ai_analysis/__init__.py",
+      "type": "file",
+      "sha": "a207bb46f02f24722f1672d75bd3cb23c2d6e948",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 90,
+      "is_binary": false
+    },
+    {
+      "name": "generate_members_ai.py",
+      "path": "src/ai_analysis/generate_members_ai.py",
+      "type": "file",
+      "sha": "380cc41381ad161c3adfe4449cf02d7769481dc1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 27430,
+      "is_binary": false
+    },
+    {
+      "name": "bronze",
+      "path": "src/bronze",
+      "type": "directory",
+      "sha": "0d5983e62f1eaa3ea8b0985bfc83ef82b451f358",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/bronze/__init__.py",
+      "type": "file",
+      "sha": "2b59ab7473e9a2f1066a457c039cb9c348a7971d",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 328,
+      "is_binary": false
+    },
+    {
+      "name": "commits.py",
+      "path": "src/bronze/commits.py",
+      "type": "file",
+      "sha": "b89589c89e8f08b6c958613b57f5f414eaea4655",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9985,
+      "is_binary": false
+    },
+    {
+      "name": "issues.py",
+      "path": "src/bronze/issues.py",
+      "type": "file",
+      "sha": "87a96e3772b0594f107aaec3c7ae74fe1e6d5a31",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4803,
+      "is_binary": false
+    },
+    {
+      "name": "members.py",
+      "path": "src/bronze/members.py",
+      "type": "file",
+      "sha": "8c4cac0b180a126ef3f46ba5f6ea5594bccea6e6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5854,
+      "is_binary": false
+    },
+    {
+      "name": "repositories.py",
+      "path": "src/bronze/repositories.py",
+      "type": "file",
+      "sha": "dd24c453e5b850c7ef2268fa0d82f1fb0b8166a8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2297,
+      "is_binary": false
+    },
+    {
+      "name": "repository_structure.py",
+      "path": "src/bronze/repository_structure.py",
+      "type": "file",
+      "sha": "068cc632d82f212c1c9e93de34241c59ad43f722",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5273,
+      "is_binary": false
+    },
+    {
+      "name": "bronze_extract.py",
+      "path": "src/bronze_extract.py",
+      "type": "file",
+      "sha": "d41d73b72ff04394caf4f208a3e8f513fa113478",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6221,
+      "is_binary": false
+    },
+    {
+      "name": "fetch_issues.py",
+      "path": "src/fetch_issues.py",
+      "type": "file",
+      "sha": "b98303a7a61747af93b83c08c9d02de4f2deb590",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1877,
+      "is_binary": false
+    },
+    {
+      "name": "gold",
+      "path": "src/gold",
+      "type": "directory",
+      "sha": "bd248478fcbe71f88fc409f6663ed4396f78c9b2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/gold/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "timeline_aggregation.py",
+      "path": "src/gold/timeline_aggregation.py",
+      "type": "file",
+      "sha": "b8554254b4caa4e87a8b3434a694ef8d217ace8a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7320,
+      "is_binary": false
+    },
+    {
+      "name": "gold_aggregate.py",
+      "path": "src/gold_aggregate.py",
+      "type": "file",
+      "sha": "56239c585f6ee359132fb476ef2ab2265fe95a40",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3345,
+      "is_binary": false
+    },
+    {
+      "name": "gold_process.py",
+      "path": "src/gold_process.py",
+      "type": "file",
+      "sha": "410a2a5825f46b4e293163585f04e48adc0e17ab",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1305,
+      "is_binary": false
+    },
+    {
+      "name": "registry_manager.py",
+      "path": "src/registry_manager.py",
+      "type": "file",
+      "sha": "0ec5c2afe864b04d1006a8e52ec13d618873a8e2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11466,
+      "is_binary": false
+    },
+    {
+      "name": "silver",
+      "path": "src/silver",
+      "type": "directory",
+      "sha": "3ba8b1df5cd4276e014c2671e8bef18cacc29222",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/silver/__init__.py",
+      "type": "file",
+      "sha": "52e9e7cf961d65f9e064a6575f54ff9dd227d6da",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 650,
+      "is_binary": false
+    },
+    {
+      "name": "collaboration_networks.py",
+      "path": "src/silver/collaboration_networks.py",
+      "type": "file",
+      "sha": "a7f584682438c2ceeba8fae0447d46ac9c2dc4dd",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7954,
+      "is_binary": false
+    },
+    {
+      "name": "contribution_metrics.py",
+      "path": "src/silver/contribution_metrics.py",
+      "type": "file",
+      "sha": "bb8558decba2cf53af6a591168605128ecd70ba2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 5989,
+      "is_binary": false
+    },
+    {
+      "name": "file_language_analysis.py",
+      "path": "src/silver/file_language_analysis.py",
+      "type": "file",
+      "sha": "42927b047faf9c5bcc83e4e96a93a5a4d374fcfb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 13765,
+      "is_binary": false
+    },
+    {
+      "name": "member_analytics.py",
+      "path": "src/silver/member_analytics.py",
+      "type": "file",
+      "sha": "89ea4e526cf03c2b7cf31e76561ca1e7e8531d83",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4870,
+      "is_binary": false
+    },
+    {
+      "name": "members_statistics.py",
+      "path": "src/silver/members_statistics.py",
+      "type": "file",
+      "sha": "feb8dacec3239d8c35774ee488987985b38feb1c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 11216,
+      "is_binary": false
+    },
+    {
+      "name": "temporal_analysis.py",
+      "path": "src/silver/temporal_analysis.py",
+      "type": "file",
+      "sha": "3fbb2bc276b7275054c252484317a221854289e6",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12516,
+      "is_binary": false
+    },
+    {
+      "name": "silver_process.py",
+      "path": "src/silver_process.py",
+      "type": "file",
+      "sha": "29bd02da4eb09b9fabfbd5fefb4be5e7eb50192e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2659,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "src/utils",
+      "type": "directory",
+      "sha": "fe67a96a5e362eb7fad6b4c37bd4e5e63d625c68",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "src/utils/__init__.py",
+      "type": "file",
+      "sha": "3e6cbea30d0bc590e1cf38467c94fa19f62795bf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 297,
+      "is_binary": false
+    },
+    {
+      "name": "cleanup_event_data.py",
+      "path": "src/utils/cleanup_event_data.py",
+      "type": "file",
+      "sha": "57de01f06d4b765a95c8b19bd6f6cfe9c58a5193",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3833,
+      "is_binary": false
+    },
+    {
+      "name": "data_helpers.py",
+      "path": "src/utils/data_helpers.py",
+      "type": "file",
+      "sha": "99a007583f81993cd87afdef93376c69ed07e9bf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 525,
+      "is_binary": false
+    },
+    {
+      "name": "github_api.py",
+      "path": "src/utils/github_api.py",
+      "type": "file",
+      "sha": "0abc4f30b0658d3a16031382bdc0cf43f0bde8dd",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 49552,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "tests",
+      "type": "directory",
+      "sha": "aeb41ed05dd8e10219eaff8e37d81e2aa361e5fb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "conftest.py",
+      "path": "tests/conftest.py",
+      "type": "file",
+      "sha": "ab9fd8a58310910a0d6489556f67c9d78973ed9c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4236,
+      "is_binary": false
+    },
+    {
+      "name": "integration",
+      "path": "tests/integration",
+      "type": "directory",
+      "sha": "212e17d36b80be76544a64d3e5e4b14817adc4dc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "tests/integration/README.md",
+      "type": "file",
+      "sha": "c6b82644dea67a879fe821ca2af9f694cd4a0f3b",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 10249,
+      "is_binary": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/integration/__init__.py",
+      "type": "file",
+      "sha": "fafa21183aac038ad7725e56f6a485f2ec6dddc8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 37,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_extractors_integration.py",
+      "path": "tests/integration/test_bronze_extractors_integration.py",
+      "type": "file",
+      "sha": "1a18a8b4319ca0cf788e8ca069cdf5969ca23cd8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12437,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_to_silver_integration.py",
+      "path": "tests/integration/test_bronze_to_silver_integration.py",
+      "type": "file",
+      "sha": "c62f8afed491d9a0f3a2e2b5cec75a6b0544f4b2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 13383,
+      "is_binary": false
+    },
+    {
+      "name": "test_complete_etl_pipeline.py",
+      "path": "tests/integration/test_complete_etl_pipeline.py",
+      "type": "file",
+      "sha": "10c0d227b07ef124d97adabf6a4a1746fea97a9e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 16760,
+      "is_binary": false
+    },
+    {
+      "name": "test_process_scripts_integration.py",
+      "path": "tests/integration/test_process_scripts_integration.py",
+      "type": "file",
+      "sha": "e6b34675fe80904f6e48c623dd68c77d5c2e4ec8",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12737,
+      "is_binary": false
+    },
+    {
+      "name": "test_registry_manager_integration.py",
+      "path": "tests/integration/test_registry_manager_integration.py",
+      "type": "file",
+      "sha": "528333465c7964b854541b2e0f34e45a6003b663",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 8371,
+      "is_binary": false
+    },
+    {
+      "name": "test_silver_to_gold_integration.py",
+      "path": "tests/integration/test_silver_to_gold_integration.py",
+      "type": "file",
+      "sha": "866e5e3fca72cd1d7005a06da26637b6f10b041f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 13298,
+      "is_binary": false
+    },
+    {
+      "name": "unit",
+      "path": "tests/unit",
+      "type": "directory",
+      "sha": "2bed2307f0bac114223d3c2679ea3cf48838e556",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "tests/unit/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_commits.py",
+      "path": "tests/unit/test_bronze_commits.py",
+      "type": "file",
+      "sha": "70b9887b44d9d792e66f5647a97f0de01e51635c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 21815,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_extract.py",
+      "path": "tests/unit/test_bronze_extract.py",
+      "type": "file",
+      "sha": "ac70d437ca378893357431adff53efd212a4b1b4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 16939,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_issues.py",
+      "path": "tests/unit/test_bronze_issues.py",
+      "type": "file",
+      "sha": "db98af5d976eb90726d49c5230d54be7c71953be",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 17713,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_members.py",
+      "path": "tests/unit/test_bronze_members.py",
+      "type": "file",
+      "sha": "859d5c12b0f08b5f83942c437f547927b0f7a0bf",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 13844,
+      "is_binary": false
+    },
+    {
+      "name": "test_bronze_repositories.py",
+      "path": "tests/unit/test_bronze_repositories.py",
+      "type": "file",
+      "sha": "b4525a6a949b70e0bd9d312a07d4bd602ed7e75c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12629,
+      "is_binary": false
+    },
+    {
+      "name": "test_cleanup_event_data.py",
+      "path": "tests/unit/test_cleanup_event_data.py",
+      "type": "file",
+      "sha": "8057aa65b252cbfb724686c29aa1a54ebd20ad65",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9751,
+      "is_binary": false
+    },
+    {
+      "name": "test_collaboration_networks.py",
+      "path": "tests/unit/test_collaboration_networks.py",
+      "type": "file",
+      "sha": "8950d2b80ebadc69d14806b5bf0625ac57cb0c19",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 18095,
+      "is_binary": false
+    },
+    {
+      "name": "test_contribution_metrics.py",
+      "path": "tests/unit/test_contribution_metrics.py",
+      "type": "file",
+      "sha": "ee00b1cd8c067180232ba730c3293a6a3d6cb896",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9366,
+      "is_binary": false
+    },
+    {
+      "name": "test_contribution_metrics_additional.py",
+      "path": "tests/unit/test_contribution_metrics_additional.py",
+      "type": "file",
+      "sha": "631d7619f98baf363dc156446fb789421654b4f4",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 7500,
+      "is_binary": false
+    },
+    {
+      "name": "test_data_helpers.py",
+      "path": "tests/unit/test_data_helpers.py",
+      "type": "file",
+      "sha": "5b77bc9bd4797e33090bc9ed5aa3476b13fe512b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1418,
+      "is_binary": false
+    },
+    {
+      "name": "test_fetch_issues.py",
+      "path": "tests/unit/test_fetch_issues.py",
+      "type": "file",
+      "sha": "e001bb95ba649af3c4935a5cfdb7a7b7ff9a7eec",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 12024,
+      "is_binary": false
+    },
+    {
+      "name": "test_file_language_analysis.py",
+      "path": "tests/unit/test_file_language_analysis.py",
+      "type": "file",
+      "sha": "7a0fcf440f01af1dd404b7c60333dd25e85c3cad",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15402,
+      "is_binary": false
+    },
+    {
+      "name": "test_generate_members_ai.py",
+      "path": "tests/unit/test_generate_members_ai.py",
+      "type": "file",
+      "sha": "c1e9e785165ff676edc59acb95358f6af32e136f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 31713,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_additional.py",
+      "path": "tests/unit/test_github_api_additional.py",
+      "type": "file",
+      "sha": "4581a54e85c0650dec97a6844734c2137a324c9e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15376,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_client.py",
+      "path": "tests/unit/test_github_api_client.py",
+      "type": "file",
+      "sha": "54b5e14a8019961a3996207b73d410cb4681ed6a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15576,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_comprehensive.py",
+      "path": "tests/unit/test_github_api_comprehensive.py",
+      "type": "file",
+      "sha": "acb0b54806e621405fd0edf2f725a720e35c30fe",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 14217,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_coverage.py",
+      "path": "tests/unit/test_github_api_coverage.py",
+      "type": "file",
+      "sha": "2efc001573d2800ff699c05495354f855d78faad",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15767,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_error_handling.py",
+      "path": "tests/unit/test_github_api_error_handling.py",
+      "type": "file",
+      "sha": "b80d6810e26c69a4b4b83f6b8643573a0318b87c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 8177,
+      "is_binary": false
+    },
+    {
+      "name": "test_github_api_utils.py",
+      "path": "tests/unit/test_github_api_utils.py",
+      "type": "file",
+      "sha": "68b88eac58cf6cbe33e5425d985e90f24571c737",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3324,
+      "is_binary": false
+    },
+    {
+      "name": "test_gold_process.py",
+      "path": "tests/unit/test_gold_process.py",
+      "type": "file",
+      "sha": "2309a7b94c567386bd35291aae6743a4d85bf28e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6219,
+      "is_binary": false
+    },
+    {
+      "name": "test_member_analytics.py",
+      "path": "tests/unit/test_member_analytics.py",
+      "type": "file",
+      "sha": "4c334ea147225cedbc3cddd20aa3a561c27d7b49",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9070,
+      "is_binary": false
+    },
+    {
+      "name": "test_members_statistics.py",
+      "path": "tests/unit/test_members_statistics.py",
+      "type": "file",
+      "sha": "24ef20f0efde0a391b0cb010c5581b0b1ef22b85",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 14101,
+      "is_binary": false
+    },
+    {
+      "name": "test_parse_github_date.py",
+      "path": "tests/unit/test_parse_github_date.py",
+      "type": "file",
+      "sha": "944de653d56effcc210d90f22b423959a6f19f31",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 658,
+      "is_binary": false
+    },
+    {
+      "name": "test_registry_manager.py",
+      "path": "tests/unit/test_registry_manager.py",
+      "type": "file",
+      "sha": "27e3d9dd1292c1dcf42f75733709678ab5505873",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 15721,
+      "is_binary": false
+    },
+    {
+      "name": "test_repository_structure.py",
+      "path": "tests/unit/test_repository_structure.py",
+      "type": "file",
+      "sha": "280b71fe3ca2a9a34c25676dded13f28880c8b0c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 9234,
+      "is_binary": false
+    },
+    {
+      "name": "test_save_json_data.py",
+      "path": "tests/unit/test_save_json_data.py",
+      "type": "file",
+      "sha": "1eb5996be37a886d4a834e1f2f093aeef9b8758a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 696,
+      "is_binary": false
+    },
+    {
+      "name": "test_silver_process.py",
+      "path": "tests/unit/test_silver_process.py",
+      "type": "file",
+      "sha": "5cba370cb9e02137b1e990327c58c4c4350a7404",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 8092,
+      "is_binary": false
+    },
+    {
+      "name": "test_split_time_range.py",
+      "path": "tests/unit/test_split_time_range.py",
+      "type": "file",
+      "sha": "d57ece6e7204cc83f0c511e27ed5c3b684e4d79b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 815,
+      "is_binary": false
+    },
+    {
+      "name": "test_temporal_analysis_daily_summary.py",
+      "path": "tests/unit/test_temporal_analysis_daily_summary.py",
+      "type": "file",
+      "sha": "01ce68db23036b3995231ec56449541b0c28a79b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 18711,
+      "is_binary": false
+    },
+    {
+      "name": "test_temporal_analysis_unit.py",
+      "path": "tests/unit/test_temporal_analysis_unit.py",
+      "type": "file",
+      "sha": "e6a1b46582286c814e34117a6657a0eaf937b344",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3285,
+      "is_binary": false
+    },
+    {
+      "name": "test_timeline_aggregation.py",
+      "path": "tests/unit/test_timeline_aggregation.py",
+      "type": "file",
+      "sha": "3ea59a28812ad9459d1cae659e744fe523d17de7",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 6356,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2026-08-27T17:03:23.220759",
+  "method": "rest",
+  "total_items": 245,
+  "repository_metadata": {
+    "id": 1347577891,
+    "full_name": "unb-mds/CoOps",
+    "description": "GitHub metrics medallion architecture ETL pipeline with dashboard",
+    "created_at": "2026-08-26T16:52:29Z",
+    "updated_at": "2026-08-26T16:52:29Z",
+    "language": null,
+    "size": 11977,
+    "stars": 0,
+    "forks": 0,
+    "open_issues": 0
+  }
+}
