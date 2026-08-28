@@ -2,19 +2,79 @@
   "repository": "G2-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-27T17:03:14.920084",
+  "analyzed_at": "2026-08-28T17:58:37.886442",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1,
-  "total_bytes": 69,
+  "total_files": 7,
+  "total_bytes": 1595,
   "languages": [
+    {
+      "language": "Unknown",
+      "file_count": 2,
+      "total_bytes": 913,
+      "percentage": 57.24,
+      "files": [
+        {
+          "path": "app/__pycache__/__init__.cpython-313.pyc",
+          "name": "__init__.cpython-313.pyc",
+          "size": 476,
+          "extension": ".pyc"
+        },
+        {
+          "path": "app/__pycache__/route.cpython-313.pyc",
+          "name": "route.cpython-313.pyc",
+          "size": 437,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 3,
+      "total_bytes": 379,
+      "percentage": 23.76,
+      "files": [
+        {
+          "path": "app/__init__.py",
+          "name": "__init__.py",
+          "size": 154,
+          "extension": ".py"
+        },
+        {
+          "path": "app/route.py",
+          "name": "route.py",
+          "size": 126,
+          "extension": ".py"
+        },
+        {
+          "path": "run.py",
+          "name": "run.py",
+          "size": 99,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 234,
+      "percentage": 14.67,
+      "files": [
+        {
+          "path": "requirements.txt",
+          "name": "requirements.txt",
+          "size": 234,
+          "extension": ".txt"
+        }
+      ]
+    },
     {
       "language": "Markdown",
       "file_count": 1,
       "total_bytes": 69,
-      "percentage": 100.0,
+      "percentage": 4.33,
       "files": [
         {
           "path": "README.md",
@@ -26,7 +86,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-27T17:11:24.022569",
+    "extracted_at": "2026-08-28T18:02:00.544783",
     "file_path": "data/silver/language_analysis_G2-2026-2.json"
   }
 }
