@@ -2,7 +2,7 @@
   "repository": "G7-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-08-28T17:58:41.399413",
+  "extracted_at": "2026-08-29T12:23:52.854362",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -16,17 +16,39 @@
         "path": ".gitignore"
       },
       {
+        "name": "CLAUDE.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2325,
+        "extension": ".md",
+        "path": "CLAUDE.md"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 2102,
+        "size": 2447,
         "extension": ".md",
         "path": "README.md"
       },
       {
-        "name": "avaliacoes",
+        "name": "backend",
         "type": "directory",
-        "path": "avaliacoes",
+        "path": "backend",
+        "children": []
+      },
+      {
+        "name": ".env.example",
+        "type": "file",
+        "language": "Unknown",
+        "size": 337,
+        "extension": ".example",
+        "path": "backend/.env.example"
+      },
+      {
+        "name": "app",
+        "type": "directory",
+        "path": "backend/app",
         "children": []
       },
       {
@@ -35,66 +57,12 @@
         "language": "Python",
         "size": 0,
         "extension": ".py",
-        "path": "avaliacoes/__init__.py"
-      },
-      {
-        "name": "admin.py",
-        "type": "file",
-        "language": "Python",
-        "size": 63,
-        "extension": ".py",
-        "path": "avaliacoes/admin.py"
-      },
-      {
-        "name": "apps.py",
-        "type": "file",
-        "language": "Python",
-        "size": 95,
-        "extension": ".py",
-        "path": "avaliacoes/apps.py"
-      },
-      {
-        "name": "migrations",
-        "type": "directory",
-        "path": "avaliacoes/migrations",
-        "children": []
-      },
-      {
-        "name": "__init__.py",
-        "type": "file",
-        "language": "Python",
-        "size": 0,
-        "extension": ".py",
-        "path": "avaliacoes/migrations/__init__.py"
-      },
-      {
-        "name": "models.py",
-        "type": "file",
-        "language": "Python",
-        "size": 57,
-        "extension": ".py",
-        "path": "avaliacoes/models.py"
-      },
-      {
-        "name": "tests.py",
-        "type": "file",
-        "language": "Python",
-        "size": 60,
-        "extension": ".py",
-        "path": "avaliacoes/tests.py"
-      },
-      {
-        "name": "views.py",
-        "type": "file",
-        "language": "Python",
-        "size": 63,
-        "extension": ".py",
-        "path": "avaliacoes/views.py"
+        "path": "backend/app/__init__.py"
       },
       {
         "name": "core",
         "type": "directory",
-        "path": "core",
+        "path": "backend/app/core",
         "children": []
       },
       {
@@ -103,74 +71,56 @@
         "language": "Python",
         "size": 0,
         "extension": ".py",
-        "path": "core/__init__.py"
+        "path": "backend/app/core/__init__.py"
       },
       {
-        "name": "asgi.py",
+        "name": "config.py",
         "type": "file",
         "language": "Python",
-        "size": 385,
+        "size": 165,
         "extension": ".py",
-        "path": "core/asgi.py"
+        "path": "backend/app/core/config.py"
       },
       {
-        "name": "settings.py",
-        "type": "file",
-        "language": "Python",
-        "size": 3443,
-        "extension": ".py",
-        "path": "core/settings.py"
-      },
-      {
-        "name": "urls.py",
-        "type": "file",
-        "language": "Python",
-        "size": 760,
-        "extension": ".py",
-        "path": "core/urls.py"
-      },
-      {
-        "name": "wsgi.py",
-        "type": "file",
-        "language": "Python",
-        "size": 385,
-        "extension": ".py",
-        "path": "core/wsgi.py"
-      },
-      {
-        "name": "integracao_sigaa",
+        "name": "db",
         "type": "directory",
-        "path": "integracao_sigaa",
+        "path": "backend/app/db",
         "children": []
       },
       {
         "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 0,
+        "size": 348,
         "extension": ".py",
-        "path": "integracao_sigaa/__init__.py"
+        "path": "backend/app/db/__init__.py"
       },
       {
-        "name": "admin.py",
+        "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 63,
+        "size": 229,
         "extension": ".py",
-        "path": "integracao_sigaa/admin.py"
+        "path": "backend/app/main.py"
       },
       {
-        "name": "apps.py",
-        "type": "file",
-        "language": "Python",
-        "size": 106,
-        "extension": ".py",
-        "path": "integracao_sigaa/apps.py"
-      },
-      {
-        "name": "migrations",
+        "name": "models",
         "type": "directory",
-        "path": "integracao_sigaa/migrations",
+        "path": "backend/app/models",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 275,
+        "extension": ".py",
+        "path": "backend/app/models/__init__.py"
+      },
+      {
+        "name": "routers",
+        "type": "directory",
+        "path": "backend/app/routers",
         "children": []
       },
       {
@@ -179,53 +129,127 @@
         "language": "Python",
         "size": 0,
         "extension": ".py",
-        "path": "integracao_sigaa/migrations/__init__.py"
+        "path": "backend/app/routers/__init__.py"
       },
       {
-        "name": "models.py",
+        "name": "avaliacoes.py",
         "type": "file",
         "language": "Python",
-        "size": 57,
+        "size": 460,
         "extension": ".py",
-        "path": "integracao_sigaa/models.py"
+        "path": "backend/app/routers/avaliacoes.py"
       },
       {
-        "name": "tests.py",
-        "type": "file",
-        "language": "Python",
-        "size": 60,
-        "extension": ".py",
-        "path": "integracao_sigaa/tests.py"
+        "name": "schemas",
+        "type": "directory",
+        "path": "backend/app/schemas",
+        "children": []
       },
       {
-        "name": "views.py",
+        "name": "__init__.py",
         "type": "file",
         "language": "Python",
-        "size": 63,
+        "size": 0,
         "extension": ".py",
-        "path": "integracao_sigaa/views.py"
+        "path": "backend/app/schemas/__init__.py"
       },
       {
-        "name": "manage.py",
+        "name": "avaliacao.py",
         "type": "file",
         "language": "Python",
-        "size": 660,
+        "size": 613,
         "extension": ".py",
-        "path": "manage.py"
+        "path": "backend/app/schemas/avaliacao.py"
+      },
+      {
+        "name": "services",
+        "type": "directory",
+        "path": "backend/app/services",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 239,
+        "extension": ".py",
+        "path": "backend/app/services/__init__.py"
       },
       {
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 176,
+        "size": 51,
         "extension": ".txt",
-        "path": "requirements.txt"
+        "path": "backend/requirements.txt"
       },
       {
         "name": "skills",
         "type": "directory",
         "path": "skills",
         "children": []
+      },
+      {
+        "name": "engineering",
+        "type": "directory",
+        "path": "skills/engineering",
+        "children": []
+      },
+      {
+        "name": "architecture",
+        "type": "directory",
+        "path": "skills/engineering/architecture",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 18871,
+        "extension": ".md",
+        "path": "skills/engineering/architecture/SKILL.md"
+      },
+      {
+        "name": "code-review",
+        "type": "directory",
+        "path": "skills/engineering/code-review",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 13450,
+        "extension": ".md",
+        "path": "skills/engineering/code-review/SKILL.md"
+      },
+      {
+        "name": "implementation",
+        "type": "directory",
+        "path": "skills/engineering/implementation",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 8857,
+        "extension": ".md",
+        "path": "skills/engineering/implementation/SKILL.md"
+      },
+      {
+        "name": "testing",
+        "type": "directory",
+        "path": "skills/engineering/testing",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 12300,
+        "extension": ".md",
+        "path": "skills/engineering/testing/SKILL.md"
       },
       {
         "name": "governance",
@@ -326,6 +350,20 @@
         "path": "skills/technology/docker/SKILL.md"
       },
       {
+        "name": "fastapi",
+        "type": "directory",
+        "path": "skills/technology/fastapi",
+        "children": []
+      },
+      {
+        "name": "SKILL.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 7438,
+        "extension": ".md",
+        "path": "skills/technology/fastapi/SKILL.md"
+      },
+      {
         "name": "sprints",
         "type": "directory",
         "path": "sprints",
@@ -344,79 +382,11 @@
         "size": 9458,
         "extension": ".md",
         "path": "sprints/spint00/git.md"
-      },
-      {
-        "name": "usuarios",
-        "type": "directory",
-        "path": "usuarios",
-        "children": []
-      },
-      {
-        "name": "__init__.py",
-        "type": "file",
-        "language": "Python",
-        "size": 0,
-        "extension": ".py",
-        "path": "usuarios/__init__.py"
-      },
-      {
-        "name": "admin.py",
-        "type": "file",
-        "language": "Python",
-        "size": 63,
-        "extension": ".py",
-        "path": "usuarios/admin.py"
-      },
-      {
-        "name": "apps.py",
-        "type": "file",
-        "language": "Python",
-        "size": 91,
-        "extension": ".py",
-        "path": "usuarios/apps.py"
-      },
-      {
-        "name": "migrations",
-        "type": "directory",
-        "path": "usuarios/migrations",
-        "children": []
-      },
-      {
-        "name": "__init__.py",
-        "type": "file",
-        "language": "Python",
-        "size": 0,
-        "extension": ".py",
-        "path": "usuarios/migrations/__init__.py"
-      },
-      {
-        "name": "models.py",
-        "type": "file",
-        "language": "Python",
-        "size": 57,
-        "extension": ".py",
-        "path": "usuarios/models.py"
-      },
-      {
-        "name": "tests.py",
-        "type": "file",
-        "language": "Python",
-        "size": 60,
-        "extension": ".py",
-        "path": "usuarios/tests.py"
-      },
-      {
-        "name": "views.py",
-        "type": "file",
-        "language": "Python",
-        "size": 63,
-        "extension": ".py",
-        "path": "usuarios/views.py"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-08-28T18:02:00.497385",
+    "extracted_at": "2026-08-29T12:27:07.524948",
     "file_path": "data/silver/hierarchy_G7-2026-2.json"
   }
 }

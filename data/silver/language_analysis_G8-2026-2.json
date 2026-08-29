@@ -2,19 +2,19 @@
   "repository": "G8-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-28T17:58:42.427480",
+  "analyzed_at": "2026-08-29T12:23:53.639145",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 3815,
-  "total_bytes": 98711746,
+  "total_files": 3795,
+  "total_bytes": 69104472,
   "languages": [
     {
       "language": "JavaScript",
-      "file_count": 2780,
-      "total_bytes": 41146410,
-      "percentage": 41.68,
+      "file_count": 2774,
+      "total_bytes": 38739599,
+      "percentage": 56.06,
       "files": [
         {
           "path": "node_modules/three/build/three.webgpu.js",
@@ -35,21 +35,9 @@
           "extension": ".js"
         },
         {
-          "path": "node_modules/.vite/deps/chunk-FMH4HZXN.js",
-          "name": "chunk-FMH4HZXN.js",
-          "size": 1251470,
-          "extension": ".js"
-        },
-        {
           "path": "node_modules/react-dom/cjs/react-dom-profiling.development.js",
           "name": "react-dom-profiling.development.js",
           "size": 1082082,
-          "extension": ".js"
-        },
-        {
-          "path": "dist/assets/index-D9WKF4g5.js",
-          "name": "index-D9WKF4g5.js",
-          "size": 1074212,
           "extension": ".js"
         },
         {
@@ -75,14 +63,26 @@
           "name": "node-entry.js",
           "size": 954000,
           "extension": ".js"
+        },
+        {
+          "path": "node_modules/rollup/dist/shared/rollup.js",
+          "name": "rollup.js",
+          "size": 953193,
+          "extension": ".js"
+        },
+        {
+          "path": "node_modules/three/examples/jsm/libs/draco/draco_encoder.js",
+          "name": "draco_encoder.js",
+          "size": 928718,
+          "extension": ".js"
         }
       ]
     },
     {
       "language": "Unknown",
-      "file_count": 554,
-      "total_bytes": 21092282,
-      "percentage": 21.37,
+      "file_count": 547,
+      "total_bytes": 14597937,
+      "percentage": 21.12,
       "files": [
         {
           "path": "node_modules/three/examples/jsm/libs/rhino3dm/rhino3dm.wasm",
@@ -91,27 +91,9 @@
           "extension": ".wasm"
         },
         {
-          "path": "node_modules/.vite/deps/chunk-FMH4HZXN.js.map",
-          "name": "chunk-FMH4HZXN.js.map",
-          "size": 2218627,
-          "extension": ".map"
-        },
-        {
-          "path": "node_modules/@rollup/rollup-linux-x64-musl/rollup.linux-x64-musl.node",
-          "name": "rollup.linux-x64-musl.node",
-          "size": 2134768,
-          "extension": ".node"
-        },
-        {
-          "path": "node_modules/@rollup/rollup-linux-x64-gnu/rollup.linux-x64-gnu.node",
-          "name": "rollup.linux-x64-gnu.node",
-          "size": 2096344,
-          "extension": ".node"
-        },
-        {
           "path": "node_modules/.vite/deps/react-dom_client.js.map",
           "name": "react-dom_client.js.map",
-          "size": 1540547,
+          "size": 1596865,
           "extension": ".map"
         },
         {
@@ -129,7 +111,7 @@
         {
           "path": "node_modules/.vite/deps/@react-three_fiber.js.map",
           "name": "@react-three_fiber.js.map",
-          "size": 1053384,
+          "size": 1087080,
           "extension": ".map"
         },
         {
@@ -143,74 +125,24 @@
           "name": "basis_transcoder.wasm",
           "size": 527333,
           "extension": ".wasm"
-        }
-      ]
-    },
-    {
-      "language": "No Extension",
-      "file_count": 86,
-      "total_bytes": 20909713,
-      "percentage": 21.18,
-      "files": [
-        {
-          "path": "node_modules/@esbuild/linux-x64/bin/esbuild",
-          "name": "esbuild",
-          "size": 10358936,
-          "extension": ""
         },
         {
-          "path": "node_modules/esbuild/bin/esbuild",
-          "name": "esbuild",
-          "size": 10358936,
-          "extension": ""
+          "path": "node_modules/csstype/index.js.flow",
+          "name": "index.js.flow",
+          "size": 344546,
+          "extension": ".flow"
         },
         {
-          "path": "node_modules/rollup/dist/bin/rollup",
-          "name": "rollup",
-          "size": 82112,
-          "extension": ""
+          "path": "node_modules/@babel/types/lib/validators/generated/index.js.map",
+          "name": "index.js.map",
+          "size": 290238,
+          "extension": ".map"
         },
         {
-          "path": "node_modules/caniuse-lite/LICENSE",
-          "name": "LICENSE",
-          "size": 18651,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/three/examples/fonts/droid/NOTICE",
-          "name": "NOTICE",
-          "size": 10695,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/jsesc/bin/jsesc",
-          "name": "jsesc",
-          "size": 3833,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/three/examples/fonts/LICENSE",
-          "name": "LICENSE",
-          "size": 2006,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/source-map-js/LICENSE",
-          "name": "LICENSE",
-          "size": 1526,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/ieee754/LICENSE",
-          "name": "LICENSE",
-          "size": 1465,
-          "extension": ""
-        },
-        {
-          "path": "node_modules/@rolldown/pluginutils/LICENSE",
-          "name": "LICENSE",
-          "size": 1302,
-          "extension": ""
+          "path": "node_modules/three/examples/jsm/libs/draco/draco_decoder.wasm",
+          "name": "draco_decoder.wasm",
+          "size": 285747,
+          "extension": ".wasm"
         }
       ]
     },
@@ -218,7 +150,7 @@
       "language": "MP4 Video",
       "file_count": 2,
       "total_bytes": 5374376,
-      "percentage": 5.44,
+      "percentage": 7.78,
       "files": [
         {
           "path": "dist/video.mp4",
@@ -236,9 +168,9 @@
     },
     {
       "language": "JSON",
-      "file_count": 120,
-      "total_bytes": 3936018,
-      "percentage": 3.99,
+      "file_count": 117,
+      "total_bytes": 3934683,
+      "percentage": 5.69,
       "files": [
         {
           "path": "node_modules/three/examples/fonts/gentilis_bold.typeface.json",
@@ -306,7 +238,7 @@
       "language": "TypeScript",
       "file_count": 168,
       "total_bytes": 3005140,
-      "percentage": 3.04,
+      "percentage": 4.35,
       "files": [
         {
           "path": "node_modules/csstype/index.d.ts",
@@ -374,7 +306,7 @@
       "language": "WebM Video",
       "file_count": 2,
       "total_bytes": 2615452,
-      "percentage": 2.65,
+      "percentage": 3.78,
       "files": [
         {
           "path": "dist/video.webm",
@@ -392,9 +324,9 @@
     },
     {
       "language": "Markdown",
-      "file_count": 94,
-      "total_bytes": 591758,
-      "percentage": 0.6,
+      "file_count": 91,
+      "total_bytes": 591425,
+      "percentage": 0.86,
       "files": [
         {
           "path": "node_modules/vite/LICENSE.md",
@@ -459,16 +391,110 @@
       ]
     },
     {
+      "language": "No Extension",
+      "file_count": 85,
+      "total_bytes": 205245,
+      "percentage": 0.3,
+      "files": [
+        {
+          "path": "node_modules/rollup/dist/bin/rollup",
+          "name": "rollup",
+          "size": 82112,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/caniuse-lite/LICENSE",
+          "name": "LICENSE",
+          "size": 18651,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/NOTICE",
+          "name": "NOTICE",
+          "size": 10695,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/esbuild/bin/esbuild",
+          "name": "esbuild",
+          "size": 9351,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/jsesc/bin/jsesc",
+          "name": "jsesc",
+          "size": 3833,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/three/examples/fonts/LICENSE",
+          "name": "LICENSE",
+          "size": 2006,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/source-map-js/LICENSE",
+          "name": "LICENSE",
+          "size": 1526,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/ieee754/LICENSE",
+          "name": "LICENSE",
+          "size": 1465,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/@rolldown/pluginutils/LICENSE",
+          "name": "LICENSE",
+          "size": 1302,
+          "extension": ""
+        },
+        {
+          "path": "node_modules/@babel/helpers/LICENSE",
+          "name": "LICENSE",
+          "size": 1189,
+          "extension": ""
+        }
+      ]
+    },
+    {
       "language": "TrueType Font",
       "file_count": 1,
       "total_bytes": 18068,
-      "percentage": 0.02,
+      "percentage": 0.03,
       "files": [
         {
           "path": "node_modules/three/examples/fonts/ttf/kenpixel.ttf",
           "name": "kenpixel.ttf",
           "size": 18068,
           "extension": ".ttf"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 3,
+      "total_bytes": 13126,
+      "percentage": 0.02,
+      "files": [
+        {
+          "path": "node_modules/baseline-browser-mapping/LICENSE.txt",
+          "name": "LICENSE.txt",
+          "size": 11357,
+          "extension": ".txt"
+        },
+        {
+          "path": "node_modules/jsesc/LICENSE-MIT.txt",
+          "name": "LICENSE-MIT.txt",
+          "size": 1077,
+          "extension": ".txt"
+        },
+        {
+          "path": "node_modules/three/examples/fonts/droid/README.txt",
+          "name": "README.txt",
+          "size": 692,
+          "extension": ".txt"
         }
       ]
     },
@@ -493,32 +519,6 @@
       ]
     },
     {
-      "language": "Text",
-      "file_count": 3,
-      "total_bytes": 13126,
-      "percentage": 0.01,
-      "files": [
-        {
-          "path": "node_modules/baseline-browser-mapping/LICENSE.txt",
-          "name": "LICENSE.txt",
-          "size": 11357,
-          "extension": ".txt"
-        },
-        {
-          "path": "node_modules/jsesc/LICENSE-MIT.txt",
-          "name": "LICENSE-MIT.txt",
-          "size": 1077,
-          "extension": ".txt"
-        },
-        {
-          "path": "node_modules/three/examples/fonts/droid/README.txt",
-          "name": "README.txt",
-          "size": 692,
-          "extension": ".txt"
-        }
-      ]
-    },
-    {
       "language": "Git Ignore",
       "file_count": 1,
       "total_bytes": 17,
@@ -535,13 +535,13 @@
     {
       "language": "HTML",
       "file_count": 2,
-      "total_bytes": 1502,
+      "total_bytes": 1520,
       "percentage": 0.0,
       "files": [
         {
           "path": "dist/index.html",
           "name": "index.html",
-          "size": 763,
+          "size": 781,
           "extension": ".html"
         },
         {
@@ -554,7 +554,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-28T18:02:01.950149",
+    "extracted_at": "2026-08-29T12:27:08.961284",
     "file_path": "data/silver/language_analysis_G8-2026-2.json"
   }
 }

@@ -2,24 +2,42 @@
   "repository": "G7-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-28T17:58:41.399413",
+  "analyzed_at": "2026-08-29T12:23:52.854362",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 38,
-  "total_bytes": 60060,
+  "total_files": 29,
+  "total_bytes": 119533,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 9,
-      "total_bytes": 53175,
-      "percentage": 88.54,
+      "file_count": 15,
+      "total_bytes": 116761,
+      "percentage": 97.68,
       "files": [
+        {
+          "path": "skills/engineering/architecture/SKILL.md",
+          "name": "SKILL.md",
+          "size": 18871,
+          "extension": ".md"
+        },
+        {
+          "path": "skills/engineering/code-review/SKILL.md",
+          "name": "SKILL.md",
+          "size": 13450,
+          "extension": ".md"
+        },
         {
           "path": "skills/governance/skill-authoring/SKILL.md",
           "name": "SKILL.md",
           "size": 13338,
+          "extension": ".md"
+        },
+        {
+          "path": "skills/engineering/testing/SKILL.md",
+          "name": "SKILL.md",
+          "size": 12300,
           "extension": ".md"
         },
         {
@@ -35,9 +53,21 @@
           "extension": ".md"
         },
         {
+          "path": "skills/engineering/implementation/SKILL.md",
+          "name": "SKILL.md",
+          "size": 8857,
+          "extension": ".md"
+        },
+        {
           "path": "skills/technology/docker/SKILL.md",
           "name": "SKILL.md",
           "size": 7657,
+          "extension": ".md"
+        },
+        {
+          "path": "skills/technology/fastapi/SKILL.md",
+          "name": "SKILL.md",
+          "size": 7438,
           "extension": ".md"
         },
         {
@@ -45,112 +75,88 @@
           "name": "HUMAN_APPROVAL_BOUNDARIES.md",
           "size": 3559,
           "extension": ".md"
-        },
-        {
-          "path": "skills/governance/skill-authoring/references/VALIDATION_CHECKLIST.md",
-          "name": "VALIDATION_CHECKLIST.md",
-          "size": 2332,
-          "extension": ".md"
-        },
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 2102,
-          "extension": ".md"
-        },
-        {
-          "path": "skills/governance/skill-authoring/references/SKILL_TEMPLATE.md",
-          "name": "SKILL_TEMPLATE.md",
-          "size": 1678,
-          "extension": ".md"
-        },
-        {
-          "path": "skills/governance/skill-authoring/references/LIFECYCLE.md",
-          "name": "LIFECYCLE.md",
-          "size": 1534,
-          "extension": ".md"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 27,
-      "total_bytes": 6654,
-      "percentage": 11.08,
+      "file_count": 11,
+      "total_bytes": 2329,
+      "percentage": 1.95,
       "files": [
         {
-          "path": "core/settings.py",
-          "name": "settings.py",
-          "size": 3443,
+          "path": "backend/app/schemas/avaliacao.py",
+          "name": "avaliacao.py",
+          "size": 613,
           "extension": ".py"
         },
         {
-          "path": "core/urls.py",
-          "name": "urls.py",
-          "size": 760,
+          "path": "backend/app/routers/avaliacoes.py",
+          "name": "avaliacoes.py",
+          "size": 460,
           "extension": ".py"
         },
         {
-          "path": "manage.py",
-          "name": "manage.py",
-          "size": 660,
+          "path": "backend/app/db/__init__.py",
+          "name": "__init__.py",
+          "size": 348,
           "extension": ".py"
         },
         {
-          "path": "core/asgi.py",
-          "name": "asgi.py",
-          "size": 385,
+          "path": "backend/app/models/__init__.py",
+          "name": "__init__.py",
+          "size": 275,
           "extension": ".py"
         },
         {
-          "path": "core/wsgi.py",
-          "name": "wsgi.py",
-          "size": 385,
+          "path": "backend/app/services/__init__.py",
+          "name": "__init__.py",
+          "size": 239,
           "extension": ".py"
         },
         {
-          "path": "integracao_sigaa/apps.py",
-          "name": "apps.py",
-          "size": 106,
+          "path": "backend/app/main.py",
+          "name": "main.py",
+          "size": 229,
           "extension": ".py"
         },
         {
-          "path": "avaliacoes/apps.py",
-          "name": "apps.py",
-          "size": 95,
+          "path": "backend/app/core/config.py",
+          "name": "config.py",
+          "size": 165,
           "extension": ".py"
         },
         {
-          "path": "usuarios/apps.py",
-          "name": "apps.py",
-          "size": 91,
+          "path": "backend/app/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
           "extension": ".py"
         },
         {
-          "path": "avaliacoes/admin.py",
-          "name": "admin.py",
-          "size": 63,
+          "path": "backend/app/core/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
           "extension": ".py"
         },
         {
-          "path": "avaliacoes/views.py",
-          "name": "views.py",
-          "size": 63,
+          "path": "backend/app/routers/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
           "extension": ".py"
         }
       ]
     },
     {
-      "language": "Text",
+      "language": "Unknown",
       "file_count": 1,
-      "total_bytes": 176,
-      "percentage": 0.29,
+      "total_bytes": 337,
+      "percentage": 0.28,
       "files": [
         {
-          "path": "requirements.txt",
-          "name": "requirements.txt",
-          "size": 176,
-          "extension": ".txt"
+          "path": "backend/.env.example",
+          "name": ".env.example",
+          "size": 337,
+          "extension": ".example"
         }
       ]
     },
@@ -158,7 +164,7 @@
       "language": "Git Ignore",
       "file_count": 1,
       "total_bytes": 55,
-      "percentage": 0.09,
+      "percentage": 0.05,
       "files": [
         {
           "path": ".gitignore",
@@ -167,10 +173,24 @@
           "extension": ".gitignore"
         }
       ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 51,
+      "percentage": 0.04,
+      "files": [
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 51,
+          "extension": ".txt"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-28T18:02:00.496837",
+    "extracted_at": "2026-08-29T12:27:07.524384",
     "file_path": "data/silver/language_analysis_G7-2026-2.json"
   }
 }
