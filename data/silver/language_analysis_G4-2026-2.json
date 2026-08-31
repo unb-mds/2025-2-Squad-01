@@ -2,40 +2,26 @@
   "repository": "G4-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-30T11:05:33.139865",
+  "analyzed_at": "2026-08-31T12:16:40.543296",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
   "total_files": 11,
-  "total_bytes": 2096,
+  "total_bytes": 3562,
   "languages": [
-    {
-      "language": "YAML",
-      "file_count": 2,
-      "total_bytes": 1518,
-      "percentage": 72.42,
-      "files": [
-        {
-          "path": ".github/workflows/deploy-docs.yml",
-          "name": "deploy-docs.yml",
-          "size": 1001,
-          "extension": ".yml"
-        },
-        {
-          "path": "mkdocs.yml",
-          "name": "mkdocs.yml",
-          "size": 517,
-          "extension": ".yml"
-        }
-      ]
-    },
     {
       "language": "Markdown",
       "file_count": 9,
-      "total_bytes": 578,
-      "percentage": 27.58,
+      "total_bytes": 2044,
+      "percentage": 57.38,
       "files": [
+        {
+          "path": "docs/Estudos/sprint00/Requisitos_software.md",
+          "name": "Requisitos_software.md",
+          "size": 1466,
+          "extension": ".md"
+        },
         {
           "path": "docs/index.md",
           "name": "index.md",
@@ -57,12 +43,6 @@
         {
           "path": "docs/Estudos/sprint00/Cyber_Security.md",
           "name": "Cyber_Security.md",
-          "size": 0,
-          "extension": ".md"
-        },
-        {
-          "path": "docs/Estudos/sprint00/Requisitos_software.md",
-          "name": "Requisitos_software.md",
           "size": 0,
           "extension": ".md"
         },
@@ -91,10 +71,30 @@
           "extension": ".md"
         }
       ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 2,
+      "total_bytes": 1518,
+      "percentage": 42.62,
+      "files": [
+        {
+          "path": ".github/workflows/deploy-docs.yml",
+          "name": "deploy-docs.yml",
+          "size": 1001,
+          "extension": ".yml"
+        },
+        {
+          "path": "mkdocs.yml",
+          "name": "mkdocs.yml",
+          "size": 517,
+          "extension": ".yml"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-30T11:08:46.142438",
+    "extracted_at": "2026-08-31T12:19:48.063537",
     "file_path": "data/silver/language_analysis_G4-2026-2.json"
   }
 }

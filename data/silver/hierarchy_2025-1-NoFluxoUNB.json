@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-08-30T11:05:11.303777",
+  "extracted_at": "2026-08-31T12:16:06.498179",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -222,6 +222,78 @@
         "path": ".pylintrc"
       },
       {
+        "name": ".svelte-kit",
+        "type": "directory",
+        "path": ".svelte-kit",
+        "children": []
+      },
+      {
+        "name": "ambient.d.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 11511,
+        "extension": ".ts",
+        "path": ".svelte-kit/ambient.d.ts"
+      },
+      {
+        "name": "generated",
+        "type": "directory",
+        "path": ".svelte-kit/generated",
+        "children": []
+      },
+      {
+        "name": "client",
+        "type": "directory",
+        "path": ".svelte-kit/generated/client",
+        "children": []
+      },
+      {
+        "name": "app.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 670,
+        "extension": ".js",
+        "path": ".svelte-kit/generated/client/app.js"
+      },
+      {
+        "name": "matchers.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 27,
+        "extension": ".js",
+        "path": ".svelte-kit/generated/client/matchers.js"
+      },
+      {
+        "name": "nodes",
+        "type": "directory",
+        "path": ".svelte-kit/generated/client/nodes",
+        "children": []
+      },
+      {
+        "name": "0.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 149,
+        "extension": ".js",
+        "path": ".svelte-kit/generated/client/nodes/0.js"
+      },
+      {
+        "name": "1.js",
+        "type": "file",
+        "language": "JavaScript",
+        "size": 148,
+        "extension": ".js",
+        "path": ".svelte-kit/generated/client/nodes/1.js"
+      },
+      {
+        "name": "tsconfig.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 920,
+        "extension": ".json",
+        "path": ".svelte-kit/tsconfig.json"
+      },
+      {
         "name": ".vscode",
         "type": "directory",
         "path": ".vscode",
@@ -297,7 +369,7 @@
         "name": "01_insert_cursos_matrizes_materias.py",
         "type": "file",
         "language": "Python",
-        "size": 31494,
+        "size": 31690,
         "extension": ".py",
         "path": "DBA/database/01_insert_cursos_matrizes_materias.py"
       },
@@ -3242,6 +3314,14 @@
         "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql"
       },
       {
+        "name": "preferencias_grade.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 863,
+        "extension": ".sql",
+        "path": "no_fluxo_backend/docs/supabase_migrations/preferencias_grade.sql"
+      },
+      {
         "name": "generate-ssl.bat",
         "type": "file",
         "language": "Batch",
@@ -3551,7 +3631,7 @@
         "name": "PlanejamentoController.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 35859,
+        "size": 46961,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/PlanejamentoController.ts"
       },
@@ -3651,7 +3731,7 @@
         "name": "system_prompt.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14386,
+        "size": 14542,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/services/agente/system_prompt.ts"
       },
@@ -3730,10 +3810,18 @@
         "path": "no_fluxo_backend/src/services/chat/actuators/integralizacao_actuator.ts"
       },
       {
+        "name": "modulo_livre_actuator.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 14966,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/src/services/chat/actuators/modulo_livre_actuator.ts"
+      },
+      {
         "name": "optativas_actuator.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 9044,
+        "size": 13471,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/services/chat/actuators/optativas_actuator.ts"
       },
@@ -3757,7 +3845,7 @@
         "name": "orquestrador_agent.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 5908,
+        "size": 9084,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/services/chat/orquestrador_agent.ts"
       },
@@ -3913,7 +4001,7 @@
         "name": "text.utils.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 793,
+        "size": 792,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/utils/text.utils.ts"
       },
@@ -4114,6 +4202,14 @@
         "path": "no_fluxo_backend/tests-ts/materias_controller.test.ts"
       },
       {
+        "name": "modulo-livre-actuator.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 9938,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/tests-ts/modulo-livre-actuator.test.ts"
+      },
+      {
         "name": "motor2-v2.test.ts",
         "type": "file",
         "language": "TypeScript",
@@ -4133,7 +4229,7 @@
         "name": "optativas-ja-cursadas.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 8136,
+        "size": 14343,
         "extension": ".ts",
         "path": "no_fluxo_backend/tests-ts/optativas-ja-cursadas.test.ts"
       },
@@ -4141,7 +4237,7 @@
         "name": "orquestrador-fase2.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14729,
+        "size": 16668,
         "extension": ".ts",
         "path": "no_fluxo_backend/tests-ts/orquestrador-fase2.test.ts"
       },
@@ -4289,7 +4385,7 @@
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 374,
+        "size": 382,
         "extension": ".gitignore",
         "path": "no_fluxo_frontend_svelte/.gitignore"
       },
@@ -4345,7 +4441,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 366007,
+        "size": 364871,
         "extension": ".json",
         "path": "no_fluxo_frontend_svelte/package-lock.json"
       },
@@ -4396,6 +4492,22 @@
         "path": "no_fluxo_frontend_svelte/scripts/copy-pdf-worker.cjs"
       },
       {
+        "name": "shot-grade.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2095,
+        "extension": ".mjs",
+        "path": "no_fluxo_frontend_svelte/scripts/shot-grade.mjs"
+      },
+      {
+        "name": "verificar-grade-mobile.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 8347,
+        "extension": ".mjs",
+        "path": "no_fluxo_frontend_svelte/scripts/verificar-grade-mobile.mjs"
+      },
+      {
         "name": "src",
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/src",
@@ -4421,7 +4533,7 @@
         "name": "app.html",
         "type": "file",
         "language": "HTML",
-        "size": 1089,
+        "size": 1109,
         "extension": ".html",
         "path": "no_fluxo_frontend_svelte/src/app.html"
       },
@@ -4585,7 +4697,7 @@
         "name": "ChatPanel.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 19786,
+        "size": 22858,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/chat/ChatPanel.svelte"
       },
@@ -4640,198 +4752,6 @@
         "children": []
       },
       {
-        "name": "CargaHorariaDashboard.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 10232,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/CargaHorariaDashboard.svelte"
-      },
-      {
-        "name": "CourseCard.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 2923,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/CourseCard.svelte"
-      },
-      {
-        "name": "FluxogramContainer.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 10065,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramContainer.svelte"
-      },
-      {
-        "name": "FluxogramViewMenu.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 3318,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramViewMenu.svelte"
-      },
-      {
-        "name": "FluxogramViewportChrome.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 24765,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramViewportChrome.svelte"
-      },
-      {
-        "name": "FluxogramaHeader.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 12200,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramaHeader.svelte"
-      },
-      {
-        "name": "FluxogramaLegendControls.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 4782,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/FluxogramaLegendControls.svelte"
-      },
-      {
-        "name": "IntegralizacaoSection.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 1623,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/IntegralizacaoSection.svelte"
-      },
-      {
-        "name": "MateriasConcluidasModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 17377,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/MateriasConcluidasModal.svelte"
-      },
-      {
-        "name": "MudancaCursoLauncher.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 1369,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/MudancaCursoLauncher.svelte"
-      },
-      {
-        "name": "MudancaCursoModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 9175,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/MudancaCursoModal.svelte"
-      },
-      {
-        "name": "OptativaTipoModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 6288,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/OptativaTipoModal.svelte"
-      },
-      {
-        "name": "OptativasAdicionadasSection.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 6565,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/OptativasAdicionadasSection.svelte"
-      },
-      {
-        "name": "OptativasModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 7659,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/OptativasModal.svelte"
-      },
-      {
-        "name": "PrerequisiteChainDialog.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 16435,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteChainDialog.svelte"
-      },
-      {
-        "name": "PrerequisiteConnections.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 32481,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/PrerequisiteConnections.svelte"
-      },
-      {
-        "name": "ProgressSummaryBar.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 3460,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/ProgressSummaryBar.svelte"
-      },
-      {
-        "name": "ProgressSummarySection.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 11128,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/ProgressSummarySection.svelte"
-      },
-      {
-        "name": "ProgressToolsSection.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 1501,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/ProgressToolsSection.svelte"
-      },
-      {
-        "name": "RequisitosMudancaCursoBanner.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 6471,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/RequisitosMudancaCursoBanner.svelte"
-      },
-      {
-        "name": "ScreenshotChoiceModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 3584,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/ScreenshotChoiceModal.svelte"
-      },
-      {
-        "name": "SemesterColumn.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 5048,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SemesterColumn.svelte"
-      },
-      {
-        "name": "SubjectCard.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 11836,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectCard.svelte"
-      },
-      {
-        "name": "SubjectDetailsModal.svelte",
-        "type": "file",
-        "language": "Unknown",
-        "size": 20673,
-        "extension": ".svelte",
-        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectDetailsModal.svelte"
-      },
-      {
         "name": "SubjectSearch.stories.ts",
         "type": "file",
         "language": "TypeScript",
@@ -4846,6 +4766,244 @@
         "size": 3032,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/SubjectSearch.test.ts"
+      },
+      {
+        "name": "cards",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/cards",
+        "children": []
+      },
+      {
+        "name": "CourseCard.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2923,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/cards/CourseCard.svelte"
+      },
+      {
+        "name": "SubjectCard.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 15058,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/cards/SubjectCard.svelte"
+      },
+      {
+        "name": "controls",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls",
+        "children": []
+      },
+      {
+        "name": "FluxogramViewMenu.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5449,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/FluxogramViewMenu.svelte"
+      },
+      {
+        "name": "FluxogramaHeader.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 12268,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/FluxogramaHeader.svelte"
+      },
+      {
+        "name": "FluxogramaLegendControls.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5332,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/FluxogramaLegendControls.svelte"
+      },
+      {
+        "name": "MobileFilterNotice.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 2062,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/MobileFilterNotice.svelte"
+      },
+      {
+        "name": "MudancaCursoLauncher.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1400,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/MudancaCursoLauncher.svelte"
+      },
+      {
+        "name": "RequisitosMudancaCursoBanner.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6471,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/controls/RequisitosMudancaCursoBanner.svelte"
+      },
+      {
+        "name": "dashboard",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard",
+        "children": []
+      },
+      {
+        "name": "CargaHorariaDashboard.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 10232,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/CargaHorariaDashboard.svelte"
+      },
+      {
+        "name": "IntegralizacaoSection.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1658,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/IntegralizacaoSection.svelte"
+      },
+      {
+        "name": "OptativasAdicionadasSection.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6661,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/OptativasAdicionadasSection.svelte"
+      },
+      {
+        "name": "ProgressSummaryBar.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3460,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/ProgressSummaryBar.svelte"
+      },
+      {
+        "name": "ProgressSummarySection.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 11163,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/ProgressSummarySection.svelte"
+      },
+      {
+        "name": "ProgressToolsSection.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1532,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/dashboard/ProgressToolsSection.svelte"
+      },
+      {
+        "name": "layout",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout",
+        "children": []
+      },
+      {
+        "name": "FluxogramContainer.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 13569,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout/FluxogramContainer.svelte"
+      },
+      {
+        "name": "FluxogramViewportChrome.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 31955,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout/FluxogramViewportChrome.svelte"
+      },
+      {
+        "name": "PrerequisiteConnections.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 31023,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout/PrerequisiteConnections.svelte"
+      },
+      {
+        "name": "SemesterColumn.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7185,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout/SemesterColumn.svelte"
+      },
+      {
+        "name": "SemesterNavChips.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4975,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/layout/SemesterNavChips.svelte"
+      },
+      {
+        "name": "modal",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal",
+        "children": []
+      },
+      {
+        "name": "ManualStatusEditor.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 6293,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/ManualStatusEditor.svelte"
+      },
+      {
+        "name": "MateriasConcluidasModal.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 18596,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/MateriasConcluidasModal.svelte"
+      },
+      {
+        "name": "MudancaCursoModal.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 9175,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/MudancaCursoModal.svelte"
+      },
+      {
+        "name": "PrerequisiteChainDialog.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 17390,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/PrerequisiteChainDialog.svelte"
+      },
+      {
+        "name": "ScreenshotChoiceModal.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3584,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/ScreenshotChoiceModal.svelte"
+      },
+      {
+        "name": "SubjectClassesTab.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 3136,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/SubjectClassesTab.svelte"
+      },
+      {
+        "name": "SubjectDetailsModal.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 19036,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/fluxograma/modal/SubjectDetailsModal.svelte"
       },
       {
         "name": "forms",
@@ -4927,7 +5085,7 @@
         "name": "SobreNosSection.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 19053,
+        "size": 19390,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/home/SobreNosSection.svelte"
       },
@@ -5011,7 +5169,7 @@
         "name": "Navbar.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 6921,
+        "size": 7101,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/Navbar.svelte"
       },
@@ -5022,6 +5180,22 @@
         "size": 697,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/PageLoading.svelte"
+      },
+      {
+        "name": "PageTransition.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7103,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/layout/PageTransition.svelte"
+      },
+      {
+        "name": "ReleaseNotesModal.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7466,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/layout/ReleaseNotesModal.svelte"
       },
       {
         "name": "Sidebar.svelte",
@@ -5057,7 +5231,7 @@
         "name": "MobileDrawer.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 6491,
+        "size": 6804,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/navbar/MobileDrawer.svelte"
       },
@@ -5081,9 +5255,31 @@
         "name": "nav-config.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2687,
+        "size": 2494,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/components/layout/navbar/nav-config.ts"
+      },
+      {
+        "name": "materia",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/materia",
+        "children": []
+      },
+      {
+        "name": "MateriaNaturezaBadge.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1566,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/materia/MateriaNaturezaBadge.svelte"
+      },
+      {
+        "name": "SeguirVagaButton.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 1603,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/materia/SeguirVagaButton.svelte"
       },
       {
         "name": "onboarding",
@@ -5125,7 +5321,7 @@
         "name": "AssistenteChatFab.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 6774,
+        "size": 8015,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/AssistenteChatFab.svelte"
       },
@@ -5141,7 +5337,7 @@
         "name": "GradeResumo.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 3258,
+        "size": 3402,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/GradeResumo.svelte"
       },
@@ -5149,23 +5345,47 @@
         "name": "MateriaSearchAdd.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 2574,
+        "size": 4203,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/MateriaSearchAdd.svelte"
+      },
+      {
+        "name": "MontadorGradeView.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 45601,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/MontadorGradeView.svelte"
+      },
+      {
+        "name": "PreRequisitoConfirmDialog.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4967,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/PreRequisitoConfirmDialog.svelte"
       },
       {
         "name": "ScheduleGrid.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 17872,
+        "size": 18075,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/ScheduleGrid.svelte"
+      },
+      {
+        "name": "SituacaoPanel.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 12241,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/SituacaoPanel.svelte"
       },
       {
         "name": "SubjectTurmaSelector.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 8245,
+        "size": 11532,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/SubjectTurmaSelector.svelte"
       },
@@ -5181,7 +5401,7 @@
         "name": "TurmaOption.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 4835,
+        "size": 3629,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/planejamento/TurmaOption.svelte"
       },
@@ -5203,7 +5423,7 @@
         "name": "OnboardingModal.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 9647,
+        "size": 11280,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/OnboardingModal.svelte"
       },
@@ -5227,7 +5447,7 @@
         "name": "PlannerSvelteFlow.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 11940,
+        "size": 13398,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/PlannerSvelteFlow.svelte"
       },
@@ -5235,7 +5455,7 @@
         "name": "PlanoFormaturaView.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 26737,
+        "size": 27494,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/plano-formatura/PlanoFormaturaView.svelte"
       },
@@ -6079,7 +6299,7 @@
         "name": "CourseSelectionModal.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 5929,
+        "size": 6951,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/upload/CourseSelectionModal.svelte"
       },
@@ -6119,7 +6339,7 @@
         "name": "ProcessingResults.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 7082,
+        "size": 7092,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/lib/components/upload/ProcessingResults.svelte"
       },
@@ -6154,6 +6374,14 @@
         "children": []
       },
       {
+        "name": "release.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2711,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/config/release.ts"
+      },
+      {
         "name": "routes.ts",
         "type": "file",
         "language": "TypeScript",
@@ -6168,10 +6396,18 @@
         "children": []
       },
       {
+        "name": "equivalencias-pdf.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3531,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/factories/equivalencias-pdf.test.ts"
+      },
+      {
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 29470,
+        "size": 33328,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/factories/index.ts"
       },
@@ -6334,6 +6570,62 @@
         "path": "no_fluxo_frontend_svelte/src/lib/services/fluxograma.service.ts"
       },
       {
+        "name": "grade-pool.candidatosDaMatriz.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3550,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.candidatosDaMatriz.test.ts"
+      },
+      {
+        "name": "grade-pool.escolherAteOLimite.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3626,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.escolherAteOLimite.test.ts"
+      },
+      {
+        "name": "grade-pool.moduloLivre.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6633,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.moduloLivre.test.ts"
+      },
+      {
+        "name": "grade-pool.montarPoolRecomendado.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 8569,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.montarPoolRecomendado.test.ts"
+      },
+      {
+        "name": "grade-pool.pendenciaPreRequisito.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6802,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.pendenciaPreRequisito.test.ts"
+      },
+      {
+        "name": "grade-pool.saldo.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 11753,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.saldo.test.ts"
+      },
+      {
+        "name": "grade-pool.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 34506,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/grade-pool.service.ts"
+      },
+      {
         "name": "integralizacao.service.ts",
         "type": "file",
         "language": "TypeScript",
@@ -6348,6 +6640,30 @@
         "size": 2297,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/materias.service.ts"
+      },
+      {
+        "name": "modulo-livre.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2153,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/modulo-livre.service.ts"
+      },
+      {
+        "name": "montador-aluno318.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 17594,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/montador-aluno318.test.ts"
+      },
+      {
+        "name": "montador-dados-reais.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 28506,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/montador-dados-reais.test.ts"
       },
       {
         "name": "mudanca-curso-requisitos.service.ts",
@@ -6399,7 +6715,7 @@
         "name": "pdfParser.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14258,
+        "size": 15725,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/pdf/pdfParser.ts"
       },
@@ -6418,6 +6734,30 @@
         "size": 3704,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/plano-formatura.service.ts"
+      },
+      {
+        "name": "preferencias-grade.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1307,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/preferencias-grade.service.ts"
+      },
+      {
+        "name": "situacao-academica.service.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4981,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/situacao-academica.service.ts"
+      },
+      {
+        "name": "situacao-academica.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6379,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/services/situacao-academica.test.ts"
       },
       {
         "name": "supabase-data.service.ts",
@@ -6493,7 +6833,7 @@
         "name": "assistente-chat.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 4327,
+        "size": 5218,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/assistente-chat.store.svelte.ts"
       },
@@ -6517,9 +6857,25 @@
         "name": "fluxograma.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 23441,
+        "size": 36516,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/fluxograma.store.svelte.ts"
+      },
+      {
+        "name": "grade.store.ajustarParaLimite.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4443,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.ajustarParaLimite.test.ts"
+      },
+      {
+        "name": "grade.store.cursandoReal.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6780,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.cursandoReal.test.ts"
       },
       {
         "name": "grade.store.freeMask.test.ts",
@@ -6530,12 +6886,76 @@
         "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.freeMask.test.ts"
       },
       {
+        "name": "grade.store.incluirCursando.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6022,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.incluirCursando.test.ts"
+      },
+      {
+        "name": "grade.store.limiteCreditos.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5193,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.limiteCreditos.test.ts"
+      },
+      {
+        "name": "grade.store.limparTudo.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4107,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.limparTudo.test.ts"
+      },
+      {
+        "name": "grade.store.montagemVazia.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5033,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.montagemVazia.test.ts"
+      },
+      {
+        "name": "grade.store.montarAutomatico.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3220,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.montarAutomatico.test.ts"
+      },
+      {
+        "name": "grade.store.pesoDaNatureza.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6165,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.pesoDaNatureza.test.ts"
+      },
+      {
+        "name": "grade.store.prioridadeNatureza.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 14966,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.prioridadeNatureza.test.ts"
+      },
+      {
         "name": "grade.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 22128,
+        "size": 39875,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.svelte.ts"
+      },
+      {
+        "name": "grade.store.travar.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 5181,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/grade.store.travar.test.ts"
       },
       {
         "name": "modal.ts",
@@ -6554,10 +6974,18 @@
         "path": "no_fluxo_frontend_svelte/src/lib/stores/navigation.ts"
       },
       {
+        "name": "plano-formatura.limiteCreditos.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4356,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/plano-formatura.limiteCreditos.test.ts"
+      },
+      {
         "name": "plano-formatura.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 9937,
+        "size": 12240,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/plano-formatura.store.svelte.ts"
       },
@@ -6570,10 +6998,18 @@
         "path": "no_fluxo_frontend_svelte/src/lib/stores/theme.ts"
       },
       {
+        "name": "unidade-carga.store.svelte.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2019,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/unidade-carga.store.svelte.ts"
+      },
+      {
         "name": "uploadStore.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 11727,
+        "size": 13512,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/uploadStore.ts"
       },
@@ -6581,7 +7017,7 @@
         "name": "vaga-assinaturas.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2572,
+        "size": 3024,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/vaga-assinaturas.store.svelte.ts"
       },
@@ -6606,10 +7042,18 @@
         "children": []
       },
       {
+        "name": "client.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2403,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/supabase/client.test.ts"
+      },
+      {
         "name": "client.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1793,
+        "size": 3177,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/supabase/client.ts"
       },
@@ -6669,7 +7113,7 @@
         "name": "equivalencia.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2829,
+        "size": 5214,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/equivalencia.test.ts"
       },
@@ -6677,7 +7121,7 @@
         "name": "equivalencia.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6409,
+        "size": 8624,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/equivalencia.ts"
       },
@@ -6706,10 +7150,18 @@
         "path": "no_fluxo_frontend_svelte/src/lib/types/index.ts"
       },
       {
+        "name": "materia.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1302,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/types/materia.test.ts"
+      },
+      {
         "name": "materia.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 5376,
+        "size": 6105,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/materia.ts"
       },
@@ -6733,7 +7185,7 @@
         "name": "plano-formatura.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 7866,
+        "size": 9752,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/plano-formatura.ts"
       },
@@ -6757,7 +7209,7 @@
         "name": "user.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6974,
+        "size": 8095,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/user.ts"
       },
@@ -6803,7 +7255,7 @@
         "name": "curriculum-graph.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3134,
+        "size": 4929,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/curriculum-graph.test.ts"
       },
@@ -6811,7 +7263,7 @@
         "name": "curriculum-graph.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 13263,
+        "size": 15102,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/curriculum-graph.ts"
       },
@@ -6859,15 +7311,23 @@
         "name": "fluxogram-viewport.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 416,
+        "size": 767,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/fluxogram-viewport.ts"
+      },
+      {
+        "name": "horario-slots.orcamento.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2736,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/horario-slots.orcamento.test.ts"
       },
       {
         "name": "horario-slots.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 10075,
+        "size": 3844,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/horario-slots.test.ts"
       },
@@ -6875,7 +7335,7 @@
         "name": "horario-slots.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 11180,
+        "size": 15864,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/horario-slots.ts"
       },
@@ -6931,7 +7391,7 @@
         "name": "screenshot.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3572,
+        "size": 4388,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/screenshot.ts"
       },
@@ -6939,7 +7399,7 @@
         "name": "sigaa.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1377,
+        "size": 1877,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/sigaa.test.ts"
       },
@@ -6947,7 +7407,7 @@
         "name": "sigaa.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 4413,
+        "size": 4819,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/sigaa.ts"
       },
@@ -6974,6 +7434,22 @@
         "size": 1408,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/utils/toast.ts"
+      },
+      {
+        "name": "turmas-reais.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4770,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/turmas-reais.test.ts"
+      },
+      {
+        "name": "turmas-reais.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2512,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/turmas-reais.ts"
       },
       {
         "name": "routes",
@@ -7073,7 +7549,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 26283,
+        "size": 20547,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/grade/+page.svelte"
       },
@@ -7087,7 +7563,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 8998,
+        "size": 11055,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/planejamento/turmas/+page.svelte"
       },
@@ -7101,7 +7577,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 2190,
+        "size": 2652,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/plano-formatura/+page.svelte"
       },
@@ -7129,7 +7605,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 5674,
+        "size": 7502,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/upload-historico/+page.svelte"
       },
@@ -7145,7 +7621,7 @@
         "name": "+layout.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 4238,
+        "size": 4593,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/+layout.svelte"
       },
@@ -7242,6 +7718,20 @@
         "children": []
       },
       {
+        "name": "grade-mobile",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/routes/dev/grade-mobile",
+        "children": []
+      },
+      {
+        "name": "+page.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 5704,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/routes/dev/grade-mobile/+page.svelte"
+      },
+      {
         "name": "impersonar",
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/src/routes/dev/impersonar",
@@ -7262,6 +7752,28 @@
         "size": 202,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/dev/impersonar/+page.ts"
+      },
+      {
+        "name": "planner-toque",
+        "type": "directory",
+        "path": "no_fluxo_frontend_svelte/src/routes/dev/planner-toque",
+        "children": []
+      },
+      {
+        "name": "+page.svelte",
+        "type": "file",
+        "language": "Unknown",
+        "size": 4430,
+        "extension": ".svelte",
+        "path": "no_fluxo_frontend_svelte/src/routes/dev/planner-toque/+page.svelte"
+      },
+      {
+        "name": "+page.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 202,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/routes/dev/planner-toque/+page.ts"
       },
       {
         "name": "disciplinas",
@@ -7287,7 +7799,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 10648,
+        "size": 10654,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/fluxogramas/+page.svelte"
       },
@@ -7365,7 +7877,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 15849,
+        "size": 17258,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/+page.svelte"
       },
@@ -7387,7 +7899,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 21694,
+        "size": 23407,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/meu-fluxograma/[courseName]/+page.svelte"
       },
@@ -7630,6 +8142,14 @@
         "path": "no_fluxo_frontend_svelte/tests-e2e/assistente-ia.exploratorio.spec.ts"
       },
       {
+        "name": "auditoria-montador.spec.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 7365,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/tests-e2e/auditoria-montador.spec.ts"
+      },
+      {
         "name": "busca-filtro.exploratorio.spec.ts",
         "type": "file",
         "language": "TypeScript",
@@ -7654,6 +8174,22 @@
         "path": "no_fluxo_frontend_svelte/tests-e2e/login-auth.exploratorio.spec.ts"
       },
       {
+        "name": "montador-escolha-manual.spec.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 4948,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/tests-e2e/montador-escolha-manual.spec.ts"
+      },
+      {
+        "name": "repro-limpar-grade-mobile.spec.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 6422,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/tests-e2e/repro-limpar-grade-mobile.spec.ts"
+      },
+      {
         "name": "upload-historico.exploratorio.spec.ts",
         "type": "file",
         "language": "TypeScript",
@@ -7668,6 +8204,14 @@
         "size": 305,
         "extension": ".json",
         "path": "no_fluxo_frontend_svelte/tsconfig.json"
+      },
+      {
+        "name": "verificar-toque.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 7063,
+        "extension": ".mjs",
+        "path": "no_fluxo_frontend_svelte/verificar-toque.mjs"
       },
       {
         "name": "vite.config.ts",
@@ -8444,6 +8988,14 @@
         "children": []
       },
       {
+        "name": "audit_aproveitamento.mjs",
+        "type": "file",
+        "language": "Unknown",
+        "size": 15495,
+        "extension": ".mjs",
+        "path": "scripts/audit_aproveitamento.mjs"
+      },
+      {
         "name": "deploy",
         "type": "directory",
         "path": "scripts/deploy",
@@ -8860,6 +9412,14 @@
         "path": "test_historicos/historicos/historico_231014508-5_250711_141618.pdf"
       },
       {
+        "name": "historico_231026330-7.pdf",
+        "type": "file",
+        "language": "PDF",
+        "size": 31196,
+        "extension": ".pdf",
+        "path": "test_historicos/historicos/historico_231026330-7.pdf"
+      },
+      {
         "name": "historico_231026330.pdf",
         "type": "file",
         "language": "PDF",
@@ -9028,7 +9588,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-08-30T11:08:46.695918",
+    "extracted_at": "2026-08-31T12:19:48.474418",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }
