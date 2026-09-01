@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-08-31T11:11:56.318569",
+      "extracted_at": "2026-09-01T09:38:59.507405",
       "file_path": "data/bronze/prs_2025-1-NoFluxoUNB.json",
       "record_count": 51
     }
@@ -3534,14 +3534,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-18T21:32:36Z",
-    "updated_at": "2026-03-18T21:32:36Z",
-    "closed_at": null,
+    "updated_at": "2026-08-31T15:44:39Z",
+    "closed_at": "2026-08-31T15:44:39Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -3556,7 +3556,27 @@
       "merged_at": null
     },
     "body": "## 📌 Descrição\n\nImplementação completa de otimizações de SEO em todas as páginas públicas da aplicação. As páginas agora são pré-renderizadas com SSR habilitado, gerando HTML estático com meta tags, dados estruturados JSON-LD, sitemap atualizado e configuração de robots.txt aprimorada.\n\n## ✅ Tipo de Mudança\n\n- [x] Nova funcionalidade\n- [x] Refatoração\n\n## 🔍 Detalhes das Mudanças\n\n**SEO Meta Tags:**\n- PageMeta component em todas as páginas públicas (login, signup, password-recovery, login-anonimo, termos, privacidade)\n- Meta tags: title, description, canonical URL, OG (Open Graph), Twitter Cards\n\n**Dados Estruturados (JSON-LD):**\n- Home: WebSite schema + EducationalOrganization (UnB)\n- Fluxogramas/Disciplinas: BreadcrumbList schema\n\n**Prerendering & SSR:**\n- Habilitado SSR + prerender para páginas públicas\n- HTML estático com conteúdo completo gerado em build time\n- Stub gracioso para Supabase durante SSR com env vars faltando\n\n**Sitemap & Robots:**\n- Sitemap.xml atualizado com domínio correto (nofluxo.unb.br)\n- Todos os 9 routes públicos inclusos\n- robots.txt com Allow/Disallow rules apropriadas\n\n**Infraestrutura:**\n- Fallback page alterado de index.html → 200.html\n- Nginx config atualizado para SPA routing com prerendered pages\n- svelte.config.js com explicit prerender.entries\n\n## 🔗 Issue Relacionada\n\nCloses #",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/107/reactions",
       "total_count": 0,
@@ -3607,14 +3627,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-03-18T15:42:48Z",
-    "updated_at": "2026-03-19T02:40:31Z",
-    "closed_at": null,
+    "updated_at": "2026-08-31T15:44:51Z",
+    "closed_at": "2026-08-31T15:44:51Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -3629,7 +3649,27 @@
       "merged_at": null
     },
     "body": "## 📌 Descrição\n\nReduz o tempo de build do backend de ~10-12 minutos para ~3-5 minutos removendo emulação QEMU de arm64 em GitHub Actions, otimizando .dockerignore, e eliminando overhead de testes redundantes.\n\n**Mudanças:**\n- Remove QEMU e arm64 dos deploys no GitHub Actions (runners são amd64)\n- Expande .dockerignore para excluir diretórios não relacionados (mcp_agent, DBA, plans, docs, supabase, .github)\n- Remove Node 18 da matrix de testes (produção usa Node 20)\n- Remove execução duplicada de testes\n\n## ✅ Tipo de Mudança\n\n- [x] Otimização de build/CI\n- [ ] Correção de bug\n- [ ] Nova funcionalidade\n- [ ] Refatoração\n\n## 🔍 Checklist\n\n- [x] Build local (deploy_local.py) mantém multi-arch para Macs\n- [x] CI build reduz a apenas linux/amd64 para melhor performance\n- [x] .dockerignore mantém .dockerignore para ambos os contextos\n- [x] PR revisada e pronta para merge",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/106/reactions",
       "total_count": 0,
