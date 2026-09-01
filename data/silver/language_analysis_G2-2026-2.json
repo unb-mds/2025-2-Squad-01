@@ -2,19 +2,33 @@
   "repository": "G2-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-08-31T12:16:38.966604",
+  "analyzed_at": "2026-09-01T10:39:25.043163",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 7,
-  "total_bytes": 1595,
+  "total_files": 8,
+  "total_bytes": 2933,
   "languages": [
+    {
+      "language": "Markdown",
+      "file_count": 1,
+      "total_bytes": 1300,
+      "percentage": 44.32,
+      "files": [
+        {
+          "path": "README.md",
+          "name": "README.md",
+          "size": 1300,
+          "extension": ".md"
+        }
+      ]
+    },
     {
       "language": "Unknown",
       "file_count": 2,
       "total_bytes": 913,
-      "percentage": 57.24,
+      "percentage": 31.13,
       "files": [
         {
           "path": "app/__pycache__/__init__.cpython-313.pyc",
@@ -32,9 +46,9 @@
     },
     {
       "language": "Python",
-      "file_count": 3,
-      "total_bytes": 379,
-      "percentage": 23.76,
+      "file_count": 4,
+      "total_bytes": 486,
+      "percentage": 16.57,
       "files": [
         {
           "path": "app/__init__.py",
@@ -49,6 +63,12 @@
           "extension": ".py"
         },
         {
+          "path": "app/models/professor.py",
+          "name": "professor.py",
+          "size": 107,
+          "extension": ".py"
+        },
+        {
           "path": "run.py",
           "name": "run.py",
           "size": 99,
@@ -60,7 +80,7 @@
       "language": "Text",
       "file_count": 1,
       "total_bytes": 234,
-      "percentage": 14.67,
+      "percentage": 7.98,
       "files": [
         {
           "path": "requirements.txt",
@@ -69,24 +89,10 @@
           "extension": ".txt"
         }
       ]
-    },
-    {
-      "language": "Markdown",
-      "file_count": 1,
-      "total_bytes": 69,
-      "percentage": 4.33,
-      "files": [
-        {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 69,
-          "extension": ".md"
-        }
-      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-08-31T12:19:48.849247",
+    "extracted_at": "2026-09-01T10:42:51.467844",
     "file_path": "data/silver/language_analysis_G2-2026-2.json"
   }
 }
