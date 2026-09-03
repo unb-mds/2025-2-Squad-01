@@ -2,31 +2,161 @@
   "repository": "G5-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-02T10:16:15.224055",
+  "analyzed_at": "2026-09-03T10:16:19.583323",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1,
-  "total_bytes": 69,
+  "total_files": 12,
+  "total_bytes": 177517,
   "languages": [
+    {
+      "language": "Lock File",
+      "file_count": 1,
+      "total_bytes": 173338,
+      "percentage": 97.65,
+      "files": [
+        {
+          "path": "apps/api/uv.lock",
+          "name": "uv.lock",
+          "size": 173338,
+          "extension": ".lock"
+        }
+      ]
+    },
     {
       "language": "Markdown",
       "file_count": 1,
-      "total_bytes": 69,
-      "percentage": 100.0,
+      "total_bytes": 1650,
+      "percentage": 0.93,
       "files": [
         {
           "path": "README.md",
           "name": "README.md",
-          "size": 69,
+          "size": 1650,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 1,
+      "total_bytes": 1068,
+      "percentage": 0.6,
+      "files": [
+        {
+          "path": "LICENSE",
+          "name": "LICENSE",
+          "size": 1068,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "TOML",
+      "file_count": 1,
+      "total_bytes": 559,
+      "percentage": 0.31,
+      "files": [
+        {
+          "path": "apps/api/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 559,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 1,
+      "total_bytes": 363,
+      "percentage": 0.2,
+      "files": [
+        {
+          "path": "compose.yml",
+          "name": "compose.yml",
+          "size": 363,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 2,
+      "total_bytes": 233,
+      "percentage": 0.13,
+      "files": [
+        {
+          "path": "apps/api/src/main.py",
+          "name": "main.py",
+          "size": 233,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 2,
+      "total_bytes": 213,
+      "percentage": 0.12,
+      "files": [
+        {
+          "path": ".claude/settings.json",
+          "name": "settings.json",
+          "size": 123,
+          "extension": ".json"
+        },
+        {
+          "path": ".vscode/settings.json",
+          "name": "settings.json",
+          "size": 90,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 2,
+      "total_bytes": 69,
+      "percentage": 0.04,
+      "files": [
+        {
+          "path": "apps/api/.env.example",
+          "name": ".env.example",
+          "size": 64,
+          "extension": ".example"
+        },
+        {
+          "path": "apps/api/.python-version",
+          "name": ".python-version",
+          "size": 5,
+          "extension": ".python-version"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 24,
+      "percentage": 0.01,
+      "files": [
+        {
+          "path": "apps/api/.gitignore",
+          "name": ".gitignore",
+          "size": 24,
+          "extension": ".gitignore"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-02T10:19:35.440697",
+    "extracted_at": "2026-09-03T10:19:39.811839",
     "file_path": "data/silver/language_analysis_G5-2026-2.json"
   }
 }
