@@ -1,0 +1,92 @@
+[
+  {
+    "_metadata": {
+      "extracted_at": "2026-09-04T09:10:18.725004",
+      "file_path": "data/bronze/prs_G9-2026-2.json",
+      "record_count": 1
+    }
+  },
+  {
+    "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5",
+    "repository_url": "https://api.github.com/repos/unb-mds/G9-2026-2",
+    "labels_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5/labels{/name}",
+    "comments_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5/comments",
+    "events_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5/events",
+    "html_url": "https://github.com/unb-mds/G9-2026-2/pull/5",
+    "id": 5342754713,
+    "node_id": "PR_kwDOT8Wh9M8AAAABCIbrVA",
+    "number": 5,
+    "title": "Docs/estrutura inicial",
+    "user": {
+      "login": "LuisGuilherme67",
+      "id": 119859574,
+      "node_id": "U_kgDOByTpdg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119859574?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/LuisGuilherme67",
+      "html_url": "https://github.com/LuisGuilherme67",
+      "followers_url": "https://api.github.com/users/LuisGuilherme67/followers",
+      "following_url": "https://api.github.com/users/LuisGuilherme67/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LuisGuilherme67/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/LuisGuilherme67/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LuisGuilherme67/subscriptions",
+      "organizations_url": "https://api.github.com/users/LuisGuilherme67/orgs",
+      "repos_url": "https://api.github.com/users/LuisGuilherme67/repos",
+      "events_url": "https://api.github.com/users/LuisGuilherme67/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/LuisGuilherme67/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 11874450869,
+        "node_id": "LA_kwDOT8Wh9M8AAAACw8W9tQ",
+        "url": "https://api.github.com/repos/unb-mds/G9-2026-2/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-09-04T00:20:05Z",
+    "updated_at": "2026-09-04T00:23:23Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "COLLABORATOR",
+    "issue_field_values": [],
+    "type": null,
+    "active_lock_reason": null,
+    "draft": false,
+    "pull_request": {
+      "url": "https://api.github.com/repos/unb-mds/G9-2026-2/pulls/5",
+      "html_url": "https://github.com/unb-mds/G9-2026-2/pull/5",
+      "diff_url": "https://github.com/unb-mds/G9-2026-2/pull/5.diff",
+      "patch_url": "https://github.com/unb-mds/G9-2026-2/pull/5.patch",
+      "merged_at": null
+    },
+    "body": "## 📌 Descrição\r\n\r\nEste Pull Request inicializa a estrutura oficial de documentação do **Tamburetei UnB** utilizando **MkDocs**, além de configurar a **Skill de IA** (`tamburetei-dev`) para padronizar o desenvolvimento assistido por agentes no repositório.\r\n\r\nAs páginas foram elaboradas e sincronizadas diretamente com o `PROJECT_CONTEXT.md` e os critérios da disciplina de Métodos de Desenvolvimento de Software (MDS 2026/2 — FCTE/UnB).\r\n\r\n---\r\n\r\n## 🎯 Tipo de Mudança\r\n\r\n- [x] 📖 Documentação (alterações ou adições na documentação)\r\n- [x] ⚙️ Configuração / Infraestrutura de documentação (MkDocs e Skills)\r\n- [ ] ✨ Nova funcionalidade (não quebra compatibilidade)\r\n- [ ] 🐛 Correção de bug\r\n\r\n---\r\n\r\n## 📝 O que foi adicionado / alterado?\r\n\r\n1. **Configuração do MkDocs (`mkdocs.yml`):**\r\n   - Configuração do tema *Read the Docs* com suporte a syntax highlighting.\r\n   - Atualização do repositório oficial para `unb-mds/G9-2026-2`.\r\n   - Navegação estruturada em 5 seções principais.\r\n\r\n2. **Páginas de Documentação (`docs/`):**\r\n   - `index.md`: Visão geral do Tamburetei UnB, cronograma de Releases (R1 e R2) e apresentação dos três pilares (Métricas DPO, Hub de Cadeiras e Crowdsourcing *\"Já cursei\"*).\r\n   - `requisitos.md`: Especificação detalhada dos perfis de atores, 15 Requisitos Funcionais ([RF01] a [RF15]), 7 Requisitos Não-Funcionais ([RNF01] a [RNF07]) e matriz de rastreabilidade.\r\n   - `arquitetura.md`: Arquitetura em camadas do backend FastAPI, diagrama conceitual DER (Mermaid), modelo relacional (PostgreSQL 17) e Decisões de Arquitetura (ADRs 01 a 03).\r\n   - `regras_negocio.md`: Consolidação das 8 regras de negócio ([RN01] a [RN08]) com foco em Privacy by Design, anonimato discente, proteção a docentes e critérios de qualidade de MDS.\r\n   - `desenvolvimento.md`: Guia de inicialização com Docker, migrações com Alembic, testes automatizados e convenções de branches/commits do Git.\r\n\r\n3. **Skill para Agentes de IA (`.gemini/skills/` e `skills/`):**\r\n   - Criação da skill `tamburetei-dev` contendo instruções invioláveis de arquitetura (Clean Architecture, sem Redis/NoSQL, Database-as-Code e LGPD) para guiar o Antigravity e outros assistentes.\r\n\r\n---\r\n\r\n## 🧪 Como Testar e Validar\r\n\r\n1. Certifique-se de estar com a branch atualizada:\r\n   ```bash\r\n   git checkout docs/estrutura-inicial\r\n   git pull origin docs/estrutura-inicial",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/5/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "repo_name": "G9-2026-2"
+  }
+]
