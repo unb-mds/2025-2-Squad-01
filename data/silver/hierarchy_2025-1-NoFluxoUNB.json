@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-09-03T10:15:55.062336",
+  "extracted_at": "2026-09-04T10:08:45.394150",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -335,7 +335,7 @@
         "name": "CONTRIBUTING.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3460,
+        "size": 5792,
         "extension": ".md",
         "path": "CONTRIBUTING.md"
       },
@@ -369,7 +369,7 @@
         "name": "01_insert_cursos_matrizes_materias.py",
         "type": "file",
         "language": "Python",
-        "size": 31690,
+        "size": 39688,
         "extension": ".py",
         "path": "DBA/database/01_insert_cursos_matrizes_materias.py"
       },
@@ -377,7 +377,7 @@
         "name": "02_insert_pre_requisitos_equivalencias.py",
         "type": "file",
         "language": "Python",
-        "size": 16594,
+        "size": 16665,
         "extension": ".py",
         "path": "DBA/database/02_insert_pre_requisitos_equivalencias.py"
       },
@@ -385,7 +385,7 @@
         "name": "03_insert_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 8265,
+        "size": 8336,
         "extension": ".py",
         "path": "DBA/database/03_insert_turmas.py"
       },
@@ -393,7 +393,7 @@
         "name": "04_reconciliar_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 4195,
+        "size": 4266,
         "extension": ".py",
         "path": "DBA/database/04_reconciliar_turmas.py"
       },
@@ -401,7 +401,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5703,
+        "size": 6483,
         "extension": ".md",
         "path": "DBA/database/README.md"
       },
@@ -414,12 +414,36 @@
         "path": "DBA/database/config.py"
       },
       {
+        "name": "diff_utils.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2417,
+        "extension": ".py",
+        "path": "DBA/database/diff_utils.py"
+      },
+      {
         "name": "expressao_parser.py",
         "type": "file",
         "language": "Python",
         "size": 5241,
         "extension": ".py",
         "path": "DBA/database/expressao_parser.py"
+      },
+      {
+        "name": "requirements.txt",
+        "type": "file",
+        "language": "Text",
+        "size": 116,
+        "extension": ".txt",
+        "path": "DBA/database/requirements.txt"
+      },
+      {
+        "name": "test_diff_campos.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6839,
+        "extension": ".py",
+        "path": "DBA/database/test_diff_campos.py"
       },
       {
         "name": "package-lock.json",
@@ -1067,7 +1091,7 @@
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
-        "size": 5375,
+        "size": 5832,
         "extension": ".md",
         "path": "README.md"
       },
@@ -1116,14 +1140,6 @@
         "size": 51119,
         "extension": ".jpeg",
         "path": "assets/diagrama.jpeg"
-      },
-      {
-        "name": "supabase.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 68327,
-        "extension": ".png",
-        "path": "assets/supabase.png"
       },
       {
         "name": "codecov.yml",
@@ -1305,7 +1321,7 @@
         "name": "estrategia-de-testes.md",
         "type": "file",
         "language": "Markdown",
-        "size": 3090,
+        "size": 3052,
         "extension": ".md",
         "path": "docs/testes/estrategia-de-testes.md"
       },
@@ -2274,20 +2290,6 @@
         "path": "documentacao/atas/DD-MM-AA (template)"
       },
       {
-        "name": "banco de dados",
-        "type": "directory",
-        "path": "documentacao/banco de dados",
-        "children": []
-      },
-      {
-        "name": "bd.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 6586,
-        "extension": ".md",
-        "path": "documentacao/banco de dados/bd.md"
-      },
-      {
         "name": "estudos",
         "type": "directory",
         "path": "documentacao/estudos",
@@ -2508,34 +2510,6 @@
         "path": "documentacao/estudos/Vercel/Vercel.md"
       },
       {
-        "name": "identidade visual",
-        "type": "directory",
-        "path": "documentacao/identidade visual",
-        "children": []
-      },
-      {
-        "name": "idv.md",
-        "type": "file",
-        "language": "Markdown",
-        "size": 3126,
-        "extension": ".md",
-        "path": "documentacao/identidade visual/idv.md"
-      },
-      {
-        "name": "imgid",
-        "type": "directory",
-        "path": "documentacao/identidade visual/imgid",
-        "children": []
-      },
-      {
-        "name": "idvpt98.png",
-        "type": "file",
-        "language": "PNG Image",
-        "size": 1185850,
-        "extension": ".png",
-        "path": "documentacao/identidade visual/imgid/idvpt98.png"
-      },
-      {
         "name": "img",
         "type": "directory",
         "path": "documentacao/img",
@@ -2728,6 +2702,76 @@
         "size": 5140,
         "extension": ".md",
         "path": "documentacao/story map/miro.md"
+      },
+      {
+        "name": "testes",
+        "type": "directory",
+        "path": "documentacao/testes",
+        "children": []
+      },
+      {
+        "name": "cobertura-metricas.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3371,
+        "extension": ".md",
+        "path": "documentacao/testes/cobertura-metricas.md"
+      },
+      {
+        "name": "estrategia-de-testes.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4766,
+        "extension": ".md",
+        "path": "documentacao/testes/estrategia-de-testes.md"
+      },
+      {
+        "name": "index.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4604,
+        "extension": ".md",
+        "path": "documentacao/testes/index.md"
+      },
+      {
+        "name": "pipeline-ci.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 3372,
+        "extension": ".md",
+        "path": "documentacao/testes/pipeline-ci.md"
+      },
+      {
+        "name": "testes-backend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5713,
+        "extension": ".md",
+        "path": "documentacao/testes/testes-backend.md"
+      },
+      {
+        "name": "testes-exploratorios.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4280,
+        "extension": ".md",
+        "path": "documentacao/testes/testes-exploratorios.md"
+      },
+      {
+        "name": "testes-frontend.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 5464,
+        "extension": ".md",
+        "path": "documentacao/testes/testes-frontend.md"
+      },
+      {
+        "name": "testes-python.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 4170,
+        "extension": ".md",
+        "path": "documentacao/testes/testes-python.md"
       },
       {
         "name": "handoff.md",
@@ -3179,7 +3223,7 @@
         "name": "mkdocs.yml",
         "type": "file",
         "language": "YAML",
-        "size": 2502,
+        "size": 2828,
         "extension": ".yml",
         "path": "mkdocs.yml"
       },
@@ -3543,7 +3587,7 @@
         "name": "install-all.js",
         "type": "file",
         "language": "JavaScript",
-        "size": 1885,
+        "size": 2066,
         "extension": ".js",
         "path": "no_fluxo_backend/scripts/install-all.js"
       },
@@ -3622,6 +3666,14 @@
         "path": "no_fluxo_backend/src/config/maritaca.ts"
       },
       {
+        "name": "maritaca_errors.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2401,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/src/config/maritaca_errors.ts"
+      },
+      {
         "name": "controllers",
         "type": "directory",
         "path": "no_fluxo_backend/src/controllers",
@@ -3631,7 +3683,7 @@
         "name": "PlanejamentoController.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 47500,
+        "size": 47831,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/PlanejamentoController.ts"
       },
@@ -3639,7 +3691,7 @@
         "name": "assistente_controller.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 17839,
+        "size": 18154,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/assistente_controller.ts"
       },
@@ -3647,7 +3699,7 @@
         "name": "chat_controller.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6313,
+        "size": 6631,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/chat_controller.ts"
       },
@@ -3877,7 +3929,7 @@
         "name": "planejador_agente.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 10761,
+        "size": 11179,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/services/planejador_agente.service.ts"
       },
@@ -4192,6 +4244,14 @@
         "size": 1790,
         "extension": ".ts",
         "path": "no_fluxo_backend/tests-ts/horario-slots-backend.test.ts"
+      },
+      {
+        "name": "maritaca-errors.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2513,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/tests-ts/maritaca-errors.test.ts"
       },
       {
         "name": "materias_controller.test.ts",
@@ -6822,6 +6882,14 @@
         "children": []
       },
       {
+        "name": "assistente-chat-store-erros.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2031,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/stores/assistente-chat-store-erros.test.ts"
+      },
+      {
         "name": "assistente-chat-store-montador.test.ts",
         "type": "file",
         "language": "TypeScript",
@@ -6833,7 +6901,7 @@
         "name": "assistente-chat.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 5218,
+        "size": 5314,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/assistente-chat.store.svelte.ts"
       },
@@ -6985,7 +7053,7 @@
         "name": "plano-formatura.store.svelte.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 12240,
+        "size": 12527,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/stores/plano-formatura.store.svelte.ts"
       },
@@ -7226,6 +7294,22 @@
         "type": "directory",
         "path": "no_fluxo_frontend_svelte/src/lib/utils",
         "children": []
+      },
+      {
+        "name": "ai-errors.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1468,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/ai-errors.test.ts"
+      },
+      {
+        "name": "ai-errors.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 1530,
+        "extension": ".ts",
+        "path": "no_fluxo_frontend_svelte/src/lib/utils/ai-errors.ts"
       },
       {
         "name": "api.ts",
@@ -8257,7 +8341,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 1534,
+        "size": 1670,
         "extension": ".json",
         "path": "package.json"
       },
@@ -8511,7 +8595,7 @@
         "name": "pnpm-workspace.yaml",
         "type": "file",
         "language": "YAML",
-        "size": 139,
+        "size": 130,
         "extension": ".yaml",
         "path": "pnpm-workspace.yaml"
       },
@@ -8993,7 +9077,7 @@
         "name": "requirements.txt",
         "type": "file",
         "language": "Text",
-        "size": 431,
+        "size": 1394,
         "extension": ".txt",
         "path": "requirements.txt"
       },
@@ -9001,7 +9085,7 @@
         "name": "run_all_tests.sh",
         "type": "file",
         "language": "Shell",
-        "size": 2192,
+        "size": 2648,
         "extension": ".sh",
         "path": "run_all_tests.sh"
       },
@@ -9050,6 +9134,14 @@
         "path": "scripts/deploy/requirements.txt"
       },
       {
+        "name": "setup_env.py",
+        "type": "file",
+        "language": "Python",
+        "size": 6991,
+        "extension": ".py",
+        "path": "scripts/setup_env.py"
+      },
+      {
         "name": "setup.cfg",
         "type": "file",
         "language": "Config",
@@ -9090,446 +9182,6 @@
         "size": 30690,
         "extension": ".ts",
         "path": "supabase/functions/casar-disciplinas/index.ts"
-      },
-      {
-        "name": "migrations",
-        "type": "directory",
-        "path": "supabase/migrations",
-        "children": []
-      },
-      {
-        "name": "20250304192200_add_carga_horaria_integralizada.sql",
-        "type": "file",
-        "language": "SQL",
-        "size": 532,
-        "extension": ".sql",
-        "path": "supabase/migrations/20250304192200_add_carga_horaria_integralizada.sql"
-      },
-      {
-        "name": "20250304193000_create_historicos_usuarios.sql",
-        "type": "file",
-        "language": "SQL",
-        "size": 2397,
-        "extension": ".sql",
-        "path": "supabase/migrations/20250304193000_create_historicos_usuarios.sql"
-      },
-      {
-        "name": "20260312120000_schema_snapshot_from_export.sql",
-        "type": "file",
-        "language": "SQL",
-        "size": 96000,
-        "extension": ".sql",
-        "path": "supabase/migrations/20260312120000_schema_snapshot_from_export.sql"
-      },
-      {
-        "name": "20260415121000_add_optativas_manuais_column.sql",
-        "type": "file",
-        "language": "SQL",
-        "size": 121,
-        "extension": ".sql",
-        "path": "supabase/migrations/20260415121000_add_optativas_manuais_column.sql"
-      },
-      {
-        "name": "20260522_add_preferencias_plano.sql",
-        "type": "file",
-        "language": "SQL",
-        "size": 548,
-        "extension": ".sql",
-        "path": "supabase/migrations/20260522_add_preferencias_plano.sql"
-      },
-      {
-        "name": "test_historicos",
-        "type": "directory",
-        "path": "test_historicos",
-        "children": []
-      },
-      {
-        "name": "analyze_patterns.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 8108,
-        "extension": ".mjs",
-        "path": "test_historicos/analyze_patterns.mjs"
-      },
-      {
-        "name": "audit_quality.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 1395,
-        "extension": ".mjs",
-        "path": "test_historicos/audit_quality.mjs"
-      },
-      {
-        "name": "check_dsc.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 786,
-        "extension": ".mjs",
-        "path": "test_historicos/check_dsc.mjs"
-      },
-      {
-        "name": "compare_old_new.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 2625,
-        "extension": ".mjs",
-        "path": "test_historicos/compare_old_new.mjs"
-      },
-      {
-        "name": "extract_text.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 5131,
-        "extension": ".mjs",
-        "path": "test_historicos/extract_text.mjs"
-      },
-      {
-        "name": "extracted_texts",
-        "type": "directory",
-        "path": "test_historicos/extracted_texts",
-        "children": []
-      },
-      {
-        "name": "_summary.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 8368,
-        "extension": ".json",
-        "path": "test_historicos/extracted_texts/_summary.json"
-      },
-      {
-        "name": "historico_190012579 (5) (1).txt",
-        "type": "file",
-        "language": "Text",
-        "size": 13436,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_190012579 (5) (1).txt"
-      },
-      {
-        "name": "historico_190012579 (5) (1)_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 18009,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_190012579 (5) (1)_numbered.txt"
-      },
-      {
-        "name": "historico_211029503 (1).txt",
-        "type": "file",
-        "language": "Text",
-        "size": 97025,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_211029503 (1).txt"
-      },
-      {
-        "name": "historico_211029503 (1)_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 119442,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_211029503 (1)_numbered.txt"
-      },
-      {
-        "name": "historico_211029503-2 copy.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 8732,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_211029503-2 copy.txt"
-      },
-      {
-        "name": "historico_211029503-2 copy_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 11180,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_211029503-2 copy_numbered.txt"
-      },
-      {
-        "name": "historico_222006202 (1).txt",
-        "type": "file",
-        "language": "Text",
-        "size": 11689,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222006202 (1).txt"
-      },
-      {
-        "name": "historico_222006202 (1)_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 15565,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222006202 (1)_numbered.txt"
-      },
-      {
-        "name": "historico_222037700-1.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 12397,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222037700-1.txt"
-      },
-      {
-        "name": "historico_222037700-1_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 16035,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222037700-1_numbered.txt"
-      },
-      {
-        "name": "historico_222038485.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 9819,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222038485.txt"
-      },
-      {
-        "name": "historico_222038485_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 13117,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_222038485_numbered.txt"
-      },
-      {
-        "name": "historico_231014508-5_250711_141618.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 13084,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231014508-5_250711_141618.txt"
-      },
-      {
-        "name": "historico_231014508-5_250711_141618_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 17521,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231014508-5_250711_141618_numbered.txt"
-      },
-      {
-        "name": "historico_231026330.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 12914,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231026330.txt"
-      },
-      {
-        "name": "historico_231026330_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 17113,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231026330_numbered.txt"
-      },
-      {
-        "name": "historico_231035043 (2).txt",
-        "type": "file",
-        "language": "Text",
-        "size": 13135,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231035043 (2).txt"
-      },
-      {
-        "name": "historico_231035043 (2)_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 17538,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_231035043 (2)_numbered.txt"
-      },
-      {
-        "name": "historico_232014010 (7).txt",
-        "type": "file",
-        "language": "Text",
-        "size": 12624,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_232014010 (7).txt"
-      },
-      {
-        "name": "historico_232014010 (7)_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 16806,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_232014010 (7)_numbered.txt"
-      },
-      {
-        "name": "historico_232021516.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 6187,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_232021516.txt"
-      },
-      {
-        "name": "historico_232021516_numbered.txt",
-        "type": "file",
-        "language": "Text",
-        "size": 7972,
-        "extension": ".txt",
-        "path": "test_historicos/extracted_texts/historico_232021516_numbered.txt"
-      },
-      {
-        "name": "historicos",
-        "type": "directory",
-        "path": "test_historicos/historicos",
-        "children": []
-      },
-      {
-        "name": "historico_190012579 (5) (1).pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 31269,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_190012579 (5) (1).pdf"
-      },
-      {
-        "name": "historico_211029503 (1).pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 107508,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_211029503 (1).pdf"
-      },
-      {
-        "name": "historico_211029503-2 copy.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 21605,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_211029503-2 copy.pdf"
-      },
-      {
-        "name": "historico_222006202 (1).pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 28709,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_222006202 (1).pdf"
-      },
-      {
-        "name": "historico_222037700-1.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 208744,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_222037700-1.pdf"
-      },
-      {
-        "name": "historico_222038485.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 23640,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_222038485.pdf"
-      },
-      {
-        "name": "historico_231014508-5_250711_141618.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 30085,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_231014508-5_250711_141618.pdf"
-      },
-      {
-        "name": "historico_231026330-7.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 31196,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_231026330-7.pdf"
-      },
-      {
-        "name": "historico_231026330.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 28256,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_231026330.pdf"
-      },
-      {
-        "name": "historico_231035043 (2).pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 29848,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_231035043 (2).pdf"
-      },
-      {
-        "name": "historico_232014010 (7).pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 29360,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_232014010 (7).pdf"
-      },
-      {
-        "name": "historico_232021516.pdf",
-        "type": "file",
-        "language": "PDF",
-        "size": 15233,
-        "extension": ".pdf",
-        "path": "test_historicos/historicos/historico_232021516.pdf"
-      },
-      {
-        "name": "old_parser.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 10189,
-        "extension": ".mjs",
-        "path": "test_historicos/old_parser.mjs"
-      },
-      {
-        "name": "package-lock.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 9012,
-        "extension": ".json",
-        "path": "test_historicos/package-lock.json"
-      },
-      {
-        "name": "package.json",
-        "type": "file",
-        "language": "JSON",
-        "size": 449,
-        "extension": ".json",
-        "path": "test_historicos/package.json"
-      },
-      {
-        "name": "pdfDataExtractor.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 27417,
-        "extension": ".mjs",
-        "path": "test_historicos/pdfDataExtractor.mjs"
-      },
-      {
-        "name": "pdfPositionExtractor.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 12446,
-        "extension": ".mjs",
-        "path": "test_historicos/pdfPositionExtractor.mjs"
-      },
-      {
-        "name": "test_parser.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 10161,
-        "extension": ".mjs",
-        "path": "test_historicos/test_parser.mjs"
-      },
-      {
-        "name": "test_position_parser.mjs",
-        "type": "file",
-        "language": "Unknown",
-        "size": 15947,
-        "extension": ".mjs",
-        "path": "test_historicos/test_position_parser.mjs"
       },
       {
         "name": "tests-python",
@@ -9612,7 +9264,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-09-03T10:19:40.400750",
+    "extracted_at": "2026-09-04T10:12:27.295922",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }

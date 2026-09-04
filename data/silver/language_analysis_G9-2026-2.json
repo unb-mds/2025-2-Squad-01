@@ -2,31 +2,79 @@
   "repository": "G9-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-03T10:16:22.094459",
+  "analyzed_at": "2026-09-04T10:09:10.066088",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 1,
-  "total_bytes": 69,
+  "total_files": 5,
+  "total_bytes": 18116,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 1,
-      "total_bytes": 69,
-      "percentage": 100.0,
+      "file_count": 2,
+      "total_bytes": 16971,
+      "percentage": 93.68,
       "files": [
+        {
+          "path": "PROJECT_CONTEXT.md",
+          "name": "PROJECT_CONTEXT.md",
+          "size": 13778,
+          "extension": ".md"
+        },
         {
           "path": "README.md",
           "name": "README.md",
-          "size": 69,
+          "size": 3193,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 1,
+      "total_bytes": 834,
+      "percentage": 4.6,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 834,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 271,
+      "percentage": 1.5,
+      "files": [
+        {
+          "path": ".env.example",
+          "name": ".env.example",
+          "size": 271,
+          "extension": ".example"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 1,
+      "total_bytes": 40,
+      "percentage": 0.22,
+      "files": [
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 40,
+          "extension": ".gitignore"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-03T10:19:39.707332",
+    "extracted_at": "2026-09-04T10:12:26.631995",
     "file_path": "data/silver/language_analysis_G9-2026-2.json"
   }
 }
