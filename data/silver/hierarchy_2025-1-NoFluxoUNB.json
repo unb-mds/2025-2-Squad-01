@@ -2,7 +2,7 @@
   "repository": "2025-1-NoFluxoUNB",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-09-05T09:39:00.217588",
+  "extracted_at": "2026-09-06T09:58:54.466766",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -136,6 +136,14 @@
         "path": ".github/README.md"
       },
       {
+        "name": "gitleaks-baseline.json",
+        "type": "file",
+        "language": "JSON",
+        "size": 59467,
+        "extension": ".json",
+        "path": ".github/gitleaks-baseline.json"
+      },
+      {
         "name": "workflows",
         "type": "directory",
         "path": ".github/workflows",
@@ -161,7 +169,7 @@
         "name": "deploy.yml",
         "type": "file",
         "language": "YAML",
-        "size": 2143,
+        "size": 2236,
         "extension": ".yml",
         "path": ".github/workflows/deploy.yml"
       },
@@ -169,15 +177,23 @@
         "name": "pipelineCI.yml",
         "type": "file",
         "language": "YAML",
-        "size": 4975,
+        "size": 5006,
         "extension": ".yml",
         "path": ".github/workflows/pipelineCI.yml"
+      },
+      {
+        "name": "scrape_calendario.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 2589,
+        "extension": ".yml",
+        "path": ".github/workflows/scrape_calendario.yml"
       },
       {
         "name": "scrape_ementa.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1909,
+        "size": 2198,
         "extension": ".yml",
         "path": ".github/workflows/scrape_ementa.yml"
       },
@@ -185,7 +201,7 @@
         "name": "scrape_equivalencias.yml",
         "type": "file",
         "language": "YAML",
-        "size": 1984,
+        "size": 2280,
         "extension": ".yml",
         "path": ".github/workflows/scrape_equivalencias.yml"
       },
@@ -193,7 +209,7 @@
         "name": "scrape_turmas_lite.yml",
         "type": "file",
         "language": "YAML",
-        "size": 4906,
+        "size": 8287,
         "extension": ".yml",
         "path": ".github/workflows/scrape_turmas_lite.yml"
       },
@@ -201,17 +217,33 @@
         "name": "security-and-quality.yml",
         "type": "file",
         "language": "YAML",
-        "size": 6456,
+        "size": 6487,
         "extension": ".yml",
         "path": ".github/workflows/security-and-quality.yml"
+      },
+      {
+        "name": "security_scan.yml",
+        "type": "file",
+        "language": "YAML",
+        "size": 4395,
+        "extension": ".yml",
+        "path": ".github/workflows/security_scan.yml"
       },
       {
         "name": ".gitignore",
         "type": "file",
         "language": "Git Ignore",
-        "size": 3198,
+        "size": 3844,
         "extension": ".gitignore",
         "path": ".gitignore"
+      },
+      {
+        "name": ".gitleaks.toml",
+        "type": "file",
+        "language": "TOML",
+        "size": 1351,
+        "extension": ".toml",
+        "path": ".gitleaks.toml"
       },
       {
         "name": ".pylintrc",
@@ -398,6 +430,14 @@
         "path": "DBA/database/04_reconciliar_turmas.py"
       },
       {
+        "name": "05_insert_calendario_academico.py",
+        "type": "file",
+        "language": "Python",
+        "size": 7215,
+        "extension": ".py",
+        "path": "DBA/database/05_insert_calendario_academico.py"
+      },
+      {
         "name": "README.md",
         "type": "file",
         "language": "Markdown",
@@ -409,7 +449,7 @@
         "name": "config.py",
         "type": "file",
         "language": "Python",
-        "size": 993,
+        "size": 2296,
         "extension": ".py",
         "path": "DBA/database/config.py"
       },
@@ -557,7 +597,7 @@
         "name": "scraping_turmas.py",
         "type": "file",
         "language": "Python",
-        "size": 27599,
+        "size": 27973,
         "extension": ".py",
         "path": "DBA/scraping/scraping_turmas.py"
       },
@@ -1302,6 +1342,20 @@
         "size": 6928,
         "extension": ".md",
         "path": "docs/chatbot-orquestrador.md"
+      },
+      {
+        "name": "investigacoes",
+        "type": "directory",
+        "path": "docs/investigacoes",
+        "children": []
+      },
+      {
+        "name": "2026-09-diagnostico-dados-ml.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 20803,
+        "extension": ".md",
+        "path": "docs/investigacoes/2026-09-diagnostico-dados-ml.md"
       },
       {
         "name": "motor2-v2-spec.md",
@@ -3143,7 +3197,7 @@
         "name": "README_API_PRODUCAO.md",
         "type": "file",
         "language": "Markdown",
-        "size": 7589,
+        "size": 8410,
         "extension": ".md",
         "path": "mcp_agent/README_API_PRODUCAO.md"
       },
@@ -3151,7 +3205,7 @@
         "name": "api_producao.py",
         "type": "file",
         "language": "Python",
-        "size": 30630,
+        "size": 31665,
         "extension": ".py",
         "path": "mcp_agent/api_producao.py"
       },
@@ -3159,7 +3213,7 @@
         "name": "databaseScript.py",
         "type": "file",
         "language": "Python",
-        "size": 1721,
+        "size": 1894,
         "extension": ".py",
         "path": "mcp_agent/databaseScript.py"
       },
@@ -3167,7 +3221,7 @@
         "name": "databaseScript_gemini.py",
         "type": "file",
         "language": "Python",
-        "size": 2437,
+        "size": 2747,
         "extension": ".py",
         "path": "mcp_agent/databaseScript_gemini.py"
       },
@@ -3253,7 +3307,7 @@
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 1076,
+        "size": 1721,
         "extension": ".example",
         "path": "no_fluxo_backend/.env.example"
       },
@@ -3353,7 +3407,7 @@
         "name": "casar_disciplinas_function.sql",
         "type": "file",
         "language": "SQL",
-        "size": 32906,
+        "size": 33623,
         "extension": ".sql",
         "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql"
       },
@@ -3361,7 +3415,7 @@
         "name": "latest_init_from_export.sql",
         "type": "file",
         "language": "SQL",
-        "size": 134542,
+        "size": 133533,
         "extension": ".sql",
         "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql"
       },
@@ -3372,6 +3426,14 @@
         "size": 863,
         "extension": ".sql",
         "path": "no_fluxo_backend/docs/supabase_migrations/preferencias_grade.sql"
+      },
+      {
+        "name": "security_scans.sql",
+        "type": "file",
+        "language": "SQL",
+        "size": 2975,
+        "extension": ".sql",
+        "path": "no_fluxo_backend/docs/supabase_migrations/security_scans.sql"
       },
       {
         "name": "generate-ssl.bat",
@@ -3417,7 +3479,7 @@
         "name": "nova_view_equivalencias.sql",
         "type": "file",
         "language": "SQL",
-        "size": 3326,
+        "size": 1819,
         "extension": ".sql",
         "path": "no_fluxo_backend/nova_view_equivalencias.sql"
       },
@@ -3425,7 +3487,7 @@
         "name": "package-lock.json",
         "type": "file",
         "language": "JSON",
-        "size": 312491,
+        "size": 312435,
         "extension": ".json",
         "path": "no_fluxo_backend/package-lock.json"
       },
@@ -3433,7 +3495,7 @@
         "name": "package.json",
         "type": "file",
         "language": "JSON",
-        "size": 2530,
+        "size": 2566,
         "extension": ".json",
         "path": "no_fluxo_backend/package.json"
       },
@@ -3579,7 +3641,7 @@
         "name": "export_schema.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 55828,
+        "size": 55949,
         "extension": ".ts",
         "path": "no_fluxo_backend/scripts/export_schema.ts"
       },
@@ -3609,7 +3671,7 @@
         "name": "export_schema_rpc.sql",
         "type": "file",
         "language": "SQL",
-        "size": 20844,
+        "size": 21312,
         "extension": ".sql",
         "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql"
       },
@@ -3666,6 +3728,14 @@
         "children": []
       },
       {
+        "name": "cors.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 2810,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/src/config/cors.ts"
+      },
+      {
         "name": "maritaca.ts",
         "type": "file",
         "language": "TypeScript",
@@ -3691,7 +3761,7 @@
         "name": "PlanejamentoController.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 47831,
+        "size": 46883,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/PlanejamentoController.ts"
       },
@@ -3739,7 +3809,7 @@
         "name": "users_controller.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 4996,
+        "size": 4316,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/controllers/users_controller.ts"
       },
@@ -3747,7 +3817,7 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 8006,
+        "size": 6622,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/index.ts"
       },
@@ -3969,7 +4039,7 @@
         "name": "sabia.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 11083,
+        "size": 11357,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/services/sabia.service.ts"
       },
@@ -3999,7 +4069,7 @@
         "name": "utils.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 3729,
+        "size": 4814,
         "extension": ".ts",
         "path": "no_fluxo_backend/src/utils.ts"
       },
@@ -4198,6 +4268,14 @@
         "path": "no_fluxo_backend/tests-ts/controller_logger.test.ts"
       },
       {
+        "name": "cors-origins.test.ts",
+        "type": "file",
+        "language": "TypeScript",
+        "size": 3745,
+        "extension": ".ts",
+        "path": "no_fluxo_backend/tests-ts/cors-origins.test.ts"
+      },
+      {
         "name": "cursos_controller.test.ts",
         "type": "file",
         "language": "TypeScript",
@@ -4313,7 +4391,7 @@
         "name": "periodo-ativo.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2273,
+        "size": 2564,
         "extension": ".ts",
         "path": "no_fluxo_backend/tests-ts/periodo-ativo.test.ts"
       },
@@ -4385,7 +4463,7 @@
         "name": "users_controller.test.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 6638,
+        "size": 8847,
         "extension": ".ts",
         "path": "no_fluxo_backend/tests-ts/users_controller.test.ts"
       },
@@ -6497,7 +6575,7 @@
         "name": "authGuard.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 5973,
+        "size": 5998,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/guards/authGuard.ts"
       },
@@ -6601,7 +6679,7 @@
         "name": "auth.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 14852,
+        "size": 14875,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/auth.service.ts"
       },
@@ -6625,7 +6703,7 @@
         "name": "dashboard.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 2040,
+        "size": 2928,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/dashboard.service.ts"
       },
@@ -6839,7 +6917,7 @@
         "name": "system-settings.service.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1076,
+        "size": 3035,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/services/system-settings.service.ts"
       },
@@ -7181,7 +7259,7 @@
         "name": "dashboard.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 1555,
+        "size": 2496,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/lib/types/dashboard.ts"
       },
@@ -7595,7 +7673,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 4859,
+        "size": 8988,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/admin/configuracoes/+page.svelte"
       },
@@ -7609,7 +7687,7 @@
         "name": "+page.svelte",
         "type": "file",
         "language": "Unknown",
-        "size": 15897,
+        "size": 21142,
         "extension": ".svelte",
         "path": "no_fluxo_frontend_svelte/src/routes/(protected)/admin/dashboard/+page.svelte"
       },
@@ -7857,7 +7935,7 @@
         "name": "+page.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 202,
+        "size": 226,
         "extension": ".ts",
         "path": "no_fluxo_frontend_svelte/src/routes/dev/impersonar/+page.ts"
       },
@@ -9121,7 +9199,7 @@
         "name": "deploy_config.py",
         "type": "file",
         "language": "Python",
-        "size": 5630,
+        "size": 5696,
         "extension": ".py",
         "path": "scripts/deploy/deploy_config.py"
       },
@@ -9129,7 +9207,7 @@
         "name": "deploy_local.py",
         "type": "file",
         "language": "Python",
-        "size": 27406,
+        "size": 27300,
         "extension": ".py",
         "path": "scripts/deploy/deploy_local.py"
       },
@@ -9187,7 +9265,7 @@
         "name": "index.ts",
         "type": "file",
         "language": "TypeScript",
-        "size": 30690,
+        "size": 32396,
         "extension": ".ts",
         "path": "supabase/functions/casar-disciplinas/index.ts"
       },
@@ -9272,7 +9350,7 @@
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-09-05T09:42:50.738318",
+    "extracted_at": "2026-09-06T10:02:17.350934",
     "file_path": "data/silver/hierarchy_2025-1-NoFluxoUNB.json"
   }
 }

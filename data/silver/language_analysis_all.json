@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:52.023434",
+      "extracted_at": "2026-09-06T10:02:18.391223",
       "file_path": "data/silver/language_analysis_all.json",
       "record_count": 111
     }
@@ -10,7 +10,7 @@
     "repository": "2023-2-Squad03-LicitAL",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:28.797047",
+    "analyzed_at": "2026-09-06T09:58:22.848324",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -1576,7 +1576,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:49.573179",
+      "extracted_at": "2026-09-06T10:02:16.451328",
       "file_path": "data/silver/language_analysis_2023-2-Squad03-LicitAL.json"
     }
   },
@@ -1584,7 +1584,7 @@
     "repository": "2023-2-Squad02-Desmatazonia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:24.015144",
+    "analyzed_at": "2026-09-06T09:58:18.230886",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -2150,7 +2150,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.035292",
+      "extracted_at": "2026-09-06T10:02:16.814725",
       "file_path": "data/silver/language_analysis_2023-2-Squad02-Desmatazonia.json"
     }
   },
@@ -2158,7 +2158,7 @@
     "repository": "2024-2-Agio",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:52.015214",
+    "analyzed_at": "2026-09-06T09:58:45.836198",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -2602,7 +2602,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.044996",
+      "extracted_at": "2026-09-06T10:02:16.822762",
       "file_path": "data/silver/language_analysis_2024-2-Agio.json"
     }
   },
@@ -2610,32 +2610,46 @@
     "repository": "G8-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:29.357006",
+    "analyzed_at": "2026-09-06T09:59:26.374149",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 3795,
-    "total_bytes": 69104472,
+    "total_files": 2281,
+    "total_bytes": 67631643,
     "languages": [
       {
-        "language": "JavaScript",
-        "file_count": 2774,
-        "total_bytes": 38739599,
-        "percentage": 56.06,
+        "language": "WebM Video",
+        "file_count": 3,
+        "total_bytes": 26570031,
+        "percentage": 39.29,
         "files": [
           {
-            "path": "node_modules/three/build/three.webgpu.js",
-            "name": "three.webgpu.js",
-            "size": 1531442,
-            "extension": ".js"
+            "path": "public/shadernovo-dark.webm",
+            "name": "shadernovo-dark.webm",
+            "size": 15169555,
+            "extension": ".webm"
           },
           {
-            "path": "node_modules/three/build/three.webgpu.nodes.js",
-            "name": "three.webgpu.nodes.js",
-            "size": 1530175,
-            "extension": ".js"
+            "path": "public/shadernovo-light.webm",
+            "name": "shadernovo-light.webm",
+            "size": 10092750,
+            "extension": ".webm"
           },
+          {
+            "path": "dist/video.webm",
+            "name": "video.webm",
+            "size": 1307726,
+            "extension": ".webm"
+          }
+        ]
+      },
+      {
+        "language": "JavaScript",
+        "file_count": 1428,
+        "total_bytes": 17936967,
+        "percentage": 26.52,
+        "files": [
           {
             "path": "node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js",
             "name": "dep-Dm0c1Wj2.js",
@@ -2657,13 +2671,7 @@
           {
             "path": "node_modules/.vite/deps/react-dom_client.js",
             "name": "react-dom_client.js",
-            "size": 993548,
-            "extension": ".js"
-          },
-          {
-            "path": "node_modules/three/examples/jsm/libs/draco/gltf/draco_encoder.js",
-            "name": "draco_encoder.js",
-            "size": 954360,
+            "size": 1005467,
             "extension": ".js"
           },
           {
@@ -2679,29 +2687,109 @@
             "extension": ".js"
           },
           {
-            "path": "node_modules/three/examples/jsm/libs/draco/draco_encoder.js",
-            "name": "draco_encoder.js",
-            "size": 928718,
+            "path": "node_modules/react-dom/cjs/react-dom-profiling.profiling.js",
+            "name": "react-dom-profiling.profiling.js",
+            "size": 607634,
+            "extension": ".js"
+          },
+          {
+            "path": "node_modules/react-dom/cjs/react-dom-client.production.js",
+            "name": "react-dom-client.production.js",
+            "size": 536016,
+            "extension": ".js"
+          },
+          {
+            "path": "node_modules/@babel/parser/lib/index.js",
+            "name": "index.js",
+            "size": 513214,
+            "extension": ".js"
+          },
+          {
+            "path": "node_modules/react-dom/cjs/react-dom-server.node.development.js",
+            "name": "react-dom-server.node.development.js",
+            "size": 429423,
             "extension": ".js"
           }
         ]
       },
       {
-        "language": "Unknown",
-        "file_count": 547,
-        "total_bytes": 14597937,
-        "percentage": 21.12,
+        "language": "No Extension",
+        "file_count": 69,
+        "total_bytes": 10522338,
+        "percentage": 15.56,
         "files": [
           {
-            "path": "node_modules/three/examples/jsm/libs/rhino3dm/rhino3dm.wasm",
-            "name": "rhino3dm.wasm",
-            "size": 2545991,
-            "extension": ".wasm"
+            "path": "node_modules/esbuild/bin/esbuild",
+            "name": "esbuild",
+            "size": 10358936,
+            "extension": ""
           },
+          {
+            "path": "node_modules/rollup/dist/bin/rollup",
+            "name": "rollup",
+            "size": 82112,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/caniuse-lite/LICENSE",
+            "name": "LICENSE",
+            "size": 18651,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/jsesc/bin/jsesc",
+            "name": "jsesc",
+            "size": 3833,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/source-map-js/LICENSE",
+            "name": "LICENSE",
+            "size": 1526,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/@rolldown/pluginutils/LICENSE",
+            "name": "LICENSE",
+            "size": 1302,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/@babel/helpers/LICENSE",
+            "name": "LICENSE",
+            "size": 1189,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/@types/babel__core/LICENSE",
+            "name": "LICENSE",
+            "size": 1141,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/@types/babel__generator/LICENSE",
+            "name": "LICENSE",
+            "size": 1141,
+            "extension": ""
+          },
+          {
+            "path": "node_modules/@types/babel__template/LICENSE",
+            "name": "LICENSE",
+            "size": 1141,
+            "extension": ""
+          }
+        ]
+      },
+      {
+        "language": "Unknown",
+        "file_count": 507,
+        "total_bytes": 7539512,
+        "percentage": 11.15,
+        "files": [
           {
             "path": "node_modules/.vite/deps/react-dom_client.js.map",
             "name": "react-dom_client.js.map",
-            "size": 1596865,
+            "size": 1559126,
             "extension": ".map"
           },
           {
@@ -2711,165 +2799,79 @@
             "extension": ".map"
           },
           {
-            "path": "node_modules/three/build/three.cjs",
-            "name": "three.cjs",
-            "size": 1330131,
-            "extension": ".cjs"
-          },
-          {
-            "path": "node_modules/.vite/deps/@react-three_fiber.js.map",
-            "name": "@react-three_fiber.js.map",
-            "size": 1087080,
-            "extension": ".map"
-          },
-          {
-            "path": "node_modules/three/examples/jsm/libs/ammo.wasm.wasm",
-            "name": "ammo.wasm.wasm",
-            "size": 651386,
-            "extension": ".wasm"
-          },
-          {
-            "path": "node_modules/three/examples/jsm/libs/basis/basis_transcoder.wasm",
-            "name": "basis_transcoder.wasm",
-            "size": 527333,
-            "extension": ".wasm"
-          },
-          {
-            "path": "node_modules/csstype/index.js.flow",
-            "name": "index.js.flow",
-            "size": 344546,
-            "extension": ".flow"
-          },
-          {
             "path": "node_modules/@babel/types/lib/validators/generated/index.js.map",
             "name": "index.js.map",
             "size": 290238,
             "extension": ".map"
           },
           {
-            "path": "node_modules/three/examples/jsm/libs/draco/draco_decoder.wasm",
-            "name": "draco_decoder.wasm",
-            "size": 285747,
-            "extension": ".wasm"
+            "path": "node_modules/@babel/types/lib/ast-types/generated/index.js.map",
+            "name": "index.js.map",
+            "size": 223788,
+            "extension": ".map"
+          },
+          {
+            "path": "node_modules/@babel/types/lib/builders/generated/lowercase.js.map",
+            "name": "lowercase.js.map",
+            "size": 203123,
+            "extension": ".map"
+          },
+          {
+            "path": "node_modules/@babel/types/lib/index.js.flow",
+            "name": "index.js.flow",
+            "size": 179474,
+            "extension": ".flow"
+          },
+          {
+            "path": "node_modules/@babel/helpers/lib/helpers-generated.js.map",
+            "name": "helpers-generated.js.map",
+            "size": 174603,
+            "extension": ".map"
+          },
+          {
+            "path": "node_modules/@babel/types/lib/definitions/core.js.map",
+            "name": "core.js.map",
+            "size": 129158,
+            "extension": ".map"
+          },
+          {
+            "path": "node_modules/@babel/core/lib/vendor/import-meta-resolve.js.map",
+            "name": "import-meta-resolve.js.map",
+            "size": 109982,
+            "extension": ".map"
+          },
+          {
+            "path": "node_modules/vite/dist/node-cjs/publicUtils.cjs",
+            "name": "publicUtils.cjs",
+            "size": 106613,
+            "extension": ".cjs"
           }
         ]
       },
       {
         "language": "MP4 Video",
-        "file_count": 2,
-        "total_bytes": 5374376,
-        "percentage": 7.78,
+        "file_count": 1,
+        "total_bytes": 2687188,
+        "percentage": 3.97,
         "files": [
           {
             "path": "dist/video.mp4",
             "name": "video.mp4",
             "size": 2687188,
             "extension": ".mp4"
-          },
-          {
-            "path": "public/video.mp4",
-            "name": "video.mp4",
-            "size": 2687188,
-            "extension": ".mp4"
-          }
-        ]
-      },
-      {
-        "language": "JSON",
-        "file_count": 117,
-        "total_bytes": 3934683,
-        "percentage": 5.69,
-        "files": [
-          {
-            "path": "node_modules/three/examples/fonts/gentilis_bold.typeface.json",
-            "name": "gentilis_bold.typeface.json",
-            "size": 649318,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/gentilis_regular.typeface.json",
-            "name": "gentilis_regular.typeface.json",
-            "size": 627529,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/droid_serif_bold.typeface.json",
-            "name": "droid_serif_bold.typeface.json",
-            "size": 485403,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.json",
-            "name": "droid_serif_regular.typeface.json",
-            "size": 477058,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
-            "name": "droid_sans_bold.typeface.json",
-            "size": 329885,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/droid_sans_regular.typeface.json",
-            "name": "droid_sans_regular.typeface.json",
-            "size": 319895,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/droid_sans_mono_regular.typeface.json",
-            "name": "droid_sans_mono_regular.typeface.json",
-            "size": 190569,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/optimer_bold.typeface.json",
-            "name": "optimer_bold.typeface.json",
-            "size": 112249,
-            "extension": ".json"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/optimer_regular.typeface.json",
-            "name": "optimer_regular.typeface.json",
-            "size": 110666,
-            "extension": ".json"
-          },
-          {
-            "path": "package-lock.json",
-            "name": "package-lock.json",
-            "size": 64368,
-            "extension": ".json"
           }
         ]
       },
       {
         "language": "TypeScript",
-        "file_count": 168,
-        "total_bytes": 3005140,
-        "percentage": 4.35,
+        "file_count": 108,
+        "total_bytes": 1457754,
+        "percentage": 2.16,
         "files": [
-          {
-            "path": "node_modules/csstype/index.d.ts",
-            "name": "index.d.ts",
-            "size": 894969,
-            "extension": ".ts"
-          },
           {
             "path": "node_modules/@babel/types/lib/index.d.ts",
             "name": "index.d.ts",
             "size": 665892,
-            "extension": ".ts"
-          },
-          {
-            "path": "node_modules/@types/react/index.d.ts",
-            "name": "index.d.ts",
-            "size": 177882,
-            "extension": ".ts"
-          },
-          {
-            "path": "node_modules/@types/react/ts5.0/index.d.ts",
-            "name": "index.d.ts",
-            "size": 176855,
             "extension": ".ts"
           },
           {
@@ -2891,50 +2893,48 @@
             "extension": ".ts"
           },
           {
-            "path": "node_modules/@types/react-reconciler/index.d.ts",
-            "name": "index.d.ts",
-            "size": 44492,
+            "path": "node_modules/rollup/dist/rollup.d.ts",
+            "name": "rollup.d.ts",
+            "size": 36142,
             "extension": ".ts"
           },
           {
-            "path": "node_modules/@react-three/fiber/dist/declarations/react-reconciler/index.d.ts",
+            "path": "node_modules/@types/babel__core/index.d.ts",
             "name": "index.d.ts",
-            "size": 43814,
+            "size": 29219,
             "extension": ".ts"
           },
           {
-            "path": "node_modules/@react-three/fiber/react-reconciler/index.d.ts",
-            "name": "index.d.ts",
-            "size": 43814,
+            "path": "node_modules/esbuild/lib/main.d.ts",
+            "name": "main.d.ts",
+            "size": 23392,
             "extension": ".ts"
-          }
-        ]
-      },
-      {
-        "language": "WebM Video",
-        "file_count": 2,
-        "total_bytes": 2615452,
-        "percentage": 3.78,
-        "files": [
-          {
-            "path": "dist/video.webm",
-            "name": "video.webm",
-            "size": 1307726,
-            "extension": ".webm"
           },
           {
-            "path": "public/video.webm",
-            "name": "video.webm",
-            "size": 1307726,
-            "extension": ".webm"
+            "path": "node_modules/@types/estree/index.d.ts",
+            "name": "index.d.ts",
+            "size": 18924,
+            "extension": ".ts"
+          },
+          {
+            "path": "node_modules/@jridgewell/gen-mapping/src/gen-mapping.ts",
+            "name": "gen-mapping.ts",
+            "size": 17131,
+            "extension": ".ts"
+          },
+          {
+            "path": "node_modules/@jridgewell/trace-mapping/src/trace-mapping.ts",
+            "name": "trace-mapping.ts",
+            "size": 15414,
+            "extension": ".ts"
           }
         ]
       },
       {
         "language": "Markdown",
-        "file_count": 91,
-        "total_bytes": 591425,
-        "percentage": 0.86,
+        "file_count": 69,
+        "total_bytes": 474465,
+        "percentage": 0.7,
         "files": [
           {
             "path": "node_modules/vite/LICENSE.md",
@@ -2979,111 +2979,97 @@
             "extension": ".md"
           },
           {
-            "path": "node_modules/@react-three/fiber/CHANGELOG.md",
-            "name": "CHANGELOG.md",
-            "size": 18617,
+            "path": "node_modules/semver/README.md",
+            "name": "README.md",
+            "size": 16974,
             "extension": ".md"
           },
           {
-            "path": "node_modules/zustand/README.md",
+            "path": "node_modules/@jridgewell/trace-mapping/README.md",
             "name": "README.md",
-            "size": 17817,
+            "size": 14417,
             "extension": ".md"
           },
           {
-            "path": "node_modules/buffer/README.md",
+            "path": "node_modules/jsesc/README.md",
             "name": "README.md",
-            "size": 17295,
+            "size": 14215,
             "extension": ".md"
           }
         ]
       },
       {
-        "language": "No Extension",
-        "file_count": 85,
-        "total_bytes": 205245,
-        "percentage": 0.3,
+        "language": "JSON",
+        "file_count": 89,
+        "total_bytes": 421533,
+        "percentage": 0.62,
         "files": [
           {
-            "path": "node_modules/rollup/dist/bin/rollup",
-            "name": "rollup",
-            "size": 82112,
-            "extension": ""
+            "path": "package-lock.json",
+            "name": "package-lock.json",
+            "size": 56869,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/caniuse-lite/LICENSE",
-            "name": "LICENSE",
-            "size": 18651,
-            "extension": ""
+            "path": "node_modules/node-releases/data/processed/envs.json",
+            "name": "envs.json",
+            "size": 54983,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/three/examples/fonts/droid/NOTICE",
-            "name": "NOTICE",
-            "size": 10695,
-            "extension": ""
+            "path": "node_modules/electron-to-chromium/full-versions.json",
+            "name": "full-versions.json",
+            "size": 51255,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/esbuild/bin/esbuild",
-            "name": "esbuild",
-            "size": 9351,
-            "extension": ""
+            "path": "node_modules/@babel/compat-data/data/corejs2-built-ins.json",
+            "name": "corejs2-built-ins.json",
+            "size": 41279,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/jsesc/bin/jsesc",
-            "name": "jsesc",
-            "size": 3833,
-            "extension": ""
+            "path": "node_modules/.package-lock.json",
+            "name": ".package-lock.json",
+            "size": 33884,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/three/examples/fonts/LICENSE",
-            "name": "LICENSE",
-            "size": 2006,
-            "extension": ""
+            "path": "node_modules/electron-to-chromium/full-chromium-versions.json",
+            "name": "full-chromium-versions.json",
+            "size": 31293,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/source-map-js/LICENSE",
-            "name": "LICENSE",
-            "size": 1526,
-            "extension": ""
+            "path": "node_modules/@babel/helper-globals/data/browser-upper.json",
+            "name": "browser-upper.json",
+            "size": 19908,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/ieee754/LICENSE",
-            "name": "LICENSE",
-            "size": 1465,
-            "extension": ""
+            "path": "node_modules/@babel/compat-data/data/plugins.json",
+            "name": "plugins.json",
+            "size": 17058,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/@rolldown/pluginutils/LICENSE",
-            "name": "LICENSE",
-            "size": 1302,
-            "extension": ""
+            "path": "node_modules/rollup/package.json",
+            "name": "package.json",
+            "size": 12624,
+            "extension": ".json"
           },
           {
-            "path": "node_modules/@babel/helpers/LICENSE",
-            "name": "LICENSE",
-            "size": 1189,
-            "extension": ""
-          }
-        ]
-      },
-      {
-        "language": "TrueType Font",
-        "file_count": 1,
-        "total_bytes": 18068,
-        "percentage": 0.03,
-        "files": [
-          {
-            "path": "node_modules/three/examples/fonts/ttf/kenpixel.ttf",
-            "name": "kenpixel.ttf",
-            "size": 18068,
-            "extension": ".ttf"
+            "path": "node_modules/vite/package.json",
+            "name": "package.json",
+            "size": 5251,
+            "extension": ".json"
           }
         ]
       },
       {
         "language": "Text",
-        "file_count": 3,
-        "total_bytes": 13126,
+        "file_count": 2,
+        "total_bytes": 12434,
         "percentage": 0.02,
         "files": [
           {
@@ -3096,12 +3082,6 @@
             "path": "node_modules/jsesc/LICENSE-MIT.txt",
             "name": "LICENSE-MIT.txt",
             "size": 1077,
-            "extension": ".txt"
-          },
-          {
-            "path": "node_modules/three/examples/fonts/droid/README.txt",
-            "name": "README.txt",
-            "size": 692,
             "extension": ".txt"
           }
         ]
@@ -3162,7 +3142,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.070322",
+      "extracted_at": "2026-09-06T10:02:16.835486",
       "file_path": "data/silver/language_analysis_G8-2026-2.json"
     }
   },
@@ -3170,7 +3150,7 @@
     "repository": "FixIt",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:16.102422",
+    "analyzed_at": "2026-09-06T09:59:10.535327",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -4226,7 +4206,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.140025",
+      "extracted_at": "2026-09-06T10:02:16.875212",
       "file_path": "data/silver/language_analysis_FixIt.json"
     }
   },
@@ -4234,7 +4214,7 @@
     "repository": "2023-2-JuizVirtual",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:31.116264",
+    "analyzed_at": "2026-09-06T09:58:25.167877",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -4800,7 +4780,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.181445",
+      "extracted_at": "2026-09-06T10:02:16.908527",
       "file_path": "data/silver/language_analysis_2023-2-JuizVirtual.json"
     }
   },
@@ -4808,7 +4788,7 @@
     "repository": "2025-2-GuiaDev",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:14.758626",
+    "analyzed_at": "2026-09-06T09:59:09.176314",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -5526,7 +5506,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.185962",
+      "extracted_at": "2026-09-06T10:02:16.912124",
       "file_path": "data/silver/language_analysis_2025-2-GuiaDev.json"
     }
   },
@@ -5534,7 +5514,7 @@
     "repository": "2023-2-Squad04",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:29.719359",
+    "analyzed_at": "2026-09-06T09:58:23.699068",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -5930,7 +5910,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.190709",
+      "extracted_at": "2026-09-06T10:02:16.915790",
       "file_path": "data/silver/language_analysis_2023-2-Squad04.json"
     }
   },
@@ -5938,7 +5918,7 @@
     "repository": "2023-2-Squad10",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:35.011211",
+    "analyzed_at": "2026-09-06T09:58:28.742619",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -6420,7 +6400,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.218733",
+      "extracted_at": "2026-09-06T10:02:16.937301",
       "file_path": "data/silver/language_analysis_2023-2-Squad10.json"
     }
   },
@@ -6428,7 +6408,7 @@
     "repository": "2026-1-Squad07",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:21.001959",
+    "analyzed_at": "2026-09-06T09:59:16.122720",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -7084,7 +7064,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.272618",
+      "extracted_at": "2026-09-06T10:02:16.979554",
       "file_path": "data/silver/language_analysis_2026-1-Squad07.json"
     }
   },
@@ -7092,7 +7072,7 @@
     "repository": "2024-1-Squad02-CulturaTransparente",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:41.239120",
+    "analyzed_at": "2026-09-06T09:58:34.796825",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -7720,7 +7700,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.280171",
+      "extracted_at": "2026-09-06T10:02:16.985660",
       "file_path": "data/silver/language_analysis_2024-1-Squad02-CulturaTransparente.json"
     }
   },
@@ -7728,7 +7708,7 @@
     "repository": "mapadaacessibilidade",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:58.585283",
+    "analyzed_at": "2026-09-06T09:58:53.058160",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -8574,7 +8554,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.307700",
+      "extracted_at": "2026-09-06T10:02:17.009290",
       "file_path": "data/silver/language_analysis_mapadaacessibilidade.json"
     }
   },
@@ -8582,7 +8562,7 @@
     "repository": "2023-2-SuaGradeUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:35.631819",
+    "analyzed_at": "2026-09-06T09:58:29.340267",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -9198,7 +9178,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.356702",
+      "extracted_at": "2026-09-06T10:02:17.047790",
       "file_path": "data/silver/language_analysis_2023-2-SuaGradeUnB.json"
     }
   },
@@ -9206,7 +9186,7 @@
     "repository": "2026-2-MonitoraUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:30.984903",
+    "analyzed_at": "2026-09-06T09:59:28.102318",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -9236,7 +9216,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.361085",
+      "extracted_at": "2026-09-06T10:02:17.051253",
       "file_path": "data/silver/language_analysis_2026-2-MonitoraUnB.json"
     }
   },
@@ -9582,7 +9562,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.361975",
+      "extracted_at": "2026-09-06T10:02:17.051876",
       "file_path": "data/silver/language_analysis_2026-1-Squad2.json"
     }
   },
@@ -9590,7 +9570,7 @@
     "repository": "G6-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:28.071421",
+    "analyzed_at": "2026-09-06T09:59:24.577619",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -9666,7 +9646,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.363473",
+      "extracted_at": "2026-09-06T10:02:17.053063",
       "file_path": "data/silver/language_analysis_G6-2026-2.json"
     }
   },
@@ -9674,7 +9654,7 @@
     "repository": "carlarocha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:39.286736",
+    "analyzed_at": "2026-09-06T09:58:32.931660",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -10472,7 +10452,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.366632",
+      "extracted_at": "2026-09-06T10:02:17.055458",
       "file_path": "data/silver/language_analysis_carlarocha.json"
     }
   },
@@ -10480,7 +10460,7 @@
     "repository": "G9-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:30.001136",
+    "analyzed_at": "2026-09-06T09:59:26.888283",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -10600,7 +10580,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.373004",
+      "extracted_at": "2026-09-06T10:02:17.060335",
       "file_path": "data/silver/language_analysis_G9-2026-2.json"
     }
   },
@@ -10608,7 +10588,7 @@
     "repository": "portfolio-MDS",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:39.952293",
+    "analyzed_at": "2026-09-06T09:58:33.431484",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -11154,7 +11134,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.374234",
+      "extracted_at": "2026-09-06T10:02:17.061241",
       "file_path": "data/silver/language_analysis_portfolio-MDS.json"
     }
   },
@@ -11162,7 +11142,7 @@
     "repository": "G12-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:31.473535",
+    "analyzed_at": "2026-09-06T09:59:28.843863",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -11204,7 +11184,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.376302",
+      "extracted_at": "2026-09-06T10:02:17.062759",
       "file_path": "data/silver/language_analysis_G12-2026-2.json"
     }
   },
@@ -11300,7 +11280,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.376911",
+      "extracted_at": "2026-09-06T10:02:17.063162",
       "file_path": "data/silver/language_analysis_2026-1-Squad11.json"
     }
   },
@@ -11308,7 +11288,7 @@
     "repository": "2024-2-ChamaControl",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:54.985203",
+    "analyzed_at": "2026-09-06T09:58:49.154173",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -11848,7 +11828,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.378382",
+      "extracted_at": "2026-09-06T10:02:17.064286",
       "file_path": "data/silver/language_analysis_2024-2-ChamaControl.json"
     }
   },
@@ -11856,7 +11836,7 @@
     "repository": "2026.1-ContraDito",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:22.714704",
+    "analyzed_at": "2026-09-06T09:59:17.908954",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -12562,7 +12542,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.383221",
+      "extracted_at": "2026-09-06T10:02:17.067940",
       "file_path": "data/silver/language_analysis_2026.1-ContraDito.json"
     }
   },
@@ -12570,7 +12550,7 @@
     "repository": "2024-2-Squad06",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:53.244122",
+    "analyzed_at": "2026-09-06T09:58:47.142910",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -13114,7 +13094,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.389053",
+      "extracted_at": "2026-09-06T10:02:17.074819",
       "file_path": "data/silver/language_analysis_2024-2-Squad06.json"
     }
   },
@@ -13122,7 +13102,7 @@
     "repository": "exemplogitpage",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:15.373194",
+    "analyzed_at": "2026-09-06T09:59:09.829784",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -13160,7 +13140,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.391415",
+      "extracted_at": "2026-09-06T10:02:17.077172",
       "file_path": "data/silver/language_analysis_exemplogitpage.json"
     }
   },
@@ -13168,7 +13148,7 @@
     "repository": "G10-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:30.442382",
+    "analyzed_at": "2026-09-06T09:59:27.483234",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -13192,7 +13172,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.391907",
+      "extracted_at": "2026-09-06T10:02:17.077473",
       "file_path": "data/silver/language_analysis_G10-2026-2.json"
     }
   },
@@ -13200,7 +13180,7 @@
     "repository": "2025-2-SeLiga",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:13.456246",
+    "analyzed_at": "2026-09-06T09:59:08.013585",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -13784,7 +13764,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.393138",
+      "extracted_at": "2026-09-06T10:02:17.078393",
       "file_path": "data/silver/language_analysis_2025-2-SeLiga.json"
     }
   },
@@ -13792,7 +13772,7 @@
     "repository": "2026-1-Squad13",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:23.201830",
+    "analyzed_at": "2026-09-06T09:59:18.540054",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -14498,7 +14478,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.398617",
+      "extracted_at": "2026-09-06T10:02:17.082675",
       "file_path": "data/silver/language_analysis_2026-1-Squad13.json"
     }
   },
@@ -14506,7 +14486,7 @@
     "repository": "2023.2_DeOlhoRS",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:33.097160",
+    "analyzed_at": "2026-09-06T09:58:26.987844",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -15672,7 +15652,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.485135",
+      "extracted_at": "2026-09-06T10:02:17.151783",
       "file_path": "data/silver/language_analysis_2023.2_DeOlhoRS.json"
     }
   },
@@ -15748,7 +15728,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.649464",
+      "extracted_at": "2026-09-06T10:02:17.281768",
       "file_path": "data/silver/language_analysis_2026-1-Squad01.json"
     }
   },
@@ -15756,7 +15736,7 @@
     "repository": "2025-1-Eletta",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:02.779016",
+    "analyzed_at": "2026-09-06T09:58:57.616253",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -16606,7 +16586,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.653810",
+      "extracted_at": "2026-09-06T10:02:17.284605",
       "file_path": "data/silver/language_analysis_2025-1-Eletta.json"
     }
   },
@@ -16614,7 +16594,7 @@
     "repository": "2025-2-Synapse",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:14.049844",
+    "analyzed_at": "2026-09-06T09:59:08.571578",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -17184,7 +17164,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.659834",
+      "extracted_at": "2026-09-06T10:02:17.289450",
       "file_path": "data/silver/language_analysis_2025-2-Synapse.json"
     }
   },
@@ -17192,7 +17172,7 @@
     "repository": "2023.2_Gotinha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:38.706236",
+    "analyzed_at": "2026-09-06T09:58:32.367898",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -17444,7 +17424,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.663371",
+      "extracted_at": "2026-09-06T10:02:17.292239",
       "file_path": "data/silver/language_analysis_2023.2_Gotinha.json"
     }
   },
@@ -17452,7 +17432,7 @@
     "repository": "Mds-ArenaPesadelo",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:43.640409",
+    "analyzed_at": "2026-09-06T09:58:37.239177",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -18120,7 +18100,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.666644",
+      "extracted_at": "2026-09-06T10:02:17.294708",
       "file_path": "data/silver/language_analysis_Mds-ArenaPesadelo.json"
     }
   },
@@ -18128,7 +18108,7 @@
     "repository": "G5-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:27.647993",
+    "analyzed_at": "2026-09-06T09:59:23.913583",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -18282,7 +18262,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.672427",
+      "extracted_at": "2026-09-06T10:02:17.299196",
       "file_path": "data/silver/language_analysis_G5-2026-2.json"
     }
   },
@@ -18290,7 +18270,7 @@
     "repository": "G4-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:27.178506",
+    "analyzed_at": "2026-09-06T09:59:23.380245",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -18436,7 +18416,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.673501",
+      "extracted_at": "2026-09-06T10:02:17.300048",
       "file_path": "data/silver/language_analysis_G4-2026-2.json"
     }
   },
@@ -18444,7 +18424,7 @@
     "repository": "2024-2-AcheiUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:51.358065",
+    "analyzed_at": "2026-09-06T09:58:45.220600",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -19260,7 +19240,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.676504",
+      "extracted_at": "2026-09-06T10:02:17.302324",
       "file_path": "data/silver/language_analysis_2024-2-AcheiUnB.json"
     }
   },
@@ -19268,7 +19248,7 @@
     "repository": "2026-1-Squad14",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:23.624829",
+    "analyzed_at": "2026-09-06T09:59:19.120476",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -19306,7 +19286,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.681025",
+      "extracted_at": "2026-09-06T10:02:17.305845",
       "file_path": "data/silver/language_analysis_2026-1-Squad14.json"
     }
   },
@@ -19620,7 +19600,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.681811",
+      "extracted_at": "2026-09-06T10:02:17.306442",
       "file_path": "data/silver/language_analysis_2026-1-Squad10.json"
     }
   },
@@ -19628,7 +19608,7 @@
     "repository": "2024-1-Squad08",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:44.963866",
+    "analyzed_at": "2026-09-06T09:58:38.542767",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -19962,7 +19942,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.683388",
+      "extracted_at": "2026-09-06T10:02:17.307637",
       "file_path": "data/silver/language_analysis_2024-1-Squad08.json"
     }
   },
@@ -19970,7 +19950,7 @@
     "repository": "2025.1-RelatoriosInteligentesBCB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:01.481883",
+    "analyzed_at": "2026-09-06T09:58:55.888933",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -20184,7 +20164,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.685027",
+      "extracted_at": "2026-09-06T10:02:17.308832",
       "file_path": "data/silver/language_analysis_2025.1-RelatoriosInteligentesBCB.json"
     }
   },
@@ -20192,7 +20172,7 @@
     "repository": "2025-2-OncoMap",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:10.337644",
+    "analyzed_at": "2026-09-06T09:59:05.087406",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -20952,7 +20932,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.690878",
+      "extracted_at": "2026-09-06T10:02:17.313269",
       "file_path": "data/silver/language_analysis_2025-2-OncoMap.json"
     }
   },
@@ -20960,7 +20940,7 @@
     "repository": "2025-2-InfoSchool",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:11.394094",
+    "analyzed_at": "2026-09-06T09:59:05.813547",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -21578,7 +21558,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.702710",
+      "extracted_at": "2026-09-06T10:02:17.322527",
       "file_path": "data/silver/language_analysis_2025-2-InfoSchool.json"
     }
   },
@@ -21586,7 +21566,7 @@
     "repository": "2025-2-Eh_Fake",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:08.726692",
+    "analyzed_at": "2026-09-06T09:59:03.570245",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -22184,7 +22164,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.707664",
+      "extracted_at": "2026-09-06T10:02:17.326419",
       "file_path": "data/silver/language_analysis_2025-2-Eh_Fake.json"
     }
   },
@@ -22192,7 +22172,7 @@
     "repository": "2023-2-Squad07",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:31.757307",
+    "analyzed_at": "2026-09-06T09:58:25.758158",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -22626,7 +22606,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.712446",
+      "extracted_at": "2026-09-06T10:02:17.330117",
       "file_path": "data/silver/language_analysis_2023-2-Squad07.json"
     }
   },
@@ -22634,7 +22614,7 @@
     "repository": "2025-2-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:16.867127",
+    "analyzed_at": "2026-09-06T09:59:11.177315",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -23014,7 +22994,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.716059",
+      "extracted_at": "2026-09-06T10:02:17.332878",
       "file_path": "data/silver/language_analysis_2025-2-Squad12.json"
     }
   },
@@ -23022,7 +23002,7 @@
     "repository": "2026-1-Guard.IA",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:20.439331",
+    "analyzed_at": "2026-09-06T09:59:15.530577",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -23598,7 +23578,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.718604",
+      "extracted_at": "2026-09-06T10:02:17.334791",
       "file_path": "data/silver/language_analysis_2026-1-Guard.IA.json"
     }
   },
@@ -23606,7 +23586,7 @@
     "repository": "Gastos-DF-2024-02",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:57.513316",
+    "analyzed_at": "2026-09-06T09:58:52.121359",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -24260,7 +24240,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.722505",
+      "extracted_at": "2026-09-06T10:02:17.337878",
       "file_path": "data/silver/language_analysis_Gastos-DF-2024-02.json"
     }
   },
@@ -24268,19 +24248,19 @@
     "repository": "2025-1-NoFluxoUNB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:00.217588",
+    "analyzed_at": "2026-09-06T09:58:54.466766",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 1001,
-    "total_bytes": 33320656,
+    "total_files": 1010,
+    "total_bytes": 33449951,
     "languages": [
       {
         "language": "PNG Image",
         "file_count": 70,
         "total_bytes": 18853234,
-        "percentage": 56.58,
+        "percentage": 56.36,
         "files": [
           {
             "path": "documentacao/estudos/Github/Assets/ex_repositorio.png",
@@ -24346,9 +24326,9 @@
       },
       {
         "language": "JSON",
-        "file_count": 109,
-        "total_bytes": 3282114,
-        "percentage": 9.85,
+        "file_count": 110,
+        "total_bytes": 3341561,
+        "percentage": 9.99,
         "files": [
           {
             "path": "no_fluxo_backend/docs/database_schema.json",
@@ -24365,7 +24345,7 @@
           {
             "path": "no_fluxo_backend/package-lock.json",
             "name": "package-lock.json",
-            "size": 312491,
+            "size": 312435,
             "extension": ".json"
           },
           {
@@ -24415,7 +24395,7 @@
       {
         "language": "Unknown",
         "file_count": 226,
-        "total_bytes": 2883693,
+        "total_bytes": 2893712,
         "percentage": 8.65,
         "files": [
           {
@@ -24482,9 +24462,9 @@
       },
       {
         "language": "Markdown",
-        "file_count": 134,
-        "total_bytes": 1772207,
-        "percentage": 5.32,
+        "file_count": 135,
+        "total_bytes": 1793831,
+        "percentage": 5.36,
         "files": [
           {
             "path": "plans/05-MODELS-TYPES.md",
@@ -24550,14 +24530,14 @@
       },
       {
         "language": "TypeScript",
-        "file_count": 258,
-        "total_bytes": 1739815,
-        "percentage": 5.22,
+        "file_count": 260,
+        "total_bytes": 1752904,
+        "percentage": 5.24,
         "files": [
           {
             "path": "no_fluxo_backend/scripts/export_schema.ts",
             "name": "export_schema.ts",
-            "size": 55828,
+            "size": 55949,
             "extension": ".ts"
           },
           {
@@ -24575,7 +24555,7 @@
           {
             "path": "no_fluxo_backend/src/controllers/PlanejamentoController.ts",
             "name": "PlanejamentoController.ts",
-            "size": 47831,
+            "size": 46883,
             "extension": ".ts"
           },
           {
@@ -24620,7 +24600,7 @@
         "language": "PDF",
         "file_count": 17,
         "total_bytes": 1197873,
-        "percentage": 3.59,
+        "percentage": 3.58,
         "files": [
           {
             "path": "documentacao/estudos/SCRUM e Programação eXtrema/SRUM e programação eXtrema.pdf",
@@ -24688,7 +24668,7 @@
         "language": "JPEG Image",
         "file_count": 4,
         "total_bytes": 774924,
-        "percentage": 2.33,
+        "percentage": 2.32,
         "files": [
           {
             "path": "assets/Logo_eu_3 editada.JPG",
@@ -24717,24 +24697,10 @@
         ]
       },
       {
-        "language": "Log File",
-        "file_count": 1,
-        "total_bytes": 657761,
-        "percentage": 1.97,
-        "files": [
-          {
-            "path": "logs/ai_agent.log",
-            "name": "ai_agent.log",
-            "size": 657761,
-            "extension": ".log"
-          }
-        ]
-      },
-      {
         "language": "YAML",
-        "file_count": 14,
-        "total_bytes": 648900,
-        "percentage": 1.95,
+        "file_count": 16,
+        "total_bytes": 660005,
+        "percentage": 1.97,
         "files": [
           {
             "path": "pnpm-lock.yaml",
@@ -24755,21 +24721,27 @@
             "extension": ".yml"
           },
           {
+            "path": ".github/workflows/scrape_turmas_lite.yml",
+            "name": "scrape_turmas_lite.yml",
+            "size": 8287,
+            "extension": ".yml"
+          },
+          {
             "path": ".github/workflows/security-and-quality.yml",
             "name": "security-and-quality.yml",
-            "size": 6456,
+            "size": 6487,
             "extension": ".yml"
           },
           {
             "path": ".github/workflows/pipelineCI.yml",
             "name": "pipelineCI.yml",
-            "size": 4975,
+            "size": 5006,
             "extension": ".yml"
           },
           {
-            "path": ".github/workflows/scrape_turmas_lite.yml",
-            "name": "scrape_turmas_lite.yml",
-            "size": 4906,
+            "path": ".github/workflows/security_scan.yml",
+            "name": "security_scan.yml",
+            "size": 4395,
             "extension": ".yml"
           },
           {
@@ -24779,30 +24751,38 @@
             "extension": ".yml"
           },
           {
-            "path": ".github/workflows/deploy.yml",
-            "name": "deploy.yml",
-            "size": 2143,
+            "path": ".github/workflows/scrape_calendario.yml",
+            "name": "scrape_calendario.yml",
+            "size": 2589,
             "extension": ".yml"
           },
           {
             "path": ".github/workflows/scrape_equivalencias.yml",
             "name": "scrape_equivalencias.yml",
-            "size": 1984,
-            "extension": ".yml"
-          },
-          {
-            "path": ".github/workflows/scrape_ementa.yml",
-            "name": "scrape_ementa.yml",
-            "size": 1909,
+            "size": 2280,
             "extension": ".yml"
           }
         ]
       },
       {
+        "language": "Log File",
+        "file_count": 1,
+        "total_bytes": 657761,
+        "percentage": 1.97,
+        "files": [
+          {
+            "path": "logs/ai_agent.log",
+            "name": "ai_agent.log",
+            "size": 657761,
+            "extension": ".log"
+          }
+        ]
+      },
+      {
         "language": "Python",
-        "file_count": 41,
-        "total_bytes": 458548,
-        "percentage": 1.38,
+        "file_count": 42,
+        "total_bytes": 468918,
+        "percentage": 1.4,
         "files": [
           {
             "path": "no_fluxo_backend/parse-pdf/pdf_parser_final.py",
@@ -24825,7 +24805,7 @@
           {
             "path": "mcp_agent/api_producao.py",
             "name": "api_producao.py",
-            "size": 30630,
+            "size": 31665,
             "extension": ".py"
           },
           {
@@ -24837,13 +24817,13 @@
           {
             "path": "DBA/scraping/scraping_turmas.py",
             "name": "scraping_turmas.py",
-            "size": 27599,
+            "size": 27973,
             "extension": ".py"
           },
           {
             "path": "scripts/deploy/deploy_local.py",
             "name": "deploy_local.py",
-            "size": 27406,
+            "size": 27300,
             "extension": ".py"
           },
           {
@@ -24868,8 +24848,8 @@
       },
       {
         "language": "SQL",
-        "file_count": 8,
-        "total_bytes": 347824,
+        "file_count": 9,
+        "total_bytes": 349468,
         "percentage": 1.04,
         "files": [
           {
@@ -24881,19 +24861,19 @@
           {
             "path": "no_fluxo_backend/docs/supabase_migrations/latest_init_from_export.sql",
             "name": "latest_init_from_export.sql",
-            "size": 134542,
+            "size": 133533,
             "extension": ".sql"
           },
           {
             "path": "no_fluxo_backend/docs/supabase_migrations/casar_disciplinas_function.sql",
             "name": "casar_disciplinas_function.sql",
-            "size": 32906,
+            "size": 33623,
             "extension": ".sql"
           },
           {
             "path": "no_fluxo_backend/scripts/migrations/export_schema_rpc.sql",
             "name": "export_schema_rpc.sql",
-            "size": 20844,
+            "size": 21312,
             "extension": ".sql"
           },
           {
@@ -24909,9 +24889,15 @@
             "extension": ".sql"
           },
           {
+            "path": "no_fluxo_backend/docs/supabase_migrations/security_scans.sql",
+            "name": "security_scans.sql",
+            "size": 2975,
+            "extension": ".sql"
+          },
+          {
             "path": "no_fluxo_backend/nova_view_equivalencias.sql",
             "name": "nova_view_equivalencias.sql",
-            "size": 3326,
+            "size": 1819,
             "extension": ".sql"
           },
           {
@@ -24926,7 +24912,7 @@
         "language": "HTML",
         "file_count": 14,
         "total_bytes": 268419,
-        "percentage": 0.81,
+        "percentage": 0.8,
         "files": [
           {
             "path": "prototipo/src/pages/fluxogramas/engenharia-software.html",
@@ -25375,13 +25361,13 @@
       {
         "language": "Git Ignore",
         "file_count": 3,
-        "total_bytes": 3712,
+        "total_bytes": 4358,
         "percentage": 0.01,
         "files": [
           {
             "path": ".gitignore",
             "name": ".gitignore",
-            "size": 3198,
+            "size": 3844,
             "extension": ".gitignore"
           },
           {
@@ -25447,6 +25433,20 @@
             "name": "start_api.bat",
             "size": 386,
             "extension": ".bat"
+          }
+        ]
+      },
+      {
+        "language": "TOML",
+        "file_count": 1,
+        "total_bytes": 1351,
+        "percentage": 0.0,
+        "files": [
+          {
+            "path": ".gitleaks.toml",
+            "name": ".gitleaks.toml",
+            "size": 1351,
+            "extension": ".toml"
           }
         ]
       },
@@ -25520,7 +25520,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.732285",
+      "extracted_at": "2026-09-06T10:02:17.345903",
       "file_path": "data/silver/language_analysis_2025-1-NoFluxoUNB.json"
     }
   },
@@ -25528,7 +25528,7 @@
     "repository": "2024-1-EducaMinas-backend",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:47.947983",
+    "analyzed_at": "2026-09-06T09:58:41.655662",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -25874,7 +25874,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.747447",
+      "extracted_at": "2026-09-06T10:02:17.358307",
       "file_path": "data/silver/language_analysis_2024-1-EducaMinas-backend.json"
     }
   },
@@ -26428,7 +26428,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.750078",
+      "extracted_at": "2026-09-06T10:02:17.361646",
       "file_path": "data/silver/language_analysis_2026-1-Squad08.json"
     }
   },
@@ -26436,7 +26436,7 @@
     "repository": "2024-2-SuaFinanca",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:56.806356",
+    "analyzed_at": "2026-09-06T09:58:51.260748",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -27776,7 +27776,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:50.878803",
+      "extracted_at": "2026-09-06T10:02:17.466699",
       "file_path": "data/silver/language_analysis_2024-2-SuaFinanca.json"
     }
   },
@@ -27784,7 +27784,7 @@
     "repository": "2025-2-Lumina",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:12.751194",
+    "analyzed_at": "2026-09-06T09:59:07.426047",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -28402,7 +28402,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.126079",
+      "extracted_at": "2026-09-06T10:02:17.664103",
       "file_path": "data/silver/language_analysis_2025-2-Lumina.json"
     }
   },
@@ -28588,7 +28588,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.132977",
+      "extracted_at": "2026-09-06T10:02:17.669730",
       "file_path": "data/silver/language_analysis_2026-1-Squad06.json"
     }
   },
@@ -28596,7 +28596,7 @@
     "repository": "2024-1-Squad-10",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:46.202145",
+    "analyzed_at": "2026-09-06T09:58:39.948954",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -29042,7 +29042,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.134617",
+      "extracted_at": "2026-09-06T10:02:17.670972",
       "file_path": "data/silver/language_analysis_2024-1-Squad-10.json"
     }
   },
@@ -29050,7 +29050,7 @@
     "repository": "2024-1-MinasDeCultura",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:44.307840",
+    "analyzed_at": "2026-09-06T09:58:37.908548",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -29980,7 +29980,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.138136",
+      "extracted_at": "2026-09-06T10:02:17.673725",
       "file_path": "data/silver/language_analysis_2024-1-MinasDeCultura.json"
     }
   },
@@ -29988,7 +29988,7 @@
     "repository": "codigoruim",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:25.293804",
+    "analyzed_at": "2026-09-06T09:59:21.015036",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -30108,7 +30108,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.142672",
+      "extracted_at": "2026-09-06T10:02:17.677329",
       "file_path": "data/silver/language_analysis_codigoruim.json"
     }
   },
@@ -30116,7 +30116,7 @@
     "repository": "2025_1-Jakebot",
     "owner": "unb-mds",
     "branch": "master",
-    "analyzed_at": "2026-09-05T09:39:05.204311",
+    "analyzed_at": "2026-09-06T09:59:00.279716",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -30596,7 +30596,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.143943",
+      "extracted_at": "2026-09-06T10:02:17.678264",
       "file_path": "data/silver/language_analysis_2025_1-Jakebot.json"
     }
   },
@@ -30628,7 +30628,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.145905",
+      "extracted_at": "2026-09-06T10:02:17.679733",
       "file_path": "data/silver/language_analysis_G11-2026-2.json"
     }
   },
@@ -30636,7 +30636,7 @@
     "repository": "2024-2-Lumina",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:52.660248",
+    "analyzed_at": "2026-09-06T09:58:46.476064",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -31296,7 +31296,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.147543",
+      "extracted_at": "2026-09-06T10:02:17.680887",
       "file_path": "data/silver/language_analysis_2024-2-Lumina.json"
     }
   },
@@ -31304,19 +31304,19 @@
     "repository": "G7-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:28.733118",
+    "analyzed_at": "2026-09-06T09:59:25.237007",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 41,
-    "total_bytes": 197537,
+    "total_files": 43,
+    "total_bytes": 211370,
     "languages": [
       {
         "language": "Markdown",
-        "file_count": 26,
-        "total_bytes": 194537,
-        "percentage": 98.48,
+        "file_count": 28,
+        "total_bytes": 208370,
+        "percentage": 98.58,
         "files": [
           {
             "path": "sprints/sprint01/estudo_metodologia_agil-and-scrum.md",
@@ -31373,9 +31373,9 @@
             "extension": ".md"
           },
           {
-            "path": "skills/technology/fastapi/SKILL.md",
-            "name": "SKILL.md",
-            "size": 10011,
+            "path": "docs/estudos/docker.md",
+            "name": "docker.md",
+            "size": 10637,
             "extension": ".md"
           }
         ]
@@ -31384,7 +31384,7 @@
         "language": "Python",
         "file_count": 11,
         "total_bytes": 2329,
-        "percentage": 1.18,
+        "percentage": 1.1,
         "files": [
           {
             "path": "backend/app/schemas/avaliacao.py",
@@ -31452,7 +31452,7 @@
         "language": "Unknown",
         "file_count": 1,
         "total_bytes": 337,
-        "percentage": 0.17,
+        "percentage": 0.16,
         "files": [
           {
             "path": "backend/.env.example",
@@ -31466,7 +31466,7 @@
         "language": "Git Ignore",
         "file_count": 2,
         "total_bytes": 283,
-        "percentage": 0.14,
+        "percentage": 0.13,
         "files": [
           {
             "path": ".idea/.gitignore",
@@ -31486,7 +31486,7 @@
         "language": "Text",
         "file_count": 1,
         "total_bytes": 51,
-        "percentage": 0.03,
+        "percentage": 0.02,
         "files": [
           {
             "path": "backend/requirements.txt",
@@ -31498,7 +31498,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.151258",
+      "extracted_at": "2026-09-06T10:02:17.683836",
       "file_path": "data/silver/language_analysis_G7-2026-2.json"
     }
   },
@@ -31506,7 +31506,7 @@
     "repository": "DFemObras",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:53.897494",
+    "analyzed_at": "2026-09-06T09:58:47.884752",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -32166,7 +32166,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.154273",
+      "extracted_at": "2026-09-06T10:02:17.686112",
       "file_path": "data/silver/language_analysis_DFemObras.json"
     }
   },
@@ -32174,7 +32174,7 @@
     "repository": "Squad09-UnBHUB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:45.582104",
+    "analyzed_at": "2026-09-06T09:58:39.302678",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -32660,7 +32660,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.160051",
+      "extracted_at": "2026-09-06T10:02:17.690612",
       "file_path": "data/silver/language_analysis_Squad09-UnBHUB.json"
     }
   },
@@ -32668,7 +32668,7 @@
     "repository": "2025-2-Portal-dos-Professores",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:07.900825",
+    "analyzed_at": "2026-09-06T09:59:02.840380",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -33452,7 +33452,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.165386",
+      "extracted_at": "2026-09-06T10:02:17.694685",
       "file_path": "data/silver/language_analysis_2025-2-Portal-dos-Professores.json"
     }
   },
@@ -33460,7 +33460,7 @@
     "repository": "Gastos-DF-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:47.260104",
+    "analyzed_at": "2026-09-06T09:58:40.986859",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -34192,7 +34192,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.191819",
+      "extracted_at": "2026-09-06T10:02:17.715755",
       "file_path": "data/silver/language_analysis_Gastos-DF-Squad12.json"
     }
   },
@@ -34200,7 +34200,7 @@
     "repository": "teste",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:36.194715",
+    "analyzed_at": "2026-09-06T09:58:29.985188",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -34264,7 +34264,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.235648",
+      "extracted_at": "2026-09-06T10:02:17.750366",
       "file_path": "data/silver/language_analysis_teste.json"
     }
   },
@@ -34272,7 +34272,7 @@
     "repository": "G2-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:26.366589",
+    "analyzed_at": "2026-09-06T09:59:22.193964",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -34362,7 +34362,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.236645",
+      "extracted_at": "2026-09-06T10:02:17.751072",
       "file_path": "data/silver/language_analysis_G2-2026-2.json"
     }
   },
@@ -34370,7 +34370,7 @@
     "repository": "2023.2-LicitaX",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:37.527621",
+    "analyzed_at": "2026-09-06T09:58:31.166096",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -34668,7 +34668,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.237561",
+      "extracted_at": "2026-09-06T10:02:17.751799",
       "file_path": "data/silver/language_analysis_2023.2-LicitaX.json"
     }
   },
@@ -34676,7 +34676,7 @@
     "repository": "Qualifying-Software-Engineers-Undergraduates-in-DevOps",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:22.859477",
+    "analyzed_at": "2026-09-06T09:58:17.061272",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -36560,7 +36560,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.280062",
+      "extracted_at": "2026-09-06T10:02:17.785350",
       "file_path": "data/silver/language_analysis_Qualifying-Software-Engineers-Undergraduates-in-DevOps.json"
     }
   },
@@ -36568,7 +36568,7 @@
     "repository": "2024-2-Squad01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:49.991528",
+    "analyzed_at": "2026-09-06T09:58:43.783908",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -37386,7 +37386,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.362401",
+      "extracted_at": "2026-09-06T10:02:17.850763",
       "file_path": "data/silver/language_analysis_2024-2-Squad01.json"
     }
   },
@@ -37394,19 +37394,19 @@
     "repository": "2026-2-VeritasIA",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:19.378346",
+    "analyzed_at": "2026-09-06T09:59:14.407157",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
     "total_files": 171,
-    "total_bytes": 3123276,
+    "total_bytes": 3004954,
     "languages": [
       {
         "language": "PNG Image",
         "file_count": 6,
         "total_bytes": 1955818,
-        "percentage": 62.62,
+        "percentage": 65.09,
         "files": [
           {
             "path": "Frontend/src/assets/logo2.png",
@@ -37449,8 +37449,8 @@
       {
         "language": "JSON",
         "file_count": 12,
-        "total_bytes": 662728,
-        "percentage": 21.22,
+        "total_bytes": 544406,
+        "percentage": 18.12,
         "files": [
           {
             "path": "Frontend/package-lock.json",
@@ -37467,13 +37467,13 @@
           {
             "path": "scrapers/resultados/resultados.json",
             "name": "resultados.json",
-            "size": 99835,
+            "size": 40197,
             "extension": ".json"
           },
           {
             "path": "scrapers/resultados/g1.json",
             "name": "g1.json",
-            "size": 86000,
+            "size": 37324,
             "extension": ".json"
           },
           {
@@ -37489,18 +37489,6 @@
             "extension": ".json"
           },
           {
-            "path": "scrapers/resultados/metropoles.json",
-            "name": "metropoles.json",
-            "size": 6801,
-            "extension": ".json"
-          },
-          {
-            "path": "scrapers/resultados/cnn.json",
-            "name": "cnn.json",
-            "size": 3215,
-            "extension": ".json"
-          },
-          {
             "path": "scrapers/resultados/r7.json",
             "name": "r7.json",
             "size": 2525,
@@ -37511,6 +37499,18 @@
             "name": "package.json",
             "size": 1059,
             "extension": ".json"
+          },
+          {
+            "path": "package.json",
+            "name": "package.json",
+            "size": 1026,
+            "extension": ".json"
+          },
+          {
+            "path": "scrapers/resultados/cnn.json",
+            "name": "cnn.json",
+            "size": 4,
+            "extension": ".json"
           }
         ]
       },
@@ -37518,7 +37518,7 @@
         "language": "Python",
         "file_count": 36,
         "total_bytes": 123108,
-        "percentage": 3.94,
+        "percentage": 4.1,
         "files": [
           {
             "path": "docs/productivity/collect_metrics.py",
@@ -37586,7 +37586,7 @@
         "language": "Unknown",
         "file_count": 16,
         "total_bytes": 117140,
-        "percentage": 3.75,
+        "percentage": 3.9,
         "files": [
           {
             "path": "backend/tests/__pycache__/test_dashboard_routes.cpython-314-pytest-9.1.1.pyc",
@@ -37654,7 +37654,7 @@
         "language": "Markdown",
         "file_count": 46,
         "total_bytes": 79157,
-        "percentage": 2.53,
+        "percentage": 2.63,
         "files": [
           {
             "path": "docs/backend/LangChain.md",
@@ -37722,7 +37722,7 @@
         "language": "JavaScript",
         "file_count": 26,
         "total_bytes": 71051,
-        "percentage": 2.27,
+        "percentage": 2.36,
         "files": [
           {
             "path": "Frontend/src/pages/Noticias.jsx",
@@ -37790,7 +37790,7 @@
         "language": "HTML",
         "file_count": 4,
         "total_bytes": 50878,
-        "percentage": 1.63,
+        "percentage": 1.69,
         "files": [
           {
             "path": "docs/dashboard/dashboard.html",
@@ -37822,7 +37822,7 @@
         "language": "CSS",
         "file_count": 8,
         "total_bytes": 44720,
-        "percentage": 1.43,
+        "percentage": 1.49,
         "files": [
           {
             "path": "Frontend/src/App.css",
@@ -37878,7 +37878,7 @@
         "language": "YAML",
         "file_count": 5,
         "total_bytes": 8607,
-        "percentage": 0.28,
+        "percentage": 0.29,
         "files": [
           {
             "path": ".github/workflows/static.yml",
@@ -37916,7 +37916,7 @@
         "language": "SVG Image",
         "file_count": 1,
         "total_bytes": 4126,
-        "percentage": 0.13,
+        "percentage": 0.14,
         "files": [
           {
             "path": "Frontend/src/assets/react.svg",
@@ -37956,7 +37956,7 @@
         "language": "No Extension",
         "file_count": 1,
         "total_bytes": 1060,
-        "percentage": 0.03,
+        "percentage": 0.04,
         "files": [
           {
             "path": "LICENSE",
@@ -38042,7 +38042,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.368497",
+      "extracted_at": "2026-09-06T10:02:17.855318",
       "file_path": "data/silver/language_analysis_2026-2-VeritasIA.json"
     }
   },
@@ -38050,7 +38050,7 @@
     "repository": "VIDAProject",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:04.583095",
+    "analyzed_at": "2026-09-06T09:58:59.512163",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -38576,7 +38576,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.372646",
+      "extracted_at": "2026-09-06T10:02:17.858444",
       "file_path": "data/silver/language_analysis_VIDAProject.json"
     }
   },
@@ -38584,7 +38584,7 @@
     "repository": "2023.2_Licitaiba",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:38.203397",
+    "analyzed_at": "2026-09-06T09:58:31.762097",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -38856,7 +38856,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.375220",
+      "extracted_at": "2026-09-06T10:02:17.860411",
       "file_path": "data/silver/language_analysis_2023.2_Licitaiba.json"
     }
   },
@@ -38864,7 +38864,7 @@
     "repository": "2024-2-Datazonia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:55.568934",
+    "analyzed_at": "2026-09-06T09:58:49.849765",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -39192,7 +39192,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.376774",
+      "extracted_at": "2026-09-06T10:02:17.861553",
       "file_path": "data/silver/language_analysis_2024-2-Datazonia.json"
     }
   },
@@ -39200,7 +39200,7 @@
     "repository": "2023-2-Squad09-Gotinha",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:33.887638",
+    "analyzed_at": "2026-09-06T09:58:27.895622",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -39776,7 +39776,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.379424",
+      "extracted_at": "2026-09-06T10:02:17.863592",
       "file_path": "data/silver/language_analysis_2023-2-Squad09-Gotinha.json"
     }
   },
@@ -39784,7 +39784,7 @@
     "repository": "2024-1-EducaMinas-frontend",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:42.997342",
+    "analyzed_at": "2026-09-06T09:58:36.610667",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -40376,7 +40376,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.384283",
+      "extracted_at": "2026-09-06T10:02:17.869117",
       "file_path": "data/silver/language_analysis_2024-1-EducaMinas-frontend.json"
     }
   },
@@ -40384,7 +40384,7 @@
     "repository": "Avalia",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:17.908403",
+    "analyzed_at": "2026-09-06T09:59:12.560867",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -40488,7 +40488,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.387470",
+      "extracted_at": "2026-09-06T10:02:17.872664",
       "file_path": "data/silver/language_analysis_Avalia.json"
     }
   },
@@ -40496,7 +40496,7 @@
     "repository": "Sonorus-2025.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:00.858809",
+    "analyzed_at": "2026-09-06T09:58:55.126750",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -41054,7 +41054,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.389251",
+      "extracted_at": "2026-09-06T10:02:17.873937",
       "file_path": "data/silver/language_analysis_Sonorus-2025.1.json"
     }
   },
@@ -41062,7 +41062,7 @@
     "repository": "2023-2-Squad05-TesouroMineiro",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:30.487491",
+    "analyzed_at": "2026-09-06T09:58:24.444099",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -41738,7 +41738,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.413283",
+      "extracted_at": "2026-09-06T10:02:17.892511",
       "file_path": "data/silver/language_analysis_2023-2-Squad05-TesouroMineiro.json"
     }
   },
@@ -41746,7 +41746,7 @@
     "repository": "MDS-MonitoraBSB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:54.425103",
+    "analyzed_at": "2026-09-06T09:58:48.545192",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -42350,7 +42350,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.455702",
+      "extracted_at": "2026-09-06T10:02:17.926254",
       "file_path": "data/silver/language_analysis_MDS-MonitoraBSB.json"
     }
   },
@@ -42410,7 +42410,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.458667",
+      "extracted_at": "2026-09-06T10:02:17.928689",
       "file_path": "data/silver/language_analysis_ContraDito.json"
     }
   },
@@ -42418,7 +42418,7 @@
     "repository": "2023-2-Squad01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:23.437213",
+    "analyzed_at": "2026-09-06T09:58:17.720430",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -42510,7 +42510,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.459300",
+      "extracted_at": "2026-09-06T10:02:17.929086",
       "file_path": "data/silver/language_analysis_2023-2-Squad01.json"
     }
   },
@@ -42518,19 +42518,19 @@
     "repository": "DFemObras-2025.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:04.012189",
+    "analyzed_at": "2026-09-06T09:58:58.829404",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
     "total_files": 168,
-    "total_bytes": 15848285,
+    "total_bytes": 15826876,
     "languages": [
       {
         "language": "JPEG Image",
         "file_count": 33,
         "total_bytes": 6730743,
-        "percentage": 42.47,
+        "percentage": 42.53,
         "files": [
           {
             "path": "TestesMapa/documentação/fotos/nathan.jpg",
@@ -42598,7 +42598,7 @@
         "language": "PNG Image",
         "file_count": 30,
         "total_bytes": 5963641,
-        "percentage": 37.63,
+        "percentage": 37.68,
         "files": [
           {
             "path": "docs/Documento Responsividade/obras-desktop.png",
@@ -42665,8 +42665,8 @@
       {
         "language": "JSON",
         "file_count": 6,
-        "total_bytes": 2164920,
-        "percentage": 13.66,
+        "total_bytes": 2143511,
+        "percentage": 13.54,
         "files": [
           {
             "path": "TestesMapa/obrasgov/obras_com_lat_long.json",
@@ -42687,12 +42687,6 @@
             "extension": ".json"
           },
           {
-            "path": "TestesMapa/obrasgov/src/obras_com_lat_long.json",
-            "name": "obras_com_lat_long.json",
-            "size": 21411,
-            "extension": ".json"
-          },
-          {
             "path": "TestesMapa/package.json",
             "name": "package.json",
             "size": 531,
@@ -42703,6 +42697,12 @@
             "name": "package.json",
             "size": 423,
             "extension": ".json"
+          },
+          {
+            "path": "TestesMapa/obrasgov/src/obras_com_lat_long.json",
+            "name": "obras_com_lat_long.json",
+            "size": 2,
+            "extension": ".json"
           }
         ]
       },
@@ -42710,7 +42710,7 @@
         "language": "PDF",
         "file_count": 3,
         "total_bytes": 540847,
-        "percentage": 3.41,
+        "percentage": 3.42,
         "files": [
           {
             "path": "docs/Documento de Arquitetura/DiagramaArquitetura.pdf",
@@ -42804,7 +42804,7 @@
         "language": "Markdown",
         "file_count": 44,
         "total_bytes": 132288,
-        "percentage": 0.83,
+        "percentage": 0.84,
         "files": [
           {
             "path": "docs/estudos/APIObrasgov.md",
@@ -43144,7 +43144,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.461091",
+      "extracted_at": "2026-09-06T10:02:17.930413",
       "file_path": "data/silver/language_analysis_DFemObras-2025.1.json"
     }
   },
@@ -43152,7 +43152,7 @@
     "repository": "LicitaBSB-24.1",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:41.869296",
+    "analyzed_at": "2026-09-06T09:58:35.413617",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -44048,7 +44048,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.467174",
+      "extracted_at": "2026-09-06T10:02:17.935004",
       "file_path": "data/silver/language_analysis_LicitaBSB-24.1.json"
     }
   },
@@ -44056,7 +44056,7 @@
     "repository": "G1-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:25.830989",
+    "analyzed_at": "2026-09-06T09:59:21.542992",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -44086,7 +44086,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.473468",
+      "extracted_at": "2026-09-06T10:02:17.940057",
       "file_path": "data/silver/language_analysis_G1-2026-2.json"
     }
   },
@@ -44094,7 +44094,7 @@
     "repository": "2026-1-SafeStreets",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:18.373294",
+    "analyzed_at": "2026-09-06T09:59:13.225130",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -44798,7 +44798,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.475847",
+      "extracted_at": "2026-09-06T10:02:17.941837",
       "file_path": "data/silver/language_analysis_2026-1-SafeStreets.json"
     }
   },
@@ -44806,7 +44806,7 @@
     "repository": "2026-1-ProtectKids",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:24.208298",
+    "analyzed_at": "2026-09-06T09:59:19.806859",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -45338,7 +45338,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.481505",
+      "extracted_at": "2026-09-06T10:02:17.946254",
       "file_path": "data/silver/language_analysis_2026-1-ProtectKids.json"
     }
   },
@@ -45346,7 +45346,7 @@
     "repository": "G3-2026-2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:26.796223",
+    "analyzed_at": "2026-09-06T09:59:22.821737",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -45382,7 +45382,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.484086",
+      "extracted_at": "2026-09-06T10:02:17.948229",
       "file_path": "data/silver/language_analysis_G3-2026-2.json"
     }
   },
@@ -45390,7 +45390,7 @@
     "repository": "2025-2-Integralizei_UnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:09.337374",
+    "analyzed_at": "2026-09-06T09:59:04.246654",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -46352,7 +46352,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.486768",
+      "extracted_at": "2026-09-06T10:02:17.950268",
       "file_path": "data/silver/language_analysis_2025-2-Integralizei_UnB.json"
     }
   },
@@ -46360,7 +46360,7 @@
     "repository": "Projeto-P.I.T.E.R",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:07.286649",
+    "analyzed_at": "2026-09-06T09:59:02.189307",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -46840,7 +46840,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.494231",
+      "extracted_at": "2026-09-06T10:02:17.956457",
       "file_path": "data/silver/language_analysis_Projeto-P.I.T.E.R.json"
     }
   },
@@ -46848,7 +46848,7 @@
     "repository": "hugoplate",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:05.820443",
+    "analyzed_at": "2026-09-06T09:59:00.928952",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -47484,7 +47484,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.498995",
+      "extracted_at": "2026-09-06T10:02:17.960421",
       "file_path": "data/silver/language_analysis_hugoplate.json"
     }
   },
@@ -47492,18 +47492,18 @@
     "repository": "2025-2-Squad-01",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:06.496608",
+    "analyzed_at": "2026-09-06T09:59:01.582242",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
-    "total_files": 1370,
-    "total_bytes": 381528548,
+    "total_files": 1374,
+    "total_bytes": 382110905,
     "languages": [
       {
         "language": "JSON",
-        "file_count": 1028,
-        "total_bytes": 375829581,
+        "file_count": 1032,
+        "total_bytes": 376411938,
         "percentage": 98.51,
         "files": [
           {
@@ -47515,13 +47515,13 @@
           {
             "path": "data/bronze/issues_all.json",
             "name": "issues_all.json",
-            "size": 33049878,
+            "size": 33259120,
             "extension": ".json"
           },
           {
             "path": "data/bronze/prs_all.json",
             "name": "prs_all.json",
-            "size": 22479527,
+            "size": 22497291,
             "extension": ".json"
           },
           {
@@ -47533,7 +47533,7 @@
           {
             "path": "data/bronze/commits_all.json",
             "name": "commits_all.json",
-            "size": 12619167,
+            "size": 12630124,
             "extension": ".json"
           },
           {
@@ -47551,7 +47551,7 @@
           {
             "path": "data/silver/temporal_events.json",
             "name": "temporal_events.json",
-            "size": 8333640,
+            "size": 8356795,
             "extension": ".json"
           },
           {
@@ -48156,7 +48156,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.510488",
+      "extracted_at": "2026-09-06T10:02:17.998785",
       "file_path": "data/silver/language_analysis_2025-2-Squad-01.json"
     }
   },
@@ -48164,7 +48164,7 @@
     "repository": "2025-1-GovInsights",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:02.180352",
+    "analyzed_at": "2026-09-06T09:58:56.515025",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -48634,7 +48634,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.528965",
+      "extracted_at": "2026-09-06T10:02:18.013206",
       "file_path": "data/silver/language_analysis_2025-1-GovInsights.json"
     }
   },
@@ -48686,7 +48686,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.532071",
+      "extracted_at": "2026-09-06T10:02:18.015591",
       "file_path": "data/silver/language_analysis_2026-1-Squad09.json"
     }
   },
@@ -48694,7 +48694,7 @@
     "repository": "2024-2-Urbanize",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:50.690245",
+    "analyzed_at": "2026-09-06T09:58:44.480349",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -49754,7 +49754,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.553470",
+      "extracted_at": "2026-09-06T10:02:18.032236",
       "file_path": "data/silver/language_analysis_2024-2-Urbanize.json"
     }
   },
@@ -49762,7 +49762,7 @@
     "repository": "2026-1-Squad4-Dito_e_Feito",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:19.932907",
+    "analyzed_at": "2026-09-06T09:59:14.944886",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -50348,7 +50348,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.627327",
+      "extracted_at": "2026-09-06T10:02:18.067033",
       "file_path": "data/silver/language_analysis_2026-1-Squad4-Dito_e_Feito.json"
     }
   },
@@ -50356,7 +50356,7 @@
     "repository": "2026-1-LegisKids",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:21.589651",
+    "analyzed_at": "2026-09-06T09:59:16.746085",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -50992,7 +50992,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.633089",
+      "extracted_at": "2026-09-06T10:02:18.071364",
       "file_path": "data/silver/language_analysis_2026-1-LegisKids.json"
     }
   },
@@ -51000,13 +51000,13 @@
     "repository": "2026-1-Mapa_L.I.L.A.S",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:18.941129",
+    "analyzed_at": "2026-09-06T09:59:13.867371",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
     },
     "total_files": 337,
-    "total_bytes": 19856915,
+    "total_bytes": 19856975,
     "languages": [
       {
         "language": "PDF",
@@ -51407,7 +51407,7 @@
       {
         "language": "JSON",
         "file_count": 13,
-        "total_bytes": 253482,
+        "total_bytes": 253542,
         "percentage": 1.28,
         "files": [
           {
@@ -51431,7 +51431,7 @@
           {
             "path": "docs/scrum/metrics.json",
             "name": "metrics.json",
-            "size": 8817,
+            "size": 8877,
             "extension": ".json"
           },
           {
@@ -51814,7 +51814,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.641489",
+      "extracted_at": "2026-09-06T10:02:18.077995",
       "file_path": "data/silver/language_analysis_2026-1-Mapa_L.I.L.A.S.json"
     }
   },
@@ -51822,7 +51822,7 @@
     "repository": "ParticipeMais",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:59.195451",
+    "analyzed_at": "2026-09-06T09:58:53.730063",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -52402,7 +52402,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.649097",
+      "extracted_at": "2026-09-06T10:02:18.083847",
       "file_path": "data/silver/language_analysis_ParticipeMais.json"
     }
   },
@@ -52502,7 +52502,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.653747",
+      "extracted_at": "2026-09-06T10:02:18.087843",
       "file_path": "data/silver/language_analysis_2026-1-Squad4.json"
     }
   },
@@ -52510,7 +52510,7 @@
     "repository": "2026-1-P.R.I.S.M.A",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:24.821816",
+    "analyzed_at": "2026-09-06T09:59:20.381430",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -52984,7 +52984,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.655237",
+      "extracted_at": "2026-09-06T10:02:18.088986",
       "file_path": "data/silver/language_analysis_2026-1-P.R.I.S.M.A.json"
     }
   },
@@ -52992,7 +52992,7 @@
     "repository": "CoOps",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:32.007676",
+    "analyzed_at": "2026-09-06T09:59:29.465417",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -53636,7 +53636,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.659503",
+      "extracted_at": "2026-09-06T10:02:18.093890",
       "file_path": "data/silver/language_analysis_CoOps.json"
     }
   },
@@ -53644,7 +53644,7 @@
     "repository": "2025-1-RelatAI",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:03.395860",
+    "analyzed_at": "2026-09-06T09:58:58.206071",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -54160,7 +54160,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.664067",
+      "extracted_at": "2026-09-06T10:02:18.098676",
       "file_path": "data/silver/language_analysis_2025-1-RelatAI.json"
     }
   },
@@ -54168,7 +54168,7 @@
     "repository": "2025-2-Mural-UnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:12.030830",
+    "analyzed_at": "2026-09-06T09:59:06.666698",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -55046,7 +55046,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.670350",
+      "extracted_at": "2026-09-06T10:02:18.103649",
       "file_path": "data/silver/language_analysis_2025-2-Mural-UnB.json"
     }
   },
@@ -55054,7 +55054,7 @@
     "repository": "2026-1-squad0x",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:22.058400",
+    "analyzed_at": "2026-09-06T09:59:17.324011",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -55092,7 +55092,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.679284",
+      "extracted_at": "2026-09-06T10:02:18.110675",
       "file_path": "data/silver/language_analysis_2026-1-squad0x.json"
     }
   },
@@ -55100,7 +55100,7 @@
     "repository": ".github",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:39:17.510288",
+    "analyzed_at": "2026-09-06T09:59:11.847771",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -55124,7 +55124,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.679818",
+      "extracted_at": "2026-09-06T10:02:18.111031",
       "file_path": "data/silver/language_analysis_.github.json"
     }
   },
@@ -55196,7 +55196,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.680307",
+      "extracted_at": "2026-09-06T10:02:18.111347",
       "file_path": "data/silver/language_analysis_2026-2-Squad03.json"
     }
   },
@@ -55204,7 +55204,7 @@
     "repository": "squad03-r2",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:36.791119",
+    "analyzed_at": "2026-09-06T09:58:30.553427",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -55438,7 +55438,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.681090",
+      "extracted_at": "2026-09-06T10:02:18.111874",
       "file_path": "data/silver/language_analysis_squad03-r2.json"
     }
   },
@@ -55446,7 +55446,7 @@
     "repository": "2024-1-Gastos-DF-Doc-Squad12",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:49.250886",
+    "analyzed_at": "2026-09-06T09:58:42.975630",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -56438,7 +56438,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:51.789987",
+      "extracted_at": "2026-09-06T10:02:18.202456",
       "file_path": "data/silver/language_analysis_2024-1-Gastos-DF-Doc-Squad12.json"
     }
   },
@@ -56446,7 +56446,7 @@
     "repository": "2024-1-forUnB",
     "owner": "unb-mds",
     "branch": "main",
-    "analyzed_at": "2026-09-05T09:38:40.639070",
+    "analyzed_at": "2026-09-06T09:58:34.164496",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -57254,7 +57254,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:52.006096",
+      "extracted_at": "2026-09-06T10:02:18.377567",
       "file_path": "data/silver/language_analysis_2024-1-forUnB.json"
     }
   },
@@ -57262,7 +57262,7 @@
     "repository": "2024-1-squad04",
     "owner": "unb-mds",
     "branch": "dev",
-    "analyzed_at": "2026-09-05T09:38:42.416252",
+    "analyzed_at": "2026-09-06T09:58:35.960460",
     "sample_config": {
       "max_files_per_language": 10,
       "strategy": "largest"
@@ -57798,7 +57798,7 @@
       }
     ],
     "_metadata": {
-      "extracted_at": "2026-09-05T09:42:52.019959",
+      "extracted_at": "2026-09-06T10:02:18.388498",
       "file_path": "data/silver/language_analysis_2024-1-squad04.json"
     }
   }
