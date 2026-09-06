@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-05T08:42:19.420709",
+      "extracted_at": "2026-09-06T09:01:48.196020",
       "file_path": "data/bronze/issues_G6-2026-2.json",
       "record_count": 12
     }
@@ -94,11 +94,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
@@ -250,11 +250,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
@@ -406,11 +406,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
@@ -562,11 +562,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
@@ -663,7 +663,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -718,18 +718,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-09-04T22:41:59Z",
-    "updated_at": "2026-09-04T22:41:59Z",
-    "closed_at": null,
+    "updated_at": "2026-09-05T22:10:33Z",
+    "closed_at": "2026-09-05T22:10:33Z",
     "assignee": {
       "login": "eusojj",
       "id": 227901692,
@@ -766,8 +766,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### O que precisa ser feito?\n\nDando continuidade ao estudo básico de SQLite feito na Sprint 0, aprofundar com foco em ambiente de desenvolvimento: como o Django se conecta a ele, e como isso funciona dentro de um container Docker (persistência do arquivo do banco entre reinicializações do container, uso de volume).\n\n### Por quê?\n\nSQLite foi definido como o banco de dados de desenvolvimento do projeto. Esta issue não substitui a de estudo básico da Sprint 0 — ela dá sequência, conectando o que já foi visto ali (SQLite + Django) com o que o grupo está estudando de Docker, indo em direção ao ambiente de desenvolvimento definitivo.\n\n### Como saber que está pronta\n\n - [ ] Revisar rapidamente os conceitos básicos vistos na Sprint 0 (por que SQLite é adequado para desenvolvimento local)\n\n \n\n- [ ] Saber criar uma tabela simples e rodar consultas básicas (SELECT, INSERT, UPDATE)\n\n \n\n- [ ] Entender como persistir o arquivo do SQLite usando um volume Docker (para não perder dados ao reiniciar o container)\n\n \n\n- [ ] Compartilhar um resumo/anotações com o grupo\n\n### Área\n\nBanco de Dados\n\n### Sprint\n\nSprint 1",
-    "closed_by": null,
+    "body": "### O que precisa ser feito?\n\nDando continuidade ao estudo básico de SQLite feito na Sprint 0, aprofundar com foco em ambiente de desenvolvimento: como o Django se conecta a ele, e como isso funciona dentro de um container Docker (persistência do arquivo do banco entre reinicializações do container, uso de volume).\n\n### Por quê?\n\nSQLite foi definido como o banco de dados de desenvolvimento do projeto. Esta issue não substitui a de estudo básico da Sprint 0 — ela dá sequência, conectando o que já foi visto ali (SQLite + Django) com o que o grupo está estudando de Docker, indo em direção ao ambiente de desenvolvimento definitivo.\n\n### Como saber que está pronta\n\n - [x] Revisar rapidamente os conceitos básicos vistos na Sprint 0 (por que SQLite é adequado para desenvolvimento local)\n\n \n\n- [x] Saber criar uma tabela simples e rodar consultas básicas (SELECT, INSERT, UPDATE)\n\n \n\n- [x] Entender como persistir o arquivo do SQLite usando um volume Docker (para não perder dados ao reiniciar o container)\n\n \n\n- [x] Compartilhar um resumo/anotações com o grupo\n\n### Área\n\nBanco de Dados\n\n### Sprint\n\nSprint 1",
+    "closed_by": {
+      "login": "eusojj",
+      "id": 227901692,
+      "node_id": "U_kgDODZWA_A",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227901692?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/eusojj",
+      "html_url": "https://github.com/eusojj",
+      "followers_url": "https://api.github.com/users/eusojj/followers",
+      "following_url": "https://api.github.com/users/eusojj/following{/other_user}",
+      "gists_url": "https://api.github.com/users/eusojj/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/eusojj/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/eusojj/subscriptions",
+      "organizations_url": "https://api.github.com/users/eusojj/orgs",
+      "repos_url": "https://api.github.com/users/eusojj/repos",
+      "events_url": "https://api.github.com/users/eusojj/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/eusojj/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G6-2026-2/issues/8/reactions",
       "total_count": 0,
@@ -782,7 +802,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G6-2026-2/issues/8/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G6-2026-2"
   },
@@ -874,11 +894,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 6,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T22:36:00Z",
-      "updated_at": "2026-09-04T23:44:49Z",
+      "updated_at": "2026-09-05T22:10:33Z",
       "due_on": "2026-09-06T00:00:00Z",
       "closed_at": null
     },
