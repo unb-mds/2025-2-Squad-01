@@ -2,8 +2,44 @@
   "owner": "unb-mds",
   "repository": "G3-2026-2",
   "branch": "main",
-  "sha": "cba38d074849d0d419e7b20782104744241311ea",
+  "sha": "b0bae15044303db1c4e56740fdc2f1a21d5bf905",
   "tree": [
+    {
+      "name": ".github",
+      "path": ".github",
+      "type": "directory",
+      "sha": "e88c0fa42d1b327d2f72b7bf079f46da0b627c66",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": ".github/workflows/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 0,
+      "is_binary": false
+    },
     {
       "name": "README.md",
       "path": "README.md",
@@ -15,10 +51,188 @@
       "is_binary": false
     },
     {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "80a41afe5faa4edf3b3ec2d8ecf11af44cebf58d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "alembic",
+      "path": "backend/alembic",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/alembic/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "backend/app",
+      "type": "directory",
+      "sha": "329a46bf0d98ea56df7961476dbafe83deba4e1a",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "core",
+      "path": "backend/app/core",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/core/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "domain",
+      "path": "backend/app/domain",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/domain/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "models",
+      "path": "backend/app/models",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/models/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "routers",
+      "path": "backend/app/routers",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/routers/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "schemas",
+      "path": "backend/app/schemas",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/schemas/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "scrapers",
+      "path": "backend/app/scrapers",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/scrapers/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "tasks",
+      "path": "backend/app/tasks",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/app/tasks/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/tests",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "backend/tests/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "9f146ea589ab8ccf161ff46956222ba749d9f48a",
+      "sha": "b44fe246e7990d753ab115e8db4f5b3744a41ed6",
       "mode": "040000",
       "children": []
     },
@@ -26,37 +240,193 @@
       "name": "ARQUITETURA.md",
       "path": "docs/ARQUITETURA.md",
       "type": "file",
-      "sha": "b08bef9805d892ba53542aa36726f0fe034ee2ca",
+      "sha": "97c137b219cfa545c53293ed50c28d859ab225ae",
       "mode": "100644",
       "extension": ".md",
-      "size": 6318,
+      "size": 6672,
       "is_binary": false
     },
     {
       "name": "REQUISITOS.md",
       "path": "docs/REQUISITOS.md",
       "type": "file",
-      "sha": "7874dd7141354fab54f3bcc16f9ddf5c03571d05",
+      "sha": "811fd7a18fdf31b56d4d29edc95ea5b6aa8813d3",
       "mode": "100644",
       "extension": ".md",
-      "size": 7010,
+      "size": 6722,
+      "is_binary": false
+    },
+    {
+      "name": "estudos",
+      "path": "docs/estudos",
+      "type": "directory",
+      "sha": "eda446360f6f236ac57ae0f363cd9acc349a07de",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "estudo-git-github.md",
+      "path": "docs/estudos/estudo-git-github.md",
+      "type": "file",
+      "sha": "9cf523f878952f7f6f34ebc855d9adecbbe6716a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 12820,
+      "is_binary": false
+    },
+    {
+      "name": "estudo-html.md",
+      "path": "docs/estudos/estudo-html.md",
+      "type": "file",
+      "sha": "3f32fb95ff8abb8de0daf2192d18646e31a692c6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2692,
+      "is_binary": false
+    },
+    {
+      "name": "estudo-web-scraping.md",
+      "path": "docs/estudos/estudo-web-scraping.md",
+      "type": "file",
+      "sha": "34ccd5b424bbc557124e9d0f6932930de26fa3d7",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 6244,
+      "is_binary": false
+    },
+    {
+      "name": "scrum",
+      "path": "docs/scrum",
+      "type": "directory",
+      "sha": "fcf36582f8f31b1a770234a844a38a9df08df204",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "dailies.md",
+      "path": "docs/scrum/dailies.md",
+      "type": "file",
+      "sha": "9af3ba7f5ad01bccdf73b591a10171eba1a6a46d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1153,
+      "is_binary": false
+    },
+    {
+      "name": "horarios.md",
+      "path": "docs/scrum/horarios.md",
+      "type": "file",
+      "sha": "9a0cd48fd36087a4ef8cca1c601d95ef8f6d359f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1641,
+      "is_binary": false
+    },
+    {
+      "name": "sprint-planning.md",
+      "path": "docs/scrum/sprint-planning.md",
+      "type": "file",
+      "sha": "7fe3d5d6e2059ba0fae281985557a16e2570dbae",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 12091,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "f283ad2b6ca5e0b1d9361db72835fb0e81e53d3b",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "app",
+      "path": "frontend/app",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "frontend/app/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "components",
+      "path": "frontend/components",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "frontend/components/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "hooks",
+      "path": "frontend/hooks",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "frontend/hooks/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "sdk",
+      "path": "sdk",
+      "type": "directory",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitkeep",
+      "path": "sdk/.gitkeep",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".gitkeep",
+      "size": 0,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-09-08T10:14:10.180279",
+  "extracted_at": "2026-09-09T10:23:44.051797",
   "method": "rest",
-  "total_items": 4,
+  "total_items": 45,
   "repository_metadata": {
     "id": 1338350364,
     "full_name": "unb-mds/G3-2026-2",
     "description": "Grupo G3 - Metodos de Desenvolvimento de Software 2026/2",
     "created_at": "2026-08-18T11:56:21Z",
-    "updated_at": "2026-09-02T12:58:45Z",
+    "updated_at": "2026-09-09T01:09:16Z",
     "language": null,
-    "size": 49,
+    "size": 66,
     "stars": 3,
     "forks": 0,
-    "open_issues": 0
+    "open_issues": 1
   }
 }

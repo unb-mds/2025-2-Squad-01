@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-08T09:13:27.072529",
+      "extracted_at": "2026-09-09T09:18:31.806000",
       "file_path": "data/bronze/issues_G9-2026-2.json",
       "record_count": 16
     }
@@ -1363,11 +1363,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-05T15:57:21Z",
+      "updated_at": "2026-09-08T19:42:14Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1551,11 +1551,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-05T15:57:21Z",
+      "updated_at": "2026-09-08T19:42:14Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1665,11 +1665,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-05T15:57:21Z",
+      "updated_at": "2026-09-08T19:42:14Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1746,7 +1746,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1822,18 +1822,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 1,
+      "open_issues": 2,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-05T15:57:21Z",
+      "updated_at": "2026-09-08T19:42:14Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:50:57Z",
-    "updated_at": "2026-09-04T17:07:49Z",
-    "closed_at": null,
+    "updated_at": "2026-09-08T19:42:14Z",
+    "closed_at": "2026-09-08T19:42:14Z",
     "assignee": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -1870,8 +1870,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "Descrição:\nAnalisar as histórias de usuário definidas para o projeto Tamburetei e identificar as necessidades relacionadas ao desenvolvimento do Frontend.\nNesta etapa, devem ser levantadas as telas, componentes, fluxos de navegação e interações necessárias para atender às histórias de usuário priorizadas.\n\nTarefas:\nAnalisar as histórias de usuário\nIdentificar as telas necessárias\nIdentificar os componentes necessários\nDefinir os principais fluxos de navegação\nRelacionar cada história de usuário às suas respectivas telas\nRegistrar as necessidades identificadas para implementação futura\n\nResultado esperado:\nTer definido o escopo inicial do Frontend e sua relação com as histórias de usuário do projeto.",
-    "closed_by": null,
+    "body": "# Definição e Estruturação do Frontend do Tamburetei\n\n## Descrição\n\nEste estudo tem como objetivo analisar as histórias de usuário definidas para o projeto Tamburetei e identificar as necessidades relacionadas ao desenvolvimento do Frontend.\n\nA partir da análise das histórias de usuário, foram levantadas as principais telas, componentes, fluxos de navegação e interações necessárias para atender às funcionalidades priorizadas do sistema, tendo como foco inicial a estrutura da Página Inicial.\n\nTambém foram consideradas as diferentes formas de acesso à plataforma, contemplando usuários cadastrados e visitantes, além da necessidade de apresentar um guia inicial de utilização e mecanismos para pesquisa e exploração dos dados acadêmicos da UnB.\n\n---\n\n## Objetivos\n\n* Analisar as histórias de usuário relacionadas ao Frontend.\n* Identificar as telas necessárias para a primeira versão da plataforma.\n* Levantar os principais componentes da interface.\n* Definir os fluxos iniciais de navegação.\n* Relacionar as histórias de usuário às respectivas funcionalidades e telas.\n* Definir as necessidades da Página Inicial.\n* Considerar as diferenças entre usuários cadastrados e visitantes.\n* Preparar o escopo inicial para a futura implementação do Frontend.\n\n---\n\n## Tópicos Abordados\n\n### Estrutura e navegação\n\n* Definição da Página Inicial como ponto de entrada da plataforma.\n* Fluxo de acesso por cadastro/login ou como visitante.\n* Definição de um guia inicial para orientar novos usuários.\n* Navegação entre pesquisa e visualização dos dados acadêmicos.\n\n### Componentes da interface\n\n* Logotipo do Tamburetei.\n* Área de identificação e acesso do usuário.\n* Campo de pesquisa.\n* Filtros para exploração dos dados.\n* Área de apresentação das métricas e indicadores acadêmicos.\n* Área para visualização dos resultados.\n* Botão de exportação dos dados.\n\n### Pesquisa e exploração de dados\n\n* Pesquisa por curso.\n* Pesquisa por disciplina.\n* Pesquisa por professor.\n* Pesquisa por materiais.\n* Filtro por campus.\n* Apresentação organizada das informações acadêmicas.\n\n### Usuários\n\n* Acesso de usuários cadastrados.\n* Acesso como visitante.\n* Diferenciação das funcionalidades disponíveis para cada tipo de usuário.\n* Possibilidade de usuários cadastrados registrarem suas experiências na plataforma.\n\n### Preparação para implementação\n\n* Utilização de dados mockados durante o desenvolvimento inicial.\n* Estruturação dos componentes para futura integração com a API.\n* Definição de requisitos de responsividade.\n* Tratamento dos estados de carregamento e erro.\n* Definição dos principais componentes que deverão possuir testes.\n\n---\n\n## Atividades Realizadas\n\n### Análise e levantamento\n\n* Analisar as histórias de usuário priorizadas para o Frontend.\n* Levantar as necessidades da Página Inicial.\n* Identificar as principais telas e componentes necessários.\n* Definir o fluxo inicial de navegação do usuário.\n* Identificar as diferenças de acesso entre usuários cadastrados e visitantes.\n* Levantar os mecanismos necessários para pesquisa e filtragem dos dados.\n\n### Definição da Página Inicial\n\n* Definir a Página Inicial como área de apresentação geral dos dados acadêmicos da UnB.\n* Definir a inclusão da identidade visual do Tamburetei.\n* Definir a apresentação das principais métricas e indicadores.\n* Definir o campo de pesquisa para cursos, disciplinas, professores e materiais.\n* Definir o filtro por campus.\n* Definir a possibilidade de exportação dos dados.\n* Definir a necessidade de uma interface responsiva.\n\n### Fluxo inicial do usuário\n\n* Definir o acesso por cadastro/login.\n* Definir a opção de entrada como visitante.\n* Definir a coleta inicial de informações do estudante para usuários cadastrados.\n* Definir a apresentação de um guia inicial de utilização.\n* Definir o direcionamento do usuário para a área de pesquisa após o guia.\n\n### Preparação para desenvolvimento\n\n* Definir a utilização de dados mockados para o desenvolvimento inicial.\n* Preparar a estrutura dos componentes para futura integração com a API.\n* Definir os estados de carregamento e erro.\n* Levantar os testes necessários para os principais componentes do Frontend.\n* Documentar as necessidades identificadas para implementação futura.\n\n---\n",
+    "closed_by": {
+      "login": "thamiresellensa",
+      "id": 202857974,
+      "node_id": "U_kgDODBdd9g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202857974?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thamiresellensa",
+      "html_url": "https://github.com/thamiresellensa",
+      "followers_url": "https://api.github.com/users/thamiresellensa/followers",
+      "following_url": "https://api.github.com/users/thamiresellensa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thamiresellensa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thamiresellensa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thamiresellensa/subscriptions",
+      "organizations_url": "https://api.github.com/users/thamiresellensa/orgs",
+      "repos_url": "https://api.github.com/users/thamiresellensa/repos",
+      "events_url": "https://api.github.com/users/thamiresellensa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thamiresellensa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/6/reactions",
       "total_count": 0,
@@ -1886,7 +1906,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/6/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
