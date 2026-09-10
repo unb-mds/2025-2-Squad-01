@@ -2,37 +2,245 @@
   "repository": "G1-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-09T10:23:42.685595",
+  "analyzed_at": "2026-09-10T10:20:22.385644",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 2,
-  "total_bytes": 3122,
+  "total_files": 49,
+  "total_bytes": 305078,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 2,
-      "total_bytes": 3122,
-      "percentage": 100.0,
+      "file_count": 29,
+      "total_bytes": 233320,
+      "percentage": 76.48,
       "files": [
         {
-          "path": "docs/backend_sprint_0.md",
-          "name": "backend_sprint_0.md",
-          "size": 2778,
+          "path": ".github/skills/speckit-checklist/SKILL.md",
+          "name": "SKILL.md",
+          "size": 22287,
           "extension": ".md"
         },
         {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 344,
+          "path": ".github/skills/speckit-clarify/SKILL.md",
+          "name": "SKILL.md",
+          "size": 19222,
           "extension": ".md"
+        },
+        {
+          "path": ".github/skills/speckit-specify/SKILL.md",
+          "name": "SKILL.md",
+          "size": 18268,
+          "extension": ".md"
+        },
+        {
+          "path": "specs/001-unb-core/tasks.md",
+          "name": "tasks.md",
+          "size": 16105,
+          "extension": ".md"
+        },
+        {
+          "path": "specs/001-unb-core/spec.md",
+          "name": "spec.md",
+          "size": 15211,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/requisitos.md",
+          "name": "requisitos.md",
+          "size": 12881,
+          "extension": ".md"
+        },
+        {
+          "path": ".github/skills/speckit-implement/SKILL.md",
+          "name": "SKILL.md",
+          "size": 12713,
+          "extension": ".md"
+        },
+        {
+          "path": ".github/skills/speckit-converge/SKILL.md",
+          "name": "SKILL.md",
+          "size": 12649,
+          "extension": ".md"
+        },
+        {
+          "path": ".github/skills/speckit-analyze/SKILL.md",
+          "name": "SKILL.md",
+          "size": 11652,
+          "extension": ".md"
+        },
+        {
+          "path": ".github/skills/speckit-tasks/SKILL.md",
+          "name": "SKILL.md",
+          "size": 10988,
+          "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "PowerShell",
+      "file_count": 6,
+      "total_bytes": 61101,
+      "percentage": 20.03,
+      "files": [
+        {
+          "path": ".specify/scripts/powershell/common.ps1",
+          "name": "common.ps1",
+          "size": 34245,
+          "extension": ".ps1"
+        },
+        {
+          "path": ".specify/scripts/powershell/create-new-feature.ps1",
+          "name": "create-new-feature.ps1",
+          "size": 13026,
+          "extension": ".ps1"
+        },
+        {
+          "path": ".specify/scripts/powershell/check-prerequisites.ps1",
+          "name": "check-prerequisites.ps1",
+          "size": 6122,
+          "extension": ".ps1"
+        },
+        {
+          "path": ".specify/scripts/powershell/setup-tasks.ps1",
+          "name": "setup-tasks.ps1",
+          "size": 3892,
+          "extension": ".ps1"
+        },
+        {
+          "path": ".specify/scripts/powershell/setup-plan.ps1",
+          "name": "setup-plan.ps1",
+          "size": 2927,
+          "extension": ".ps1"
+        },
+        {
+          "path": ".specify/scripts/powershell/resolve-template.ps1",
+          "name": "resolve-template.ps1",
+          "size": 889,
+          "extension": ".ps1"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 5,
+      "total_bytes": 4333,
+      "percentage": 1.42,
+      "files": [
+        {
+          "path": "backend/app/domain/model_disciplina.py",
+          "name": "model_disciplina.py",
+          "size": 1443,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_usuario.py",
+          "name": "model_usuario.py",
+          "size": 875,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_SubmissaoBase.py",
+          "name": "model_SubmissaoBase.py",
+          "size": 781,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_Contribuicao.py",
+          "name": "model_Contribuicao.py",
+          "size": 736,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_ConteudoAcademico.py",
+          "name": "model_ConteudoAcademico.py",
+          "size": 498,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 6,
+      "total_bytes": 3724,
+      "percentage": 1.22,
+      "files": [
+        {
+          "path": ".specify/integrations/speckit.manifest.json",
+          "name": "speckit.manifest.json",
+          "size": 1516,
+          "extension": ".json"
+        },
+        {
+          "path": ".specify/integrations/copilot.manifest.json",
+          "name": "copilot.manifest.json",
+          "size": 1285,
+          "extension": ".json"
+        },
+        {
+          "path": ".specify/workflows/workflow-registry.json",
+          "name": "workflow-registry.json",
+          "size": 369,
+          "extension": ".json"
+        },
+        {
+          "path": ".specify/integration.json",
+          "name": "integration.json",
+          "size": 279,
+          "extension": ".json"
+        },
+        {
+          "path": ".specify/init-options.json",
+          "name": "init-options.json",
+          "size": 172,
+          "extension": ".json"
+        },
+        {
+          "path": ".specify/memory/.constitution-template.json",
+          "name": ".constitution-template.json",
+          "size": 103,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 1,
+      "total_bytes": 2216,
+      "percentage": 0.73,
+      "files": [
+        {
+          "path": ".specify/workflows/speckit/workflow.yml",
+          "name": "workflow.yml",
+          "size": 2216,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 2,
+      "total_bytes": 384,
+      "percentage": 0.13,
+      "files": [
+        {
+          "path": ".specify/.gitignore",
+          "name": ".gitignore",
+          "size": 384,
+          "extension": ".gitignore"
+        },
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 0,
+          "extension": ".gitignore"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-09T10:27:14.379314",
+    "extracted_at": "2026-09-10T10:24:09.735068",
     "file_path": "data/silver/language_analysis_G1-2026-2.json"
   }
 }
