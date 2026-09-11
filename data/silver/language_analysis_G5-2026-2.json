@@ -2,38 +2,112 @@
   "repository": "G5-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-10T10:20:24.821711",
+  "analyzed_at": "2026-09-11T10:17:45.317157",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 17,
-  "total_bytes": 180322,
+  "total_files": 28,
+  "total_bytes": 189853,
   "languages": [
     {
       "language": "Lock File",
       "file_count": 1,
-      "total_bytes": 173338,
-      "percentage": 96.13,
+      "total_bytes": 172274,
+      "percentage": 90.74,
       "files": [
         {
           "path": "apps/api/uv.lock",
           "name": "uv.lock",
-          "size": 173338,
+          "size": 172274,
           "extension": ".lock"
         }
       ]
     },
     {
-      "language": "Markdown",
-      "file_count": 6,
-      "total_bytes": 4455,
-      "percentage": 2.47,
+      "language": "Python",
+      "file_count": 12,
+      "total_bytes": 8621,
+      "percentage": 4.54,
       "files": [
+        {
+          "path": "apps/api/src/db/models.py",
+          "name": "models.py",
+          "size": 2972,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/modules/auth/main.py",
+          "name": "main.py",
+          "size": 1517,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/core/dependencies.py",
+          "name": "dependencies.py",
+          "size": 870,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/utils/security.py",
+          "name": "security.py",
+          "size": 830,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/db/main.py",
+          "name": "main.py",
+          "size": 643,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/db/base.py",
+          "name": "base.py",
+          "size": 611,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/core/config.py",
+          "name": "config.py",
+          "size": 415,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/db/enums.py",
+          "name": "enums.py",
+          "size": 400,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/main.py",
+          "name": "main.py",
+          "size": 363,
+          "extension": ".py"
+        },
+        {
+          "path": "apps/api/src/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Markdown",
+      "file_count": 7,
+      "total_bytes": 6474,
+      "percentage": 3.41,
+      "files": [
+        {
+          "path": "docs/sprints/sprint-01.md",
+          "name": "sprint-01.md",
+          "size": 2091,
+          "extension": ".md"
+        },
         {
           "path": "docs/sprints/template.md",
           "name": "template.md",
-          "size": 1963,
+          "size": 1891,
           "extension": ".md"
         },
         {
@@ -72,7 +146,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 1068,
-      "percentage": 0.59,
+      "percentage": 0.56,
       "files": [
         {
           "path": "LICENSE",
@@ -85,13 +159,13 @@
     {
       "language": "TOML",
       "file_count": 1,
-      "total_bytes": 559,
-      "percentage": 0.31,
+      "total_bytes": 696,
+      "percentage": 0.37,
       "files": [
         {
           "path": "apps/api/pyproject.toml",
           "name": "pyproject.toml",
-          "size": 559,
+          "size": 696,
           "extension": ".toml"
         }
       ]
@@ -99,34 +173,14 @@
     {
       "language": "YAML",
       "file_count": 1,
-      "total_bytes": 363,
-      "percentage": 0.2,
+      "total_bytes": 364,
+      "percentage": 0.19,
       "files": [
         {
           "path": "compose.yml",
           "name": "compose.yml",
-          "size": 363,
+          "size": 364,
           "extension": ".yml"
-        }
-      ]
-    },
-    {
-      "language": "Python",
-      "file_count": 2,
-      "total_bytes": 233,
-      "percentage": 0.13,
-      "files": [
-        {
-          "path": "apps/api/src/main.py",
-          "name": "main.py",
-          "size": 233,
-          "extension": ".py"
-        },
-        {
-          "path": "apps/api/src/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
-          "extension": ".py"
         }
       ]
     },
@@ -134,7 +188,7 @@
       "language": "JSON",
       "file_count": 2,
       "total_bytes": 213,
-      "percentage": 0.12,
+      "percentage": 0.11,
       "files": [
         {
           "path": ".claude/settings.json",
@@ -153,13 +207,13 @@
     {
       "language": "Unknown",
       "file_count": 2,
-      "total_bytes": 69,
-      "percentage": 0.04,
+      "total_bytes": 119,
+      "percentage": 0.06,
       "files": [
         {
           "path": "apps/api/.env.example",
           "name": ".env.example",
-          "size": 64,
+          "size": 114,
           "extension": ".example"
         },
         {
@@ -186,7 +240,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-10T10:24:09.197640",
+    "extracted_at": "2026-09-11T10:20:45.439839",
     "file_path": "data/silver/language_analysis_G5-2026-2.json"
   }
 }

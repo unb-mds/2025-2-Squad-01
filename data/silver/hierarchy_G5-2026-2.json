@@ -2,7 +2,7 @@
   "repository": "G5-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "extracted_at": "2026-09-10T10:20:24.821711",
+  "extracted_at": "2026-09-11T10:17:45.317157",
   "hierarchy": {
     "name": "root",
     "type": "directory",
@@ -111,7 +111,7 @@
         "name": ".env.example",
         "type": "file",
         "language": "Unknown",
-        "size": 64,
+        "size": 114,
         "extension": ".example",
         "path": "apps/api/.env.example"
       },
@@ -135,7 +135,7 @@
         "name": "pyproject.toml",
         "type": "file",
         "language": "TOML",
-        "size": 559,
+        "size": 696,
         "extension": ".toml",
         "path": "apps/api/pyproject.toml"
       },
@@ -154,18 +154,128 @@
         "path": "apps/api/src/__init__.py"
       },
       {
+        "name": "core",
+        "type": "directory",
+        "path": "apps/api/src/core",
+        "children": []
+      },
+      {
+        "name": "config.py",
+        "type": "file",
+        "language": "Python",
+        "size": 415,
+        "extension": ".py",
+        "path": "apps/api/src/core/config.py"
+      },
+      {
+        "name": "dependencies.py",
+        "type": "file",
+        "language": "Python",
+        "size": 870,
+        "extension": ".py",
+        "path": "apps/api/src/core/dependencies.py"
+      },
+      {
+        "name": "db",
+        "type": "directory",
+        "path": "apps/api/src/db",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "apps/api/src/db/__init__.py"
+      },
+      {
+        "name": "base.py",
+        "type": "file",
+        "language": "Python",
+        "size": 611,
+        "extension": ".py",
+        "path": "apps/api/src/db/base.py"
+      },
+      {
+        "name": "enums.py",
+        "type": "file",
+        "language": "Python",
+        "size": 400,
+        "extension": ".py",
+        "path": "apps/api/src/db/enums.py"
+      },
+      {
         "name": "main.py",
         "type": "file",
         "language": "Python",
-        "size": 233,
+        "size": 643,
+        "extension": ".py",
+        "path": "apps/api/src/db/main.py"
+      },
+      {
+        "name": "models.py",
+        "type": "file",
+        "language": "Python",
+        "size": 2972,
+        "extension": ".py",
+        "path": "apps/api/src/db/models.py"
+      },
+      {
+        "name": "main.py",
+        "type": "file",
+        "language": "Python",
+        "size": 363,
         "extension": ".py",
         "path": "apps/api/src/main.py"
+      },
+      {
+        "name": "modules",
+        "type": "directory",
+        "path": "apps/api/src/modules",
+        "children": []
+      },
+      {
+        "name": "auth",
+        "type": "directory",
+        "path": "apps/api/src/modules/auth",
+        "children": []
+      },
+      {
+        "name": "main.py",
+        "type": "file",
+        "language": "Python",
+        "size": 1517,
+        "extension": ".py",
+        "path": "apps/api/src/modules/auth/main.py"
+      },
+      {
+        "name": "utils",
+        "type": "directory",
+        "path": "apps/api/src/utils",
+        "children": []
+      },
+      {
+        "name": "__init__.py",
+        "type": "file",
+        "language": "Python",
+        "size": 0,
+        "extension": ".py",
+        "path": "apps/api/src/utils/__init__.py"
+      },
+      {
+        "name": "security.py",
+        "type": "file",
+        "language": "Python",
+        "size": 830,
+        "extension": ".py",
+        "path": "apps/api/src/utils/security.py"
       },
       {
         "name": "uv.lock",
         "type": "file",
         "language": "Lock File",
-        "size": 173338,
+        "size": 172274,
         "extension": ".lock",
         "path": "apps/api/uv.lock"
       },
@@ -173,7 +283,7 @@
         "name": "compose.yml",
         "type": "file",
         "language": "YAML",
-        "size": 363,
+        "size": 364,
         "extension": ".yml",
         "path": "compose.yml"
       },
@@ -190,17 +300,25 @@
         "children": []
       },
       {
+        "name": "sprint-01.md",
+        "type": "file",
+        "language": "Markdown",
+        "size": 2091,
+        "extension": ".md",
+        "path": "docs/sprints/sprint-01.md"
+      },
+      {
         "name": "template.md",
         "type": "file",
         "language": "Markdown",
-        "size": 1963,
+        "size": 1891,
         "extension": ".md",
         "path": "docs/sprints/template.md"
       }
     ]
   },
   "_metadata": {
-    "extracted_at": "2026-09-10T10:24:09.197912",
+    "extracted_at": "2026-09-11T10:20:45.440258",
     "file_path": "data/silver/hierarchy_G5-2026-2.json"
   }
 }
