@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-10T09:16:53.125962",
+      "extracted_at": "2026-09-11T09:15:17.343386",
       "file_path": "data/bronze/issues_G7-2026-2.json",
       "record_count": 42
     }
@@ -158,9 +158,9 @@
     "locked": false,
     "assignees": [],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-09-05T17:48:05Z",
-    "updated_at": "2026-09-05T21:17:45Z",
+    "updated_at": "2026-09-10T18:29:57Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -256,7 +256,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-09-05T17:48:05Z",
-    "updated_at": "2026-09-05T21:17:46Z",
+    "updated_at": "2026-09-10T18:29:56Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -274,7 +274,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nAutenticar o usuário e manter sessão válida para registrar avaliações, preservando consulta pública sem cadastro (RF02, RF04 e RF14).\n\n### ✅ Critérios de aceite\n\n- [ ] Usuário com credenciais válidas consegue autenticar-se pela interface integrada à API.\n- [ ] Credenciais inválidas não estabelecem sessão autenticada.\n- [ ] Sessão válida identifica o usuário nas operações protegidas.\n- [ ] Requisição sem sessão ou com sessão inválida não permite registrar avaliação.\n- [ ] Validade da sessão e condições adicionais de acesso seguem a decisão #47.\n- [ ] Consulta de resultados agregados continua disponível sem autenticação (RF04).\n- [ ] Fluxos de autenticação válida, inválida e acesso público/protegido têm evidências de verificação.\n\n### 📝 Tarefas\n\n- [ ] Documentar contrato e implementar autenticação conforme #47.\n- [ ] Implementar interface de entrada e integração de sessão.\n- [ ] Disponibilizar identificação do usuário para #39 e #42.\n- [ ] Verificar proteção das operações de escrita e acesso público de leitura.\n\n### 📎 Dependências e limites\n\n#47, cadastro/modelo de usuário de #48, estrutura #29 e padrão #31. Não escolher silenciosamente JWT, cookies, duração ou provedor. Recuperação de senha e outras funcionalidades não previstas ficam fora desta tarefa.\n\n### 👤 Planejamento\n\nEpic #14. Release 1. Responsável, prioridade e sprint: a definir na planning.",
+    "body": "### 📚 Descrição e objetivo\n\nAutenticar o usuário e manter sessão válida para registrar avaliações, preservando consulta pública sem cadastro (RF02, RF04 e RF14), conforme decisão validada em #47.\n\n### ✅ Critérios de aceite\n\n- [ ] Usuário com credenciais válidas consegue autenticar-se pela interface integrada à API.\n- [ ] Credenciais inválidas não estabelecem sessão autenticada.\n- [ ] A sessão é armazenada no servidor e identificada por valor aleatório em cookie `HttpOnly`, `SameSite=Lax` e `Secure` em produção.\n- [ ] Atividade autenticada válida renova o prazo da sessão.\n- [ ] A sessão expira após sete dias consecutivos de inatividade.\n- [ ] Logout invalida a sessão no servidor e remove o cookie do navegador.\n- [ ] Requisição sem sessão ou com sessão inválida não permite registrar avaliação.\n- [ ] Usuário sem e-mail confirmado não pode registrar avaliação.\n- [ ] Consulta de resultados agregados continua disponível sem autenticação (RF04).\n- [ ] Fluxos de autenticação válida, inválida, expiração, logout e acesso público/protegido têm evidências de verificação.\n\n### 📝 Tarefas\n\n- [ ] Documentar o contrato e implementar autenticação conforme #47.\n- [ ] Implementar armazenamento e renovação da sessão no servidor.\n- [ ] Implementar interface de entrada, cookie e logout.\n- [ ] Disponibilizar identificação do usuário para #39 e #42.\n- [ ] Verificar proteção das operações de escrita e acesso público de leitura.\n\n### 📎 Dependências e limites\n\nA decisão sobre cookie, armazenamento e duração foi resolvida em #47. A implementação depende do cadastro/modelo de usuário de #48, da estrutura #29, do padrão #31 e da decisão de persistência do projeto. Recuperação de senha e outras funcionalidades não previstas ficam fora desta tarefa.\n\n### 👤 Planejamento\n\nEpic #14. Release 1. Responsável, prioridade e sprint: a definir na planning.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/49/reactions",
@@ -352,7 +352,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-09-05T17:48:04Z",
-    "updated_at": "2026-09-05T21:17:47Z",
+    "updated_at": "2026-09-10T18:29:55Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -370,7 +370,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nPermitir cadastro pela interface e API solicitando apenas nome, e-mail e senha, conforme RF01 e o modelo validado em #47.\n\n### ✅ Critérios de aceite\n\n- [ ] Formulário solicita nome, e-mail e senha, sem matrícula, CPF ou histórico acadêmico.\n- [ ] API registra o usuário e a interface informa o resultado do cadastro.\n- [ ] Validação de entrada e comportamento em caso de e-mail já cadastrado seguem o contrato documentado pelo time.\n- [ ] Regras de elegibilidade e confirmação de e-mail, se aprovadas em #47, estão implementadas e verificadas.\n- [ ] Há evidência do fluxo válido e das rejeições previstas no contrato.\n\n### 📝 Tarefas\n\n- [ ] Após #47, detalhar contrato de cadastro e campos do usuário conforme persistência validada.\n- [ ] Implementar API e persistência.\n- [ ] Implementar formulário usando a estrutura #29 e padrão #31.\n- [ ] Verificar integração real entre interface e API.\n\n### 📎 Dependências e limites\n\n#47, #29, #31 e decisão de persistência do projeto. Implementação definitiva bloqueada até validar identificação e escolhas técnicas necessárias. Não adotar e-mail institucional, provedor de envio, algoritmo de credenciais ou ORM como decisão implícita. Sessão é acompanhada em #49.\n\n### 👤 Planejamento\n\nEpic #14. Release 1. Responsável, prioridade e sprint: a definir na planning.",
+    "body": "### 📚 Descrição e objetivo\n\nPermitir cadastro pela interface e API solicitando apenas nome, e-mail `@aluno.unb.br` e senha, conforme RF01 e o modelo validado em #47.\n\n### ✅ Critérios de aceite\n\n- [ ] Formulário solicita nome, e-mail e senha, sem matrícula, CPF ou histórico acadêmico.\n- [ ] Endereços fora do domínio `@aluno.unb.br` são rejeitados.\n- [ ] API registra o usuário com e-mail inicialmente não confirmado e a interface informa o resultado do cadastro.\n- [ ] O sistema envia link para confirmar a posse do endereço institucional.\n- [ ] Usuário sem e-mail confirmado não pode registrar avaliação; as consultas continuam públicas.\n- [ ] Validação de entrada e comportamento em caso de e-mail já cadastrado seguem o contrato documentado.\n- [ ] Há evidência do fluxo válido e das rejeições previstas no contrato.\n\n### 📝 Tarefas\n\n- [ ] Detalhar o contrato de cadastro conforme a decisão #47 e a persistência validada.\n- [ ] Implementar API e persistência.\n- [ ] Implementar formulário usando a estrutura #29 e padrão #31.\n- [ ] Integrar o envio e a confirmação por link.\n- [ ] Verificar integração real entre interface e API.\n\n### 📎 Dependências e limites\n\nA decisão de elegibilidade e confirmação foi resolvida em #47. A implementação ainda depende de #29, #31, da decisão de persistência do projeto e da definição do provedor de e-mail e da validade do link de confirmação. Não escolher silenciosamente provedor, algoritmo de credenciais ou ORM. Sessão é acompanhada em #49.\n\n### 👤 Planejamento\n\nEpic #14. Release 1. Responsável, prioridade e sprint: a definir na planning.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/48/reactions",
@@ -451,7 +451,7 @@
         "description": "Escopo planejado para a Release 1"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -506,18 +506,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 1,
     "created_at": "2026-09-05T17:48:04Z",
-    "updated_at": "2026-09-05T21:17:48Z",
-    "closed_at": null,
+    "updated_at": "2026-09-10T19:59:38Z",
+    "closed_at": "2026-09-10T19:59:38Z",
     "assignee": {
       "login": "nicolaszanin06",
       "id": 213249676,
@@ -554,8 +554,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nRegistrar a decisão do time e da professora sobre identificação do avaliador, necessária para implementar RF01–RF03 e RF14. Esta issue acompanha a pendência já registrada na seção 11 dos requisitos; sua criação não aprova uma solução.\n\n### ✅ Critérios de aceite\n\n- [ ] Decisão sobre cadastro e sessão está documentada, com evidência de validação pelo time e professora.\n- [ ] Proposta do ADR 03 foi avaliada, incluindo restrição a e-mail institucional e confirmação por link, sem tratá-la como já aprovada.\n- [ ] Se a proposta institucional for aprovada, domínio aceito e tratamento de ex-alunos e vínculos não discentes estão esclarecidos.\n- [ ] Mecanismo de sessão e regras de validade estão definidos pelo time antes da implementação.\n- [ ] Requisitos e arquitetura refletem a decisão validada; documentos derivados são sincronizados quando houver mudança na fonte.\n- [ ] Consulta pública sem cadastro e ausência de matrícula, CPF e histórico acadêmico são preservadas, conforme RF01/RF04.\n\n### 📝 Tarefas\n\n- [ ] Reunir a proposta existente e as questões abertas.\n- [ ] Registrar decisão e evidência da validação.\n- [ ] Atualizar as dependências das tarefas de implementação conforme o resultado.\n\n### 📎 Rastreabilidade e limites\n\nEpic #14. Fonte: seção 11 dos requisitos e proposta de ADR 03. Não implementar verificação de que o aluno cursou a disciplina, fora da Release 1. RNFs de segurança e privacidade seguem propostos; sua validação deve ser registrada pelo time sem promoção automática nesta issue.\n\n### 👤 Planejamento\n\nDecisão: time + professora. Responsável pelo acompanhamento, prioridade e sprint: a definir na planning.",
-    "closed_by": null,
+    "body": "### 📚 Descrição e objetivo\n\nRegistrar a decisão do grupo sobre identificação do avaliador, necessária para implementar RF01–RF03 e RF14. A decisão é válida para a Release 1 e será reavaliada na validação geral da release, com possíveis correções para a Release 2.\n\n### ✅ Critérios de aceite\n\n- [x] Decisão sobre cadastro e sessão está documentada, com evidência de validação pelo grupo.\n- [x] Proposta do ADR 03 foi avaliada, incluindo restrição a e-mail institucional e confirmação por link.\n- [x] Domínio aceito e tratamento de ex-alunos e vínculos não discentes estão esclarecidos.\n- [x] Mecanismo de sessão e regras de validade estão definidos antes da implementação.\n- [x] Requisitos e arquitetura refletem a decisão validada; o documento derivado foi sincronizado.\n- [x] Consulta pública sem cadastro e ausência de matrícula, CPF e histórico acadêmico foram preservadas, conforme RF01/RF04.\n\n### 📝 Tarefas\n\n- [x] Reunir a proposta existente e as questões abertas.\n- [x] Registrar decisão e evidência da validação.\n- [x] Atualizar as dependências das tarefas de implementação conforme o resultado.\n\n### 📎 Decisão validada para a Release 1\n\n- Cadastro somente com nome, senha e e-mail `@aluno.unb.br`.\n- Confirmação da posse do e-mail por link.\n- Consulta pública sem cadastro; registro de avaliação somente após confirmação do e-mail.\n- Ex-alunos sem acesso ao domínio aceito e outros vínculos institucionais não são contemplados na Release 1.\n- Sessão armazenada no servidor e identificada por valor aleatório em cookie `HttpOnly`, `SameSite=Lax` e `Secure` em produção.\n- Expiração após sete dias consecutivos de inatividade; atividade autenticada válida renova o prazo.\n- Logout invalida a sessão no servidor e remove o cookie.\n- Matrícula, CPF e histórico acadêmico não são coletados.\n- Verificação de que o aluno cursou a disciplina permanece fora da Release 1.\n\n### 🧾 Evidência\n\nA decisão foi validada pelo grupo em reunião presencial de 09/09/2026, nas mesas do UAC, convocada pelo grupo de WhatsApp. Participaram Nicolas, Vinicius, Gabriel, Tiago e Warlley; Yasmin não participou. A professora não exige validação individual de cada decisão nesta etapa; haverá validação geral na Release 1.\n\nDocumentação preparada na branch `codex/issue-47-validar-acesso`, commit `59f1cf6`.\n\n### ⏳ Pendências independentes\n\nO provedor de envio de e-mail e a validade do link de confirmação permanecem pendentes e devem ser definidos antes da implementação completa do fluxo. A decisão de persistência do projeto também continua independente desta issue.\n\n### 📎 Rastreabilidade e limites\n\nEpic #14. Fonte: seção 11 dos requisitos e ADR 03. RNFs de segurança e privacidade seguem propostos; esta decisão não os promove automaticamente.\n\n### 👤 Planejamento\n\nDecisão validada pelo grupo para a Release 1. Responsável: Nicolas. Milestone: Sprint 02.",
+    "closed_by": {
+      "login": "nicolaszanin06",
+      "id": 213249676,
+      "node_id": "U_kgDODLXujA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213249676?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nicolaszanin06",
+      "html_url": "https://github.com/nicolaszanin06",
+      "followers_url": "https://api.github.com/users/nicolaszanin06/followers",
+      "following_url": "https://api.github.com/users/nicolaszanin06/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nicolaszanin06/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nicolaszanin06/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nicolaszanin06/subscriptions",
+      "organizations_url": "https://api.github.com/users/nicolaszanin06/orgs",
+      "repos_url": "https://api.github.com/users/nicolaszanin06/repos",
+      "events_url": "https://api.github.com/users/nicolaszanin06/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nicolaszanin06/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/47/reactions",
       "total_count": 0,
@@ -570,7 +590,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/47/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G7-2026-2"
   },
@@ -1758,17 +1778,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-01T13:59:07Z",
-    "updated_at": "2026-09-05T21:18:01Z",
+    "updated_at": "2026-09-11T00:42:57Z",
     "closed_at": null,
     "assignee": {
       "login": "ailoiol",
@@ -1807,7 +1827,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nCompletar e verificar o arquivo backend/.env.example já existente, mantendo-o alinhado às variáveis consumidas por backend/app/core/config.py e ao ambiente de execução.\n\nEstado observado: o exemplo contém SECRET_KEY, DEBUG e DATABASE_URL; a URL está vazia e acompanhada de uma nota sobre decisão pendente de ORM.\n\n### ✅ Critérios de aceite\n\n- [ ] SECRET_KEY, DEBUG e DATABASE_URL estão documentadas conforme seu uso no backend.\n- [ ] Após definir persistência/driver, DATABASE_URL contém exemplo fictício compatível com a configuração escolhida.\n- [ ] Exemplos distinguem execução local e acesso entre containers quando os endereços diferirem.\n- [ ] Arquivo não contém segredos reais e backend/.env é ignorado pelo Git.\n- [ ] README explica a cópia de backend/.env.example para backend/.env e quais valores precisam ser preenchidos.\n- [ ] Configuração do backend foi carregada com os valores de exemplo devidamente preenchidos e o procedimento foi verificado.\n\n### 📝 Tarefas\n\n- [ ] Comparar exemplo com config.py e configuração de #34.\n- [ ] Conferir regras de .gitignore.\n- [ ] Completar URL após decisão de banco/driver.\n- [ ] Documentar cópia, preenchimento e execução.\n\n### 📎 Dependências e limites\n\nCoordenar com #34. Revisão das variáveis existentes e documentação podem avançar agora; URL definitiva e teste de conexão dependem da decisão de persistência. Não declarar a issue concluída apenas porque o arquivo já existe.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Média. Responsável: a definir em Assignees.",
+    "body": "### 📚 Descrição e objetivo\n\nCompletar e verificar o arquivo backend/.env.example já existente, mantendo-o alinhado às variáveis consumidas por backend/app/core/config.py e ao ambiente de execução.\n\nEstado observado: o exemplo contém SECRET_KEY, DEBUG e DATABASE_URL; a URL está vazia e acompanhada de uma nota sobre decisão pendente de ORM.\n\n### ✅ Critérios de aceite\n\n- [ ] SECRET_KEY, DEBUG e DATABASE_URL estão documentadas conforme seu uso no backend.\n- [ ] Após definir persistência/driver, DATABASE_URL contém exemplo fictício compatível com a configuração escolhida.\n- [ ] Exemplos distinguem execução local e acesso entre containers quando os endereços diferirem.\n- [ ] Arquivo não contém segredos reais e backend/.env é ignorado pelo Git.\n- [ ] README explica a cópia de backend/.env.example para backend/.env e quais valores precisam ser preenchidos.\n- [ ] Configuração do backend foi carregada com os valores de exemplo devidamente preenchidos e o procedimento foi verificado.\n\n### 📝 Tarefas\n\n- [ ] Comparar exemplo com config.py e configuração de #34.\n- [x] Conferir regras de .gitignore.\n- [x] Completar URL após decisão de banco/driver.\n- [x] Documentar cópia, preenchimento e execução.\n\n### 📎 Dependências e limites\n\nCoordenar com #34. Revisão das variáveis existentes e documentação podem avançar agora; URL definitiva e teste de conexão dependem da decisão de persistência. Não declarar a issue concluída apenas porque o arquivo já existe.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Média. Responsável: a definir em Assignees.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/35/reactions",
@@ -1994,7 +2014,7 @@
         "description": "Escopo planejado para a Release 1"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -2049,18 +2069,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-01T13:58:21Z",
-    "updated_at": "2026-09-05T21:18:03Z",
-    "closed_at": null,
+    "updated_at": "2026-09-10T18:06:26Z",
+    "closed_at": "2026-09-10T18:06:26Z",
     "assignee": {
       "login": "nicolaszanin06",
       "id": 213249676,
@@ -2098,8 +2118,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## 📚 Descrição\nCriação do Dockerfile do backend (FastAPI), seguindo o padrão definido na skill `skills/technology/docker/SKILL.md` — base `python:3.12-slim`, entrypoint via `uvicorn`.\n\n## 🎯 Objetivo\nTer o backend rodando de forma containerizada, isolando o ambiente de execução.\n\n## ✅ Requisitos (Critérios de Aceite)\n- [ ] Dockerfile criado em `backend/`\n- [ ] Imagem builda sem erro (`docker build`)\n- [ ] Container sobe e responde em `/health`\n\n## 📌 Prioridade\n- [ ] **Baixa**\n- [ ] **Média**\n- [x] **Alta**\n- [ ] **Urgente**\n\n## 📝 Checklist de Tarefas\n- [ ] Escrever Dockerfile seguindo a skill\n- [ ] Criar `.dockerignore`\n- [ ] Testar build e execução local\n\n## 👤 Responsável\n\n\n## 📎 Anexo\n`skills/technology/docker/SKILL.md`, seção 7 (Step 1-3)\n\n---\n> Template adaptado de (https://github.com/unb-mds/2026.1-ContraDito)",
-    "closed_by": null,
+    "body": "## 📚 Descrição\nCriação do Dockerfile do backend (FastAPI), seguindo o padrão definido na skill `skills/technology/docker/SKILL.md` — base `python:3.12-slim`, entrypoint via `uvicorn`.\n\n## 🎯 Objetivo\nTer o backend rodando de forma containerizada, isolando o ambiente de execução.\n\n## ✅ Requisitos (Critérios de Aceite)\n- [x] Dockerfile criado em `backend/`\n- [x] Imagem builda sem erro (`docker build`)\n- [x] Container sobe e responde em `/health`\n\n## 📌 Prioridade\n- [ ] **Baixa**\n- [ ] **Média**\n- [x] **Alta**\n- [ ] **Urgente**\n\n## 📝 Checklist de Tarefas\n- [x] Escrever Dockerfile seguindo a skill\n- [x] Criar `.dockerignore`\n- [x] Testar build e execução local\n\n## 👤 Responsável\n\n\n## 📎 Anexo\n`skills/technology/docker/SKILL.md`, seção 7 (Step 1-3)\n\n---\n> Template adaptado de (https://github.com/unb-mds/2026.1-ContraDito)",
+    "closed_by": {
+      "login": "nicolaszanin06",
+      "id": 213249676,
+      "node_id": "U_kgDODLXujA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213249676?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nicolaszanin06",
+      "html_url": "https://github.com/nicolaszanin06",
+      "followers_url": "https://api.github.com/users/nicolaszanin06/followers",
+      "following_url": "https://api.github.com/users/nicolaszanin06/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nicolaszanin06/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nicolaszanin06/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nicolaszanin06/subscriptions",
+      "organizations_url": "https://api.github.com/users/nicolaszanin06/orgs",
+      "repos_url": "https://api.github.com/users/nicolaszanin06/repos",
+      "events_url": "https://api.github.com/users/nicolaszanin06/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nicolaszanin06/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/33/reactions",
       "total_count": 0,
@@ -2114,7 +2154,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/33/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G7-2026-2"
   },
@@ -2668,11 +2708,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
@@ -3189,17 +3229,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-01T13:11:39Z",
-    "updated_at": "2026-09-05T21:18:13Z",
+    "updated_at": "2026-09-10T22:39:35Z",
     "closed_at": null,
     "assignee": {
       "login": "warlleymedeiros",
@@ -3238,7 +3278,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nDefinir a representação dos dados institucionais e seus relacionamentos, com base nos campos efetivamente disponíveis em #22 e #23, para sustentar importação, busca e comparação.\n\n### ✅ Critérios de aceite\n\n- [ ] Campos de Professor, Disciplina e Turma estão documentados e relacionados à fonte de origem.\n- [ ] Modelo representa o vínculo entre professor, disciplina e turma e a informação de departamento necessária à cobertura.\n- [ ] Identificadores usados para reconhecer registros em futuras importações estão documentados; lacunas da fonte estão explícitas.\n- [ ] Modelo foi revisado pelo time antes da implementação definitiva.\n- [ ] Dependências de persistência estão registradas com seu estado real de aprovação.\n\n### 📝 Tarefas\n\n- [ ] Confrontar campos do protótipo com necessidades de RF05–RF07, RF12 e RF16–RF17.\n- [ ] Documentar entidades, identificadores e relacionamentos.\n- [ ] Registrar dúvidas que dependam da fonte ou do time.\n- [ ] Preparar a implementação em backend/app/models/ após validar modelo e persistência.\n\n### 📎 Dependências e pendências\n\n#22 e evidências de #23. SQLAlchemy + Alembic constam como proposta no ADR 01; confirmar validação do time e decidir execução síncrona ou assíncrona antes de implementar a camada de banco. O desenho conceitual pode avançar enquanto essas decisões estão pendentes.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Alta. Responsável: a definir em Assignees.",
+    "body": "### 📚 Descrição e objetivo\n\nDefinir a representação dos dados institucionais e seus relacionamentos, com base nos campos efetivamente disponíveis em #22 e #23, para sustentar importação, busca e comparação.\n\n### ✅ Critérios de aceite\n\n- [ ] Campos de Professor, Disciplina e Turma estão documentados e relacionados à fonte de origem.\n- [ ] Modelo representa o vínculo entre professor, disciplina e turma e a informação de departamento necessária à cobertura.\n- [ ] Identificadores usados para reconhecer registros em futuras importações estão documentados; lacunas da fonte estão explícitas.\n- [ ] Modelo foi revisado pelo time antes da implementação definitiva.\n- [x] Dependências de persistência estão registradas com seu estado real de aprovação.\n\n### 📝 Tarefas\n\n- [ ] Confrontar campos do protótipo com necessidades de RF05–RF07, RF12 e RF16–RF17.\n- [x] Documentar entidades, identificadores e relacionamentos.\n- [ ] Registrar dúvidas que dependam da fonte ou do time.\n- [ ] Preparar a implementação em backend/app/models/ após validar modelo e persistência.\n\n### 📎 Dependências e pendências\n\n#22 e evidências de #23. SQLAlchemy + Alembic constam como proposta no ADR 01; confirmar validação do time e decidir execução síncrona ou assíncrona antes de implementar a camada de banco. O desenho conceitual pode avançar enquanto essas decisões estão pendentes.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Alta. Responsável: a definir em Assignees.",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G7-2026-2/issues/24/reactions",
@@ -3374,11 +3414,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
@@ -3559,11 +3599,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 7,
-      "closed_issues": 0,
+      "open_issues": 5,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-01T14:14:53Z",
-      "updated_at": "2026-09-05T21:18:23Z",
+      "updated_at": "2026-09-10T19:59:38Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
@@ -5409,8 +5449,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 5,
-      "completed": 0,
-      "percent_completed": 0
+      "completed": 1,
+      "percent_completed": 20
     },
     "issue_dependencies_summary": {
       "blocked_by": 0,

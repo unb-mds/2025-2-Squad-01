@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "G5-2026-2",
   "branch": "main",
-  "sha": "b46e62fcc6a77fa5a39e755f1ccf15c6dfd0641b",
+  "sha": "3136ae8425a25432c94d656e559b0083b4bd733e",
   "tree": [
     {
       "name": ".claude",
@@ -120,7 +120,7 @@
       "name": "apps",
       "path": "apps",
       "type": "directory",
-      "sha": "9a9445a9e1d5c337e39d13e00bd56547be7b3cd9",
+      "sha": "f1e1cb2f805c4b6f05fe59ca0cf49ca05aafe3bf",
       "mode": "040000",
       "children": []
     },
@@ -128,7 +128,7 @@
       "name": "api",
       "path": "apps/api",
       "type": "directory",
-      "sha": "a429b0bffe91a40c1015fde834fa3af64e531b82",
+      "sha": "9f405aa692d97f1423640f0c3039dc2333d004f1",
       "mode": "040000",
       "children": []
     },
@@ -136,10 +136,10 @@
       "name": ".env.example",
       "path": "apps/api/.env.example",
       "type": "file",
-      "sha": "ee831b9cf11350175f9deaf6e48b21cdcd471885",
+      "sha": "4a9a32e4d901aa975d9a77c08ca68486522fce0c",
       "mode": "100644",
       "extension": ".example",
-      "size": 64,
+      "size": 114,
       "is_binary": false
     },
     {
@@ -166,17 +166,17 @@
       "name": "pyproject.toml",
       "path": "apps/api/pyproject.toml",
       "type": "file",
-      "sha": "cbad243c8c8bd1cf12c5a25dd61dc4c9abe7caaa",
+      "sha": "5cebf858f442d077f15f6cb392c37199529a54df",
       "mode": "100644",
       "extension": ".toml",
-      "size": 559,
+      "size": 696,
       "is_binary": false
     },
     {
       "name": "src",
       "path": "apps/api/src",
       "type": "directory",
-      "sha": "0e347e5fbb2d7d6a67d1767e673b45cc639f5452",
+      "sha": "b75d887dc8090b0e6a30e322b3a61d6ef7b34a20",
       "mode": "040000",
       "children": []
     },
@@ -191,40 +191,180 @@
       "is_binary": false
     },
     {
+      "name": "core",
+      "path": "apps/api/src/core",
+      "type": "directory",
+      "sha": "0561d098c057c9ae5c4fe43f0e10779537a2b8ee",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "config.py",
+      "path": "apps/api/src/core/config.py",
+      "type": "file",
+      "sha": "afe2b09b1ddc19fa650056744d01c2b7a327089b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 415,
+      "is_binary": false
+    },
+    {
+      "name": "dependencies.py",
+      "path": "apps/api/src/core/dependencies.py",
+      "type": "file",
+      "sha": "bfcbe9609371e238c8827360c6e1119fbc19c451",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 870,
+      "is_binary": false
+    },
+    {
+      "name": "db",
+      "path": "apps/api/src/db",
+      "type": "directory",
+      "sha": "6bee5f8435726914329720727978ab68d6fd7d35",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "apps/api/src/db/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "base.py",
+      "path": "apps/api/src/db/base.py",
+      "type": "file",
+      "sha": "b0b0de3381bdc5046d2794294d8f6c2cc2315c34",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 611,
+      "is_binary": false
+    },
+    {
+      "name": "enums.py",
+      "path": "apps/api/src/db/enums.py",
+      "type": "file",
+      "sha": "6f22b082fde65f974ba7e23b72850460cb311e1b",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 400,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "apps/api/src/db/main.py",
+      "type": "file",
+      "sha": "2404ec91b6b7826ef72d68d24e88a206eae1ca27",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 643,
+      "is_binary": false
+    },
+    {
+      "name": "models.py",
+      "path": "apps/api/src/db/models.py",
+      "type": "file",
+      "sha": "cbceb6adf8386212020ffdeec409a015d92b75a1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2972,
+      "is_binary": false
+    },
+    {
       "name": "main.py",
       "path": "apps/api/src/main.py",
       "type": "file",
-      "sha": "cd3bcfac827a3b37c2b358c3672dbdc9aaa1342d",
+      "sha": "517456d66181db30fe6d05aea11ee506bf582770",
       "mode": "100644",
       "extension": ".py",
-      "size": 233,
+      "size": 363,
+      "is_binary": false
+    },
+    {
+      "name": "modules",
+      "path": "apps/api/src/modules",
+      "type": "directory",
+      "sha": "aaf0d5a92d1e6b9832de929d47cec92c9e62669e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "auth",
+      "path": "apps/api/src/modules/auth",
+      "type": "directory",
+      "sha": "44e89b041ccd97e8afc78efb91af0c47cd8b1eb3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "main.py",
+      "path": "apps/api/src/modules/auth/main.py",
+      "type": "file",
+      "sha": "3fb95d6b491a72fa07221e1d965342e9f11b33a2",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1517,
+      "is_binary": false
+    },
+    {
+      "name": "utils",
+      "path": "apps/api/src/utils",
+      "type": "directory",
+      "sha": "53b3f31e53fa54d799f809df1555526737c59f2d",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "apps/api/src/utils/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "security.py",
+      "path": "apps/api/src/utils/security.py",
+      "type": "file",
+      "sha": "f0172be48bbab4fedfa469c8fa8e315d68e97a69",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 830,
       "is_binary": false
     },
     {
       "name": "uv.lock",
       "path": "apps/api/uv.lock",
       "type": "file",
-      "sha": "d01b6ac92d3774a88b987e40b5dcad89c75df416",
+      "sha": "cfa3ef8d724397e55b1c0f227f71d5754c51084e",
       "mode": "100644",
       "extension": ".lock",
-      "size": 173338,
+      "size": 172274,
       "is_binary": false
     },
     {
       "name": "compose.yml",
       "path": "compose.yml",
       "type": "file",
-      "sha": "08f2d1783790c00bdaa3c07d16c657fcf6579abd",
+      "sha": "8ded0044971b9f8e08db63b39431462c1d700b61",
       "mode": "100644",
       "extension": ".yml",
-      "size": 363,
+      "size": 364,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "00e1c01fb4f57acf8764e526aac1dd544fa33539",
+      "sha": "da58148b14e049411f5a0dbc0358021daedd64e1",
       "mode": "040000",
       "children": []
     },
@@ -232,35 +372,45 @@
       "name": "sprints",
       "path": "docs/sprints",
       "type": "directory",
-      "sha": "a168061b66884995908b964ed48419ad5fd93cd1",
+      "sha": "32709f25502e36fdccf172b2bc385b89a7936ac8",
       "mode": "040000",
       "children": []
+    },
+    {
+      "name": "sprint-01.md",
+      "path": "docs/sprints/sprint-01.md",
+      "type": "file",
+      "sha": "c1ff8442d1f0018f998e249b82501acdf77ec2a8",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2091,
+      "is_binary": false
     },
     {
       "name": "template.md",
       "path": "docs/sprints/template.md",
       "type": "file",
-      "sha": "14e355c1b7de096e8017eb88efe02467e69dab01",
+      "sha": "9b8e864599203506443ab40032850d9428e6556e",
       "mode": "100644",
       "extension": ".md",
-      "size": 1963,
+      "size": 1891,
       "is_binary": false
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-09-10T10:20:24.821711",
+  "extracted_at": "2026-09-11T10:17:45.317157",
   "method": "rest",
-  "total_items": 26,
+  "total_items": 42,
   "repository_metadata": {
     "id": 1338350948,
     "full_name": "unb-mds/G5-2026-2",
     "description": "Grupo G5 - Metodos de Desenvolvimento de Software 2026/2",
     "created_at": "2026-08-18T11:57:01Z",
-    "updated_at": "2026-09-09T23:30:09Z",
+    "updated_at": "2026-09-11T02:59:41Z",
     "language": "Python",
-    "size": 70,
-    "stars": 4,
+    "size": 73,
+    "stars": 5,
     "forks": 0,
-    "open_issues": 8
+    "open_issues": 6
   }
 }
