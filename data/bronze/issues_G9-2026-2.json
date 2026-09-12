@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-11T09:15:19.671156",
+      "extracted_at": "2026-09-12T08:56:43.962180",
       "file_path": "data/bronze/issues_G9-2026-2.json",
       "record_count": 16
     }
@@ -46,7 +46,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -266,7 +268,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -452,7 +456,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -642,7 +648,7 @@
     "id": 5350888982,
     "node_id": "I_kwDOT8Wh9M8AAAABPvAWFg",
     "number": 14,
-    "title": "Integração Frontend, Backend e Banco de Dados",
+    "title": "Ferramentas escolhidas para o  Frontend",
     "user": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -664,8 +670,20 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
-    "state": "open",
+    "labels": [
+      {
+        "id": 11874450869,
+        "node_id": "LA_kwDOT8Wh9M8AAAACw8W9tQ",
+        "url": "https://api.github.com/repos/unb-mds/G9-2026-2/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
+      }
+    ],
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -698,18 +716,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:58Z",
-      "updated_at": "2026-09-04T17:00:32Z",
+      "updated_at": "2026-09-11T17:13:02Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T17:00:31Z",
-    "updated_at": "2026-09-04T17:00:31Z",
-    "closed_at": null,
+    "updated_at": "2026-09-11T17:21:57Z",
+    "closed_at": "2026-09-11T17:13:02Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -726,8 +744,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "Descrição\nRealizar a integração entre os principais componentes do Tamburetei, garantindo que o Frontend consiga consumir as funcionalidades disponibilizadas pelo Backend e que o Backend consiga acessar o Banco de Dados.\nTarefas\n\nConectar o Frontend à API\n\nConectar o Backend ao Banco de Dados\n\nTestar comunicação entre os componentes\n\nImplementar o fluxo completo de uma história de usuário priorizada\n\nIdentificar e corrigir problemas de integração\n\nValidar o funcionamento do fluxo de ponta a ponta\nResultado esperado\nTer pelo menos uma história de usuário funcionando de ponta a ponta, envolvendo Frontend, Backend e Banco de Dados.",
-    "closed_by": null,
+    "body": "📌 Descrição\nDefinir as ferramentas que serão utilizadas no desenvolvimento do Frontend do Tamburetei UnB.\n🛠️ Ferramentas\nNext.js — desenvolvimento do Frontend\nTypeScript — linguagem de programação\nTailwind CSS — estilização\nFigma — wireframes e prototipação\nGit + GitHub — controle de versão",
+    "closed_by": {
+      "login": "thamiresellensa",
+      "id": 202857974,
+      "node_id": "U_kgDODBdd9g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202857974?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thamiresellensa",
+      "html_url": "https://github.com/thamiresellensa",
+      "followers_url": "https://api.github.com/users/thamiresellensa/followers",
+      "following_url": "https://api.github.com/users/thamiresellensa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thamiresellensa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thamiresellensa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thamiresellensa/subscriptions",
+      "organizations_url": "https://api.github.com/users/thamiresellensa/orgs",
+      "repos_url": "https://api.github.com/users/thamiresellensa/repos",
+      "events_url": "https://api.github.com/users/thamiresellensa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thamiresellensa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/14/reactions",
       "total_count": 0,
@@ -742,7 +780,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/14/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -756,7 +794,7 @@
     "id": 5350882251,
     "node_id": "I_kwDOT8Wh9M8AAAABPu_7yw",
     "number": 13,
-    "title": "Implementação da Arquitetura do Sistema",
+    "title": "Arquitetura",
     "user": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -812,17 +850,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:58Z",
-      "updated_at": "2026-09-04T17:00:32Z",
+      "updated_at": "2026-09-11T17:13:02Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:59:57Z",
-    "updated_at": "2026-09-04T16:59:57Z",
+    "updated_at": "2026-09-11T17:11:57Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -840,7 +878,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "Descrição\nAplicar ao projeto as definições arquiteturais estabelecidas na Sprint 1, organizando os componentes e suas responsabilidades.\nTarefas\n\nEstruturar os módulos do sistema\n\nAplicar a separação de responsabilidades\n\nDefinir a comunicação entre Frontend e Backend\n\nDefinir a comunicação entre Backend e Banco de Dados\n\nOrganizar a estrutura do projeto de acordo com a arquitetura definida\n\nDocumentar as principais decisões arquiteturais\nResultado esperado\nTer a arquitetura inicial aplicada ao projeto, estabelecendo uma base organizada para o desenvolvimento das próximas funcionalidades.",
+    "body": null,
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/13/reactions",
@@ -856,7 +894,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/13/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "reopened",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -870,7 +908,7 @@
     "id": 5350877157,
     "node_id": "I_kwDOT8Wh9M8AAAABPu_n5Q",
     "number": 12,
-    "title": "Implementação do Banco de Dados",
+    "title": " Banco de Dados",
     "user": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -926,17 +964,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:58Z",
-      "updated_at": "2026-09-04T17:00:32Z",
+      "updated_at": "2026-09-11T17:13:02Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:59:28Z",
-    "updated_at": "2026-09-04T16:59:28Z",
+    "updated_at": "2026-09-11T17:12:32Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -954,7 +992,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "Descrição\nImplementar a estrutura do Banco de Dados definida a partir da análise das histórias de usuário realizada na Sprint 1.\nTarefas\n\nConfigurar o Banco de Dados\n\nCriar as tabelas/entidades necessárias\n\nImplementar os relacionamentos\n\nConfigurar migrations, se aplicável\n\nCriar dados iniciais para testes\n\nValidar a estrutura do banco\n\nPreparar a integração com o Backend\nResultado esperado\nTer um Banco de Dados funcional e estruturado para atender às primeiras funcionalidades do sistema.",
+    "body": null,
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/12/reactions",
@@ -970,7 +1008,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/12/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "reopened",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -984,7 +1022,7 @@
     "id": 5350871220,
     "node_id": "I_kwDOT8Wh9M8AAAABPu_QtA",
     "number": 11,
-    "title": "Estrutura Inicial do Backend",
+    "title": " Backend",
     "user": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -1040,17 +1078,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:58Z",
-      "updated_at": "2026-09-04T17:00:32Z",
+      "updated_at": "2026-09-11T17:13:02Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:58:56Z",
-    "updated_at": "2026-09-04T16:58:56Z",
+    "updated_at": "2026-09-11T17:12:46Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "COLLABORATOR",
@@ -1084,7 +1122,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/11/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "reopened",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -1098,7 +1136,7 @@
     "id": 5350865652,
     "node_id": "I_kwDOT8Wh9M8AAAABPu-69A",
     "number": 10,
-    "title": "Estrutura Inicial do Frontend",
+    "title": "Preenchimento do Figma",
     "user": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -1121,7 +1159,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1197,18 +1235,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 0,
+      "open_issues": 3,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-09-04T16:27:58Z",
-      "updated_at": "2026-09-04T17:00:32Z",
+      "updated_at": "2026-09-11T17:13:02Z",
       "due_on": "2026-09-11T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:58:25Z",
-    "updated_at": "2026-09-04T16:58:25Z",
-    "closed_at": null,
+    "updated_at": "2026-09-11T17:00:14Z",
+    "closed_at": "2026-09-11T17:00:10Z",
     "assignee": {
       "login": "thamiresellensa",
       "id": 202857974,
@@ -1232,7 +1270,16 @@
     },
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
-    "type": null,
+    "type": {
+      "id": 20193710,
+      "node_id": "IT_kwDOCH8E_c4BNCGu",
+      "name": "Task",
+      "description": "A specific piece of work",
+      "color": "yellow",
+      "created_at": "2024-02-18T04:46:03Z",
+      "updated_at": "2024-07-26T15:22:11Z",
+      "is_enabled": true
+    },
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 0,
@@ -1245,8 +1292,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "Descrição\nImplementar a estrutura inicial do Frontend do Tamburetei com base nas histórias de usuário e no planejamento realizado na Sprint 1.\nTarefas\n\nConfigurar o projeto Frontend\n\nOrganizar a estrutura de pastas\n\nConfigurar as rotas\n\nCriar componentes reutilizáveis\n\nImplementar as primeiras telas priorizadas\n\nImplementar a navegação entre as telas\n\nPreparar o Frontend para integração com o Backend\nResultado esperado\nTer uma estrutura inicial funcional do Frontend, preparada para receber as funcionalidades do sistema.",
-    "closed_by": null,
+    "body": "🎨 Protótipo\n\nInformo que o design da interface no Figma esta em andamento para ser utilizado como referência pelo time de desenvolvimento.\n\nLink\n\nLink do Projeto no Figma: https://www.figma.com/board/coZ3FgGpd5amxJxaanwaTr/Template-MDS---Grupo-9?utm_source=chatgpt.com",
+    "closed_by": {
+      "login": "thamiresellensa",
+      "id": 202857974,
+      "node_id": "U_kgDODBdd9g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202857974?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/thamiresellensa",
+      "html_url": "https://github.com/thamiresellensa",
+      "followers_url": "https://api.github.com/users/thamiresellensa/followers",
+      "following_url": "https://api.github.com/users/thamiresellensa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/thamiresellensa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/thamiresellensa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/thamiresellensa/subscriptions",
+      "organizations_url": "https://api.github.com/users/thamiresellensa/orgs",
+      "repos_url": "https://api.github.com/users/thamiresellensa/repos",
+      "events_url": "https://api.github.com/users/thamiresellensa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/thamiresellensa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/10/reactions",
       "total_count": 0,
@@ -1261,7 +1328,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/10/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -1305,7 +1372,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -1363,11 +1432,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-08T19:42:14Z",
+      "updated_at": "2026-09-11T17:41:52Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1551,11 +1620,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-08T19:42:14Z",
+      "updated_at": "2026-09-11T17:41:52Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1632,7 +1701,7 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -1665,18 +1734,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-08T19:42:14Z",
+      "updated_at": "2026-09-11T17:41:52Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-04T16:51:35Z",
-    "updated_at": "2026-09-05T15:57:21Z",
-    "closed_at": null,
+    "updated_at": "2026-09-11T17:41:52Z",
+    "closed_at": "2026-09-11T17:41:52Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -1694,7 +1763,27 @@
       "total_blocking": 0
     },
     "body": "Descrição\nAnalisar as histórias de usuário definidas para o projeto Tamburetei e identificar as funcionalidades que deverão ser implementadas no Backend.\nNesta etapa, devem ser levantadas as regras de negócio, serviços e endpoints necessários para atender às histórias de usuário priorizadas.\nTarefas\n\nAnalisar as histórias de usuário\n\nIdentificar as regras de negócio\n\nIdentificar os serviços necessários\n\nLevantar os endpoints necessários\n\nRelacionar as funcionalidades às respectivas histórias de usuário\n\nRegistrar as necessidades identificadas para implementação futura\nResultado esperado\nTer definido o escopo inicial do Backend e as funcionalidades necessárias para suportar as histórias de usuário.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "LuizaCarvalho691",
+      "id": 212163139,
+      "node_id": "U_kgDODKVaQw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/212163139?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/LuizaCarvalho691",
+      "html_url": "https://github.com/LuizaCarvalho691",
+      "followers_url": "https://api.github.com/users/LuizaCarvalho691/followers",
+      "following_url": "https://api.github.com/users/LuizaCarvalho691/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LuizaCarvalho691/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/LuizaCarvalho691/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LuizaCarvalho691/subscriptions",
+      "organizations_url": "https://api.github.com/users/LuizaCarvalho691/orgs",
+      "repos_url": "https://api.github.com/users/LuizaCarvalho691/repos",
+      "events_url": "https://api.github.com/users/LuizaCarvalho691/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/LuizaCarvalho691/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/7/reactions",
       "total_count": 0,
@@ -1709,7 +1798,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G9-2026-2/issues/7/timeline",
     "performed_via_github_app": null,
-    "state_reason": "reopened",
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G9-2026-2"
   },
@@ -1822,11 +1911,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 2,
-      "closed_issues": 2,
+      "open_issues": 1,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-09-04T16:27:14Z",
-      "updated_at": "2026-09-08T19:42:14Z",
+      "updated_at": "2026-09-11T17:41:52Z",
       "due_on": "2026-09-04T00:00:00Z",
       "closed_at": null
     },
@@ -1950,7 +2039,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -2145,7 +2236,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -2298,7 +2391,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",
@@ -2493,7 +2588,9 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "closed",

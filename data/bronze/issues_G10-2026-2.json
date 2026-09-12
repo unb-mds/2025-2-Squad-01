@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-11T09:15:21.119303",
+      "extracted_at": "2026-09-12T08:56:45.149583",
       "file_path": "data/bronze/issues_G10-2026-2.json",
       "record_count": 3
     }
@@ -94,11 +94,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 0,
+      "open_issues": 2,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T23:54:55Z",
-      "updated_at": "2026-09-05T03:53:13Z",
+      "updated_at": "2026-09-11T20:43:30Z",
       "due_on": null,
       "closed_at": null
     },
@@ -202,12 +202,36 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
     "state": "open",
     "locked": false,
-    "assignees": [],
+    "assignees": [
+      {
+        "login": "Jessy2126",
+        "id": 208291035,
+        "node_id": "U_kgDODGpE2w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/208291035?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jessy2126",
+        "html_url": "https://github.com/Jessy2126",
+        "followers_url": "https://api.github.com/users/Jessy2126/followers",
+        "following_url": "https://api.github.com/users/Jessy2126/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jessy2126/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jessy2126/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jessy2126/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jessy2126/orgs",
+        "repos_url": "https://api.github.com/users/Jessy2126/repos",
+        "events_url": "https://api.github.com/users/Jessy2126/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jessy2126/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      }
+    ],
     "milestone": {
       "url": "https://api.github.com/repos/unb-mds/G10-2026-2/milestones/1",
       "html_url": "https://github.com/unb-mds/G10-2026-2/milestone/1",
@@ -238,19 +262,39 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 0,
+      "open_issues": 2,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T23:54:55Z",
-      "updated_at": "2026-09-05T03:53:13Z",
+      "updated_at": "2026-09-11T20:43:30Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-05T02:01:39Z",
-    "updated_at": "2026-09-05T02:04:23Z",
+    "updated_at": "2026-09-11T20:56:06Z",
     "closed_at": null,
-    "assignee": null,
+    "assignee": {
+      "login": "Jessy2126",
+      "id": 208291035,
+      "node_id": "U_kgDODGpE2w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/208291035?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jessy2126",
+      "html_url": "https://github.com/Jessy2126",
+      "followers_url": "https://api.github.com/users/Jessy2126/followers",
+      "following_url": "https://api.github.com/users/Jessy2126/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jessy2126/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jessy2126/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jessy2126/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jessy2126/orgs",
+      "repos_url": "https://api.github.com/users/Jessy2126/repos",
+      "events_url": "https://api.github.com/users/Jessy2126/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jessy2126/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "author_association": "COLLABORATOR",
     "issue_field_values": [
       {
@@ -279,7 +323,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": null,
+    "body": "\n\n# Introdução à Arquitetura de Software\n\n## O que é Arquitetura de Software?\n\nA arquitetura de software é a forma como um sistema é estruturado e organizado. Ela define como as diferentes partes do software serão divididas, quais responsabilidades cada uma terá e como essas partes irão se relacionar.\n\nEla funciona como um planejamento estrutural do projeto. Antes e durante o desenvolvimento, as decisões de arquitetura ajudam a definir uma organização que facilite a construção, a manutenção e a evolução do sistema.\n\nUma boa arquitetura não busca apenas fazer o software funcionar. Ela também procura garantir que o sistema seja organizado, compreensível, seguro e preparado para receber alterações no futuro.\n\n---\n\n## Separação de Responsabilidades e Modularidade\n\nUm dos princípios mais importantes da arquitetura é a **separação de responsabilidades.** Cada parte do sistema deve ter uma função bem definida, evitando que diferentes tarefas fiquem concentradas em um único lugar.\n\nEssa organização está diretamente relacionada à **modularidade,** que consiste em dividir o software em partes menores e independentes. Dessa forma, cada módulo pode cuidar de uma determinada função, tornando o sistema mais fácil de entender, testar e modificar.\n\nQuando as responsabilidades estão bem separadas, uma alteração em determinada parte tende a causar menos impacto no restante do sistema. Isso também facilita o trabalho em equipe, pois diferentes desenvolvedores podem trabalhar em partes específicas do projeto.\n\n## Acoplamento e Coesão\n\nDois conceitos importantes para avaliar uma arquitetura são **acoplamento** e **coesão.**\n\nO acoplamento representa o nível de dependência entre diferentes partes do sistema. Uma boa arquitetura procura manter **baixo acoplamento**, reduzindo dependências desnecessárias. Assim, uma parte do software pode ser modificada sem exigir alterações em várias outras.\n\nA coesão está relacionada ao quanto as funções de um mesmo módulo estão relacionadas entre si. O objetivo é alcançar **alta coesão,** mantendo juntas funcionalidades que possuem objetivos semelhantes.\n\nUma arquitetura equilibrada busca, portanto, módulos com responsabilidades bem definidas, alta coesão e baixo acoplamento.\n\n## Manutenção, Reutilização e Flexibilidade\n\n* Um dos principais benefícios de uma boa arquitetura é facilitar a **manutenção** do software. Sistemas precisam ser corrigidos, atualizados e modificados constantemente, por isso sua estrutura precisa permitir alterações sem gerar problemas desnecessários.\n\n* A arquitetura também deve favorecer a **reutilização de código.** Quando determinadas funções ou componentes são bem planejados, eles podem ser utilizados em diferentes partes do sistema, reduzindo a duplicação.\n\n* Outro ponto importante é a **flexibilidade.** Durante o desenvolvimento, novos requisitos podem surgir e algumas decisões podem precisar ser alteradas. Uma arquitetura bem estruturada permite que o software se adapte a essas mudanças sem precisar ser reconstruído completamente.\n\n## Escalabilidade, Segurança e Desempenho\n\nA arquitetura deve considerar também características importantes para o crescimento e a qualidade do sistema.\n\n* A **escalabilidade** está relacionada à capacidade de o software crescer à medida que aumenta a quantidade de usuários, dados ou funcionalidades. Uma arquitetura adequada facilita esse crescimento.\n\n* A **segurança** também precisa ser considerada desde o planejamento. O sistema deve ser organizado de forma a proteger informações e restringir acessos indevidos.\n\n* Já o **desempenho** está relacionado à eficiência do sistema. Uma arquitetura bem planejada ajuda a evitar processamento desnecessário e permite que os recursos disponíveis sejam utilizados de forma adequada.\n\nEsses aspectos não devem ser tratados apenas quando surgem problemas. Eles precisam fazer parte das decisões arquiteturais desde o início.\n\n---\n\n## Tipos de Arquitetura e Boas Práticas\n\nExistem diferentes formas de organizar um software. A escolha depende do tamanho do projeto, das suas necessidades e dos objetivos da aplicação.\n\nA **arquitetura em camadas,** por exemplo, organiza o sistema em diferentes níveis de responsabilidade. Já a **arquitetura baseada em componentes** divide o software em partes menores e reutilizáveis. Em projetos maiores, podem ser utilizadas abordagens como **microsserviços** e arquiteturas orientadas a eventos.\n\nIndependentemente do modelo escolhido, algumas práticas são importantes: manter o código organizado, utilizar padrões de nomenclatura, documentar decisões importantes e evitar dependências desnecessárias.\n\nA arquitetura não deve ser escolhida apenas porque determinada tecnologia é popular. Ela precisa atender às necessidades reais do projeto e facilitar seu desenvolvimento e sua evolução.\n\n---\n\n## Exemplo Prático\n\nUm exemplo de aplicação desses conceitos pode ser encontrado em um sistema de gerenciamento de uma biblioteca. Nesse sistema, existem várias funcionalidades, como cadastrar livros e usuários, registrar empréstimos e devoluções e consultar informações sobre os livros disponíveis.\n\nEm vez de colocar todas essas funções juntas em uma única parte do código, o sistema pode ser organizado em módulos com responsabilidades diferentes. Um módulo pode cuidar dos livros, outro dos usuários e outro dos empréstimos. Dessa maneira, cada parte fica responsável por uma tarefa específica.\n\nImagine, por exemplo, que a biblioteca decida alterar a regra utilizada para calcular multas por atraso. Em uma arquitetura bem organizada, essa mudança pode ser realizada principalmente na parte responsável pelos empréstimos, sem que seja necessário alterar todo o sistema. Isso acontece porque as responsabilidades estão separadas e os módulos possuem poucas dependências entre si.\n\nEsse exemplo mostra, na prática, como a arquitetura pode facilitar a manutenção e a evolução de um software. À medida que novas funcionalidades forem necessárias, elas também poderão ser adicionadas de maneira mais organizada, sem comprometer as partes que já estão funcionando.\n\n---\n\n## Conclusão\n\nA arquitetura de software representa a organização estrutural de um sistema. Ela define como o software será dividido, quais responsabilidades cada parte terá e como essas partes irão trabalhar juntas.\n\nUma boa arquitetura busca **separar responsabilidades, reduzir dependências, facilitar a manutenção, permitir reutilização, melhorar a segurança e o desempenho e preparar o sistema para crescer.**\n\nPor isso, a arquitetura deve ser pensada desde o início do projeto, pois suas decisões influenciam diretamente a qualidade e a evolução do software.\n\n---\n\n## Links e Materiais de Apoio\n\n*[Resumo_Arquitetura_de_Software.pdf](https://github.com/user-attachments/files/32130747/Resumo_Arquitetura_de_Software.pdf)",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G10-2026-2/issues/2/reactions",
@@ -339,10 +383,12 @@
         "name": "documentation",
         "color": "0075ca",
         "default": true,
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -397,18 +443,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 3,
-      "closed_issues": 0,
+      "open_issues": 2,
+      "closed_issues": 1,
       "state": "open",
       "created_at": "2026-09-04T23:54:55Z",
-      "updated_at": "2026-09-05T03:53:13Z",
+      "updated_at": "2026-09-11T20:43:30Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-05T01:58:45Z",
-    "updated_at": "2026-09-06T01:49:51Z",
-    "closed_at": null,
+    "updated_at": "2026-09-11T20:43:30Z",
+    "closed_at": "2026-09-11T20:43:30Z",
     "assignee": {
       "login": "smitalo",
       "id": 173753454,
@@ -458,8 +504,28 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "# Introdução a Bancos de Dados\n\n## O que é um Banco de Dados?\n\nUm Banco de Dados é a camada de uma aplicação responsável por armazenar, organizar e recuperar informações de forma estruturada e persistente. É onde os dados continuam existindo mesmo depois que o programa é fechado ou o servidor reiniciado.\n\nEnquanto o Frontend cuida da interface e o Backend processa as regras de negócio, o Banco de Dados é a base que guarda tudo o que precisa ser lembrado: usuários, produtos, pedidos, mensagens — qualquer informação que a aplicação precise consultar depois.\n\n## Estrutura Básica: Tabelas, Colunas e Registros\n\nAntes de aprender comandos, é importante entender a estrutura:\n\n- **Tabela:** onde os dados de um mesmo tipo ficam guardados (ex: tabela `usuarios`, tabela `produtos`).\n- **Coluna:** cada característica que a tabela guarda (ex: nome, email, preço).\n- **Registro (linha):** cada item individual dentro da tabela (ex: um usuário específico).\n- **Chave Primária (Primary Key):** um identificador único de cada registro, geralmente um número (`id`), que nunca se repete.\n- **Chave Estrangeira (Foreign Key):** uma coluna que referencia a chave primária de outra tabela, criando um relacionamento entre elas.\n\n## Principais Comandos SQL\n\nA linguagem usada para conversar com o banco de dados é o **SQL**. Os comandos abaixo são a base que qualquer pessoa precisa saber para começar a usar um banco:\n\n**Criar um banco de dados:**\n```sql\nCREATE DATABASE meu_banco;\n```\n\n**Criar uma tabela:**\n```sql\nCREATE TABLE usuarios (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    nome VARCHAR(100),\n    email VARCHAR(100)\n);\n```\n\n**Inserir dados (INSERT):**\n```sql\nINSERT INTO usuarios (nome, email) VALUES ('Maria', 'maria@email.com');\n```\n\n**Consultar dados (SELECT):**\n```sql\nSELECT * FROM usuarios;\nSELECT nome, email FROM usuarios WHERE id = 1;\n```\n\n**Atualizar dados (UPDATE):**\n```sql\nUPDATE usuarios SET nome = 'Maria Silva' WHERE id = 1;\n```\n\n**Apagar dados (DELETE):**\n```sql\nDELETE FROM usuarios WHERE id = 1;\n```\n\n**Filtrar e ordenar resultados:**\n```sql\nSELECT * FROM usuarios WHERE nome LIKE 'M%' ORDER BY nome ASC;\n```\n\n**Relacionar tabelas (JOIN):**\n```sql\nSELECT pedidos.id, usuarios.nome\nFROM pedidos\nJOIN usuarios ON pedidos.usuario_id = usuarios.id;\n```\n\n## Boas Práticas no Desenvolvimento de Banco de Dados\n\n- **Normalização de Dados:** organizar as tabelas para evitar redundância e inconsistência de informações.\n- **Uso de Chaves Primárias e Estrangeiras:** garantir que os relacionamentos entre tabelas sejam claros e consistentes.\n- **Senhas e Permissões Seguras:** nunca deixar o usuário `root` com senha fraca em ambientes que não sejam apenas locais/estudo.\n- **Backups Regulares:** manter cópias de segurança para evitar perda de dados importantes.\n- **Padronização de Nomenclatura:** usar nomes claros e consistentes para tabelas e colunas, facilitando a leitura por toda a equipe.\n\n## Links e Materiais de Apoio\n- Resumo_Banco_de_Dados.pdf",
-    "closed_by": null,
+    "body": "\n\n# Introdução a Bancos de Dados\n\n## O que é um Banco de Dados?\n\nUm Banco de Dados é a camada de uma aplicação responsável por armazenar, organizar e recuperar informações de forma estruturada e persistente. É onde os dados continuam existindo mesmo depois que o programa é fechado ou o servidor reiniciado.\n\nEnquanto o Frontend cuida da interface e o Backend processa as regras de negócio, o Banco de Dados é a base que guarda tudo o que precisa ser lembrado: usuários, produtos, pedidos, mensagens — qualquer informação que a aplicação precise consultar depois.\n\n## Estrutura Básica: Tabelas, Colunas e Registros\n\nAntes de aprender comandos, é importante entender a estrutura:\n\n- **Tabela:** onde os dados de um mesmo tipo ficam guardados (ex: tabela `usuarios`, tabela `produtos`).\n- **Coluna:** cada característica que a tabela guarda (ex: nome, email, preço).\n- **Registro (linha):** cada item individual dentro da tabela (ex: um usuário específico).\n- **Chave Primária (Primary Key):** um identificador único de cada registro, geralmente um número (`id`), que nunca se repete.\n- **Chave Estrangeira (Foreign Key):** uma coluna que referencia a chave primária de outra tabela, criando um relacionamento entre elas.\n\n## Principais Comandos SQL\n\nA linguagem usada para conversar com o banco de dados é o **SQL**. Os comandos abaixo são a base que qualquer pessoa precisa saber para começar a usar um banco:\n\n**Criar um banco de dados:**\n```sql\nCREATE DATABASE meu_banco;\n```\n\n**Criar uma tabela:**\n```sql\nCREATE TABLE usuarios (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    nome VARCHAR(100),\n    email VARCHAR(100)\n);\n```\n\n**Inserir dados (INSERT):**\n```sql\nINSERT INTO usuarios (nome, email) VALUES ('Maria', 'maria@email.com');\n```\n\n**Consultar dados (SELECT):**\n```sql\nSELECT * FROM usuarios;\nSELECT nome, email FROM usuarios WHERE id = 1;\n```\n\n**Atualizar dados (UPDATE):**\n```sql\nUPDATE usuarios SET nome = 'Maria Silva' WHERE id = 1;\n```\n\n**Apagar dados (DELETE):**\n```sql\nDELETE FROM usuarios WHERE id = 1;\n```\n\n**Filtrar e ordenar resultados:**\n```sql\nSELECT * FROM usuarios WHERE nome LIKE 'M%' ORDER BY nome ASC;\n```\n\n**Relacionar tabelas (JOIN):**\n```sql\nSELECT pedidos.id, usuarios.nome\nFROM pedidos\nJOIN usuarios ON pedidos.usuario_id = usuarios.id;\n```\n\n## Boas Práticas no Desenvolvimento de Banco de Dados\n\n- **Normalização de Dados:** organizar as tabelas para evitar redundância e inconsistência de informações.\n- **Uso de Chaves Primárias e Estrangeiras:** garantir que os relacionamentos entre tabelas sejam claros e consistentes.\n- **Senhas e Permissões Seguras:** nunca deixar o usuário `root` com senha fraca em ambientes que não sejam apenas locais/estudo.\n- **Backups Regulares:** manter cópias de segurança para evitar perda de dados importantes.\n- **Padronização de Nomenclatura:** usar nomes claros e consistentes para tabelas e colunas, facilitando a leitura por toda a equipe.\n\n## Links e Materiais de Apoio\n- [Resumo_Banco_de_Dados.pdf](https://github.com/user-attachments/files/32116155/Resumo_Banco_de_Dados.pdf)",
+    "closed_by": {
+      "login": "smitalo",
+      "id": 173753454,
+      "node_id": "U_kgDOCltEbg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/173753454?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/smitalo",
+      "html_url": "https://github.com/smitalo",
+      "followers_url": "https://api.github.com/users/smitalo/followers",
+      "following_url": "https://api.github.com/users/smitalo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/smitalo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/smitalo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/smitalo/subscriptions",
+      "organizations_url": "https://api.github.com/users/smitalo/orgs",
+      "repos_url": "https://api.github.com/users/smitalo/repos",
+      "events_url": "https://api.github.com/users/smitalo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/smitalo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G10-2026-2/issues/1/reactions",
       "total_count": 0,
@@ -474,7 +540,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/G10-2026-2/issues/1/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "G10-2026-2"
   }
