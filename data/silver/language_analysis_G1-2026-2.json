@@ -2,19 +2,19 @@
   "repository": "G1-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-11T10:17:42.296295",
+  "analyzed_at": "2026-09-12T09:55:52.507132",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 53,
-  "total_bytes": 320025,
+  "total_files": 66,
+  "total_bytes": 338753,
   "languages": [
     {
       "language": "Markdown",
       "file_count": 32,
       "total_bytes": 248267,
-      "percentage": 77.58,
+      "percentage": 73.29,
       "files": [
         {
           "path": ".github/skills/speckit-checklist/SKILL.md",
@@ -82,7 +82,7 @@
       "language": "PowerShell",
       "file_count": 6,
       "total_bytes": 61101,
-      "percentage": 19.09,
+      "percentage": 18.04,
       "files": [
         {
           "path": ".specify/scripts/powershell/common.ps1",
@@ -123,10 +123,72 @@
       ]
     },
     {
+      "language": "Unknown",
+      "file_count": 9,
+      "total_bytes": 15229,
+      "percentage": 4.5,
+      "files": [
+        {
+          "path": "backend/app/domain/__pycache__/model_disciplina.cpython-313.pyc",
+          "name": "model_disciplina.cpython-313.pyc",
+          "size": 2398,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_publicacao_institucional.cpython-313.pyc",
+          "name": "model_publicacao_institucional.cpython-313.pyc",
+          "size": 2070,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_denuncia.cpython-313.pyc",
+          "name": "model_denuncia.cpython-313.pyc",
+          "size": 1897,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_usuario.cpython-313.pyc",
+          "name": "model_usuario.cpython-313.pyc",
+          "size": 1759,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_fonte_institucional.cpython-313.pyc",
+          "name": "model_fonte_institucional.cpython-313.pyc",
+          "size": 1750,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_Contribuicao.cpython-313.pyc",
+          "name": "model_Contribuicao.cpython-313.pyc",
+          "size": 1590,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_SubmissaoBase.cpython-313.pyc",
+          "name": "model_SubmissaoBase.cpython-313.pyc",
+          "size": 1555,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_ConteudoAcademico.cpython-313.pyc",
+          "name": "model_ConteudoAcademico.cpython-313.pyc",
+          "size": 1200,
+          "extension": ".pyc"
+        },
+        {
+          "path": "backend/app/domain/__pycache__/model_curso.cpython-313.pyc",
+          "name": "model_curso.cpython-313.pyc",
+          "size": 1010,
+          "extension": ".pyc"
+        }
+      ]
+    },
+    {
       "language": "Python",
-      "file_count": 6,
-      "total_bytes": 4333,
-      "percentage": 1.35,
+      "file_count": 10,
+      "total_bytes": 7832,
+      "percentage": 2.31,
       "files": [
         {
           "path": "backend/app/domain/model_disciplina.py",
@@ -135,9 +197,27 @@
           "extension": ".py"
         },
         {
+          "path": "backend/app/domain/model_publicacao_institucional.py",
+          "name": "model_publicacao_institucional.py",
+          "size": 1325,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_denuncia.py",
+          "name": "model_denuncia.py",
+          "size": 987,
+          "extension": ".py"
+        },
+        {
           "path": "backend/app/domain/model_usuario.py",
           "name": "model_usuario.py",
-          "size": 875,
+          "size": 908,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/domain/model_fonte_institucional.py",
+          "name": "model_fonte_institucional.py",
+          "size": 898,
           "extension": ".py"
         },
         {
@@ -159,6 +239,12 @@
           "extension": ".py"
         },
         {
+          "path": "backend/app/domain/model_curso.py",
+          "name": "model_curso.py",
+          "size": 256,
+          "extension": ".py"
+        },
+        {
           "path": "backend/app/main.py",
           "name": "main.py",
           "size": 0,
@@ -170,7 +256,7 @@
       "language": "JSON",
       "file_count": 6,
       "total_bytes": 3724,
-      "percentage": 1.16,
+      "percentage": 1.1,
       "files": [
         {
           "path": ".specify/integrations/speckit.manifest.json",
@@ -214,7 +300,7 @@
       "language": "YAML",
       "file_count": 1,
       "total_bytes": 2216,
-      "percentage": 0.69,
+      "percentage": 0.65,
       "files": [
         {
           "path": ".specify/workflows/speckit/workflow.yml",
@@ -228,7 +314,7 @@
       "language": "Git Ignore",
       "file_count": 2,
       "total_bytes": 384,
-      "percentage": 0.12,
+      "percentage": 0.11,
       "files": [
         {
           "path": ".specify/.gitignore",
@@ -246,7 +332,7 @@
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-11T10:20:46.128746",
+    "extracted_at": "2026-09-12T09:59:24.704254",
     "file_path": "data/silver/language_analysis_G1-2026-2.json"
   }
 }

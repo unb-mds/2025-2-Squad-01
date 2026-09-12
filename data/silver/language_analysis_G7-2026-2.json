@@ -2,19 +2,19 @@
   "repository": "G7-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-11T10:17:46.911226",
+  "analyzed_at": "2026-09-12T09:55:56.789549",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 45,
-  "total_bytes": 215135,
+  "total_files": 59,
+  "total_bytes": 249492,
   "languages": [
     {
       "language": "Markdown",
       "file_count": 28,
-      "total_bytes": 211662,
-      "percentage": 98.39,
+      "total_bytes": 216132,
+      "percentage": 86.63,
       "files": [
         {
           "path": "sprints/sprint01/estudo_metodologia_agil-and-scrum.md",
@@ -31,7 +31,7 @@
         {
           "path": "docs/requisitos.md",
           "name": "requisitos.md",
-          "size": 15126,
+          "size": 15186,
           "extension": ".md"
         },
         {
@@ -49,7 +49,7 @@
         {
           "path": "docs/arquitetura.md",
           "name": "arquitetura.md",
-          "size": 12989,
+          "size": 13236,
           "extension": ".md"
         },
         {
@@ -71,78 +71,138 @@
           "extension": ".md"
         },
         {
-          "path": "docs/estudos/docker.md",
-          "name": "docker.md",
-          "size": 10637,
+          "path": "skills/technology/fastapi/SKILL.md",
+          "name": "SKILL.md",
+          "size": 11060,
           "extension": ".md"
         }
       ]
     },
     {
       "language": "Python",
-      "file_count": 11,
-      "total_bytes": 2329,
-      "percentage": 1.08,
+      "file_count": 20,
+      "total_bytes": 22533,
+      "percentage": 9.03,
       "files": [
+        {
+          "path": "docs/diagramas/gerar_modelos.py",
+          "name": "gerar_modelos.py",
+          "size": 8293,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/alembic/versions/20260911_01_create_initial_schema.py",
+          "name": "20260911_01_create_initial_schema.py",
+          "size": 4559,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/models/avaliacao.py",
+          "name": "avaliacao.py",
+          "size": 2503,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/alembic/env.py",
+          "name": "env.py",
+          "size": 1302,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/models/turma.py",
+          "name": "turma.py",
+          "size": 1005,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/models/usuario.py",
+          "name": "usuario.py",
+          "size": 931,
+          "extension": ".py"
+        },
         {
           "path": "backend/app/schemas/avaliacao.py",
           "name": "avaliacao.py",
-          "size": 613,
+          "size": 905,
           "extension": ".py"
         },
         {
-          "path": "backend/app/routers/avaliacoes.py",
-          "name": "avaliacoes.py",
-          "size": 460,
+          "path": "backend/app/models/disciplina.py",
+          "name": "disciplina.py",
+          "size": 768,
           "extension": ".py"
         },
         {
-          "path": "backend/app/db/__init__.py",
-          "name": "__init__.py",
-          "size": 348,
+          "path": "backend/app/models/professor.py",
+          "name": "professor.py",
+          "size": 592,
           "extension": ".py"
         },
         {
-          "path": "backend/app/models/__init__.py",
-          "name": "__init__.py",
-          "size": 275,
+          "path": "backend/app/core/database.py",
+          "name": "database.py",
+          "size": 453,
           "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "PDF",
+      "file_count": 2,
+      "total_bytes": 8101,
+      "percentage": 3.25,
+      "files": [
+        {
+          "path": "docs/diagramas/modelo logico.pdf",
+          "name": "modelo logico.pdf",
+          "size": 4407,
+          "extension": ".pdf"
         },
         {
-          "path": "backend/app/services/__init__.py",
-          "name": "__init__.py",
-          "size": 239,
-          "extension": ".py"
+          "path": "docs/diagramas/modelo conceitual.pdf",
+          "name": "modelo conceitual.pdf",
+          "size": 3694,
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 3,
+      "total_bytes": 1271,
+      "percentage": 0.51,
+      "files": [
+        {
+          "path": "backend/.env.example",
+          "name": ".env.example",
+          "size": 650,
+          "extension": ".example"
         },
         {
-          "path": "backend/app/main.py",
-          "name": "main.py",
-          "size": 229,
-          "extension": ".py"
+          "path": "backend/alembic/script.py.mako",
+          "name": "script.py.mako",
+          "size": 608,
+          "extension": ".mako"
         },
         {
-          "path": "backend/app/core/config.py",
-          "name": "config.py",
-          "size": 165,
-          "extension": ".py"
-        },
+          "path": ".gitattributes",
+          "name": ".gitattributes",
+          "size": 13,
+          "extension": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "language": "INI",
+      "file_count": 1,
+      "total_bytes": 581,
+      "percentage": 0.23,
+      "files": [
         {
-          "path": "backend/app/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/core/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/routers/__init__.py",
-          "name": "__init__.py",
-          "size": 0,
-          "extension": ".py"
+          "path": "backend/alembic.ini",
+          "name": "alembic.ini",
+          "size": 581,
+          "extension": ".ini"
         }
       ]
     },
@@ -150,7 +210,7 @@
       "language": "No Extension",
       "file_count": 1,
       "total_bytes": 360,
-      "percentage": 0.17,
+      "percentage": 0.14,
       "files": [
         {
           "path": "backend/Dockerfile",
@@ -161,23 +221,9 @@
       ]
     },
     {
-      "language": "Unknown",
-      "file_count": 1,
-      "total_bytes": 337,
-      "percentage": 0.16,
-      "files": [
-        {
-          "path": "backend/.env.example",
-          "name": ".env.example",
-          "size": 337,
-          "extension": ".example"
-        }
-      ]
-    },
-    {
       "language": "Git Ignore",
       "file_count": 2,
-      "total_bytes": 283,
+      "total_bytes": 315,
       "percentage": 0.13,
       "files": [
         {
@@ -189,7 +235,7 @@
         {
           "path": ".gitignore",
           "name": ".gitignore",
-          "size": 55,
+          "size": 87,
           "extension": ".gitignore"
         }
       ]
@@ -211,20 +257,20 @@
     {
       "language": "Text",
       "file_count": 1,
-      "total_bytes": 51,
-      "percentage": 0.02,
+      "total_bytes": 86,
+      "percentage": 0.03,
       "files": [
         {
           "path": "backend/requirements.txt",
           "name": "requirements.txt",
-          "size": 51,
+          "size": 86,
           "extension": ".txt"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-11T10:20:45.828714",
+    "extracted_at": "2026-09-12T09:59:24.351629",
     "file_path": "data/silver/language_analysis_G7-2026-2.json"
   }
 }
