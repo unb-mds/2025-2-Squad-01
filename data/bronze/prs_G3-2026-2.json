@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-12T08:56:37.170476",
+      "extracted_at": "2026-09-13T09:50:32.270205",
       "file_path": "data/bronze/prs_G3-2026-2.json",
       "record_count": 30
     }
@@ -117,11 +117,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -246,7 +246,7 @@
         "archived_by": null
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -301,18 +301,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-09-11T18:54:57Z",
-    "updated_at": "2026-09-11T19:06:01Z",
-    "closed_at": null,
+    "updated_at": "2026-09-12T19:23:29Z",
+    "closed_at": "2026-09-12T19:23:28Z",
     "assignee": {
       "login": "vitorcoelho21",
       "id": 253326124,
@@ -344,10 +344,30 @@
       "html_url": "https://github.com/unb-mds/G3-2026-2/pull/81",
       "diff_url": "https://github.com/unb-mds/G3-2026-2/pull/81.diff",
       "patch_url": "https://github.com/unb-mds/G3-2026-2/pull/81.patch",
-      "merged_at": null
+      "merged_at": "2026-09-12T19:23:28Z"
     },
     "body": "## O que este PR faz\r\n\r\nCorrige o erro de lint `I001` (import block un-sorted or un-formatted) do\r\nruff, que estava quebrando o CI. Os imports de `parser.py` e `scraper.py`\r\ndo scraper de Disciplinas foram reordenados/formatados com `ruff check --fix .`.\r\n\r\n## Issue relacionada\r\n\r\nCloses #\r\n\r\n## Tipo de mudança\r\n\r\n- [ ] feat (nova funcionalidade)\r\n- [ ] fix (correção de bug)\r\n- [ ] docs (documentação)\r\n- [ ] refactor (mudança de código sem corrigir bug nem adicionar feature)\r\n- [ ] test (adiciona ou corrige testes)\r\n- [x] chore (manutenção que não afeta código-fonte, ex: templates, config, CI)\r\n\r\n## Como testar\r\n\r\n1. Rodar `ruff check .` na raiz do projeto\r\n2. Confirmar que não retorna nenhum erro (antes retornava 2 erros de `I001`)\r\n\r\n## Checklist antes de pedir revisão\r\n\r\n- [x] Segue o padrão de commits (Conventional Commits)\r\n- [x] Segue a separação de camadas da arquitetura (scraper não tem lógica de API, lógica de negócio não fica no router)\r\n- [ ] Testes adicionados/atualizados, se aplicável\r\n- [ ] Documentação atualizada, se aplicável (README, REQUISITOS.md, ARQUITETURA.md)\r\n- [x] Se usou IA neste PR (implementação, testes, docs, refatoração), está registrado em `AI-USAGE.md` — N/A, fix aplicado manualmente com `ruff --fix`\r\n- [ ] Pipeline de CI está verde (lint, testes, SAST) — obrigatório antes do merge, é porta de qualidade da disciplina\r\n- [ ] Se este PR envolveu decisão de arquitetura relevante, existe um ADR em `docs/adr/`\r\n\r\n## Screenshots (se for mudança visual)\r\n\r\nN/A",
-    "closed_by": null,
+    "closed_by": {
+      "login": "vitorcoelho21",
+      "id": 253326124,
+      "node_id": "U_kgDODxlzLA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/253326124?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vitorcoelho21",
+      "html_url": "https://github.com/vitorcoelho21",
+      "followers_url": "https://api.github.com/users/vitorcoelho21/followers",
+      "following_url": "https://api.github.com/users/vitorcoelho21/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vitorcoelho21/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vitorcoelho21/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vitorcoelho21/subscriptions",
+      "organizations_url": "https://api.github.com/users/vitorcoelho21/orgs",
+      "repos_url": "https://api.github.com/users/vitorcoelho21/repos",
+      "events_url": "https://api.github.com/users/vitorcoelho21/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vitorcoelho21/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G3-2026-2/issues/81/reactions",
       "total_count": 0,
@@ -465,11 +485,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -660,11 +680,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -855,11 +875,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -1039,11 +1059,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -1474,11 +1494,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -1816,11 +1836,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -2490,7 +2510,30 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11874433400,
+        "node_id": "LA_kwDOT8WbHM8AAAACw8V5eA",
+        "url": "https://api.github.com/repos/unb-mds/G3-2026-2/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation",
+        "archived_at": null,
+        "archived_by": null
+      },
+      {
+        "id": 12058019271,
+        "node_id": "LA_kwDOT8WbHM8AAAACzrbFxw",
+        "url": "https://api.github.com/repos/unb-mds/G3-2026-2/labels/estudos",
+        "name": "estudos",
+        "color": "35d422",
+        "default": false,
+        "description": "Label sobre os estudos realizados para o projeto",
+        "archived_at": null,
+        "archived_by": null
+      }
+    ],
     "state": "closed",
     "locked": false,
     "assignees": [
@@ -2519,7 +2562,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2026-09-09T15:14:35Z",
-    "updated_at": "2026-09-11T03:52:06Z",
+    "updated_at": "2026-09-12T13:58:53Z",
     "closed_at": "2026-09-09T15:22:10Z",
     "assignee": {
       "login": "paulinpj",
@@ -2774,11 +2817,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -2946,11 +2989,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -3141,11 +3184,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },
@@ -3336,11 +3379,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 10,
-      "closed_issues": 14,
+      "open_issues": 9,
+      "closed_issues": 15,
       "state": "open",
       "created_at": "2026-09-09T02:14:38Z",
-      "updated_at": "2026-09-11T19:33:14Z",
+      "updated_at": "2026-09-12T19:23:29Z",
       "due_on": "2026-09-14T00:00:00Z",
       "closed_at": null
     },

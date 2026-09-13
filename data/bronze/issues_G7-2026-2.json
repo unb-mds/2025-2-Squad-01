@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-12T08:56:41.844722",
+      "extracted_at": "2026-09-13T09:50:36.561776",
       "file_path": "data/bronze/issues_G7-2026-2.json",
       "record_count": 42
     }
@@ -1874,7 +1874,7 @@
     },
     "comments": 0,
     "created_at": "2026-09-01T13:59:07Z",
-    "updated_at": "2026-09-11T17:44:15Z",
+    "updated_at": "2026-09-12T18:56:35Z",
     "closed_at": "2026-09-11T17:44:15Z",
     "assignee": {
       "login": "ailoiol",
@@ -1913,7 +1913,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "### 📚 Descrição e objetivo\n\nCompletar e verificar o arquivo backend/.env.example já existente, mantendo-o alinhado às variáveis consumidas por backend/app/core/config.py e ao ambiente de execução.\n\nEstado observado: o exemplo contém SECRET_KEY, DEBUG e DATABASE_URL; a URL está vazia e acompanhada de uma nota sobre decisão pendente de ORM.\n\n### ✅ Critérios de aceite\n\n- [ ] SECRET_KEY, DEBUG e DATABASE_URL estão documentadas conforme seu uso no backend.\n- [ ] Após definir persistência/driver, DATABASE_URL contém exemplo fictício compatível com a configuração escolhida.\n- [ ] Exemplos distinguem execução local e acesso entre containers quando os endereços diferirem.\n- [ ] Arquivo não contém segredos reais e backend/.env é ignorado pelo Git.\n- [ ] README explica a cópia de backend/.env.example para backend/.env e quais valores precisam ser preenchidos.\n- [ ] Configuração do backend foi carregada com os valores de exemplo devidamente preenchidos e o procedimento foi verificado.\n\n### 📝 Tarefas\n\n- [ ] Comparar exemplo com config.py e configuração de #34.\n- [x] Conferir regras de .gitignore.\n- [x] Completar URL após decisão de banco/driver.\n- [x] Documentar cópia, preenchimento e execução.\n\n### 📎 Dependências e limites\n\nCoordenar com #34. Revisão das variáveis existentes e documentação podem avançar agora; URL definitiva e teste de conexão dependem da decisão de persistência. Não declarar a issue concluída apenas porque o arquivo já existe.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Média. Responsável: a definir em Assignees.",
+    "body": "### 📚 Descrição e objetivo\n\nCompletar e verificar o arquivo backend/.env.example já existente, mantendo-o alinhado às variáveis consumidas por backend/app/core/config.py e ao ambiente de execução.\n\nEstado observado: o exemplo contém SECRET_KEY, DEBUG e DATABASE_URL; a URL está vazia e acompanhada de uma nota sobre decisão pendente de ORM.\n\n### ✅ Critérios de aceite\n\n- [ ] SECRET_KEY, DEBUG e DATABASE_URL estão documentadas conforme seu uso no backend.\n- [ ] Após definir persistência/driver, DATABASE_URL contém exemplo fictício compatível com a configuração escolhida.\n- [ ] Exemplos distinguem execução local e acesso entre containers quando os endereços diferirem.\n- [ ] Arquivo não contém segredos reais e backend/.env é ignorado pelo Git.\n- [ ] README explica a cópia de backend/.env.example para backend/.env e quais valores precisam ser preenchidos.\n- [ ] Configuração do backend foi carregada com os valores de exemplo devidamente preenchidos e o procedimento foi verificado.\n\n### 📝 Tarefas\n\n- [x] Comparar exemplo com config.py e configuração de #34.\n- [x] Conferir regras de .gitignore.\n- [x] Completar URL após decisão de banco/driver.\n- [x] Documentar cópia, preenchimento e execução.\n\n### 📎 Dependências e limites\n\nCoordenar com #34. Revisão das variáveis existentes e documentação podem avançar agora; URL definitiva e teste de conexão dependem da decisão de persistência. Não declarar a issue concluída apenas porque o arquivo já existe.\n\n### 📌 Prioridade e responsável\n\nPrioridade: Média. Responsável: a definir em Assignees.",
     "closed_by": {
       "login": "nicolaszanin06",
       "id": 213249676,
