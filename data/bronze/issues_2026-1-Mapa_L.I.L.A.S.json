@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-13T09:50:11.500184",
+      "extracted_at": "2026-09-14T10:11:00.425010",
       "file_path": "data/bronze/issues_2026-1-Mapa_L.I.L.A.S.json",
       "record_count": 63
     }
@@ -490,7 +490,7 @@
         "archived_by": null
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": {
@@ -523,18 +523,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-30T22:41:18Z",
-    "updated_at": "2026-06-30T22:41:18Z",
-    "closed_at": null,
+    "updated_at": "2026-09-13T16:39:49Z",
+    "closed_at": "2026-09-13T16:39:49Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -552,7 +552,27 @@
       "total_blocking": 0
     },
     "body": "## What to build\n\nCentralizar todas as instancias de cache (atualmente espalhadas em `graficos.py`) em um modulo unico `app/cache.py` e adicionar cache TTLCache (TTL 12h) nos endpoints que ainda nao possuem cache no backend. Tambem corrigir a ordenacao de rotas no `projeto.py` para evitar conflito de roteamento.\n\n### Modulo centralizado de cache\n\nCriar `app/cache.py` com todas as instancias de `TTLCache` do projeto:\n- `cache_resumo` (graficos/resumo) - ja existe, migrar de `graficos.py`\n- `cache_distribuicao` (graficos/distribuicao) - ja existe, migrar de `graficos.py`\n- `cache_stats` (projetos-de-lei/stats) - novo\n- `cache_filtros` (projetos-de-lei/filtros) - novo\n- `cache_projetos` (projetos-de-lei sem filtros) - novo\n\n### Cache no /stats\n\nAdicionar cache com chave fixa `\"stats\"` (1 entrada). O endpoint ja existe em `projeto.py` e faz queries pesadas de deduplicacao.\n\n### Cache no /filtros\n\nAdicionar cache com chave fixa `\"filtros\"` (1 entrada). Retorna dados semi-estaticos (partidos, UFs, anos).\n\n### Cache no /projetos-de-lei (sem filtros)\n\nCachear a listagem quando chamada com page=1, per_page=10, sem filtros de conteudo (keyword, partido, uf, ano todos None). Usar chave composta `{ordenar}_{status or \"all\"}` para cobrir 12 combinacoes (3 ordenacoes x 4 opcoes de status). Se a chamada tem qualquer filtro de conteudo OU page!=1 OU per_page!=10, nao usar cache.\n\n### Correcao de ordenacao de rotas\n\nMover `/stats` e `/filtros` para antes de `/{casa}/{numero}/{ano}` no `projeto.py`. Atualmente o FastAPI pode interpretar \"stats\" como o parametro `{casa}` da rota de detalhe, causando erro 500 ou 404.\n\nA ordem final das rotas deve ser:\n1. `GET /api/projetos-de-lei` (listagem)\n2. `GET /api/projetos-de-lei/stats`\n3. `GET /api/projetos-de-lei/filtros`\n4. `GET /api/projetos-de-lei/{casa}/{numero}/{ano}` (detalhe)\n\n### Migracao do graficos.py\n\nRemover as instancias locais de `cache_resumo` e `cache_distribuicao` e o import de `cachetools` do `graficos.py`. Importar de `app.cache` em vez disso. A logica de uso do cache permanece identica.\n\n## Acceptance criteria\n\n- [ ] Existe um modulo `app/cache.py` com todas as instancias de TTLCache centralizadas (TTL 12h / 43200s)\n- [ ] `graficos.py` importa caches de `app.cache` em vez de criar localmente\n- [ ] O endpoint `/stats` retorna resultado do cache na segunda chamada (sem acesso ao banco)\n- [ ] O endpoint `/filtros` retorna resultado do cache na segunda chamada\n- [ ] O endpoint `/projetos-de-lei` sem filtros (page=1, per_page=10) retorna resultado do cache na segunda chamada\n- [ ] Chamadas ao `/projetos-de-lei` COM filtros de conteudo nao sao cacheadas\n- [ ] As rotas `/stats` e `/filtros` estao definidas antes de `/{casa}/{numero}/{ano}` no `projeto.py`\n- [ ] Acessar `GET /api/projetos-de-lei/stats` retorna os dados corretos (nao cai na rota de detalhe)\n\n## Blocked by\n\nNone - can start immediately.",
-    "closed_by": null,
+    "closed_by": {
+      "login": "schetinger",
+      "id": 209646622,
+      "node_id": "U_kgDODH70Hg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/209646622?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/schetinger",
+      "html_url": "https://github.com/schetinger",
+      "followers_url": "https://api.github.com/users/schetinger/followers",
+      "following_url": "https://api.github.com/users/schetinger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/schetinger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/schetinger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/schetinger/subscriptions",
+      "organizations_url": "https://api.github.com/users/schetinger/orgs",
+      "repos_url": "https://api.github.com/users/schetinger/repos",
+      "events_url": "https://api.github.com/users/schetinger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/schetinger/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2026-1-Mapa_L.I.L.A.S/issues/114/reactions",
       "total_count": 0,
@@ -567,7 +587,7 @@
     },
     "timeline_url": "https://api.github.com/repos/unb-mds/2026-1-Mapa_L.I.L.A.S/issues/114/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null,
     "repo_name": "2026-1-Mapa_L.I.L.A.S"
   },
@@ -659,11 +679,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -835,11 +855,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1011,11 +1031,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1167,11 +1187,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1852,11 +1872,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -1966,11 +1986,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2080,11 +2100,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2194,11 +2214,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2444,11 +2464,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },
@@ -2984,11 +3004,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 3,
+      "open_issues": 7,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-06-17T21:26:23Z",
-      "updated_at": "2026-06-30T22:41:18Z",
+      "updated_at": "2026-09-13T16:39:49Z",
       "due_on": null,
       "closed_at": null
     },

@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-13T09:49:31.487892",
+      "extracted_at": "2026-09-14T10:10:27.440310",
       "file_path": "data/bronze/prs_2025-1-NoFluxoUNB.json",
       "record_count": 52
     }
@@ -51,7 +51,7 @@
         "archived_by": null
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -79,8 +79,8 @@
     "milestone": null,
     "comments": 2,
     "created_at": "2026-09-12T20:34:59Z",
-    "updated_at": "2026-09-12T21:20:26Z",
-    "closed_at": null,
+    "updated_at": "2026-09-13T12:22:27Z",
+    "closed_at": "2026-09-13T12:22:27Z",
     "assignee": {
       "login": "hisarxt",
       "id": 123188031,
@@ -112,10 +112,30 @@
       "html_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/pull/168",
       "diff_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/pull/168.diff",
       "patch_url": "https://github.com/unb-mds/2025-1-NoFluxoUNB/pull/168.patch",
-      "merged_at": null
+      "merged_at": "2026-09-13T12:22:27Z"
     },
     "body": "## 📌 Descrição\r\n\r\n**Contexto**\r\n\r\nA tela de Fluxogramas listava uma entrada por matriz curricular de cada curso (ex.: 6 cards só para \"Administração\", um por versão de currículo + turno), totalizando 530 cursos na listagem. Isso poluía a navegação e dificultava encontrar o curso desejado.\r\n\r\n**O que mudou**\r\n- A listagem agora agrupa por curso + turno (ex.: \"Administração — Diurno\", \"Administração — Noturno\"), reduzindo drasticamente o número de cards exibidos.\r\n- Ao clicar em um turno, a matriz específica pode ser escolhida através de um seletor (\"Trocar matriz\") na própria tela do fluxograma, mantendo o acesso a todas as versões sem sobrecarregar a tela inicial.\r\n\r\n**Como testar**\r\n- Acessar /fluxogramas e confirmar que cada curso aparece no máximo duas vezes (Diurno/Noturno), não uma vez por matriz.\r\n- Clicar em um card e verificar que o fluxograma carrega normalmente.\r\n- No seletor \"Trocar matriz\", confirmar que todas as matrizes daquele curso+turno aparecem como opção e que trocar recarrega o fluxograma correspondente.\r\n\r\n## 🔗 Issue Relacionada\r\n\r\nCloses #\r\n\r\n## ✅ Tipo de Mudança\r\n\r\n- [ ] Correção de bug\r\n- [x] Nova funcionalidade\r\n- [x] Refatoração\r\n- [ ] Documentação\r\n\r\n## 🔍 Checklist\r\n\r\n- [ ] Testes criados/atualizados\r\n- [ ] Documentação atualizada (se necessário)\r\n- [ ] PR revisada e pronta para merge\r\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "darkymeubem",
+      "id": 73255212,
+      "node_id": "MDQ6VXNlcjczMjU1MjEy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73255212?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkymeubem",
+      "html_url": "https://github.com/darkymeubem",
+      "followers_url": "https://api.github.com/users/darkymeubem/followers",
+      "following_url": "https://api.github.com/users/darkymeubem/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkymeubem/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkymeubem/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkymeubem/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkymeubem/orgs",
+      "repos_url": "https://api.github.com/users/darkymeubem/repos",
+      "events_url": "https://api.github.com/users/darkymeubem/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkymeubem/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/2025-1-NoFluxoUNB/issues/168/reactions",
       "total_count": 0,
