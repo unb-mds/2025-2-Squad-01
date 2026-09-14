@@ -2,24 +2,30 @@
   "repository": "G12-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-13T10:48:21.645475",
+  "analyzed_at": "2026-09-14T11:08:40.650139",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 10,
-  "total_bytes": 39064,
+  "total_files": 58,
+  "total_bytes": 157429,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 10,
-      "total_bytes": 39064,
-      "percentage": 100.0,
+      "file_count": 17,
+      "total_bytes": 61902,
+      "percentage": 39.32,
       "files": [
         {
           "path": "docs/estudos/arquitetura_software.md",
           "name": "arquitetura_software.md",
           "size": 9271,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/estudos/extracao_dados_pdf.md",
+          "name": "extracao_dados_pdf.md",
+          "size": 8685,
           "extension": ".md"
         },
         {
@@ -35,9 +41,15 @@
           "extension": ".md"
         },
         {
-          "path": "Claude.md",
-          "name": "Claude.md",
-          "size": 3911,
+          "path": "contexto.md",
+          "name": "contexto.md",
+          "size": 4718,
+          "extension": ".md"
+        },
+        {
+          "path": "docs/estudos/backend.md",
+          "name": "backend.md",
+          "size": 3990,
           "extension": ".md"
         },
         {
@@ -53,34 +65,330 @@
           "extension": ".md"
         },
         {
+          "path": "docs/estudos/ocr_imagem.md",
+          "name": "ocr_imagem.md",
+          "size": 3013,
+          "extension": ".md"
+        },
+        {
           "path": "docs/Requisitos.md",
           "name": "Requisitos.md",
           "size": 2759,
           "extension": ".md"
+        }
+      ]
+    },
+    {
+      "language": "JSON",
+      "file_count": 3,
+      "total_bytes": 41627,
+      "percentage": 26.44,
+      "files": [
+        {
+          "path": "frontend/package-lock.json",
+          "name": "package-lock.json",
+          "size": 40937,
+          "extension": ".json"
         },
         {
-          "path": "README.md",
-          "name": "README.md",
-          "size": 602,
-          "extension": ".md"
+          "path": "frontend/package.json",
+          "name": "package.json",
+          "size": 459,
+          "extension": ".json"
         },
         {
-          "path": "docs/estudos/README.md",
-          "name": "README.md",
-          "size": 1,
-          "extension": ".md"
+          "path": "frontend/.oxlintrc.json",
+          "name": ".oxlintrc.json",
+          "size": 231,
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "language": "SVG Image",
+      "file_count": 4,
+      "total_bytes": 27388,
+      "percentage": 17.4,
+      "files": [
+        {
+          "path": "frontend/public/favicon.svg",
+          "name": "favicon.svg",
+          "size": 9522,
+          "extension": ".svg"
         },
         {
-          "path": "docs/scrum/sprint00.md",
-          "name": "sprint00.md",
-          "size": 1,
-          "extension": ".md"
+          "path": "frontend/src/assets/vite.svg",
+          "name": "vite.svg",
+          "size": 8709,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/public/icons.svg",
+          "name": "icons.svg",
+          "size": 5031,
+          "extension": ".svg"
+        },
+        {
+          "path": "frontend/src/assets/react.svg",
+          "name": "react.svg",
+          "size": 4126,
+          "extension": ".svg"
+        }
+      ]
+    },
+    {
+      "language": "PNG Image",
+      "file_count": 1,
+      "total_bytes": 13057,
+      "percentage": 8.29,
+      "files": [
+        {
+          "path": "frontend/src/assets/hero.png",
+          "name": "hero.png",
+          "size": 13057,
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "language": "CSS",
+      "file_count": 2,
+      "total_bytes": 5060,
+      "percentage": 3.21,
+      "files": [
+        {
+          "path": "frontend/src/App.css",
+          "name": "App.css",
+          "size": 2891,
+          "extension": ".css"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "name": "index.css",
+          "size": 2169,
+          "extension": ".css"
+        }
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "file_count": 3,
+      "total_bytes": 4036,
+      "percentage": 2.56,
+      "files": [
+        {
+          "path": "frontend/src/App.jsx",
+          "name": "App.jsx",
+          "size": 3646,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/src/main.jsx",
+          "name": "main.jsx",
+          "size": 229,
+          "extension": ".jsx"
+        },
+        {
+          "path": "frontend/vite.config.js",
+          "name": "vite.config.js",
+          "size": 161,
+          "extension": ".js"
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "file_count": 17,
+      "total_bytes": 1743,
+      "percentage": 1.11,
+      "files": [
+        {
+          "path": "backend/app/db/session.py",
+          "name": "session.py",
+          "size": 381,
+          "extension": ".py"
+        },
+        {
+          "path": "extracao/extracao/main.py",
+          "name": "main.py",
+          "size": 331,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/core/config.py",
+          "name": "config.py",
+          "size": 300,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/tests/test_health.py",
+          "name": "test_health.py",
+          "size": 256,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/main.py",
+          "name": "main.py",
+          "size": 175,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/api/routes/health.py",
+          "name": "health.py",
+          "size": 158,
+          "extension": ".py"
+        },
+        {
+          "path": "extracao/tests/test_main.py",
+          "name": "test_main.py",
+          "size": 142,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/api/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/api/routes/__init__.py",
+          "name": "__init__.py",
+          "size": 0,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "YAML",
+      "file_count": 1,
+      "total_bytes": 836,
+      "percentage": 0.53,
+      "files": [
+        {
+          "path": "docker-compose.yml",
+          "name": "docker-compose.yml",
+          "size": 836,
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "language": "Git Ignore",
+      "file_count": 2,
+      "total_bytes": 448,
+      "percentage": 0.28,
+      "files": [
+        {
+          "path": "frontend/.gitignore",
+          "name": ".gitignore",
+          "size": 253,
+          "extension": ".gitignore"
+        },
+        {
+          "path": ".gitignore",
+          "name": ".gitignore",
+          "size": 195,
+          "extension": ".gitignore"
+        }
+      ]
+    },
+    {
+      "language": "HTML",
+      "file_count": 1,
+      "total_bytes": 360,
+      "percentage": 0.23,
+      "files": [
+        {
+          "path": "frontend/index.html",
+          "name": "index.html",
+          "size": 360,
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "language": "No Extension",
+      "file_count": 2,
+      "total_bytes": 340,
+      "percentage": 0.22,
+      "files": [
+        {
+          "path": "backend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 206,
+          "extension": ""
+        },
+        {
+          "path": "frontend/Dockerfile",
+          "name": "Dockerfile",
+          "size": 134,
+          "extension": ""
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 2,
+      "total_bytes": 304,
+      "percentage": 0.19,
+      "files": [
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 185,
+          "extension": ".txt"
+        },
+        {
+          "path": "extracao/requirements.txt",
+          "name": "requirements.txt",
+          "size": 119,
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "language": "TOML",
+      "file_count": 2,
+      "total_bytes": 259,
+      "percentage": 0.16,
+      "files": [
+        {
+          "path": "extracao/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 132,
+          "extension": ".toml"
+        },
+        {
+          "path": "backend/pyproject.toml",
+          "name": "pyproject.toml",
+          "size": 127,
+          "extension": ".toml"
+        }
+      ]
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_bytes": 69,
+      "percentage": 0.04,
+      "files": [
+        {
+          "path": "backend/.env.example",
+          "name": ".env.example",
+          "size": 69,
+          "extension": ".example"
         }
       ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-13T10:51:36.850299",
+    "extracted_at": "2026-09-14T11:12:00.268597",
     "file_path": "data/silver/language_analysis_G12-2026-2.json"
   }
 }
