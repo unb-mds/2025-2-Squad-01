@@ -2,7 +2,7 @@
   "owner": "unb-mds",
   "repository": "G12-2026-2",
   "branch": "main",
-  "sha": "ea737ed240a625ce97a3ce2486db56dc984861c5",
+  "sha": "9d70a242538d56e8de471271937001e08e3e4a6a",
   "tree": [
     {
       "name": ".gitignore",
@@ -18,17 +18,17 @@
       "name": "README.md",
       "path": "README.md",
       "type": "file",
-      "sha": "e1e26094eb9bf3050e63c5d8b08e865500c48147",
+      "sha": "cd7101f94c15e10379a43c27c27cb12199ca63f2",
       "mode": "100644",
       "extension": ".md",
-      "size": 602,
+      "size": 1915,
       "is_binary": false
     },
     {
       "name": "backend",
       "path": "backend",
       "type": "directory",
-      "sha": "eb6135cfb5c5e100788e1038e0a12d63e721413a",
+      "sha": "23af3bf81812b27614d0d6568e1246237b4453b2",
       "mode": "040000",
       "children": []
     },
@@ -53,10 +53,76 @@
       "is_binary": false
     },
     {
+      "name": "alembic.ini",
+      "path": "backend/alembic.ini",
+      "type": "file",
+      "sha": "bb589515bb865a6063cf9661d8c81a41f9a58b3a",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 3819,
+      "is_binary": false
+    },
+    {
+      "name": "alembic",
+      "path": "backend/alembic",
+      "type": "directory",
+      "sha": "ba41191d4694ddcc03f058d6cee92ace52f7c964",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README",
+      "path": "backend/alembic/README",
+      "type": "file",
+      "sha": "98e4f9c44effe479ed38c66ba922e7bcc672916f",
+      "mode": "100644",
+      "extension": "",
+      "size": 38,
+      "is_binary": false
+    },
+    {
+      "name": "env.py",
+      "path": "backend/alembic/env.py",
+      "type": "file",
+      "sha": "d5a21eb790769d86d87230da7760e475d2b19ac3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2170,
+      "is_binary": false
+    },
+    {
+      "name": "script.py.mako",
+      "path": "backend/alembic/script.py.mako",
+      "type": "file",
+      "sha": "fbc4b07dcef98b20c6f96b642097f35e8433258e",
+      "mode": "100644",
+      "extension": ".mako",
+      "size": 635,
+      "is_binary": false
+    },
+    {
+      "name": "versions",
+      "path": "backend/alembic/versions",
+      "type": "directory",
+      "sha": "c248bf9cb871c8378e3b49aaff7336985fdb6bbd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "3e9ed9bb9055_cria_tabelas_iniciais.py",
+      "path": "backend/alembic/versions/3e9ed9bb9055_cria_tabelas_iniciais.py",
+      "type": "file",
+      "sha": "8bad9c67a527737ffe98b427f8630323de4a38fd",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3921,
+      "is_binary": false
+    },
+    {
       "name": "app",
       "path": "backend/app",
       "type": "directory",
-      "sha": "1c024f9e2ccce2fd1c11cfce8bc6905722935cb4",
+      "sha": "0a392fda47e226e8ef8d98197802316b94b1fc2a",
       "mode": "040000",
       "children": []
     },
@@ -186,7 +252,7 @@
       "name": "models",
       "path": "backend/app/models",
       "type": "directory",
-      "sha": "9d1dcfdaf1a6857c5f83dc27019c7600e1ffaff8",
+      "sha": "d1d3ba4b3f8ce987a86f99df5997e0a64c1b2dcb",
       "mode": "040000",
       "children": []
     },
@@ -194,10 +260,70 @@
       "name": "__init__.py",
       "path": "backend/app/models/__init__.py",
       "type": "file",
-      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha": "87d20afd6424ba2e4602ccfcd11ad95b5bd71dc3",
       "mode": "100644",
       "extension": ".py",
-      "size": 0,
+      "size": 425,
+      "is_binary": false
+    },
+    {
+      "name": "avaliacao.py",
+      "path": "backend/app/models/avaliacao.py",
+      "type": "file",
+      "sha": "cf450aec4707b9733ebfe1c475e199dec9fdc0d9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 892,
+      "is_binary": false
+    },
+    {
+      "name": "campus.py",
+      "path": "backend/app/models/campus.py",
+      "type": "file",
+      "sha": "37868f5f07a24ef40c1e27b8f4d4dcd8745b5c81",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 559,
+      "is_binary": false
+    },
+    {
+      "name": "cardapio.py",
+      "path": "backend/app/models/cardapio.py",
+      "type": "file",
+      "sha": "19ba77844570cc92e0dcf073c07d890438196c1f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1233,
+      "is_binary": false
+    },
+    {
+      "name": "checkin.py",
+      "path": "backend/app/models/checkin.py",
+      "type": "file",
+      "sha": "46eba1f48d0a0d4208f57a31207079d9ad981bd0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 741,
+      "is_binary": false
+    },
+    {
+      "name": "enums.py",
+      "path": "backend/app/models/enums.py",
+      "type": "file",
+      "sha": "4a45a9028135dee04074a0c9dea0d6641c12fb6a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 730,
+      "is_binary": false
+    },
+    {
+      "name": "item_cardapio.py",
+      "path": "backend/app/models/item_cardapio.py",
+      "type": "file",
+      "sha": "d5f75f5c7b9a55c1060c4b7cac774e55f3599e8e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1625,
       "is_binary": false
     },
     {
@@ -232,10 +358,10 @@
       "name": "requirements.txt",
       "path": "backend/requirements.txt",
       "type": "file",
-      "sha": "2b6c133c29b025b1b442ce0d06a7e13b650dc3d1",
+      "sha": "04f2e1338bd12761623924b2cfea71bdd6f8e7e9",
       "mode": "100644",
       "extension": ".txt",
-      "size": 185,
+      "size": 201,
       "is_binary": false
     },
     {
@@ -270,27 +396,27 @@
       "name": "contexto.md",
       "path": "contexto.md",
       "type": "file",
-      "sha": "ea5d5d0ac7e6d1bddbfff501b5b1bfc95a49e16e",
+      "sha": "6684c54292fdcfc60cf71f44f57dfbeace51fd86",
       "mode": "100644",
       "extension": ".md",
-      "size": 4718,
+      "size": 5225,
       "is_binary": false
     },
     {
       "name": "docker-compose.yml",
       "path": "docker-compose.yml",
       "type": "file",
-      "sha": "2598705fa832428849f0537133721fd5124c9dc1",
+      "sha": "f77d5482291918325f3995df1b45801ba1c1f62b",
       "mode": "100644",
       "extension": ".yml",
-      "size": 836,
+      "size": 883,
       "is_binary": false
     },
     {
       "name": "docs",
       "path": "docs",
       "type": "directory",
-      "sha": "6fcf04c973ab57658f98d04836f744ed3a4c171f",
+      "sha": "d7768fdec4435143ab345c791cf438468494cbd9",
       "mode": "040000",
       "children": []
     },
@@ -406,7 +532,7 @@
       "name": "scrum",
       "path": "docs/scrum",
       "type": "directory",
-      "sha": "7e9265f9c3c2489a8e9a23b215da46bb5acb97d3",
+      "sha": "a42f3b7674104ac66bfdc54cbe6780087b74ebab",
       "mode": "040000",
       "children": []
     },
@@ -418,6 +544,16 @@
       "mode": "100644",
       "extension": ".md",
       "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "sprint01.md",
+      "path": "docs/scrum/sprint01.md",
+      "type": "file",
+      "sha": "53b238dc1264c3eb35284d0de5935561c22146d2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2508,
       "is_binary": false
     },
     {
@@ -770,17 +906,17 @@
     }
   ],
   "truncated": false,
-  "extracted_at": "2026-09-14T11:08:40.650139",
+  "extracted_at": "2026-09-15T10:44:25.455147",
   "method": "rest",
-  "total_items": 81,
+  "total_items": 95,
   "repository_metadata": {
     "id": 1338353011,
     "full_name": "unb-mds/G12-2026-2",
     "description": "Grupo G12 - Metodos de Desenvolvimento de Software 2026/2",
     "created_at": "2026-08-18T11:59:18Z",
-    "updated_at": "2026-09-14T00:22:30Z",
-    "language": "CSS",
-    "size": 85,
+    "updated_at": "2026-09-15T01:41:57Z",
+    "language": "Python",
+    "size": 108,
     "stars": 1,
     "forks": 0,
     "open_issues": 2
