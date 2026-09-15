@@ -2,19 +2,19 @@
   "repository": "G1-2026-2",
   "owner": "unb-mds",
   "branch": "main",
-  "analyzed_at": "2026-09-14T11:08:35.592253",
+  "analyzed_at": "2026-09-15T10:44:18.996448",
   "sample_config": {
     "max_files_per_language": 10,
     "strategy": "largest"
   },
-  "total_files": 57,
-  "total_bytes": 323524,
+  "total_files": 58,
+  "total_bytes": 319704,
   "languages": [
     {
       "language": "Markdown",
-      "file_count": 32,
-      "total_bytes": 248267,
-      "percentage": 76.74,
+      "file_count": 40,
+      "total_bytes": 252279,
+      "percentage": 78.91,
       "files": [
         {
           "path": ".github/skills/speckit-checklist/SKILL.md",
@@ -82,7 +82,7 @@
       "language": "PowerShell",
       "file_count": 6,
       "total_bytes": 61101,
-      "percentage": 18.89,
+      "percentage": 19.11,
       "files": [
         {
           "path": ".specify/scripts/powershell/common.ps1",
@@ -123,78 +123,10 @@
       ]
     },
     {
-      "language": "Python",
-      "file_count": 10,
-      "total_bytes": 7832,
-      "percentage": 2.42,
-      "files": [
-        {
-          "path": "backend/app/domain/model_disciplina.py",
-          "name": "model_disciplina.py",
-          "size": 1443,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_publicacao_institucional.py",
-          "name": "model_publicacao_institucional.py",
-          "size": 1325,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_denuncia.py",
-          "name": "model_denuncia.py",
-          "size": 987,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_usuario.py",
-          "name": "model_usuario.py",
-          "size": 908,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_fonte_institucional.py",
-          "name": "model_fonte_institucional.py",
-          "size": 898,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_SubmissaoBase.py",
-          "name": "model_SubmissaoBase.py",
-          "size": 781,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_Contribuicao.py",
-          "name": "model_Contribuicao.py",
-          "size": 736,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_ConteudoAcademico.py",
-          "name": "model_ConteudoAcademico.py",
-          "size": 498,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/domain/model_curso.py",
-          "name": "model_curso.py",
-          "size": 256,
-          "extension": ".py"
-        },
-        {
-          "path": "backend/app/main.py",
-          "name": "main.py",
-          "size": 0,
-          "extension": ".py"
-        }
-      ]
-    },
-    {
       "language": "JSON",
       "file_count": 6,
       "total_bytes": 3724,
-      "percentage": 1.15,
+      "percentage": 1.16,
       "files": [
         {
           "path": ".specify/integrations/speckit.manifest.json",
@@ -238,7 +170,7 @@
       "language": "YAML",
       "file_count": 1,
       "total_bytes": 2216,
-      "percentage": 0.68,
+      "percentage": 0.69,
       "files": [
         {
           "path": ".specify/workflows/speckit/workflow.yml",
@@ -267,10 +199,44 @@
           "extension": ".gitignore"
         }
       ]
+    },
+    {
+      "language": "Python",
+      "file_count": 2,
+      "total_bytes": 0,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/app/main.py",
+          "name": "main.py",
+          "size": 0,
+          "extension": ".py"
+        },
+        {
+          "path": "backend/app/settings/config.py",
+          "name": "config.py",
+          "size": 0,
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "language": "Text",
+      "file_count": 1,
+      "total_bytes": 0,
+      "percentage": 0.0,
+      "files": [
+        {
+          "path": "backend/requirements.txt",
+          "name": "requirements.txt",
+          "size": 0,
+          "extension": ".txt"
+        }
+      ]
     }
   ],
   "_metadata": {
-    "extracted_at": "2026-09-14T11:12:01.452188",
+    "extracted_at": "2026-09-15T10:51:36.086233",
     "file_path": "data/silver/language_analysis_G1-2026-2.json"
   }
 }
