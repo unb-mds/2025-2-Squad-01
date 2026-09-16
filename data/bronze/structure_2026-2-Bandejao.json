@@ -1,0 +1,994 @@
+{
+  "owner": "unb-mds",
+  "repository": "2026-2-Bandejao",
+  "branch": "main",
+  "sha": "f60961982fddb1e21c57533029f206fd58759759",
+  "tree": [
+    {
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "type": "file",
+      "sha": "214a03b456fe800666b072e8f4c557b03ae602e0",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 195,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "type": "file",
+      "sha": "b81e98aad5af2134bf79c4c47f719d92a8a97bd6",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2291,
+      "is_binary": false
+    },
+    {
+      "name": "backend",
+      "path": "backend",
+      "type": "directory",
+      "sha": "ee938cce946dac167f97bced7856ddde3c094ace",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".env.example",
+      "path": "backend/.env.example",
+      "type": "file",
+      "sha": "77a2396a3f1f19ddafc7c327f212ffc3aa5162c8",
+      "mode": "100644",
+      "extension": ".example",
+      "size": 69,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "backend/Dockerfile",
+      "type": "file",
+      "sha": "da5f0fcfc2244d63da30830e3a340a80e8a229b7",
+      "mode": "100644",
+      "extension": "",
+      "size": 206,
+      "is_binary": false
+    },
+    {
+      "name": "alembic.ini",
+      "path": "backend/alembic.ini",
+      "type": "file",
+      "sha": "bb589515bb865a6063cf9661d8c81a41f9a58b3a",
+      "mode": "100644",
+      "extension": ".ini",
+      "size": 3819,
+      "is_binary": false
+    },
+    {
+      "name": "alembic",
+      "path": "backend/alembic",
+      "type": "directory",
+      "sha": "ba41191d4694ddcc03f058d6cee92ace52f7c964",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README",
+      "path": "backend/alembic/README",
+      "type": "file",
+      "sha": "98e4f9c44effe479ed38c66ba922e7bcc672916f",
+      "mode": "100644",
+      "extension": "",
+      "size": 38,
+      "is_binary": false
+    },
+    {
+      "name": "env.py",
+      "path": "backend/alembic/env.py",
+      "type": "file",
+      "sha": "d5a21eb790769d86d87230da7760e475d2b19ac3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2170,
+      "is_binary": false
+    },
+    {
+      "name": "script.py.mako",
+      "path": "backend/alembic/script.py.mako",
+      "type": "file",
+      "sha": "fbc4b07dcef98b20c6f96b642097f35e8433258e",
+      "mode": "100644",
+      "extension": ".mako",
+      "size": 635,
+      "is_binary": false
+    },
+    {
+      "name": "versions",
+      "path": "backend/alembic/versions",
+      "type": "directory",
+      "sha": "c248bf9cb871c8378e3b49aaff7336985fdb6bbd",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "3e9ed9bb9055_cria_tabelas_iniciais.py",
+      "path": "backend/alembic/versions/3e9ed9bb9055_cria_tabelas_iniciais.py",
+      "type": "file",
+      "sha": "8bad9c67a527737ffe98b427f8630323de4a38fd",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 3921,
+      "is_binary": false
+    },
+    {
+      "name": "app",
+      "path": "backend/app",
+      "type": "directory",
+      "sha": "9e2d7d175c9db94d55a0b9701d0beca1fe2bddbb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "api",
+      "path": "backend/app/api",
+      "type": "directory",
+      "sha": "9a5bb81baa4a219fea55fbfafd8d56d294508edc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "routes",
+      "path": "backend/app/api/routes",
+      "type": "directory",
+      "sha": "f36cbbc581a4fc1ee12aeac53a8a0b80b5128723",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "avaliacao.py",
+      "path": "backend/app/api/routes/avaliacao.py",
+      "type": "file",
+      "sha": "3732df3078b47ae834ea4024085a07abb33d5775",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1261,
+      "is_binary": false
+    },
+    {
+      "name": "campus.py",
+      "path": "backend/app/api/routes/campus.py",
+      "type": "file",
+      "sha": "9dad3148bd9a0b6512bfdba15b8447ba6b0bec63",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 693,
+      "is_binary": false
+    },
+    {
+      "name": "cardapio.py",
+      "path": "backend/app/api/routes/cardapio.py",
+      "type": "file",
+      "sha": "50eaa3969f8c376aea9a8c0f3370eef15890e8db",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 2973,
+      "is_binary": false
+    },
+    {
+      "name": "checkin.py",
+      "path": "backend/app/api/routes/checkin.py",
+      "type": "file",
+      "sha": "426c1d0618a6d32f85de7a62572f0306035d542e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1115,
+      "is_binary": false
+    },
+    {
+      "name": "health.py",
+      "path": "backend/app/api/routes/health.py",
+      "type": "file",
+      "sha": "dd3a21991fc423e639b0be0c863cb98db6059fa5",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 158,
+      "is_binary": false
+    },
+    {
+      "name": "core",
+      "path": "backend/app/core",
+      "type": "directory",
+      "sha": "1246c54b639e85a69ba424bdd392137f262f6aec",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/core/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "config.py",
+      "path": "backend/app/core/config.py",
+      "type": "file",
+      "sha": "50f9680d766d7b3c3916efd42747da68910a9a33",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 300,
+      "is_binary": false
+    },
+    {
+      "name": "db",
+      "path": "backend/app/db",
+      "type": "directory",
+      "sha": "d45ce28310a316e18e66c99a33b870c5bd9790ca",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/db/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "seed.py",
+      "path": "backend/app/db/seed.py",
+      "type": "file",
+      "sha": "524b5e6e219fcfe74a0d3db80119ee257162a361",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 4048,
+      "is_binary": false
+    },
+    {
+      "name": "session.py",
+      "path": "backend/app/db/session.py",
+      "type": "file",
+      "sha": "c43f07ba8b07d8b2891199c31ace618156632b3e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 381,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "backend/app/main.py",
+      "type": "file",
+      "sha": "bcfb019f6c9db35b35c843b8b9cbeff4d186c606",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 354,
+      "is_binary": false
+    },
+    {
+      "name": "models",
+      "path": "backend/app/models",
+      "type": "directory",
+      "sha": "d1d3ba4b3f8ce987a86f99df5997e0a64c1b2dcb",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/models/__init__.py",
+      "type": "file",
+      "sha": "87d20afd6424ba2e4602ccfcd11ad95b5bd71dc3",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 425,
+      "is_binary": false
+    },
+    {
+      "name": "avaliacao.py",
+      "path": "backend/app/models/avaliacao.py",
+      "type": "file",
+      "sha": "cf450aec4707b9733ebfe1c475e199dec9fdc0d9",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 892,
+      "is_binary": false
+    },
+    {
+      "name": "campus.py",
+      "path": "backend/app/models/campus.py",
+      "type": "file",
+      "sha": "37868f5f07a24ef40c1e27b8f4d4dcd8745b5c81",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 559,
+      "is_binary": false
+    },
+    {
+      "name": "cardapio.py",
+      "path": "backend/app/models/cardapio.py",
+      "type": "file",
+      "sha": "19ba77844570cc92e0dcf073c07d890438196c1f",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1233,
+      "is_binary": false
+    },
+    {
+      "name": "checkin.py",
+      "path": "backend/app/models/checkin.py",
+      "type": "file",
+      "sha": "46eba1f48d0a0d4208f57a31207079d9ad981bd0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 741,
+      "is_binary": false
+    },
+    {
+      "name": "enums.py",
+      "path": "backend/app/models/enums.py",
+      "type": "file",
+      "sha": "4a45a9028135dee04074a0c9dea0d6641c12fb6a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 730,
+      "is_binary": false
+    },
+    {
+      "name": "item_cardapio.py",
+      "path": "backend/app/models/item_cardapio.py",
+      "type": "file",
+      "sha": "d5f75f5c7b9a55c1060c4b7cac774e55f3599e8e",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 1625,
+      "is_binary": false
+    },
+    {
+      "name": "schemas",
+      "path": "backend/app/schemas",
+      "type": "directory",
+      "sha": "59b46a6b02446cddb788b0424ee3fef81a0f67d6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/app/schemas/__init__.py",
+      "type": "file",
+      "sha": "095403f9a609c9ca8ab116cbecfaa0e64bb2228a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 391,
+      "is_binary": false
+    },
+    {
+      "name": "avaliacao.py",
+      "path": "backend/app/schemas/avaliacao.py",
+      "type": "file",
+      "sha": "4e70a54537db41606368a907413b75cc1220f043",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 366,
+      "is_binary": false
+    },
+    {
+      "name": "campus.py",
+      "path": "backend/app/schemas/campus.py",
+      "type": "file",
+      "sha": "a1d357a93ce5fc7aedecaffd88e0d314063c151c",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 152,
+      "is_binary": false
+    },
+    {
+      "name": "cardapio.py",
+      "path": "backend/app/schemas/cardapio.py",
+      "type": "file",
+      "sha": "b2490507e97e1bf3ade60ac86a9ee0815bbc833a",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 401,
+      "is_binary": false
+    },
+    {
+      "name": "checkin.py",
+      "path": "backend/app/schemas/checkin.py",
+      "type": "file",
+      "sha": "56325c6e069fd212cffaecce1f4154e703152945",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 214,
+      "is_binary": false
+    },
+    {
+      "name": "item_cardapio.py",
+      "path": "backend/app/schemas/item_cardapio.py",
+      "type": "file",
+      "sha": "7621c0a82c50bf009f4a656f82c5a1e8202ecbf1",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 512,
+      "is_binary": false
+    },
+    {
+      "name": "pyproject.toml",
+      "path": "backend/pyproject.toml",
+      "type": "file",
+      "sha": "55bdd5ac5fd63fcbf63e16038c5555796b672d5a",
+      "mode": "100644",
+      "extension": ".toml",
+      "size": 127,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "backend/requirements.txt",
+      "type": "file",
+      "sha": "04f2e1338bd12761623924b2cfea71bdd6f8e7e9",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 201,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "backend/tests",
+      "type": "directory",
+      "sha": "1a4c65335ea7f47aaae34890b6adf2c877fbc2b5",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "backend/tests/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_health.py",
+      "path": "backend/tests/test_health.py",
+      "type": "file",
+      "sha": "d9038fd3746df56c4f42ce182d69753de8246cdb",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 256,
+      "is_binary": false
+    },
+    {
+      "name": "contexto.md",
+      "path": "contexto.md",
+      "type": "file",
+      "sha": "6684c54292fdcfc60cf71f44f57dfbeace51fd86",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 5225,
+      "is_binary": false
+    },
+    {
+      "name": "docker-compose.yml",
+      "path": "docker-compose.yml",
+      "type": "file",
+      "sha": "f77d5482291918325f3995df1b45801ba1c1f62b",
+      "mode": "100644",
+      "extension": ".yml",
+      "size": 883,
+      "is_binary": false
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "directory",
+      "sha": "3fd89f8bd26cdaa69b1dc6bcc8aaee8ea2a546a7",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "Arquitetura.md",
+      "path": "docs/Arquitetura.md",
+      "type": "file",
+      "sha": "6b892a5cbe56a0d98d6ea4497028bf12d0ba643f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3164,
+      "is_binary": false
+    },
+    {
+      "name": "Requisitos.md",
+      "path": "docs/Requisitos.md",
+      "type": "file",
+      "sha": "dd57713b45c2fa1d7f7b653ca24e2a502851d094",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2759,
+      "is_binary": false
+    },
+    {
+      "name": "estudos",
+      "path": "docs/estudos",
+      "type": "directory",
+      "sha": "69141ed66f6a5fe9799eb536f81b2ca83528ad62",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "README.md",
+      "path": "docs/estudos/README.md",
+      "type": "file",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1,
+      "is_binary": false
+    },
+    {
+      "name": "arquitetura_software.md",
+      "path": "docs/estudos/arquitetura_software.md",
+      "type": "file",
+      "sha": "231f67c535ed9c690bc7add776bc406ade35779d",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 9271,
+      "is_binary": false
+    },
+    {
+      "name": "backend.md",
+      "path": "docs/estudos/backend.md",
+      "type": "file",
+      "sha": "790d26606a613da4ba553e5f15b561a93ab96dbc",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3990,
+      "is_binary": false
+    },
+    {
+      "name": "banco_de_dados.md",
+      "path": "docs/estudos/banco_de_dados.md",
+      "type": "file",
+      "sha": "c196bcb6f10b6633ae2c87aadb9a4018aaf7c56f",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8219,
+      "is_binary": false
+    },
+    {
+      "name": "engenharia_requisitos.md",
+      "path": "docs/estudos/engenharia_requisitos.md",
+      "type": "file",
+      "sha": "9fdb9b38a1ed94bb14a56213bb7dc7cac0a4648e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 7424,
+      "is_binary": false
+    },
+    {
+      "name": "extracao_dados_pdf.md",
+      "path": "docs/estudos/extracao_dados_pdf.md",
+      "type": "file",
+      "sha": "487e65788e6624dec9feead031bb88d644446cf3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 8685,
+      "is_binary": false
+    },
+    {
+      "name": "git_github.md",
+      "path": "docs/estudos/git_github.md",
+      "type": "file",
+      "sha": "c5510b21addf7df591558c62ee52e62c31aa320a",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3702,
+      "is_binary": false
+    },
+    {
+      "name": "ocr_imagem.md",
+      "path": "docs/estudos/ocr_imagem.md",
+      "type": "file",
+      "sha": "b2f96fbc1145728a121eb680b807b70f599ca9ef",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 3013,
+      "is_binary": false
+    },
+    {
+      "name": "scrum",
+      "path": "docs/scrum",
+      "type": "directory",
+      "sha": "aef492ba68f1b596d42ed455e68846275df682e1",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "sprint00.md",
+      "path": "docs/scrum/sprint00.md",
+      "type": "file",
+      "sha": "5361ea7483a945fbabd879f13d2b76ce00d8ba1e",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1586,
+      "is_binary": false
+    },
+    {
+      "name": "sprint01.md",
+      "path": "docs/scrum/sprint01.md",
+      "type": "file",
+      "sha": "53b238dc1264c3eb35284d0de5935561c22146d2",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 2508,
+      "is_binary": false
+    },
+    {
+      "name": "extracao",
+      "path": "extracao",
+      "type": "directory",
+      "sha": "8b36c4ef9f281eb6cb4be83ce5cded0418553c09",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "extracao",
+      "path": "extracao/extracao",
+      "type": "directory",
+      "sha": "04eb592306e6de28264ee302d6d1bd42256fe73e",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "extracao/extracao/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "main.py",
+      "path": "extracao/extracao/main.py",
+      "type": "file",
+      "sha": "2429ff2679957ea066f410345ec96b8931760446",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 331,
+      "is_binary": false
+    },
+    {
+      "name": "pyproject.toml",
+      "path": "extracao/pyproject.toml",
+      "type": "file",
+      "sha": "346b290a3fd3e059f0b56a531d8de2a350f455e9",
+      "mode": "100644",
+      "extension": ".toml",
+      "size": 132,
+      "is_binary": false
+    },
+    {
+      "name": "requirements.txt",
+      "path": "extracao/requirements.txt",
+      "type": "file",
+      "sha": "01e189c87504e4fb65dfc47d585ba40762bbe30d",
+      "mode": "100644",
+      "extension": ".txt",
+      "size": 119,
+      "is_binary": false
+    },
+    {
+      "name": "tests",
+      "path": "extracao/tests",
+      "type": "directory",
+      "sha": "178c67cdef6f985cff11a8726dd98a650cdd66a6",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "__init__.py",
+      "path": "extracao/tests/__init__.py",
+      "type": "file",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 0,
+      "is_binary": false
+    },
+    {
+      "name": "test_main.py",
+      "path": "extracao/tests/test_main.py",
+      "type": "file",
+      "sha": "60a8ce702069ce36aa9d3e734709ae82a4e29aa0",
+      "mode": "100644",
+      "extension": ".py",
+      "size": 142,
+      "is_binary": false
+    },
+    {
+      "name": "frontend",
+      "path": "frontend",
+      "type": "directory",
+      "sha": "b60488d098d2e02ebd5a977f315d6c42e5775e0c",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": ".gitignore",
+      "path": "frontend/.gitignore",
+      "type": "file",
+      "sha": "a547bf36d8d11a4f89c59c144f24795749086dd1",
+      "mode": "100644",
+      "extension": ".gitignore",
+      "size": 253,
+      "is_binary": false
+    },
+    {
+      "name": ".oxlintrc.json",
+      "path": "frontend/.oxlintrc.json",
+      "type": "file",
+      "sha": "1255078235d0ce4e80ac34866d5ce2af89aa6220",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 231,
+      "is_binary": false
+    },
+    {
+      "name": "Dockerfile",
+      "path": "frontend/Dockerfile",
+      "type": "file",
+      "sha": "0cc087a34becd458abb36764e6a790fd968a2b96",
+      "mode": "100644",
+      "extension": "",
+      "size": 134,
+      "is_binary": false
+    },
+    {
+      "name": "README.md",
+      "path": "frontend/README.md",
+      "type": "file",
+      "sha": "d937833bd5b8c9cfc5978ab9f0fcfd68d4d8b42c",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1009,
+      "is_binary": false
+    },
+    {
+      "name": "index.html",
+      "path": "frontend/index.html",
+      "type": "file",
+      "sha": "f94d687d35d7fa6e2c619c3f2c6b2ddea19bd219",
+      "mode": "100644",
+      "extension": ".html",
+      "size": 360,
+      "is_binary": false
+    },
+    {
+      "name": "package-lock.json",
+      "path": "frontend/package-lock.json",
+      "type": "file",
+      "sha": "108e9cf9946f2b773728dab30d13bf7269da88df",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 40937,
+      "is_binary": false
+    },
+    {
+      "name": "package.json",
+      "path": "frontend/package.json",
+      "type": "file",
+      "sha": "7c3302edc8f7020a24288c0675dae646016a2ec2",
+      "mode": "100644",
+      "extension": ".json",
+      "size": 459,
+      "is_binary": false
+    },
+    {
+      "name": "public",
+      "path": "frontend/public",
+      "type": "directory",
+      "sha": "8bbb5ee6c07004e372ddd3fd49ee75964c2c9e75",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "favicon.svg",
+      "path": "frontend/public/favicon.svg",
+      "type": "file",
+      "sha": "6893eb13237060adc0c968a690149a49faa2d7d3",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 9522,
+      "is_binary": false
+    },
+    {
+      "name": "icons.svg",
+      "path": "frontend/public/icons.svg",
+      "type": "file",
+      "sha": "e9522193d9f796a9748e9ad8c952a5df73c87db9",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 5031,
+      "is_binary": false
+    },
+    {
+      "name": "src",
+      "path": "frontend/src",
+      "type": "directory",
+      "sha": "4ebe8fc510a71701bdfdfc1ad6df1e626fd63cf3",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "App.css",
+      "path": "frontend/src/App.css",
+      "type": "file",
+      "sha": "f90339d8f765fa2c69d9a341959a8ddb9fff5720",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2891,
+      "is_binary": false
+    },
+    {
+      "name": "App.jsx",
+      "path": "frontend/src/App.jsx",
+      "type": "file",
+      "sha": "174b3f1dc0bb2db2b7e2581ce35d5bf440f617cc",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 3646,
+      "is_binary": false
+    },
+    {
+      "name": "assets",
+      "path": "frontend/src/assets",
+      "type": "directory",
+      "sha": "cff299901617c708226dccca2b0bf0ab0378c5fa",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "hero.png",
+      "path": "frontend/src/assets/hero.png",
+      "type": "file",
+      "sha": "02251f4b956c55af2d76fd0788124d7eee2b45eb",
+      "mode": "100644",
+      "extension": ".png",
+      "size": 13057,
+      "is_binary": false
+    },
+    {
+      "name": "react.svg",
+      "path": "frontend/src/assets/react.svg",
+      "type": "file",
+      "sha": "6c87de9bb3358469122cc991d5cf578927246184",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 4126,
+      "is_binary": false
+    },
+    {
+      "name": "vite.svg",
+      "path": "frontend/src/assets/vite.svg",
+      "type": "file",
+      "sha": "5101b674df391399da71c767aa5c976426c9dc7a",
+      "mode": "100644",
+      "extension": ".svg",
+      "size": 8709,
+      "is_binary": false
+    },
+    {
+      "name": "index.css",
+      "path": "frontend/src/index.css",
+      "type": "file",
+      "sha": "2c84af069a9d5a22b28df0a263fcc7b4f4b5a5b9",
+      "mode": "100644",
+      "extension": ".css",
+      "size": 2169,
+      "is_binary": false
+    },
+    {
+      "name": "main.jsx",
+      "path": "frontend/src/main.jsx",
+      "type": "file",
+      "sha": "b9a1a6deac8775b5598874b2bc3c7971d82cf211",
+      "mode": "100644",
+      "extension": ".jsx",
+      "size": 229,
+      "is_binary": false
+    },
+    {
+      "name": "vite.config.js",
+      "path": "frontend/vite.config.js",
+      "type": "file",
+      "sha": "9982072c14949379a05b48f656856691a6f0ab86",
+      "mode": "100644",
+      "extension": ".js",
+      "size": 161,
+      "is_binary": false
+    },
+    {
+      "name": "skills",
+      "path": "skills",
+      "type": "directory",
+      "sha": "1459104010a449dd5220ead7817e36aa93aae700",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "backend-endpoint",
+      "path": "skills/backend-endpoint",
+      "type": "directory",
+      "sha": "c108b2908acfa0438306e6c421037fa75f0987a8",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "skills/backend-endpoint/SKILL.md",
+      "type": "file",
+      "sha": "10475e6afabe3135120e8f66722ddc5535730cd3",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1729,
+      "is_binary": false
+    },
+    {
+      "name": "extracao-cardapio",
+      "path": "skills/extracao-cardapio",
+      "type": "directory",
+      "sha": "37a2486e0ba713771ad15d18a13da4beca3fbbdc",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "skills/extracao-cardapio/SKILL.md",
+      "type": "file",
+      "sha": "4f6788dfd0c0291ad00f06a3b222bd8396b48fa9",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1968,
+      "is_binary": false
+    },
+    {
+      "name": "frontend-componente",
+      "path": "skills/frontend-componente",
+      "type": "directory",
+      "sha": "23d71d9b410c9bb245bff310b038d8c9afa8f9f2",
+      "mode": "040000",
+      "children": []
+    },
+    {
+      "name": "SKILL.md",
+      "path": "skills/frontend-componente/SKILL.md",
+      "type": "file",
+      "sha": "4f56514d52bc9c0899eb95f0f45818205ee0be80",
+      "mode": "100644",
+      "extension": ".md",
+      "size": 1637,
+      "is_binary": false
+    }
+  ],
+  "truncated": false,
+  "extracted_at": "2026-09-16T10:39:45.335638",
+  "method": "rest",
+  "total_items": 102,
+  "repository_metadata": {
+    "id": 1338353011,
+    "full_name": "unb-mds/2026-2-Bandejao",
+    "description": "Grupo G12 - Metodos de Desenvolvimento de Software 2026/2",
+    "created_at": "2026-08-18T11:59:18Z",
+    "updated_at": "2026-09-15T18:11:37Z",
+    "language": "Python",
+    "size": 128,
+    "stars": 1,
+    "forks": 0,
+    "open_issues": 3
+  }
+}

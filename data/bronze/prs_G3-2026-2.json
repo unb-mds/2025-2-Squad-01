@@ -1,7 +1,7 @@
 [
   {
     "_metadata": {
-      "extracted_at": "2026-09-15T09:41:42.676961",
+      "extracted_at": "2026-09-16T09:36:25.276176",
       "file_path": "data/bronze/prs_G3-2026-2.json",
       "record_count": 38
     }
@@ -39,14 +39,14 @@
       "site_admin": false
     },
     "labels": [],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2026-09-15T01:51:49Z",
-    "updated_at": "2026-09-15T01:55:51Z",
-    "closed_at": null,
+    "updated_at": "2026-09-15T13:34:41Z",
+    "closed_at": "2026-09-15T13:34:40Z",
     "assignee": null,
     "author_association": "COLLABORATOR",
     "issue_field_values": [],
@@ -58,10 +58,30 @@
       "html_url": "https://github.com/unb-mds/G3-2026-2/pull/93",
       "diff_url": "https://github.com/unb-mds/G3-2026-2/pull/93.diff",
       "patch_url": "https://github.com/unb-mds/G3-2026-2/pull/93.patch",
-      "merged_at": null
+      "merged_at": "2026-09-15T13:34:40Z"
     },
     "body": "## O que este PR faz\n\nContinuação do protótipo de telas do frontend (Sprint 1, área do Daniel): move a lógica de dados das 4 telas de consulta (Disciplinas, Cardápio, Professores, Salas) para `frontend/hooks/`, isolada dos componentes, e remove o boilerplate do `create-next-app` que ainda estava em produção.\n\n- `frontend/hooks/` — `useDisciplinas`, `useCardapioSemana`, `useProfessores`, `useSalas`, cada um sobre um helper interno (`useApiResource`) que parte do mock e troca pela resposta real da API assim que os endpoints do backend existirem, com fallback e mensagem de erro se a chamada falhar\n- `frontend/lib/api.ts` — instância única do Axios, com base URL vinda de `NEXT_PUBLIC_API_URL` (`.env.example` adicionado)\n- Remove boilerplate do `create-next-app`: home (`app/page.tsx`), metadata (`app/layout.tsx`) e `README.md` agora refletem o Cerradinho\n- Estilização básica em Tailwind nas 4 telas e na `Nav` (destaque da rota ativa), pra não ficar só `<ul><li>` cru\n\n## Issue relacionada\n\nCloses #62\n\n## Tipo de mudança\n\n- [x] feat (nova funcionalidade)\n- [ ] fix (correção de bug)\n- [ ] docs (documentação)\n- [ ] refactor (mudança de código sem corrigir bug nem adicionar feature)\n- [ ] test (adiciona ou corrige testes)\n- [ ] chore (manutenção que não afeta código-fonte, ex: templates, config, CI)\n\n## Como testar\n\n1. `cd frontend && npm install && npm run dev`\n2. Abrir `http://localhost:3000` e navegar entre Disciplinas/Cardápio/Professores/Salas — sem o backend rodando, cada tela mostra os dados de mock com um aviso de que não conseguiu conectar à API\n3. `npx tsc --noEmit`, `npx eslint .` e `npx next build` rodam limpos\n\n## Checklist antes de pedir revisão\n\n- [x] Segue o padrão de commits (Conventional Commits)\n- [x] Segue a separação de camadas da arquitetura (chamada de API isolada em hooks, fora dos componentes)\n- [ ] Testes adicionados/atualizados, se aplicável\n- [x] Documentação atualizada, se aplicável (README, REQUISITOS.md, ARQUITETURA.md)\n- [x] Se usou IA neste PR (implementação, testes, docs, refatoração), está registrado em `AI-USAGE.md`\n- [ ] Pipeline de CI está verde (lint, testes, SAST) — obrigatório antes do merge, é porta de qualidade da disciplina\n- [ ] Se este PR envolveu decisão de arquitetura relevante, existe um ADR em `docs/adr/`\n\n## Screenshots (se for mudança visual)\n\nSem screenshot nesta submissão (extensão do Chrome não disponível no ambiente) — validado via HTML renderizado pelo `next dev`/`next build`.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "daniel-mouraa",
+      "id": 294324405,
+      "node_id": "U_kgDOEYsItQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/294324405?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/daniel-mouraa",
+      "html_url": "https://github.com/daniel-mouraa",
+      "followers_url": "https://api.github.com/users/daniel-mouraa/followers",
+      "following_url": "https://api.github.com/users/daniel-mouraa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/daniel-mouraa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/daniel-mouraa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/daniel-mouraa/subscriptions",
+      "organizations_url": "https://api.github.com/users/daniel-mouraa/orgs",
+      "repos_url": "https://api.github.com/users/daniel-mouraa/repos",
+      "events_url": "https://api.github.com/users/daniel-mouraa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/daniel-mouraa/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/unb-mds/G3-2026-2/issues/93/reactions",
       "total_count": 0,
